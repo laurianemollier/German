@@ -25,6 +25,7 @@ enum Lang: String{
 }
 
 
+/// Each verb belongs to a conjugation's form
 public enum Form: String { // 11
     case aiea = "a–ie(i)–a"
     case aua = "a-u-a"
@@ -42,6 +43,7 @@ public enum Form: String { // 11
 }
 
 
+/// Each verb belong to a level
 public enum Level: String{
     case A2 = "A2"
     case B1 = "B1"
@@ -56,6 +58,9 @@ public enum Level: String{
 
 /// A verb to learn
 class Verb{
+    
+    /// The id for the verb
+    let id: Int
     
     /// The level at which you are supposed to learn this verb.
     let level: Level
@@ -81,14 +86,15 @@ class Verb{
     /// - Parameters:
     ///     - level: The level at which you are supposed to learn this verb.
     ///     - form: The form to which the verb belongs.
-    ///     - verbe: The differents temps of this verb (infinitive, present, simple past, past participle)
+    ///     - verb: The differents temps of this verb (infinitive, present, simple past, past participle)
     ///     - translations: The translation avalable in each language
     ///
     /// - Returns: A verb
-    init(level: Level, form: Form, verbe: (String, String, String, String), translations: [(Lang, String)]){
+    init(id: Int, level: Level, form: Form, verb: (String, String, String, String), translations: [(Lang, String)]){
+        self.id = id
         self.level = level
         self.form = form
-        self.verb = verbe
+        self.verb = verb
         
         translations.forEach({
             self.translations[$0] = $1

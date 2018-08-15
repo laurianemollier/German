@@ -10,6 +10,35 @@ import UIKit
 
 class AddVerbsCV: UIViewController {
 
+
+    @IBAction func optionBoxA2(_ sender: UIButton) {
+        optionBox(button: sender)
+    }
+    
+
+    
+    @IBAction func optionBoxB2(_ sender: UIButton) {
+        optionBox(button: sender)
+    }
+    @IBAction func optionBoxC1(_ sender: UIButton) {
+        optionBox(button: sender)
+    }
+    
+    func optionBox(button: UIButton){
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

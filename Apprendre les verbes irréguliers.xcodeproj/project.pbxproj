@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		983B2495211C4A0C009C33B1 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2494211C4A0C009C33B1 /* Verb.swift */; };
+		983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2496211C6A4B009C33B1 /* Verbs.swift */; };
+		98B0150D2122A9020090006E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0150C2122A9020090006E /* UserData.swift */; };
+		98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0150E2122AA3B0090006E /* UserProgression.swift */; };
+		98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0151021244C9F0090006E /* UserLearningVerb.swift */; };
+		98B01514212474670090006E /* LevelCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B01513212474670090006E /* LevelCheckBox.swift */; };
+		98B01516212478880090006E /* LevelCheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B01515212478880090006E /* LevelCheckBox.xib */; };
 		98C9834B20F750820080B08C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9834A20F750820080B08C /* AppDelegate.swift */; };
 		98C9834D20F750820080B08C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9834C20F750820080B08C /* ViewController.swift */; };
 		98C9835020F750820080B08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C9834E20F750820080B08C /* Main.storyboard */; };
@@ -350,6 +356,12 @@
 
 /* Begin PBXFileReference section */
 		983B2494211C4A0C009C33B1 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
+		983B2496211C6A4B009C33B1 /* Verbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verbs.swift; sourceTree = "<group>"; };
+		98B0150C2122A9020090006E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		98B0150E2122AA3B0090006E /* UserProgression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgression.swift; sourceTree = "<group>"; };
+		98B0151021244C9F0090006E /* UserLearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLearningVerb.swift; sourceTree = "<group>"; };
+		98B01513212474670090006E /* LevelCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCheckBox.swift; sourceTree = "<group>"; };
+		98B01515212478880090006E /* LevelCheckBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCheckBox.xib; sourceTree = "<group>"; };
 		98C9834720F750820080B08C /* Apprendre les verbes irréguliers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apprendre les verbes irréguliers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C9834A20F750820080B08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98C9834C20F750820080B08C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -708,8 +720,22 @@
 			isa = PBXGroup;
 			children = (
 				983B2494211C4A0C009C33B1 /* Verb.swift */,
+				983B2496211C6A4B009C33B1 /* Verbs.swift */,
+				98B0150C2122A9020090006E /* UserData.swift */,
+				98B0150E2122AA3B0090006E /* UserProgression.swift */,
+				98B0151021244C9F0090006E /* UserLearningVerb.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		98B01512212473D70090006E /* AddVerbsCV */ = {
+			isa = PBXGroup;
+			children = (
+				98DEFC8B20FDC33200DC32BB /* AddVerbsCV.swift */,
+				98B01513212474670090006E /* LevelCheckBox.swift */,
+				98B01515212478880090006E /* LevelCheckBox.xib */,
+			);
+			path = AddVerbsCV;
 			sourceTree = "<group>";
 		};
 		98C9833E20F750820080B08C = {
@@ -769,8 +795,8 @@
 		98DEFC8820FDC26200DC32BB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				98B01512212473D70090006E /* AddVerbsCV */,
 				98DEFC8620FDC25400DC32BB /* MainVC.swift */,
-				98DEFC8B20FDC33200DC32BB /* AddVerbsCV.swift */,
 				98DEFC8D20FE27EE00DC32BB /* ReviewVerbsVC.swift */,
 			);
 			path = ViewController;
@@ -1256,6 +1282,7 @@
 				98DEFE2820FF241600DC32BB /* stechen.mp3 in Resources */,
 				98DEFE7220FF241600DC32BB /* speien.mp3 in Resources */,
 				98DEFE4520FF241600DC32BB /* vergessen.mp3 in Resources */,
+				98B01516212478880090006E /* LevelCheckBox.xib in Resources */,
 				98DEFE0420FF241600DC32BB /* schlagen.mp3 in Resources */,
 				98DEFE7420FF241600DC32BB /* tragen.mp3 in Resources */,
 				98DEFEC820FF241600DC32BB /* einwerfen.mp3 in Resources */,
@@ -1544,12 +1571,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */,
 				983B2495211C4A0C009C33B1 /* Verb.swift in Sources */,
+				98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */,
+				98B0150D2122A9020090006E /* UserData.swift in Sources */,
 				98DEFC8E20FE27EE00DC32BB /* ReviewVerbsVC.swift in Sources */,
 				98DEFC8C20FDC33200DC32BB /* AddVerbsCV.swift in Sources */,
 				98C9834D20F750820080B08C /* ViewController.swift in Sources */,
 				98DEFC8720FDC25400DC32BB /* MainVC.swift in Sources */,
 				98C9834B20F750820080B08C /* AppDelegate.swift in Sources */,
+				98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */,
+				98B01514212474670090006E /* LevelCheckBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
