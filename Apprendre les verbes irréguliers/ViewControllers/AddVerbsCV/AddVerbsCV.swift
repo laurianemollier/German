@@ -1,5 +1,5 @@
 //
-//  MainVC.swift
+//  AddVerbsCV.swift
 //  Apprendre les verbes irréguliers
 //
 //  Created by Lauriane Mollier on 17/07/2018.
@@ -8,24 +8,44 @@
 
 import UIKit
 
-class MainVC: UIViewController {
+class AddVerbsCV: UIViewController {
 
-    @IBOutlet weak var nbrVerbToReviewTodayLabel: UILabel!
+    @IBOutlet weak var B1Button: LevelCheckBox!
     
-    @IBOutlet weak var nbrVerbInReviewListLabel: UILabel!
+    @IBAction func optionBoxA2(_ sender: UIButton) {
+        optionBox(button: sender)
+    }
+    
+
+    
+    @IBAction func optionBoxB2(_ sender: UIButton) {
+        optionBox(button: sender)
+    }
+    @IBAction func optionBoxC1(_ sender: UIButton) {
+        optionBox(button: sender)
+    }
+    
+    func optionBox(button: UIButton){
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        B1Button.setTitle("coucouc", for: .selected)
+        print(B1Button.title(for: .selected))
 
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.nbrVerbToReviewTodayLabel.text = String(1) // TODO
-        self.nbrVerbInReviewListLabel.text = "Il y a " + String(30) + " à revoir" //TODO
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,21 +54,14 @@ class MainVC: UIViewController {
     }
     
 
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        if segue.identifier == "reviewVerbs"{
-            let cv = segue.destination as! ReviewVerbsVC
-            
-        }
     }
-    
-    
-
-
+    */
 
 }

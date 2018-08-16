@@ -9,11 +9,25 @@
 /* Begin PBXBuildFile section */
 		983B2495211C4A0C009C33B1 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2494211C4A0C009C33B1 /* Verb.swift */; };
 		983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2496211C6A4B009C33B1 /* Verbs.swift */; };
+		988DB9072125B3C800AFAEF4 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988DB8FA2125B3BC00AFAEF4 /* SQLite.framework */; };
+		988DB9082125B3CE00AFAEF4 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988DB8FA2125B3BC00AFAEF4 /* SQLite.framework */; };
+		988DB9092125B3CE00AFAEF4 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 988DB8FA2125B3BC00AFAEF4 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */; };
+		988DB9102125BBD700AFAEF4 /* VerbTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB90F2125BBD700AFAEF4 /* VerbTable.swift */; };
+		988DB9132125C08900AFAEF4 /* VerbTranslationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9122125C08900AFAEF4 /* VerbTranslationDAO.swift */; };
+		988DB9152125C09900AFAEF4 /* VerbTranslationDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9142125C09900AFAEF4 /* VerbTranslationDAOImpl.swift */; };
+		988DB9172125C24500AFAEF4 /* DbVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9162125C24500AFAEF4 /* DbVerb.swift */; };
+		988DB9192125C70700AFAEF4 /* VerbTranslationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9182125C70700AFAEF4 /* VerbTranslationTable.swift */; };
+		988DB91B2125C71700AFAEF4 /* DbVerbTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */; };
+		988DB91D2125C92700AFAEF4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB91C2125C92700AFAEF4 /* Database.swift */; };
 		98B0150D2122A9020090006E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0150C2122A9020090006E /* UserData.swift */; };
 		98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0150E2122AA3B0090006E /* UserProgression.swift */; };
 		98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0151021244C9F0090006E /* UserLearningVerb.swift */; };
 		98B01514212474670090006E /* LevelCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B01513212474670090006E /* LevelCheckBox.swift */; };
 		98B01516212478880090006E /* LevelCheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B01515212478880090006E /* LevelCheckBox.xib */; };
+		98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B121255872000F44B4 /* TestSGLite.swift */; };
+		98B0A8B62125AE9B000F44B4 /* VerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B52125AE9B000F44B4 /* VerbDAO.swift */; };
+		98B0A8B82125AECD000F44B4 /* VerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B72125AECD000F44B4 /* VerbDAOImpl.swift */; };
 		98C9834B20F750820080B08C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9834A20F750820080B08C /* AppDelegate.swift */; };
 		98C9834D20F750820080B08C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9834C20F750820080B08C /* ViewController.swift */; };
 		98C9835020F750820080B08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C9834E20F750820080B08C /* Main.storyboard */; };
@@ -338,6 +352,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		988DB8F92125B3BC00AFAEF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		988DB8FB2125B3BC00AFAEF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
+			remoteInfo = "SQLiteTests iOS";
+		};
+		988DB8FD2125B3BC00AFAEF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
+			remoteInfo = "SQLite Mac";
+		};
+		988DB8FF2125B3BC00AFAEF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
+			remoteInfo = "SQLiteTests Mac";
+		};
+		988DB9012125B3BC00AFAEF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
+			remoteInfo = "SQLite tvOS";
+		};
+		988DB9032125B3BC00AFAEF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
+			remoteInfo = "SQLiteTests tvOS";
+		};
+		988DB9052125B3BC00AFAEF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A121AC451CA35C79005A31D1;
+			remoteInfo = "SQLite watchOS";
+		};
+		988DB90A2125B3CE00AFAEF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
 		98C9835C20F750840080B08C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 98C9833F20F750820080B08C /* Project object */;
@@ -354,14 +424,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		98B0A8B0212557FE000F44B4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				988DB9092125B3CE00AFAEF4 /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		983B2494211C4A0C009C33B1 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
 		983B2496211C6A4B009C33B1 /* Verbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verbs.swift; sourceTree = "<group>"; };
+		988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../../../Users/laurianemollier/Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
+		988DB90F2125BBD700AFAEF4 /* VerbTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTable.swift; sourceTree = "<group>"; };
+		988DB9122125C08900AFAEF4 /* VerbTranslationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTranslationDAO.swift; sourceTree = "<group>"; };
+		988DB9142125C09900AFAEF4 /* VerbTranslationDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTranslationDAOImpl.swift; sourceTree = "<group>"; };
+		988DB9162125C24500AFAEF4 /* DbVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerb.swift; sourceTree = "<group>"; };
+		988DB9182125C70700AFAEF4 /* VerbTranslationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTranslationTable.swift; sourceTree = "<group>"; };
+		988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbTranslation.swift; sourceTree = "<group>"; };
+		988DB91C2125C92700AFAEF4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		98B0150C2122A9020090006E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		98B0150E2122AA3B0090006E /* UserProgression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgression.swift; sourceTree = "<group>"; };
 		98B0151021244C9F0090006E /* UserLearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLearningVerb.swift; sourceTree = "<group>"; };
 		98B01513212474670090006E /* LevelCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCheckBox.swift; sourceTree = "<group>"; };
 		98B01515212478880090006E /* LevelCheckBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCheckBox.xib; sourceTree = "<group>"; };
+		98B0A8B121255872000F44B4 /* TestSGLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSGLite.swift; sourceTree = "<group>"; };
+		98B0A8B52125AE9B000F44B4 /* VerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAO.swift; sourceTree = "<group>"; };
+		98B0A8B72125AECD000F44B4 /* VerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAOImpl.swift; sourceTree = "<group>"; };
 		98C9834720F750820080B08C /* Apprendre les verbes irréguliers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apprendre les verbes irréguliers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C9834A20F750820080B08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98C9834C20F750820080B08C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -696,6 +792,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				988DB9082125B3CE00AFAEF4 /* SQLite.framework in Frameworks */,
+				988DB9072125B3C800AFAEF4 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,16 +814,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		983B2493211C49B7009C33B1 /* Model */ = {
+		983B2493211C49B7009C33B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				983B2494211C4A0C009C33B1 /* Verb.swift */,
+				988DB9112125BC7F00AFAEF4 /* Beans */,
+				988DB90E2125BBBD00AFAEF4 /* Tables */,
+				98B0A8B42125AE3B000F44B4 /* Daos */,
 				983B2496211C6A4B009C33B1 /* Verbs.swift */,
 				98B0150C2122A9020090006E /* UserData.swift */,
 				98B0150E2122AA3B0090006E /* UserProgression.swift */,
 				98B0151021244C9F0090006E /* UserLearningVerb.swift */,
+				988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */,
+				988DB91C2125C92700AFAEF4 /* Database.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		988DB8F02125B3BB00AFAEF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				988DB8FA2125B3BC00AFAEF4 /* SQLite.framework */,
+				988DB8FC2125B3BC00AFAEF4 /* SQLiteTests iOS.xctest */,
+				988DB8FE2125B3BC00AFAEF4 /* SQLite.framework */,
+				988DB9002125B3BC00AFAEF4 /* SQLiteTests Mac.xctest */,
+				988DB9022125B3BC00AFAEF4 /* SQLite.framework */,
+				988DB9042125B3BC00AFAEF4 /* SQLiteTests tvOS.xctest */,
+				988DB9062125B3BC00AFAEF4 /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		988DB90E2125BBBD00AFAEF4 /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				988DB90F2125BBD700AFAEF4 /* VerbTable.swift */,
+				988DB9162125C24500AFAEF4 /* DbVerb.swift */,
+				988DB9182125C70700AFAEF4 /* VerbTranslationTable.swift */,
+				988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		988DB9112125BC7F00AFAEF4 /* Beans */ = {
+			isa = PBXGroup;
+			children = (
+				983B2494211C4A0C009C33B1 /* Verb.swift */,
+			);
+			path = Beans;
 			sourceTree = "<group>";
 		};
 		98B01512212473D70090006E /* AddVerbsCV */ = {
@@ -738,6 +873,25 @@
 			path = AddVerbsCV;
 			sourceTree = "<group>";
 		};
+		98B0A8AA212557F1000F44B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98B0A8B42125AE3B000F44B4 /* Daos */ = {
+			isa = PBXGroup;
+			children = (
+				98B0A8B52125AE9B000F44B4 /* VerbDAO.swift */,
+				98B0A8B72125AECD000F44B4 /* VerbDAOImpl.swift */,
+				988DB9122125C08900AFAEF4 /* VerbTranslationDAO.swift */,
+				988DB9142125C09900AFAEF4 /* VerbTranslationDAOImpl.swift */,
+			);
+			path = Daos;
+			sourceTree = "<group>";
+		};
 		98C9833E20F750820080B08C = {
 			isa = PBXGroup;
 			children = (
@@ -745,6 +899,7 @@
 				98C9835E20F750840080B08C /* Apprendre les verbes irréguliersTests */,
 				98C9836920F750840080B08C /* Apprendre les verbes irréguliersUITests */,
 				98C9834820F750820080B08C /* Products */,
+				98B0A8AA212557F1000F44B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -761,15 +916,16 @@
 		98C9834920F750820080B08C /* Apprendre les verbes irréguliers */ = {
 			isa = PBXGroup;
 			children = (
-				983B2493211C49B7009C33B1 /* Model */,
+				983B2493211C49B7009C33B1 /* Models */,
 				98DEFC8F20FF230E00DC32BB /* Audios */,
-				98DEFC8820FDC26200DC32BB /* ViewController */,
+				98DEFC8820FDC26200DC32BB /* ViewControllers */,
 				98C9834A20F750820080B08C /* AppDelegate.swift */,
 				98C9834C20F750820080B08C /* ViewController.swift */,
 				98C9834E20F750820080B08C /* Main.storyboard */,
 				98C9835120F750840080B08C /* Assets.xcassets */,
 				98C9835320F750840080B08C /* LaunchScreen.storyboard */,
 				98C9835620F750840080B08C /* Info.plist */,
+				98B0A8B121255872000F44B4 /* TestSGLite.swift */,
 			);
 			path = "Apprendre les verbes irréguliers";
 			sourceTree = "<group>";
@@ -792,14 +948,14 @@
 			path = "Apprendre les verbes irréguliersUITests";
 			sourceTree = "<group>";
 		};
-		98DEFC8820FDC26200DC32BB /* ViewController */ = {
+		98DEFC8820FDC26200DC32BB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				98B01512212473D70090006E /* AddVerbsCV */,
 				98DEFC8620FDC25400DC32BB /* MainVC.swift */,
 				98DEFC8D20FE27EE00DC32BB /* ReviewVerbsVC.swift */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		98DEFC8F20FF230E00DC32BB /* Audios */ = {
@@ -1138,10 +1294,12 @@
 				98C9834320F750820080B08C /* Sources */,
 				98C9834420F750820080B08C /* Frameworks */,
 				98C9834520F750820080B08C /* Resources */,
+				98B0A8B0212557FE000F44B4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				988DB90B2125B3CE00AFAEF4 /* PBXTargetDependency */,
 			);
 			name = "Apprendre les verbes irréguliers";
 			productName = "Apprendre les verbes irréguliers";
@@ -1218,6 +1376,12 @@
 			mainGroup = 98C9833E20F750820080B08C;
 			productRefGroup = 98C9834820F750820080B08C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 988DB8F02125B3BB00AFAEF4 /* Products */;
+					ProjectRef = 988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				98C9834620F750820080B08C /* Apprendre les verbes irréguliers */,
@@ -1226,6 +1390,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		988DB8FA2125B3BC00AFAEF4 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = 988DB8F92125B3BC00AFAEF4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		988DB8FC2125B3BC00AFAEF4 /* SQLiteTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests iOS.xctest";
+			remoteRef = 988DB8FB2125B3BC00AFAEF4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		988DB8FE2125B3BC00AFAEF4 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = 988DB8FD2125B3BC00AFAEF4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		988DB9002125B3BC00AFAEF4 /* SQLiteTests Mac.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests Mac.xctest";
+			remoteRef = 988DB8FF2125B3BC00AFAEF4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		988DB9022125B3BC00AFAEF4 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = 988DB9012125B3BC00AFAEF4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		988DB9042125B3BC00AFAEF4 /* SQLiteTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests tvOS.xctest";
+			remoteRef = 988DB9032125B3BC00AFAEF4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		988DB9062125B3BC00AFAEF4 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = 988DB9052125B3BC00AFAEF4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		98C9834520F750820080B08C /* Resources */ = {
@@ -1571,16 +1787,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
+				988DB9172125C24500AFAEF4 /* DbVerb.swift in Sources */,
+				988DB9102125BBD700AFAEF4 /* VerbTable.swift in Sources */,
 				983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */,
 				983B2495211C4A0C009C33B1 /* Verb.swift in Sources */,
+				988DB91B2125C71700AFAEF4 /* DbVerbTranslation.swift in Sources */,
 				98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */,
+				98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */,
 				98B0150D2122A9020090006E /* UserData.swift in Sources */,
+				98B0A8B82125AECD000F44B4 /* VerbDAOImpl.swift in Sources */,
 				98DEFC8E20FE27EE00DC32BB /* ReviewVerbsVC.swift in Sources */,
 				98DEFC8C20FDC33200DC32BB /* AddVerbsCV.swift in Sources */,
+				988DB91D2125C92700AFAEF4 /* Database.swift in Sources */,
 				98C9834D20F750820080B08C /* ViewController.swift in Sources */,
 				98DEFC8720FDC25400DC32BB /* MainVC.swift in Sources */,
 				98C9834B20F750820080B08C /* AppDelegate.swift in Sources */,
 				98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */,
+				988DB9192125C70700AFAEF4 /* VerbTranslationTable.swift in Sources */,
+				98B0A8B62125AE9B000F44B4 /* VerbDAO.swift in Sources */,
+				988DB9152125C09900AFAEF4 /* VerbTranslationDAOImpl.swift in Sources */,
+				988DB9132125C08900AFAEF4 /* VerbTranslationDAO.swift in Sources */,
 				98B01514212474670090006E /* LevelCheckBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1604,6 +1831,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		988DB90B2125B3CE00AFAEF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite iOS";
+			targetProxy = 988DB90A2125B3CE00AFAEF4 /* PBXContainerItemProxy */;
+		};
 		98C9835D20F750840080B08C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 98C9834620F750820080B08C /* Apprendre les verbes irréguliers */;
@@ -1753,6 +1985,7 @@
 		98C9837020F750840080B08C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EQPGG2M7LV;
@@ -1771,6 +2004,7 @@
 		98C9837120F750840080B08C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EQPGG2M7LV;
