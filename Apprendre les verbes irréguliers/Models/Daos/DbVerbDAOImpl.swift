@@ -9,6 +9,7 @@
 import Foundation
 import SQLite
 
+
 class DbVerbDAOImpl/*: VerbDAO*/{
     
     // TODO: deal with the errors of connections
@@ -23,19 +24,19 @@ class DbVerbDAOImpl/*: VerbDAO*/{
     func createTable(){
         do{
             // TODO with the possible errors
-            print("Create VerbTable...")
+            SpeedLog.print("Create VerbTable...")
             try self.db.run(VerbTable.createTable)
-            print("VerbTable created")
+            SpeedLog.print("VerbTable created")
         }
         catch{
             // TODO
-            print(error)
+            SpeedLog.print(error)
         }
     }
     
     /// Create a new ligne in the database to store this verb
     func insert(verb: DbVerb) throws -> DbVerb {
-        print("Insert DbVerb " + verb.infinitive + " ...")
+        SpeedLog.print("Insert DbVerb " + verb.infinitive + " ...")
         let insert = VerbTable.verbs.insert(VerbTable.level <- verb.level.rawValue,
                                             VerbTable.form <- verb.form.rawValue,
                                             VerbTable.infinitive <- verb.infinitive,
@@ -44,7 +45,7 @@ class DbVerbDAOImpl/*: VerbDAO*/{
                                             VerbTable.pastParticiple <- verb.pastParticiple)
         
         let id: Int64 = try db.run(insert)
-        print("DbVerb inserted ")
+        SpeedLog.print("DbVerb inserted ")
         return DbVerb(id: id, level: verb.level, form: verb.form,
                       infinitive: verb.infinitive, present: verb.present,
                       simplePast: verb.simplePast, pastParticiple: verb.pastParticiple)
@@ -81,7 +82,7 @@ class DbVerbDAOImpl/*: VerbDAO*/{
         }
         catch{
             // TODO
-            print(error)
+            SpeedLog.print(error)
             return [DbVerb]()
         }
     }

@@ -24,7 +24,6 @@ class VerbDAOImpl{
     
     func insert(verb: Verb)-> Verb {
         do {
-            print("insert " + String(verb.id!))
             let dbVerb = try DbVerbDAOImpl.shared.insert(verb: verb.toDbVerb())
             let dbTranslations = try verb.toDbVerbTranslations(id: dbVerb.id!).map{ dbTrans in
                 try DbVerbTranslationDAOImpl.shared.insert(translation: dbTrans)

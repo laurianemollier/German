@@ -50,7 +50,7 @@ class MainVC: UIViewController {
         
         DbVerbDAOImpl.shared.createTable()
         DbVerbTranslationDAOImpl.shared.createTable()
-        VerbDAOImpl.shared.insert(verbs: Verbs.verbs)
+        let verbs = VerbDAOImpl.shared.insert(verbs: Verbs.verbs)
     }
 
     /// Take care of the set up when the app was already launched before

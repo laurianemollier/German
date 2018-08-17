@@ -22,26 +22,29 @@ class DbVerbTranslationDAOImpl{
     func createTable(){
         do{
             // TODO with the possible errors
-            print("Create VerbTranslationTable...")
+            SpeedLog.print("Create VerbTranslationTable...")
             try self.db.run(VerbTranslationTable.createTable)
-            print("VerbTranslationTable created")
+            SpeedLog.print("VerbTranslationTable created")
         }
         catch{
             // TODO
-            print(error)
+            SpeedLog.print(error)
         }
     }
     
     
     func insert(translation: DbVerbTranslation) throws -> DbVerbTranslation{
-        print("Insert DbVerbTranslation " + translation.translation + " ...")
+        SpeedLog.print("Insert DbVerbTranslation " + translation.translation + " ...")
+        
         let insert = VerbTranslationTable.translations
             .insert(VerbTranslationTable.verbId <- translation.verbId,
                     VerbTranslationTable.lang <- translation.lang.rawValue,
                     VerbTranslationTable.translation <- translation.translation)
         
         let id: Int64 = try db.run(insert)
-        print("DbVerb DbVerbTranslation ")
+        
+        SpeedLog.print("DbVerb DbVerbTranslation ")
+        
         return DbVerbTranslation(id: id,
                                  verbId: translation.verbId,
                                  lang: translation.lang,
