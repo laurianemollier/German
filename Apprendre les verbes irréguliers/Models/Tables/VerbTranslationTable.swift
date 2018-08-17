@@ -7,8 +7,30 @@
 //
 
 import Foundation
+import SQLite
 
 
 class VerbTranslationTable{
     
+    static let verbTranslations = Table("verbTranslations")
+    
+    /// The id of the translation
+    static let id = Expression<Int64>("id")
+    
+    /// The verb id for which the translation is
+    static let verbId = Expression<Int64>("verbId")
+    
+    /// The language in which the translation is
+    static let lang = Expression<String>("lang")
+    
+    /// The translation of the verb of id "id" in the language "lang"
+    static let translation = Expression<String>("translation")
+    
+    /// The definition of the table that needs to be created
+    static let createTable: String = VerbTranslationTable.verbTranslations.create{ (table) in
+        table.column(VerbTranslationTable.id, primaryKey: true)
+        table.foreignKey(VerbTranslationTable.verbId, references: VerbTable.verbs, VerbTable.id, delete: .cascade)
+        table.column(VerbTranslationTable.lang)
+        table.column(VerbTranslationTable.translation)
+    }
 }

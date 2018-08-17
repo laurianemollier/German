@@ -14,8 +14,8 @@
 		988DB9092125B3CE00AFAEF4 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 988DB8FA2125B3BC00AFAEF4 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */; };
 		988DB9102125BBD700AFAEF4 /* VerbTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB90F2125BBD700AFAEF4 /* VerbTable.swift */; };
-		988DB9132125C08900AFAEF4 /* VerbTranslationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9122125C08900AFAEF4 /* VerbTranslationDAO.swift */; };
-		988DB9152125C09900AFAEF4 /* VerbTranslationDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9142125C09900AFAEF4 /* VerbTranslationDAOImpl.swift */; };
+		988DB9132125C08900AFAEF4 /* DbVerbTranslationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9122125C08900AFAEF4 /* DbVerbTranslationDAO.swift */; };
+		988DB9152125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9142125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift */; };
 		988DB9172125C24500AFAEF4 /* DbVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9162125C24500AFAEF4 /* DbVerb.swift */; };
 		988DB9192125C70700AFAEF4 /* VerbTranslationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9182125C70700AFAEF4 /* VerbTranslationTable.swift */; };
 		988DB91B2125C71700AFAEF4 /* DbVerbTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */; };
@@ -26,8 +26,8 @@
 		98B01514212474670090006E /* LevelCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B01513212474670090006E /* LevelCheckBox.swift */; };
 		98B01516212478880090006E /* LevelCheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B01515212478880090006E /* LevelCheckBox.xib */; };
 		98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B121255872000F44B4 /* TestSGLite.swift */; };
-		98B0A8B62125AE9B000F44B4 /* VerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B52125AE9B000F44B4 /* VerbDAO.swift */; };
-		98B0A8B82125AECD000F44B4 /* VerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B72125AECD000F44B4 /* VerbDAOImpl.swift */; };
+		98B0A8B62125AE9B000F44B4 /* DbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B52125AE9B000F44B4 /* DbVerbDAO.swift */; };
+		98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B72125AECD000F44B4 /* DbVerbDAOImpl.swift */; };
 		98C9834B20F750820080B08C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9834A20F750820080B08C /* AppDelegate.swift */; };
 		98C9834D20F750820080B08C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9834C20F750820080B08C /* ViewController.swift */; };
 		98C9835020F750820080B08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C9834E20F750820080B08C /* Main.storyboard */; };
@@ -444,8 +444,8 @@
 		988DB8EF2125B3BB00AFAEF4 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../../../Users/laurianemollier/Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		988DB90F2125BBD700AFAEF4 /* VerbTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTable.swift; sourceTree = "<group>"; };
-		988DB9122125C08900AFAEF4 /* VerbTranslationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTranslationDAO.swift; sourceTree = "<group>"; };
-		988DB9142125C09900AFAEF4 /* VerbTranslationDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTranslationDAOImpl.swift; sourceTree = "<group>"; };
+		988DB9122125C08900AFAEF4 /* DbVerbTranslationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbTranslationDAO.swift; sourceTree = "<group>"; };
+		988DB9142125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbTranslationDAOImpl.swift; sourceTree = "<group>"; };
 		988DB9162125C24500AFAEF4 /* DbVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerb.swift; sourceTree = "<group>"; };
 		988DB9182125C70700AFAEF4 /* VerbTranslationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTranslationTable.swift; sourceTree = "<group>"; };
 		988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbTranslation.swift; sourceTree = "<group>"; };
@@ -456,8 +456,8 @@
 		98B01513212474670090006E /* LevelCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCheckBox.swift; sourceTree = "<group>"; };
 		98B01515212478880090006E /* LevelCheckBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCheckBox.xib; sourceTree = "<group>"; };
 		98B0A8B121255872000F44B4 /* TestSGLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSGLite.swift; sourceTree = "<group>"; };
-		98B0A8B52125AE9B000F44B4 /* VerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAO.swift; sourceTree = "<group>"; };
-		98B0A8B72125AECD000F44B4 /* VerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAOImpl.swift; sourceTree = "<group>"; };
+		98B0A8B52125AE9B000F44B4 /* DbVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbDAO.swift; sourceTree = "<group>"; };
+		98B0A8B72125AECD000F44B4 /* DbVerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbDAOImpl.swift; sourceTree = "<group>"; };
 		98C9834720F750820080B08C /* Apprendre les verbes irréguliers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apprendre les verbes irréguliers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C9834A20F750820080B08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98C9834C20F750820080B08C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -848,9 +848,7 @@
 			isa = PBXGroup;
 			children = (
 				988DB90F2125BBD700AFAEF4 /* VerbTable.swift */,
-				988DB9162125C24500AFAEF4 /* DbVerb.swift */,
 				988DB9182125C70700AFAEF4 /* VerbTranslationTable.swift */,
-				988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */,
 			);
 			path = Tables;
 			sourceTree = "<group>";
@@ -859,6 +857,8 @@
 			isa = PBXGroup;
 			children = (
 				983B2494211C4A0C009C33B1 /* Verb.swift */,
+				988DB9162125C24500AFAEF4 /* DbVerb.swift */,
+				988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */,
 			);
 			path = Beans;
 			sourceTree = "<group>";
@@ -884,10 +884,10 @@
 		98B0A8B42125AE3B000F44B4 /* Daos */ = {
 			isa = PBXGroup;
 			children = (
-				98B0A8B52125AE9B000F44B4 /* VerbDAO.swift */,
-				98B0A8B72125AECD000F44B4 /* VerbDAOImpl.swift */,
-				988DB9122125C08900AFAEF4 /* VerbTranslationDAO.swift */,
-				988DB9142125C09900AFAEF4 /* VerbTranslationDAOImpl.swift */,
+				98B0A8B52125AE9B000F44B4 /* DbVerbDAO.swift */,
+				98B0A8B72125AECD000F44B4 /* DbVerbDAOImpl.swift */,
+				988DB9122125C08900AFAEF4 /* DbVerbTranslationDAO.swift */,
+				988DB9142125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift */,
 			);
 			path = Daos;
 			sourceTree = "<group>";
@@ -1796,7 +1796,7 @@
 				98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */,
 				98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */,
 				98B0150D2122A9020090006E /* UserData.swift in Sources */,
-				98B0A8B82125AECD000F44B4 /* VerbDAOImpl.swift in Sources */,
+				98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */,
 				98DEFC8E20FE27EE00DC32BB /* ReviewVerbsVC.swift in Sources */,
 				98DEFC8C20FDC33200DC32BB /* AddVerbsCV.swift in Sources */,
 				988DB91D2125C92700AFAEF4 /* Database.swift in Sources */,
@@ -1805,9 +1805,9 @@
 				98C9834B20F750820080B08C /* AppDelegate.swift in Sources */,
 				98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */,
 				988DB9192125C70700AFAEF4 /* VerbTranslationTable.swift in Sources */,
-				98B0A8B62125AE9B000F44B4 /* VerbDAO.swift in Sources */,
-				988DB9152125C09900AFAEF4 /* VerbTranslationDAOImpl.swift in Sources */,
-				988DB9132125C08900AFAEF4 /* VerbTranslationDAO.swift in Sources */,
+				98B0A8B62125AE9B000F44B4 /* DbVerbDAO.swift in Sources */,
+				988DB9152125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift in Sources */,
+				988DB9132125C08900AFAEF4 /* DbVerbTranslationDAO.swift in Sources */,
 				98B01514212474670090006E /* LevelCheckBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  VerbTranslationDAOImpl.swift
+//  DbVerbTranslationDAOImpl.swift
 //  Apprendre les verbes irréguliers
 //
 //  Created by Lauriane Mollier on 16/08/2018.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-class VerbTranslationDAOImpl{
+class DbVerbTranslationDAOImpl{
     
     
 

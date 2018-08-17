@@ -1,5 +1,5 @@
 //
-//  DbVerbTranslation.swift
+//  DbVerbDAO.swift
 //  Apprendre les verbes irréguliers
 //
 //  Created by Lauriane Mollier on 16/08/2018.
@@ -9,6 +9,11 @@
 import Foundation
 
 
-class DbVerbTranslation{
+protocol DbVerbDAO{
+    
+    /// Create a new ligne in the database to store this verb
+    func create(verb: Verb)
+    
+    func findAll() -> [Verb]
     
 }

@@ -12,7 +12,7 @@ import Foundation
 class DbVerb{
     
     /// The id for the verb
-    let id: Int
+    let id: Int64
     
     /// The level at which you are supposed to learn this verb.
     let level: Level
@@ -45,7 +45,7 @@ class DbVerb{
     ///     - present: The present from of this verb
     ///     - simplePast: The simple past from of this verb
     ///     - pastParticiple: The past participle from of this verb
-    init(id: Int, level: Level, form: Form, infinitive: String, present: String, simplePast: String, pastParticiple: String){
+    init(id: Int64, level: Level, form: Form, infinitive: String, present: String, simplePast: String, pastParticiple: String){
         self.id = id
         self.level = level
         self.form = form
