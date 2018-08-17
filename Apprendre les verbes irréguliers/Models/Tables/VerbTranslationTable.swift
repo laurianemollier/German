@@ -12,7 +12,7 @@ import SQLite
 
 class VerbTranslationTable{
     
-    static let verbTranslations = Table("verbTranslations")
+    static let translations = Table("verbTranslations")
     
     /// The id of the translation
     static let id = Expression<Int64>("id")
@@ -27,10 +27,12 @@ class VerbTranslationTable{
     static let translation = Expression<String>("translation")
     
     /// The definition of the table that needs to be created
-    static let createTable: String = VerbTranslationTable.verbTranslations.create{ (table) in
-        table.column(VerbTranslationTable.id, primaryKey: true)
-        table.foreignKey(VerbTranslationTable.verbId, references: VerbTable.verbs, VerbTable.id, delete: .cascade)
+    static let createTable: String = VerbTranslationTable.translations.create{ (table) in
+        table.column(VerbTranslationTable.id, primaryKey: .autoincrement)
+        table.column(VerbTranslationTable.verbId)
         table.column(VerbTranslationTable.lang)
         table.column(VerbTranslationTable.translation)
+        
+        table.foreignKey(VerbTranslationTable.verbId, references: VerbTable.verbs, VerbTable.id, delete: .cascade)
     }
 }

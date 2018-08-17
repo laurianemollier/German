@@ -10,57 +10,12 @@ import Foundation
 import AVFoundation
 
 
-enum Lang: String{
-    case DeviceLanguage = "DeviceLanguage"
-    case fr = "fr"
-    case en = "en"
-    case es = "es"
-    case ru = "ru"
-    case zh = "zh-Hant" // chinees trad
-    case ar = "ar"
-    case it = "it"
-    case ja = "ja"
-    
-    static let allValues = [DeviceLanguage, fr, en, es, ru, zh, ar, it, ja]
-}
-
-
-/// Each verb belongs to a conjugation's form
-public enum Form: String { // 11
-    case aiea = "a–ie(i)–a"
-    case aua = "a-u-a"
-    case eae = "e-a-e"
-    case eao = "e-a-o"
-    case eiieie = "ei-ie-ie"
-    case eiii = "ei-i-i"
-    case iao = "i-a-o"
-    case iau = "i-a-u"
-    case ieoo = "ie(e)-o-o"
-    case undefine = "undefine"
-    case weak = "weak"
-    
-    static let allValues = [aiea, aua, eae, eao, eiieie, eiii, iao, iau, ieoo, undefine, weak]
-}
-
-
-/// Each verb belong to a level
-public enum Level: String{
-    case A2 = "A2"
-    case B1 = "B1"
-    case B2 = "B2"
-    case C1 = "C1"
-    case All = "All"
-    
-    static let allValues = [A2, B1, B2, C1, All]
-}
-
-
 
 /// A verb to learn
 class Verb{
     
     /// The id for the verb
-    let id: Int
+    let id: Int64?
     
     /// The level at which you are supposed to learn this verb.
     let level: Level
@@ -70,7 +25,7 @@ class Verb{
     
     /// The differents temps of this verb
     /// (infinitive, present, simple past, past participle)
-    fileprivate let verb: (String, String, String, String)
+    fileprivate let verb: (infinitive: String, present: String, simplePast: String, pastParticiple: String)
     
     /// The translation avalable in each language
     fileprivate var translations = [Lang:String]()
@@ -90,7 +45,7 @@ class Verb{
     ///     - translations: The translation avalable in each language
     ///
     /// - Returns: A verb
-    init(id: Int, level: Level, form: Form, verb: (String, String, String, String), translations: [(Lang, String)]){
+    init(id: Int64?, level: Level, form: Form, verb: (String, String, String, String), translations: [(Lang, String)]){
         self.id = id
         self.level = level
         self.form = form
@@ -100,6 +55,25 @@ class Verb{
             self.translations[$0] = $1
         })
     }
+    
+    init(dbVerb: DbVerb, dbVerbTranslations: [DbVerbTranslation]){
+        /// TODO: verify if all is correct
+        
+        self.id = dbVerb.id
+        self.level = dbVerb.level
+        self.form = dbVerb.form
+        self.verb = (infinitive: dbVerb.infinitive,
+                     present: dbVerb.present,
+                     simplePast: dbVerb.simplePast,
+                     pastParticiple: dbVerb.pastParticiple)
+        
+        dbVerbTranslations.forEach({
+            self.translations[$0.lang] = $0.translation
+        })
+        
+    }
+    
+    
     
     /* Getter fonctions */
     
@@ -131,6 +105,25 @@ class Verb{
              return (verb as NSString).substring(from: 3)
         }
     }
+    
+    
+    /* to the database beans */
+    
+    
+    func toDbVerb() -> DbVerb{
+        return DbVerb(id: self.id, level: self.level, form: self.form,
+                      infinitive: self.verb.0, present: self.verb.1,
+                      simplePast: self.verb.2, pastParticiple: self.verb.3)
+    }
+    
+    /// If the id
+    func toDbVerbTranslations(id: Int64?) -> [DbVerbTranslation] {
+        return translations.map({t in
+            DbVerbTranslation(id: nil, verbId: self.id ?? id!, lang: t.0, translation: t.1)
+        })
+    }
+    
+
     
 }
 

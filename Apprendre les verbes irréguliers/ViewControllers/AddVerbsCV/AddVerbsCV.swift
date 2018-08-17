@@ -17,7 +17,6 @@ class AddVerbsCV: UIViewController {
     }
     
 
-    
     @IBAction func optionBoxB2(_ sender: UIButton) {
         optionBox(button: sender)
     }

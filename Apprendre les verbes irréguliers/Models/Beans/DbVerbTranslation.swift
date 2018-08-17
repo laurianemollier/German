@@ -12,7 +12,7 @@ import Foundation
 class DbVerbTranslation{
     
     /// The id of the translation
-    let id: Int64
+    let id: Int64?
     
     /// The verb id for which the translation is
     let verbId: Int64
@@ -30,7 +30,7 @@ class DbVerbTranslation{
     ///     - verbId: The verb id for which the translation is
     ///     - lang: The language in which the translation is
     ///     - translation: The translation of the verb of id "id" in the language "lang"
-    init(id: Int64, verbId: Int64, lang: Lang, translation: String){
+    init(id: Int64?, verbId: Int64, lang: Lang, translation: String){
         self.id = id
         self.verbId = verbId
         self.lang = lang

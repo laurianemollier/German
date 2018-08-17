@@ -38,7 +38,7 @@ class VerbTable{
     
     /// The definition of the table that needs to be created
     static let createTable: String = VerbTable.verbs.create { (table) in
-        table.column(VerbTable.id, primaryKey: true)
+        table.column(VerbTable.id, primaryKey: .autoincrement)
         table.column(VerbTable.level)
         table.column(VerbTable.form)
         table.column(VerbTable.infinitive)

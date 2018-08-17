@@ -48,15 +48,18 @@ class MainVC: UIViewController {
         self.nbrVerbToReviewTodayLabel.text = String(0)
         self.nbrVerbInReviewListLabel.text = "Il y a " + String(0) + " à revoir" //TODO
         
-        
-        
-        
+        DbVerbDAOImpl.shared.createTable()
+        DbVerbTranslationDAOImpl.shared.createTable()
+        VerbDAOImpl.shared.insert(verbs: Verbs.verbs)
     }
 
     /// Take care of the set up when the app was already launched before
     fileprivate func setUpWasLaunchedBefore(){
         self.nbrVerbToReviewTodayLabel.text = String(30)
         self.nbrVerbInReviewListLabel.text = "Il y a " + String(44) + " à revoir" //TODO
+        
+        
+        
     }
     
 

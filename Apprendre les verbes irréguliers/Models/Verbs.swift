@@ -11,10 +11,9 @@ import AVFoundation
 
 
 
-struct Verbs{
+class Verbs{
     
-   
-    internal let verbs : [Verb] =
+    static let verbs : [Verb] =
         [Verb(id: 0, level: Level.C1, form: Form.ieoo, verb: ("abschließen", "er schließt … ab", "er schloss … ab", "er hat abgeschlossen"), translations: [(Lang.fr, "finir"), (Lang.en, "to finish"), (Lang.es, "cerrar con llave"), (Lang.ru, "заканчивать"), (Lang.it, "chiudere a chiave"), (Lang.zh, "終止/鎖起來"), (Lang.ar, "اغلق"), (Lang.ja, "しまう")]),
          Verb(id: 1, level: Level.C1, form: Form.eao, verb: ("abnehmen", "er nimmt … ab", "er nahm … ab", "er hat abgenommen"), translations: [(Lang.fr, "mincir"), (Lang.en, "to reduce weight"), (Lang.es, "perder peso"), (Lang.ru, "худеть"), (Lang.it, "dimagrire/diminuire"), (Lang.zh, "減肥/取下"), (Lang.ar, "تناقص/قلل وزنه"), (Lang.ja, "外す、減る")]),
          Verb(id: 2, level: Level.C1, form: Form.aiea, verb: ("abraten", "er rät … ab", "er riet … ab", "er hat abgeraten"), translations: [(Lang.fr, "déconseiller"), (Lang.en, "to dissuade"), (Lang.es, "desaconsejar"), (Lang.ru, "отговаривать"), (Lang.it, "sconsigliare"), (Lang.zh, "勸戒"), (Lang.ar, "نصح"), (Lang.ja, "勧めない")]),
