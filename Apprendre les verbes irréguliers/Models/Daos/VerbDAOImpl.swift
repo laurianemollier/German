@@ -12,34 +12,51 @@ import SQLite
 
 class VerbDAOImpl{
     
-    let db: Connection = Database.shared.connection!
+    let db: Connection
     
-    static let shared = VerbDAOImpl()
+    private init(connection: Connection){
+        self.db = connection
+    }
     
-    private init(){
+    static let shared = VerbDAOImpl(connection: Database.shared.connection!)
+    
+
+    func find(id: Int64) throws -> Verb?{
+        return Verbs.verbs.first(where: {$0.id == id})
         
+//        let q = VerbTable.verbs.filter(id == VerbTable.verbs[VerbTable.id])
+//            .join(VerbTranslationTable.translations,
+//                  on: VerbTranslationTable.verbId == VerbTable.verbs[VerbTable.id])
+//
+//        let rows: AnySequence<Row> = try db.prepare(q)
+////        let translations: (Lang, String) = rows.map{ r in
+////            (Lang(rawValue: r[VerbTranslationTable.lang])!, r[VerbTranslationTable.translation])
+////        }
+//
+//
+//
+////        let r = rows[0]
+////        let verb = (r[VerbTable.infinitive], r[VerbTable.present], r[VerbTable.simplePast], r[VerbTable.pastParticiple])
+//
+//        for r in rows{
+//            print(r[VerbTable.infinitive] + "  " + r[VerbTranslationTable.translation])
+//        }
     }
     
     
-    
-    func insert(verb: Verb)-> Verb {
-        do {
-            let dbVerb = try DbVerbDAOImpl.shared.insert(verb: verb.toDbVerb())
-            let dbTranslations = try verb.toDbVerbTranslations(id: dbVerb.id!).map{ dbTrans in
-                try DbVerbTranslationDAOImpl.shared.insert(translation: dbTrans)
-            }
-            return Verb(dbVerb: dbVerb, dbVerbTranslations: dbTranslations)
+    func insert(verb: Verb) throws -> Verb {
+        let dbVerb = try DbVerbDAOImpl.shared.insert(verb: verb.toDbVerb())
+        let dbTranslations = try verb.toDbVerbTranslations(id: dbVerb.id!).map{ dbTrans in
+            try DbVerbTranslationDAOImpl.shared.insert(translation: dbTrans)
         }
-        catch{
-            // TODO
-            print(error)
-            return verb
-        }
+        return Verb(dbVerb: dbVerb, dbVerbTranslations: dbTranslations)
     }
     
-    func insert(verbs: [Verb]) -> [Verb]{
-        return verbs.map({ v in insert(verb: v)})
+    func insert(verbs: [Verb]) throws -> [Verb]{
+        return try verbs.map({ v in try insert(verb: v)})
     }
+    
+    
   
 }
 

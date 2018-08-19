@@ -15,7 +15,7 @@ import AVFoundation
 class Verb{
     
     /// The id for the verb
-    let id: Int64?
+    let id: Int64
     
     /// The level at which you are supposed to learn this verb.
     let level: Level
@@ -45,8 +45,8 @@ class Verb{
     ///     - translations: The translation avalable in each language
     ///
     /// - Returns: A verb
-    init(id: Int64?, level: Level, form: Form, verb: (String, String, String, String), translations: [(Lang, String)]){
-        self.id = id
+    init(id: Int64, level: Level, form: Form, verb: (String, String, String, String), translations: [(Lang, String)]){
+        self.id = id + 1
         self.level = level
         self.form = form
         self.verb = verb
@@ -59,7 +59,7 @@ class Verb{
     init(dbVerb: DbVerb, dbVerbTranslations: [DbVerbTranslation]){
         /// TODO: verify if all is correct
         
-        self.id = dbVerb.id
+        self.id = dbVerb.id!
         self.level = dbVerb.level
         self.form = dbVerb.form
         self.verb = (infinitive: dbVerb.infinitive,
@@ -119,7 +119,7 @@ class Verb{
     /// If the id
     func toDbVerbTranslations(id: Int64?) -> [DbVerbTranslation] {
         return translations.map({t in
-            DbVerbTranslation(id: nil, verbId: self.id ?? id!, lang: t.0, translation: t.1)
+            DbVerbTranslation(id: nil, verbId: id ?? self.id, lang: t.0, translation: t.1)
         })
     }
     

@@ -16,6 +16,13 @@
 		98685F6621270D6000DA327D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98685F5821270CEE00DA327D /* SQLite.framework */; };
 		98685F6721270D6000DA327D /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98685F5821270CEE00DA327D /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98685F7021270E2B00DA327D /* SpeedLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F6F21270E2B00DA327D /* SpeedLog.swift */; };
+		98685F72212712EE00DA327D /* UserLearningVerbTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F71212712EE00DA327D /* UserLearningVerbTable.swift */; };
+		98685F742127161200DA327D /* DbUserLearningVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F732127161200DA327D /* DbUserLearningVerbDAO.swift */; };
+		98685F762127162700DA327D /* DbUserLearningVerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F752127162700DA327D /* DbUserLearningVerbDAOImpl.swift */; };
+		98685F782127173800DA327D /* DbUserLearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F772127173800DA327D /* DbUserLearningVerb.swift */; };
+		98685F7A212744F900DA327D /* SetUpDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F79212744F900DA327D /* SetUpDatabase.swift */; };
+		98685F7D212965E600DA327D /* ForwarCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F7C212965E600DA327D /* ForwarCardVC.swift */; };
+		98685F7F2129663100DA327D /* BackwardCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F7E2129663100DA327D /* BackwardCardVC.swift */; };
 		988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */; };
 		988DB9102125BBD700AFAEF4 /* VerbTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB90F2125BBD700AFAEF4 /* VerbTable.swift */; };
 		988DB9132125C08900AFAEF4 /* DbVerbTranslationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9122125C08900AFAEF4 /* DbVerbTranslationDAO.swift */; };
@@ -26,7 +33,6 @@
 		988DB91D2125C92700AFAEF4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB91C2125C92700AFAEF4 /* Database.swift */; };
 		988DB91F2126954900AFAEF4 /* VerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB91E2126954900AFAEF4 /* VerbDAO.swift */; };
 		988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9202126956200AFAEF4 /* VerbDAOImpl.swift */; };
-		98B0150D2122A9020090006E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0150C2122A9020090006E /* UserData.swift */; };
 		98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0150E2122AA3B0090006E /* UserProgression.swift */; };
 		98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0151021244C9F0090006E /* UserLearningVerb.swift */; };
 		98B01514212474670090006E /* LevelCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B01513212474670090006E /* LevelCheckBox.swift */; };
@@ -452,6 +458,13 @@
 		98685F382126BA8700DA327D /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		98685F4D21270CEE00DA327D /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../../../Users/laurianemollier/Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		98685F6F21270E2B00DA327D /* SpeedLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedLog.swift; sourceTree = "<group>"; };
+		98685F71212712EE00DA327D /* UserLearningVerbTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLearningVerbTable.swift; sourceTree = "<group>"; };
+		98685F732127161200DA327D /* DbUserLearningVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbUserLearningVerbDAO.swift; sourceTree = "<group>"; };
+		98685F752127162700DA327D /* DbUserLearningVerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbUserLearningVerbDAOImpl.swift; sourceTree = "<group>"; };
+		98685F772127173800DA327D /* DbUserLearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbUserLearningVerb.swift; sourceTree = "<group>"; };
+		98685F79212744F900DA327D /* SetUpDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpDatabase.swift; sourceTree = "<group>"; };
+		98685F7C212965E600DA327D /* ForwarCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwarCardVC.swift; sourceTree = "<group>"; };
+		98685F7E2129663100DA327D /* BackwardCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardCardVC.swift; sourceTree = "<group>"; };
 		988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		988DB90F2125BBD700AFAEF4 /* VerbTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTable.swift; sourceTree = "<group>"; };
 		988DB9122125C08900AFAEF4 /* DbVerbTranslationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbTranslationDAO.swift; sourceTree = "<group>"; };
@@ -462,7 +475,6 @@
 		988DB91C2125C92700AFAEF4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		988DB91E2126954900AFAEF4 /* VerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAO.swift; sourceTree = "<group>"; };
 		988DB9202126956200AFAEF4 /* VerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAOImpl.swift; sourceTree = "<group>"; };
-		98B0150C2122A9020090006E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		98B0150E2122AA3B0090006E /* UserProgression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgression.swift; sourceTree = "<group>"; };
 		98B0151021244C9F0090006E /* UserLearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLearningVerb.swift; sourceTree = "<group>"; };
 		98B01513212474670090006E /* LevelCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCheckBox.swift; sourceTree = "<group>"; };
@@ -834,8 +846,6 @@
 				988DB9112125BC7F00AFAEF4 /* Beans */,
 				988DB90E2125BBBD00AFAEF4 /* Tables */,
 				98B0A8B42125AE3B000F44B4 /* Daos */,
-				983B2496211C6A4B009C33B1 /* Verbs.swift */,
-				98B0150C2122A9020090006E /* UserData.swift */,
 				988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */,
 			);
 			path = Models;
@@ -855,7 +865,9 @@
 		98685F3A21270A4400DA327D /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				983B2496211C6A4B009C33B1 /* Verbs.swift */,
 				988DB91C2125C92700AFAEF4 /* Database.swift */,
+				98685F79212744F900DA327D /* SetUpDatabase.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -874,11 +886,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		98685F7B2129652800DA327D /* ReviewVerbsVC */ = {
+			isa = PBXGroup;
+			children = (
+				98DEFC8D20FE27EE00DC32BB /* ReviewVerbsVC.swift */,
+				98685F7C212965E600DA327D /* ForwarCardVC.swift */,
+				98685F7E2129663100DA327D /* BackwardCardVC.swift */,
+			);
+			path = ReviewVerbsVC;
+			sourceTree = "<group>";
+		};
 		988DB90E2125BBBD00AFAEF4 /* Tables */ = {
 			isa = PBXGroup;
 			children = (
 				988DB90F2125BBD700AFAEF4 /* VerbTable.swift */,
 				988DB9182125C70700AFAEF4 /* VerbTranslationTable.swift */,
+				98685F71212712EE00DA327D /* UserLearningVerbTable.swift */,
 			);
 			path = Tables;
 			sourceTree = "<group>";
@@ -887,9 +910,10 @@
 			isa = PBXGroup;
 			children = (
 				983B2494211C4A0C009C33B1 /* Verb.swift */,
+				98B0151021244C9F0090006E /* UserLearningVerb.swift */,
 				988DB9162125C24500AFAEF4 /* DbVerb.swift */,
 				988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */,
-				98B0151021244C9F0090006E /* UserLearningVerb.swift */,
+				98685F772127173800DA327D /* DbUserLearningVerb.swift */,
 			);
 			path = Beans;
 			sourceTree = "<group>";
@@ -921,6 +945,8 @@
 				988DB9142125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift */,
 				988DB91E2126954900AFAEF4 /* VerbDAO.swift */,
 				988DB9202126956200AFAEF4 /* VerbDAOImpl.swift */,
+				98685F732127161200DA327D /* DbUserLearningVerbDAO.swift */,
+				98685F752127162700DA327D /* DbUserLearningVerbDAOImpl.swift */,
 			);
 			path = Daos;
 			sourceTree = "<group>";
@@ -985,9 +1011,9 @@
 		98DEFC8820FDC26200DC32BB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				98685F7B2129652800DA327D /* ReviewVerbsVC */,
 				98B01512212473D70090006E /* AddVerbsCV */,
 				98DEFC8620FDC25400DC32BB /* MainVC.swift */,
-				98DEFC8D20FE27EE00DC32BB /* ReviewVerbsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1821,33 +1847,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98685F72212712EE00DA327D /* UserLearningVerbTable.swift in Sources */,
 				98685F352126BA4900DA327D /* Lang.swift in Sources */,
 				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
+				98685F7F2129663100DA327D /* BackwardCardVC.swift in Sources */,
 				988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */,
 				98685F392126BA8700DA327D /* Level.swift in Sources */,
 				988DB9172125C24500AFAEF4 /* DbVerb.swift in Sources */,
 				988DB9102125BBD700AFAEF4 /* VerbTable.swift in Sources */,
 				983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */,
 				983B2495211C4A0C009C33B1 /* Verb.swift in Sources */,
+				98685F762127162700DA327D /* DbUserLearningVerbDAOImpl.swift in Sources */,
 				988DB91B2125C71700AFAEF4 /* DbVerbTranslation.swift in Sources */,
 				98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */,
 				98685F372126BA6100DA327D /* Form.swift in Sources */,
 				98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */,
-				98B0150D2122A9020090006E /* UserData.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */,
 				988DB91F2126954900AFAEF4 /* VerbDAO.swift in Sources */,
 				98DEFC8E20FE27EE00DC32BB /* ReviewVerbsVC.swift in Sources */,
 				98DEFC8C20FDC33200DC32BB /* AddVerbsCV.swift in Sources */,
+				98685F7D212965E600DA327D /* ForwarCardVC.swift in Sources */,
 				988DB91D2125C92700AFAEF4 /* Database.swift in Sources */,
 				98C9834D20F750820080B08C /* ViewController.swift in Sources */,
+				98685F7A212744F900DA327D /* SetUpDatabase.swift in Sources */,
 				98DEFC8720FDC25400DC32BB /* MainVC.swift in Sources */,
 				98C9834B20F750820080B08C /* AppDelegate.swift in Sources */,
 				98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */,
 				988DB9192125C70700AFAEF4 /* VerbTranslationTable.swift in Sources */,
 				98B0A8B62125AE9B000F44B4 /* DbVerbDAO.swift in Sources */,
 				98685F7021270E2B00DA327D /* SpeedLog.swift in Sources */,
+				98685F742127161200DA327D /* DbUserLearningVerbDAO.swift in Sources */,
 				988DB9152125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift in Sources */,
 				988DB9132125C08900AFAEF4 /* DbVerbTranslationDAO.swift in Sources */,
+				98685F782127173800DA327D /* DbUserLearningVerb.swift in Sources */,
 				98B01514212474670090006E /* LevelCheckBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,15 +1,28 @@
 //
-//  ReviewVerbsVC.swift
+//  ForwarCardVC.swift
 //  Apprendre les verbes irréguliers
 //
-//  Created by Lauriane Mollier on 17/07/2018.
+//  Created by Lauriane Mollier on 19/08/2018.
 //  Copyright © 2018 Lauriane Mollier. All rights reserved.
 //
 
 import UIKit
 
-class ReviewVerbsVC: UIViewController {
+class ForwarCardVC: UIViewController {
+    
+    
+    
+    var translation: String!
 
+    @IBOutlet weak var translationLabel: UILabel!
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.translationLabel.text = translation
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

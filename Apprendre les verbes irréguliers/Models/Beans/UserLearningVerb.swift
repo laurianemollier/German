@@ -17,7 +17,7 @@ class UserLearningVerb{
     let verb: Verb
     
     /// The date at which the user has to review this verb
-    let dateToReview: Date
+    let dateToReview: Date?
     
     /// The progression of the user for this verb
     let userProgression: UserProgression
@@ -43,7 +43,7 @@ class UserLearningVerb{
     ///     - userProgression: The progression of the user for this verb
     ///
     /// - Returns: A new UserLearningVerb that is new for the user too
-    init(verb: Verb, dateToReview: Date, userProgression: UserProgression){
+    init(verb: Verb, dateToReview: Date?, userProgression: UserProgression){
         self.verb = verb
         self.dateToReview = dateToReview
         self.userProgression = userProgression

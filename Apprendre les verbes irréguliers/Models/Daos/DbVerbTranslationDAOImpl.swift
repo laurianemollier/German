@@ -12,24 +12,19 @@ import SQLite
 
 class DbVerbTranslationDAOImpl{
     
-    // TODO: deal with the errors of connections
-    let db: Connection = Database.shared.connection!
+    let db: Connection
     
-    static let shared = DbVerbTranslationDAOImpl()
+    private init(connection: Connection){
+        self.db = connection
+    }
     
-    private init() {}
+    static let shared = DbVerbTranslationDAOImpl(connection: Database.shared.connection!)
     
-    func createTable(){
-        do{
-            // TODO with the possible errors
-            SpeedLog.print("Create VerbTranslationTable...")
-            try self.db.run(VerbTranslationTable.createTable)
-            SpeedLog.print("VerbTranslationTable created")
-        }
-        catch{
-            // TODO
-            SpeedLog.print(error)
-        }
+    
+    func createTable() throws {
+        SpeedLog.print("Create VerbTranslationTable...")
+        try self.db.run(VerbTranslationTable.createTable)
+        SpeedLog.print("VerbTranslationTable created")
     }
     
     
@@ -43,7 +38,7 @@ class DbVerbTranslationDAOImpl{
         
         let id: Int64 = try db.run(insert)
         
-        SpeedLog.print("DbVerb DbVerbTranslation ")
+        SpeedLog.print("DbVerb DbVerbTranslation with id: " + String(id) + ". For verb of id: " + String(translation.verbId))
         
         return DbVerbTranslation(id: id,
                                  verbId: translation.verbId,

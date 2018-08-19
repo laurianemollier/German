@@ -12,30 +12,23 @@ import SQLite
 
 class DbVerbDAOImpl/*: VerbDAO*/{
     
-    // TODO: deal with the errors of connections
-    let db: Connection = Database.shared.connection!
+    let db: Connection
     
-    private init(){
-        
+    private init(connection: Connection){
+        self.db = connection
     }
     
-    static let shared = DbVerbDAOImpl()
+    static let shared = DbVerbDAOImpl(connection: Database.shared.connection!)
 
-    func createTable(){
-        do{
-            // TODO with the possible errors
-            SpeedLog.print("Create VerbTable...")
-            try self.db.run(VerbTable.createTable)
-            SpeedLog.print("VerbTable created")
-        }
-        catch{
-            // TODO
-            SpeedLog.print(error)
-        }
+    func createTable() throws {
+        SpeedLog.print("Create VerbTable...")
+        try self.db.run(VerbTable.createTable)
+        SpeedLog.print("VerbTable created")
     }
     
     /// Create a new ligne in the database to store this verb
     func insert(verb: DbVerb) throws -> DbVerb {
+        
         SpeedLog.print("Insert DbVerb " + verb.infinitive + " ...")
         let insert = VerbTable.verbs.insert(VerbTable.level <- verb.level.rawValue,
                                             VerbTable.form <- verb.form.rawValue,
@@ -45,25 +38,10 @@ class DbVerbDAOImpl/*: VerbDAO*/{
                                             VerbTable.pastParticiple <- verb.pastParticiple)
         
         let id: Int64 = try db.run(insert)
-        SpeedLog.print("DbVerb inserted ")
+        SpeedLog.print("DbVerb inserted with id: " + String(id))
         return DbVerb(id: id, level: verb.level, form: verb.form,
                       infinitive: verb.infinitive, present: verb.present,
                       simplePast: verb.simplePast, pastParticiple: verb.pastParticiple)
-        
-        
-//        do{
-//            let id: Int64 = try db.run(insert)
-//            print("Verb inserted " + verb.infinitive)
-//            return DbVerb(id: id, level: verb.level, form: verb.form,
-//                          infinitive: verb.infinitive, present: verb.present,
-//                          simplePast: verb.simplePast, pastParticiple: verb.pastParticiple)
-//        }
-//        catch{
-//            // TODO
-//            print(error)
-//            return nil
-//        }
-        
     }
 
     func findAll() -> [DbVerb] {

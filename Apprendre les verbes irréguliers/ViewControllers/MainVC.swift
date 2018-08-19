@@ -14,7 +14,6 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var nbrVerbInReviewListLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +23,6 @@ class MainVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         setUp()
     }
 
@@ -36,38 +34,49 @@ class MainVC: UIViewController {
 
     
     
+    // MARK: - SetUp
     
-    
-    /// Take care of the set-up in any cases
-    fileprivate func setUp(){
-         FirstLaunch().execute(onFistLaunch: setUpFirstLaunch, whenWasLaunchedBefore: setUpWasLaunchedBefore)
+    // TODO when they is an error
+    private func setUp(){
+        if FirstLaunch().isFirstLaunch {
+            firstLaunchSetUp()
+        }
+        if Database.shared.successfulConnection{
+            labelSetUp()
+            
+        }
     }
     
-    /// Take care of the set up on the first launch
-    fileprivate func setUpFirstLaunch(){
-        self.nbrVerbToReviewTodayLabel.text = String(0)
-        self.nbrVerbInReviewListLabel.text = "Il y a " + String(0) + " à revoir" //TODO
-        
-        DbVerbDAOImpl.shared.createTable()
-        DbVerbTranslationDAOImpl.shared.createTable()
-        let verbs = VerbDAOImpl.shared.insert(verbs: Verbs.verbs)
+    private func firstLaunchSetUp(){
+        do{
+            try SetUpDatabase.setUp()
+        }
+        catch{
+            SpeedLog.print(error)
+            // TODO: To show the user that they is an error
+        }
+    }
+    
+    private func labelSetUp(){
+        do{
+            let nbrVerbInReviewList = try DbUserLearningVerbDAOImpl.shared.nbrVerbInReviewList()
+            let nbrVerbToReviewToday = try DbUserLearningVerbDAOImpl.shared.nbrVerbToReviewToday()
+            
+            self.nbrVerbToReviewTodayLabel.text = String(nbrVerbToReviewToday)
+            self.nbrVerbInReviewListLabel.text = "Il y a " + String(nbrVerbInReviewList) + " à revoir" //TODO
+        }
+        catch{
+            SpeedLog.print(error)
+            // TODO: To show the user that they is an error
+        }
+    
     }
 
-    /// Take care of the set up when the app was already launched before
-    fileprivate func setUpWasLaunchedBefore(){
-        self.nbrVerbToReviewTodayLabel.text = String(30)
-        self.nbrVerbInReviewListLabel.text = "Il y a " + String(44) + " à revoir" //TODO
-        
-        
-        
-    }
     
 
     
     
-    
-    
-    
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -77,7 +86,6 @@ class MainVC: UIViewController {
         
         if segue.identifier == "reviewVerbs"{
             let cv = segue.destination as! ReviewVerbsVC
-            
         }
     }
     
