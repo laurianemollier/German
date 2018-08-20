@@ -10,13 +10,19 @@ import UIKit
 
 class MainVC: UIViewController {
 
+    var nbrVerbInReviewList: Int!
+    var nbrVerbToReviewToday: Int!
+    
+    /// TODO: To put on the settings
+    let nbrVerbInReviewSession = 2
+    
+    
     @IBOutlet weak var nbrVerbToReviewTodayLabel: UILabel!
     
     @IBOutlet weak var nbrVerbInReviewListLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -42,8 +48,15 @@ class MainVC: UIViewController {
             firstLaunchSetUp()
         }
         if Database.shared.successfulConnection{
+            do{
+                self.nbrVerbInReviewList = try DbUserLearningVerbDAOImpl.shared.nbrVerbInReviewList()
+                self.nbrVerbToReviewToday = try DbUserLearningVerbDAOImpl.shared.nbrVerbToReviewToday()
+            }
+            catch{
+                SpeedLog.print(error)
+                // TODO: To show the user that they is an error
+            }
             labelSetUp()
-            
         }
     }
     
@@ -58,34 +71,34 @@ class MainVC: UIViewController {
     }
     
     private func labelSetUp(){
-        do{
-            let nbrVerbInReviewList = try DbUserLearningVerbDAOImpl.shared.nbrVerbInReviewList()
-            let nbrVerbToReviewToday = try DbUserLearningVerbDAOImpl.shared.nbrVerbToReviewToday()
-            
-            self.nbrVerbToReviewTodayLabel.text = String(nbrVerbToReviewToday)
-            self.nbrVerbInReviewListLabel.text = "Il y a " + String(nbrVerbInReviewList) + " à revoir" //TODO
-        }
-        catch{
-            SpeedLog.print(error)
-            // TODO: To show the user that they is an error
-        }
-    
+        self.nbrVerbToReviewTodayLabel.text = String(self.nbrVerbToReviewToday)
+        self.nbrVerbInReviewListLabel.text = "Il y a " + String(self.nbrVerbInReviewList) + " à revoir" //TODO
     }
 
     
 
     
-    
-
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        if segue.identifier == "reviewVerbs"{
+        if segue.identifier == "reviewVerbs" && self.nbrVerbInReviewList == 0 {
+            
+        }
+        else if segue.identifier == "reviewVerbs"{
             let cv = segue.destination as! ReviewVerbsVC
+            
+            do {
+                // TODO: to do it before
+                let verbsRangeToReviewToday = try DbUserLearningVerbDAOImpl.shared.verbsToReviewToday(limit: nbrVerbInReviewSession)
+                cv.verbsToReview = verbsRangeToReviewToday
+            }
+            catch{
+                cv.verbsToReview = []
+            }
+        
         }
     }
     

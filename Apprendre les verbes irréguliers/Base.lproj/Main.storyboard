@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSS-DX-jmn">
-                                <rect key="frame" x="177" y="132" width="21" height="21"/>
+                                <rect key="frame" x="113" y="132" width="130" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -282,7 +282,31 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-3a-Uqk">
                                 <rect key="frame" x="60" y="119" width="255" height="357"/>
                                 <connections>
-                                    <action selector="turnCardClickOnCard:" destination="qzO-in-ekQ" eventType="touchUpInside" id="XCk-fu-wus"/>
+                                    <action selector="revealClickOnCard:" destination="qzO-in-ekQ" eventType="touchUpInside" id="idL-uQ-6rp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW3-BN-eAH">
+                                <rect key="frame" x="60" y="544" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NO"/>
+                                <connections>
+                                    <action selector="noAction:" destination="qzO-in-ekQ" eventType="touchUpInside" id="5B7-Ok-ACb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z81-0k-OSg">
+                                <rect key="frame" x="247" y="544" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="YES"/>
+                                <connections>
+                                    <action selector="yesAction:" destination="qzO-in-ekQ" eventType="touchUpInside" id="q6D-MK-UHg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-Gw-nAd">
+                                <rect key="frame" x="135" y="544" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Flipp"/>
+                                <connections>
+                                    <action selector="revealClickButton:" destination="qzO-in-ekQ" eventType="touchUpInside" id="blj-dR-yYb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -306,11 +330,14 @@
                         <outlet property="backwardCard" destination="frI-xU-zCb" id="QnX-nq-58U"/>
                         <outlet property="buttonOnCard" destination="sgg-3a-Uqk" id="mBs-5V-Y9b"/>
                         <outlet property="forwarCard" destination="ufF-nV-YxU" id="XIc-8y-Par"/>
+                        <outlet property="noButton" destination="eW3-BN-eAH" id="8fu-Or-zBJ"/>
+                        <outlet property="realButtonOutsideCard" destination="WhS-Gw-nAd" id="kZj-5u-Wya"/>
+                        <outlet property="yesButton" destination="z81-0k-OSg" id="zHh-fJ-AlI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNi-4a-inA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1743" y="-1268"/>
+            <point key="canvasLocation" x="1741.5999999999999" y="-1268.8155922038982"/>
         </scene>
         <!--Forwar CardVC-->
         <scene sceneID="vkM-dp-Qt8">
@@ -329,6 +356,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.8862745098" green="0.1843137255" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="bbI-xV-fab"/>
                     </view>
                     <connections>
                         <outlet property="translationLabel" destination="FOd-fD-yfU" id="4Oh-3O-wdG"/>
@@ -339,19 +367,6 @@
             <point key="canvasLocation" x="3208.8000000000002" y="-1533.2833583208396"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="7tY-hr-L0n">
-            <objects>
-                <viewController id="g1l-9y-JMi" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dhz-TQ-rib">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RZg-9f-6J6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="Zpt-XE-gC2">
             <objects>
                 <viewController id="c57-jf-7Ej" sceneMemberID="viewController">
@@ -359,24 +374,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="XHK-7J-anY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAx-lx-gmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2465" y="-2194"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="mKC-xL-Ozm">
-            <objects>
-                <viewController id="4tL-E8-8Kn" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="J7W-UW-yKm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tIY-y6-EHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
         <!--Backward CardVC-->
         <scene sceneID="U9D-md-VwI">
@@ -400,17 +403,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p09-pc-e7J">
+                                <rect key="frame" x="16" y="176" width="223" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljq-Rb-FJA">
+                                <rect key="frame" x="40" y="218" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jl-1F-pXt">
+                                <rect key="frame" x="40" y="265" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Zgd-v4-ugl"/>
                     </view>
                     <connections>
                         <outlet property="infinitiveLabel" destination="om5-q3-efG" id="XY7-al-JON"/>
+                        <outlet property="pastParticipleLabel" destination="3jl-1F-pXt" id="ckM-oK-v45"/>
+                        <outlet property="presentLabel" destination="p09-pc-e7J" id="onM-er-IYp"/>
+                        <outlet property="simplePastLabel" destination="ljq-Rb-FJA" id="2Uf-nc-N68"/>
                         <outlet property="translationLabel" destination="fuu-4a-bOy" id="fg7-cM-etM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wi1-bk-LAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2999" y="-1081"/>
+            <point key="canvasLocation" x="2997.5999999999999" y="-1081.7091454272863"/>
         </scene>
     </scenes>
 </document>

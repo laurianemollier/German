@@ -10,21 +10,33 @@ import UIKit
 
 class BackwardCardVC: UIViewController {
 
-    var translation: String!
-    var infinitive: String!
-    
+    var verb: Verb!
     
     @IBOutlet weak var translationLabel: UILabel!
 
     @IBOutlet weak var infinitiveLabel: UILabel!
     
+    @IBOutlet weak var presentLabel: UILabel!
+    
+    @IBOutlet weak var simplePastLabel: UILabel!
+    
+    @IBOutlet weak var pastParticipleLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
-        self.translationLabel.text = translation
-        self.infinitiveLabel.text = infinitive
+
     }
     
-    
+    func reset(verb: Verb){
+        self.verb = verb
+        
+        self.translationLabel.text = verb.translation(Lang.en)
+        self.infinitiveLabel.text = verb.infinitive()
+        self.presentLabel.text = verb.present()
+        self.simplePastLabel.text = verb.simplePast()
+        self.pastParticipleLabel.text = verb.pastParticiple()
+    }
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -30,9 +30,14 @@ class SetUpDatabase{
         let verbs = try VerbDAOImpl.shared.insert(verbs: Verbs.verbs)
         
         let dbUserLearningVerbs = verbs.map{ v in
+            // TODO to put this one in real
+//            DbUserLearningVerb(id: 0, verbId: v.id,
+//                               dateToReview: nil,
+//                               userProgression: UserProgression.notSeenYet.rawValue)
+            
             DbUserLearningVerb(id: 0, verbId: v.id,
-                               dateToReview: nil,
-                               userProgression: UserProgression.notSeenYet.rawValue)
+                               dateToReview: Date(),
+                               userProgression: UserProgression.level1.rawValue)
         }
         try DbUserLearningVerbDAOImpl.shared.insert(learningVerbs: dbUserLearningVerbs)
     }

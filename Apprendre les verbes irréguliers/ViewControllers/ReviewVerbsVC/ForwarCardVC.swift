@@ -10,16 +10,16 @@ import UIKit
 
 class ForwarCardVC: UIViewController {
     
-    
-    
-    var translation: String!
+    var verb: Verb!
 
     @IBOutlet weak var translationLabel: UILabel!
     
-    
-    
     override func viewWillAppear(_ animated: Bool) {
-        self.translationLabel.text = translation
+    }
+    
+    func reset(verb: Verb){
+        self.verb = verb
+        self.translationLabel.text = verb.translation(Lang.en)
     }
     
     

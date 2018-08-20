@@ -67,9 +67,17 @@ class DbUserLearningVerbDAOImpl{
     /// The number of verb that the user has to review on the date "on"
     func nbrVerbToReview(on: Date) throws -> Int{
         let verbs = UserLearningVerbTable.learningVerbs
-            .filter(UserLearningVerbTable.dateToReview == on)
+            .filter(UserLearningVerbTable.dateToReview <= on)
         return try db.scalar(verbs.count)
     }
+    
+    /// The number of verb in the review list
+    func nbrVerbInReviewList() throws -> Int {
+        let verbs = UserLearningVerbTable.learningVerbs
+            .filter(UserLearningVerbTable.userProgression != UserProgression.notSeenYet.rawValue)
+        return try db.scalar(verbs.count)
+    }
+    
 
     
     /// The verb that the user has to review today
@@ -80,13 +88,34 @@ class DbUserLearningVerbDAOImpl{
     
     /// The verb that the user has to review on the date "on"
     func verbsToReview(on: Date, limit: Int?) throws -> [UserLearningVerb]{
-        let q_filter = UserLearningVerbTable.learningVerbs.filter(UserLearningVerbTable.dateToReview == on)
+        let q_filter = UserLearningVerbTable.learningVerbs.filter(UserLearningVerbTable.dateToReview <= on)
         let q = toLimitedQuery(query: q_filter, limit: limit)
         
         return try db.prepare(q).map{ row in
             try toUserLearningVerb(userLVTableRow: row)
         }
     }
+    
+    
+    /// - Retruns: If retrun value <= 0, the learningVer was not found
+    ///            Else if the retrun value is > 0, the update was correctly done
+    func update(learningVerb: DbUserLearningVerb) throws -> Int{
+        let table: Table = UserLearningVerbTable.learningVerbs.where(UserLearningVerbTable.id == learningVerb.id)
+        let update: Update = table.update(UserLearningVerbTable.verbId <- learningVerb.id,
+                                    UserLearningVerbTable.dateToReview <- learningVerb.dateToReview,
+                                    UserLearningVerbTable.userProgression <- learningVerb.userProgression)
+        return try db.run(update)
+    }
+    
+    func update(learningVerbs: [DbUserLearningVerb]) throws -> [Int]{
+        return try learningVerbs.map({ v in try update(learningVerb: v)})
+    }
+    
+    
+    
+    
+    /* -Private functions: */
+    
 
     /// Helper function to limit the query
     private func toLimitedQuery(query: Table, limit: Int?) -> Table{
@@ -103,21 +132,26 @@ class DbUserLearningVerbDAOImpl{
     ///     - row: A UserLearningVerbTable's row
     /// - Returns: The UserLearningVerb that is associated with this row
     private func toUserLearningVerb(userLVTableRow: Row) throws -> UserLearningVerb{
+        let id = userLVTableRow[UserLearningVerbTable.id]
         let verb = try VerbDAOImpl.shared.find(id: userLVTableRow[UserLearningVerbTable.verbId])!
         let userProgression = UserProgression(rawValue: userLVTableRow[UserLearningVerbTable.userProgression])!
         let dateToReview = userLVTableRow[UserLearningVerbTable.dateToReview]
         
-        return UserLearningVerb(verb: verb, dateToReview: dateToReview, userProgression: userProgression)
+        return UserLearningVerb(id: id, verb: verb, dateToReview: dateToReview, userProgression: userProgression)
     }
     
     
     
-    /// The number of verb in the review list
-    func nbrVerbInReviewList() throws -> Int {
-        let verbs = UserLearningVerbTable.learningVerbs
-            .filter(UserLearningVerbTable.userProgression != UserProgression.notSeenYet.rawValue)
-        return try db.scalar(verbs.count)
-    }
+    
+    
+    
+
+    
+
+    
+    
+    
+    
 
     
 }
