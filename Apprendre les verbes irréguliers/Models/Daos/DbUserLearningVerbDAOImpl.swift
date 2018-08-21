@@ -58,6 +58,7 @@ class DbUserLearningVerbDAOImpl{
     }
     
     
+    
     /// The number of verb that the user has to review today
     func nbrVerbToReviewToday() throws -> Int{
         let today = Date()
@@ -75,6 +76,13 @@ class DbUserLearningVerbDAOImpl{
     func nbrVerbInReviewList() throws -> Int {
         let verbs = UserLearningVerbTable.learningVerbs
             .filter(UserLearningVerbTable.userProgression != UserProgression.notSeenYet.rawValue)
+        return try db.scalar(verbs.count)
+    }
+    
+    /// The number of verb in the review list
+    func nbrNotVerbInReviewList() throws -> Int {
+        let verbs = UserLearningVerbTable.learningVerbs
+            .filter(UserLearningVerbTable.userProgression == UserProgression.notSeenYet.rawValue)
         return try db.scalar(verbs.count)
     }
     
@@ -109,6 +117,14 @@ class DbUserLearningVerbDAOImpl{
     
     func update(learningVerbs: [DbUserLearningVerb]) throws -> [Int]{
         return try learningVerbs.map({ v in try update(learningVerb: v)})
+    }
+    
+    
+    func all() throws -> [UserLearningVerb]{
+        let rows = try db.prepare(UserLearningVerbTable.learningVerbs)
+        return try rows.map({ row in
+           try toUserLearningVerb(userLVTableRow: row)
+        })
     }
     
     

@@ -15,15 +15,9 @@ class LevelCheckBox: UIButton {
     @IBAction func checkBox(_ sender: UIButton) {
         if sender.isSelected{
             sender.isSelected = false
-            super.setTitle("crrrr", for: .normal)
-            super.setTitle(".ssssss", for: .selected)
-            print("selected")
         }
         else{
             sender.isSelected = true
-            super.setTitle("aaaaaa", for: .normal)
-            super.setTitle(".selected true", for: .selected)
-            print("not")
         }
     }
     
@@ -35,7 +29,6 @@ class LevelCheckBox: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
-        
     }
     
 
