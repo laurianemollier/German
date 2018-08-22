@@ -1,28 +1,14 @@
 //
-//  BackwardCardVC.swift
+//  StatisticsVC.swift
 //  Apprendre les verbes irréguliers
 //
-//  Created by Lauriane Mollier on 19/08/2018.
+//  Created by Lauriane Mollier on 21/08/2018.
 //  Copyright © 2018 Lauriane Mollier. All rights reserved.
 //
 
 import UIKit
 
-class BackwardCardVC: UIViewController {
-
-    var verb: Verb!
-    
-    @IBOutlet var backwardView: BackwardCardView!
-    
-    override func viewWillAppear(_ animated: Bool) {
-
-    }
-    
-    func reset(verb: Verb){
-        self.verb = verb
-        self.backwardView.setup(verb: verb)
-    }
-
+class StatisticsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

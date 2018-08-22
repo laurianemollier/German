@@ -1,0 +1,72 @@
+//
+//  BackwardCardView.swift
+//  Apprendre les verbes irréguliers
+//
+//  Created by Lauriane Mollier on 21/08/2018.
+//  Copyright © 2018 Lauriane Mollier. All rights reserved.
+//
+
+import UIKit
+
+//@IBDesignable
+class BackwardCardView: UIView {
+    
+    @IBOutlet var contentView: UIView!
+    
+    var verb: Verb!
+    
+    @IBOutlet weak var translationLabel: UILabel!
+    
+    @IBOutlet weak var infinitiveLabel: UILabel!
+    
+    @IBOutlet weak var presentLabel: UILabel!
+    
+    @IBOutlet weak var simplePastLabel: UILabel!
+    
+    @IBOutlet weak var pastParticipleLabel: UILabel!
+    
+    
+    
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    
+    func commonInit(){
+        Bundle.main.loadNibNamed("BackwardCardView", owner: self, options: nil)
+        addSubview(self.contentView)
+        self.contentView.frame = self.bounds
+        self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+    }
+    
+    
+    func setup(verb: Verb) {
+        self.verb = verb
+        
+        self.translationLabel.text = verb.translation(Lang.en)
+        self.infinitiveLabel.text = verb.infinitive()
+        self.presentLabel.text = verb.present()
+        self.simplePastLabel.text = verb.simplePast()
+        self.pastParticipleLabel.text = verb.pastParticiple()
+    }
+    
+    
+
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
+
+}

@@ -73,7 +73,6 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         self.table.reloadData()
     }
     
-    
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int){
 
     }
@@ -93,7 +92,7 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     
     func alterLayout() {
-//        
+//
         self.searchBar.placeholder = "Search Animal by Name"
     }
 
