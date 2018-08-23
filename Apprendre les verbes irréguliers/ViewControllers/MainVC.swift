@@ -16,8 +16,7 @@ class MainVC: UIViewController {
     /// TODO: To put on the settings
     let nbrVerbInReviewSession = 2
     
-    
-    @IBOutlet weak var nbrVerbToReviewTodayLabel: UILabel!
+    @IBOutlet weak var nbrVerbToReviewTodayButton: UIButton!
     
     @IBOutlet weak var nbrVerbInReviewListLabel: UILabel!
     
@@ -56,7 +55,7 @@ class MainVC: UIViewController {
                 SpeedLog.print(error)
                 // TODO: To show the user that they is an error
             }
-            labelSetUp()
+            textAndDesignSetUp()
         }
     }
     
@@ -70,9 +69,14 @@ class MainVC: UIViewController {
         }
     }
     
-    private func labelSetUp(){
-        self.nbrVerbToReviewTodayLabel.text = String(self.nbrVerbToReviewToday)
+    private func textAndDesignSetUp(){
+        self.nbrVerbToReviewTodayButton.setTitle(String(self.nbrVerbToReviewToday), for: .normal)
         self.nbrVerbInReviewListLabel.text = "Il y a " + String(self.nbrVerbInReviewList) + " à revoir" //TODO
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
     }
 
     

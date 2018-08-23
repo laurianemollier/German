@@ -10,8 +10,8 @@
 		98301E54212C76FB00432C84 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E53212C76FB00432C84 /* StatisticsVC.swift */; };
 		98301E56212C771900432C84 /* StatisticsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E55212C771900432C84 /* StatisticsButton.swift */; };
 		98301E5A212C7A2500432C84 /* StatisticsButtonWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E59212C7A2500432C84 /* StatisticsButtonWithIcon.swift */; };
-		98301E5D212C7B7100432C84 /* BackwardCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98301E5C212C7B7100432C84 /* BackwardCardView.xib */; };
-		98301E5F212C7C2B00432C84 /* BackwardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E5E212C7C2B00432C84 /* BackwardCardView.swift */; };
+		98301E5D212C7B7100432C84 /* VerbCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98301E5C212C7B7100432C84 /* VerbCardView.xib */; };
+		98301E5F212C7C2B00432C84 /* VerbCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E5E212C7C2B00432C84 /* VerbCardView.swift */; };
 		983B2495211C4A0C009C33B1 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2494211C4A0C009C33B1 /* Verb.swift */; };
 		983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2496211C6A4B009C33B1 /* Verbs.swift */; };
 		98685F352126BA4900DA327D /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F342126BA4900DA327D /* Lang.swift */; };
@@ -49,6 +49,15 @@
 		98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B121255872000F44B4 /* TestSGLite.swift */; };
 		98B0A8B62125AE9B000F44B4 /* DbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B52125AE9B000F44B4 /* DbVerbDAO.swift */; };
 		98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B72125AECD000F44B4 /* DbVerbDAOImpl.swift */; };
+		98B53B69212E96A900565C53 /* ROBOTOSLAB-BOLD_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 98B53B65212E96A300565C53 /* ROBOTOSLAB-BOLD_0.TTF */; };
+		98B53B6A212E96A900565C53 /* ROBOTOSLAB-THIN_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 98B53B66212E96A400565C53 /* ROBOTOSLAB-THIN_0.TTF */; };
+		98B53B6B212E96A900565C53 /* ROBOTOSLAB-LIGHT_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 98B53B67212E96A600565C53 /* ROBOTOSLAB-LIGHT_0.TTF */; };
+		98B53B6C212E96A900565C53 /* ROBOTOSLAB-REGULAR_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 98B53B68212E96A800565C53 /* ROBOTOSLAB-REGULAR_0.TTF */; };
+		98B53B70212F10B000565C53 /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B53B6F212F10B000565C53 /* BasicButton.swift */; };
+		98B53B74212F21B200565C53 /* Background1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B53B73212F21B200565C53 /* Background1.xib */; };
+		98B53B77212F223A00565C53 /* Background1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B53B76212F223A00565C53 /* Background1.swift */; };
+		98B53B79212F24B500565C53 /* Background2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B53B78212F24B500565C53 /* Background2.swift */; };
+		98B53B7B212F24C800565C53 /* Background2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B53B7A212F24C800565C53 /* Background2.xib */; };
 		98C9834B20F750820080B08C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9834A20F750820080B08C /* AppDelegate.swift */; };
 		98C9834D20F750820080B08C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9834C20F750820080B08C /* ViewController.swift */; };
 		98C9835020F750820080B08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C9834E20F750820080B08C /* Main.storyboard */; };
@@ -463,8 +472,8 @@
 		98301E53212C76FB00432C84 /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		98301E55212C771900432C84 /* StatisticsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsButton.swift; sourceTree = "<group>"; };
 		98301E59212C7A2500432C84 /* StatisticsButtonWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsButtonWithIcon.swift; sourceTree = "<group>"; };
-		98301E5C212C7B7100432C84 /* BackwardCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackwardCardView.xib; sourceTree = "<group>"; };
-		98301E5E212C7C2B00432C84 /* BackwardCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardCardView.swift; sourceTree = "<group>"; };
+		98301E5C212C7B7100432C84 /* VerbCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerbCardView.xib; sourceTree = "<group>"; };
+		98301E5E212C7C2B00432C84 /* VerbCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbCardView.swift; sourceTree = "<group>"; };
 		983B2494211C4A0C009C33B1 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
 		983B2496211C6A4B009C33B1 /* Verbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verbs.swift; sourceTree = "<group>"; };
 		98685F342126BA4900DA327D /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
@@ -500,6 +509,15 @@
 		98B0A8B121255872000F44B4 /* TestSGLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSGLite.swift; sourceTree = "<group>"; };
 		98B0A8B52125AE9B000F44B4 /* DbVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbDAO.swift; sourceTree = "<group>"; };
 		98B0A8B72125AECD000F44B4 /* DbVerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbDAOImpl.swift; sourceTree = "<group>"; };
+		98B53B65212E96A300565C53 /* ROBOTOSLAB-BOLD_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ROBOTOSLAB-BOLD_0.TTF"; sourceTree = "<group>"; };
+		98B53B66212E96A400565C53 /* ROBOTOSLAB-THIN_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ROBOTOSLAB-THIN_0.TTF"; sourceTree = "<group>"; };
+		98B53B67212E96A600565C53 /* ROBOTOSLAB-LIGHT_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ROBOTOSLAB-LIGHT_0.TTF"; sourceTree = "<group>"; };
+		98B53B68212E96A800565C53 /* ROBOTOSLAB-REGULAR_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ROBOTOSLAB-REGULAR_0.TTF"; sourceTree = "<group>"; };
+		98B53B6F212F10B000565C53 /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
+		98B53B73212F21B200565C53 /* Background1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Background1.xib; sourceTree = "<group>"; };
+		98B53B76212F223A00565C53 /* Background1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background1.swift; sourceTree = "<group>"; };
+		98B53B78212F24B500565C53 /* Background2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background2.swift; sourceTree = "<group>"; };
+		98B53B7A212F24C800565C53 /* Background2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Background2.xib; sourceTree = "<group>"; };
 		98C9834720F750820080B08C /* Apprendre les verbes irréguliers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apprendre les verbes irréguliers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C9834A20F750820080B08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98C9834C20F750820080B08C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -869,8 +887,8 @@
 		98301E5B212C7B1D00432C84 /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				98301E5C212C7B7100432C84 /* BackwardCardView.xib */,
-				98301E5E212C7C2B00432C84 /* BackwardCardView.swift */,
+				98301E5C212C7B7100432C84 /* VerbCardView.xib */,
+				98301E5E212C7C2B00432C84 /* VerbCardView.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -1007,6 +1025,46 @@
 			path = Daos;
 			sourceTree = "<group>";
 		};
+		98B53B5A212E965600565C53 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				98B53B65212E96A300565C53 /* ROBOTOSLAB-BOLD_0.TTF */,
+				98B53B67212E96A600565C53 /* ROBOTOSLAB-LIGHT_0.TTF */,
+				98B53B68212E96A800565C53 /* ROBOTOSLAB-REGULAR_0.TTF */,
+				98B53B66212E96A400565C53 /* ROBOTOSLAB-THIN_0.TTF */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		98B53B6D212F100900565C53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98B53B75212F220E00565C53 /* Background */,
+				98301E5B212C7B1D00432C84 /* Card */,
+				98B53B6E212F101D00565C53 /* Buttons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		98B53B6E212F101D00565C53 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				98B53B6F212F10B000565C53 /* BasicButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		98B53B75212F220E00565C53 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				98B53B73212F21B200565C53 /* Background1.xib */,
+				98B53B76212F223A00565C53 /* Background1.swift */,
+				98B53B78212F24B500565C53 /* Background2.swift */,
+				98B53B7A212F24C800565C53 /* Background2.xib */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
 		98C9833E20F750820080B08C = {
 			isa = PBXGroup;
 			children = (
@@ -1031,6 +1089,8 @@
 		98C9834920F750820080B08C /* Apprendre les verbes irréguliers */ = {
 			isa = PBXGroup;
 			children = (
+				98B53B6D212F100900565C53 /* Views */,
+				98B53B5A212E965600565C53 /* Fonts */,
 				9898A5CA212AC696003EAAFF /* Extensions */,
 				983B2493211C49B7009C33B1 /* Models */,
 				98DEFC8F20FF230E00DC32BB /* Audios */,
@@ -1067,7 +1127,6 @@
 		98DEFC8820FDC26200DC32BB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				98301E5B212C7B1D00432C84 /* Card */,
 				98301E4C212C76C700432C84 /* Statistics */,
 				9898A5EC212C20F6003EAAFF /* ListVerbs */,
 				98685F7B2129652800DA327D /* ReviewVerbsVC */,
@@ -1568,6 +1627,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98DEFDEE20FF241600DC32BB /* ankommen.mp3 in Resources */,
+				98B53B74212F21B200565C53 /* Background1.xib in Resources */,
 				98DEFDE120FF241600DC32BB /* glimmen.mp3 in Resources */,
 				98DEFED220FF241600DC32BB /* braten.mp3 in Resources */,
 				98DEFDEB20FF241600DC32BB /* haben.mp3 in Resources */,
@@ -1582,6 +1642,7 @@
 				98DEFEA020FF241600DC32BB /* übernehmen.mp3 in Resources */,
 				98DEFE4D20FF241600DC32BB /* fechten.mp3 in Resources */,
 				98DEFEE420FF241600DC32BB /* schreiben.mp3 in Resources */,
+				98B53B6B212E96A900565C53 /* ROBOTOSLAB-LIGHT_0.TTF in Resources */,
 				98DEFE6520FF241600DC32BB /* tun.mp3 in Resources */,
 				98DEFE1920FF241600DC32BB /* fliehen.mp3 in Resources */,
 				98DEFE4E20FF241600DC32BB /* nachdenken.mp3 in Resources */,
@@ -1668,6 +1729,7 @@
 				98DEFDDF20FF241600DC32BB /* fernsehen.mp3 in Resources */,
 				98DEFEB920FF241600DC32BB /* bestehen.mp3 in Resources */,
 				98DEFDF820FF241600DC32BB /* erkennen.mp3 in Resources */,
+				98B53B6A212E96A900565C53 /* ROBOTOSLAB-THIN_0.TTF in Resources */,
 				98DEFE9B20FF241600DC32BB /* betreiben.mp3 in Resources */,
 				98DEFE1620FF241600DC32BB /* schreien.mp3 in Resources */,
 				98DEFE1020FF241600DC32BB /* bewegen.mp3 in Resources */,
@@ -1778,6 +1840,7 @@
 				98DEFE0620FF241600DC32BB /* werden.mp3 in Resources */,
 				98DEFF0620FF241600DC32BB /* erscheinen.mp3 in Resources */,
 				98DEFE5D20FF241600DC32BB /* stehen.mp3 in Resources */,
+				98B53B69212E96A900565C53 /* ROBOTOSLAB-BOLD_0.TTF in Resources */,
 				98DEFE4B20FF241600DC32BB /* streichen.mp3 in Resources */,
 				98DEFE0120FF241600DC32BB /* genesen.mp3 in Resources */,
 				98DEFE2920FF241600DC32BB /* essen.mp3 in Resources */,
@@ -1789,7 +1852,7 @@
 				98DEFE7020FF241600DC32BB /* saufen.mp3 in Resources */,
 				98DEFDEA20FF241600DC32BB /* behalten.mp3 in Resources */,
 				98DEFEA120FF241600DC32BB /* sterben.mp3 in Resources */,
-				98301E5D212C7B7100432C84 /* BackwardCardView.xib in Resources */,
+				98301E5D212C7B7100432C84 /* VerbCardView.xib in Resources */,
 				98DEFE4A20FF241600DC32BB /* ansehen.mp3 in Resources */,
 				98DEFEFE20FF241600DC32BB /* verweisen.mp3 in Resources */,
 				98DEFE4020FF241600DC32BB /* abnehmen.mp3 in Resources */,
@@ -1813,6 +1876,7 @@
 				98DEFE6120FF241600DC32BB /* sinnen.mp3 in Resources */,
 				98DEFE8420FF241600DC32BB /* verbringen.mp3 in Resources */,
 				98DEFDD720FF241600DC32BB /* versprechen.mp3 in Resources */,
+				98B53B7B212F24C800565C53 /* Background2.xib in Resources */,
 				98DEFE3D20FF241600DC32BB /* müssen.mp3 in Resources */,
 				98DEFDD620FF241600DC32BB /* winden.mp3 in Resources */,
 				98DEFEA720FF241600DC32BB /* schmeißen.mp3 in Resources */,
@@ -1877,6 +1941,7 @@
 				98DEFDF120FF241600DC32BB /* ergeben.mp3 in Resources */,
 				98DEFE9420FF241600DC32BB /* schleichen.mp3 in Resources */,
 				98DEFDF720FF241600DC32BB /* aussehen.mp3 in Resources */,
+				98B53B6C212E96A900565C53 /* ROBOTOSLAB-REGULAR_0.TTF in Resources */,
 				98DEFE6020FF241600DC32BB /* empfangen.mp3 in Resources */,
 				98DEFE0D20FF241600DC32BB /* schreiten.mp3 in Resources */,
 				98DEFED420FF241600DC32BB /* singen.mp3 in Resources */,
@@ -1925,6 +1990,7 @@
 				98685F372126BA6100DA327D /* Form.swift in Sources */,
 				98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */,
+				98B53B70212F10B000565C53 /* BasicButton.swift in Sources */,
 				9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */,
 				988DB91F2126954900AFAEF4 /* VerbDAO.swift in Sources */,
 				98DEFC8E20FE27EE00DC32BB /* ReviewVerbsVC.swift in Sources */,
@@ -1939,14 +2005,16 @@
 				98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */,
 				988DB9192125C70700AFAEF4 /* VerbTranslationTable.swift in Sources */,
 				98B0A8B62125AE9B000F44B4 /* DbVerbDAO.swift in Sources */,
+				98B53B77212F223A00565C53 /* Background1.swift in Sources */,
 				98685F7021270E2B00DA327D /* SpeedLog.swift in Sources */,
-				98301E5F212C7C2B00432C84 /* BackwardCardView.swift in Sources */,
+				98301E5F212C7C2B00432C84 /* VerbCardView.swift in Sources */,
 				98301E56212C771900432C84 /* StatisticsButton.swift in Sources */,
 				98301E54212C76FB00432C84 /* StatisticsVC.swift in Sources */,
 				98685F742127161200DA327D /* DbUserLearningVerbDAO.swift in Sources */,
 				988DB9152125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift in Sources */,
 				988DB9132125C08900AFAEF4 /* DbVerbTranslationDAO.swift in Sources */,
 				98685F782127173800DA327D /* DbUserLearningVerb.swift in Sources */,
+				98B53B79212F24B500565C53 /* Background2.swift in Sources */,
 				98B01514212474670090006E /* LevelCheckBox.swift in Sources */,
 				9898A5F0212C2C1C003EAAFF /* ListVerbsVC.swift in Sources */,
 			);

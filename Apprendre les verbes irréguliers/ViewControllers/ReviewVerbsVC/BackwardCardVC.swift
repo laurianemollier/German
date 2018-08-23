@@ -12,7 +12,7 @@ class BackwardCardVC: UIViewController {
 
     var verb: Verb!
     
-    @IBOutlet var backwardView: BackwardCardView!
+    @IBOutlet var backwardView: VerbCardView!
     
     override func viewWillAppear(_ animated: Bool) {
 

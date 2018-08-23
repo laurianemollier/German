@@ -9,7 +9,7 @@
 import UIKit
 
 //@IBDesignable
-class BackwardCardView: UIView {
+class VerbCardView: UIView {
     
     @IBOutlet var contentView: UIView!
     
@@ -41,11 +41,10 @@ class BackwardCardView: UIView {
     
     
     func commonInit(){
-        Bundle.main.loadNibNamed("BackwardCardView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("VerbCardView", owner: self, options: nil)
         addSubview(self.contentView)
         self.contentView.frame = self.bounds
         self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
     }
     
     

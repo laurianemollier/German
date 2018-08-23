@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Background2" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="b6n-SH-3iH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="Background2" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="jet-WL-fsi">
+                    <rect key="frame" x="0.0" y="563" width="375" height="104"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="104" id="2ty-E1-dCl"/>
+                        <constraint firstAttribute="height" constant="104" id="Jof-jS-SFu"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="104" id="lGi-8L-n22"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jet-WL-fsi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AyC-3X-B0h"/>
+                <constraint firstItem="jet-WL-fsi" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Wxn-WP-cGV"/>
+                <constraint firstItem="jet-WL-fsi" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vJc-nT-xan"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Yellow Wave" width="562" height="193"/>
+    </resources>
+</document>

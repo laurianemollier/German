@@ -21,20 +21,15 @@ class SetUpDatabase{
     }
     
     static private func createTables() throws {
-        try DbVerbDAOImpl.shared.createTable()
-        try DbVerbTranslationDAOImpl.shared.createTable()
+//        try DbVerbDAOImpl.shared.createTable()
+//        try DbVerbTranslationDAOImpl.shared.createTable()
         try DbUserLearningVerbDAOImpl.shared.createTable()
     }
     
     static private func insertInitialsData() throws {
-        let verbs = try VerbDAOImpl.shared.insert(verbs: Verbs.verbs)
-        
-        let dbUserLearningVerbs = verbs.map{ v in
+        let dbUserLearningVerbs = Verbs.verbs.map{ v in
             // TODO to put this one in real
-//            DbUserLearningVerb(id: 0, verbId: v.id,
-//                               dateToReview: nil,
-//                               userProgression: UserProgression.notSeenYet.rawValue)
-            
+
             DbUserLearningVerb(id: 0, verbId: v.id,
                                dateToReview: Date(),
                                userProgression: UserProgression.level1.rawValue)
