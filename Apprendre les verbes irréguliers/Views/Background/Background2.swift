@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class Background2: UIView {
 
     @IBOutlet var contentView: UIView!
