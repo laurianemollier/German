@@ -10,10 +10,13 @@ import UIKit
 
 class StatisticsVC: UIViewController {
 
+    @IBOutlet weak var progressionLevel1: StatisticsButtonWithIcon!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.progressionLevel1.setUp(userProgression: UserProgression.level1, nbrVerb: 22)
     }
 
     override func didReceiveMemoryWarning() {

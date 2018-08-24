@@ -52,13 +52,13 @@ class ReviewVerbsVC: UIViewController {
     }
     @IBAction func stagnate(_ sender: BasicButton) {
         let verbReviewed: UserLearningVerb = currentVerb()
-        let (newProgression, dateToReview) = verbReviewed.userProgression.stagnation(reviewedDate: verbReviewed.dateToReview!)
+        let (newProgression, dateToReview) = verbReviewed.userProgression.stagnation(reviewedDate: verbReviewed.dateToReview!)!
         updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
         
     }
     @IBAction func progress(_ sender: BasicButton) {
         let verbReviewed: UserLearningVerb = currentVerb()
-        let (newProgression, dateToReview) = verbReviewed.userProgression.progression(reviewedDate: verbReviewed.dateToReview!)
+        let (newProgression, dateToReview) = verbReviewed.userProgression.progression(reviewedDate: verbReviewed.dateToReview!)!
         updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
     }
 

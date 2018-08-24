@@ -29,6 +29,7 @@
 		98685F7D212965E600DA327D /* ForwarCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F7C212965E600DA327D /* ForwarCardVC.swift */; };
 		98685F7F2129663100DA327D /* BackwardCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F7E2129663100DA327D /* BackwardCardVC.swift */; };
 		986DD42D212FE7F1000E5E49 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DD42C212FE7F1000E5E49 /* UIFont.swift */; };
+		986DD439213063A4000E5E49 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DD438213063A4000E5E49 /* UIColor.swift */; };
 		988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */; };
 		988DB9102125BBD700AFAEF4 /* VerbTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB90F2125BBD700AFAEF4 /* VerbTable.swift */; };
 		988DB9132125C08900AFAEF4 /* DbVerbTranslationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9122125C08900AFAEF4 /* DbVerbTranslationDAO.swift */; };
@@ -490,6 +491,7 @@
 		98685F7C212965E600DA327D /* ForwarCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwarCardVC.swift; sourceTree = "<group>"; };
 		98685F7E2129663100DA327D /* BackwardCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardCardVC.swift; sourceTree = "<group>"; };
 		986DD42C212FE7F1000E5E49 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		986DD438213063A4000E5E49 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		988DB90F2125BBD700AFAEF4 /* VerbTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTable.swift; sourceTree = "<group>"; };
 		988DB9122125C08900AFAEF4 /* DbVerbTranslationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbTranslationDAO.swift; sourceTree = "<group>"; };
@@ -982,6 +984,7 @@
 				9898A5D1212AC6DA003EAAFF /* Date.swift */,
 				9898A5D3212AE2D7003EAAFF /* Array.swift */,
 				986DD42C212FE7F1000E5E49 /* UIFont.swift */,
+				986DD438213063A4000E5E49 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2006,6 +2009,7 @@
 				98685F7A212744F900DA327D /* SetUpDatabase.swift in Sources */,
 				98DEFC8720FDC25400DC32BB /* MainVC.swift in Sources */,
 				98C9834B20F750820080B08C /* AppDelegate.swift in Sources */,
+				986DD439213063A4000E5E49 /* UIColor.swift in Sources */,
 				98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */,
 				988DB9192125C70700AFAEF4 /* VerbTranslationTable.swift in Sources */,
 				98B0A8B62125AE9B000F44B4 /* DbVerbDAO.swift in Sources */,

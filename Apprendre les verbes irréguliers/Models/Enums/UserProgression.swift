@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Constants{
     static let secondsInOneDay = 86400
@@ -14,7 +15,6 @@ class Constants{
 
 
 enum UserProgression: String {
-    
     
     case notSeenYet = "notSeenYet"
     case level1 = "level1"
@@ -28,6 +28,20 @@ enum UserProgression: String {
     case toIgnore = "toIgnore"
     
     static let allValues = [notSeenYet, level1, level2 , level3, level4, level5, level6, level7, level8, toIgnore]
+    
+    func image() -> UIImage? {
+//        switch self {
+//        case UserProgression.level1:
+//            return #imageLiteral(resourceName: "Good")
+//        default:
+//            return nil
+//        }
+        
+        return #imageLiteral(resourceName: "Good")
+        
+    }
+    
+    
     
     
     
