@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e20-xG-tI5" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e20-xG-tI5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -180,7 +180,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KC2-LT-USM" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KC2-LT-USM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -451,63 +451,6 @@
             </objects>
             <point key="canvasLocation" x="3378" y="-90"/>
         </scene>
-        <!--TestSG Lite-->
-        <scene sceneID="i9j-Yd-2c4">
-            <objects>
-                <viewController id="Dcb-OF-i3S" customClass="TestSGLite" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qy8-De-M4u">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtG-vo-owB">
-                                <rect key="frame" x="16" y="136" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create Table"/>
-                                <connections>
-                                    <action selector="createTable:" destination="Dcb-OF-i3S" eventType="touchUpInside" id="Vgh-bD-4if"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-ap-py7">
-                                <rect key="frame" x="16" y="243" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="List User"/>
-                                <connections>
-                                    <action selector="listUser:" destination="Dcb-OF-i3S" eventType="touchUpInside" id="fVf-oU-Fta"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zt7-vH-DFf">
-                                <rect key="frame" x="16" y="336" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Update User"/>
-                                <connections>
-                                    <action selector="updatetUser:" destination="Dcb-OF-i3S" eventType="touchUpInside" id="tHQ-Gy-Kme"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxf-ij-JLz">
-                                <rect key="frame" x="16" y="421" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Delete User"/>
-                                <connections>
-                                    <action selector="deleteUser:" destination="Dcb-OF-i3S" eventType="touchUpInside" id="5tZ-dI-PPA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUA-gX-uOe">
-                                <rect key="frame" x="16" y="191" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Insert User "/>
-                                <connections>
-                                    <action selector="insertUser:" destination="Dcb-OF-i3S" eventType="touchUpInside" id="P9K-hu-t3g"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="bzS-i7-qHr"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RJk-4e-9oe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-450.39999999999998" y="-1181.5592203898052"/>
-        </scene>
         <!--Review VerbsVC-->
         <scene sceneID="Tq2-Ze-ZdV">
             <objects>
@@ -516,8 +459,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fus-WH-eQG" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fus-WH-eQG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-Gw-nAd" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                        <rect key="frame" x="136" y="504" width="134" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.80784313730000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
+                                        <state key="normal" title="Flipp">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="revealClickButton:" destination="qzO-in-ekQ" eventType="touchUpInside" id="blj-dR-yYb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYn-qk-EDz" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                        <rect key="frame" x="66" y="542" width="37" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
+                                        <state key="normal" title="Now">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="regress:" destination="qzO-in-ekQ" eventType="touchUpInside" id="7A9-cX-AF7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-Lm-AOW" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                        <rect key="frame" x="121" y="542" width="76" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.49411764705882355" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
+                                        <state key="normal" title="Tomorow">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stagnate:" destination="qzO-in-ekQ" eventType="touchUpInside" id="yk1-zS-qxs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdt-55-egW" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                        <rect key="frame" x="205" y="542" width="73" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.80784313730000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
+                                        <state key="normal" title="In 3 days">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="progress:" destination="qzO-in-ekQ" eventType="touchUpInside" id="T2u-bC-XPd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKc-o8-E3d" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                        <rect key="frame" x="179" y="597" width="48" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
+                                        <state key="normal" title="Never">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toNeverReview:" destination="qzO-in-ekQ" eventType="touchUpInside" id="daQ-ew-xMw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-Ly-a3b">
+                                        <rect key="frame" x="104" y="475" width="199" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufF-nV-YxU">
@@ -539,30 +551,6 @@
                                 <rect key="frame" x="60" y="119" width="255" height="357"/>
                                 <connections>
                                     <action selector="revealClickOnCard:" destination="qzO-in-ekQ" eventType="touchUpInside" id="idL-uQ-6rp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW3-BN-eAH">
-                                <rect key="frame" x="60" y="544" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NO"/>
-                                <connections>
-                                    <action selector="noAction:" destination="qzO-in-ekQ" eventType="touchUpInside" id="5B7-Ok-ACb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z81-0k-OSg">
-                                <rect key="frame" x="247" y="544" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="YES"/>
-                                <connections>
-                                    <action selector="yesAction:" destination="qzO-in-ekQ" eventType="touchUpInside" id="q6D-MK-UHg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-Gw-nAd">
-                                <rect key="frame" x="135" y="544" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Flipp"/>
-                                <connections>
-                                    <action selector="revealClickButton:" destination="qzO-in-ekQ" eventType="touchUpInside" id="blj-dR-yYb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -589,10 +577,13 @@
                     <connections>
                         <outlet property="backwardCard" destination="frI-xU-zCb" id="QnX-nq-58U"/>
                         <outlet property="buttonOnCard" destination="sgg-3a-Uqk" id="mBs-5V-Y9b"/>
+                        <outlet property="explainationLabel" destination="8qb-Ly-a3b" id="gLY-eQ-tBP"/>
                         <outlet property="forwarCard" destination="ufF-nV-YxU" id="XIc-8y-Par"/>
-                        <outlet property="noButton" destination="eW3-BN-eAH" id="8fu-Or-zBJ"/>
+                        <outlet property="neverReviewButton" destination="oKc-o8-E3d" id="L6N-os-TEH"/>
+                        <outlet property="progressionButton" destination="gdt-55-egW" id="XhW-jz-fCO"/>
                         <outlet property="realButtonOutsideCard" destination="WhS-Gw-nAd" id="kZj-5u-Wya"/>
-                        <outlet property="yesButton" destination="z81-0k-OSg" id="zHh-fJ-AlI"/>
+                        <outlet property="regressionButton" destination="iYn-qk-EDz" id="5FD-Sx-cPZ"/>
+                        <outlet property="stagnationButton" destination="ZUJ-Lm-AOW" id="OWZ-Ec-3y6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNi-4a-inA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -603,43 +594,19 @@
         <scene sceneID="vkM-dp-Qt8">
             <objects>
                 <viewController id="M3T-oX-K86" customClass="ForwarCardVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AGe-CS-ot5">
+                    <view key="view" contentMode="scaleToFill" id="wFJ-rb-965" customClass="VerbCardView" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="255" height="357"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOd-fD-yfU">
-                                <rect key="frame" x="16" y="111" width="223" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.8862745098" green="0.1843137255" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <viewLayoutGuide key="safeArea" id="bbI-xV-fab"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="auN-eY-faf"/>
                     </view>
                     <connections>
-                        <outlet property="translationLabel" destination="FOd-fD-yfU" id="4Oh-3O-wdG"/>
+                        <outlet property="backwardView" destination="wFJ-rb-965" id="5eG-fy-Nar"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRQ-HU-MhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3208.8000000000002" y="-1533.2833583208396"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Zpt-XE-gC2">
-            <objects>
-                <viewController id="c57-jf-7Ej" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="K3F-f4-ogJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="XHK-7J-anY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IAx-lx-gmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2465" y="-2194"/>
         </scene>
         <!--Backward CardVC-->
         <scene sceneID="U9D-md-VwI">
@@ -660,7 +627,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Blond Girl" width="372" height="1031"/>
+        <image name="Blond Girl" width="248" height="687"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HHQ-P8-xSg"/>

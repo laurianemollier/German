@@ -11,15 +11,16 @@ import UIKit
 class ForwarCardVC: UIViewController {
     
     var verb: Verb!
-
-    @IBOutlet weak var translationLabel: UILabel!
+    
+    @IBOutlet var backwardView: VerbCardView!
     
     override func viewWillAppear(_ animated: Bool) {
+        
     }
     
     func reset(verb: Verb){
         self.verb = verb
-        self.translationLabel.text = verb.translation(Lang.en)
+        self.backwardView.setup(verb: verb, backward: false)
     }
     
     

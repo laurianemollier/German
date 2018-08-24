@@ -48,7 +48,7 @@ class VerbCardView: UIView {
     }
     
     
-    func setup(verb: Verb) {
+    func setup(verb: Verb, backward: Bool) {
         self.verb = verb
         
         self.translationLabel.text = verb.translation(Lang.en)
@@ -56,6 +56,13 @@ class VerbCardView: UIView {
         self.presentLabel.text = verb.present()
         self.simplePastLabel.text = verb.simplePast()
         self.pastParticipleLabel.text = verb.pastParticiple()
+        
+        if !backward{
+            self.infinitiveLabel.isHidden = true
+            self.presentLabel.isHidden = true
+            self.simplePastLabel.isHidden = true
+            self.pastParticipleLabel.isHidden = true
+        }
     }
     
     

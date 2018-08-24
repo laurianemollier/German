@@ -77,6 +77,7 @@ class MainVC: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+        
     }
 
     
@@ -92,6 +93,7 @@ class MainVC: UIViewController {
             
         }
         else if segue.identifier == "reviewVerbs"{
+
             let cv = segue.destination as! ReviewVerbsVC
             
             do {

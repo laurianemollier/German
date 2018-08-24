@@ -40,5 +40,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ROBOTOSLAB-BOLD_0.TTF</string>
+		<string>ROBOTOSLAB-LIGHT_0.TTF</string>
+		<string>ROBOTOSLAB-REGULAR_0.TTF</string>
+		<string>ROBOTOSLAB-THIN_0.TTF</string>
+	</array>
 </dict>
 </plist>

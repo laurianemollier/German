@@ -8,8 +8,13 @@
 
 import Foundation
 
+class Constants{
+    static let secondsInOneDay = 86400
+}
+
 
 enum UserProgression: String {
+    
     
     case notSeenYet = "notSeenYet"
     case level1 = "level1"
@@ -23,4 +28,102 @@ enum UserProgression: String {
     case toIgnore = "toIgnore"
     
     static let allValues = [notSeenYet, level1, level2 , level3, level4, level5, level6, level7, level8, toIgnore]
+    
+    
+    
+    
+    // MARK: - Navigation between the progression level
+    
+    /// Give the information about the new level and the date to review a verb, when the user
+    /// regress in the knowlege of this verb
+    ///
+    /// - Parameters:
+    ///
+    ///   - reviewedDate: The date one wich a verb has been reviewed
+    ///
+    /// - Returns:
+    ///   - newProgression: The new progression level at wich the user is, if he regress of one level
+    ///   - dateToReview: The new date at witch the verb has to be reviewed
+    func regression(reviewedDate: Date) -> (newProgression: UserProgression, dateToReview: Date)? {
+        return (UserProgression.level1, reviewedDate)
+    }
+    
+    
+    func stagnation(reviewedDate: Date) -> (newProgression: UserProgression, dateToReview: Date)?{
+        switch self {
+        case UserProgression.level1:
+            return (UserProgression.level1, reviewedDate.tomorrow)
+        case UserProgression.level2:
+            let newDate = Date(timeInterval: TimeInterval(2 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level2, newDate)
+            
+        case UserProgression.level3:
+            let newDate = Date(timeInterval: TimeInterval(3 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level3, newDate)
+            
+        case UserProgression.level4:
+            let newDate = Date(timeInterval: TimeInterval(5 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level4, newDate)
+            
+        case UserProgression.level5:
+            let newDate = Date(timeInterval: TimeInterval(7 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level5, newDate)
+            
+        case UserProgression.level6:
+            let newDate = Date(timeInterval: TimeInterval(14 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level6, newDate)
+            
+        case UserProgression.level7:
+            let newDate = Date(timeInterval: TimeInterval(30 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level7, newDate)
+            
+        case UserProgression.level8:
+            let newDate = Date(timeInterval: TimeInterval(90 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level8, newDate)
+            
+        default:
+            return nil
+        }
+    }
+    
+    
+    func progression(reviewedDate: Date) -> (newProgression: UserProgression, dateToReview: Date)? {
+        switch self {
+        case UserProgression.level1:
+            let newDate = Date(timeInterval: TimeInterval(2 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level2, newDate)
+            
+        case UserProgression.level2:
+            let newDate = Date(timeInterval: TimeInterval(3 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level3, newDate)
+            
+        case UserProgression.level3:
+            let newDate = Date(timeInterval: TimeInterval(5 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level4, newDate)
+            
+        case UserProgression.level4:
+            let newDate = Date(timeInterval: TimeInterval(7 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level5, newDate)
+            
+        case UserProgression.level5:
+            let newDate = Date(timeInterval: TimeInterval(14 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level6, newDate)
+            
+        case UserProgression.level6:
+            let newDate = Date(timeInterval: TimeInterval(30 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level7, newDate)
+            
+        case UserProgression.level7:
+            let newDate = Date(timeInterval: TimeInterval(90 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level8, newDate)
+        case UserProgression.level8:
+            let newDate = Date(timeInterval: TimeInterval(365 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level8, newDate)
+            
+        default:
+            return nil
+        }
+    }
+    
+
 }

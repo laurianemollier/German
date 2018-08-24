@@ -20,7 +20,7 @@ class BackwardCardVC: UIViewController {
     
     func reset(verb: Verb){
         self.verb = verb
-        self.backwardView.setup(verb: verb)
+        self.backwardView.setup(verb: verb, backward: true)
     }
 
 

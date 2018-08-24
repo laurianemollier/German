@@ -10,7 +10,6 @@ import UIKit
 
 class ReviewVerbsVC: UIViewController {
 
-    
     var index: Int = 0
     var verbsToReview: [UserLearningVerb]!
     var resultVerbsReviewed: [UserLearningVerb] = []
@@ -28,8 +27,15 @@ class ReviewVerbsVC: UIViewController {
     @IBOutlet weak var buttonOnCard: UIButton!
     
     @IBOutlet weak var realButtonOutsideCard: UIButton!
-    @IBOutlet weak var yesButton: UIButton!
-    @IBOutlet weak var noButton: UIButton!
+    
+    
+    
+    @IBOutlet weak var explainationLabel: UILabel!
+    
+    @IBOutlet weak var regressionButton: BasicButton!
+    @IBOutlet weak var stagnationButton: BasicButton!
+    @IBOutlet weak var progressionButton: BasicButton!
+    @IBOutlet weak var neverReviewButton: BasicButton!
     
     
     @IBAction func revealClickButton(_ sender: UIButton) {
@@ -39,18 +45,41 @@ class ReviewVerbsVC: UIViewController {
         revealCard(sender)
     }
     
-    @IBAction func yesAction(_ sender: UIButton) {
+    @IBAction func regress(_ sender: BasicButton) {
+        let verbReviewed: UserLearningVerb = currentVerb()
+        let (newProgression, dateToReview) = verbReviewed.userProgression.regression(reviewedDate: verbReviewed.dateToReview!)!
+        updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
+    }
+    @IBAction func stagnate(_ sender: BasicButton) {
+        let verbReviewed: UserLearningVerb = currentVerb()
+        let (newProgression, dateToReview) = verbReviewed.userProgression.stagnation(reviewedDate: verbReviewed.dateToReview!)
+        updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
         
-        let verbReviewed: UserLearningVerb = self.verbsToReview[self.index]
+    }
+    @IBAction func progress(_ sender: BasicButton) {
+        let verbReviewed: UserLearningVerb = currentVerb()
+        let (newProgression, dateToReview) = verbReviewed.userProgression.progression(reviewedDate: verbReviewed.dateToReview!)
+        updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
+    }
+
+    private func currentVerb() -> UserLearningVerb{
+        return self.verbsToReview[self.index]
+    }
+    
+    private func updatedVerbReviewed(newProgression: UserProgression, dateToReview: Date?){
+        let verbReviewed: UserLearningVerb = currentVerb()
         let updatedVerbReviewed = UserLearningVerb(id: verbReviewed.id,
                                                    verb: verbReviewed.verb,
-                                                   dateToReview: verbReviewed.dateToReview!.tomorrow,
-                                                   userProgression: UserProgression.level2)
+                                                   dateToReview: dateToReview,
+                                                   userProgression: newProgression)
+        
         nextVerb(updatedVerbReviewed: updatedVerbReviewed)
     }
     
-    @IBAction func noAction(_ sender: UIButton) {
-        nextVerb(updatedVerbReviewed: nil)
+    
+
+    @IBAction func toNeverReview(_ sender: BasicButton) {
+        updatedVerbReviewed(newProgression: UserProgression.toIgnore, dateToReview: nil)
     }
     
     private func nextVerb(updatedVerbReviewed: UserLearningVerb?){
@@ -141,8 +170,12 @@ class ReviewVerbsVC: UIViewController {
         self.isCardForward = false
         
         self.realButtonOutsideCard.isHidden = true
-        self.yesButton.isHidden = false
-        self.noButton.isHidden = false
+        
+        self.explainationLabel.isHidden = false
+        self.regressionButton.isHidden = false
+        self.stagnationButton.isHidden = false
+        self.progressionButton.isHidden = false
+        self.neverReviewButton.isHidden = false
     }
     
     
@@ -152,8 +185,12 @@ class ReviewVerbsVC: UIViewController {
         self.backwardCard.isHidden = true
         
         self.realButtonOutsideCard.isHidden = false
-        self.yesButton.isHidden = true
-        self.noButton.isHidden = true
+        
+        self.explainationLabel.isHidden = true
+        self.regressionButton.isHidden = true
+        self.stagnationButton.isHidden = true
+        self.progressionButton.isHidden = true
+        self.neverReviewButton.isHidden = true
         
         self.forwardCardVC.reset(verb: verb)
         
