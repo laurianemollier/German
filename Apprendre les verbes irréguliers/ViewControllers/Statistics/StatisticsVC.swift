@@ -10,12 +10,34 @@ import UIKit
 
 class StatisticsVC: UIViewController {
 
-    @IBOutlet weak var progressionLevel1: StatisticsButtonWithIcon!
+    @IBOutlet weak var progressionNotSeenYet: StatisticsButton!
+    
+    @IBOutlet weak var progressionLevel1: StatisticsButton!
+    
+    @IBOutlet weak var progressionLevel2: StatisticsButton!
+    
+    @IBOutlet weak var progressionLevel3: StatisticsButton!
+    
+    @IBOutlet weak var progressionLevel4: StatisticsButton!
+    
+    @IBOutlet weak var progressionLevel5: StatisticsButton!
+    
+    @IBOutlet weak var progressionLevel6: StatisticsButton!
+    
+    @IBOutlet weak var progressionLevel7: StatisticsButton!
+    
+    @IBOutlet weak var progressionLevel8: StatisticsButton!
+    
+    
+    @IBOutlet weak var progressionToIgnore: StatisticsButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        self.progressionNotSeenYet.setUp(userProgression: UserProgression.notSeenYet, nbrVerb: 22)
         self.progressionLevel1.setUp(userProgression: UserProgression.level1, nbrVerb: 22)
     }
 

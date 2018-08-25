@@ -30,20 +30,15 @@ enum UserProgression: String {
     static let allValues = [notSeenYet, level1, level2 , level3, level4, level5, level6, level7, level8, toIgnore]
     
     func image() -> UIImage? {
-//        switch self {
-//        case UserProgression.level1:
-//            return #imageLiteral(resourceName: "Good")
-//        default:
-//            return nil
-//        }
-        
-        return #imageLiteral(resourceName: "Good")
+        // TODO
+        switch self {
+        case UserProgression.level1:
+            return #imageLiteral(resourceName: "Good")
+        default:
+            return nil
+        }
         
     }
-    
-    
-    
-    
     
     
     // MARK: - Navigation between the progression level

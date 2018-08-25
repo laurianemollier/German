@@ -324,7 +324,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLY-ea-zRV" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="16" y="564" width="343" height="43"/>
+                                <rect key="frame" x="16" y="497" width="343" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -333,12 +333,26 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxF-rc-rwe" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                <rect key="frame" x="32" y="548" width="343" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vwy-CP-wFo"/>
                     </view>
                     <connections>
-                        <outlet property="progressionLevel1" destination="2sX-ub-zX1" id="JFY-FJ-whb"/>
+                        <outlet property="progressionLevel1" destination="2sX-ub-zX1" id="n94-vW-T9q"/>
+                        <outlet property="progressionLevel2" destination="aIS-kY-K8M" id="N4G-aI-00a"/>
+                        <outlet property="progressionLevel3" destination="i6W-jN-bgk" id="7E2-2A-Z5q"/>
+                        <outlet property="progressionLevel4" destination="zX3-N3-dM7" id="gvY-Vf-SEf"/>
+                        <outlet property="progressionLevel5" destination="jxB-UC-d7n" id="jnN-gu-keP"/>
+                        <outlet property="progressionLevel6" destination="0EN-B9-lBc" id="LVy-yY-boK"/>
+                        <outlet property="progressionLevel7" destination="hn4-B5-jIP" id="Nns-f7-M8r"/>
+                        <outlet property="progressionLevel8" destination="dLY-ea-zRV" id="Pw3-D5-Tua"/>
+                        <outlet property="progressionNotSeenYet" destination="cNj-ba-GFp" id="xFT-bw-89C"/>
+                        <outlet property="progressionToIgnore" destination="nxF-rc-rwe" id="6Zo-4t-Ies"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKu-TS-bCN" userLabel="First Responder" sceneMemberID="firstResponder"/>

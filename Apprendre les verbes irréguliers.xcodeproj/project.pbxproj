@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		98301E54212C76FB00432C84 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E53212C76FB00432C84 /* StatisticsVC.swift */; };
 		98301E56212C771900432C84 /* StatisticsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E55212C771900432C84 /* StatisticsButton.swift */; };
-		98301E5A212C7A2500432C84 /* StatisticsButtonWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E59212C7A2500432C84 /* StatisticsButtonWithIcon.swift */; };
 		98301E5D212C7B7100432C84 /* VerbCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98301E5C212C7B7100432C84 /* VerbCardView.xib */; };
 		98301E5F212C7C2B00432C84 /* VerbCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E5E212C7C2B00432C84 /* VerbCardView.swift */; };
 		983B2495211C4A0C009C33B1 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2494211C4A0C009C33B1 /* Verb.swift */; };
@@ -473,7 +472,6 @@
 /* Begin PBXFileReference section */
 		98301E53212C76FB00432C84 /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		98301E55212C771900432C84 /* StatisticsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsButton.swift; sourceTree = "<group>"; };
-		98301E59212C7A2500432C84 /* StatisticsButtonWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsButtonWithIcon.swift; sourceTree = "<group>"; };
 		98301E5C212C7B7100432C84 /* VerbCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerbCardView.xib; sourceTree = "<group>"; };
 		98301E5E212C7C2B00432C84 /* VerbCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbCardView.swift; sourceTree = "<group>"; };
 		983B2494211C4A0C009C33B1 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
@@ -883,7 +881,6 @@
 			children = (
 				98301E53212C76FB00432C84 /* StatisticsVC.swift */,
 				98301E55212C771900432C84 /* StatisticsButton.swift */,
-				98301E59212C7A2500432C84 /* StatisticsButtonWithIcon.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -1983,7 +1980,6 @@
 				986DD42D212FE7F1000E5E49 /* UIFont.swift in Sources */,
 				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
 				98685F7F2129663100DA327D /* BackwardCardVC.swift in Sources */,
-				98301E5A212C7A2500432C84 /* StatisticsButtonWithIcon.swift in Sources */,
 				988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */,
 				98685F392126BA8700DA327D /* Level.swift in Sources */,
 				988DB9172125C24500AFAEF4 /* DbVerb.swift in Sources */,
