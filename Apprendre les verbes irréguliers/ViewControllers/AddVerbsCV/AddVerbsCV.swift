@@ -10,11 +10,9 @@ import UIKit
 
 class AddVerbsCV: UIViewController {
 
-
-
     let step: Int = 1
     
-    var nbrRandomVerb: Int = 5
+    var nbrRandomVerb: Int!
     var nbrNotSeenVerb: Int!
     
     
@@ -46,7 +44,7 @@ class AddVerbsCV: UIViewController {
     
     
     @IBAction func lessRandomVerb(_ sender: UIButton) {
-        self.nbrRandomVerb = [self.nbrRandomVerb - self.step, 0].max()!
+        self.nbrRandomVerb = [self.nbrRandomVerb - self.step, 0].max()
         self.nbrRandomVerbLabel.text = String(self.nbrRandomVerb)
     }
     
@@ -62,10 +60,11 @@ class AddVerbsCV: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.nbrRandomVerbLabel.text = String(self.nbrRandomVerb)
         // TODO: When there is no verb to add
         do {
             self.nbrNotSeenVerb = try DbUserLearningVerbDAOImpl.shared.nbrNotVerbInReviewList()
+            self.nbrRandomVerb = [5, nbrNotSeenVerb].min()
+            self.nbrRandomVerbLabel.text = String(self.nbrRandomVerb)
         }
         catch{
             // TODO
@@ -97,9 +96,8 @@ class AddVerbsCV: UIViewController {
                 // TODO
                 SpeedLog.print(error)
             }
-            
         }
     }
 
-
+ 
 }
