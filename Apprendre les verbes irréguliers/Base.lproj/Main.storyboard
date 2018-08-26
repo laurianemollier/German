@@ -549,6 +549,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-QY-aWl">
+                                        <rect key="frame" x="297" y="30" width="70" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -601,6 +608,7 @@
                         <outlet property="forwarCard" destination="ufF-nV-YxU" id="XIc-8y-Par"/>
                         <outlet property="neverReviewButton" destination="oKc-o8-E3d" id="L6N-os-TEH"/>
                         <outlet property="progressionButton" destination="gdt-55-egW" id="XhW-jz-fCO"/>
+                        <outlet property="progressionLabel" destination="cVt-QY-aWl" id="UZ6-Oa-GFn"/>
                         <outlet property="realButtonOutsideCard" destination="WhS-Gw-nAd" id="kZj-5u-Wya"/>
                         <outlet property="regressionButton" destination="iYn-qk-EDz" id="5FD-Sx-cPZ"/>
                         <outlet property="stagnationButton" destination="ZUJ-Lm-AOW" id="OWZ-Ec-3y6"/>

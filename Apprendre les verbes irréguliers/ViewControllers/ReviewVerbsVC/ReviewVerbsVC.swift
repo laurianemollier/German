@@ -29,6 +29,7 @@ class ReviewVerbsVC: UIViewController {
     @IBOutlet weak var realButtonOutsideCard: UIButton!
     
     
+    @IBOutlet weak var progressionLabel: UILabel!
     
     @IBOutlet weak var explainationLabel: UILabel!
     
@@ -196,6 +197,10 @@ class ReviewVerbsVC: UIViewController {
         
         // Set the data in for the back of the car
         self.backwardCardVC.reset(verb: verb)
+        
+        
+        // Progression label
+        self.progressionLabel.text = textProgressionLabel()
     }
     
     
@@ -217,7 +222,11 @@ class ReviewVerbsVC: UIViewController {
             // TODO
             SpeedLog.print(error)
         }
-
+    }
+    
+    
+    private func textProgressionLabel() -> String {
+        return String(self.index + 1) + "/" + String(self.verbsToReview.count)
     }
     
  
