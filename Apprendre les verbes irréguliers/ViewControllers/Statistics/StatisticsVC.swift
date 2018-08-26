@@ -9,7 +9,10 @@
 import UIKit
 
 class StatisticsVC: UIViewController {
-
+    
+    var allLearningVerbs: [UserLearningVerb]!
+    
+    
     @IBOutlet weak var progressionNotSeenYet: StatisticsButton!
     
     @IBOutlet weak var progressionLevel1: StatisticsButton!
@@ -28,23 +31,61 @@ class StatisticsVC: UIViewController {
     
     @IBOutlet weak var progressionLevel8: StatisticsButton!
     
-    
     @IBOutlet weak var progressionToIgnore: StatisticsButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        do{
+            self.allLearningVerbs =  try DbUserLearningVerbDAOImpl.shared.all()
+            setUp()
+        }
+        catch{
+            SpeedLog.print(error)
+            // TODO
+        }
         
-        self.progressionNotSeenYet.setUp(userProgression: UserProgression.notSeenYet, nbrVerb: 22)
-        self.progressionLevel1.setUp(userProgression: UserProgression.level1, nbrVerb: 22)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    private func setUp(){
+        self.progressionNotSeenYet.setUp(userProgression: UserProgression.notSeenYet,
+                                         nbrVerb: nbrVerbFor(progression: UserProgression.notSeenYet))
+        self.progressionLevel1.setUp(userProgression: UserProgression.level1,
+                                     nbrVerb: nbrVerbFor(progression: UserProgression.level1))
+        self.progressionLevel2.setUp(userProgression: UserProgression.level2,
+                                     nbrVerb: nbrVerbFor(progression: UserProgression.level2))
+        self.progressionLevel3.setUp(userProgression: UserProgression.level3,
+                                     nbrVerb: nbrVerbFor(progression: UserProgression.level3))
+        self.progressionLevel4.setUp(userProgression: UserProgression.level4,
+                                     nbrVerb: nbrVerbFor(progression: UserProgression.level4))
+        self.progressionLevel5.setUp(userProgression: UserProgression.level5,
+                                     nbrVerb: nbrVerbFor(progression: UserProgression.level5))
+        self.progressionLevel6.setUp(userProgression: UserProgression.level6,
+                                     nbrVerb: nbrVerbFor(progression: UserProgression.level6))
+        self.progressionLevel7.setUp(userProgression: UserProgression.level7,
+                                     nbrVerb: nbrVerbFor(progression: UserProgression.level7))
+        self.progressionLevel8.setUp(userProgression: UserProgression.level8,
+                                     nbrVerb: nbrVerbFor(progression: UserProgression.level8))
+        self.progressionToIgnore.setUp(userProgression: UserProgression.toIgnore,
+                                     nbrVerb: nbrVerbFor(progression: UserProgression.toIgnore))
+    }
+    
+    
+    private func nbrVerbFor(progression: UserProgression) -> Int{
+        return self.allLearningVerbs.filter({$0.userProgression == progression}).count
+    }
+
+    
+    
+    
+    
     
 
     /*

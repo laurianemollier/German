@@ -20,6 +20,15 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var nbrVerbInReviewListLabel: UILabel!
     
+    
+    /// Buttons
+    @IBOutlet weak var addVerbsButton: BasicButton!
+    
+    @IBOutlet weak var seeAllVerbsButton: BasicButton!
+    
+    @IBOutlet weak var yourStatisticsButton: BasicButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,6 +37,9 @@ class MainVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+//        self.seeAllVerbsButton.isHidden = true
+//        self.yourStatisticsButton.isHidden = true
         setUp()
     }
 

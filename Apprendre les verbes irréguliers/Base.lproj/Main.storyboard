@@ -148,8 +148,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="2Mi-mj-J91"/>
                     <connections>
+                        <outlet property="addVerbsButton" destination="q8d-2v-K4O" id="42o-7d-mkD"/>
                         <outlet property="nbrVerbInReviewListLabel" destination="9c9-Or-w8O" id="r3c-o8-oro"/>
                         <outlet property="nbrVerbToReviewTodayButton" destination="qI7-Oi-uEl" id="fof-bb-8RV"/>
+                        <outlet property="seeAllVerbsButton" destination="Mpo-FS-QOa" id="ADA-r1-RGg"/>
+                        <outlet property="yourStatisticsButton" destination="Ogy-tk-Ael" id="J4p-qg-0Ic"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -372,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5a-EN-FAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2218" y="657"/>
+            <point key="canvasLocation" x="1510" y="474"/>
         </scene>
         <!--List VerbsVC-->
         <scene sceneID="mwm-8U-ADG">
@@ -466,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zh-fI-bF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3378" y="-90"/>
+            <point key="canvasLocation" x="3209" y="967"/>
         </scene>
         <!--Review VerbsVC-->
         <scene sceneID="Tq2-Ze-ZdV">
