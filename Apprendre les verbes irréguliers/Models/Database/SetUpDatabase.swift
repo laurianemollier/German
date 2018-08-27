@@ -31,10 +31,10 @@ class SetUpDatabase{
             // TODO to put this one in real
 
             DbUserLearningVerb(id: 0, verbId: v.id,
-                               dateToReview: Date(),
-                               userProgression: UserProgression.level1.rawValue)
+                               dateToReview: nil,
+                               userProgression: UserProgression.notSeenYet.rawValue)
         }
-        try DbUserLearningVerbDAOImpl.shared.insert(learningVerbs: dbUserLearningVerbs)
+        _ = try DbUserLearningVerbDAOImpl.shared.insert(learningVerbs: dbUserLearningVerbs)
     }
 
 }

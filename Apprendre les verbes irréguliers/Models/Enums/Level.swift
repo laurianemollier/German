@@ -16,7 +16,6 @@ public enum Level: String{
     case B1 = "B1"
     case B2 = "B2"
     case C1 = "C1"
-    case All = "All"
     
-    static let allValues = [A2, B1, B2, C1, All]
+    static let allValues = [A2, B1, B2, C1]
 }

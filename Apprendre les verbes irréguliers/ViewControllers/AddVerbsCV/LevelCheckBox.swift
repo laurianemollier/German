@@ -11,13 +11,16 @@ import UIKit
 
 @IBDesignable
 class LevelCheckBox: UIButton {
-
+    
+    
     @IBAction func checkBox(_ sender: UIButton) {
-        if sender.isSelected{
-            sender.isSelected = false
+        if self.isSelected{
+            designNotSelected()
+            self.isSelected = false
         }
         else{
-            sender.isSelected = true
+            designSelected()
+            self.isSelected = true
         }
     }
     
@@ -46,12 +49,11 @@ class LevelCheckBox: UIButton {
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth,
                                  UIViewAutoresizing.flexibleHeight]
         
+        designNotSelected()
+        
         addSubview(view)
         
-        // Add our border here and every custom setup
-        view.layer.borderWidth = 2
-        view.layer.borderColor = UIColor.green.cgColor
-        view.titleLabel!.font = UIFont.systemFont(ofSize: 40)
+
     }
     
     func loadViewFromNib() -> UIView! {
@@ -60,6 +62,17 @@ class LevelCheckBox: UIButton {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIButton
         
         return view
+    }
+    
+    private func designSelected(){
+        // Add our border here and every custom setup
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.green.cgColor
+        view.titleLabel!.font = UIFont.systemFont(ofSize: 40)
+    }
+    
+    private func designNotSelected(){
+        view.layer.borderWidth = 0
     }
     
     

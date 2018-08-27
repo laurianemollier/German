@@ -65,6 +65,10 @@ class UserLearningVerb{
                            userProgression: self.userProgression.rawValue)
     }
     
+    
+    func set(userProgression: UserProgression, dateToReview: Date) -> UserLearningVerb {
+        return UserLearningVerb(id: self.id, verb: self.verb, dateToReview: dateToReview, userProgression: userProgression)
+    }
 }
 
 

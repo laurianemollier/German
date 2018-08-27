@@ -18,22 +18,11 @@ class AddVerbsCV: UIViewController {
     
     @IBOutlet weak var addManuallyButton: UIButton!
     
+    @IBOutlet weak var A2Button: LevelCheckBox!
     @IBOutlet weak var B1Button: LevelCheckBox!
+    @IBOutlet weak var B2Button: LevelCheckBox!
+    @IBOutlet weak var C1Button: LevelCheckBox!
     
-    @IBAction func optionBoxA2(_ sender: UIButton) {
-        optionBox(button: sender)
-    }
-
-    @IBAction func optionBoxB2(_ sender: UIButton) {
-        optionBox(button: sender)
-    }
-    @IBAction func optionBoxC1(_ sender: UIButton) {
-        optionBox(button: sender)
-    }
-    
-    func optionBox(button: UIButton){
-
-    }
     
     
     
@@ -55,14 +44,51 @@ class AddVerbsCV: UIViewController {
     
     
     
+    @IBAction func addRamdomly(_ sender: BasicButton) {
+        let selectedLevels = self.selectedLevels()
+        if selectedLevels.isEmpty{
+            // TODO: No level has been selected
+        }else{
+            do{
+                try DbUserLearningVerbDAOImpl.shared.addRandomVerbToReviewList(ofLevel: selectedLevels, nbr: self.nbrRandomVerb)
+                _ = self.navigationController?.navigationController?.popViewController(animated: true)
+                
+                navigationController?.popViewController(animated: true)
+                dismiss(animated: true, completion: nil)
+            }
+            catch{
+                // TODO
+                SpeedLog.print(error)
+            }
+        }
+        
+        
+    }
     
+    private func selectedLevels() -> [Level] {
+        var selectedLevels = [Level]()
+        
+        if self.A2Button.isSelected{
+            selectedLevels.append(Level.A2)
+        }
+        if self.B1Button.isSelected{
+            selectedLevels.append(Level.B1)
+        }
+        if self.B2Button.isSelected{
+            selectedLevels.append(Level.B2)
+        }
+        if self.C1Button.isSelected{
+            selectedLevels.append(Level.C1)
+        }
+        return selectedLevels
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // TODO: When there is no verb to add
         do {
-            self.nbrNotSeenVerb = try DbUserLearningVerbDAOImpl.shared.nbrNotVerbInReviewList()
+            self.nbrNotSeenVerb = try DbUserLearningVerbDAOImpl.shared.nbrVerNotbInReviewList()
             self.nbrRandomVerb = [5, nbrNotSeenVerb].min()
             self.nbrRandomVerbLabel.text = String(self.nbrRandomVerb)
         }

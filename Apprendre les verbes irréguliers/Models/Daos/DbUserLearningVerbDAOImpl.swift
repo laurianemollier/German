@@ -80,10 +80,29 @@ class DbUserLearningVerbDAOImpl{
     }
     
     /// The number of verb in the review list
-    func nbrNotVerbInReviewList() throws -> Int {
+    func nbrVerNotbInReviewList() throws -> Int {
         let verbs = UserLearningVerbTable.learningVerbs
             .filter(UserLearningVerbTable.userProgression == UserProgression.notSeenYet.rawValue)
         return try db.scalar(verbs.count)
+    }
+    
+    
+    func addRandomVerbToReviewList(ofLevel: [Level], nbr: Int) throws {
+
+        // TODO to make it more effective in one query, because now it is horrible!
+        let q = UserLearningVerbTable.learningVerbs
+            .filter(UserLearningVerbTable.userProgression == UserProgression.notSeenYet.rawValue)
+        
+        
+        let learningVerbs: [UserLearningVerb] = try db.prepare(q).map{ row in
+            try toUserLearningVerb(userLVTableRow: row)
+        }.filter({ofLevel.contains($0.verb.level)})
+        
+        let selected = learningVerbs.choose(nbr)
+        for verb in selected{
+            let updated = verb.set(userProgression: UserProgression.level1, dateToReview: Date())
+            _ = try update(learningVerb: updated.toDbUserLearningVerb())
+        }
     }
     
 
@@ -114,6 +133,7 @@ class DbUserLearningVerbDAOImpl{
                                     UserLearningVerbTable.userProgression <- learningVerb.userProgression)
         return try db.run(update)
     }
+    
     
     func update(learningVerbs: [DbUserLearningVerb]) throws -> [Int]{
         return try learningVerbs.map({ v in try update(learningVerb: v)})
