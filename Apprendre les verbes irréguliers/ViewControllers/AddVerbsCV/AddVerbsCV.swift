@@ -61,8 +61,6 @@ class AddVerbsCV: UIViewController {
                 SpeedLog.print(error)
             }
         }
-        
-        
     }
     
     private func selectedLevels() -> [Level] {
