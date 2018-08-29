@@ -67,6 +67,7 @@
 		98C9835520F750840080B08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C9835320F750840080B08C /* LaunchScreen.storyboard */; };
 		98C9836020F750840080B08C /* Apprendre_les_verbes_irre_guliersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9835F20F750840080B08C /* Apprendre_les_verbes_irre_guliersTests.swift */; };
 		98C9836B20F750840080B08C /* Apprendre_les_verbes_irre_guliersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9836A20F750840080B08C /* Apprendre_les_verbes_irre_guliersUITests.swift */; };
+		98CB8A322136BC5500C6944F /* NotImplementedYetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB8A312136BC5500C6944F /* NotImplementedYetVC.swift */; };
 		98DEFC8720FDC25400DC32BB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DEFC8620FDC25400DC32BB /* MainVC.swift */; };
 		98DEFC8C20FDC33200DC32BB /* AddVerbsCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DEFC8B20FDC33200DC32BB /* AddVerbsCV.swift */; };
 		98DEFC8E20FE27EE00DC32BB /* ReviewVerbsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DEFC8D20FE27EE00DC32BB /* ReviewVerbsVC.swift */; };
@@ -535,6 +536,7 @@
 		98C9836620F750840080B08C /* Apprendre les verbes irréguliersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Apprendre les verbes irréguliersUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C9836A20F750840080B08C /* Apprendre_les_verbes_irre_guliersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apprendre_les_verbes_irre_guliersUITests.swift; sourceTree = "<group>"; };
 		98C9836C20F750840080B08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98CB8A312136BC5500C6944F /* NotImplementedYetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotImplementedYetVC.swift; sourceTree = "<group>"; };
 		98DEFC8620FDC25400DC32BB /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		98DEFC8B20FDC33200DC32BB /* AddVerbsCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVerbsCV.swift; sourceTree = "<group>"; };
 		98DEFC8D20FE27EE00DC32BB /* ReviewVerbsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbsVC.swift; sourceTree = "<group>"; };
@@ -1130,9 +1132,18 @@
 			path = "Apprendre les verbes irréguliersUITests";
 			sourceTree = "<group>";
 		};
+		98CB8A2A2136BC1200C6944F /* NotImplementedYet */ = {
+			isa = PBXGroup;
+			children = (
+				98CB8A312136BC5500C6944F /* NotImplementedYetVC.swift */,
+			);
+			path = NotImplementedYet;
+			sourceTree = "<group>";
+		};
 		98DEFC8820FDC26200DC32BB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				98CB8A2A2136BC1200C6944F /* NotImplementedYet */,
 				98301E4C212C76C700432C84 /* Statistics */,
 				9898A5EC212C20F6003EAAFF /* ListVerbs */,
 				98685F7B2129652800DA327D /* ReviewVerbsVC */,
@@ -1982,6 +1993,7 @@
 				98685F352126BA4900DA327D /* Lang.swift in Sources */,
 				986DD42D212FE7F1000E5E49 /* UIFont.swift in Sources */,
 				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
+				98CB8A322136BC5500C6944F /* NotImplementedYetVC.swift in Sources */,
 				98685F7F2129663100DA327D /* BackwardCardVC.swift in Sources */,
 				988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */,
 				98685F392126BA8700DA327D /* Level.swift in Sources */,
@@ -2215,7 +2227,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "mollierlauriane.Apprendre-les-verbes-irre-guliers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2234,7 +2246,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "mollierlauriane.Apprendre-les-verbes-irre-guliers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

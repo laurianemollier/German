@@ -54,13 +54,14 @@ class LevelCheckBox: UIButton {
                                  UIViewAutoresizing.flexibleHeight]
         
         self.layer.borderWidth = self.borderWidth
-        self.layer.cornerRadius = self.frame.height / 2
+        
         self.borderColorNotSelected = self.backgroundColor?.cgColor
         
         
         designNotSelected()
         
         addSubview(view)
+        self.layer.cornerRadius = self.view.frame.height / 2
         
     }
     

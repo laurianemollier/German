@@ -174,7 +174,7 @@ class ReviewVerbsVC: UIViewController {
         self.regressionButton.isHidden = false
         self.stagnationButton.isHidden = false
         self.progressionButton.isHidden = false
-        self.neverReviewButton.isHidden = false
+//        self.neverReviewButton.isHidden = false
     }
     
     
@@ -189,7 +189,7 @@ class ReviewVerbsVC: UIViewController {
         self.regressionButton.isHidden = true
         self.stagnationButton.isHidden = true
         self.progressionButton.isHidden = true
-        self.neverReviewButton.isHidden = true
+//        self.neverReviewButton.isHidden = true
         
         self.forwardCardVC.reset(verb: verb)
         

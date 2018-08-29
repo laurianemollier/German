@@ -23,8 +23,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red Wave" translatesAutoresizingMaskIntoConstraints="NO" id="j4e-zh-t8z">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="454"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="454" id="shG-eO-vVC"/>
-                        <constraint firstAttribute="height" constant="454" id="woT-sp-Wos"/>
+                        <constraint firstAttribute="height" constant="454" id="woT-sp-Wos" userLabel="height = 470"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="iWo-ET-ElI">
@@ -48,7 +47,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Red Wave" width="844" height="1247"/>
+        <image name="Red Wave" width="562" height="831"/>
         <image name="Yellow Wave" width="562" height="193"/>
     </resources>
 </document>
