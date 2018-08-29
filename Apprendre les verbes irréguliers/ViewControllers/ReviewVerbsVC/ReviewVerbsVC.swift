@@ -6,6 +6,7 @@
 //  Copyright © 2018 Lauriane Mollier. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class ReviewVerbsVC: UIViewController {
@@ -27,8 +28,7 @@ class ReviewVerbsVC: UIViewController {
     @IBOutlet weak var buttonOnCard: UIButton!
     
     @IBOutlet weak var realButtonOutsideCard: UIButton!
-    
-    
+
     @IBOutlet weak var progressionLabel: UILabel!
     
     @IBOutlet weak var explainationLabel: UILabel!
@@ -120,6 +120,7 @@ class ReviewVerbsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         resetCard(verb: self.verbsToReview[self.index].verb)
 
+
     }
     
     @objc private func cancelTapped(){
@@ -127,25 +128,18 @@ class ReviewVerbsVC: UIViewController {
     }
     
     override func viewDidLoad() {
+
+
+
         super.viewDidLoad()
-
-        self.navigationItem.setHidesBackButton(true, animated: true)
-        
-        // TODO:
-        let cross = UIImage(named: "test")
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: cross, style: .plain, target: self, action: #selector(cancelTapped))
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped))
-
-
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(cancelTapped))
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
 
 
@@ -210,7 +204,9 @@ class ReviewVerbsVC: UIViewController {
             let results: [Int] = try DbUserLearningVerbDAOImpl.shared.update(learningVerbs: dbResultVerbsReviewed)
             if results.forAll(where: {$0 > 0})  {
                 // TODO: Show the success
-                self.navigationController?.popViewController(animated: true)
+                navigationController?.popViewController(animated: true)
+                dismiss(animated: true, completion: nil)
+                
                 SpeedLog.print("Sucessly modify all learning verb")
             }
             else{

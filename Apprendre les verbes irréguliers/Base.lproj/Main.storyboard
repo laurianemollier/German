@@ -111,7 +111,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Review now"/>
                                 <connections>
-                                    <segue destination="qzO-in-ekQ" kind="show" identifier="reviewVerbs" id="OVJ-ht-fzK"/>
+                                    <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" id="OVJ-ht-fzK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -583,8 +583,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-Gw-nAd">
-                                        <rect key="frame" x="131.5" y="502" width="113" height="113"/>
-                                        <color key="backgroundColor" red="1" green="0.80784313730000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="131.5" y="458" width="113" height="113"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="WhS-Gw-nAd" secondAttribute="height" multiplier="1:1" id="bbk-Ok-gs1"/>
                                         </constraints>
@@ -596,7 +595,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LY3-8h-At6">
-                                        <rect key="frame" x="94.5" y="542" width="186" height="35"/>
+                                        <rect key="frame" x="94.5" y="498" width="186" height="35"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYn-qk-EDz" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="37" height="35"/>
@@ -643,7 +642,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKc-o8-E3d" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="163.5" y="597" width="48" height="35"/>
+                                        <rect key="frame" x="163.5" y="553" width="48" height="35"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="poP-wv-QNo"/>
@@ -656,19 +655,24 @@
                                             <action selector="toNeverReview:" destination="qzO-in-ekQ" eventType="touchUpInside" id="daQ-ew-xMw"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-QY-aWl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-Ly-a3b">
+                                        <rect key="frame" x="8" y="403" width="359" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1/2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-QY-aWl">
                                         <rect key="frame" x="297" y="30" width="70" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-Ly-a3b">
-                                        <rect key="frame" x="8" y="447" width="359" height="22.5"/>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBV-Nm-8Ys">
+                                        <rect key="frame" x="12" y="16" width="55" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="NavBack"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8862745098" green="0.1843137255" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -682,7 +686,7 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufF-nV-YxU">
-                                <rect key="frame" x="51.5" y="119" width="272" height="300"/>
+                                <rect key="frame" x="51.5" y="75" width="272" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="XGN-w4-ybd"/>
                                     <constraint firstAttribute="width" secondItem="ufF-nV-YxU" secondAttribute="height" multiplier="635:700" id="nSb-ky-Nqc"/>
@@ -692,13 +696,13 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frI-xU-zCb">
-                                <rect key="frame" x="51.5" y="119" width="272" height="300"/>
+                                <rect key="frame" x="51.5" y="75" width="272" height="300"/>
                                 <connections>
                                     <segue destination="o65-Wo-rje" kind="embed" identifier="backCardSegue" id="lCv-Om-mtj"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-3a-Uqk">
-                                <rect key="frame" x="51.5" y="119" width="272" height="300"/>
+                                <rect key="frame" x="51.5" y="75" width="272" height="300"/>
                                 <connections>
                                     <action selector="revealClickOnCard:" destination="qzO-in-ekQ" eventType="touchUpInside" id="idL-uQ-6rp"/>
                                 </connections>
@@ -758,7 +762,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRQ-HU-MhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3208.8000000000002" y="-1533.2833583208396"/>
+            <point key="canvasLocation" x="2605" y="-1562"/>
         </scene>
         <!--Backward CardVC-->
         <scene sceneID="U9D-md-VwI">
@@ -775,7 +779,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wi1-bk-LAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2997.5999999999999" y="-1081.7091454272863"/>
+            <point key="canvasLocation" x="2605" y="-1167"/>
         </scene>
     </scenes>
     <resources>
@@ -783,10 +787,11 @@
         <image name="AVStepperMinusSelected" width="126" height="126"/>
         <image name="AVStepperPlusSelected" width="126" height="126"/>
         <image name="Blond Girl" width="248" height="687"/>
+        <image name="NavBack" width="55" height="55"/>
         <image name="RVTurnButton" width="113" height="113"/>
         <image name="RedCircle" width="337" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HHQ-P8-xSg"/>
+        <segue reference="OVJ-ht-fzK"/>
     </inferredMetricsTieBreakers>
 </document>

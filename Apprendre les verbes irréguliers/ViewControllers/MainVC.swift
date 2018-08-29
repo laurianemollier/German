@@ -41,6 +41,8 @@ class MainVC: UIViewController {
 //        self.seeAllVerbsButton.isHidden = true
 //        self.yourStatisticsButton.isHidden = true
         setUp()
+        
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -123,6 +123,24 @@ class Verb{
         })
     }
     
+    
+    
+    func colored() {
+//        let range = NSRange(location:2,length:5) // specific location. This means "range" handle 1 character at location 2
+//
+//        let originalString = "coucou-les-voisin"
+//
+//        let attributes: [NSAttributedStringKey: Any] = [
+//            .font: UIFont(name: "Georgia", size: 18.0)!]
+//        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: originalString, attributes: attributes)
+//
+//        // here you change the character to red color
+//        attributedString.addAttribute(.foregroundColor, value: UIColor.red, range: range)
+//        attributedString.addAttribute(.foregroundColor, value: UIColor.gray, range: NSRange(location:10,length:2))
+//
+//        self.nbrVerbInReviewListLabel.attributedText = attributedString
+        
+    }
 
     
 }
