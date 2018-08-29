@@ -57,7 +57,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qzO-in-ekQ" kind="show" identifier="reviewVerbs" id="HHQ-P8-xSg"/>
+                                    <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" id="HHQ-P8-xSg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-2v-K4O" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -72,7 +72,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Add verbs to the review list"/>
                                 <connections>
-                                    <segue destination="2Lh-hZ-KKR" kind="show" identifier="addVerbs" id="3h9-Q9-av4"/>
+                                    <segue destination="2Lh-hZ-KKR" kind="modal" identifier="addVerbs" id="3h9-Q9-av4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpo-FS-QOa" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -167,6 +167,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Y8R-li-TTx">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohb-aj-Exi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Q8e-WY-y3Q" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EyH-dX-0I4">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -176,7 +177,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gac-4G-URD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ohb-aj-Exi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-658" y="69"/>
         </scene>
@@ -246,7 +246,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djp-s6-Um0" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="120" y="598" width="134" height="38"/>
+                                        <rect key="frame" x="120" y="604" width="134" height="38"/>
                                         <color key="backgroundColor" red="0.86666666670000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="uGI-Pw-6CB"/>
@@ -260,13 +260,13 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W7T-FB-Cbv">
-                                        <rect key="frame" x="100" y="373" width="175" height="175"/>
+                                        <rect key="frame" x="97" y="373" width="181" height="181"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qhb-W4-tlO">
-                                                <rect key="frame" x="0.0" y="0.0" width="175" height="83.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181" height="86.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tb-t0-ewg" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="83.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="86.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
                                                         <state key="normal" title="A2">
@@ -277,7 +277,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6O-ZH-A1a" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                        <rect key="frame" x="91.5" y="0.0" width="83.5" height="83.5"/>
+                                                        <rect key="frame" x="94.5" y="0.0" width="86.5" height="86.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
                                                         <state key="normal" title="B1">
@@ -295,12 +295,12 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AqL-Z8-1LM">
-                                                <rect key="frame" x="0.0" y="91.5" width="175" height="83.5"/>
+                                                <rect key="frame" x="0.0" y="94.5" width="181" height="86.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-BJ-Bfx" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="83.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-BJ-Bfx" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="86.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
+                                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="23"/>
                                                         <state key="normal" title="B2">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -309,7 +309,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5L-Zd-7fP" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                        <rect key="frame" x="91.5" y="0.0" width="83.5" height="83.5"/>
+                                                        <rect key="frame" x="94.5" y="0.0" width="86.5" height="86.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
                                                         <state key="normal" title="C1">
@@ -336,9 +336,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-Su-4NW">
+                                        <rect key="frame" x="33" y="21" width="55" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="NavBack"/>
+                                        <connections>
+                                            <action selector="back:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="BKe-tj-r8D"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.24313725489999999" green="0.99325417660000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Djp-s6-Um0" secondAttribute="bottom" constant="25" id="1Z4-SI-Elk"/>
                                     <constraint firstItem="Djp-s6-Um0" firstAttribute="centerX" secondItem="KC2-LT-USM" secondAttribute="centerX" id="7N0-Q6-Ljn"/>
                                     <constraint firstItem="Fu0-rs-yzR" firstAttribute="bottom" secondItem="tP2-h3-e2c" secondAttribute="bottom" id="H1v-8G-uIZ"/>
                                     <constraint firstItem="Djp-s6-Um0" firstAttribute="top" secondItem="W7T-FB-Cbv" secondAttribute="bottom" constant="50" id="Jdy-GD-qvX"/>
@@ -346,7 +355,6 @@
                                     <constraint firstAttribute="trailing" secondItem="9Er-sC-veZ" secondAttribute="trailing" constant="8" id="U2m-tj-rr0"/>
                                     <constraint firstItem="W7T-FB-Cbv" firstAttribute="top" secondItem="2El-IA-o2E" secondAttribute="bottom" constant="41" id="Uic-2V-RQl"/>
                                     <constraint firstItem="W7T-FB-Cbv" firstAttribute="centerX" secondItem="KC2-LT-USM" secondAttribute="centerX" id="Xh0-Xm-dds"/>
-                                    <constraint firstItem="W7T-FB-Cbv" firstAttribute="leading" secondItem="KC2-LT-USM" secondAttribute="leading" constant="100" id="aEH-jn-wBk"/>
                                     <constraint firstItem="Fu0-rs-yzR" firstAttribute="trailing" secondItem="tP2-h3-e2c" secondAttribute="trailing" id="bif-Gy-Qmu"/>
                                     <constraint firstItem="2El-IA-o2E" firstAttribute="top" secondItem="Fu0-rs-yzR" secondAttribute="bottom" constant="14" id="ezb-Hf-uxE"/>
                                     <constraint firstItem="tP2-h3-e2c" firstAttribute="top" secondItem="9Er-sC-veZ" secondAttribute="bottom" constant="55.5" id="fok-HO-NaQ"/>
@@ -672,6 +680,9 @@
                                         <rect key="frame" x="12" y="16" width="55" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="NavBack"/>
+                                        <connections>
+                                            <action selector="back:" destination="qzO-in-ekQ" eventType="touchUpInside" id="wha-Q3-EaW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8862745098" green="0.1843137255" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -792,6 +803,6 @@
         <image name="RedCircle" width="337" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OVJ-ht-fzK"/>
+        <segue reference="HHQ-P8-xSg"/>
     </inferredMetricsTieBreakers>
 </document>

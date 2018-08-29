@@ -31,6 +31,9 @@ class AddVerbsCV: UIViewController {
     @IBOutlet weak var nbrRandomVerbLabel: UILabel!
     
     
+    @IBAction func back(_ sender: UIButton) {
+        back()
+    }
     
     @IBAction func lessRandomVerb(_ sender: UIButton) {
         self.nbrRandomVerb = [self.nbrRandomVerb - self.step, 0].max()
@@ -121,6 +124,11 @@ class AddVerbsCV: UIViewController {
                 SpeedLog.print(error)
             }
         }
+    }
+    
+    private func back(){
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
 
  

@@ -39,6 +39,12 @@ class ReviewVerbsVC: UIViewController {
     @IBOutlet weak var neverReviewButton: BasicButton!
     
     
+    @IBAction func back(_ sender: UIButton) {
+        back()
+    }
+    
+    
+    
     @IBAction func revealClickButton(_ sender: UIButton) {
         revealCard(sender)
     }
@@ -119,8 +125,6 @@ class ReviewVerbsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         resetCard(verb: self.verbsToReview[self.index].verb)
-
-
     }
     
     @objc private func cancelTapped(){
@@ -203,10 +207,8 @@ class ReviewVerbsVC: UIViewController {
         do{
             let results: [Int] = try DbUserLearningVerbDAOImpl.shared.update(learningVerbs: dbResultVerbsReviewed)
             if results.forAll(where: {$0 > 0})  {
+                back()
                 // TODO: Show the success
-                navigationController?.popViewController(animated: true)
-                dismiss(animated: true, completion: nil)
-                
                 SpeedLog.print("Sucessly modify all learning verb")
             }
             else{
@@ -223,6 +225,11 @@ class ReviewVerbsVC: UIViewController {
     
     private func textProgressionLabel() -> String {
         return String(self.index + 1) + "/" + String(self.verbsToReview.count)
+    }
+    
+    private func back(){
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
  
