@@ -35,6 +35,7 @@ class SetUpDatabase{
                                userProgression: UserProgression.notSeenYet.rawValue)
         }
         _ = try DbUserLearningVerbDAOImpl.shared.insert(learningVerbs: dbUserLearningVerbs)
+        _ = try DbUserLearningVerbDAOImpl.shared.addRandomVerbToReviewList(ofLevel: [Level.A2], nbr: 10)
     }
 
 }

@@ -20,13 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red Wave" translatesAutoresizingMaskIntoConstraints="NO" id="j4e-zh-t8z">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="j4e-zh-t8z">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="454"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="454" id="woT-sp-Wos" userLabel="height = 470"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="iWo-ET-ElI">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="iWo-ET-ElI">
                     <rect key="frame" x="0.0" y="563" width="375" height="104"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="104" id="IIJ-pt-hCv"/>
@@ -47,7 +47,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Red Wave" width="562" height="831"/>
-        <image name="Yellow Wave" width="562" height="193"/>
+        <image name="Bgd Red Wave Long" width="562" height="831"/>
+        <image name="Bgd Yellow Wave" width="562" height="193"/>
     </resources>
 </document>

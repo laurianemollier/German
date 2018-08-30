@@ -13,19 +13,16 @@ class MainVC: UIViewController {
     var nbrVerbInReviewList: Int!
     var nbrVerbToReviewToday: Int!
     
-    /// TODO: To put on the settings
-    let nbrVerbInReviewSession = 2
+    var nbrVerbInReviewSession = 10
     
     @IBOutlet weak var nbrVerbToReviewTodayButton: UIButton!
     
+    @IBOutlet var reviewVerbs: BasicButton!
     @IBOutlet weak var nbrVerbInReviewListLabel: UILabel!
     
     
-    /// Buttons
     @IBOutlet weak var addVerbsButton: BasicButton!
-    
     @IBOutlet weak var seeAllVerbsButton: BasicButton!
-    
     @IBOutlet weak var yourStatisticsButton: BasicButton!
     
     
@@ -37,9 +34,6 @@ class MainVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-//        self.seeAllVerbsButton.isHidden = true
-//        self.yourStatisticsButton.isHidden = true
         setUp()
         
 
@@ -51,7 +45,7 @@ class MainVC: UIViewController {
     }
     
 
-    
+
     
     // MARK: - SetUp
     
@@ -70,6 +64,7 @@ class MainVC: UIViewController {
                 // TODO: To show the user that they is an error
             }
             textAndDesignSetUp()
+            
         }
     }
     
@@ -86,6 +81,16 @@ class MainVC: UIViewController {
     private func textAndDesignSetUp(){
         self.nbrVerbToReviewTodayButton.setTitle(String(self.nbrVerbToReviewToday), for: .normal)
         self.nbrVerbInReviewListLabel.text = "Il y a " + String(self.nbrVerbInReviewList) + " à revoir" //TODO
+        
+        if self.nbrVerbToReviewToday == 0{
+            self.nbrVerbToReviewTodayButton.isEnabled = false
+            self.reviewVerbs.isEnabled = false
+        }
+        else{
+            self.nbrVerbToReviewTodayButton.isEnabled = true
+            self.reviewVerbs.isEnabled = true
+        }
+        
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()

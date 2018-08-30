@@ -90,7 +90,7 @@ class AddVerbsCV: UIViewController {
         // TODO: When there is no verb to add
         do {
             self.nbrNotSeenVerb = try DbUserLearningVerbDAOImpl.shared.nbrVerNotbInReviewList()
-            self.nbrRandomVerb = [5, nbrNotSeenVerb].min()
+            self.nbrRandomVerb = [10, nbrNotSeenVerb].min()
             self.nbrRandomVerbLabel.text = String(self.nbrRandomVerb)
         }
         catch{

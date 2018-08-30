@@ -57,6 +57,9 @@
                                     <color key="titleColor" red="0.86666666670000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" id="HHQ-P8-xSg"/>
                                 </connections>
@@ -155,6 +158,7 @@
                         <outlet property="addVerbsButton" destination="q8d-2v-K4O" id="42o-7d-mkD"/>
                         <outlet property="nbrVerbInReviewListLabel" destination="9c9-Or-w8O" id="r3c-o8-oro"/>
                         <outlet property="nbrVerbToReviewTodayButton" destination="qI7-Oi-uEl" id="fof-bb-8RV"/>
+                        <outlet property="reviewVerbs" destination="jCs-oc-s80" id="uS2-3L-sTl"/>
                         <outlet property="seeAllVerbsButton" destination="Mpo-FS-QOa" id="ADA-r1-RGg"/>
                         <outlet property="yourStatisticsButton" destination="Ogy-tk-Ael" id="J4p-qg-0Ic"/>
                     </connections>
@@ -171,7 +175,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zlb-Ox-NSy" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zlb-Ox-NSy" customClass="Background2" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>

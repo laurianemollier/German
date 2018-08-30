@@ -20,25 +20,34 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="jet-WL-fsi">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="jet-WL-fsi">
                     <rect key="frame" x="0.0" y="563" width="375" height="104"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="104" id="2ty-E1-dCl"/>
                         <constraint firstAttribute="height" constant="104" id="Jof-jS-SFu"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="104" id="lGi-8L-n22"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Medium" translatesAutoresizingMaskIntoConstraints="NO" id="EXB-cq-oJ5">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="UZN-yZ-3j9"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="jet-WL-fsi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AyC-3X-B0h"/>
+                <constraint firstItem="EXB-cq-oJ5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VRZ-HT-QZg"/>
                 <constraint firstItem="jet-WL-fsi" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Wxn-WP-cGV"/>
+                <constraint firstItem="EXB-cq-oJ5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hi5-og-UUx"/>
                 <constraint firstItem="jet-WL-fsi" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vJc-nT-xan"/>
+                <constraint firstItem="EXB-cq-oJ5" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vlG-ZK-AiK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
     <resources>
-        <image name="Yellow Wave" width="562" height="193"/>
+        <image name="Bgd Red Wave Medium" width="562" height="430"/>
+        <image name="Bgd Yellow Wave" width="562" height="193"/>
     </resources>
 </document>
