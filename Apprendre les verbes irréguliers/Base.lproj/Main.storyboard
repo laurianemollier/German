@@ -171,196 +171,198 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KC2-LT-USM" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zlb-Ox-NSy" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AVStepperContainer" translatesAutoresizingMaskIntoConstraints="NO" id="tP2-h3-e2c">
+                                <rect key="frame" x="45" y="113" width="285" height="126.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tP2-h3-e2c" secondAttribute="height" multiplier="275:122" id="GQg-q1-0wg"/>
+                                    <constraint firstAttribute="width" constant="285" id="NHT-6o-i6K"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-rs-yzR">
+                                <rect key="frame" x="45" y="113" width="285" height="126.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AVStepperContainer" translatesAutoresizingMaskIntoConstraints="NO" id="tP2-h3-e2c">
-                                        <rect key="frame" x="54" y="175.5" width="267" height="118.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1V-P2-sCB">
+                                        <rect key="frame" x="8" y="23.5" width="79.5" height="79.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="tP2-h3-e2c" secondAttribute="height" multiplier="275:122" id="GQg-q1-0wg"/>
+                                            <constraint firstAttribute="width" secondItem="m1V-P2-sCB" secondAttribute="height" multiplier="1:1" id="dIG-ld-7GZ"/>
                                         </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-rs-yzR">
-                                        <rect key="frame" x="54" y="175.5" width="267" height="118.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1V-P2-sCB">
-                                                <rect key="frame" x="8" y="19.5" width="79.5" height="79.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="m1V-P2-sCB" secondAttribute="height" multiplier="1:1" id="dIG-ld-7GZ"/>
-                                                </constraints>
-                                                <state key="normal" image="AVStepperMinusSelected"/>
-                                                <state key="highlighted" image="AVStepperMinusSelected"/>
-                                                <connections>
-                                                    <action selector="lessRandomVerb:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="hCD-iN-ac8"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTe-EP-Aco">
-                                                <rect key="frame" x="108.5" y="47.5" width="50" height="24"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="Ck6-Ai-ypu"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7R-TK-qx6">
-                                                <rect key="frame" x="179" y="19.5" width="80" height="79.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="TMC-Id-xyB"/>
-                                                    <constraint firstAttribute="width" secondItem="j7R-TK-qx6" secondAttribute="height" multiplier="1:1" id="WQS-73-wDd"/>
-                                                </constraints>
-                                                <state key="normal" image="AVStepperPlusSelected"/>
-                                                <state key="highlighted" image="AVStepperPlusSelected"/>
-                                                <connections>
-                                                    <action selector="moreRandomVerb:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="G50-xM-LpZ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="j7R-TK-qx6" firstAttribute="width" secondItem="m1V-P2-sCB" secondAttribute="width" id="LvX-00-3Ux"/>
-                                            <constraint firstItem="j7R-TK-qx6" firstAttribute="height" secondItem="m1V-P2-sCB" secondAttribute="height" id="Z35-7R-vZB"/>
-                                        </constraints>
-                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Er-sC-veZ">
-                                        <rect key="frame" x="8" y="96" width="359" height="24"/>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djp-s6-Um0" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="120" y="604" width="134" height="38"/>
-                                        <color key="backgroundColor" red="0.86666666670000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="uGI-Pw-6CB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="19"/>
-                                        <state key="normal" title="Add ramdomly">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                        <state key="normal" image="AVStepperMinusSelected"/>
+                                        <state key="highlighted" image="AVStepperMinusSelected"/>
                                         <connections>
-                                            <action selector="addRamdomly:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="GZ8-9Y-hT0"/>
+                                            <action selector="lessRandomVerb:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="hCD-iN-ac8"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W7T-FB-Cbv">
-                                        <rect key="frame" x="97" y="373" width="181" height="181"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qhb-W4-tlO">
-                                                <rect key="frame" x="0.0" y="0.0" width="181" height="86.5"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tb-t0-ewg" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="86.5"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
-                                                        <state key="normal" title="A2">
-                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <state key="selected">
-                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6O-ZH-A1a" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                        <rect key="frame" x="94.5" y="0.0" width="86.5" height="86.5"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
-                                                        <state key="normal" title="B1">
-                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <state key="selected">
-                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="W6O-ZH-A1a" firstAttribute="width" secondItem="3Tb-t0-ewg" secondAttribute="width" id="HuI-qM-IrM"/>
-                                                    <constraint firstItem="W6O-ZH-A1a" firstAttribute="top" secondItem="3Tb-t0-ewg" secondAttribute="top" id="IHt-Pa-JZj"/>
-                                                    <constraint firstItem="W6O-ZH-A1a" firstAttribute="height" secondItem="3Tb-t0-ewg" secondAttribute="height" id="YiC-Ft-gyE"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AqL-Z8-1LM">
-                                                <rect key="frame" x="0.0" y="94.5" width="181" height="86.5"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-BJ-Bfx" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="86.5"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="23"/>
-                                                        <state key="normal" title="B2">
-                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <state key="selected">
-                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5L-Zd-7fP" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                        <rect key="frame" x="94.5" y="0.0" width="86.5" height="86.5"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
-                                                        <state key="normal" title="C1">
-                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <state key="selected">
-                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTe-EP-Aco">
+                                        <rect key="frame" x="117.5" y="51.5" width="50" height="24"/>
                                         <constraints>
-                                            <constraint firstItem="z5L-Zd-7fP" firstAttribute="height" secondItem="3Tb-t0-ewg" secondAttribute="height" id="32h-yx-IsZ"/>
-                                            <constraint firstItem="FwL-BJ-Bfx" firstAttribute="height" secondItem="3Tb-t0-ewg" secondAttribute="height" id="Bvn-t0-Tn8"/>
-                                            <constraint firstItem="z5L-Zd-7fP" firstAttribute="width" secondItem="3Tb-t0-ewg" secondAttribute="width" id="FX4-iZ-Iwo"/>
-                                            <constraint firstAttribute="width" secondItem="W7T-FB-Cbv" secondAttribute="height" multiplier="1:1" id="Slj-lx-Vn2"/>
-                                            <constraint firstItem="FwL-BJ-Bfx" firstAttribute="width" secondItem="3Tb-t0-ewg" secondAttribute="width" id="vqL-3u-ePQ"/>
+                                            <constraint firstAttribute="width" constant="50" id="Ck6-Ai-ypu"/>
                                         </constraints>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2El-IA-o2E">
-                                        <rect key="frame" x="8" y="308" width="359" height="24"/>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-Su-4NW">
-                                        <rect key="frame" x="31" y="51" width="37" height="37"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7R-TK-qx6">
+                                        <rect key="frame" x="197" y="23.5" width="80" height="79.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="RPK-Su-4NW" secondAttribute="height" multiplier="1:1" id="L5A-Qp-ozl"/>
-                                            <constraint firstAttribute="width" constant="37" id="QWV-sx-hU9"/>
+                                            <constraint firstAttribute="width" constant="80" id="TMC-Id-xyB"/>
+                                            <constraint firstAttribute="width" secondItem="j7R-TK-qx6" secondAttribute="height" multiplier="1:1" id="WQS-73-wDd"/>
                                         </constraints>
-                                        <state key="normal" image="NavBack"/>
+                                        <state key="normal" image="AVStepperPlusSelected"/>
+                                        <state key="highlighted" image="AVStepperPlusSelected"/>
                                         <connections>
-                                            <action selector="back:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="BKe-tj-r8D"/>
+                                            <action selector="moreRandomVerb:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="G50-xM-LpZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.24313725489999999" green="0.99325417660000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Djp-s6-Um0" secondAttribute="bottom" constant="25" id="1Z4-SI-Elk"/>
-                                    <constraint firstItem="Djp-s6-Um0" firstAttribute="centerX" secondItem="KC2-LT-USM" secondAttribute="centerX" id="7N0-Q6-Ljn"/>
-                                    <constraint firstItem="Fu0-rs-yzR" firstAttribute="bottom" secondItem="tP2-h3-e2c" secondAttribute="bottom" id="H1v-8G-uIZ"/>
-                                    <constraint firstItem="Djp-s6-Um0" firstAttribute="top" secondItem="W7T-FB-Cbv" secondAttribute="bottom" constant="50" id="Jdy-GD-qvX"/>
-                                    <constraint firstItem="RPK-Su-4NW" firstAttribute="leading" secondItem="KC2-LT-USM" secondAttribute="leading" constant="25" id="Lpo-C9-5ah"/>
-                                    <constraint firstItem="tP2-h3-e2c" firstAttribute="leading" secondItem="KC2-LT-USM" secondAttribute="leading" constant="54" id="Ou3-X3-5Sr"/>
-                                    <constraint firstAttribute="trailing" secondItem="9Er-sC-veZ" secondAttribute="trailing" constant="8" id="U2m-tj-rr0"/>
-                                    <constraint firstItem="W7T-FB-Cbv" firstAttribute="top" secondItem="2El-IA-o2E" secondAttribute="bottom" constant="41" id="Uic-2V-RQl"/>
-                                    <constraint firstItem="W7T-FB-Cbv" firstAttribute="centerX" secondItem="KC2-LT-USM" secondAttribute="centerX" id="Xh0-Xm-dds"/>
-                                    <constraint firstItem="Fu0-rs-yzR" firstAttribute="trailing" secondItem="tP2-h3-e2c" secondAttribute="trailing" id="bif-Gy-Qmu"/>
-                                    <constraint firstItem="2El-IA-o2E" firstAttribute="top" secondItem="Fu0-rs-yzR" secondAttribute="bottom" constant="14" id="ezb-Hf-uxE"/>
-                                    <constraint firstItem="tP2-h3-e2c" firstAttribute="top" secondItem="9Er-sC-veZ" secondAttribute="bottom" constant="55.5" id="fok-HO-NaQ"/>
-                                    <constraint firstItem="9Er-sC-veZ" firstAttribute="leading" secondItem="KC2-LT-USM" secondAttribute="leading" constant="8" id="lF2-RI-um8"/>
-                                    <constraint firstItem="9Er-sC-veZ" firstAttribute="top" secondItem="KC2-LT-USM" secondAttribute="top" constant="96" id="niO-tH-elH"/>
-                                    <constraint firstItem="2El-IA-o2E" firstAttribute="leading" secondItem="KC2-LT-USM" secondAttribute="leading" constant="8" id="pdH-Jh-NHm"/>
-                                    <constraint firstItem="Fu0-rs-yzR" firstAttribute="leading" secondItem="tP2-h3-e2c" secondAttribute="leading" id="rvx-wn-xyk"/>
-                                    <constraint firstAttribute="trailing" secondItem="2El-IA-o2E" secondAttribute="trailing" constant="8" id="v0C-4I-GaP"/>
-                                    <constraint firstItem="Fu0-rs-yzR" firstAttribute="top" secondItem="tP2-h3-e2c" secondAttribute="top" id="ycI-Gj-Y7k"/>
-                                    <constraint firstItem="tP2-h3-e2c" firstAttribute="centerX" secondItem="KC2-LT-USM" secondAttribute="centerX" id="zwf-LS-azp"/>
+                                    <constraint firstItem="j7R-TK-qx6" firstAttribute="width" secondItem="m1V-P2-sCB" secondAttribute="width" id="LvX-00-3Ux"/>
+                                    <constraint firstItem="j7R-TK-qx6" firstAttribute="height" secondItem="m1V-P2-sCB" secondAttribute="height" id="Z35-7R-vZB"/>
                                 </constraints>
-                            </view>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Er-sC-veZ">
+                                <rect key="frame" x="8" y="279.5" width="359" height="26.5"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djp-s6-Um0" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                <rect key="frame" x="102" y="589" width="170" height="38"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="uGI-Pw-6CB"/>
+                                    <constraint firstAttribute="width" constant="170" id="xiV-jS-7vg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="19"/>
+                                <state key="normal" title="Add ramdomly">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addRamdomly:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="GZ8-9Y-hT0"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="W7T-FB-Cbv">
+                                <rect key="frame" x="74.5" y="326" width="226" height="206"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="qhb-W4-tlO">
+                                        <rect key="frame" x="0.0" y="0.0" width="226" height="94"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tb-t0-ewg" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="94" id="T6R-27-tus"/>
+                                                    <constraint firstAttribute="width" secondItem="3Tb-t0-ewg" secondAttribute="height" multiplier="1:1" id="abx-PH-gdc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
+                                                <state key="normal" title="A2">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6O-ZH-A1a" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                                <rect key="frame" x="132" y="0.0" width="94" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
+                                                <state key="normal" title="B1">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="W6O-ZH-A1a" firstAttribute="width" secondItem="3Tb-t0-ewg" secondAttribute="width" id="HuI-qM-IrM"/>
+                                            <constraint firstItem="W6O-ZH-A1a" firstAttribute="top" secondItem="3Tb-t0-ewg" secondAttribute="top" id="IHt-Pa-JZj"/>
+                                            <constraint firstItem="W6O-ZH-A1a" firstAttribute="height" secondItem="3Tb-t0-ewg" secondAttribute="height" id="YiC-Ft-gyE"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="38" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AqL-Z8-1LM">
+                                        <rect key="frame" x="0.0" y="112" width="226" height="94"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-BJ-Bfx" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="23"/>
+                                                <state key="normal" title="B2">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5L-Zd-7fP" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                                <rect key="frame" x="132" y="0.0" width="94" height="94"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
+                                                <state key="normal" title="C1">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="z5L-Zd-7fP" firstAttribute="height" secondItem="3Tb-t0-ewg" secondAttribute="height" id="32h-yx-IsZ"/>
+                                    <constraint firstItem="FwL-BJ-Bfx" firstAttribute="height" secondItem="3Tb-t0-ewg" secondAttribute="height" id="Bvn-t0-Tn8"/>
+                                    <constraint firstItem="z5L-Zd-7fP" firstAttribute="width" secondItem="3Tb-t0-ewg" secondAttribute="width" id="FX4-iZ-Iwo"/>
+                                    <constraint firstItem="FwL-BJ-Bfx" firstAttribute="width" secondItem="3Tb-t0-ewg" secondAttribute="width" id="vqL-3u-ePQ"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2El-IA-o2E">
+                                <rect key="frame" x="74" y="50.5" width="293" height="26.5"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-Su-4NW">
+                                <rect key="frame" x="25" y="45" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RPK-Su-4NW" secondAttribute="height" multiplier="1:1" id="L5A-Qp-ozl"/>
+                                    <constraint firstAttribute="width" constant="37" id="QWV-sx-hU9"/>
+                                </constraints>
+                                <state key="normal" image="NavBack"/>
+                                <connections>
+                                    <action selector="back:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="BKe-tj-r8D"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.85098039215686272" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="KC2-LT-USM" firstAttribute="top" secondItem="irp-aM-dyM" secondAttribute="top" id="V3d-1f-oNZ"/>
-                            <constraint firstItem="KC2-LT-USM" firstAttribute="bottom" secondItem="z0g-HI-lbw" secondAttribute="bottom" id="WYC-iM-Umd"/>
-                            <constraint firstAttribute="trailing" secondItem="KC2-LT-USM" secondAttribute="trailing" id="aF8-pf-784"/>
-                            <constraint firstItem="KC2-LT-USM" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" id="fab-hB-nnP"/>
+                            <constraint firstItem="Fu0-rs-yzR" firstAttribute="width" secondItem="tP2-h3-e2c" secondAttribute="width" id="3QL-aT-ceT"/>
+                            <constraint firstItem="z0g-HI-lbw" firstAttribute="trailing" secondItem="9Er-sC-veZ" secondAttribute="trailing" constant="8" id="3hQ-gz-AWj"/>
+                            <constraint firstItem="Fu0-rs-yzR" firstAttribute="bottom" secondItem="tP2-h3-e2c" secondAttribute="bottom" id="5lc-mM-urF"/>
+                            <constraint firstItem="Zlb-Ox-NSy" firstAttribute="bottom" secondItem="z0g-HI-lbw" secondAttribute="bottom" id="8YN-yI-AuH"/>
+                            <constraint firstItem="Fu0-rs-yzR" firstAttribute="leading" secondItem="tP2-h3-e2c" secondAttribute="leading" id="CBr-0I-uAM"/>
+                            <constraint firstItem="RPK-Su-4NW" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" constant="25" id="FSl-yL-Q3p"/>
+                            <constraint firstItem="Fu0-rs-yzR" firstAttribute="trailing" secondItem="tP2-h3-e2c" secondAttribute="trailing" id="FhJ-IK-lPy"/>
+                            <constraint firstItem="9Er-sC-veZ" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" constant="8" id="HsF-1v-RLX"/>
+                            <constraint firstItem="z0g-HI-lbw" firstAttribute="bottom" secondItem="Djp-s6-Um0" secondAttribute="bottom" constant="40" id="KMG-yL-OFl"/>
+                            <constraint firstItem="W7T-FB-Cbv" firstAttribute="centerX" secondItem="irp-aM-dyM" secondAttribute="centerX" id="NQm-pj-HWf"/>
+                            <constraint firstItem="Zlb-Ox-NSy" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" id="NTB-Vd-1aB"/>
+                            <constraint firstItem="Zlb-Ox-NSy" firstAttribute="top" secondItem="irp-aM-dyM" secondAttribute="top" id="Nvp-oh-jQ5"/>
+                            <constraint firstItem="Zlb-Ox-NSy" firstAttribute="trailing" secondItem="z0g-HI-lbw" secondAttribute="trailing" id="O1w-C2-I9g"/>
+                            <constraint firstItem="RPK-Su-4NW" firstAttribute="top" secondItem="z0g-HI-lbw" secondAttribute="top" constant="25" id="QDR-26-axB"/>
+                            <constraint firstItem="2El-IA-o2E" firstAttribute="centerY" secondItem="RPK-Su-4NW" secondAttribute="centerY" id="S7y-yN-enx"/>
+                            <constraint firstItem="Fu0-rs-yzR" firstAttribute="height" secondItem="tP2-h3-e2c" secondAttribute="height" id="U6b-N3-H0Z"/>
+                            <constraint firstItem="z0g-HI-lbw" firstAttribute="trailing" secondItem="2El-IA-o2E" secondAttribute="trailing" constant="8" id="UAK-Ez-vQW"/>
+                            <constraint firstItem="Fu0-rs-yzR" firstAttribute="top" secondItem="tP2-h3-e2c" secondAttribute="top" id="V18-gz-Kb6"/>
+                            <constraint firstItem="9Er-sC-veZ" firstAttribute="top" secondItem="Fu0-rs-yzR" secondAttribute="bottom" constant="40" id="VeT-j9-zhr"/>
+                            <constraint firstItem="tP2-h3-e2c" firstAttribute="centerX" secondItem="irp-aM-dyM" secondAttribute="centerX" id="XZT-Q6-cMf"/>
+                            <constraint firstItem="Djp-s6-Um0" firstAttribute="centerX" secondItem="irp-aM-dyM" secondAttribute="centerX" id="YV0-jE-7mw"/>
+                            <constraint firstItem="2El-IA-o2E" firstAttribute="leading" secondItem="RPK-Su-4NW" secondAttribute="trailing" constant="12" id="afz-jp-Uxk"/>
+                            <constraint firstItem="W7T-FB-Cbv" firstAttribute="top" secondItem="9Er-sC-veZ" secondAttribute="bottom" constant="20" id="mNg-Un-JSx"/>
+                            <constraint firstItem="tP2-h3-e2c" firstAttribute="top" secondItem="2El-IA-o2E" secondAttribute="bottom" constant="36" id="vog-PS-DyG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z0g-HI-lbw"/>
                     </view>
@@ -376,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sc-RV-8Rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2188" y="-109.29535232383809"/>
+            <point key="canvasLocation" x="1337" y="-252"/>
         </scene>
         <!--StatisticsVC-->
         <scene sceneID="WW8-io-Sjq">
@@ -480,8 +482,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81W-Qk-SE7" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="162" y="592" width="55" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81W-Qk-SE7" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                        <rect key="frame" x="62.5" y="592" width="250" height="35"/>
                                         <color key="backgroundColor" red="0.90260022100000004" green="0.16145703259999999" blue="0.1705301203" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="r3W-gA-NwP"/>
@@ -496,6 +498,7 @@
                                 <constraints>
                                     <constraint firstItem="esg-OT-wjU" firstAttribute="leading" secondItem="Gt2-hW-dkH" secondAttribute="leading" constant="8" id="0q1-xA-gCW"/>
                                     <constraint firstItem="z5u-MZ-ooO" firstAttribute="top" secondItem="esg-OT-wjU" secondAttribute="bottom" constant="66" id="68z-ZI-yIm"/>
+                                    <constraint firstItem="81W-Qk-SE7" firstAttribute="centerX" secondItem="Gt2-hW-dkH" secondAttribute="centerX" id="D70-Jd-vwS"/>
                                     <constraint firstItem="z5u-MZ-ooO" firstAttribute="leading" secondItem="Gt2-hW-dkH" secondAttribute="leading" constant="8" id="DBS-q2-Zhr"/>
                                     <constraint firstAttribute="bottom" secondItem="81W-Qk-SE7" secondAttribute="bottom" constant="40" id="QQv-R7-uky"/>
                                     <constraint firstAttribute="trailing" secondItem="z5u-MZ-ooO" secondAttribute="trailing" constant="8" id="apa-sD-uS2"/>
