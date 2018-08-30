@@ -26,19 +26,26 @@
                         <constraint firstAttribute="height" constant="104" id="Jof-jS-SFu"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Medium" translatesAutoresizingMaskIntoConstraints="NO" id="EXB-cq-oJ5">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="EXB-cq-oJ5">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="250" id="UZN-yZ-3j9"/>
+                        <constraint firstAttribute="height" constant="340" id="UZN-yZ-3j9"/>
                     </constraints>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Black Wave" translatesAutoresizingMaskIntoConstraints="NO" id="RpZ-vf-BSr">
+                    <rect key="frame" x="0.0" y="305" width="375" height="362"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="RpZ-vf-BSr" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="8g4-4x-JoH"/>
                 <constraint firstItem="jet-WL-fsi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AyC-3X-B0h"/>
+                <constraint firstItem="RpZ-vf-BSr" firstAttribute="top" secondItem="EXB-cq-oJ5" secondAttribute="bottom" constant="-35" id="Ukr-Dy-RJY"/>
                 <constraint firstItem="EXB-cq-oJ5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VRZ-HT-QZg"/>
                 <constraint firstItem="jet-WL-fsi" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Wxn-WP-cGV"/>
                 <constraint firstItem="EXB-cq-oJ5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hi5-og-UUx"/>
+                <constraint firstItem="RpZ-vf-BSr" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="oc0-SB-OpX"/>
+                <constraint firstItem="RpZ-vf-BSr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uA2-7O-aKh"/>
                 <constraint firstItem="jet-WL-fsi" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vJc-nT-xan"/>
                 <constraint firstItem="EXB-cq-oJ5" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vlG-ZK-AiK"/>
             </constraints>
@@ -47,7 +54,8 @@
         </view>
     </objects>
     <resources>
-        <image name="Bgd Red Wave Medium" width="562" height="430"/>
+        <image name="Bgd Black Wave" width="562" height="870"/>
+        <image name="Bgd Red Wave Long" width="562" height="831"/>
         <image name="Bgd Yellow Wave" width="562" height="193"/>
     </resources>
 </document>

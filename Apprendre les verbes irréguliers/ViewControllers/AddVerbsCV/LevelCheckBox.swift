@@ -12,9 +12,9 @@ import UIKit
 @IBDesignable
 class LevelCheckBox: UIButton {
     
-    let borderWidth: CGFloat = 3
+    let borderWidth: CGFloat = 5
     var borderColorNotSelected: CGColor!
-    let borderColorSelected: CGColor = UIColor.red.cgColor
+    let borderColorSelected: CGColor = UIColor(rgb: 0xffdb44).cgColor
 
     
     

@@ -71,7 +71,7 @@ class StatisticsButton: UIButton {
         
         let label = UILabel(frame: CGRect(x: labelX, y: 0, width: labelWidth, height: self.frame.height))
         label.textAlignment = .center
-        label.text = String(nbrVerb) + " verbs" // TODO
+        label.text = String(nbrVerb) + " verbes" // TODO
         
         let fontSizeLabel = (self.titleLabel?.font.pointSize)! - fontDifference
         let labelFont = UIFont(name: (self.titleLabel?.font.fontName)!, size: fontSizeLabel)

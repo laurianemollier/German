@@ -80,7 +80,7 @@ class MainVC: UIViewController {
     
     private func textAndDesignSetUp(){
         self.nbrVerbToReviewTodayButton.setTitle(String(self.nbrVerbToReviewToday), for: .normal)
-        self.nbrVerbInReviewListLabel.text = "Il y a " + String(self.nbrVerbInReviewList) + " à revoir" //TODO
+        self.nbrVerbInReviewListLabel.text = "verbes à revoir sur " + String(self.nbrVerbInReviewList) + " dans la liste de révision" //TODO
         
         if self.nbrVerbToReviewToday == 0{
             self.nbrVerbToReviewTodayButton.isEnabled = false

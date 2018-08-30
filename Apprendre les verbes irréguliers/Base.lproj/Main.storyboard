@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,33 +24,33 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e20-xG-tI5" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blond Girl" translatesAutoresizingMaskIntoConstraints="NO" id="qJU-sA-Uwx">
-                                <rect key="frame" x="0.0" y="291" width="136" height="376"/>
+                                <rect key="frame" x="0.0" y="360" width="136" height="376"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qJU-sA-Uwx" secondAttribute="height" multiplier="248:687" id="9Ea-4K-Et8"/>
                                     <constraint firstAttribute="height" constant="376" id="ZIs-Pq-y5t"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedCircle" translatesAutoresizingMaskIntoConstraints="NO" id="YOq-Gm-KaQ">
-                                <rect key="frame" x="95" y="80" width="184" height="184"/>
+                                <rect key="frame" x="107" y="75" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="184" id="ErX-Sv-lls"/>
+                                    <constraint firstAttribute="height" constant="200" id="ErX-Sv-lls"/>
                                     <constraint firstAttribute="width" secondItem="YOq-Gm-KaQ" secondAttribute="height" multiplier="1:1" id="bnS-c9-aXv"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qI7-Oi-uEl" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="118.5" y="129" width="138" height="138"/>
+                                <rect key="frame" x="130.66666666666666" y="125" width="152.99999999999997" height="153"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qI7-Oi-uEl" secondAttribute="height" multiplier="1:1" id="Ldw-hs-mT0"/>
-                                    <constraint firstAttribute="height" constant="138" id="RRc-fr-k2m"/>
+                                    <constraint firstAttribute="height" constant="153" id="RRc-fr-k2m"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="76"/>
                                 <state key="normal" title="333">
@@ -65,57 +65,54 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-2v-K4O" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="58.5" y="462" width="258" height="47"/>
+                                <rect key="frame" x="64.666666666666686" y="531" width="285" height="47"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="0c8-Go-8ne"/>
-                                    <constraint firstAttribute="width" constant="258" id="wF7-sB-0c2"/>
+                                    <constraint firstAttribute="width" constant="285" id="wF7-sB-0c2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Add verbs to the review list"/>
+                                <state key="normal" title="Ajouter des verbes à apprendre"/>
                                 <connections>
                                     <segue destination="2Lh-hZ-KKR" kind="modal" identifier="addVerbs" id="3h9-Q9-av4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpo-FS-QOa" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="58.5" y="521" width="258" height="47"/>
+                                <rect key="frame" x="64.666666666666686" y="590" width="285" height="47"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="See all the existing verbs"/>
+                                <state key="normal" title="Tous les verbes existants"/>
                                 <connections>
                                     <segue destination="So5-F0-3mX" kind="modal" id="QIp-UW-trh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-tk-Ael" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="58.5" y="580" width="258" height="47"/>
+                                <rect key="frame" x="64.666666666666686" y="649" width="285" height="47"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Your statistic"/>
+                                <state key="normal" title="Mes statistiques"/>
                                 <connections>
                                     <segue destination="So5-F0-3mX" kind="presentation" id="O86-5e-Nhl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verbs to review over 200 in your review list" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-Or-w8O">
-                                <rect key="frame" x="47.5" y="280" width="280" height="55.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="YHp-zD-qtY"/>
-                                </constraints>
+                                <rect key="frame" x="70" y="295" width="274" height="55.666666666666686"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCs-oc-s80" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="104.5" y="352.5" width="166" height="47"/>
+                                <rect key="frame" x="124" y="367.66666666666669" width="166" height="47"/>
                                 <color key="backgroundColor" red="1" green="0.80784313730000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166" id="tQM-QE-o8S"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="19"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Review now"/>
+                                <state key="normal" title="Réviser"/>
                                 <connections>
                                     <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" id="OVJ-ht-fzK"/>
                                 </connections>
@@ -134,16 +131,17 @@
                             <constraint firstItem="q8d-2v-K4O" firstAttribute="height" secondItem="jCs-oc-s80" secondAttribute="height" id="GEd-Gx-dDo"/>
                             <constraint firstItem="qJU-sA-Uwx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GRN-zG-jUO"/>
                             <constraint firstItem="Ogy-tk-Ael" firstAttribute="width" secondItem="q8d-2v-K4O" secondAttribute="width" id="IOl-qr-zT1"/>
-                            <constraint firstItem="YOq-Gm-KaQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Jwh-lv-zHO"/>
+                            <constraint firstItem="YOq-Gm-KaQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="Jwh-lv-zHO"/>
                             <constraint firstItem="Mpo-FS-QOa" firstAttribute="width" secondItem="q8d-2v-K4O" secondAttribute="width" id="K4y-kG-H30"/>
                             <constraint firstItem="q8d-2v-K4O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MZx-tP-dbK"/>
                             <constraint firstItem="Mpo-FS-QOa" firstAttribute="height" secondItem="q8d-2v-K4O" secondAttribute="height" id="NCP-qp-5xS"/>
                             <constraint firstItem="jCs-oc-s80" firstAttribute="top" secondItem="9c9-Or-w8O" secondAttribute="bottom" constant="17" id="Noj-dE-9OO"/>
                             <constraint firstItem="e20-xG-tI5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="R90-bZ-tOe"/>
                             <constraint firstItem="e20-xG-tI5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WvE-Ca-dLK"/>
-                            <constraint firstItem="9c9-Or-w8O" firstAttribute="top" secondItem="qI7-Oi-uEl" secondAttribute="bottom" constant="13" id="aig-3m-BlI"/>
+                            <constraint firstItem="9c9-Or-w8O" firstAttribute="top" secondItem="qI7-Oi-uEl" secondAttribute="bottom" constant="17" id="aig-3m-BlI"/>
                             <constraint firstItem="qI7-Oi-uEl" firstAttribute="bottom" secondItem="YOq-Gm-KaQ" secondAttribute="bottom" constant="3" id="aku-TA-lEG"/>
                             <constraint firstItem="qJU-sA-Uwx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hKK-6O-Sxs"/>
+                            <constraint firstItem="9c9-Or-w8O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="70" id="lIC-yd-e3g"/>
                             <constraint firstItem="jCs-oc-s80" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oTE-bt-Dea"/>
                             <constraint firstItem="e20-xG-tI5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tko-3F-f6K"/>
                             <constraint firstItem="9c9-Or-w8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vaC-6D-bqe"/>
@@ -172,36 +170,36 @@
             <objects>
                 <viewController id="2Lh-hZ-KKR" customClass="AddVerbsCV" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="irp-aM-dyM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zlb-Ox-NSy" customClass="Background2" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiN-lt-bhh" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AVStepperContainer" translatesAutoresizingMaskIntoConstraints="NO" id="tP2-h3-e2c">
-                                <rect key="frame" x="45" y="113" width="285" height="126.5"/>
+                                <rect key="frame" x="64.666666666666686" y="130" width="285" height="126.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tP2-h3-e2c" secondAttribute="height" multiplier="275:122" id="GQg-q1-0wg"/>
                                     <constraint firstAttribute="width" constant="285" id="NHT-6o-i6K"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-rs-yzR">
-                                <rect key="frame" x="45" y="113" width="285" height="126.5"/>
+                                <rect key="frame" x="64.666666666666686" y="130" width="285" height="126.66666666666669"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1V-P2-sCB">
-                                        <rect key="frame" x="8" y="23.5" width="79.5" height="79.5"/>
+                                        <rect key="frame" x="8" y="23.666666666666657" width="79.333333333333329" height="79.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="m1V-P2-sCB" secondAttribute="height" multiplier="1:1" id="dIG-ld-7GZ"/>
                                         </constraints>
-                                        <state key="normal" image="AVStepperMinusSelected"/>
+                                        <state key="normal" image="AVStepperMinus"/>
                                         <state key="highlighted" image="AVStepperMinusSelected"/>
                                         <connections>
                                             <action selector="lessRandomVerb:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="hCD-iN-ac8"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTe-EP-Aco">
-                                        <rect key="frame" x="117.5" y="51.5" width="50" height="24"/>
+                                        <rect key="frame" x="117.33333333333331" y="51.333333333333343" width="50" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Ck6-Ai-ypu"/>
                                         </constraints>
@@ -210,12 +208,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7R-TK-qx6">
-                                        <rect key="frame" x="197" y="23.5" width="80" height="79.5"/>
+                                        <rect key="frame" x="197" y="23.666666666666657" width="80" height="79.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="TMC-Id-xyB"/>
                                             <constraint firstAttribute="width" secondItem="j7R-TK-qx6" secondAttribute="height" multiplier="1:1" id="WQS-73-wDd"/>
                                         </constraints>
-                                        <state key="normal" image="AVStepperPlusSelected"/>
+                                        <state key="normal" image="AVStepperPlus"/>
                                         <state key="highlighted" image="AVStepperPlusSelected"/>
                                         <connections>
                                             <action selector="moreRandomVerb:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="G50-xM-LpZ"/>
@@ -228,21 +226,21 @@
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Er-sC-veZ">
-                                <rect key="frame" x="8" y="279.5" width="359" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De niveau de difficulté: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Er-sC-veZ">
+                                <rect key="frame" x="8" y="343" width="398" height="26.666666666666686"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djp-s6-Um0" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="102" y="589" width="170" height="38"/>
+                                <rect key="frame" x="122" y="649" width="170" height="47"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="uGI-Pw-6CB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="47" id="UHk-TN-tIL"/>
                                     <constraint firstAttribute="width" constant="170" id="xiV-jS-7vg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="19"/>
-                                <state key="normal" title="Add ramdomly">
+                                <state key="normal" title="Ajouter à la liste">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -250,7 +248,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="W7T-FB-Cbv">
-                                <rect key="frame" x="74.5" y="326" width="226" height="206"/>
+                                <rect key="frame" x="94" y="389" width="226" height="206"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="qhb-W4-tlO">
                                         <rect key="frame" x="0.0" y="0.0" width="226" height="94"/>
@@ -323,12 +321,6 @@
                                     <constraint firstItem="FwL-BJ-Bfx" firstAttribute="width" secondItem="3Tb-t0-ewg" secondAttribute="width" id="vqL-3u-ePQ"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2El-IA-o2E">
-                                <rect key="frame" x="74" y="50.5" width="293" height="26.5"/>
-                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-Su-4NW">
                                 <rect key="frame" x="25" y="45" width="37" height="37"/>
                                 <constraints>
@@ -340,33 +332,39 @@
                                     <action selector="back:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="BKe-tj-r8D"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajoutez des verbes à la liste de révision" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEi-vF-C0L">
+                                <rect key="frame" x="82" y="40" width="297" height="53"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.85098039215686272" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="width" secondItem="tP2-h3-e2c" secondAttribute="width" id="3QL-aT-ceT"/>
                             <constraint firstItem="z0g-HI-lbw" firstAttribute="trailing" secondItem="9Er-sC-veZ" secondAttribute="trailing" constant="8" id="3hQ-gz-AWj"/>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="bottom" secondItem="tP2-h3-e2c" secondAttribute="bottom" id="5lc-mM-urF"/>
-                            <constraint firstItem="Zlb-Ox-NSy" firstAttribute="bottom" secondItem="z0g-HI-lbw" secondAttribute="bottom" id="8YN-yI-AuH"/>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="leading" secondItem="tP2-h3-e2c" secondAttribute="leading" id="CBr-0I-uAM"/>
                             <constraint firstItem="RPK-Su-4NW" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" constant="25" id="FSl-yL-Q3p"/>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="trailing" secondItem="tP2-h3-e2c" secondAttribute="trailing" id="FhJ-IK-lPy"/>
                             <constraint firstItem="9Er-sC-veZ" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" constant="8" id="HsF-1v-RLX"/>
                             <constraint firstItem="z0g-HI-lbw" firstAttribute="bottom" secondItem="Djp-s6-Um0" secondAttribute="bottom" constant="40" id="KMG-yL-OFl"/>
                             <constraint firstItem="W7T-FB-Cbv" firstAttribute="centerX" secondItem="irp-aM-dyM" secondAttribute="centerX" id="NQm-pj-HWf"/>
-                            <constraint firstItem="Zlb-Ox-NSy" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" id="NTB-Vd-1aB"/>
-                            <constraint firstItem="Zlb-Ox-NSy" firstAttribute="top" secondItem="irp-aM-dyM" secondAttribute="top" id="Nvp-oh-jQ5"/>
-                            <constraint firstItem="Zlb-Ox-NSy" firstAttribute="trailing" secondItem="z0g-HI-lbw" secondAttribute="trailing" id="O1w-C2-I9g"/>
                             <constraint firstItem="RPK-Su-4NW" firstAttribute="top" secondItem="z0g-HI-lbw" secondAttribute="top" constant="25" id="QDR-26-axB"/>
-                            <constraint firstItem="2El-IA-o2E" firstAttribute="centerY" secondItem="RPK-Su-4NW" secondAttribute="centerY" id="S7y-yN-enx"/>
+                            <constraint firstItem="HiN-lt-bhh" firstAttribute="trailing" secondItem="z0g-HI-lbw" secondAttribute="trailing" id="TLF-1b-yfh"/>
+                            <constraint firstItem="QEi-vF-C0L" firstAttribute="leading" secondItem="RPK-Su-4NW" secondAttribute="trailing" constant="20" id="U1P-Q3-8Lj"/>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="height" secondItem="tP2-h3-e2c" secondAttribute="height" id="U6b-N3-H0Z"/>
-                            <constraint firstItem="z0g-HI-lbw" firstAttribute="trailing" secondItem="2El-IA-o2E" secondAttribute="trailing" constant="8" id="UAK-Ez-vQW"/>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="top" secondItem="tP2-h3-e2c" secondAttribute="top" id="V18-gz-Kb6"/>
-                            <constraint firstItem="9Er-sC-veZ" firstAttribute="top" secondItem="Fu0-rs-yzR" secondAttribute="bottom" constant="40" id="VeT-j9-zhr"/>
+                            <constraint firstItem="HiN-lt-bhh" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" id="VbN-4S-Ovv"/>
                             <constraint firstItem="tP2-h3-e2c" firstAttribute="centerX" secondItem="irp-aM-dyM" secondAttribute="centerX" id="XZT-Q6-cMf"/>
                             <constraint firstItem="Djp-s6-Um0" firstAttribute="centerX" secondItem="irp-aM-dyM" secondAttribute="centerX" id="YV0-jE-7mw"/>
-                            <constraint firstItem="2El-IA-o2E" firstAttribute="leading" secondItem="RPK-Su-4NW" secondAttribute="trailing" constant="12" id="afz-jp-Uxk"/>
+                            <constraint firstItem="HiN-lt-bhh" firstAttribute="top" secondItem="irp-aM-dyM" secondAttribute="top" id="ZgC-IP-CVY"/>
+                            <constraint firstItem="Djp-s6-Um0" firstAttribute="top" secondItem="W7T-FB-Cbv" secondAttribute="bottom" constant="54" id="fTr-It-kUJ"/>
                             <constraint firstItem="W7T-FB-Cbv" firstAttribute="top" secondItem="9Er-sC-veZ" secondAttribute="bottom" constant="20" id="mNg-Un-JSx"/>
-                            <constraint firstItem="tP2-h3-e2c" firstAttribute="top" secondItem="2El-IA-o2E" secondAttribute="bottom" constant="36" id="vog-PS-DyG"/>
+                            <constraint firstItem="z0g-HI-lbw" firstAttribute="trailing" secondItem="QEi-vF-C0L" secondAttribute="trailing" constant="35" id="nnY-bI-hk5"/>
+                            <constraint firstItem="HiN-lt-bhh" firstAttribute="bottom" secondItem="z0g-HI-lbw" secondAttribute="bottom" id="vhU-DJ-Bqb"/>
+                            <constraint firstItem="tP2-h3-e2c" firstAttribute="top" secondItem="QEi-vF-C0L" secondAttribute="bottom" constant="37" id="xln-7d-6s5"/>
+                            <constraint firstItem="QEi-vF-C0L" firstAttribute="top" secondItem="z0g-HI-lbw" secondAttribute="top" constant="20" id="zjx-AE-Ubq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z0g-HI-lbw"/>
                     </view>
@@ -382,14 +380,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sc-RV-8Rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337" y="-252"/>
+            <point key="canvasLocation" x="1336.2318840579712" y="-252.71739130434784"/>
         </scene>
         <!--StatisticsVC-->
         <scene sceneID="WW8-io-Sjq">
             <objects>
                 <viewController id="iLx-Gh-sve" customClass="StatisticsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hvX-PG-o7O">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNj-ba-GFp" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -468,26 +466,26 @@
             <objects>
                 <viewController id="So5-F0-3mX" customClass="NotImplementedYetVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZAH-Hh-hhX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-hW-dkH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esg-OT-wjU">
-                                        <rect key="frame" x="8" y="193" width="359" height="22.5"/>
+                                        <rect key="frame" x="8" y="193" width="398" height="22.666666666666657"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-MZ-ooO">
-                                        <rect key="frame" x="8" y="281.5" width="359" height="22.5"/>
+                                        <rect key="frame" x="8" y="281.66666666666669" width="398" height="22.666666666666686"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81W-Qk-SE7" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="62.5" y="592" width="250" height="35"/>
+                                        <rect key="frame" x="82" y="661" width="250" height="35"/>
                                         <color key="backgroundColor" red="0.90260022100000004" green="0.16145703259999999" blue="0.1705301203" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="r3W-gA-NwP"/>
@@ -543,14 +541,14 @@
             <objects>
                 <viewController id="5VA-47-w42" customClass="ListVerbsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XQh-NW-8Kz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-Oz-ph9">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="RI8-lV-M8b">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <scopeButtonTitles>
@@ -564,10 +562,10 @@
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listVerbsTVCell" rowHeight="123" id="n4H-yA-6sY" customClass="ListVerbsTVCell" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="84" width="375" height="123"/>
+                                        <rect key="frame" x="0.0" y="84" width="414" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n4H-yA-6sY" id="mlL-Ip-oMK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="122.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="122.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZK-v2-5Hy">
@@ -637,31 +635,31 @@
             <objects>
                 <viewController id="qzO-in-ekQ" customClass="ReviewVerbsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u7U-bI-6bR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SrU-Wk-KwN" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufF-nV-YxU">
-                                <rect key="frame" x="51.5" y="105" width="272" height="300"/>
+                                <rect key="frame" x="71" y="105" width="272" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="XGN-w4-ybd"/>
-                                    <constraint firstAttribute="width" secondItem="ufF-nV-YxU" secondAttribute="height" multiplier="635:700" id="nSb-ky-Nqc"/>
+                                    <constraint firstAttribute="width" constant="272" id="gNm-11-ZcB"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="M3T-oX-K86" kind="embed" identifier="forwardCardSegue" id="eyG-8T-vgP"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frI-xU-zCb">
-                                <rect key="frame" x="51.5" y="105" width="272" height="300"/>
+                                <rect key="frame" x="71" y="105" width="272" height="300"/>
                                 <connections>
                                     <segue destination="o65-Wo-rje" kind="embed" identifier="backCardSegue" id="lCv-Om-mtj"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-3a-Uqk">
-                                <rect key="frame" x="51.5" y="105" width="272" height="300"/>
+                                <rect key="frame" x="71" y="105" width="272" height="300"/>
                                 <connections>
                                     <action selector="revealClickOnCard:" destination="qzO-in-ekQ" eventType="touchUpInside" id="idL-uQ-6rp"/>
                                 </connections>
@@ -678,7 +676,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-Gw-nAd">
-                                <rect key="frame" x="150" y="484" width="75" height="75"/>
+                                <rect key="frame" x="169.66666666666666" y="445" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="AQc-sA-1gn"/>
                                     <constraint firstAttribute="width" secondItem="WhS-Gw-nAd" secondAttribute="height" multiplier="1:1" id="bbk-Ok-gs1"/>
@@ -691,22 +689,22 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-QY-aWl">
-                                <rect key="frame" x="320" y="49" width="30" height="29.5"/>
+                                <rect key="frame" x="359" y="49.666666666666664" width="30" height="29.333333333333336"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To reapeat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-Ly-a3b">
-                                <rect key="frame" x="8" y="483" width="375" height="20"/>
-                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="À répéter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-Ly-a3b">
+                                <rect key="frame" x="8" y="520" width="414" height="22.666666666666629"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LY3-8h-At6">
-                                <rect key="frame" x="30" y="511" width="315" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LY3-8h-At6">
+                                <rect key="frame" x="15" y="550.66666666666663" width="384" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYn-qk-EDz" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="89.5" height="47"/>
+                                        <rect key="frame" x="8" y="8" width="116" height="47"/>
                                         <color key="backgroundColor" red="1" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="2Lg-QO-Vnc"/>
@@ -720,7 +718,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-Lm-AOW" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="112.5" y="8" width="90" height="47"/>
+                                        <rect key="frame" x="134" y="8" width="116" height="47"/>
                                         <color key="backgroundColor" red="1" green="0.49411764705882355" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
                                         <state key="normal" title="Tomorow">
@@ -731,8 +729,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdt-55-egW" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="217.5" y="8" width="89.5" height="47"/>
-                                        <color key="backgroundColor" red="1" green="0.80784313730000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="260" y="8" width="116" height="47"/>
+                                        <color key="backgroundColor" red="0.28235294117647058" green="0.72549019607843135" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
                                         <state key="normal" title="In 3 days">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -753,7 +751,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.85098039219999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="8qb-Ly-a3b" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="bottom" constant="78" id="0gp-zf-qzh"/>
+                            <constraint firstItem="8qb-Ly-a3b" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="bottom" constant="115" id="0gp-zf-qzh"/>
                             <constraint firstItem="LY3-8h-At6" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="1cY-db-Psc"/>
                             <constraint firstItem="SrU-Wk-KwN" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" id="3up-34-IgR"/>
                             <constraint firstItem="SrU-Wk-KwN" firstAttribute="top" secondItem="u7U-bI-6bR" secondAttribute="top" id="5GH-Qm-hjC"/>
@@ -765,7 +763,7 @@
                             <constraint firstItem="LY3-8h-At6" firstAttribute="top" secondItem="8qb-Ly-a3b" secondAttribute="bottom" constant="8" id="Mcg-wN-PHp"/>
                             <constraint firstItem="frI-xU-zCb" firstAttribute="height" secondItem="ufF-nV-YxU" secondAttribute="height" id="OSQ-H9-q1Q"/>
                             <constraint firstItem="sgg-3a-Uqk" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="top" id="Wt1-cE-dCk"/>
-                            <constraint firstItem="LY3-8h-At6" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" constant="30" id="cJx-wY-8QS"/>
+                            <constraint firstItem="LY3-8h-At6" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" constant="15" id="cJx-wY-8QS"/>
                             <constraint firstItem="8qb-Ly-a3b" firstAttribute="trailing" secondItem="Lev-o1-3dm" secondAttribute="trailing" constant="8" id="dgC-mf-daQ"/>
                             <constraint firstItem="frI-xU-zCb" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="top" id="euF-Ws-ngf"/>
                             <constraint firstItem="Lev-o1-3dm" firstAttribute="trailing" secondItem="cVt-QY-aWl" secondAttribute="trailing" constant="25" id="fWM-9S-eRE"/>
@@ -778,7 +776,7 @@
                             <constraint firstItem="SrU-Wk-KwN" firstAttribute="bottom" secondItem="Lev-o1-3dm" secondAttribute="bottom" id="ueQ-8K-Iea"/>
                             <constraint firstItem="8qb-Ly-a3b" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" constant="8" id="unr-gz-fqB"/>
                             <constraint firstItem="WhS-Gw-nAd" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="utr-Jc-YGa"/>
-                            <constraint firstItem="WhS-Gw-nAd" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="bottom" constant="79" id="yiU-0m-eME"/>
+                            <constraint firstItem="WhS-Gw-nAd" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="bottom" constant="40" id="yiU-0m-eME"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lev-o1-3dm"/>
                     </view>
@@ -836,11 +834,13 @@
     </scenes>
     <resources>
         <image name="AVStepperContainer" width="426" height="205"/>
+        <image name="AVStepperMinus" width="126" height="126"/>
         <image name="AVStepperMinusSelected" width="126" height="126"/>
+        <image name="AVStepperPlus" width="126" height="126"/>
         <image name="AVStepperPlusSelected" width="126" height="126"/>
         <image name="Blond Girl" width="248" height="687"/>
         <image name="NavBack" width="55" height="55"/>
-        <image name="RVTurnButton" width="113" height="113"/>
+        <image name="RVTurnButton" width="112" height="112"/>
         <image name="RedCircle" width="337" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
