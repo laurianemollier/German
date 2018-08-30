@@ -41,6 +41,10 @@ enum UserProgression: String {
     }
     
     
+
+    
+    
+    
     // MARK: - Navigation between the progression level
     
     /// Give the information about the new level and the date to review a verb, when the user
@@ -134,5 +138,63 @@ enum UserProgression: String {
         }
     }
     
+    
+    
+    // MARK: - Name of navigation between the progression level
+    
+    
+    func regressionName() -> String? {
+        return "Maintenant" // TODO
+    }
+    
+    
+    func stagnationName() -> String?{
+        switch self { // TODO
+        case UserProgression.level1:
+            return "Demain"
+        case UserProgression.level2:
+            return "Dans 2 jours"
+        case UserProgression.level3:
+            return "Dans 3 jours"
+        case UserProgression.level4:
+            return "Dans 5 jours"
+        case UserProgression.level5:
+            return "Dans 1 semaine"
+        case UserProgression.level6:
+            return "Dans 2 semaines"
+        case UserProgression.level7:
+            return "Dans 1 mois"
+        case UserProgression.level8:
+            return "Dans 3 mois"
+            
+        default:
+            return nil
+        }
+    }
+    
+    
+    func progressionName() -> String? {
+        switch self { // TODO
+        case UserProgression.level1:
+            return "Dans 2 jours"
+        case UserProgression.level2:
+            return "Dans 3 jours"
+        case UserProgression.level3:
+            return "Dans 5 jours"
+        case UserProgression.level4:
+            return "Dans 1 semaine"
+        case UserProgression.level5:
+            return "Dans 2 semaines"
+        case UserProgression.level6:
+            return "Dans 1 mois"
+        case UserProgression.level7:
+            return "Dans 1 mois"
+        case UserProgression.level8:
+            return "Dans 1 an"
+            
+        default:
+            return nil
+        }
+    }
 
 }

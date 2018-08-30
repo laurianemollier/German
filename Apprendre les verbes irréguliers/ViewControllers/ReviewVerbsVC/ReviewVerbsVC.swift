@@ -173,6 +173,12 @@ class ReviewVerbsVC: UIViewController {
         self.stagnationButton.isHidden = false
         self.progressionButton.isHidden = false
 //        self.neverReviewButton.isHidden = false
+        
+        let progression = self.currentVerb().userProgression
+        self.regressionButton.setTitle(progression.regressionName(), for: .normal)
+        self.stagnationButton.setTitle(progression.stagnationName(), for: .normal)
+        self.progressionButton.setTitle(progression.progressionName(), for: .normal)
+        
     }
     
     
