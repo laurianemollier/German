@@ -63,6 +63,7 @@ class VerbCardView: UIView {
             self.simplePastLabel.isHidden = true
             self.pastParticipleLabel.isHidden = true
         }
+        
     }
     
     

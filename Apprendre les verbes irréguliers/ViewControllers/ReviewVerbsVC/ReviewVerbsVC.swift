@@ -44,7 +44,6 @@ class ReviewVerbsVC: UIViewController {
     }
     
     
-    
     @IBAction func revealClickButton(_ sender: UIButton) {
         revealCard(sender)
     }
@@ -132,9 +131,6 @@ class ReviewVerbsVC: UIViewController {
     }
     
     override func viewDidLoad() {
-
-
-
         super.viewDidLoad()
     }
 
@@ -162,11 +158,13 @@ class ReviewVerbsVC: UIViewController {
     private func revealCard(_ sender: UIButton){
         if self.isCardForward{
             flipCard(visible: self.forwarCard, notVisibleYet: self.backwardCard)
+            self.isCardForward = false
         }
         else{
             flipCard(visible: self.backwardCard, notVisibleYet: self.forwarCard)
+            self.isCardForward = true
         }
-        self.isCardForward = false
+        
         
         self.realButtonOutsideCard.isHidden = true
         
