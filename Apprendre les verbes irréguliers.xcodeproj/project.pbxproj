@@ -40,6 +40,7 @@
 		988DB91D2125C92700AFAEF4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB91C2125C92700AFAEF4 /* Database.swift */; };
 		988DB91F2126954900AFAEF4 /* VerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB91E2126954900AFAEF4 /* VerbDAO.swift */; };
 		988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9202126956200AFAEF4 /* VerbDAOImpl.swift */; };
+		98959B2B21391BAA00CF304E /* AudioReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98959B2A21391BAA00CF304E /* AudioReader.swift */; };
 		9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5D1212AC6DA003EAAFF /* Date.swift */; };
 		9898A5D4212AE2D7003EAAFF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5D3212AE2D7003EAAFF /* Array.swift */; };
 		9898A5EE212C2151003EAAFF /* ListVerbsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5ED212C2151003EAAFF /* ListVerbsTVCell.swift */; };
@@ -503,6 +504,7 @@
 		988DB91C2125C92700AFAEF4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		988DB91E2126954900AFAEF4 /* VerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAO.swift; sourceTree = "<group>"; };
 		988DB9202126956200AFAEF4 /* VerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAOImpl.swift; sourceTree = "<group>"; };
+		98959B2A21391BAA00CF304E /* AudioReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioReader.swift; sourceTree = "<group>"; };
 		9898A5D1212AC6DA003EAAFF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9898A5D3212AE2D7003EAAFF /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		9898A5ED212C2151003EAAFF /* ListVerbsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVerbsTVCell.swift; sourceTree = "<group>"; };
@@ -907,6 +909,7 @@
 				988DB90E2125BBBD00AFAEF4 /* Tables */,
 				98B0A8B42125AE3B000F44B4 /* Daos */,
 				988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */,
+				98959B2A21391BAA00CF304E /* AudioReader.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2029,6 +2032,7 @@
 				98685F7021270E2B00DA327D /* SpeedLog.swift in Sources */,
 				98301E5F212C7C2B00432C84 /* VerbCardView.swift in Sources */,
 				98301E56212C771900432C84 /* StatisticsButton.swift in Sources */,
+				98959B2B21391BAA00CF304E /* AudioReader.swift in Sources */,
 				98301E54212C76FB00432C84 /* StatisticsVC.swift in Sources */,
 				98685F742127161200DA327D /* DbUserLearningVerbDAO.swift in Sources */,
 				988DB9152125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift in Sources */,

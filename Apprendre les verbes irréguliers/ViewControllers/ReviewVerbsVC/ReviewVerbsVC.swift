@@ -159,10 +159,12 @@ class ReviewVerbsVC: UIViewController {
         if self.isCardForward{
             flipCard(visible: self.forwarCard, notVisibleYet: self.backwardCard)
             self.isCardForward = false
+            AudioReader.play(verb: self.currentVerb().verb)
         }
         else{
             flipCard(visible: self.backwardCard, notVisibleYet: self.forwarCard)
             self.isCardForward = true
+            
         }
         
         
