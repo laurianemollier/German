@@ -29,6 +29,15 @@ enum UserProgression: String {
     
     static let allValues = [notSeenYet, level1, level2 , level3, level4, level5, level6, level7, level8, toIgnore]
     
+    
+    func isInReviewList() -> Bool{
+        return !self.isNotInReviewList()
+    }
+    func isNotInReviewList() -> Bool{
+
+        return self == UserProgression.toIgnore || self == UserProgression.notSeenYet
+    }
+    
     func image() -> UIImage? {
         switch self { // TODO
         case UserProgression.level1:

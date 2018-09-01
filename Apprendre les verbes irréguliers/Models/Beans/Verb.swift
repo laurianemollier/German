@@ -29,7 +29,7 @@ class Verb{
     
     /// The translation avalable in each language
     fileprivate var translations = [Lang:String]()
-    
+ 
     /// If true, display the pronoun while conjugating the verb
     fileprivate var pronoun: Bool = false
     

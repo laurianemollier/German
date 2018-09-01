@@ -125,6 +125,16 @@ class MainVC: UIViewController {
             }
         
         }
+        else if segue.identifier == "listAllVerbs" {
+            let cv = segue.destination as! ListVerbsVC
+            do {
+                let verbsRangeToReviewToday = try DbUserLearningVerbDAOImpl.shared.all()
+                cv.learningVerbs = verbsRangeToReviewToday
+            }
+            catch{
+                cv.learningVerbs = []
+            }
+        }
     }
     
     

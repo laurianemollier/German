@@ -13,6 +13,8 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     var learningVerbs: [UserLearningVerb]!
     var currentLearningVerbs: [UserLearningVerb]!
     
+    
+    
     @IBOutlet weak var table: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
@@ -24,13 +26,27 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.table.separatorStyle = .none
         
+//        self.searchBar.layer.cornerRadius = 3.0
+//        self.searchBar.clipsToBounds = true
+//        self.searchBar.layer.borderColor = UIColor.blue.cgColor
+//        self.searchBar.layer.borderWidth = 1
+        
+//        self.searchBar.tintColor = UIColor.blue
+//        self.searchBar.barTintColor = UIColor.red
+        self.searchBar.barStyle = .black
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func back(_ sender: UIButton) {
+        back()
+    }
+    
     
     
     // MARK: - TableView
@@ -93,7 +109,13 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     func alterLayout() {
 //
-        self.searchBar.placeholder = "Search Animal by Name"
+        self.searchBar.placeholder = "Search Animal by Name" // TODO
     }
+    
+    private func back(){
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }

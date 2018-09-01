@@ -12,15 +12,40 @@ class ListVerbsTVCell: UITableViewCell {
 
     var userLearningVerb: UserLearningVerb!
     
+    @IBOutlet var conainerView: UIView!
     @IBOutlet weak var infinitiveLabel: UILabel!
     @IBOutlet weak var traductionLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
+    
+    @IBOutlet weak var presentLabel: UILabel!
+    @IBOutlet weak var simplePastLabel: UILabel!
+    @IBOutlet weak var pastParticipleLabel: UILabel!
+    
+    
+    
     @IBOutlet weak var informationLabel: UILabel!
     
 
     func setUp(userLearningVerb: UserLearningVerb){
         self.userLearningVerb = userLearningVerb
         self.infinitiveLabel.text = userLearningVerb.verb.infinitive()
+        self.presentLabel.text = userLearningVerb.verb.present()
+        self.simplePastLabel.text = userLearningVerb.verb.simplePast()
+        self.pastParticipleLabel.text = userLearningVerb.verb.pastParticiple()
+        self.traductionLabel.text = userLearningVerb.verb.translation(Lang.fr) // TODO
+        
+        self.levelLabel.text = userLearningVerb.verb.level.rawValue
+        
+        if userLearningVerb.userProgression.isNotInReviewList(){
+            print(userLearningVerb.verb.infinitive())
+            self.informationLabel.isHidden = true
+        }
+        else{
+            self.informationLabel.isHidden = false
+            print(userLearningVerb.verb.infinitive())
+        }
+
+        
         
     }
     
