@@ -18,6 +18,7 @@ class ReviewVerbsVC: UIViewController {
     var forwardCardVC: ForwarCardVC!
     var backwardCardVC: BackwardCardVC!
     
+    
 
     var isCardForward: Bool!
     

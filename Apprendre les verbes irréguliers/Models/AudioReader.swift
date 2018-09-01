@@ -6,6 +6,7 @@
 //  Copyright © 2018 Lauriane Mollier. All rights reserved.
 //
 
+import UIKit
 import AVFoundation
 
 
@@ -18,7 +19,8 @@ class AudioReader{
         do {
             let nameAudioFile = verb.infinitive()
             let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: AudioReader.formatAudio)!)
-            let audioPlayer = try! AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
+            let audioPlayer = try! AVAudioPlayer(contentsOf: audioURL)
+            audioPlayer.prepareToPlay()
             audioPlayer.play()
             
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)

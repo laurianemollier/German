@@ -30,16 +30,54 @@ enum UserProgression: String {
     static let allValues = [notSeenYet, level1, level2 , level3, level4, level5, level6, level7, level8, toIgnore]
     
     func image() -> UIImage? {
-        // TODO
-        switch self {
+        switch self { // TODO
         case UserProgression.level1:
-            return #imageLiteral(resourceName: "Good")
+            return #imageLiteral(resourceName: "UP Verypoor")
+        case UserProgression.level2:
+            return #imageLiteral(resourceName: "UP Poor")
+        case UserProgression.level3:
+            return #imageLiteral(resourceName: "UP Good")
+        case UserProgression.level4:
+            return #imageLiteral(resourceName: "UP Very Good")
+        case UserProgression.level5:
+            return #imageLiteral(resourceName: "UP Excelent")
+        case UserProgression.level6:
+            return #imageLiteral(resourceName: "UP Excelent")
+        case UserProgression.level7:
+            return #imageLiteral(resourceName: "UP Superb")
+        case UserProgression.level8:
+            return #imageLiteral(resourceName: "UP Fantastic")
         default:
             return nil
         }
         
     }
     
+    
+    func name() -> String? {
+        switch self { // TODO
+        case UserProgression.level1:
+            return "Inexistant"
+        case UserProgression.level2:
+            return "Très faible"
+        case UserProgression.level3:
+            return "Faible"
+        case UserProgression.level4:
+            return "Assez bien"
+        case UserProgression.level5:
+            return "Bien"
+        case UserProgression.level6:
+            return "Très bien"
+        case UserProgression.level7:
+            return "Excelent"
+        case UserProgression.level8:
+            return "Optimal"
+        case UserProgression.notSeenYet:
+            return "Pas encore revu"
+        default:
+            return nil
+        }
+    }
     
 
     

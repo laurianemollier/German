@@ -13,6 +13,10 @@ class StatisticsVC: UIViewController {
     var allLearningVerbs: [UserLearningVerb]!
     
     
+    @IBAction func back(_ sender: UIButton) {
+        back()
+    }
+    
     @IBOutlet weak var progressionNotSeenYet: StatisticsButton!
     
     @IBOutlet weak var progressionLevel1: StatisticsButton!
@@ -31,7 +35,7 @@ class StatisticsVC: UIViewController {
     
     @IBOutlet weak var progressionLevel8: StatisticsButton!
     
-    @IBOutlet weak var progressionToIgnore: StatisticsButton!
+//    @IBOutlet weak var progressionToIgnore: StatisticsButton!
     
     
     override func viewDidLoad() {
@@ -73,8 +77,8 @@ class StatisticsVC: UIViewController {
                                      nbrVerb: nbrVerbFor(progression: UserProgression.level7))
         self.progressionLevel8.setUp(userProgression: UserProgression.level8,
                                      nbrVerb: nbrVerbFor(progression: UserProgression.level8))
-        self.progressionToIgnore.setUp(userProgression: UserProgression.toIgnore,
-                                     nbrVerb: nbrVerbFor(progression: UserProgression.toIgnore))
+//        self.progressionToIgnore.setUp(userProgression: UserProgression.toIgnore,
+//                                     nbrVerb: nbrVerbFor(progression: UserProgression.toIgnore))
     }
     
     
@@ -85,7 +89,10 @@ class StatisticsVC: UIViewController {
     
     
     
-    
+    private func back(){
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
     
 
     /*

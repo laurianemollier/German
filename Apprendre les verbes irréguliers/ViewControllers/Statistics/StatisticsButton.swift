@@ -22,11 +22,11 @@ class StatisticsButton: UIButton {
         if let image = userProgression.image(){
             // set the icon
             setUpIcon(image: image, borderHorizontal: borderHorizontal)
-            setUpText(withIcon: true, borderHorizontal: borderHorizontal)
+            setUpText(withIcon: true, userProgression: userProgression, borderHorizontal: borderHorizontal)
         }
         else{
             // No icon
-            setUpText(withIcon: false, borderHorizontal: borderHorizontal)
+            setUpText(withIcon: false, userProgression: userProgression, borderHorizontal: borderHorizontal)
         }
         
         // Set label on the left
@@ -34,6 +34,7 @@ class StatisticsButton: UIButton {
         
         // set layer
         setUpLayer()
+        
         
     }
     
@@ -52,30 +53,36 @@ class StatisticsButton: UIButton {
     }
     
     // set the text
-    private func setUpText(withIcon: Bool, borderHorizontal: CGFloat){
+    private func setUpText(withIcon: Bool, userProgression: UserProgression, borderHorizontal: CGFloat){
         self.contentHorizontalAlignment = .left
         if withIcon{
-            self.titleEdgeInsets.left = self.frame.width * 0.223564
+            self.titleEdgeInsets.left = self.frame.width * 0.19
         }
         else{
             self.titleEdgeInsets.left = borderHorizontal
         }
+        self.setTitle(userProgression.name(), for: .normal)
         
     }
     
     
     // Set label on the left
     private func setUpLabel(nbrVerb: Int, borderHorizontal: CGFloat){
-        let labelWidth = self.frame.width * 0.2
+        let labelWidth = self.frame.width * 0.5
         let labelX = self.frame.width - labelWidth - borderHorizontal
         
         let label = UILabel(frame: CGRect(x: labelX, y: 0, width: labelWidth, height: self.frame.height))
-        label.textAlignment = .center
-        label.text = String(nbrVerb) + " verbes" // TODO
+        label.textAlignment = .right
+        if nbrVerb == 0 || nbrVerb == 1{
+           label.text = String(nbrVerb) + " verbe" // TODO
+        }
+        else{
+            label.text = String(nbrVerb) + " verbes" // TODO
+        }
+        
         
         let fontSizeLabel = (self.titleLabel?.font.pointSize)! - fontDifference
-        let labelFont = UIFont(name: (self.titleLabel?.font.fontName)!, size: fontSizeLabel)
-        label.font = labelFont
+        label.font = UIFont.appRegularFontWith(size: fontSizeLabel)
         label.textColor = UIColor(rgb: 0xDD0000)
         self.addSubview(label)
     }
@@ -83,11 +90,15 @@ class StatisticsButton: UIButton {
     
     
     private func setUpLayer(){
-        self.layer.shadowRadius = 3
-        self.layer.shadowColor = UIColor.blue.cgColor
-        self.backgroundColor = UIColor.blue
+//        self.titleLabel?.font = UIFont.appBoldFontWith(size: self.titleLabel?.font.pointSize)
+        
+        self.layer.shadowRadius = 5
+        self.layer.shadowColor = UIColor(rgb: 0xa68282).cgColor
+        self.backgroundColor = UIColor.white
         self.layer.shadowOffset = CGSize(width: 3, height: 3)
-        self.layer.cornerRadius = 8
+        self.layer.cornerRadius = 7
+        
+        
     }
     
     
