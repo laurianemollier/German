@@ -41,6 +41,7 @@
 		988DB91F2126954900AFAEF4 /* VerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB91E2126954900AFAEF4 /* VerbDAO.swift */; };
 		988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9202126956200AFAEF4 /* VerbDAOImpl.swift */; };
 		98959B2B21391BAA00CF304E /* AudioReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98959B2A21391BAA00CF304E /* AudioReader.swift */; };
+		9897DBF9213B5EE000F0851E /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897DBF8213B5EE000F0851E /* EdgeInsetLabel.swift */; };
 		9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5D1212AC6DA003EAAFF /* Date.swift */; };
 		9898A5D4212AE2D7003EAAFF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5D3212AE2D7003EAAFF /* Array.swift */; };
 		9898A5EE212C2151003EAAFF /* ListVerbsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5ED212C2151003EAAFF /* ListVerbsTVCell.swift */; };
@@ -505,6 +506,7 @@
 		988DB91E2126954900AFAEF4 /* VerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAO.swift; sourceTree = "<group>"; };
 		988DB9202126956200AFAEF4 /* VerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAOImpl.swift; sourceTree = "<group>"; };
 		98959B2A21391BAA00CF304E /* AudioReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioReader.swift; sourceTree = "<group>"; };
+		9897DBF8213B5EE000F0851E /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		9898A5D1212AC6DA003EAAFF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9898A5D3212AE2D7003EAAFF /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		9898A5ED212C2151003EAAFF /* ListVerbsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVerbsTVCell.swift; sourceTree = "<group>"; };
@@ -990,6 +992,7 @@
 				986DD42C212FE7F1000E5E49 /* UIFont.swift */,
 				986DD438213063A4000E5E49 /* UIColor.swift */,
 				9884423F2133834700D9661B /* Sequence.swift */,
+				9897DBF8213B5EE000F0851E /* EdgeInsetLabel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2041,6 +2044,7 @@
 				98B53B79212F24B500565C53 /* Background2.swift in Sources */,
 				98B01514212474670090006E /* LevelCheckBox.swift in Sources */,
 				9898A5F0212C2C1C003EAAFF /* ListVerbsVC.swift in Sources */,
+				9897DBF9213B5EE000F0851E /* EdgeInsetLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2228,7 +2232,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mollierlauriane.Apprendre-les-verbes-irre-guliers";
+				PRODUCT_BUNDLE_IDENTIFIER = "-org.lauriane-mollier.irregular-verbs.german-org.lauriane-mollier.irregular-verbs.german-org.lauriane-mollier.irregular-verbs.german-org.lauriane-mollier.irregular-verbs.german";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2247,7 +2251,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mollierlauriane.Apprendre-les-verbes-irre-guliers";
+				PRODUCT_BUNDLE_IDENTIFIER = "-org.lauriane-mollier.irregular-verbs.german-org.lauriane-mollier.irregular-verbs.german-org.lauriane-mollier.irregular-verbs.german-org.lauriane-mollier.irregular-verbs.german";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

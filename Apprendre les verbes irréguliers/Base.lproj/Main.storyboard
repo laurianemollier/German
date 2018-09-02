@@ -619,6 +619,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvS-7I-8MW" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-Oz-ph9">
                                 <rect key="frame" x="0.0" y="97.5" width="375" height="569.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -636,15 +641,15 @@
                                     </connections>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="listVerbsTVCell" rowHeight="211" id="n4H-yA-6sY" customClass="ListVerbsTVCell" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="84" width="375" height="211"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="listVerbsTVCell" rowHeight="191" id="n4H-yA-6sY" customClass="ListVerbsTVCell" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="375" height="191"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n4H-yA-6sY" id="mlL-Ip-oMK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="210.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="190.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2R-j0-Xgt">
-                                                    <rect key="frame" x="19" y="31" width="337" height="149"/>
+                                                    <rect key="frame" x="32" y="11" width="311" height="169"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzi-mP-CbX">
                                                             <rect key="frame" x="13" y="17" width="185" height="30.5"/>
@@ -684,7 +689,7 @@
                                                             </constraints>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02c-Mr-HhY">
-                                                            <rect key="frame" x="286" y="84" width="30" height="40"/>
+                                                            <rect key="frame" x="260" y="84" width="30" height="40"/>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="hwb-so-jki"/>
@@ -694,21 +699,31 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGr-e9-bk1">
-                                                            <rect key="frame" x="203" y="17" width="119" height="31"/>
+                                                            <rect key="frame" x="203" y="17" width="93" height="31"/>
                                                             <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Déjà dans la list de révision" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="3zB-gA-fye">
-                                                            <rect key="frame" x="13" y="120" width="200" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Déjà dans la list de révision" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="3zB-gA-fye" customClass="EdgeInsetLabel" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                                            <rect key="frame" x="13" y="120" width="200" height="40"/>
                                                             <color key="backgroundColor" red="0.67450980390000004" green="0.63529411759999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="200" id="VLB-T0-as3"/>
-                                                                <constraint firstAttribute="height" constant="20" id="oQO-Ew-xwi"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="12"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -733,10 +748,10 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="L2R-j0-Xgt" firstAttribute="leading" secondItem="mlL-Ip-oMK" secondAttribute="leadingMargin" constant="4" id="GRV-oS-Wnj"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="L2R-j0-Xgt" secondAttribute="bottom" constant="20" id="QIw-Nj-V7r"/>
-                                                <constraint firstItem="L2R-j0-Xgt" firstAttribute="top" secondItem="mlL-Ip-oMK" secondAttribute="topMargin" constant="20" id="UlM-Vs-xVI"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="L2R-j0-Xgt" secondAttribute="trailing" constant="4" id="vND-A9-Fvg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="L2R-j0-Xgt" secondAttribute="trailing" constant="17" id="9dw-8E-dZS"/>
+                                                <constraint firstItem="L2R-j0-Xgt" firstAttribute="top" secondItem="mlL-Ip-oMK" secondAttribute="topMargin" id="IpU-FQ-e2R"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="L2R-j0-Xgt" secondAttribute="bottom" id="QZ8-DK-Hdw"/>
+                                                <constraint firstItem="L2R-j0-Xgt" firstAttribute="leading" secondItem="mlL-Ip-oMK" secondAttribute="leadingMargin" constant="17" id="bqA-Ud-dJq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -769,7 +784,7 @@
                                     <action selector="back:" destination="5VA-47-w42" eventType="touchUpInside" id="lKR-aR-L9K"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tous les verbes irréguliers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-dW-6ya">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tous les verbes irréguliers" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-dW-6ya">
                                 <rect key="frame" x="82" y="40" width="288" height="47.5"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

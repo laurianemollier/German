@@ -28,14 +28,12 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     override func viewWillAppear(_ animated: Bool) {
         self.table.separatorStyle = .none
         
-//        self.searchBar.layer.cornerRadius = 3.0
-//        self.searchBar.clipsToBounds = true
-//        self.searchBar.layer.borderColor = UIColor.blue.cgColor
-//        self.searchBar.layer.borderWidth = 1
+        self.searchBar.layer.borderColor = UIColor(rgb: 0xdd0000).cgColor // TODO save this red
+        self.searchBar.layer.borderWidth = 0
         
-//        self.searchBar.tintColor = UIColor.blue
-//        self.searchBar.barTintColor = UIColor.red
-        self.searchBar.barStyle = .black
+        
+        self.searchBar.tintColor = UIColor(rgb: 0xdd0000)
+        self.searchBar.barTintColor = UIColor(rgb: 0xdd0000)
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,7 +88,7 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int){
-
+        // TODO
     }
     
     
@@ -109,7 +107,7 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     func alterLayout() {
 //
-        self.searchBar.placeholder = "Search Animal by Name" // TODO
+        self.searchBar.placeholder = "Chercher un verbe" // TODO
     }
     
     private func back(){

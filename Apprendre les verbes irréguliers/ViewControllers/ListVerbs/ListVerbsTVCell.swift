@@ -37,7 +37,6 @@ class ListVerbsTVCell: UITableViewCell {
         self.levelLabel.text = userLearningVerb.verb.level.rawValue
         
         if userLearningVerb.userProgression.isNotInReviewList(){
-            print(userLearningVerb.verb.infinitive())
             self.informationLabel.isHidden = true
         }
         else{
@@ -45,7 +44,10 @@ class ListVerbsTVCell: UITableViewCell {
             print(userLearningVerb.verb.infinitive())
         }
 
-        
+        self.conainerView.layer.cornerRadius = 7
+        self.informationLabel.layer.cornerRadius = 5
+        self.informationLabel.layer.borderWidth = 1
+        self.informationLabel.layer.borderColor = UIColor.lightGray.cgColor
         
     }
     
