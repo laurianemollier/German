@@ -41,7 +41,6 @@ class ListVerbsTVCell: UITableViewCell {
         }
         else{
             self.informationLabel.isHidden = false
-            print(userLearningVerb.verb.infinitive())
         }
 
         self.conainerView.layer.cornerRadius = 7

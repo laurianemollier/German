@@ -983,6 +983,22 @@
 			path = Beans;
 			sourceTree = "<group>";
 		};
+		9897DC00213C30A300F0851E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9897DC01213C30B200F0851E /* Supporting files */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		9897DC01213C30B200F0851E /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				98DEFC9020FF231B00DC32BB /* Verbs */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		9898A5CA212AC696003EAAFF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1103,6 +1119,7 @@
 		98C9834920F750820080B08C /* Apprendre les verbes irréguliers */ = {
 			isa = PBXGroup;
 			children = (
+				9897DC00213C30A300F0851E /* Library */,
 				98B53B6D212F100900565C53 /* Views */,
 				98B53B5A212E965600565C53 /* Fonts */,
 				9898A5CA212AC696003EAAFF /* Extensions */,
@@ -1162,7 +1179,6 @@
 		98DEFC8F20FF230E00DC32BB /* Audios */ = {
 			isa = PBXGroup;
 			children = (
-				98DEFC9020FF231B00DC32BB /* Verbs */,
 			);
 			path = Audios;
 			sourceTree = "<group>";
