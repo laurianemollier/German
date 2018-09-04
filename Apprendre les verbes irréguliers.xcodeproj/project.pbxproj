@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9815F7A4213D073000248968 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A3213D073000248968 /* IAPProducts.swift */; };
+		9815F7A6213D074F00248968 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A5213D074F00248968 /* IAPService.swift */; };
+		9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A7213D09DF00248968 /* IAPHelper.swift */; };
+		9815F7AA213D0B1C00248968 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9815F7A9213D0B1C00248968 /* StoreKit.framework */; };
 		98301E54212C76FB00432C84 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E53212C76FB00432C84 /* StatisticsVC.swift */; };
 		98301E56212C771900432C84 /* StatisticsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E55212C771900432C84 /* StatisticsButton.swift */; };
 		98301E5D212C7B7100432C84 /* VerbCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98301E5C212C7B7100432C84 /* VerbCardView.xib */; };
@@ -474,6 +478,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9815F7A3213D073000248968 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
+		9815F7A5213D074F00248968 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
+		9815F7A7213D09DF00248968 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		9815F7A9213D0B1C00248968 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		98301E53212C76FB00432C84 /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		98301E55212C771900432C84 /* StatisticsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsButton.swift; sourceTree = "<group>"; };
 		98301E5C212C7B7100432C84 /* VerbCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerbCardView.xib; sourceTree = "<group>"; };
@@ -862,6 +870,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9815F7AA213D0B1C00248968 /* StoreKit.framework in Frameworks */,
 				98685F6621270D6000DA327D /* SQLite.framework in Frameworks */,
 				98685F6521270D5C00DA327D /* SQLite.framework in Frameworks */,
 			);
@@ -884,6 +893,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9815F7A2213D071E00248968 /* InAppPurshase */ = {
+			isa = PBXGroup;
+			children = (
+				9815F7A3213D073000248968 /* IAPProducts.swift */,
+				9815F7A5213D074F00248968 /* IAPService.swift */,
+				9815F7A7213D09DF00248968 /* IAPHelper.swift */,
+			);
+			path = InAppPurshase;
+			sourceTree = "<group>";
+		};
 		98301E4C212C76C700432C84 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
@@ -1035,6 +1054,7 @@
 		98B0A8AA212557F1000F44B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9815F7A9213D0B1C00248968 /* StoreKit.framework */,
 				98685F4D21270CEE00DA327D /* SQLite.xcodeproj */,
 			);
 			name = Frameworks;
@@ -1119,12 +1139,12 @@
 		98C9834920F750820080B08C /* Apprendre les verbes irréguliers */ = {
 			isa = PBXGroup;
 			children = (
+				9815F7A2213D071E00248968 /* InAppPurshase */,
 				9897DC00213C30A300F0851E /* Library */,
 				98B53B6D212F100900565C53 /* Views */,
 				98B53B5A212E965600565C53 /* Fonts */,
 				9898A5CA212AC696003EAAFF /* Extensions */,
 				983B2493211C49B7009C33B1 /* Models */,
-				98DEFC8F20FF230E00DC32BB /* Audios */,
 				98DEFC8820FDC26200DC32BB /* ViewControllers */,
 				98C9834A20F750820080B08C /* AppDelegate.swift */,
 				98C9834C20F750820080B08C /* ViewController.swift */,
@@ -1174,13 +1194,6 @@
 				98DEFC8620FDC25400DC32BB /* MainVC.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		98DEFC8F20FF230E00DC32BB /* Audios */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Audios;
 			sourceTree = "<group>";
 		};
 		98DEFC9020FF231B00DC32BB /* Verbs */ = {
@@ -1571,6 +1584,11 @@
 				TargetAttributes = {
 					98C9834620F750820080B08C = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					98C9835A20F750840080B08C = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -2030,8 +2048,10 @@
 				98685F372126BA6100DA327D /* Form.swift in Sources */,
 				98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */,
+				9815F7A4213D073000248968 /* IAPProducts.swift in Sources */,
 				98B53B70212F10B000565C53 /* BasicButton.swift in Sources */,
 				9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */,
+				9815F7A6213D074F00248968 /* IAPService.swift in Sources */,
 				988DB91F2126954900AFAEF4 /* VerbDAO.swift in Sources */,
 				98DEFC8E20FE27EE00DC32BB /* ReviewVerbsVC.swift in Sources */,
 				98DEFC8C20FDC33200DC32BB /* AddVerbsCV.swift in Sources */,
@@ -2061,6 +2081,7 @@
 				98B01514212474670090006E /* LevelCheckBox.swift in Sources */,
 				9898A5F0212C2C1C003EAAFF /* ListVerbsVC.swift in Sources */,
 				9897DBF9213B5EE000F0851E /* EdgeInsetLabel.swift in Sources */,
+				9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
