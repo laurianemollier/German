@@ -8,6 +8,7 @@
 
 import Foundation
 import AVFoundation
+import UIKit
 
 
 
@@ -25,13 +26,17 @@ class Verb{
     
     /// The differents temps of this verb
     /// (infinitive, present, simple past, past participle)
-    fileprivate let verb: (infinitive: String, present: String, simplePast: String, pastParticiple: String)
+    private let verb: (infinitive: String, present: String, simplePast: String, pastParticiple: String)
+    
+    private let changingVowel : (infinitive: NSRange, present: NSRange, simplePast: NSRange, pastParticiple: NSRange)
     
     /// The translation avalable in each language
-    fileprivate var translations = [Lang:String]()
+    private var translations = [Lang:String]()
  
     /// If true, display the pronoun while conjugating the verb
-    fileprivate var pronoun: Bool = false
+    private var pronoun: Bool = false
+    
+    private let colorChangedVowel = UIColor.red
     
 
     /* Constructor */
@@ -42,14 +47,19 @@ class Verb{
     ///     - level: The level at which you are supposed to learn this verb.
     ///     - form: The form to which the verb belongs.
     ///     - verb: The differents temps of this verb (infinitive, present, simple past, past participle)
+    ///     - changingVowel: The range where is located the changing vowel (infinitive, present, simple past, past participle)
     ///     - translations: The translation avalable in each language
     ///
     /// - Returns: A verb
-    init(id: Int64, level: Level, form: Form, verb: (String, String, String, String), translations: [(Lang, String)]){
+    init(id: Int64, level: Level, form: Form,
+         verb: (String, String, String, String),
+         changingVowel: (NSRange, NSRange, NSRange, NSRange),
+         translations: [(Lang, String)]){
         self.id = id + 1
         self.level = level
         self.form = form
         self.verb = verb
+        self.changingVowel = changingVowel
         
         translations.forEach({
             self.translations[$0] = $1
@@ -66,6 +76,11 @@ class Verb{
                      present: dbVerb.present,
                      simplePast: dbVerb.simplePast,
                      pastParticiple: dbVerb.pastParticiple)
+        // TODO make the true range
+        self.changingVowel = (infinitive: NSRange(location:2, length:5),
+                              present: NSRange(location:2, length:5),
+                              simplePast: NSRange(location:2, length:5),
+                              pastParticiple: NSRange(location:2, length:5))
         
         dbVerbTranslations.forEach({
             self.translations[$0.lang] = $0.translation
@@ -95,14 +110,57 @@ class Verb{
     func translation(_ lang: Lang) -> String {return translations[lang]!}
     
     
+    func infinitiveColored(font: UIFont) -> NSMutableAttributedString {
+        
+        let attributes: [NSAttributedStringKey: Any] = [.font: font]
+        let attributedString = NSMutableAttributedString(string: self.verb.infinitive, attributes: attributes)
+        
+        // here you change the character to the color that you want
+        attributedString.addAttribute(.foregroundColor, value: self.colorChangedVowel, range: self.changingVowel.infinitive)
+
+        return attributedString
+    }
+    
+    func presentColored(font: UIFont) -> NSMutableAttributedString {
+        let attributedString = NSMutableAttributedString(string: self.verb.present,
+                                                         attributes: [.font: font])
+        
+        // here you change the character to the color that you want
+        attributedString.addAttribute(.foregroundColor, value: self.colorChangedVowel, range: self.changingVowel.present)
+        
+        return attributedString
+    }
+
+    
+    func simplePastColored(font: UIFont) -> NSMutableAttributedString {
+        let attributedString = NSMutableAttributedString(string: self.verb.simplePast,
+                                                         attributes: [.font: font])
+        
+        // here you change the character to the color that you want
+        attributedString.addAttribute(.foregroundColor, value: self.colorChangedVowel, range: self.changingVowel.simplePast)
+        
+        return attributedString
+    }
+    
+    func pastParticipleColored(font: UIFont) -> NSMutableAttributedString {
+        let attributedString = NSMutableAttributedString(string: self.verb.pastParticiple,
+                                                         attributes: [.font: font])
+        
+        // here you change the character to the color that you want
+        attributedString.addAttribute(.foregroundColor, value: self.colorChangedVowel, range: self.changingVowel.pastParticiple)
+        
+        return attributedString
+    }
+    
+    
     /* private function */
     
 
     /// Helper function let or to delete the pronoun on the conjugated form
-    fileprivate func formatConjugatedForm(_ verb:String) -> String {
-        if pronoun { return verb}
+    private func formatConjugatedForm(_ verb:String) -> String {
+        if pronoun { return "er " + verb}
         else{
-             return (verb as NSString).substring(from: 3)
+             return verb
         }
     }
     
@@ -126,19 +184,7 @@ class Verb{
     
     
     func colored() {
-//        let range = NSRange(location:2,length:5) // specific location. This means "range" handle 1 character at location 2
-//
-//        let originalString = "coucou-les-voisin"
-//
-//        let attributes: [NSAttributedStringKey: Any] = [
-//            .font: UIFont(name: "Georgia", size: 18.0)!]
-//        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: originalString, attributes: attributes)
-//
-//        // here you change the character to red color
-//        attributedString.addAttribute(.foregroundColor, value: UIColor.red, range: range)
-//        attributedString.addAttribute(.foregroundColor, value: UIColor.gray, range: NSRange(location:10,length:2))
-//
-//        self.nbrVerbInReviewListLabel.attributedText = attributedString
+        
         
     }
 

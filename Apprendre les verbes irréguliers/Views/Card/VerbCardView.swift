@@ -52,10 +52,10 @@ class VerbCardView: UIView {
         self.verb = verb
         
         self.translationLabel.text = verb.translation(Lang.fr)
-        self.infinitiveLabel.text = verb.infinitive()
-        self.presentLabel.text = verb.present()
-        self.simplePastLabel.text = verb.simplePast()
-        self.pastParticipleLabel.text = verb.pastParticiple()
+        self.infinitiveLabel.attributedText = verb.infinitiveColored(font: self.infinitiveLabel.font)
+        self.presentLabel.attributedText = verb.presentColored(font: self.presentLabel.font)
+        self.simplePastLabel.attributedText = verb.simplePastColored(font: self.simplePastLabel.font)
+        self.pastParticipleLabel.attributedText = verb.pastParticipleColored(font: self.pastParticipleLabel.font)
         
         if !backward{
             self.infinitiveLabel.isHidden = true

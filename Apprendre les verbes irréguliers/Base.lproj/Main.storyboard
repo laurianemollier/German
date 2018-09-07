@@ -381,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sc-RV-8Rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1336.2318840579712" y="-252.71739130434784"/>
+            <point key="canvasLocation" x="1862" y="-289"/>
         </scene>
         <!--StatisticsVC-->
         <scene sceneID="WW8-io-Sjq">
@@ -609,7 +609,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5a-EN-FAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2160.8000000000002" y="778.56071964017997"/>
+            <point key="canvasLocation" x="2489" y="1271"/>
         </scene>
         <!--List VerbsVC-->
         <scene sceneID="mwm-8U-ADG">
@@ -814,7 +814,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zh-fI-bF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384.80000000000001" y="1035.832083958021"/>
+            <point key="canvasLocation" x="1119" y="931"/>
         </scene>
         <!--Review VerbsVC-->
         <scene sceneID="Tq2-Ze-ZdV">
@@ -824,9 +824,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SrU-Wk-KwN" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-Dv-Y2h" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufF-nV-YxU">
                                 <rect key="frame" x="51.5" y="105" width="272" height="300"/>
@@ -934,39 +934,53 @@
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="9" right="8"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQq-F4-cjR">
+                                <rect key="frame" x="300" y="588" width="50" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="d93-yt-7r4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="🔕"/>
+                                <connections>
+                                    <action selector="audio:" destination="qzO-in-ekQ" eventType="touchUpInside" id="b1q-XE-eoY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.85098039219999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8qb-Ly-a3b" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="bottom" constant="115" id="0gp-zf-qzh"/>
                             <constraint firstItem="LY3-8h-At6" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="1cY-db-Psc"/>
-                            <constraint firstItem="SrU-Wk-KwN" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" id="3up-34-IgR"/>
-                            <constraint firstItem="SrU-Wk-KwN" firstAttribute="top" secondItem="u7U-bI-6bR" secondAttribute="top" id="5GH-Qm-hjC"/>
                             <constraint firstItem="ufF-nV-YxU" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="8Km-nz-Kky"/>
                             <constraint firstItem="fBV-Nm-8Ys" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" constant="25" id="9Kt-Ov-v32"/>
                             <constraint firstItem="frI-xU-zCb" firstAttribute="width" secondItem="ufF-nV-YxU" secondAttribute="width" id="A0g-6g-LOf"/>
+                            <constraint firstItem="Lev-o1-3dm" firstAttribute="bottom" secondItem="yQq-F4-cjR" secondAttribute="bottom" constant="25" id="Efb-Ku-cmj"/>
                             <constraint firstItem="sgg-3a-Uqk" firstAttribute="height" secondItem="ufF-nV-YxU" secondAttribute="height" id="FHt-mO-wz7"/>
+                            <constraint firstItem="8X5-Dv-Y2h" firstAttribute="bottom" secondItem="Lev-o1-3dm" secondAttribute="bottom" id="G6a-cj-JTc"/>
                             <constraint firstItem="sgg-3a-Uqk" firstAttribute="width" secondItem="ufF-nV-YxU" secondAttribute="width" id="MCb-gE-pHH"/>
                             <constraint firstItem="LY3-8h-At6" firstAttribute="top" secondItem="8qb-Ly-a3b" secondAttribute="bottom" constant="8" id="Mcg-wN-PHp"/>
                             <constraint firstItem="frI-xU-zCb" firstAttribute="height" secondItem="ufF-nV-YxU" secondAttribute="height" id="OSQ-H9-q1Q"/>
+                            <constraint firstItem="Lev-o1-3dm" firstAttribute="trailing" secondItem="yQq-F4-cjR" secondAttribute="trailing" constant="25" id="OwT-Co-bt9"/>
                             <constraint firstItem="sgg-3a-Uqk" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="top" id="Wt1-cE-dCk"/>
                             <constraint firstItem="LY3-8h-At6" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" constant="15" id="cJx-wY-8QS"/>
                             <constraint firstItem="8qb-Ly-a3b" firstAttribute="trailing" secondItem="Lev-o1-3dm" secondAttribute="trailing" constant="8" id="dgC-mf-daQ"/>
                             <constraint firstItem="frI-xU-zCb" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="top" id="euF-Ws-ngf"/>
                             <constraint firstItem="Lev-o1-3dm" firstAttribute="trailing" secondItem="cVt-QY-aWl" secondAttribute="trailing" constant="25" id="fWM-9S-eRE"/>
                             <constraint firstItem="fBV-Nm-8Ys" firstAttribute="top" secondItem="Lev-o1-3dm" secondAttribute="top" constant="25" id="h4m-uf-RVc"/>
-                            <constraint firstItem="SrU-Wk-KwN" firstAttribute="trailing" secondItem="Lev-o1-3dm" secondAttribute="trailing" id="hVk-96-p4f"/>
                             <constraint firstItem="sgg-3a-Uqk" firstAttribute="top" secondItem="Lev-o1-3dm" secondAttribute="top" constant="85" id="knS-rm-3L7"/>
+                            <constraint firstItem="8X5-Dv-Y2h" firstAttribute="trailing" secondItem="Lev-o1-3dm" secondAttribute="trailing" id="lrM-ht-z5t"/>
                             <constraint firstItem="cVt-QY-aWl" firstAttribute="centerY" secondItem="fBV-Nm-8Ys" secondAttribute="centerY" id="mYQ-DT-pax"/>
                             <constraint firstItem="sgg-3a-Uqk" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="qO0-HY-cnv"/>
                             <constraint firstItem="frI-xU-zCb" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="sSI-0d-nQl"/>
-                            <constraint firstItem="SrU-Wk-KwN" firstAttribute="bottom" secondItem="Lev-o1-3dm" secondAttribute="bottom" id="ueQ-8K-Iea"/>
                             <constraint firstItem="8qb-Ly-a3b" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" constant="8" id="unr-gz-fqB"/>
                             <constraint firstItem="WhS-Gw-nAd" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="utr-Jc-YGa"/>
+                            <constraint firstItem="8X5-Dv-Y2h" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" id="vXJ-WU-lpA"/>
+                            <constraint firstItem="8X5-Dv-Y2h" firstAttribute="top" secondItem="u7U-bI-6bR" secondAttribute="top" id="wVg-SI-tgT"/>
                             <constraint firstItem="WhS-Gw-nAd" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="bottom" constant="40" id="yiU-0m-eME"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lev-o1-3dm"/>
                     </view>
                     <connections>
+                        <outlet property="audioButton" destination="yQq-F4-cjR" id="bYw-VK-Elv"/>
                         <outlet property="backwardCard" destination="frI-xU-zCb" id="QnX-nq-58U"/>
                         <outlet property="buttonOnCard" destination="sgg-3a-Uqk" id="mBs-5V-Y9b"/>
                         <outlet property="explainationLabel" destination="8qb-Ly-a3b" id="gLY-eQ-tBP"/>

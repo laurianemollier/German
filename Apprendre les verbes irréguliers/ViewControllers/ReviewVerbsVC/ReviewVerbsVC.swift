@@ -39,11 +39,25 @@ class ReviewVerbsVC: UIViewController {
     @IBOutlet weak var progressionButton: BasicButton!
     @IBOutlet weak var neverReviewButton: BasicButton!
     
+    @IBOutlet var audioButton: UIButton!
+    
     
     @IBAction func back(_ sender: UIButton) {
         back()
     }
     
+    @IBAction func audio(_ sender: UIButton) {
+        if(Audio.shared.isOn()){
+//            audioButton.setImage(#imageLiteral(resourceName: "RV Audio off"), for: .normal)
+            audioButton.setTitle("🔔", for: .normal)
+            Audio.shared.off()
+        }
+        else{
+//            audioButton.setImage(#imageLiteral(resourceName: "RV Audio on"), for: .normal)
+            audioButton.setTitle("🔕", for: .normal)
+            Audio.shared.on()
+        }
+    }
     
     @IBAction func revealClickButton(_ sender: UIButton) {
         revealCard(sender)
@@ -124,6 +138,17 @@ class ReviewVerbsVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        // display the correct sounds button
+        if(Audio.shared.isOn()){
+            audioButton.setTitle("🔔", for: .normal)
+//            audioButton.setImage(#imageLiteral(resourceName: "RV Audio on"), for: .normal)
+        }
+        else{
+            audioButton.setTitle("🔕", for: .normal)
+//            audioButton.setImage(#imageLiteral(resourceName: "RV Audio off"), for: .normal)
+        }
+        
         resetCard(verb: self.verbsToReview[self.index].verb)
     }
     
@@ -160,7 +185,9 @@ class ReviewVerbsVC: UIViewController {
         if self.isCardForward{
             flipCard(visible: self.forwarCard, notVisibleYet: self.backwardCard)
             self.isCardForward = false
-            AudioReader.play(verb: self.currentVerb().verb)
+            if Audio.shared.isOn(){
+                AudioReader.play(verb: self.currentVerb().verb)
+            }
         }
         else{
             flipCard(visible: self.backwardCard, notVisibleYet: self.forwarCard)

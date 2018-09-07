@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9804A8C7213E445800B630A1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9804A8C0213E445700B630A1 /* AVFoundation.framework */; };
+		9804A8C9213E451A00B630A1 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9804A8C8213E451A00B630A1 /* iAd.framework */; };
 		9815F7A4213D073000248968 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A3213D073000248968 /* IAPProducts.swift */; };
 		9815F7A6213D074F00248968 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A5213D074F00248968 /* IAPService.swift */; };
 		9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A7213D09DF00248968 /* IAPHelper.swift */; };
 		9815F7AA213D0B1C00248968 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9815F7A9213D0B1C00248968 /* StoreKit.framework */; };
+		9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829D4B821416E5F0004FCB3 /* Audio.swift */; };
 		98301E54212C76FB00432C84 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E53212C76FB00432C84 /* StatisticsVC.swift */; };
 		98301E56212C771900432C84 /* StatisticsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E55212C771900432C84 /* StatisticsButton.swift */; };
 		98301E5D212C7B7100432C84 /* VerbCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98301E5C212C7B7100432C84 /* VerbCardView.xib */; };
@@ -20,7 +23,6 @@
 		98685F352126BA4900DA327D /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F342126BA4900DA327D /* Lang.swift */; };
 		98685F372126BA6100DA327D /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F362126BA6100DA327D /* Form.swift */; };
 		98685F392126BA8700DA327D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F382126BA8700DA327D /* Level.swift */; };
-		98685F6521270D5C00DA327D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98685F5821270CEE00DA327D /* SQLite.framework */; };
 		98685F6621270D6000DA327D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98685F5821270CEE00DA327D /* SQLite.framework */; };
 		98685F6721270D6000DA327D /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98685F5821270CEE00DA327D /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98685F7021270E2B00DA327D /* SpeedLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F6F21270E2B00DA327D /* SpeedLog.swift */; };
@@ -478,10 +480,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9804A8C0213E445700B630A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9804A8C8213E451A00B630A1 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		9815F7A3213D073000248968 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
 		9815F7A5213D074F00248968 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
 		9815F7A7213D09DF00248968 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		9815F7A9213D0B1C00248968 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9829D4B821416E5F0004FCB3 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		98301E53212C76FB00432C84 /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		98301E55212C771900432C84 /* StatisticsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsButton.swift; sourceTree = "<group>"; };
 		98301E5C212C7B7100432C84 /* VerbCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerbCardView.xib; sourceTree = "<group>"; };
@@ -870,9 +875,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9804A8C9213E451A00B630A1 /* iAd.framework in Frameworks */,
+				9804A8C7213E445800B630A1 /* AVFoundation.framework in Frameworks */,
 				9815F7AA213D0B1C00248968 /* StoreKit.framework in Frameworks */,
 				98685F6621270D6000DA327D /* SQLite.framework in Frameworks */,
-				98685F6521270D5C00DA327D /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -903,6 +909,14 @@
 			path = InAppPurshase;
 			sourceTree = "<group>";
 		};
+		9829D4B121416E3D0004FCB3 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				9829D4B821416E5F0004FCB3 /* Audio.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		98301E4C212C76C700432C84 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
@@ -924,6 +938,7 @@
 		983B2493211C49B7009C33B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9829D4B121416E3D0004FCB3 /* UserDefaults */,
 				98685F3A21270A4400DA327D /* Database */,
 				98685F332126A92900DA327D /* Enums */,
 				988DB9112125BC7F00AFAEF4 /* Beans */,
@@ -1054,6 +1069,8 @@
 		98B0A8AA212557F1000F44B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9804A8C8213E451A00B630A1 /* iAd.framework */,
+				9804A8C0213E445700B630A1 /* AVFoundation.framework */,
 				9815F7A9213D0B1C00248968 /* StoreKit.framework */,
 				98685F4D21270CEE00DA327D /* SQLite.xcodeproj */,
 			);
@@ -2047,6 +2064,7 @@
 				98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */,
 				98685F372126BA6100DA327D /* Form.swift in Sources */,
 				98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */,
+				9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */,
 				9815F7A4213D073000248968 /* IAPProducts.swift in Sources */,
 				98B53B70212F10B000565C53 /* BasicButton.swift in Sources */,

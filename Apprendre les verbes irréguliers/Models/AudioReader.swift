@@ -20,12 +20,17 @@ class AudioReader{
             let nameAudioFile = verb.infinitive()
             let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: AudioReader.formatAudio)!)
             let audioPlayer = try! AVAudioPlayer(contentsOf: audioURL)
-            audioPlayer.prepareToPlay()
+//            try! AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
+//            audioPlayer.prepareToPlay()
+            audioPlayer.numberOfLoops = 1
             audioPlayer.play()
             
+            SpeedLog.print("Allez!!!!!")
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            SpeedLog.print("Voila")
         }
         catch {
+            SpeedLog.print("error")
             SpeedLog.print(error) // TODO
             // report for an error
         }
