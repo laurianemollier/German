@@ -8,8 +8,11 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class ReviewVerbsVC: UIViewController {
+    
+    var audioPlayer = AVAudioPlayer()
 
     var index: Int = 0
     var verbsToReview: [UserLearningVerb]!
@@ -17,7 +20,6 @@ class ReviewVerbsVC: UIViewController {
 
     var forwardCardVC: ForwarCardVC!
     var backwardCardVC: BackwardCardVC!
-    
     
 
     var isCardForward: Bool!
@@ -49,12 +51,13 @@ class ReviewVerbsVC: UIViewController {
     @IBAction func audio(_ sender: UIButton) {
         if(Audio.shared.isOn()){
 //            audioButton.setImage(#imageLiteral(resourceName: "RV Audio off"), for: .normal)
-            audioButton.setTitle("🔔", for: .normal)
+            audioButton.setTitle("🔕", for: .normal)
             Audio.shared.off()
+            audioStop()
         }
         else{
 //            audioButton.setImage(#imageLiteral(resourceName: "RV Audio on"), for: .normal)
-            audioButton.setTitle("🔕", for: .normal)
+            audioButton.setTitle("🔔", for: .normal)
             Audio.shared.on()
         }
     }
@@ -104,6 +107,8 @@ class ReviewVerbsVC: UIViewController {
     }
     
     private func nextVerb(updatedVerbReviewed: UserLearningVerb?){
+        audioStop()
+        
         if let v = updatedVerbReviewed {
             self.resultVerbsReviewed.append(v)
         }
@@ -185,14 +190,15 @@ class ReviewVerbsVC: UIViewController {
         if self.isCardForward{
             flipCard(visible: self.forwarCard, notVisibleYet: self.backwardCard)
             self.isCardForward = false
+            SpeedLog.print(Audio.shared.isOn())
             if Audio.shared.isOn(){
-                AudioReader.play(verb: self.currentVerb().verb)
+                audioPlay(verb: self.currentVerb().verb)
             }
         }
         else{
             flipCard(visible: self.backwardCard, notVisibleYet: self.forwarCard)
             self.isCardForward = true
-            
+            audioStop()
         }
         
         
@@ -265,6 +271,33 @@ class ReviewVerbsVC: UIViewController {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+    private func audioPlay(verb: Verb){
+        do {
+            let formatAudio = "mp3"
+            let nameAudioFile = verb.infinitive()
+            let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: formatAudio)!)
+            audioPlayer = try! AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
+            audioPlayer.play()
+            audioPlayer.numberOfLoops = 0
+
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        }
+        catch {
+            // report for an error
+            SpeedLog.print(error) // TODO
+        }
+    }
+    
+    
+    private func audioStop(){
+        if audioPlayer.isPlaying{
+            audioPlayer.stop()
+        }
+    }
+
     
  
 
