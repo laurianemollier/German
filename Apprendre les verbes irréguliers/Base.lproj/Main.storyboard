@@ -377,11 +377,12 @@
                         <outlet property="lessRandomVerbButton" destination="m1V-P2-sCB" id="iAu-mG-3mp"/>
                         <outlet property="moreRandomVerbButton" destination="j7R-TK-qx6" id="phc-9F-QBY"/>
                         <outlet property="nbrRandomVerbLabel" destination="TTe-EP-Aco" id="TdL-tX-0lq"/>
+                        <segue destination="JMN-Zr-BPp" kind="show" identifier="IAPurchasesSegue" id="FZp-Ed-ogO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sc-RV-8Rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="-289"/>
+            <point key="canvasLocation" x="1284" y="290"/>
         </scene>
         <!--StatisticsVC-->
         <scene sceneID="WW8-io-Sjq">
@@ -824,16 +825,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAy-GT-5ws">
-                                <rect key="frame" x="44" y="385" width="233" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="restore:" destination="JMN-Zr-BPp" eventType="touchUpInside" id="Gev-o3-Oa0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-kB-nvZ" customClass="PurchaseUIButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="99" width="300" height="178.5"/>
+                                <rect key="frame" x="37.5" y="190" width="300" height="178.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="7Lq-tm-VGB"/>
                                     <constraint firstAttribute="width" secondItem="Xzp-kB-nvZ" secondAttribute="height" multiplier="168:100" id="wWW-rr-fVY"/>
@@ -843,10 +836,53 @@
                                     <action selector="buyWholeApp:" destination="JMN-Zr-BPp" eventType="touchUpInside" id="Alh-4I-USL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqG-cM-Dde">
+                                <rect key="frame" x="25" y="45" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="caQ-eP-Op5"/>
+                                    <constraint firstAttribute="width" secondItem="QqG-cM-Dde" secondAttribute="height" multiplier="1:1" id="cmy-hY-C24"/>
+                                </constraints>
+                                <state key="normal" image="NavBack"/>
+                                <connections>
+                                    <action selector="back:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="bIQ-yl-DWl"/>
+                                    <action selector="back:" destination="5VA-47-w42" eventType="touchUpInside" id="jeb-kb-ZXn"/>
+                                    <action selector="close:" destination="JMN-Zr-BPp" eventType="touchUpInside" id="aaq-ir-tsd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajoutez des verbes à la liste de révision" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-pq-kBj">
+                                <rect key="frame" x="67" y="37.5" width="300" height="53"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAy-GT-5ws" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                <rect key="frame" x="71" y="580" width="233" height="47"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="SCc-E1-6KL"/>
+                                    <constraint firstAttribute="width" constant="233" id="yfW-6j-atL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
+                                <state key="normal" title="Réslaurer les achats">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restore:" destination="JMN-Zr-BPp" eventType="touchUpInside" id="Gev-o3-Oa0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.85098039219999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Xzp-kB-nvZ" firstAttribute="top" secondItem="OG3-RP-Sig" secondAttribute="top" constant="79" id="BhY-Z4-qLJ"/>
+                            <constraint firstAttribute="trailing" secondItem="M4S-pq-kBj" secondAttribute="trailing" constant="8" id="3kH-cb-cmB"/>
+                            <constraint firstItem="Xzp-kB-nvZ" firstAttribute="top" secondItem="OG3-RP-Sig" secondAttribute="top" constant="170" id="BhY-Z4-qLJ"/>
+                            <constraint firstItem="M4S-pq-kBj" firstAttribute="leading" secondItem="QqG-cM-Dde" secondAttribute="trailing" constant="5" id="De8-aD-DBj"/>
+                            <constraint firstItem="OG3-RP-Sig" firstAttribute="bottom" secondItem="AAy-GT-5ws" secondAttribute="bottom" constant="40" id="Efr-gw-ncx"/>
+                            <constraint firstItem="QqG-cM-Dde" firstAttribute="top" secondItem="OG3-RP-Sig" secondAttribute="top" constant="25" id="drB-mg-6wi"/>
+                            <constraint firstItem="QqG-cM-Dde" firstAttribute="leading" secondItem="OG3-RP-Sig" secondAttribute="leading" constant="25" id="idA-Lp-BFm"/>
+                            <constraint firstItem="QqG-cM-Dde" firstAttribute="width" secondItem="QqG-cM-Dde" secondAttribute="height" multiplier="1:1" id="k8P-Jf-W9C"/>
+                            <constraint firstItem="QqG-cM-Dde" firstAttribute="width" secondItem="QqG-cM-Dde" secondAttribute="height" multiplier="1:1" id="ocK-He-JKN"/>
+                            <constraint firstItem="M4S-pq-kBj" firstAttribute="centerY" secondItem="QqG-cM-Dde" secondAttribute="centerY" id="q7p-It-6mu"/>
+                            <constraint firstItem="AAy-GT-5ws" firstAttribute="centerX" secondItem="kn2-IF-BEf" secondAttribute="centerX" id="w7B-kt-bWF"/>
                             <constraint firstItem="Xzp-kB-nvZ" firstAttribute="centerX" secondItem="kn2-IF-BEf" secondAttribute="centerX" id="z1y-S0-h02"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OG3-RP-Sig"/>
@@ -857,7 +893,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6P-K7-eVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="557.27136431784118"/>
+            <point key="canvasLocation" x="2249" y="289"/>
         </scene>
         <!--Review VerbsVC-->
         <scene sceneID="Tq2-Ze-ZdV">
@@ -1419,6 +1455,6 @@ sku3AAAAAAAAAgEAAAAAAAAAWQAAAAAAAAAAAAAAAAAAS7k
         </image>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HHQ-P8-xSg"/>
+        <segue reference="OVJ-ht-fzK"/>
     </inferredMetricsTieBreakers>
 </document>

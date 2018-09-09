@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import StoreKit
 
 class AddVerbsCV: UIViewController {
-
+    
+    var products: [SKProduct]?
+    var wholeAppProduct: SKProduct?
+    
     let step: Int = 1
     
     var nbrRandomVerb: Int!
@@ -48,6 +52,21 @@ class AddVerbsCV: UIViewController {
     
     
     @IBAction func addRamdomly(_ sender: BasicButton) {
+        if self.wholeAppProduct == nil{
+            // Make a future
+            SpeedLog.print("TODO: Make a future")
+        } else if IAProducts.store.isProductPurchased(self.wholeAppProduct!.productIdentifier) {
+            addVerb()
+        } else if IAPHelper.canMakePayments() {
+            performSegue(withIdentifier: "IAPurchasesSegue", sender: nil)
+        } else { // can NOT make payement
+            // TODO: can not make payement
+            SpeedLog.print("TODO: can not make payement")
+        }
+
+    }
+    
+    private func addVerb(){
         let selectedLevels = self.selectedLevels()
         if selectedLevels.isEmpty{
             // TODO: No level has been selected
@@ -84,9 +103,11 @@ class AddVerbsCV: UIViewController {
         return selectedLevels
     }
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadProduct() // purchases
+        
         // TODO: When there is no verb to add
         do {
             self.nbrNotSeenVerb = try DbUserLearningVerbDAOImpl.shared.nbrVerNotbInReviewList()
@@ -114,21 +135,27 @@ class AddVerbsCV: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "listVerbsSegue" {
-            let vc = segue.destination as? ListVerbsVC
-            do {
-                try vc?.learningVerbs = DbUserLearningVerbDAOImpl.shared.all()
-            }
-            catch{
-                // TODO
-                SpeedLog.print(error)
-            }
+        if segue.identifier == "IAPurchasesSegue" {
+            let vc = segue.destination as! IAPurchaseVC
+            vc.wholeAppProduct = self.wholeAppProduct
+            vc.products = self.products
         }
+
     }
     
     private func back(){
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
+    }
+    
+    
+    private func loadProduct(){
+        IAProducts.store.requestProducts{success, products in
+            if success {
+                self.products = products!
+                self.wholeAppProduct = products!.first
+            }
+        }
     }
 
  

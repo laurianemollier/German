@@ -12,15 +12,13 @@ import Foundation
 @IBDesignable
 class PurchaseUIButton: UIButton {
     
-    let priceLabel = UILabel()
-
-    func setUp() {
-        setUpBadge()
+    
+    func setUp(price: String) {
+        setUpBadge(price: price)
         setLabelExplaination()
     }
     
-    
-    private func setUpBadge(){
+    private func setUpBadge(price: String){
         let imageView = UIImageView(image: #imageLiteral(resourceName: "Badge"))
         let imgRation = imageView.frame.width / imageView.frame.height
         let imgHeight = self.frame.height * 0.55
@@ -32,12 +30,13 @@ class PurchaseUIButton: UIButton {
         
         let imgXOffset = imgWidth * 0.23
         let imgYOffset = imgHeight * 0.25
-        self.priceLabel.frame = CGRect(x: imgX + imgXOffset, y: 0, width: imgWidth - imgXOffset, height: imgHeight - imgYOffset)
-        self.priceLabel.text = "1 $"
-        self.priceLabel.textAlignment = .center
-        self.priceLabel.font = UIFont.appBoldFontWith(size: 23)
+        let priceLabel = UILabel()
+        priceLabel.frame = CGRect(x: imgX + imgXOffset, y: 0, width: imgWidth - imgXOffset, height: imgHeight - imgYOffset)
+        priceLabel.text = price
+        priceLabel.textAlignment = .center
+        priceLabel.font = UIFont.appBoldFontWith(size: 23)
         
-        self.addSubview(self.priceLabel)
+        self.addSubview(priceLabel)
         
     }
     

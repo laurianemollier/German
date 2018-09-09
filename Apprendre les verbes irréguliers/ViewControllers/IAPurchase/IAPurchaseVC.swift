@@ -11,8 +11,8 @@ import StoreKit
 
 class IAPurchaseVC: UIViewController {
     
-    var products: [SKProduct]?
-    
+    var products: [SKProduct]!
+    var wholeAppProduct: SKProduct!
     
     let priceFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -25,34 +25,18 @@ class IAPurchaseVC: UIViewController {
     
     
 
-    var wholeAppProduct: SKProduct? {
-        didSet {
-            guard let wholeAppProduct = wholeAppProduct else { return }
-
-            if IAProducts.store.isProductPurchased(wholeAppProduct.productIdentifier) {
-                self.buyWholeAppButton.setTitle("is purchased", for: .normal)
-            } else if IAPHelper.canMakePayments() {
-                self.priceFormatter.locale = wholeAppProduct.priceLocale
-                let price = self.priceFormatter.string(from: wholeAppProduct.price)
-
-               self.buyWholeAppButton.setTitle(price, for: .normal)
-            } else {
-                self.buyWholeAppButton.setTitle("Not aivalable", for: .normal)
-            }
-        }
-    }
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadProduct()
-        
-
-        // Do any additional setup after loading the view.
+        self.priceFormatter.locale = self.wholeAppProduct.priceLocale
+        let price = self.priceFormatter.string(from: self.wholeAppProduct.price)
+        self.buyWholeAppButton.setUp(price: price!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.buyWholeAppButton.setUp()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,14 +47,7 @@ class IAPurchaseVC: UIViewController {
     
     
     
-    private func loadProduct(){
-        IAProducts.store.requestProducts{success, products in
-            if success {
-                self.products = products!
-                self.wholeAppProduct = products!.first
-            }
-        }
-    }
+
     
     
     
@@ -91,6 +68,10 @@ class IAPurchaseVC: UIViewController {
     }
     
     
+    @IBAction func close(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+        
+    }
     /*
     // MARK: - Navigation
 

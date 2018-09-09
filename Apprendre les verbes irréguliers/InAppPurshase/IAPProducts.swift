@@ -16,6 +16,7 @@ public struct IAProducts {
     private static let productIdentifiers: Set<ProductIdentifier> = [IAProducts.wholeApp]
     
     public static let store = IAPHelper(productIds: IAProducts.productIdentifiers)
+    
 }
 
 func resourceNameForProductIdentifier(_ productIdentifier: String) -> String? {
