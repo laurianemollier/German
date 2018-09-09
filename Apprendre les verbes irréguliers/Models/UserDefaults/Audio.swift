@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 
-class Audio{
+final class Audio{
     
-    private let key = "kNumberRamdomDefaultKey" // TODO
+    private let key = "org.lauriane-mollier.irregular-verbs.german" + "audio"
     
     static let shared = Audio()
     

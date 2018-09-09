@@ -6,19 +6,18 @@
 //  Copyright © 2018 Lauriane Mollier. All rights reserved.
 //
 
+
 import Foundation
 
-
-enum IAPProducts: String {
-    case consumable = "com.kiloloco.GetPaper.KLConsumable"
-    case nonConsumable = "com.kiloloco.GetPaper.KLNonConsumable"
-    case autoRenewableSubscription = "com.kiloloco.GettinPaper.KLAutoRenewableSubscription"
-    case nonRenewingSubscription = "com.kiloloco.GetPaper.KLNonRenewingSubscription"
+public struct IAProducts {
     
+    public static let wholeApp = "org.lauriane.mollier.irregular.verbs.german.wholeApp"
     
-    static let allProductIDs: Set = [IAPProducts.consumable.rawValue,
-                                IAPProducts.nonConsumable.rawValue,
-                                IAPProducts.autoRenewableSubscription.rawValue,
-                                IAPProducts.nonRenewingSubscription.rawValue]
+    private static let productIdentifiers: Set<ProductIdentifier> = [IAProducts.wholeApp]
+    
+    public static let store = IAPHelper(productIds: IAProducts.productIdentifiers)
+}
 
+func resourceNameForProductIdentifier(_ productIdentifier: String) -> String? {
+    return productIdentifier.components(separatedBy: ".").last
 }

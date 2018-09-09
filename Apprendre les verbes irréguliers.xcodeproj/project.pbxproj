@@ -7,12 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9804A8C7213E445800B630A1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9804A8C0213E445700B630A1 /* AVFoundation.framework */; };
-		9804A8C9213E451A00B630A1 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9804A8C8213E451A00B630A1 /* iAd.framework */; };
 		9815F7A4213D073000248968 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A3213D073000248968 /* IAPProducts.swift */; };
-		9815F7A6213D074F00248968 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A5213D074F00248968 /* IAPService.swift */; };
 		9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A7213D09DF00248968 /* IAPHelper.swift */; };
-		9815F7AA213D0B1C00248968 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9815F7A9213D0B1C00248968 /* StoreKit.framework */; };
 		9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829D4B821416E5F0004FCB3 /* Audio.swift */; };
 		98301E54212C76FB00432C84 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E53212C76FB00432C84 /* StatisticsVC.swift */; };
 		98301E56212C771900432C84 /* StatisticsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E55212C771900432C84 /* StatisticsButton.swift */; };
@@ -20,10 +16,12 @@
 		98301E5F212C7C2B00432C84 /* VerbCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E5E212C7C2B00432C84 /* VerbCardView.swift */; };
 		983B2495211C4A0C009C33B1 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2494211C4A0C009C33B1 /* Verb.swift */; };
 		983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2496211C6A4B009C33B1 /* Verbs.swift */; };
+		9863384821425A7900E8B95A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9804A8C0213E445700B630A1 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		9863384D21429ABB00E8B95A /* IAPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9863384C21429ABB00E8B95A /* IAPurchaseVC.swift */; };
 		98685F352126BA4900DA327D /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F342126BA4900DA327D /* Lang.swift */; };
 		98685F372126BA6100DA327D /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F362126BA6100DA327D /* Form.swift */; };
 		98685F392126BA8700DA327D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F382126BA8700DA327D /* Level.swift */; };
-		98685F6621270D6000DA327D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98685F5821270CEE00DA327D /* SQLite.framework */; };
+		98685F6621270D6000DA327D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98685F5821270CEE00DA327D /* SQLite.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		98685F6721270D6000DA327D /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98685F5821270CEE00DA327D /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98685F7021270E2B00DA327D /* SpeedLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F6F21270E2B00DA327D /* SpeedLog.swift */; };
 		98685F72212712EE00DA327D /* UserLearningVerbTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F71212712EE00DA327D /* UserLearningVerbTable.swift */; };
@@ -482,7 +480,6 @@
 		9804A8C0213E445700B630A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9804A8C8213E451A00B630A1 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		9815F7A3213D073000248968 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
-		9815F7A5213D074F00248968 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
 		9815F7A7213D09DF00248968 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		9815F7A9213D0B1C00248968 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9829D4B821416E5F0004FCB3 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
@@ -492,6 +489,7 @@
 		98301E5E212C7C2B00432C84 /* VerbCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbCardView.swift; sourceTree = "<group>"; };
 		983B2494211C4A0C009C33B1 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
 		983B2496211C6A4B009C33B1 /* Verbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verbs.swift; sourceTree = "<group>"; };
+		9863384C21429ABB00E8B95A /* IAPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPurchaseVC.swift; sourceTree = "<group>"; };
 		98685F342126BA4900DA327D /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
 		98685F362126BA6100DA327D /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		98685F382126BA8700DA327D /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
@@ -873,9 +871,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9804A8C9213E451A00B630A1 /* iAd.framework in Frameworks */,
-				9804A8C7213E445800B630A1 /* AVFoundation.framework in Frameworks */,
-				9815F7AA213D0B1C00248968 /* StoreKit.framework in Frameworks */,
+				9863384821425A7900E8B95A /* AVFoundation.framework in Frameworks */,
 				98685F6621270D6000DA327D /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -901,7 +897,6 @@
 			isa = PBXGroup;
 			children = (
 				9815F7A3213D073000248968 /* IAPProducts.swift */,
-				9815F7A5213D074F00248968 /* IAPService.swift */,
 				9815F7A7213D09DF00248968 /* IAPHelper.swift */,
 			);
 			path = InAppPurshase;
@@ -911,6 +906,7 @@
 			isa = PBXGroup;
 			children = (
 				9829D4B821416E5F0004FCB3 /* Audio.swift */,
+				988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -942,9 +938,16 @@
 				988DB9112125BC7F00AFAEF4 /* Beans */,
 				988DB90E2125BBBD00AFAEF4 /* Tables */,
 				98B0A8B42125AE3B000F44B4 /* Daos */,
-				988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9863384921429A5300E8B95A /* IAPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				9863384C21429ABB00E8B95A /* IAPurchaseVC.swift */,
+			);
+			path = IAPurchase;
 			sourceTree = "<group>";
 		};
 		98685F332126A92900DA327D /* Enums */ = {
@@ -1200,6 +1203,7 @@
 		98DEFC8820FDC26200DC32BB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9863384921429A5300E8B95A /* IAPurchase */,
 				98CB8A2A2136BC1200C6944F /* NotImplementedYet */,
 				98301E4C212C76C700432C84 /* Statistics */,
 				9898A5EC212C20F6003EAAFF /* ListVerbs */,
@@ -2066,7 +2070,6 @@
 				9815F7A4213D073000248968 /* IAPProducts.swift in Sources */,
 				98B53B70212F10B000565C53 /* BasicButton.swift in Sources */,
 				9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */,
-				9815F7A6213D074F00248968 /* IAPService.swift in Sources */,
 				988DB91F2126954900AFAEF4 /* VerbDAO.swift in Sources */,
 				98DEFC8E20FE27EE00DC32BB /* ReviewVerbsVC.swift in Sources */,
 				98DEFC8C20FDC33200DC32BB /* AddVerbsCV.swift in Sources */,
@@ -2076,6 +2079,7 @@
 				98C9834D20F750820080B08C /* ViewController.swift in Sources */,
 				98685F7A212744F900DA327D /* SetUpDatabase.swift in Sources */,
 				988442402133834700D9661B /* Sequence.swift in Sources */,
+				9863384D21429ABB00E8B95A /* IAPurchaseVC.swift in Sources */,
 				98DEFC8720FDC25400DC32BB /* MainVC.swift in Sources */,
 				98C9834B20F750820080B08C /* AppDelegate.swift in Sources */,
 				986DD439213063A4000E5E49 /* UIColor.swift in Sources */,

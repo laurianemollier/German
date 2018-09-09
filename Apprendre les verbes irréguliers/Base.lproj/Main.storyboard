@@ -609,7 +609,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5a-EN-FAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2489" y="1271"/>
+            <point key="canvasLocation" x="2249" y="1433"/>
         </scene>
         <!--List VerbsVC-->
         <scene sceneID="mwm-8U-ADG">
@@ -814,7 +814,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zh-fI-bF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="931"/>
+            <point key="canvasLocation" x="305" y="997"/>
+        </scene>
+        <!--PurchaseVC-->
+        <scene sceneID="W0h-xp-6Nk">
+            <objects>
+                <viewController id="JMN-Zr-BPp" customClass="IAPurchaseVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kn2-IF-BEf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAy-GT-5ws">
+                                <rect key="frame" x="44" y="467" width="233" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="restore:" destination="JMN-Zr-BPp" eventType="touchUpInside" id="Gev-o3-Oa0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-kB-nvZ">
+                                <rect key="frame" x="44" y="169" width="233" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buyWholeApp:" destination="JMN-Zr-BPp" eventType="touchUpInside" id="Alh-4I-USL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OG3-RP-Sig"/>
+                    </view>
+                    <connections>
+                        <outlet property="buyWholeAppButton" destination="Xzp-kB-nvZ" id="8gX-zb-y0J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6P-K7-eVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="557.27136431784118"/>
         </scene>
         <!--Review VerbsVC-->
         <scene sceneID="Tq2-Ze-ZdV">

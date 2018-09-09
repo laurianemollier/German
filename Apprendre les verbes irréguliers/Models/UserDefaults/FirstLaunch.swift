@@ -17,7 +17,7 @@ final class FirstLaunch {
     let isFirstLaunch: Bool
     
     init() {
-        let key = "com.any-suggestion.FirstLaunch.WasLaunchedBefore" //TODO
+        let key = "org.lauriane-mollier.irregular-verbs.german" + "wasLaunchedBefore"
         let wasLaunchedBefore = userDefaults.bool(forKey: key)
         self.wasLaunchedBefore = wasLaunchedBefore
         self.isFirstLaunch = !wasLaunchedBefore

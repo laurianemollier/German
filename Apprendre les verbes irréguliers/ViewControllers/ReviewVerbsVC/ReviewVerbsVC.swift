@@ -12,7 +12,7 @@ import AVFoundation
 
 class ReviewVerbsVC: UIViewController {
     
-    var audioPlayer = AVAudioPlayer()
+    var audioPlayer: AVAudioPlayer?
 
     var index: Int = 0
     var verbsToReview: [UserLearningVerb]!
@@ -190,7 +190,6 @@ class ReviewVerbsVC: UIViewController {
         if self.isCardForward{
             flipCard(visible: self.forwarCard, notVisibleYet: self.backwardCard)
             self.isCardForward = false
-            SpeedLog.print(Audio.shared.isOn())
             if Audio.shared.isOn(){
                 audioPlay(verb: self.currentVerb().verb)
             }
@@ -280,8 +279,8 @@ class ReviewVerbsVC: UIViewController {
             let nameAudioFile = verb.infinitive()
             let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: formatAudio)!)
             audioPlayer = try! AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
-            audioPlayer.play()
-            audioPlayer.numberOfLoops = 0
+            audioPlayer!.play()
+            audioPlayer!.numberOfLoops = 0
 
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
         }
@@ -293,8 +292,8 @@ class ReviewVerbsVC: UIViewController {
     
     
     private func audioStop(){
-        if audioPlayer.isPlaying{
-            audioPlayer.stop()
+        if audioPlayer != nil && audioPlayer!.isPlaying{
+            audioPlayer!.stop()
         }
     }
 
