@@ -46,8 +46,13 @@ class IAPurchaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadProduct()
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.buyWholeAppButton.setUp()
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,9 +79,9 @@ class IAPurchaseVC: UIViewController {
     
     
     
-    @IBOutlet var buyWholeAppButton: UIButton!
+    @IBOutlet var buyWholeAppButton: PurchaseUIButton!
     
-    @IBAction func buyWholeApp(_ sender: UIButton) {
+    @IBAction func buyWholeApp(_ sender: PurchaseUIButton) {
         IAProducts.store.buyProduct(self.wholeAppProduct!)
     }
     

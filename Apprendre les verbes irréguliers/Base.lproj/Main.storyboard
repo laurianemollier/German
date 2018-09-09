@@ -825,23 +825,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAy-GT-5ws">
-                                <rect key="frame" x="44" y="467" width="233" height="42"/>
+                                <rect key="frame" x="44" y="385" width="233" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="restore:" destination="JMN-Zr-BPp" eventType="touchUpInside" id="Gev-o3-Oa0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-kB-nvZ">
-                                <rect key="frame" x="44" y="169" width="233" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-kB-nvZ" customClass="PurchaseUIButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="99" width="300" height="178.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7Lq-tm-VGB"/>
+                                    <constraint firstAttribute="width" secondItem="Xzp-kB-nvZ" secondAttribute="height" multiplier="168:100" id="wWW-rr-fVY"/>
+                                </constraints>
+                                <state key="normal" title="Avoir access à tous les verbes" image="IPA Price Card Backgourd 1"/>
                                 <connections>
                                     <action selector="buyWholeApp:" destination="JMN-Zr-BPp" eventType="touchUpInside" id="Alh-4I-USL"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.85098039219999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xzp-kB-nvZ" firstAttribute="top" secondItem="OG3-RP-Sig" secondAttribute="top" constant="79" id="BhY-Z4-qLJ"/>
+                            <constraint firstItem="Xzp-kB-nvZ" firstAttribute="centerX" secondItem="kn2-IF-BEf" secondAttribute="centerX" id="z1y-S0-h02"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OG3-RP-Sig"/>
                     </view>
                     <connections>
@@ -1075,6 +1082,7 @@
         <image name="AVStepperPlus" width="126" height="126"/>
         <image name="AVStepperPlusSelected" width="126" height="126"/>
         <image name="Blond Girl" width="248" height="687"/>
+        <image name="IPA Price Card Backgourd 1" width="450" height="255"/>
         <image name="NavBack" width="55" height="55"/>
         <image name="RVTurnButton" width="113" height="113"/>
         <image name="RedCircle" width="337" height="337"/>
