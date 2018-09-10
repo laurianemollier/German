@@ -23,16 +23,21 @@ class IAPurchaseVC: UIViewController {
         return formatter
     }()
     
-    
-
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.priceFormatter.locale = self.wholeAppProduct.priceLocale
         let price = self.priceFormatter.string(from: self.wholeAppProduct.price)
         self.buyWholeAppButton.setUp(price: price!)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(IAPurchaseVC.handlePurchaseNotification(_:)),
+                                               name: .IAPHelperPurchaseNotification,
+                                               object: nil)
+        
+    }
+    
+    @objc func handlePurchaseNotification(_ notification: Notification) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

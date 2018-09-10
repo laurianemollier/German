@@ -16,6 +16,7 @@
 		98301E5F212C7C2B00432C84 /* VerbCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E5E212C7C2B00432C84 /* VerbCardView.swift */; };
 		983B2495211C4A0C009C33B1 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2494211C4A0C009C33B1 /* Verb.swift */; };
 		983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2496211C6A4B009C33B1 /* Verbs.swift */; };
+		98483A1B214587A600AF7115 /* SelectLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98483A1A214587A600AF7115 /* SelectLevelVC.swift */; };
 		9863384821425A7900E8B95A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9804A8C0213E445700B630A1 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		9863384D21429ABB00E8B95A /* IAPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9863384C21429ABB00E8B95A /* IAPurchaseVC.swift */; };
 		9863384F2144FAC100E8B95A /* PurchaseUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9863384E2144FAC100E8B95A /* PurchaseUIButton.swift */; };
@@ -490,6 +491,7 @@
 		98301E5E212C7C2B00432C84 /* VerbCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbCardView.swift; sourceTree = "<group>"; };
 		983B2494211C4A0C009C33B1 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
 		983B2496211C6A4B009C33B1 /* Verbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verbs.swift; sourceTree = "<group>"; };
+		98483A1A214587A600AF7115 /* SelectLevelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLevelVC.swift; sourceTree = "<group>"; };
 		9863384C21429ABB00E8B95A /* IAPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPurchaseVC.swift; sourceTree = "<group>"; };
 		9863384E2144FAC100E8B95A /* PurchaseUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseUIButton.swift; sourceTree = "<group>"; };
 		98685F342126BA4900DA327D /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
@@ -1065,6 +1067,7 @@
 				98DEFC8B20FDC33200DC32BB /* AddVerbsCV.swift */,
 				98B01513212474670090006E /* LevelCheckBox.swift */,
 				98B01515212478880090006E /* LevelCheckBox.xib */,
+				98483A1A214587A600AF7115 /* SelectLevelVC.swift */,
 			);
 			path = AddVerbsCV;
 			sourceTree = "<group>";
@@ -2069,6 +2072,7 @@
 				98685F372126BA6100DA327D /* Form.swift in Sources */,
 				98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */,
 				9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */,
+				98483A1B214587A600AF7115 /* SelectLevelVC.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */,
 				9815F7A4213D073000248968 /* IAPProducts.swift in Sources */,
 				98B53B70212F10B000565C53 /* BasicButton.swift in Sources */,

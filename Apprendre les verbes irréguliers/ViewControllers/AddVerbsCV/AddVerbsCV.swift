@@ -63,13 +63,12 @@ class AddVerbsCV: UIViewController {
             // TODO: can not make payement
             SpeedLog.print("TODO: can not make payement")
         }
-
     }
     
     private func addVerb(){
         let selectedLevels = self.selectedLevels()
         if selectedLevels.isEmpty{
-            // TODO: No level has been selected
+            performSegue(withIdentifier: "SelectLevelSeque", sender: nil)
         }else{
             do{
                 try DbUserLearningVerbDAOImpl.shared.addRandomVerbToReviewList(ofLevel: selectedLevels, nbr: self.nbrRandomVerb)
