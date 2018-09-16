@@ -82,7 +82,7 @@ enum UserProgression: String {
         case UserProgression.level8:
             return "Optimal"
         case UserProgression.notSeenYet:
-            return "Pas encore revu"
+            return "Pas encore revu(s)"
         default:
             return nil
         }

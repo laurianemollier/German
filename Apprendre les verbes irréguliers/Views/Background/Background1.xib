@@ -29,7 +29,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="iWo-ET-ElI">
                     <rect key="frame" x="0.0" y="632" width="414" height="104"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="104" id="IIJ-pt-hCv"/>
                         <constraint firstAttribute="height" constant="104" id="QFJ-NB-ubg"/>
                     </constraints>
                 </imageView>

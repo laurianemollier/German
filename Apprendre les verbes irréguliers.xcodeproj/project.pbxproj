@@ -391,6 +391,8 @@
 		98DEFF0420FF241600DC32BB /* ziehen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98DEFDCD20FF241600DC32BB /* ziehen.mp3 */; };
 		98DEFF0520FF241600DC32BB /* einfallen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98DEFDCE20FF241600DC32BB /* einfallen.mp3 */; };
 		98DEFF0620FF241600DC32BB /* erscheinen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98DEFDCF20FF241600DC32BB /* erscheinen.mp3 */; };
+		98EA96A5214E68640034B360 /* Background3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA96A4214E68640034B360 /* Background3.swift */; };
+		98EA96A7214E68720034B360 /* Background3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98EA96A6214E68720034B360 /* Background3.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -872,6 +874,8 @@
 		98DEFDCD20FF241600DC32BB /* ziehen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ziehen.mp3; sourceTree = "<group>"; };
 		98DEFDCE20FF241600DC32BB /* einfallen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = einfallen.mp3; sourceTree = "<group>"; };
 		98DEFDCF20FF241600DC32BB /* erscheinen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = erscheinen.mp3; sourceTree = "<group>"; };
+		98EA96A4214E68640034B360 /* Background3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background3.swift; sourceTree = "<group>"; };
+		98EA96A6214E68720034B360 /* Background3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Background3.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1139,6 +1143,8 @@
 				98B53B76212F223A00565C53 /* Background1.swift */,
 				98B53B78212F24B500565C53 /* Background2.swift */,
 				98B53B7A212F24C800565C53 /* Background2.xib */,
+				98EA96A4214E68640034B360 /* Background3.swift */,
+				98EA96A6214E68720034B360 /* Background3.xib */,
 			);
 			path = Background;
 			sourceTree = "<group>";
@@ -1926,6 +1932,7 @@
 				98DEFEEF20FF241600DC32BB /* beibringen.mp3 in Resources */,
 				98DEFE0620FF241600DC32BB /* werden.mp3 in Resources */,
 				98DEFF0620FF241600DC32BB /* erscheinen.mp3 in Resources */,
+				98EA96A7214E68720034B360 /* Background3.xib in Resources */,
 				98DEFE5D20FF241600DC32BB /* stehen.mp3 in Resources */,
 				98B53B69212E96A900565C53 /* ROBOTOSLAB-BOLD_0.TTF in Resources */,
 				98DEFE4B20FF241600DC32BB /* streichen.mp3 in Resources */,
@@ -2082,6 +2089,7 @@
 				98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */,
 				9815F7A4213D073000248968 /* IAPProducts.swift in Sources */,
 				98B53B70212F10B000565C53 /* BasicButton.swift in Sources */,
+				98EA96A5214E68640034B360 /* Background3.swift in Sources */,
 				9863384F2144FAC100E8B95A /* PurchaseUIButton.swift in Sources */,
 				9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */,
 				988DB91F2126954900AFAEF4 /* VerbDAO.swift in Sources */,
