@@ -51,6 +51,8 @@
 		9898A5D4212AE2D7003EAAFF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5D3212AE2D7003EAAFF /* Array.swift */; };
 		9898A5EE212C2151003EAAFF /* ListVerbsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5ED212C2151003EAAFF /* ListVerbsTVCell.swift */; };
 		9898A5F0212C2C1C003EAAFF /* ListVerbsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5EF212C2C1C003EAAFF /* ListVerbsVC.swift */; };
+		98A511D0214AFA80001107D9 /* BoughtIAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A511CF214AFA80001107D9 /* BoughtIAPProducts.swift */; };
+		98A511D8214AFD55001107D9 /* NetworkActivityIndicatorManagment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A511D7214AFD55001107D9 /* NetworkActivityIndicatorManagment.swift */; };
 		98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0150E2122AA3B0090006E /* UserProgression.swift */; };
 		98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0151021244C9F0090006E /* UserLearningVerb.swift */; };
 		98B01514212474670090006E /* LevelCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B01513212474670090006E /* LevelCheckBox.swift */; };
@@ -524,6 +526,8 @@
 		9898A5D3212AE2D7003EAAFF /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		9898A5ED212C2151003EAAFF /* ListVerbsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVerbsTVCell.swift; sourceTree = "<group>"; };
 		9898A5EF212C2C1C003EAAFF /* ListVerbsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVerbsVC.swift; sourceTree = "<group>"; };
+		98A511CF214AFA80001107D9 /* BoughtIAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtIAPProducts.swift; sourceTree = "<group>"; };
+		98A511D7214AFD55001107D9 /* NetworkActivityIndicatorManagment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManagment.swift; sourceTree = "<group>"; };
 		98B0150E2122AA3B0090006E /* UserProgression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgression.swift; sourceTree = "<group>"; };
 		98B0151021244C9F0090006E /* UserLearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLearningVerb.swift; sourceTree = "<group>"; };
 		98B01513212474670090006E /* LevelCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCheckBox.swift; sourceTree = "<group>"; };
@@ -900,8 +904,8 @@
 		9815F7A2213D071E00248968 /* InAppPurshase */ = {
 			isa = PBXGroup;
 			children = (
-				9815F7A3213D073000248968 /* IAPProducts.swift */,
 				9815F7A7213D09DF00248968 /* IAPHelper.swift */,
+				9815F7A3213D073000248968 /* IAPProducts.swift */,
 			);
 			path = InAppPurshase;
 			sourceTree = "<group>";
@@ -911,6 +915,7 @@
 			children = (
 				9829D4B821416E5F0004FCB3 /* Audio.swift */,
 				988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */,
+				98A511CF214AFA80001107D9 /* BoughtIAPProducts.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -1216,6 +1221,7 @@
 				98685F7B2129652800DA327D /* ReviewVerbsVC */,
 				98B01512212473D70090006E /* AddVerbsCV */,
 				98DEFC8620FDC25400DC32BB /* MainVC.swift */,
+				98A511D7214AFD55001107D9 /* NetworkActivityIndicatorManagment.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -2102,12 +2108,14 @@
 				98685F742127161200DA327D /* DbUserLearningVerbDAO.swift in Sources */,
 				988DB9152125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift in Sources */,
 				988DB9132125C08900AFAEF4 /* DbVerbTranslationDAO.swift in Sources */,
+				98A511D0214AFA80001107D9 /* BoughtIAPProducts.swift in Sources */,
 				98685F782127173800DA327D /* DbUserLearningVerb.swift in Sources */,
 				98B53B79212F24B500565C53 /* Background2.swift in Sources */,
 				98B01514212474670090006E /* LevelCheckBox.swift in Sources */,
 				9898A5F0212C2C1C003EAAFF /* ListVerbsVC.swift in Sources */,
 				9897DBF9213B5EE000F0851E /* EdgeInsetLabel.swift in Sources */,
 				9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */,
+				98A511D8214AFD55001107D9 /* NetworkActivityIndicatorManagment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

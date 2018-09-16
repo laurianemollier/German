@@ -34,11 +34,20 @@ class IAPurchaseVC: UIViewController {
                                                name: .IAPHelperPurchaseNotification,
                                                object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(IAPurchaseVC.handleFailNotification(_:)),
+                                               name: .IAPHelperFailNotification,
+                                               object: nil)
     }
     
     @objc func handlePurchaseNotification(_ notification: Notification) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @objc func handleFailNotification(_ notification: Notification) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -50,33 +59,48 @@ class IAPurchaseVC: UIViewController {
     }
     
     
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
     @IBOutlet var buyWholeAppButton: PurchaseUIButton!
     
     @IBAction func buyWholeApp(_ sender: PurchaseUIButton) {
+        displayWait()
         IAProducts.store.buyProduct(self.wholeAppProduct!)
     }
     
     
     @IBAction func restore(_ sender: UIButton) {
+//        displayWait()
         IAProducts.store.restorePurchases()
     }
     
     
     @IBAction func close(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    public func displayWait(){
+
+        // TODO
+        let alert = UIAlertController(title: nil, message: "Patientez...", preferredStyle: .alert)
+        
+        alert.view.tintColor = UIColor.black
+        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x:10, y:5, width: 50, height: 50)) as UIActivityIndicatorView
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+        
         
     }
+    
+    public func hideWait(){
+        dismiss(animated: false, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

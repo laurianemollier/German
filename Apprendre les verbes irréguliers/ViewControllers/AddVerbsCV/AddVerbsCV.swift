@@ -52,16 +52,32 @@ class AddVerbsCV: UIViewController {
     
     
     @IBAction func addRamdomly(_ sender: BasicButton) {
-        if self.wholeAppProduct == nil{
-            // Make a future
-            SpeedLog.print("TODO: Make a future")
-        } else if IAProducts.store.isProductPurchased(self.wholeAppProduct!.productIdentifier) {
+        if self.wholeAppProduct == nil && BoughtIAPProducts.shared.isBought(productIdentifier: IAProducts.wholeApp){
+            addVerb()
+        } else if self.wholeAppProduct == nil && !NetworkActivityIndicatorManagment.isInternetAvailable() {
+            // Internet is not available
+            // TODO
+            let alert = UIAlertController(title: "Pas de connection internet",
+                                          message: "Cette partie de l'application requiert une connection à l'AppStore", preferredStyle: .alert)
+            
+            let clearAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(clearAction)
+            present(alert, animated: true, completion: nil)
+            
+        } else if self.wholeAppProduct == nil{
+            // It has to wait for the product
+        } else if self.wholeAppProduct != nil && IAProducts.store.isProductPurchased(self.wholeAppProduct!.productIdentifier) {
             addVerb()
         } else if IAPHelper.canMakePayments() {
             performSegue(withIdentifier: "IAPurchasesSegue", sender: nil)
-        } else { // can NOT make payement
-            // TODO: can not make payement
-            SpeedLog.print("TODO: can not make payement")
+        } else {
+            // can NOT make payement
+            // TODO
+            let alert = UIAlertController(title: "Permission refusée", message: "Si vous voyez cette page, s'il vous plaît contactez nous. L'AppStore devrait authorisé toute personne de 4 ans et plus", preferredStyle: .alert)
+            
+            let clearAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(clearAction)
+            present(alert, animated: true, completion:nil)
         }
     }
     
@@ -136,7 +152,7 @@ class AddVerbsCV: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "IAPurchasesSegue" {
             let vc = segue.destination as! IAPurchaseVC
-            vc.wholeAppProduct = self.wholeAppProduct
+            vc.wholeAppProduct = self.wholeAppProduct!
             vc.products = self.products
         }
 
