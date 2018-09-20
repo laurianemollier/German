@@ -34,7 +34,7 @@ class PurchaseUIButton: UIButton {
         priceLabel.frame = CGRect(x: imgX + imgXOffset, y: 0, width: imgWidth - imgXOffset, height: imgHeight - imgYOffset)
         priceLabel.text = price
         priceLabel.textAlignment = .center
-        priceLabel.font = UIFont.appBoldFontWith(size: 23)
+        priceLabel.font = UIFont.appBoldFontWith(size: 12)
         
         self.addSubview(priceLabel)
         
