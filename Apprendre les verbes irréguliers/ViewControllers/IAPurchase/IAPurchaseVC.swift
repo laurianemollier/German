@@ -40,6 +40,7 @@ class IAPurchaseVC: UIViewController {
     }
     
     @objc func handlePurchaseNotification(_ notification: Notification) {
+        hideWait()
         dismiss(animated: true, completion: nil)
     }
     

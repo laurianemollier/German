@@ -52,7 +52,10 @@ class AddVerbsCV: UIViewController {
     
     
     @IBAction func addRamdomly(_ sender: BasicButton) {
-        if self.wholeAppProduct == nil && BoughtIAPProducts.shared.isBought(productIdentifier: IAProducts.wholeApp){
+        let selectedLevels = self.selectedLevels()
+        if selectedLevels.isEmpty{
+            performSegue(withIdentifier: "SelectLevelSeque", sender: nil)
+        }else if self.wholeAppProduct == nil && BoughtIAPProducts.shared.isBought(productIdentifier: IAProducts.wholeApp){
             addVerb()
         } else if self.wholeAppProduct == nil && !NetworkActivityIndicatorManagment.isInternetAvailable() {
             // Internet is not available
@@ -118,6 +121,10 @@ class AddVerbsCV: UIViewController {
         return selectedLevels
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        loadProduct() // purchases
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
