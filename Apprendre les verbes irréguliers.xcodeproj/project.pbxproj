@@ -1075,7 +1075,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		98B01512212473D70090006E /* AddVerbsCV */ = {
+		98B01512212473D70090006E /* AddVerbsVC */ = {
 			isa = PBXGroup;
 			children = (
 				98DEFC8B20FDC33200DC32BB /* AddVerbsCV.swift */,
@@ -1083,7 +1083,7 @@
 				98B01515212478880090006E /* LevelCheckBox.xib */,
 				98483A1A214587A600AF7115 /* SelectLevelVC.swift */,
 			);
-			path = AddVerbsCV;
+			path = AddVerbsVC;
 			sourceTree = "<group>";
 		};
 		98B0A8AA212557F1000F44B4 /* Frameworks */ = {
@@ -1230,7 +1230,7 @@
 				98301E4C212C76C700432C84 /* Statistics */,
 				9898A5EC212C20F6003EAAFF /* ListVerbs */,
 				98685F7B2129652800DA327D /* ReviewVerbsVC */,
-				98B01512212473D70090006E /* AddVerbsCV */,
+				98B01512212473D70090006E /* AddVerbsVC */,
 				98DEFC8620FDC25400DC32BB /* MainVC.swift */,
 				98A511D7214AFD55001107D9 /* NetworkActivityIndicatorManagment.swift */,
 			);
