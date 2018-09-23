@@ -47,7 +47,6 @@
 		9897DBF9213B5EE000F0851E /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897DBF8213B5EE000F0851E /* EdgeInsetLabel.swift */; };
 		9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5D1212AC6DA003EAAFF /* Date.swift */; };
 		9898A5D4212AE2D7003EAAFF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5D3212AE2D7003EAAFF /* Array.swift */; };
-		9898A5EE212C2151003EAAFF /* ListVerbsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5ED212C2151003EAAFF /* ListVerbsTVCell.swift */; };
 		9898A5F0212C2C1C003EAAFF /* ListVerbsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5EF212C2C1C003EAAFF /* ListVerbsVC.swift */; };
 		989DF6C821536ED300931F50 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 989DF6BB21536EBE00931F50 /* SQLite.framework */; };
 		989DF6C921536EDB00931F50 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 989DF6BB21536EBE00931F50 /* SQLite.framework */; };
@@ -394,6 +393,8 @@
 		98DEFF0620FF241600DC32BB /* erscheinen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98DEFDCF20FF241600DC32BB /* erscheinen.mp3 */; };
 		98EA96A5214E68640034B360 /* Background3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA96A4214E68640034B360 /* Background3.swift */; };
 		98EA96A7214E68720034B360 /* Background3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98EA96A6214E68720034B360 /* Background3.xib */; };
+		98F2F7A521579062007AB342 /* ListVerbsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F2F7A321579062007AB342 /* ListVerbsCell.swift */; };
+		98F2F7A621579062007AB342 /* ListVerbsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98F2F7A421579062007AB342 /* ListVerbsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -526,7 +527,6 @@
 		9897DBF8213B5EE000F0851E /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		9898A5D1212AC6DA003EAAFF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9898A5D3212AE2D7003EAAFF /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		9898A5ED212C2151003EAAFF /* ListVerbsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVerbsTVCell.swift; sourceTree = "<group>"; };
 		9898A5EF212C2C1C003EAAFF /* ListVerbsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVerbsVC.swift; sourceTree = "<group>"; };
 		989DF6B021536EBE00931F50 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "Apprendre les verbes irréguliers/Download Frameworks/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		98A511CF214AFA80001107D9 /* BoughtIAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtIAPProducts.swift; sourceTree = "<group>"; };
@@ -877,6 +877,8 @@
 		98DEFDCF20FF241600DC32BB /* erscheinen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = erscheinen.mp3; sourceTree = "<group>"; };
 		98EA96A4214E68640034B360 /* Background3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background3.swift; sourceTree = "<group>"; };
 		98EA96A6214E68720034B360 /* Background3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Background3.xib; sourceTree = "<group>"; };
+		98F2F7A321579062007AB342 /* ListVerbsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVerbsCell.swift; sourceTree = "<group>"; };
+		98F2F7A421579062007AB342 /* ListVerbsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListVerbsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1052,8 +1054,9 @@
 		9898A5EC212C20F6003EAAFF /* ListVerbs */ = {
 			isa = PBXGroup;
 			children = (
-				9898A5ED212C2151003EAAFF /* ListVerbsTVCell.swift */,
 				9898A5EF212C2C1C003EAAFF /* ListVerbsVC.swift */,
+				98F2F7A321579062007AB342 /* ListVerbsCell.swift */,
+				98F2F7A421579062007AB342 /* ListVerbsCell.xib */,
 			);
 			path = ListVerbs;
 			sourceTree = "<group>";
@@ -1954,6 +1957,7 @@
 				98DEFE4020FF241600DC32BB /* abnehmen.mp3 in Resources */,
 				98DEFE9620FF241600DC32BB /* schlafen.mp3 in Resources */,
 				98DEFED820FF241600DC32BB /* beziehen (sich).mp3 in Resources */,
+				98F2F7A621579062007AB342 /* ListVerbsCell.xib in Resources */,
 				98DEFEF920FF241600DC32BB /* angeben.mp3 in Resources */,
 				98DEFEC920FF241600DC32BB /* wringen.mp3 in Resources */,
 				98C9835220F750840080B08C /* Assets.xcassets in Resources */,
@@ -2097,7 +2101,7 @@
 				988DB91F2126954900AFAEF4 /* VerbDAO.swift in Sources */,
 				98DEFC8E20FE27EE00DC32BB /* ReviewVerbsVC.swift in Sources */,
 				98DEFC8C20FDC33200DC32BB /* AddVerbsCV.swift in Sources */,
-				9898A5EE212C2151003EAAFF /* ListVerbsTVCell.swift in Sources */,
+				98F2F7A521579062007AB342 /* ListVerbsCell.swift in Sources */,
 				98685F7D212965E600DA327D /* ForwarCardVC.swift in Sources */,
 				988DB91D2125C92700AFAEF4 /* Database.swift in Sources */,
 				98C9834D20F750820080B08C /* ViewController.swift in Sources */,

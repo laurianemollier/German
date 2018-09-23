@@ -1,16 +1,29 @@
 //
-//  ListVerbsTVCell.swift
+//  ListVerbsCell.swift
 //  Apprendre les verbes irréguliers
 //
-//  Created by Lauriane Mollier on 21/08/2018.
+//  Created by Lauriane Mollier on 23/09/2018.
 //  Copyright © 2018 Lauriane Mollier. All rights reserved.
 //
 
 import UIKit
 
-class ListVerbsTVCell: UITableViewCell {
+class ListVerbsCell: UITableViewCell {
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+    
+    
     var userLearningVerb: UserLearningVerb!
+    
     
     @IBOutlet var conainerView: UIView!
     @IBOutlet weak var infinitiveLabel: UILabel!
@@ -21,11 +34,19 @@ class ListVerbsTVCell: UITableViewCell {
     @IBOutlet weak var simplePastLabel: UILabel!
     @IBOutlet weak var pastParticipleLabel: UILabel!
     
-    
-    
-    @IBOutlet weak var informationLabel: UILabel!
-    
 
+    @IBOutlet weak var informationLabel: UILabel!
+
+    
+    func loadViewFromNib() -> UIView! {
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIButton
+        
+        return view
+    }
+    
+    
     func setUp(userLearningVerb: UserLearningVerb){
         self.userLearningVerb = userLearningVerb
         self.infinitiveLabel.text = userLearningVerb.verb.infinitive()
@@ -42,7 +63,7 @@ class ListVerbsTVCell: UITableViewCell {
         else{
             self.informationLabel.isHidden = false
         }
-
+        
         self.conainerView.layer.cornerRadius = 7
         self.informationLabel.layer.cornerRadius = 5
         self.informationLabel.layer.borderWidth = 1
@@ -51,18 +72,6 @@ class ListVerbsTVCell: UITableViewCell {
     }
     
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
-    
-    
-
 }

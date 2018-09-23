@@ -23,6 +23,8 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         self.currentLearningVerbs = self.learningVerbs
         alterLayout()
 
+        let nibName = UINib(nibName: "ListVerbsCell", bundle: nil)
+        table.register(nibName, forCellReuseIdentifier: "listVerbsCell")
         // Do any additional setup after loading the view.
     }
     
@@ -56,8 +58,8 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "listVerbsTVCell") as? ListVerbsTVCell else {
-            SpeedLog.print("The id 'listVerbsTVCell' can not be found")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "listVerbsCell") as? ListVerbsCell else {
+            SpeedLog.print("The id 'listVerbsCell' can not be found")
             return UITableViewCell()
         }
         cell.setUp(userLearningVerb: self.currentLearningVerbs[indexPath.row])
