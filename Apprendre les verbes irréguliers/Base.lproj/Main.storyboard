@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad10_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,9 +13,6 @@
         <array key="ROBOTOSLAB-BOLD_0.TTF">
             <string>RobotoSlab-Bold</string>
         </array>
-        <array key="ROBOTOSLAB-REGULAR_0.TTF">
-            <string>RobotoSlab-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--MainVC-->
@@ -23,11 +20,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="RF3-L8-fGt">
-                                <rect key="frame" x="0.0" y="952" width="834" height="160"/>
+                                <rect key="frame" x="0.0" y="464" width="320" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="N49-M4-wn4">
                                         <variation key="heightClass=regular-widthClass=regular" constant="160"/>
@@ -35,29 +32,23 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="UbU-pG-PKX">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="831"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="620" id="JQL-iV-yy2">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="870"/>
-                                    </constraint>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="kpn-cL-bza"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="364"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blond Girl" translatesAutoresizingMaskIntoConstraints="NO" id="qJU-sA-Uwx">
-                                <rect key="frame" x="0.0" y="425" width="248" height="687"/>
+                                <rect key="frame" x="0.0" y="258" width="112" height="310"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qJU-sA-Uwx" secondAttribute="height" multiplier="248:687" id="9Ea-4K-Et8"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="RedCircle" translatesAutoresizingMaskIntoConstraints="NO" id="YOq-Gm-KaQ">
-                                <rect key="frame" x="267" y="42" width="300" height="284.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedCircle" translatesAutoresizingMaskIntoConstraints="NO" id="YOq-Gm-KaQ">
+                                <rect key="frame" x="84.5" y="42" width="151.5" height="151.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="ErX-Sv-lls"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="ErX-Sv-lls"/>
                                     <constraint firstAttribute="width" secondItem="YOq-Gm-KaQ" secondAttribute="height" multiplier="1:1" id="bnS-c9-aXv"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qI7-Oi-uEl">
-                                <rect key="frame" x="290.5" y="92" width="253" height="237.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qI7-Oi-uEl">
+                                <rect key="frame" x="95" y="66.5" width="130" height="130"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qI7-Oi-uEl" secondAttribute="height" multiplier="1:1" id="Ldw-hs-mT0"/>
@@ -76,7 +67,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-2v-K4O" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="217" y="850" width="400" height="60"/>
+                                <rect key="frame" x="17.5" y="363" width="285" height="47"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="0c8-Go-8ne">
@@ -94,7 +85,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpo-FS-QOa" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="217" y="931" width="400" height="60"/>
+                                <rect key="frame" x="17.5" y="422" width="285" height="47"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -104,7 +95,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-tk-Ael" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="217" y="1012" width="400" height="60"/>
+                                <rect key="frame" x="17.5" y="481" width="285" height="47"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,7 +105,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verbs to review over 200 in your review list" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-Or-w8O">
-                                <rect key="frame" x="203" y="392.5" width="428.5" height="55.5"/>
+                                <rect key="frame" x="23.5" y="213.5" width="273.5" height="55.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55.5" id="Mzt-NV-Zsy"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="atu-V0-IJs"/>
@@ -124,7 +115,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCs-oc-s80" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="307" y="465" width="220" height="60"/>
+                                <rect key="frame" x="77" y="286" width="166" height="47"/>
                                 <color key="backgroundColor" red="1" green="0.80784313730000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="166" id="tQM-QE-o8S">
@@ -155,7 +146,7 @@
                             <constraint firstItem="Ogy-tk-Ael" firstAttribute="width" secondItem="q8d-2v-K4O" secondAttribute="width" id="IOl-qr-zT1"/>
                             <constraint firstItem="Mpo-FS-QOa" firstAttribute="width" secondItem="q8d-2v-K4O" secondAttribute="width" id="K4y-kG-H30"/>
                             <constraint firstAttribute="bottom" secondItem="RF3-L8-fGt" secondAttribute="bottom" id="KbJ-y5-Rhy"/>
-                            <constraint firstItem="RF3-L8-fGt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="UbU-pG-PKX" secondAttribute="bottom" constant="30" id="KlK-hm-HB5">
+                            <constraint firstItem="RF3-L8-fGt" firstAttribute="top" secondItem="UbU-pG-PKX" secondAttribute="bottom" constant="100" id="KlK-hm-HB5">
                                 <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                             </constraint>
                             <constraint firstItem="q8d-2v-K4O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MZx-tP-dbK"/>
@@ -185,7 +176,7 @@
                             <constraint firstItem="jCs-oc-s80" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oTE-bt-Dea"/>
                             <constraint firstItem="UbU-pG-PKX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uol-yF-GzO"/>
                             <constraint firstItem="9c9-Or-w8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vaC-6D-bqe"/>
-                            <constraint firstItem="qI7-Oi-uEl" firstAttribute="top" relation="lessThanOrEqual" secondItem="YOq-Gm-KaQ" secondAttribute="top" constant="50" id="w6Z-9H-mRs"/>
+                            <constraint firstItem="qI7-Oi-uEl" firstAttribute="top" relation="lessThanOrEqual" secondItem="YOq-Gm-KaQ" secondAttribute="top" constant="40" id="w6Z-9H-mRs"/>
                             <constraint firstItem="Ogy-tk-Ael" firstAttribute="top" secondItem="Mpo-FS-QOa" secondAttribute="bottom" constant="12" id="xai-vE-dzk">
                                 <variation key="heightClass=regular-widthClass=regular" constant="21"/>
                             </constraint>
@@ -218,25 +209,33 @@
             <objects>
                 <viewController id="2Lh-hZ-KKR" customClass="AddVerbsCV" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="irp-aM-dyM">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiN-lt-bhh" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="7Eq-v6-vrz">
+                                <rect key="frame" x="0.0" y="464" width="320" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="ob9-sf-Esf">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="G34-A0-QxX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="364"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AVStepperContainer" translatesAutoresizingMaskIntoConstraints="NO" id="tP2-h3-e2c">
-                                <rect key="frame" x="274.5" y="196.5" width="285" height="126.5"/>
+                                <rect key="frame" x="27" y="130" width="266" height="118"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tP2-h3-e2c" secondAttribute="height" multiplier="275:122" id="GQg-q1-0wg"/>
-                                    <constraint firstAttribute="width" constant="285" id="NHT-6o-i6K"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="118" id="eMd-cX-AFa"/>
+                                    <constraint firstAttribute="height" priority="990" constant="125.33000183105469" id="wuy-A3-KvL"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-rs-yzR">
-                                <rect key="frame" x="274.5" y="196.5" width="285" height="126.5"/>
+                                <rect key="frame" x="27" y="130" width="266" height="118"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1V-P2-sCB">
-                                        <rect key="frame" x="8" y="23" width="80" height="80"/>
+                                        <rect key="frame" x="8" y="19" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="m1V-P2-sCB" secondAttribute="height" multiplier="1:1" id="dIG-ld-7GZ"/>
                                         </constraints>
@@ -247,7 +246,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTe-EP-Aco">
-                                        <rect key="frame" x="117.5" y="51" width="50" height="24"/>
+                                        <rect key="frame" x="108" y="47" width="50" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Ck6-Ai-ypu"/>
                                         </constraints>
@@ -256,7 +255,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7R-TK-qx6">
-                                        <rect key="frame" x="197" y="23" width="80" height="80"/>
+                                        <rect key="frame" x="178" y="19" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="TMC-Id-xyB"/>
                                             <constraint firstAttribute="width" secondItem="j7R-TK-qx6" secondAttribute="height" multiplier="1:1" id="WQS-73-wDd"/>
@@ -275,16 +274,19 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De niveau de difficulté: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Er-sC-veZ">
-                                <rect key="frame" x="8" y="718.5" width="818" height="26.5"/>
+                                <rect key="frame" x="8" y="256" width="304" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="A0d-KK-xX2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djp-s6-Um0" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="332" y="1025" width="170" height="47"/>
+                                <rect key="frame" x="75" y="491" width="170" height="47"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="47" id="UHk-TN-tIL"/>
+                                    <constraint firstAttribute="height" constant="47" id="UHk-TN-tIL"/>
                                     <constraint firstAttribute="width" constant="170" id="xiV-jS-7vg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="19"/>
@@ -296,16 +298,17 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="W7T-FB-Cbv">
-                                <rect key="frame" x="304" y="765" width="226" height="206"/>
+                                <rect key="frame" x="66" y="303" width="188" height="168"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="qhb-W4-tlO">
-                                        <rect key="frame" x="0.0" y="0.0" width="226" height="94"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="75"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tb-t0-ewg" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="94" id="T6R-27-tus"/>
+                                                    <constraint firstAttribute="width" priority="998" constant="94" id="T6R-27-tus"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="WP9-dR-TQr"/>
                                                     <constraint firstAttribute="width" secondItem="3Tb-t0-ewg" secondAttribute="height" multiplier="1:1" id="abx-PH-gdc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
@@ -317,7 +320,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6O-ZH-A1a" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                <rect key="frame" x="132" y="0.0" width="94" height="94"/>
+                                                <rect key="frame" x="113" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
                                                 <state key="normal" title="B1">
@@ -335,10 +338,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="38" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AqL-Z8-1LM">
-                                        <rect key="frame" x="0.0" y="112" width="226" height="94"/>
+                                        <rect key="frame" x="0.0" y="93" width="188" height="75"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-BJ-Bfx" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="23"/>
                                                 <state key="normal" title="B2">
@@ -349,7 +352,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5L-Zd-7fP" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                                <rect key="frame" x="132" y="0.0" width="94" height="94"/>
+                                                <rect key="frame" x="113" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
                                                 <state key="normal" title="C1">
@@ -381,39 +384,48 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajoutez des verbes à la liste de révision" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEi-vF-C0L">
-                                <rect key="frame" x="82" y="40" width="717" height="26.5"/>
+                                <rect key="frame" x="82" y="40" width="218" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Syv-7n-Y5P"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.85098039215686272" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="G34-A0-QxX" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" id="0p1-Fj-ac8"/>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="width" secondItem="tP2-h3-e2c" secondAttribute="width" id="3QL-aT-ceT"/>
                             <constraint firstItem="z0g-HI-lbw" firstAttribute="trailing" secondItem="9Er-sC-veZ" secondAttribute="trailing" constant="8" id="3hQ-gz-AWj"/>
+                            <constraint firstItem="7Eq-v6-vrz" firstAttribute="top" secondItem="G34-A0-QxX" secondAttribute="bottom" constant="100" id="3ja-YC-Byx"/>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="bottom" secondItem="tP2-h3-e2c" secondAttribute="bottom" id="5lc-mM-urF"/>
+                            <constraint firstItem="Djp-s6-Um0" firstAttribute="top" secondItem="W7T-FB-Cbv" secondAttribute="bottom" priority="997" constant="53" id="Ax9-Sc-ImP"/>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="leading" secondItem="tP2-h3-e2c" secondAttribute="leading" id="CBr-0I-uAM"/>
+                            <constraint firstItem="tP2-h3-e2c" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QEi-vF-C0L" secondAttribute="bottom" constant="8" id="Elk-zp-jsn"/>
                             <constraint firstItem="RPK-Su-4NW" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" constant="25" id="FSl-yL-Q3p"/>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="trailing" secondItem="tP2-h3-e2c" secondAttribute="trailing" id="FhJ-IK-lPy"/>
                             <constraint firstItem="9Er-sC-veZ" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" constant="8" id="HsF-1v-RLX"/>
-                            <constraint firstItem="z0g-HI-lbw" firstAttribute="bottom" secondItem="Djp-s6-Um0" secondAttribute="bottom" constant="40" id="KMG-yL-OFl"/>
                             <constraint firstItem="W7T-FB-Cbv" firstAttribute="centerX" secondItem="irp-aM-dyM" secondAttribute="centerX" id="NQm-pj-HWf"/>
                             <constraint firstItem="RPK-Su-4NW" firstAttribute="top" secondItem="z0g-HI-lbw" secondAttribute="top" constant="25" id="QDR-26-axB"/>
-                            <constraint firstItem="HiN-lt-bhh" firstAttribute="trailing" secondItem="z0g-HI-lbw" secondAttribute="trailing" id="TLF-1b-yfh"/>
                             <constraint firstItem="QEi-vF-C0L" firstAttribute="leading" secondItem="RPK-Su-4NW" secondAttribute="trailing" constant="20" id="U1P-Q3-8Lj"/>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="height" secondItem="tP2-h3-e2c" secondAttribute="height" id="U6b-N3-H0Z"/>
                             <constraint firstItem="Fu0-rs-yzR" firstAttribute="top" secondItem="tP2-h3-e2c" secondAttribute="top" id="V18-gz-Kb6"/>
-                            <constraint firstItem="HiN-lt-bhh" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" id="VbN-4S-Ovv"/>
+                            <constraint firstItem="9Er-sC-veZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tP2-h3-e2c" secondAttribute="bottom" constant="8" id="VXc-kG-YEZ"/>
                             <constraint firstItem="tP2-h3-e2c" firstAttribute="centerX" secondItem="irp-aM-dyM" secondAttribute="centerX" id="XZT-Q6-cMf"/>
                             <constraint firstItem="Djp-s6-Um0" firstAttribute="centerX" secondItem="irp-aM-dyM" secondAttribute="centerX" id="YV0-jE-7mw"/>
-                            <constraint firstItem="HiN-lt-bhh" firstAttribute="top" secondItem="irp-aM-dyM" secondAttribute="top" id="ZgC-IP-CVY"/>
-                            <constraint firstItem="Djp-s6-Um0" firstAttribute="top" secondItem="W7T-FB-Cbv" secondAttribute="bottom" constant="54" id="fTr-It-kUJ"/>
+                            <constraint firstItem="tP2-h3-e2c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="z0g-HI-lbw" secondAttribute="leading" constant="27" id="cA8-iL-DtK"/>
+                            <constraint firstItem="Djp-s6-Um0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="W7T-FB-Cbv" secondAttribute="bottom" constant="20" id="fTr-It-kUJ"/>
+                            <constraint firstItem="z0g-HI-lbw" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Djp-s6-Um0" secondAttribute="bottom" constant="15" id="g0d-MH-lNf"/>
+                            <constraint firstItem="G34-A0-QxX" firstAttribute="top" secondItem="irp-aM-dyM" secondAttribute="top" id="lC4-a3-gYE"/>
+                            <constraint firstItem="G34-A0-QxX" firstAttribute="trailing" secondItem="z0g-HI-lbw" secondAttribute="trailing" id="lDi-Zn-fzI"/>
                             <constraint firstItem="W7T-FB-Cbv" firstAttribute="top" secondItem="9Er-sC-veZ" secondAttribute="bottom" constant="20" id="mNg-Un-JSx"/>
-                            <constraint firstItem="z0g-HI-lbw" firstAttribute="trailing" secondItem="QEi-vF-C0L" secondAttribute="trailing" constant="35" id="nnY-bI-hk5"/>
-                            <constraint firstItem="HiN-lt-bhh" firstAttribute="bottom" secondItem="z0g-HI-lbw" secondAttribute="bottom" id="vhU-DJ-Bqb"/>
-                            <constraint firstItem="tP2-h3-e2c" firstAttribute="top" secondItem="QEi-vF-C0L" secondAttribute="bottom" constant="37" id="xln-7d-6s5">
-                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
-                            </constraint>
+                            <constraint firstItem="z0g-HI-lbw" firstAttribute="bottom" secondItem="Djp-s6-Um0" secondAttribute="bottom" priority="998" constant="40" id="nHv-kz-9xN"/>
+                            <constraint firstItem="tP2-h3-e2c" firstAttribute="top" secondItem="QEi-vF-C0L" secondAttribute="bottom" priority="999" constant="37" id="ngJ-sz-hM5"/>
+                            <constraint firstItem="z0g-HI-lbw" firstAttribute="trailing" secondItem="QEi-vF-C0L" secondAttribute="trailing" constant="20" id="nnY-bI-hk5"/>
+                            <constraint firstItem="7Eq-v6-vrz" firstAttribute="trailing" secondItem="z0g-HI-lbw" secondAttribute="trailing" id="wv6-Vm-feO"/>
+                            <constraint firstAttribute="bottom" secondItem="7Eq-v6-vrz" secondAttribute="bottom" id="xxq-FL-xIS"/>
+                            <constraint firstItem="7Eq-v6-vrz" firstAttribute="leading" secondItem="z0g-HI-lbw" secondAttribute="leading" id="zFA-dK-r5d"/>
                             <constraint firstItem="QEi-vF-C0L" firstAttribute="top" secondItem="z0g-HI-lbw" secondAttribute="top" constant="20" id="zjx-AE-Ubq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z0g-HI-lbw"/>
@@ -439,18 +451,26 @@
             <objects>
                 <viewController id="iLx-Gh-sve" customClass="StatisticsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hvX-PG-o7O">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CV5-dZ-hoj" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNj-ba-GFp" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="247" y="100" width="340" height="47"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="qp1-7M-avn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="364"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="MKw-MZ-FDM">
+                                <rect key="frame" x="0.0" y="464" width="320" height="104"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="fz1-ds-CYH"/>
-                                    <constraint firstAttribute="width" constant="340" id="rvS-2I-HTS"/>
+                                    <constraint firstAttribute="height" constant="104" id="1py-rb-zVW">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNj-ba-GFp" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                <rect key="frame" x="8" y="100" width="304" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="DSF-gx-U1B"/>
+                                    <constraint firstAttribute="height" priority="999" constant="47" id="fz1-ds-CYH"/>
+                                    <constraint firstAttribute="width" priority="999" constant="340" id="rvS-2I-HTS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                 <state key="normal" title="Button">
@@ -458,59 +478,59 @@
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zB1-2i-IUE">
-                                <rect key="frame" x="247" y="177" width="340" height="432"/>
+                                <rect key="frame" x="8" y="170" width="304" height="378"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sX-ub-zX1" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="340" height="47"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="40.5"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIS-kY-K8M" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55" width="340" height="47"/>
+                                        <rect key="frame" x="0.0" y="48.5" width="304" height="40"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6W-jN-bgk" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="110" width="340" height="47"/>
+                                        <rect key="frame" x="0.0" y="96.5" width="304" height="40.5"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-N3-dM7" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="165" width="340" height="47"/>
+                                        <rect key="frame" x="0.0" y="145" width="304" height="40"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxB-UC-d7n" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="220" width="340" height="47"/>
+                                        <rect key="frame" x="0.0" y="193" width="304" height="40.5"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EN-B9-lBc" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="275" width="340" height="47"/>
+                                        <rect key="frame" x="0.0" y="241.5" width="304" height="40"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hn4-B5-jIP" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="330" width="340" height="47"/>
+                                        <rect key="frame" x="0.0" y="289.5" width="304" height="40.5"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLY-ea-zRV" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="385" width="340" height="47"/>
+                                        <rect key="frame" x="0.0" y="338" width="304" height="40"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -531,40 +551,46 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau de connaissance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dA-Ds-H0t">
-                                <rect key="frame" x="87" y="50.5" width="704" height="26.5"/>
+                                <rect key="frame" x="87" y="37" width="190" height="53"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.85098039219999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="MKw-MZ-FDM" firstAttribute="top" secondItem="qp1-7M-avn" secondAttribute="bottom" constant="100" id="0On-h8-GDl"/>
                             <constraint firstItem="jxB-UC-d7n" firstAttribute="width" secondItem="cNj-ba-GFp" secondAttribute="width" id="1xK-36-l1R"/>
                             <constraint firstItem="2sX-ub-zX1" firstAttribute="height" secondItem="cNj-ba-GFp" secondAttribute="height" id="2mp-bg-van"/>
                             <constraint firstItem="i6W-jN-bgk" firstAttribute="width" secondItem="cNj-ba-GFp" secondAttribute="width" id="3Gc-G9-Esv"/>
                             <constraint firstItem="l2q-cE-MxR" firstAttribute="top" secondItem="vwy-CP-wFo" secondAttribute="top" constant="25" id="41R-Yn-M9M"/>
                             <constraint firstItem="dLY-ea-zRV" firstAttribute="width" secondItem="cNj-ba-GFp" secondAttribute="width" id="5RY-nG-hMv"/>
-                            <constraint firstItem="CV5-dZ-hoj" firstAttribute="top" secondItem="hvX-PG-o7O" secondAttribute="top" id="5r2-bl-oCk"/>
                             <constraint firstItem="2dA-Ds-H0t" firstAttribute="leading" secondItem="l2q-cE-MxR" secondAttribute="trailing" constant="25" id="AIU-d1-0oy"/>
                             <constraint firstItem="cNj-ba-GFp" firstAttribute="centerX" secondItem="hvX-PG-o7O" secondAttribute="centerX" id="B97-df-4P3"/>
                             <constraint firstItem="aIS-kY-K8M" firstAttribute="width" secondItem="cNj-ba-GFp" secondAttribute="width" id="ByM-FH-JRo"/>
-                            <constraint firstItem="CV5-dZ-hoj" firstAttribute="leading" secondItem="vwy-CP-wFo" secondAttribute="leading" id="FB1-Pn-7IP"/>
+                            <constraint firstItem="cNj-ba-GFp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vwy-CP-wFo" secondAttribute="leading" constant="8" id="CTd-CB-Q0W"/>
                             <constraint firstItem="zX3-N3-dM7" firstAttribute="width" secondItem="cNj-ba-GFp" secondAttribute="width" id="H3j-aa-KLq"/>
+                            <constraint firstItem="qp1-7M-avn" firstAttribute="leading" secondItem="vwy-CP-wFo" secondAttribute="leading" id="Hpm-7z-SrU"/>
+                            <constraint firstItem="vwy-CP-wFo" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cNj-ba-GFp" secondAttribute="trailing" constant="8" id="I1X-2E-uLj"/>
                             <constraint firstItem="vwy-CP-wFo" firstAttribute="trailing" secondItem="2dA-Ds-H0t" secondAttribute="trailing" constant="43" id="IOE-82-tI8"/>
                             <constraint firstItem="zB1-2i-IUE" firstAttribute="top" secondItem="cNj-ba-GFp" secondAttribute="bottom" constant="30" id="J4y-WI-0Ut"/>
                             <constraint firstItem="aIS-kY-K8M" firstAttribute="height" secondItem="cNj-ba-GFp" secondAttribute="height" id="LYu-fI-4rx"/>
                             <constraint firstItem="zB1-2i-IUE" firstAttribute="centerX" secondItem="hvX-PG-o7O" secondAttribute="centerX" id="MUM-1m-v1Y"/>
+                            <constraint firstItem="MKw-MZ-FDM" firstAttribute="leading" secondItem="vwy-CP-wFo" secondAttribute="leading" id="OKR-bP-0Uq"/>
                             <constraint firstItem="dLY-ea-zRV" firstAttribute="height" secondItem="cNj-ba-GFp" secondAttribute="height" id="OO7-GA-lUh"/>
                             <constraint firstItem="hn4-B5-jIP" firstAttribute="width" secondItem="cNj-ba-GFp" secondAttribute="width" id="Pxc-be-Xf5"/>
                             <constraint firstItem="0EN-B9-lBc" firstAttribute="width" secondItem="cNj-ba-GFp" secondAttribute="width" id="QA6-Aj-Dc2"/>
+                            <constraint firstAttribute="bottom" secondItem="MKw-MZ-FDM" secondAttribute="bottom" id="QhG-aW-2zp"/>
                             <constraint firstItem="zX3-N3-dM7" firstAttribute="height" secondItem="cNj-ba-GFp" secondAttribute="height" id="Qk6-DS-KUe"/>
+                            <constraint firstItem="vwy-CP-wFo" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zB1-2i-IUE" secondAttribute="bottom" constant="20" id="Rh3-Ro-fMl"/>
                             <constraint firstItem="jxB-UC-d7n" firstAttribute="height" secondItem="cNj-ba-GFp" secondAttribute="height" id="WT3-wW-ein"/>
                             <constraint firstItem="hn4-B5-jIP" firstAttribute="height" secondItem="cNj-ba-GFp" secondAttribute="height" id="XWn-YR-CKq"/>
+                            <constraint firstItem="qp1-7M-avn" firstAttribute="trailing" secondItem="vwy-CP-wFo" secondAttribute="trailing" id="aEY-T5-L4e"/>
+                            <constraint firstItem="MKw-MZ-FDM" firstAttribute="trailing" secondItem="vwy-CP-wFo" secondAttribute="trailing" id="hpw-QA-I2u"/>
                             <constraint firstItem="l2q-cE-MxR" firstAttribute="leading" secondItem="vwy-CP-wFo" secondAttribute="leading" constant="25" id="l8q-ey-fZ2"/>
                             <constraint firstItem="2dA-Ds-H0t" firstAttribute="centerY" secondItem="l2q-cE-MxR" secondAttribute="centerY" id="nna-ne-5wq"/>
-                            <constraint firstItem="CV5-dZ-hoj" firstAttribute="trailing" secondItem="vwy-CP-wFo" secondAttribute="trailing" id="ptr-O7-pfK"/>
                             <constraint firstItem="cNj-ba-GFp" firstAttribute="top" secondItem="vwy-CP-wFo" secondAttribute="top" constant="80" id="qKe-Av-ZQv"/>
-                            <constraint firstItem="CV5-dZ-hoj" firstAttribute="bottom" secondItem="vwy-CP-wFo" secondAttribute="bottom" id="tQo-xi-bUh"/>
+                            <constraint firstItem="qp1-7M-avn" firstAttribute="top" secondItem="hvX-PG-o7O" secondAttribute="top" id="uns-a1-oKh"/>
                             <constraint firstItem="i6W-jN-bgk" firstAttribute="height" secondItem="cNj-ba-GFp" secondAttribute="height" id="uuv-qM-6Jw"/>
                             <constraint firstItem="2sX-ub-zX1" firstAttribute="width" secondItem="cNj-ba-GFp" secondAttribute="width" id="x2f-KY-VUB"/>
                             <constraint firstItem="0EN-B9-lBc" firstAttribute="height" secondItem="cNj-ba-GFp" secondAttribute="height" id="z0z-Yr-2PF"/>
@@ -586,21 +612,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKu-TS-bCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-479.6875" y="1035.3515625"/>
+            <point key="canvasLocation" x="-479.71014492753625" y="1035.3260869565217"/>
         </scene>
         <!--Select LevelVC-->
         <scene sceneID="EcC-yY-2ev">
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="LCT-O3-rbd" customClass="SelectLevelVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="40t-SU-W2W">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z16-YJ-VrT">
-                                <rect key="frame" x="287" y="702" width="260" height="300"/>
+                                <rect key="frame" x="40" y="250" width="240" height="230"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="BRi-39-1Rt"/>
-                                    <constraint firstAttribute="height" constant="300" id="qdY-kL-KEF"/>
+                                    <constraint firstAttribute="width" priority="999" constant="260" id="BRi-39-1Rt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="230" id="dtn-8X-STk"/>
+                                    <constraint firstAttribute="height" priority="999" constant="300" id="qdY-kL-KEF"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -610,44 +637,54 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbT-Si-hT4">
-                                <rect key="frame" x="0.0" y="1002" width="834" height="110"/>
+                                <rect key="frame" x="0.0" y="480" width="320" height="122"/>
                                 <color key="backgroundColor" white="1" alpha="0.9367135067114094" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="VhX-bi-Iy7"/>
+                                    <constraint firstAttribute="height" priority="999" constant="144" id="VhX-bi-Iy7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="Zcp-Tn-mvt"/>
                                 </constraints>
                                 <connections>
                                     <action selector="buttomButton:" destination="LCT-O3-rbd" eventType="touchUpInside" id="cHf-kg-OYR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BB9-0q-h4B">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="702"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="0.9367135067114094" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="jvX-ZX-wvt"/>
+                                </constraints>
                                 <connections>
                                     <action selector="upButton:" destination="LCT-O3-rbd" eventType="touchUpInside" id="hPa-jY-wUr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvX-GJ-N32">
-                                <rect key="frame" x="547" y="702" width="287" height="300"/>
+                                <rect key="frame" x="280" y="250" width="40" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="0.9367135067114094" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="rightButton:" destination="LCT-O3-rbd" eventType="touchUpInside" id="apL-0S-CMy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKU-ct-qXZ">
-                                <rect key="frame" x="0.0" y="702" width="287" height="300"/>
+                                <rect key="frame" x="0.0" y="250" width="40" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="0.9367135067114094" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="hrF-nq-hJW"/>
+                                </constraints>
                                 <connections>
                                     <action selector="leftButton:" destination="LCT-O3-rbd" eventType="touchUpInside" id="dcP-e3-FgS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez sélectionner le niveau de langue des verbes à ajouter à la liste de révision" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXd-ZV-A1i">
-                                <rect key="frame" x="287" y="519" width="260" height="116.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez sélectionner le niveau de langue des verbes à ajouter à la liste de révision" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXd-ZV-A1i">
+                                <rect key="frame" x="30" y="67" width="260" height="116.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="Kjt-y4-vKt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AV Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="r5p-ga-NZ0">
-                                <rect key="frame" x="287" y="623.5" width="70" height="70"/>
+                                <rect key="frame" x="30" y="171.5" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="cvO-Sr-1Qb"/>
                                     <constraint firstAttribute="width" secondItem="r5p-ga-NZ0" secondAttribute="height" multiplier="1:1" id="wBM-Xe-dOc"/>
@@ -659,7 +696,7 @@
                             <constraint firstItem="EvX-GJ-N32" firstAttribute="trailing" secondItem="ZyJ-Ny-m1T" secondAttribute="trailing" id="Dy7-Vq-Jsu"/>
                             <constraint firstItem="z16-YJ-VrT" firstAttribute="top" secondItem="BB9-0q-h4B" secondAttribute="bottom" id="EJV-Pc-yTO"/>
                             <constraint firstItem="BB9-0q-h4B" firstAttribute="leading" secondItem="ZyJ-Ny-m1T" secondAttribute="leading" id="I2E-Z4-p8d"/>
-                            <constraint firstItem="QXd-ZV-A1i" firstAttribute="width" secondItem="z16-YJ-VrT" secondAttribute="width" id="Kh2-NW-CgO"/>
+                            <constraint firstItem="QXd-ZV-A1i" firstAttribute="width" secondItem="z16-YJ-VrT" secondAttribute="width" priority="999" id="Kh2-NW-CgO"/>
                             <constraint firstItem="r5p-ga-NZ0" firstAttribute="leading" secondItem="QXd-ZV-A1i" secondAttribute="leading" id="MFF-FW-hvP"/>
                             <constraint firstItem="z16-YJ-VrT" firstAttribute="height" secondItem="dKU-ct-qXZ" secondAttribute="height" id="OgZ-tp-aVr"/>
                             <constraint firstItem="AbT-Si-hT4" firstAttribute="leading" secondItem="ZyJ-Ny-m1T" secondAttribute="leading" id="PaM-5d-GFl"/>
@@ -677,7 +714,7 @@
                             <constraint firstItem="r5p-ga-NZ0" firstAttribute="width" secondItem="r5p-ga-NZ0" secondAttribute="height" multiplier="1:1" id="siV-36-znC"/>
                             <constraint firstItem="z16-YJ-VrT" firstAttribute="centerX" secondItem="40t-SU-W2W" secondAttribute="centerX" id="vuy-lD-tgy"/>
                             <constraint firstItem="z16-YJ-VrT" firstAttribute="top" secondItem="dKU-ct-qXZ" secondAttribute="top" id="wsU-WU-00G"/>
-                            <constraint firstItem="ZyJ-Ny-m1T" firstAttribute="bottom" secondItem="AbT-Si-hT4" secondAttribute="bottom" id="wtN-SW-rGm"/>
+                            <constraint firstItem="ZyJ-Ny-m1T" firstAttribute="bottom" secondItem="AbT-Si-hT4" secondAttribute="bottom" constant="-34" id="wtN-SW-rGm"/>
                             <constraint firstItem="EvX-GJ-N32" firstAttribute="height" secondItem="dKU-ct-qXZ" secondAttribute="height" id="xRj-c1-474"/>
                             <constraint firstItem="z16-YJ-VrT" firstAttribute="top" secondItem="r5p-ga-NZ0" secondAttribute="bottom" constant="8.5" id="xu2-9r-Tn2"/>
                             <constraint firstItem="BB9-0q-h4B" firstAttribute="top" secondItem="40t-SU-W2W" secondAttribute="top" id="yBR-xv-dUL"/>
@@ -687,100 +724,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N98-bb-WyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2294" y="758"/>
-        </scene>
-        <!--Not Implemented YetVC-->
-        <scene sceneID="WdF-op-rkU">
-            <objects>
-                <viewController id="So5-F0-3mX" customClass="NotImplementedYetVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZAH-Hh-hhX">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-hW-dkH">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esg-OT-wjU">
-                                        <rect key="frame" x="8" y="193" width="818" height="22.5"/>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-MZ-ooO">
-                                        <rect key="frame" x="8" y="281.5" width="818" height="22.5"/>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81W-Qk-SE7" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="292" y="1037" width="250" height="35"/>
-                                        <color key="backgroundColor" red="0.90260022100000004" green="0.16145703259999999" blue="0.1705301203" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="r3W-gA-NwP"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="esg-OT-wjU" firstAttribute="leading" secondItem="Gt2-hW-dkH" secondAttribute="leading" constant="8" id="0q1-xA-gCW"/>
-                                    <constraint firstItem="z5u-MZ-ooO" firstAttribute="top" secondItem="esg-OT-wjU" secondAttribute="bottom" constant="66" id="68z-ZI-yIm"/>
-                                    <constraint firstItem="81W-Qk-SE7" firstAttribute="centerX" secondItem="Gt2-hW-dkH" secondAttribute="centerX" id="D70-Jd-vwS"/>
-                                    <constraint firstItem="z5u-MZ-ooO" firstAttribute="leading" secondItem="Gt2-hW-dkH" secondAttribute="leading" constant="8" id="DBS-q2-Zhr"/>
-                                    <constraint firstAttribute="bottom" secondItem="81W-Qk-SE7" secondAttribute="bottom" constant="40" id="QQv-R7-uky"/>
-                                    <constraint firstAttribute="trailing" secondItem="z5u-MZ-ooO" secondAttribute="trailing" constant="8" id="apa-sD-uS2"/>
-                                    <constraint firstAttribute="trailing" secondItem="esg-OT-wjU" secondAttribute="trailing" constant="8" id="qBy-IX-KYE"/>
-                                    <constraint firstItem="esg-OT-wjU" firstAttribute="top" secondItem="Gt2-hW-dkH" secondAttribute="top" constant="193" id="ytU-Zs-8xA"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a83-Xg-b6l">
-                                <rect key="frame" x="25" y="45" width="37" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="KHo-Pv-8ic"/>
-                                    <constraint firstAttribute="width" secondItem="a83-Xg-b6l" secondAttribute="height" multiplier="1:1" id="in9-NK-oqX"/>
-                                </constraints>
-                                <state key="normal" image="button:a83-Xg-b6l:image"/>
-                                <connections>
-                                    <action selector="back:" destination="qzO-in-ekQ" eventType="touchUpInside" id="JM1-Sx-rlj"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="cOG-BP-nfC" firstAttribute="bottom" secondItem="Gt2-hW-dkH" secondAttribute="bottom" id="Ejc-er-bY8"/>
-                            <constraint firstItem="cOG-BP-nfC" firstAttribute="trailing" secondItem="Gt2-hW-dkH" secondAttribute="trailing" id="LUc-y1-1bJ"/>
-                            <constraint firstItem="Gt2-hW-dkH" firstAttribute="top" secondItem="ZAH-Hh-hhX" secondAttribute="top" id="St7-0j-asS"/>
-                            <constraint firstItem="a83-Xg-b6l" firstAttribute="top" secondItem="cOG-BP-nfC" secondAttribute="top" constant="25" id="a0Z-nE-0f6"/>
-                            <constraint firstItem="a83-Xg-b6l" firstAttribute="leading" secondItem="cOG-BP-nfC" secondAttribute="leading" constant="25" id="hLh-vQ-bE8"/>
-                            <constraint firstItem="Gt2-hW-dkH" firstAttribute="leading" secondItem="cOG-BP-nfC" secondAttribute="leading" id="jA0-aO-DzJ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="cOG-BP-nfC"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l5a-EN-FAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1495" y="1434"/>
+            <point key="canvasLocation" x="2292.753623188406" y="757.36607142857144"/>
         </scene>
         <!--List VerbsVC-->
         <scene sceneID="mwm-8U-ADG">
             <objects>
                 <viewController id="5VA-47-w42" customClass="ListVerbsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XQh-NW-8Kz">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvS-7I-8MW" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="Tc4-1V-5aU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="364"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="umk-PM-xoC">
+                                <rect key="frame" x="0.0" y="464" width="320" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="UjC-bz-qhs">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-Oz-ph9">
-                                <rect key="frame" x="0.0" y="97" width="834" height="1015"/>
+                                <rect key="frame" x="0.0" y="100" width="320" height="468"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="RI8-lV-M8b">
-                                    <rect key="frame" x="0.0" y="0.0" width="834" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <scopeButtonTitles>
@@ -810,27 +779,29 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tous les verbes irréguliers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-dW-6ya">
-                                <rect key="frame" x="82" y="40" width="747" height="47"/>
+                                <rect key="frame" x="67" y="37" width="245" height="53"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.85098039219999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fvS-7I-8MW" firstAttribute="leading" secondItem="F3Z-Js-vBq" secondAttribute="leading" id="31K-4A-E1u"/>
-                            <constraint firstItem="1qD-dW-6ya" firstAttribute="top" secondItem="F3Z-Js-vBq" secondAttribute="top" constant="20" id="5PW-r9-OXA"/>
-                            <constraint firstItem="F3Z-Js-vBq" firstAttribute="trailing" secondItem="fvS-7I-8MW" secondAttribute="trailing" id="5Py-t7-vhU"/>
+                            <constraint firstItem="Tc4-1V-5aU" firstAttribute="trailing" secondItem="F3Z-Js-vBq" secondAttribute="trailing" id="38p-da-1JN"/>
                             <constraint firstItem="Azd-Oz-ph9" firstAttribute="leading" secondItem="F3Z-Js-vBq" secondAttribute="leading" id="9bE-D3-ZwH"/>
-                            <constraint firstItem="F3Z-Js-vBq" firstAttribute="bottom" secondItem="fvS-7I-8MW" secondAttribute="bottom" id="A9c-PZ-s8r"/>
-                            <constraint firstItem="F3Z-Js-vBq" firstAttribute="trailing" secondItem="1qD-dW-6ya" secondAttribute="trailing" constant="5" id="GSh-ru-fRR"/>
-                            <constraint firstItem="1qD-dW-6ya" firstAttribute="leading" secondItem="LQ0-G6-Wbc" secondAttribute="trailing" constant="20" id="Gam-oX-I4R"/>
+                            <constraint firstItem="F3Z-Js-vBq" firstAttribute="trailing" secondItem="1qD-dW-6ya" secondAttribute="trailing" constant="8" id="GSh-ru-fRR"/>
+                            <constraint firstItem="1qD-dW-6ya" firstAttribute="leading" secondItem="LQ0-G6-Wbc" secondAttribute="trailing" constant="5" id="Gam-oX-I4R"/>
                             <constraint firstItem="F3Z-Js-vBq" firstAttribute="trailing" secondItem="Azd-Oz-ph9" secondAttribute="trailing" id="Luw-Bb-FIg"/>
                             <constraint firstItem="Azd-Oz-ph9" firstAttribute="top" secondItem="1qD-dW-6ya" secondAttribute="bottom" constant="10" id="NJs-3m-WDj"/>
                             <constraint firstItem="LQ0-G6-Wbc" firstAttribute="top" secondItem="F3Z-Js-vBq" secondAttribute="top" constant="25" id="QHQ-Ar-9Ms"/>
                             <constraint firstItem="LQ0-G6-Wbc" firstAttribute="width" secondItem="LQ0-G6-Wbc" secondAttribute="height" multiplier="1:1" id="VHw-9n-qeM"/>
+                            <constraint firstItem="Tc4-1V-5aU" firstAttribute="top" secondItem="XQh-NW-8Kz" secondAttribute="top" id="VLV-Zj-xl1"/>
+                            <constraint firstItem="umk-PM-xoC" firstAttribute="top" secondItem="Tc4-1V-5aU" secondAttribute="bottom" constant="100" id="XMe-fe-NV8"/>
+                            <constraint firstAttribute="bottom" secondItem="umk-PM-xoC" secondAttribute="bottom" id="drG-ST-aHu"/>
                             <constraint firstItem="LQ0-G6-Wbc" firstAttribute="leading" secondItem="F3Z-Js-vBq" secondAttribute="leading" constant="25" id="fyv-eY-Sdf"/>
-                            <constraint firstItem="fvS-7I-8MW" firstAttribute="top" secondItem="XQh-NW-8Kz" secondAttribute="top" id="rXh-hG-VOs"/>
+                            <constraint firstItem="umk-PM-xoC" firstAttribute="trailing" secondItem="F3Z-Js-vBq" secondAttribute="trailing" id="jnI-xD-GbI"/>
+                            <constraint firstItem="Tc4-1V-5aU" firstAttribute="leading" secondItem="F3Z-Js-vBq" secondAttribute="leading" id="mvL-f1-Exb"/>
+                            <constraint firstItem="umk-PM-xoC" firstAttribute="leading" secondItem="F3Z-Js-vBq" secondAttribute="leading" id="uOJ-cs-ATT"/>
                             <constraint firstItem="F3Z-Js-vBq" firstAttribute="bottom" secondItem="Azd-Oz-ph9" secondAttribute="bottom" id="yvI-4S-BQa"/>
                             <constraint firstItem="1qD-dW-6ya" firstAttribute="centerY" secondItem="LQ0-G6-Wbc" secondAttribute="centerY" id="zPS-T7-0r4"/>
                         </constraints>
@@ -850,15 +821,15 @@
             <objects>
                 <viewController id="JMN-Zr-BPp" customClass="IAPurchaseVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kn2-IF-BEf">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNO-ff-IsC" customClass="Background3" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-kB-nvZ" customClass="PurchaseUIButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="267" y="220" width="300" height="178.5"/>
+                                <rect key="frame" x="10" y="220" width="300" height="178.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="7Lq-tm-VGB"/>
                                     <constraint firstAttribute="width" secondItem="Xzp-kB-nvZ" secondAttribute="height" multiplier="168:100" id="wWW-rr-fVY"/>
@@ -882,13 +853,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-pq-kBj">
-                                <rect key="frame" x="67" y="63.5" width="759" height="0.0"/>
+                                <rect key="frame" x="67" y="63.5" width="245" height="0.0"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAy-GT-5ws" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="300.5" y="1025" width="233" height="47"/>
+                                <rect key="frame" x="43.5" y="481" width="233" height="47"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="SCc-E1-6KL"/>
@@ -936,37 +907,22 @@
             <objects>
                 <viewController id="qzO-in-ekQ" customClass="ReviewVerbsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u7U-bI-6bR">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-Dv-Y2h" customClass="Background1" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufF-nV-YxU">
-                                <rect key="frame" x="281" y="105" width="272" height="300"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="XiS-4E-ab1">
+                                <rect key="frame" x="0.0" y="464" width="320" height="104"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="XGN-w4-ybd"/>
-                                    <constraint firstAttribute="width" constant="272" id="gNm-11-ZcB"/>
+                                    <constraint firstAttribute="height" constant="104" id="r4c-LU-VrL">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                    </constraint>
                                 </constraints>
-                                <connections>
-                                    <segue destination="M3T-oX-K86" kind="embed" identifier="forwardCardSegue" id="eyG-8T-vgP"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frI-xU-zCb">
-                                <rect key="frame" x="281" y="105" width="272" height="300"/>
-                                <connections>
-                                    <segue destination="o65-Wo-rje" kind="embed" identifier="backCardSegue" id="lCv-Om-mtj"/>
-                                </connections>
-                            </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-3a-Uqk">
-                                <rect key="frame" x="281" y="105" width="272" height="300"/>
-                                <connections>
-                                    <action selector="revealClickOnCard:" destination="qzO-in-ekQ" eventType="touchUpInside" id="idL-uQ-6rp"/>
-                                </connections>
-                            </button>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="Ccx-J8-LqH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="435"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBV-Nm-8Ys">
-                                <rect key="frame" x="25" y="45" width="37" height="37"/>
+                                <rect key="frame" x="25" y="31" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="AzZ-Tq-7DV"/>
                                     <constraint firstAttribute="width" secondItem="fBV-Nm-8Ys" secondAttribute="height" multiplier="1:1" id="EMB-r5-NBd"/>
@@ -977,9 +933,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-Gw-nAd">
-                                <rect key="frame" x="379.5" y="445" width="75" height="75"/>
+                                <rect key="frame" x="122.5" y="350" width="75" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="AQc-sA-1gn"/>
+                                    <constraint firstAttribute="height" constant="75" id="8cg-FF-JMH"/>
                                     <constraint firstAttribute="width" secondItem="WhS-Gw-nAd" secondAttribute="height" multiplier="1:1" id="bbk-Ok-gs1"/>
                                 </constraints>
                                 <state key="normal" image="RVTurnButton">
@@ -990,76 +946,17 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-QY-aWl">
-                                <rect key="frame" x="779" y="49" width="30" height="29.5"/>
+                                <rect key="frame" x="70" y="35" width="225" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="9Gv-Tf-joF"/>
+                                    <constraint firstAttribute="height" constant="29.329999999999998" id="iXI-2Y-dnI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="À répéter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-Ly-a3b">
-                                <rect key="frame" x="8" y="903" width="834" height="28"/>
-                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LY3-8h-At6">
-                                <rect key="frame" x="8" y="943" width="818" height="64"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYn-qk-EDz" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="260.5" height="47"/>
-                                        <color key="backgroundColor" red="1" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="47" id="2Lg-QO-Vnc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="13"/>
-                                        <state key="normal" title="Now">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="regress:" destination="qzO-in-ekQ" eventType="touchUpInside" id="7A9-cX-AF7"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-Lm-AOW" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="278.5" y="8" width="261" height="47"/>
-                                        <color key="backgroundColor" red="1" green="0.49411764705882355" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="13"/>
-                                        <state key="normal" title="Tomorow">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="stagnate:" destination="qzO-in-ekQ" eventType="touchUpInside" id="yk1-zS-qxs"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdt-55-egW" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="549.5" y="8" width="260.5" height="47"/>
-                                        <color key="backgroundColor" red="0.28235294117647058" green="0.72549019607843135" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="13"/>
-                                        <state key="normal" title="Dans une semaine">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="progress:" destination="qzO-in-ekQ" eventType="touchUpInside" id="T2u-bC-XPd"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="ZUJ-Lm-AOW" firstAttribute="width" secondItem="iYn-qk-EDz" secondAttribute="width" id="7VJ-Un-z3B"/>
-                                    <constraint firstItem="gdt-55-egW" firstAttribute="height" secondItem="iYn-qk-EDz" secondAttribute="height" id="HPF-lU-MJq"/>
-                                    <constraint firstItem="gdt-55-egW" firstAttribute="width" secondItem="iYn-qk-EDz" secondAttribute="width" id="nnJ-mi-8yf"/>
-                                    <constraint firstItem="ZUJ-Lm-AOW" firstAttribute="height" secondItem="iYn-qk-EDz" secondAttribute="height" id="tDl-GQ-lji"/>
-                                </constraints>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="9" right="8"/>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQq-F4-cjR">
-                                <rect key="frame" x="759" y="1033" width="50" height="54"/>
+                                <rect key="frame" x="245" y="528" width="50" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="d93-yt-7r4"/>
                                 </constraints>
@@ -1069,37 +966,149 @@
                                     <action selector="audio:" destination="qzO-in-ekQ" eventType="touchUpInside" id="b1q-XE-eoY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="À répéter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqL-M2-fkI">
+                                <rect key="frame" x="8" y="420" width="304" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="iBx-gg-h5S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VnI-HI-umY">
+                                <rect key="frame" x="0.0" y="458" width="320" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4y-DF-YAS" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="96" height="47"/>
+                                        <color key="backgroundColor" red="1" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="BQ9-XB-Nes"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="13"/>
+                                        <state key="normal" title="Now">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-uX-yr6" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                        <rect key="frame" x="112" y="8" width="96" height="47"/>
+                                        <color key="backgroundColor" red="1" green="0.4941176471" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="13"/>
+                                        <state key="normal" title="Tomorow">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="stagnate:" destination="qzO-in-ekQ" eventType="touchUpInside" id="VgU-1q-Nhb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qez-2m-ixe" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                        <rect key="frame" x="216" y="8" width="96" height="47"/>
+                                        <color key="backgroundColor" red="0.28235294119999998" green="0.72549019609999998" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="13"/>
+                                        <state key="normal" title="Dans une semaine">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="progress:" destination="qzO-in-ekQ" eventType="touchUpInside" id="2Ou-cz-bLz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qez-2m-ixe" firstAttribute="width" secondItem="b4y-DF-YAS" secondAttribute="width" id="1rE-Ib-fxN"/>
+                                    <constraint firstItem="gaM-uX-yr6" firstAttribute="height" secondItem="b4y-DF-YAS" secondAttribute="height" id="Lgo-VR-pQO"/>
+                                    <constraint firstItem="Qez-2m-ixe" firstAttribute="height" secondItem="b4y-DF-YAS" secondAttribute="height" id="ctG-N2-qRN"/>
+                                    <constraint firstItem="gaM-uX-yr6" firstAttribute="width" secondItem="b4y-DF-YAS" secondAttribute="width" id="uAa-jH-nKE"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="9" right="8"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3up-Q6-ZOY">
+                                <rect key="frame" x="30" y="72" width="260" height="270"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufF-nV-YxU">
+                                        <rect key="frame" x="10" y="0.0" width="240" height="270"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="270" id="TUz-hd-bQ9"/>
+                                            <constraint firstAttribute="width" secondItem="ufF-nV-YxU" secondAttribute="height" multiplier="60:75" priority="998" id="gGy-Ys-Cul"/>
+                                            <constraint firstAttribute="width" priority="999" constant="240" id="wSi-qC-QBy"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="M3T-oX-K86" kind="embed" identifier="forwardCardSegue" id="eyG-8T-vgP"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frI-xU-zCb">
+                                        <rect key="frame" x="10" y="0.0" width="240" height="270"/>
+                                        <connections>
+                                            <segue destination="o65-Wo-rje" kind="embed" identifier="backCardSegue" id="lCv-Om-mtj"/>
+                                        </connections>
+                                    </containerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-3a-Uqk">
+                                        <rect key="frame" x="10" y="0.0" width="240" height="270"/>
+                                        <connections>
+                                            <action selector="revealClickOnCard:" destination="qzO-in-ekQ" eventType="touchUpInside" id="idL-uQ-6rp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="sgg-3a-Uqk" firstAttribute="leading" secondItem="ufF-nV-YxU" secondAttribute="leading" id="1l2-0T-gPG"/>
+                                    <constraint firstItem="sgg-3a-Uqk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3up-Q6-ZOY" secondAttribute="top" priority="997" constant="10" id="3eY-zi-Ze2"/>
+                                    <constraint firstItem="frI-xU-zCb" firstAttribute="width" secondItem="ufF-nV-YxU" secondAttribute="width" id="D3x-ag-lT8"/>
+                                    <constraint firstItem="frI-xU-zCb" firstAttribute="leading" secondItem="ufF-nV-YxU" secondAttribute="leading" id="GRw-gq-YAE"/>
+                                    <constraint firstItem="sgg-3a-Uqk" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="top" id="Hit-4a-OOg"/>
+                                    <constraint firstItem="sgg-3a-Uqk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3up-Q6-ZOY" secondAttribute="top" id="JGn-ce-8yj"/>
+                                    <constraint firstItem="sgg-3a-Uqk" firstAttribute="width" secondItem="ufF-nV-YxU" secondAttribute="width" id="KDv-0n-CHQ"/>
+                                    <constraint firstItem="ufF-nV-YxU" firstAttribute="centerY" secondItem="3up-Q6-ZOY" secondAttribute="centerY" id="M2g-2o-qHs"/>
+                                    <constraint firstItem="sgg-3a-Uqk" firstAttribute="trailing" secondItem="ufF-nV-YxU" secondAttribute="trailing" id="Rh2-9x-5eL"/>
+                                    <constraint firstItem="frI-xU-zCb" firstAttribute="trailing" secondItem="ufF-nV-YxU" secondAttribute="trailing" id="S4z-RL-c4q"/>
+                                    <constraint firstItem="frI-xU-zCb" firstAttribute="height" secondItem="ufF-nV-YxU" secondAttribute="height" id="T4j-Ao-rKC"/>
+                                    <constraint firstItem="sgg-3a-Uqk" firstAttribute="bottom" secondItem="ufF-nV-YxU" secondAttribute="bottom" id="TYX-eG-9LG"/>
+                                    <constraint firstItem="ufF-nV-YxU" firstAttribute="centerX" secondItem="3up-Q6-ZOY" secondAttribute="centerX" id="UKi-t6-IEx"/>
+                                    <constraint firstItem="frI-xU-zCb" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="top" id="XXK-2k-x9f"/>
+                                    <constraint firstItem="sgg-3a-Uqk" firstAttribute="leading" secondItem="3up-Q6-ZOY" secondAttribute="leading" priority="997" constant="40" id="eo8-1W-57n"/>
+                                    <constraint firstItem="sgg-3a-Uqk" firstAttribute="height" secondItem="ufF-nV-YxU" secondAttribute="height" id="wOf-Gi-2Iq"/>
+                                    <constraint firstItem="frI-xU-zCb" firstAttribute="bottom" secondItem="ufF-nV-YxU" secondAttribute="bottom" id="yPw-X1-DaO"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.85098039219999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LY3-8h-At6" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="1cY-db-Psc"/>
-                            <constraint firstItem="Lev-o1-3dm" firstAttribute="bottom" secondItem="LY3-8h-At6" secondAttribute="bottom" constant="105" id="7HI-Wn-W7L"/>
-                            <constraint firstItem="LY3-8h-At6" firstAttribute="top" secondItem="8qb-Ly-a3b" secondAttribute="bottom" constant="12" id="7nn-Yo-bqK"/>
-                            <constraint firstItem="ufF-nV-YxU" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="8Km-nz-Kky"/>
+                            <constraint firstItem="WhS-Gw-nAd" firstAttribute="top" secondItem="3up-Q6-ZOY" secondAttribute="bottom" priority="999" constant="8" id="4BO-ZO-B6G"/>
                             <constraint firstItem="fBV-Nm-8Ys" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" constant="25" id="9Kt-Ov-v32"/>
-                            <constraint firstItem="frI-xU-zCb" firstAttribute="width" secondItem="ufF-nV-YxU" secondAttribute="width" id="A0g-6g-LOf"/>
-                            <constraint firstItem="Lev-o1-3dm" firstAttribute="bottom" secondItem="yQq-F4-cjR" secondAttribute="bottom" constant="25" id="Efb-Ku-cmj"/>
-                            <constraint firstItem="sgg-3a-Uqk" firstAttribute="height" secondItem="ufF-nV-YxU" secondAttribute="height" id="FHt-mO-wz7"/>
-                            <constraint firstItem="8X5-Dv-Y2h" firstAttribute="bottom" secondItem="Lev-o1-3dm" secondAttribute="bottom" id="G6a-cj-JTc"/>
-                            <constraint firstItem="sgg-3a-Uqk" firstAttribute="width" secondItem="ufF-nV-YxU" secondAttribute="width" id="MCb-gE-pHH"/>
-                            <constraint firstItem="frI-xU-zCb" firstAttribute="height" secondItem="ufF-nV-YxU" secondAttribute="height" id="OSQ-H9-q1Q"/>
+                            <constraint firstItem="Lev-o1-3dm" firstAttribute="trailing" secondItem="Ccx-J8-LqH" secondAttribute="trailing" id="9cL-bO-QlH"/>
+                            <constraint firstItem="yQq-F4-cjR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Qez-2m-ixe" secondAttribute="bottom" constant="15" id="AD2-9p-PDh"/>
+                            <constraint firstItem="3up-Q6-ZOY" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="DWe-ko-8cL"/>
+                            <constraint firstItem="Lev-o1-3dm" firstAttribute="bottom" secondItem="yQq-F4-cjR" secondAttribute="bottom" priority="996" constant="25" id="Efb-Ku-cmj"/>
+                            <constraint firstItem="Lev-o1-3dm" firstAttribute="trailing" secondItem="XiS-4E-ab1" secondAttribute="trailing" id="Hc0-9p-yKd"/>
+                            <constraint firstItem="XiS-4E-ab1" firstAttribute="top" secondItem="Ccx-J8-LqH" secondAttribute="bottom" priority="998" constant="100" id="M50-AQ-MlR">
+                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                            </constraint>
                             <constraint firstItem="Lev-o1-3dm" firstAttribute="trailing" secondItem="yQq-F4-cjR" secondAttribute="trailing" constant="25" id="OwT-Co-bt9"/>
-                            <constraint firstItem="sgg-3a-Uqk" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="top" id="Wt1-cE-dCk"/>
-                            <constraint firstItem="LY3-8h-At6" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" constant="8" id="cJx-wY-8QS"/>
-                            <constraint firstItem="8qb-Ly-a3b" firstAttribute="trailing" secondItem="Lev-o1-3dm" secondAttribute="trailing" constant="8" id="dgC-mf-daQ"/>
-                            <constraint firstItem="frI-xU-zCb" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="top" id="euF-Ws-ngf"/>
+                            <constraint firstItem="cVt-QY-aWl" firstAttribute="leading" relation="lessThanOrEqual" secondItem="fBV-Nm-8Ys" secondAttribute="trailing" constant="8" symbolic="YES" id="SSW-Tm-wU1"/>
+                            <constraint firstItem="3up-Q6-ZOY" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" constant="30" id="eeJ-tz-4O4"/>
                             <constraint firstItem="Lev-o1-3dm" firstAttribute="trailing" secondItem="cVt-QY-aWl" secondAttribute="trailing" constant="25" id="fWM-9S-eRE"/>
-                            <constraint firstItem="fBV-Nm-8Ys" firstAttribute="top" secondItem="Lev-o1-3dm" secondAttribute="top" constant="25" id="h4m-uf-RVc"/>
-                            <constraint firstItem="sgg-3a-Uqk" firstAttribute="top" secondItem="Lev-o1-3dm" secondAttribute="top" constant="85" id="knS-rm-3L7"/>
-                            <constraint firstItem="8X5-Dv-Y2h" firstAttribute="trailing" secondItem="Lev-o1-3dm" secondAttribute="trailing" id="lrM-ht-z5t"/>
+                            <constraint firstItem="IqL-M2-fkI" firstAttribute="top" secondItem="Ccx-J8-LqH" secondAttribute="bottom" constant="-15" id="fs0-eD-4PT"/>
+                            <constraint firstItem="XiS-4E-ab1" firstAttribute="leading" secondItem="u7U-bI-6bR" secondAttribute="leading" id="guJ-H4-4GH"/>
+                            <constraint firstItem="fBV-Nm-8Ys" firstAttribute="top" secondItem="Lev-o1-3dm" secondAttribute="top" multiplier="0.3" constant="25" id="h4m-uf-RVc"/>
+                            <constraint firstItem="VnI-HI-umY" firstAttribute="top" secondItem="IqL-M2-fkI" secondAttribute="bottom" constant="15" id="hP9-0l-oWW"/>
+                            <constraint firstItem="Lev-o1-3dm" firstAttribute="trailing" secondItem="IqL-M2-fkI" secondAttribute="trailing" constant="8" id="k4I-wN-M1R"/>
+                            <constraint firstItem="Ccx-J8-LqH" firstAttribute="top" secondItem="u7U-bI-6bR" secondAttribute="top" id="kLr-NU-UGw"/>
+                            <constraint firstItem="Ccx-J8-LqH" firstAttribute="leading" secondItem="u7U-bI-6bR" secondAttribute="leading" id="lff-RV-xqi"/>
                             <constraint firstItem="cVt-QY-aWl" firstAttribute="centerY" secondItem="fBV-Nm-8Ys" secondAttribute="centerY" id="mYQ-DT-pax"/>
-                            <constraint firstItem="sgg-3a-Uqk" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="qO0-HY-cnv"/>
-                            <constraint firstItem="frI-xU-zCb" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="sSI-0d-nQl"/>
-                            <constraint firstItem="8qb-Ly-a3b" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" constant="8" id="unr-gz-fqB"/>
+                            <constraint firstItem="IqL-M2-fkI" firstAttribute="leading" secondItem="u7U-bI-6bR" secondAttribute="leading" constant="8" id="naS-PH-yd6"/>
+                            <constraint firstAttribute="trailing" secondItem="VnI-HI-umY" secondAttribute="trailing" id="pX4-6W-Sgj"/>
+                            <constraint firstItem="3up-Q6-ZOY" firstAttribute="top" secondItem="cVt-QY-aWl" secondAttribute="bottom" constant="8" id="t2w-io-Zip"/>
+                            <constraint firstItem="VnI-HI-umY" firstAttribute="leading" secondItem="u7U-bI-6bR" secondAttribute="leading" id="tj4-Cj-T4d"/>
+                            <constraint firstItem="WhS-Gw-nAd" firstAttribute="bottom" secondItem="Ccx-J8-LqH" secondAttribute="bottom" constant="-10" id="tjp-dr-sub"/>
                             <constraint firstItem="WhS-Gw-nAd" firstAttribute="centerX" secondItem="u7U-bI-6bR" secondAttribute="centerX" id="utr-Jc-YGa"/>
-                            <constraint firstItem="8X5-Dv-Y2h" firstAttribute="leading" secondItem="Lev-o1-3dm" secondAttribute="leading" id="vXJ-WU-lpA"/>
-                            <constraint firstItem="8X5-Dv-Y2h" firstAttribute="top" secondItem="u7U-bI-6bR" secondAttribute="top" id="wVg-SI-tgT"/>
-                            <constraint firstItem="WhS-Gw-nAd" firstAttribute="top" secondItem="ufF-nV-YxU" secondAttribute="bottom" constant="40" id="yiU-0m-eME"/>
+                            <constraint firstAttribute="bottom" secondItem="XiS-4E-ab1" secondAttribute="bottom" id="xHb-mv-vrh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lev-o1-3dm"/>
                     </view>
@@ -1107,25 +1116,25 @@
                         <outlet property="audioButton" destination="yQq-F4-cjR" id="bYw-VK-Elv"/>
                         <outlet property="backwardCard" destination="frI-xU-zCb" id="QnX-nq-58U"/>
                         <outlet property="buttonOnCard" destination="sgg-3a-Uqk" id="mBs-5V-Y9b"/>
-                        <outlet property="explainationLabel" destination="8qb-Ly-a3b" id="gLY-eQ-tBP"/>
+                        <outlet property="explainationLabel" destination="IqL-M2-fkI" id="4FE-7v-p87"/>
                         <outlet property="forwarCard" destination="ufF-nV-YxU" id="XIc-8y-Par"/>
-                        <outlet property="progressionButton" destination="gdt-55-egW" id="XhW-jz-fCO"/>
+                        <outlet property="progressionButton" destination="Qez-2m-ixe" id="GpI-Ju-5Z4"/>
                         <outlet property="progressionLabel" destination="cVt-QY-aWl" id="UZ6-Oa-GFn"/>
                         <outlet property="realButtonOutsideCard" destination="WhS-Gw-nAd" id="kZj-5u-Wya"/>
-                        <outlet property="regressionButton" destination="iYn-qk-EDz" id="5FD-Sx-cPZ"/>
-                        <outlet property="stagnationButton" destination="ZUJ-Lm-AOW" id="OWZ-Ec-3y6"/>
+                        <outlet property="regressionButton" destination="b4y-DF-YAS" id="rWt-RN-nV7"/>
+                        <outlet property="stagnationButton" destination="gaM-uX-yr6" id="zz6-Kj-0Ns"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNi-4a-inA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384.80000000000001" y="-1141.0794602698652"/>
+            <point key="canvasLocation" x="381.15942028985512" y="-1143.0803571428571"/>
         </scene>
         <!--Forwar CardVC-->
         <scene sceneID="vkM-dp-Qt8">
             <objects>
                 <viewController id="M3T-oX-K86" customClass="ForwarCardVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wFJ-rb-965" customClass="VerbCardView" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="272" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="270"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="auN-eY-faf"/>
@@ -1143,7 +1152,7 @@
             <objects>
                 <viewController id="o65-Wo-rje" customClass="BackwardCardVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6sj-q2-OUb" customClass="VerbCardView" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="272" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="270"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Zgd-v4-ugl"/>
                     </view>
@@ -1171,339 +1180,8 @@
         <image name="RVTurnButton" width="113" height="113"/>
         <image name="RedCircle" width="337" height="337"/>
         <image name="WhiteCircle" width="55" height="55"/>
-        <image name="button:a83-Xg-b6l:image" width="55" height="55">
-            <mutableData key="keyedArchiveRepresentation">
-YnBsaXN0MDDUAQIDBAUGVVZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEgcI
-ExQZHh8jJCsuMTtDR0tPUlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdz
-Vk5TUmVwc1dOU0NvbG9ygAKAERIgwAAAgAOAC1h7NTUsIDU1fdIVChYYWk5TLm9iamVjdHOhF4AEgArS
-FQoaHaIbHIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPETf6TU0AKgAAL0wA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEBAQElJSUlTk5OTouLi4u9vb294ODg4PX19fX+/v7+9fX19eDg4OC9
-vb29i4uLi05OTk4lJSUlAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAgIPz8/P4mJiYnG
-xsbG7Ozs7P//////////////////////////////////////////////////////////7Ozs7MbGxsaJ
-iYmJPz8/PwgICAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAABgYGBhvb29vy8vLy/39/f3/////////////////////////////////
-//////////////////////////////////////////////////////////7+/v7Ly8vLb29vbxgYGBgA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw8PD3Nzc3Pe
-3t7e////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////e3t7ec3Nzcw8PDw8AAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASEhISMzMzMz/////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////MzMzMSEhISAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM
-DAwMioqKivj4+Pj/////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-//////////j4+PiKioqKDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbGxsbubm5uf//////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////7m5ubkb
-GxsbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAnJycnzc3Nzf//////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////zc3NzSgoKCgAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqKioq19fX1///////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////Y2NjYKysrKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdHR0d0tLS0v//////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////9LS0tIdHR0dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM
-DAwMurq6uv//////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////urq6ugwMDAwA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAioqKiv//////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////+KioqKAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAR0dHR/n5+fn/////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////+fn5+UdHR0cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQ0NDc7Ozs7/
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////O
-zs7ODQ0NDQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFxcXH/////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////3FxcXEAAAAAAAAAAAAAAAAA
-AAAAAAAAABISEhLb29vb////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////b29vbEhISEgAAAAAAAAAAAAAAAAAAAABra2tr////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////2tra2sAAAAAAAAAAAAAAAAJCQkJzc3Nzf//////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////MzMzMCQkJCQAAAAAA
-AAAAPz8/P/v7+/v/////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////+/v7+z8/Pz8AAAAAAAAAAIuLi4v/////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-//////////////+Li4uLAAAAAAYGBgbLy8vL////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////+NTV/++bnf//
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////y8vLywYGBgYm
-JiYm7u7u7v//////////////////////////////////////////////////////////////////////
-////////////////////////////////////+drb/9scJ//SAAb/64KF////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////+/v7+8mJiYmT09PT///////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////+drb/9seKf/RAAX/0QAF/+NWW////v7/////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////T09PT4yMjIz/////////////////////////////////////////////////
-////////////////////////////////////////////////////+drb/9sfKv/RAAX/0QAF/+NTWP/+
-+vr/////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////4yMjIy+
-vr6+////////////////////////////////////////////////////////////////////////////
-////////////////////+drb/9seKf/RAAX/0QAF/+VTWP/++/v/////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////++vr6+4ODg4P//////////////////////
-////////////////////////////////////////////////////////////////////+drb/9seKf/R
-AAX/0gAK/+ZgZP//////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////4ODg4PX19fX/////////////////////////////////////////////////
-////////////////////////////////////+dTV/9sfKv/RAAX/0gAF/9cAFf/pb3L/6XN2/+lydf/p
-cnX/6XJ1/+lydf/pcnX/6XJ1/+lydf/pcnX/6XJ1/+lydf/pcnX/6XJ1/+lydf/ncnX/9sXH////////
-//////////////////////////////////////////////////////////////////////////X19fX+
-/v7+////////////////////////////////////////////////////////////////////////////
-/////////+VUWf/QAAX/0gAF/9IABf/SAAX/0AAF/9AABf/QAAX/0AAF/9AABf/QAAX/0AAF/9AABf/Q
-AAX/0AAF/9AABf/QAAX/0AAF/9AABf/QAAX/zQAF/+uBhP//////////////////////////////////
-///////////////////////////////////////////////+/v7+9fX19f//////////////////////
-///////////////////////////////////////////////////////////////mWV7/0AAF/9IABf/S
-AAX/1AAN/9YAEv/UABH/1AAR/9QAEf/UABH/1AAR/9QAEf/UABH/1AAR/9QAEf/UABH/1AAR/9QAEf/U
-ABH/1AAR/9MAEf/ukJL/////////////////////////////////////////////////////////////
-////////////////////9fX19eHh4eH/////////////////////////////////////////////////
-/////////////////////////////////////PDw/+JFS//RAAX/0QAF/9kYJf/2zM3//fHx//zt7v/8
-7e7//O3u//zt7v/87e7//O3u//zt7v/87e7//O3u//zt7v/87e7//O3u//zt7v/87e7//vn5////////
-/////////////////////////////////////////////////////////////////////////+Dg4OC+
-vr6+////////////////////////////////////////////////////////////////////////////
-///////////////98vL/4UZM/9EABf/RAAX/3CQu//vh4f//////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////++vr6+jIyMjP//////////////////////
-//////////////////////////////////////////////////////////////////////////3y8v/i
-Rkz/0QAF/9EABf/bIiz/+93e////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////jIyMjE9PT0//////////////////////////////////////////////////
-/////////////////////////////////////////////////////fLy/+JFS//RAAX/0QAF/9siLP/5
-2dr/////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////09PT08m
-JiYm7u7u7v//////////////////////////////////////////////////////////////////////
-///////////////////////////////98vL/4kVL/9EABf/QAAX/3zU9///6+v//////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////+/v7+8mJiYmBgYGBsvLy8v/////////////////
-////////////////////////////////////////////////////////////////////////////////
-//////////3y8v/hQkj/1gAT//Krrf///v7/////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-///////////////Ly8vLBgYGBgAAAACLi4uL////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////O7v//bIyf//
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////i4uLiwAAAAAA
-AAAAPz8/P/v7+/v/////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////+/v7+z8/Pz8AAAAAAAAAAAkJCQnNzc3N////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////83Nzc0JCQkJAAAAAAAAAAAAAAAAbGxsbP//////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////9ra2trAAAAAAAAAAAA
-AAAAAAAAABMTExPb29vb////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////b29vbEhISEgAAAAAAAAAAAAAAAAAAAAAAAAAAcXFxcf//////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////cXFxcQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4ODg7Pz8/P////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////z8/Pzw4ODg4AAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAR0dHR/n5+fn/////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////+vr6+kdHR0cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK
-ioqK////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////4qKiooA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAwMDLu7u7v/////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////7u7u7sMDAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdHR0d0tLS0v//////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////9LS0tIdHR0dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAACsrKyvY2NjY////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////9jY2NgrKysrAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKysrK9HR0dH/
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////////////////////9HR0dErKysrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdHR0dubm5uf//////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////7m5ubke
-Hh4eAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAwMDAyKioqK+fn5+f//////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////+fn5+YqKiooMDAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAElJSUnMzMzM////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////zMzMzElJSUkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw8PD3R0dHTe
-3t7e////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////e3t7edHR0dA8PDw8AAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGBgYGG9vb2/Ly8vL/v7+/v//////
-////////////////////////////////////////////////////////////////////////////////
-/////v7+/szMzMxvb29vGBgYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgICD8/Pz+JiYmJxsbGxuzs7Oz/////////////////
-/////////////////////////////////////////+zs7OzGxsbGiYmJiUBAQEAICAgIAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEBAQElJSUlT09PT42NjY29vb294eHh4fX19fX/////9fX19eHh4eG9
-vb29jY2NjU9PT08lJSUlAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAAADAAAAAQA3AAABAQADAAAA
-AQA3AAABAgADAAAABAAAMBIBAwADAAAAAQABAAABBgADAAAAAQACAAABCgADAAAAAQABAAABEQAEAAAA
-AQAAAAgBEgADAAAAAQABAAABFQADAAAAAQAEAAABFgADAAAAAQA3AAABFwAEAAAAAQAAL0QBHAADAAAA
-AQABAAABKAADAAAAAQACAAABUgADAAAAAQABAAABUwADAAAABAAAMBqHcwAHAAAH2AAAMCIAAAAAAAgA
-CAAIAAgAAQABAAEAAQAAB9hhcHBsAiAAAG1udHJSR0IgWFlaIAfZAAIAGQALABoAC2Fjc3BBUFBMAAAA
-AGFwcGwAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtYXBwbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC2Rlc2MAAAEIAAAAb2RzY20AAAF4AAAFnGNwcnQAAAcUAAAA
-OHd0cHQAAAdMAAAAFHJYWVoAAAdgAAAAFGdYWVoAAAd0AAAAFGJYWVoAAAeIAAAAFHJUUkMAAAecAAAA
-DmNoYWQAAAesAAAALGJUUkMAAAecAAAADmdUUkMAAAecAAAADmRlc2MAAAAAAAAAFEdlbmVyaWMgUkdC
-IFByb2ZpbGUAAAAAAAAAAAAAABRHZW5lcmljIFJHQiBQcm9maWxlAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtbHVjAAAAAAAAAB8AAAAMc2tTSwAAACgAAAGEZGFE
-SwAAAC4AAAGsY2FFUwAAACQAAAHadmlWTgAAACQAAAH+cHRCUgAAACYAAAIidWtVQQAAACoAAAJIZnJG
-VQAAACgAAAJyaHVIVQAAACgAAAKaemhUVwAAABYAAALCbmJOTwAAACYAAALYY3NDWgAAACIAAAL+aGVJ
-TAAAAB4AAAMgaXRJVAAAACgAAAM+cm9STwAAACQAAANmZGVERQAAACwAAAOKa29LUgAAABYAAAO2c3ZT
-RQAAACYAAALYemhDTgAAABYAAAPMamFKUAAAABoAAAPiZWxHUgAAACIAAAP8cHRQTwAAACYAAAQebmxO
-TAAAACgAAAREZXNFUwAAACYAAAQedGhUSAAAACQAAARsdHJUUgAAACIAAASQZmlGSQAAACgAAASyaHJI
-UgAAACgAAATacGxQTAAAACwAAAUCcnVSVQAAACIAAAUuYXJFRwAAACYAAAVQZW5VUwAAACYAAAV2AFYB
-YQBlAG8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbABHAGUAbgBlAHIAZQBsACAAUgBHAEIA
-LQBiAGUAcwBrAHIAaQB2AGUAbABzAGUAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcAZQBuAOgAcgBpAGMA
-Qx6lAHUAIABoAOwAbgBoACAAUgBHAEIAIABDAGgAdQBuAGcAUABlAHIAZgBpAGwAIABSAEcAQgAgAEcA
-ZQBuAOkAcgBpAGMAbwQXBDAEMwQwBDsETAQ9BDgEOQAgBD8EQAQ+BEQEMAQ5BDsAIABSAEcAQgBQAHIA
-bwBmAGkAbAAgAGcA6QBuAOkAcgBpAHEAdQBlACAAUgBWAEIAwQBsAHQAYQBsAOEAbgBvAHMAIABSAEcA
-QgAgAHAAcgBvAGYAaQBskBp1KAAgAFIARwBCACCCcl9pY8+P8ABHAGUAbgBlAHIAaQBzAGsAIABSAEcA
-QgAtAHAAcgBvAGYAaQBsAE8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbAXkBegF1QXkBdkF
-3AAgAFIARwBCACAF2wXcBdwF2QBQAHIAbwBmAGkAbABvACAAUgBHAEIAIABnAGUAbgBlAHIAaQBjAG8A
-UAByAG8AZgBpAGwAIABSAEcAQgAgAGcAZQBuAGUAcgBpAGMAQQBsAGwAZwBlAG0AZQBpAG4AZQBzACAA
-UgBHAEIALQBQAHIAbwBmAGkAbMd8vBgAIABSAEcAQgAg1QS4XNMMx3xmbpAaACAAUgBHAEIAIGPPj/Bl
-h072TgCCLAAgAFIARwBCACAw1zDtMNUwoTCkMOsDkwO1A70DuQO6A8wAIAPAA8EDvwPGA68DuwAgAFIA
-RwBCAFAAZQByAGYAaQBsACAAUgBHAEIAIABnAGUAbgDpAHIAaQBjAG8AQQBsAGcAZQBtAGUAZQBuACAA
-UgBHAEIALQBwAHIAbwBmAGkAZQBsDkIOGw4jDkQOHw4lDkwAIABSAEcAQgAgDhcOMQ5IDicORA4bAEcA
-ZQBuAGUAbAAgAFIARwBCACAAUAByAG8AZgBpAGwAaQBZAGwAZQBpAG4AZQBuACAAUgBHAEIALQBwAHIA
-bwBmAGkAaQBsAGkARwBlAG4AZQByAGkBDQBrAGkAIABSAEcAQgAgAHAAcgBvAGYAaQBsAFUAbgBpAHcA
-ZQByAHMAYQBsAG4AeQAgAHAAcgBvAGYAaQBsACAAUgBHAEIEHgQxBEkEOAQ5ACAEPwRABD4ERAQ4BDsE
-TAAgAFIARwBCBkUGRAZBACAGKgY5BjEGSgZBACAAUgBHAEIAIAYnBkQGOQYnBkUARwBlAG4AZQByAGkA
-YwAgAFIARwBCACAAUAByAG8AZgBpAGwAZXRleHQAAAAAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwg
-YWxsIHJpZ2h0cyByZXNlcnZlZC4AWFlaIAAAAAAAAPNSAAEAAAABFs9YWVogAAAAAAAAdE0AAD3uAAAD
-0FhZWiAAAAAAAABadQAArHMAABc0WFlaIAAAAAAAACgaAAAVnwAAuDZjdXJ2AAAAAAAAAAEBzQAAc2Yz
-MgAAAAAAAQxCAAAF3v//8yYAAAeSAAD9kf//+6L///2jAAAD3AAAwGzSJSYnKFokY2xhc3NuYW1lWCRj
-bGFzc2VzXxAQTlNCaXRtYXBJbWFnZVJlcKMnKSpaTlNJbWFnZVJlcFhOU09iamVjdNIlJiwtV05TQXJy
-YXmiLCrSJSYvMF5OU011dGFibGVBcnJheaMvLCrVMjM0NQo2Nzg5OldOU1doaXRlXE5TQ29tcG9uZW50
-c1xOU0NvbG9yU3BhY2VfEBJOU0N1c3RvbUNvbG9yU3BhY2VEMCAwAEMwIDAQA4AMgBDUPD0+Cj9AQUJU
-TlNJRFVOU0lDQ1dOU01vZGVsEAmADRAAgA/SRApFRldOUy5kYXRhTxERaAAAEWhhcHBsAgAAAG1udHJH
-UkFZWFlaIAfcAAgAFwAPAC4AD2Fjc3BBUFBMAAAAAG5vbmUAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAA
-ANMtYXBwbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWRlc2MA
-AADAAAAAeWRzY20AAAE8AAAH6GNwcnQAAAkkAAAAI3d0cHQAAAlIAAAAFGtUUkMAAAlcAAAIDGRlc2MA
-AAAAAAAAH0dlbmVyaWMgR3JheSBHYW1tYSAyLjIgUHJvZmlsZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABt
-bHVjAAAAAAAAAB8AAAAMc2tTSwAAAC4AAAGEZGFESwAAADgAAAGyY2FFUwAAADgAAAHqdmlWTgAAAEAA
-AAIicHRCUgAAAEoAAAJidWtVQQAAACwAAAKsZnJGVQAAAD4AAALYaHVIVQAAADQAAAMWemhUVwAAAB4A
-AANKbmJOTwAAADoAAANoY3NDWgAAACgAAAOiaGVJTAAAACQAAAPKaXRJVAAAAE4AAAPucm9STwAAACoA
-AAQ8ZGVERQAAAE4AAARma29LUgAAACIAAAS0c3ZTRQAAADgAAAGyemhDTgAAAB4AAATWamFKUAAAACYA
-AAT0ZWxHUgAAACoAAAUacHRQTwAAAFIAAAVEbmxOTAAAAEAAAAWWZXNFUwAAAEwAAAXWdGhUSAAAADIA
-AAYidHJUUgAAACQAAAZUZmlGSQAAAEYAAAZ4aHJIUgAAAD4AAAa+cGxQTAAAAEoAAAb8cnVSVQAAADoA
-AAdGZW5VUwAAADwAAAeAYXJFRwAAACwAAAe8AFYBYQBlAG8AYgBlAGMAbgDhACAAcwBpAHYA4QAgAGcA
-YQBtAGEAIAAyACwAMgBHAGUAbgBlAHIAaQBzAGsAIABnAHIA5QAgADIALAAyACAAZwBhAG0AbQBhAHAA
-cgBvAGYAaQBsAEcAYQBtAG0AYQAgAGQAZQAgAGcAcgBpAHMAbwBzACAAZwBlAG4A6AByAGkAYwBhACAA
-MgAuADIAQx6lAHUAIABoAOwAbgBoACAATQDgAHUAIAB4AOEAbQAgAEMAaAB1AG4AZwAgAEcAYQBtAG0A
-YQAgADIALgAyAFAAZQByAGYAaQBsACAARwBlAG4A6QByAGkAYwBvACAAZABhACAARwBhAG0AYQAgAGQA
-ZQAgAEMAaQBuAHoAYQBzACAAMgAsADIEFwQwBDMEMAQ7BEwEPQQwACAARwByAGEAeQAtBDMEMAQ8BDAA
-IAAyAC4AMgBQAHIAbwBmAGkAbAAgAGcA6QBuAOkAcgBpAHEAdQBlACAAZwByAGkAcwAgAGcAYQBtAG0A
-YQAgADIALAAyAMEAbAB0AGEAbADhAG4AbwBzACAAcwB6APwAcgBrAGUAIABnAGEAbQBtAGEAIAAyAC4A
-MpAadShwcJaOUUlepgAgADIALgAyACCCcl9pY8+P8ABHAGUAbgBlAHIAaQBzAGsAIABnAHIA5QAgAGcA
-YQBtAG0AYQAgADIALAAyAC0AcAByAG8AZgBpAGwATwBiAGUAYwBuAOEAIAFhAGUAZADhACAAZwBhAG0A
-YQAgADIALgAyBdIF0AXeBdQAIAXQBeQF1QXoACAF2wXcBdwF2QAgADIALgAyAFAAcgBvAGYAaQBsAG8A
-IABnAHIAaQBnAGkAbwAgAGcAZQBuAGUAcgBpAGMAbwAgAGQAZQBsAGwAYQAgAGcAYQBtAG0AYQAgADIA
-LAAyAEcAYQBtAGEAIABnAHIAaQAgAGcAZQBuAGUAcgBpAGMBAwAgADIALAAyAEEAbABsAGcAZQBtAGUA
-aQBuAGUAcwAgAEcAcgBhAHUAcwB0AHUAZgBlAG4ALQBQAHIAbwBmAGkAbAAgAEcAYQBtAG0AYQAgADIA
-LAAyx3y8GAAg1ozAyQAgrBC5yAAgADIALgAyACDVBLhc0wzHfGZukBpwcF6mfPtlcAAgADIALgAyACBj
-z4/wZYdO9k4AgiwwsDDsMKQwrDDzMN4AIAAyAC4AMgAgMNcw7TDVMKEwpDDrA5MDtQO9A7kDugPMACAD
-kwO6A8EDuQAgA5MDrAO8A7wDsQAgADIALgAyAFAAZQByAGYAaQBsACAAZwBlAG4A6QByAGkAYwBvACAA
-ZABlACAAYwBpAG4AegBlAG4AdABvAHMAIABkAGEAIABHAGEAbQBtAGEAIAAyACwAMgBBAGwAZwBlAG0A
-ZQBlAG4AIABnAHIAaQBqAHMAIABnAGEAbQBtAGEAIAAyACwAMgAtAHAAcgBvAGYAaQBlAGwAUABlAHIA
-ZgBpAGwAIABnAGUAbgDpAHIAaQBjAG8AIABkAGUAIABnAGEAbQBtAGEAIABkAGUAIABnAHIAaQBzAGUA
-cwAgADIALAAyDiMOMQ4HDioONQ5BDgEOIQ4hDjIOQA4BDiMOIg5MDhcOMQ5IDicORA4bACAAMgAuADIA
-RwBlAG4AZQBsACAARwByAGkAIABHAGEAbQBhACAAMgAsADIAWQBsAGUAaQBuAGUAbgAgAGgAYQByAG0A
-YQBhAG4AIABnAGEAbQBtAGEAIAAyACwAMgAgAC0AcAByAG8AZgBpAGkAbABpAEcAZQBuAGUAcgBpAQ0A
-awBpACAARwByAGEAeQAgAEcAYQBtAG0AYQAgADIALgAyACAAcAByAG8AZgBpAGwAVQBuAGkAdwBlAHIA
-cwBhAGwAbgB5ACAAcAByAG8AZgBpAGwAIABzAHoAYQByAG8BWwBjAGkAIABnAGEAbQBtAGEAIAAyACwA
-MgQeBDEESQQwBE8AIARBBDUEQAQwBE8AIAQzBDAEPAQ8BDAAIAAyACwAMgAtBD8EQAQ+BEQEOAQ7BEwA
-RwBlAG4AZQByAGkAYwAgAEcAcgBhAHkAIABHAGEAbQBtAGEAIAAyAC4AMgAgAFAAcgBvAGYAaQBsAGUG
-OgYnBkUGJwAgADIALgAyACAGRAZIBkYAIAYxBkUGJwYvBkoAIAY5BicGRXRleHQAAAAAQ29weXJpZ2h0
-IEFwcGxlIEluYy4sIDIwMTIAAFhZWiAAAAAAAADzUQABAAAAARbMY3VydgAAAAAAAAQAAAAABQAKAA8A
-FAAZAB4AIwAoAC0AMgA3ADsAQABFAEoATwBUAFkAXgBjAGgAbQByAHcAfACBAIYAiwCQAJUAmgCfAKQA
-qQCuALIAtwC8AMEAxgDLANAA1QDbAOAA5QDrAPAA9gD7AQEBBwENARMBGQEfASUBKwEyATgBPgFFAUwB
-UgFZAWABZwFuAXUBfAGDAYsBkgGaAaEBqQGxAbkBwQHJAdEB2QHhAekB8gH6AgMCDAIUAh0CJgIvAjgC
-QQJLAlQCXQJnAnECegKEAo4CmAKiAqwCtgLBAssC1QLgAusC9QMAAwsDFgMhAy0DOANDA08DWgNmA3ID
-fgOKA5YDogOuA7oDxwPTA+AD7AP5BAYEEwQgBC0EOwRIBFUEYwRxBH4EjASaBKgEtgTEBNME4QTwBP4F
-DQUcBSsFOgVJBVgFZwV3BYYFlgWmBbUFxQXVBeUF9gYGBhYGJwY3BkgGWQZqBnsGjAadBq8GwAbRBuMG
-9QcHBxkHKwc9B08HYQd0B4YHmQesB78H0gflB/gICwgfCDIIRghaCG4IggiWCKoIvgjSCOcI+wkQCSUJ
-OglPCWQJeQmPCaQJugnPCeUJ+woRCicKPQpUCmoKgQqYCq4KxQrcCvMLCwsiCzkLUQtpC4ALmAuwC8gL
-4Qv5DBIMKgxDDFwMdQyODKcMwAzZDPMNDQ0mDUANWg10DY4NqQ3DDd4N+A4TDi4OSQ5kDn8Omw62DtIO
-7g8JDyUPQQ9eD3oPlg+zD88P7BAJECYQQxBhEH4QmxC5ENcQ9RETETERTxFtEYwRqhHJEegSBxImEkUS
-ZBKEEqMSwxLjEwMTIxNDE2MTgxOkE8UT5RQGFCcUSRRqFIsUrRTOFPAVEhU0FVYVeBWbFb0V4BYDFiYW
-SRZsFo8WshbWFvoXHRdBF2UXiReuF9IX9xgbGEAYZRiKGK8Y1Rj6GSAZRRlrGZEZtxndGgQaKhpRGnca
-nhrFGuwbFBs7G2MbihuyG9ocAhwqHFIcexyjHMwc9R0eHUcdcB2ZHcMd7B4WHkAeah6UHr4e6R8THz4f
-aR+UH78f6iAVIEEgbCCYIMQg8CEcIUghdSGhIc4h+yInIlUigiKvIt0jCiM4I2YjlCPCI/AkHyRNJHwk
-qyTaJQklOCVoJZclxyX3JicmVyaHJrcm6CcYJ0kneierJ9woDSg/KHEooijUKQYpOClrKZ0p0CoCKjUq
-aCqbKs8rAis2K2krnSvRLAUsOSxuLKIs1y0MLUEtdi2rLeEuFi5MLoIuty7uLyQvWi+RL8cv/jA1MGww
-pDDbMRIxSjGCMbox8jIqMmMymzLUMw0zRjN/M7gz8TQrNGU0njTYNRM1TTWHNcI1/TY3NnI2rjbpNyQ3
-YDecN9c4FDhQOIw4yDkFOUI5fzm8Ofk6Njp0OrI67zstO2s7qjvoPCc8ZTykPOM9Ij1hPaE94D4gPmA+
-oD7gPyE/YT+iP+JAI0BkQKZA50EpQWpBrEHuQjBCckK1QvdDOkN9Q8BEA0RHRIpEzkUSRVVFmkXeRiJG
-Z0arRvBHNUd7R8BIBUhLSJFI10kdSWNJqUnwSjdKfUrESwxLU0uaS+JMKkxyTLpNAk1KTZNN3E4lTm5O
-t08AT0lPk0/dUCdQcVC7UQZRUFGbUeZSMVJ8UsdTE1NfU6pT9lRCVI9U21UoVXVVwlYPVlxWqVb3V0RX
-klfgWC9YfVjLWRpZaVm4WgdaVlqmWvVbRVuVW+VcNVyGXNZdJ114XcleGl5sXr1fD19hX7NgBWBXYKpg
-/GFPYaJh9WJJYpxi8GNDY5dj62RAZJRk6WU9ZZJl52Y9ZpJm6Gc9Z5Nn6Wg/aJZo7GlDaZpp8WpIap9q
-92tPa6dr/2xXbK9tCG1gbbluEm5rbsRvHm94b9FwK3CGcOBxOnGVcfByS3KmcwFzXXO4dBR0cHTMdSh1
-hXXhdj52m3b4d1Z3s3gReG54zHkqeYl553pGeqV7BHtje8J8IXyBfOF9QX2hfgF+Yn7CfyN/hH/lgEeA
-qIEKgWuBzYIwgpKC9INXg7qEHYSAhOOFR4Wrhg6GcobXhzuHn4gEiGmIzokziZmJ/opkisqLMIuWi/yM
-Y4zKjTGNmI3/jmaOzo82j56QBpBukNaRP5GokhGSepLjk02TtpQglIqU9JVflcmWNJaflwqXdZfgmEyY
-uJkkmZCZ/JpomtWbQpuvnByciZz3nWSd0p5Anq6fHZ+Ln/qgaaDYoUehtqImopajBqN2o+akVqTHpTil
-qaYapoum/adup+CoUqjEqTepqaocqo+rAqt1q+msXKzQrUStuK4trqGvFq+LsACwdbDqsWCx1rJLssKz
-OLOutCW0nLUTtYq2AbZ5tvC3aLfguFm40blKucK6O7q1uy67p7whvJu9Fb2Pvgq+hL7/v3q/9cBwwOzB
-Z8Hjwl/C28NYw9TEUcTOxUvFyMZGxsPHQce/yD3IvMk6ybnKOMq3yzbLtsw1zLXNNc21zjbOts83z7jQ
-OdC60TzRvtI/0sHTRNPG1EnUy9VO1dHWVdbY11zX4Nhk2OjZbNnx2nba+9uA3AXcit0Q3ZbeHN6i3ynf
-r+A24L3hROHM4lPi2+Nj4+vkc+T85YTmDeaW5x/nqegy6LzpRunQ6lvq5etw6/vshu0R7ZzuKO6070Dv
-zPBY8OXxcvH/8ozzGfOn9DT0wvVQ9d72bfb794r4Gfio+Tj5x/pX+uf7d/wH/Jj9Kf26/kv+3P9t//+A
-DtIlJkhJXU5TTXV0YWJsZURhdGGjSEoqVk5TRGF0YdIlJkxNXE5TQ29sb3JTcGFjZaJOKlxOU0NvbG9y
-U3BhY2XSJSZQUVdOU0NvbG9yolAq0iUmU1RXTlNJbWFnZaJTKl8QD05TS2V5ZWRBcmNoaXZlctFXWFRy
-b290gAEACAARABoAIwAtADIANwBMAFIAXQBkAGsAeAB/AIcAiQCLAJAAkgCUAJ0AogCtAK8AsQCzALgA
-uwC9AL8AwQDDAMgA3wDhAOM44TjmOPE4+jkNORE5HDklOSo5Mjk1OTo5STlNOVg5YDltOXo5jzmUOZg5
-mjmcOZ45pzmsObI5ujm8Ob45wDnCOcc5z0s7Sz1LQktQS1RLW0tgS21LcEt9S4JLikuNS5JLmkudS69L
-sku3AAAAAAAAAgEAAAAAAAAAWQAAAAAAAAAAAAAAAAAAS7k
-</mutableData>
-        </image>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HHQ-P8-xSg"/>
+        <segue reference="OVJ-ht-fzK"/>
     </inferredMetricsTieBreakers>
 </document>

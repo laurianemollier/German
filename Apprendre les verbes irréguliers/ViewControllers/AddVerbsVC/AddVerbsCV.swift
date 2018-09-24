@@ -123,6 +123,10 @@ class AddVerbsCV: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.A2Button.setup()
+        self.B1Button.setup()
+        self.B2Button.setup()
+        self.C1Button.setup()
 //        loadProduct() // purchases
     }
 

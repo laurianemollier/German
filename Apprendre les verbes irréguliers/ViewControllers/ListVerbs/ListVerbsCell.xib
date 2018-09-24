@@ -33,7 +33,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuE-kd-pK5">
                                 <rect key="frame" x="13" y="17" width="185" height="30.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="185" id="PZf-nG-ht8"/>
+                                    <constraint firstAttribute="width" priority="999" constant="185" id="PZf-nG-ht8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="23"/>
                                 <nil key="textColor"/>
@@ -78,8 +78,11 @@
                                 <color key="textColor" red="0.95294117649999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elo-hw-M2W">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elo-hw-M2W">
                                 <rect key="frame" x="203" y="17" width="187" height="30.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="eYR-X5-NAG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -111,12 +114,15 @@
                             <constraint firstItem="s9k-4q-zgm" firstAttribute="leading" secondItem="SuE-kd-pK5" secondAttribute="leading" id="3ig-Ro-eHk"/>
                             <constraint firstItem="SSI-hJ-bp8" firstAttribute="leading" secondItem="SuE-kd-pK5" secondAttribute="leading" id="932-ny-1uy"/>
                             <constraint firstItem="elo-hw-M2W" firstAttribute="leading" secondItem="SuE-kd-pK5" secondAttribute="trailing" constant="5" id="96f-X7-Q3J"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3q1-mI-dsM" secondAttribute="trailing" priority="999" constant="10" id="GQj-ay-1D8"/>
+                            <constraint firstItem="SuE-kd-pK5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nf4-3X-VY3" secondAttribute="leading" constant="8" id="K1E-fG-zb3"/>
                             <constraint firstItem="SuE-kd-pK5" firstAttribute="top" secondItem="Nf4-3X-VY3" secondAttribute="top" constant="17" id="L7l-jm-TPZ"/>
-                            <constraint firstAttribute="trailing" secondItem="3q1-mI-dsM" secondAttribute="trailing" constant="21" id="MqA-wk-eyu"/>
+                            <constraint firstAttribute="trailing" secondItem="3q1-mI-dsM" secondAttribute="trailing" priority="998" constant="21" id="MqA-wk-eyu"/>
                             <constraint firstItem="SSI-hJ-bp8" firstAttribute="leading" secondItem="SuE-kd-pK5" secondAttribute="leading" id="Ny0-oa-ST3"/>
-                            <constraint firstItem="SuE-kd-pK5" firstAttribute="leading" secondItem="Nf4-3X-VY3" secondAttribute="leading" constant="13" id="SOU-i4-yIN"/>
-                            <constraint firstAttribute="trailing" secondItem="elo-hw-M2W" secondAttribute="trailing" constant="15" id="Sw2-D7-PCZ"/>
+                            <constraint firstItem="SuE-kd-pK5" firstAttribute="leading" secondItem="Nf4-3X-VY3" secondAttribute="leading" priority="998" constant="13" id="SOU-i4-yIN"/>
+                            <constraint firstAttribute="trailing" secondItem="elo-hw-M2W" secondAttribute="trailing" priority="998" constant="15" id="Sw2-D7-PCZ"/>
                             <constraint firstItem="s9k-4q-zgm" firstAttribute="leading" secondItem="SuE-kd-pK5" secondAttribute="leading" id="YcY-mg-nB9"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="elo-hw-M2W" secondAttribute="trailing" priority="999" constant="8" id="ivD-nT-qJV"/>
                             <constraint firstItem="SSI-hJ-bp8" firstAttribute="top" secondItem="s9k-4q-zgm" secondAttribute="bottom" constant="7" id="mBT-rj-sbp"/>
                             <constraint firstItem="elo-hw-M2W" firstAttribute="top" secondItem="SuE-kd-pK5" secondAttribute="top" id="q4t-Fz-06m"/>
                             <constraint firstItem="3q1-mI-dsM" firstAttribute="centerY" secondItem="NQv-2z-DOT" secondAttribute="centerY" id="rfz-ML-hSE"/>
@@ -127,9 +133,11 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="Nf4-3X-VY3" secondAttribute="trailing" constant="17" id="aBG-RD-g0a"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Nf4-3X-VY3" secondAttribute="trailing" constant="8" id="8Rp-ou-5Wm"/>
+                    <constraint firstItem="Nf4-3X-VY3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="GwY-ha-r36"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Nf4-3X-VY3" secondAttribute="trailing" priority="997" constant="17" id="aBG-RD-g0a"/>
                     <constraint firstItem="Nf4-3X-VY3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="qB4-cC-srN"/>
-                    <constraint firstItem="Nf4-3X-VY3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="sgt-c5-lQp"/>
+                    <constraint firstItem="Nf4-3X-VY3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" priority="997" constant="17" id="sgt-c5-lQp"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Nf4-3X-VY3" secondAttribute="bottom" id="wMn-XX-G6N"/>
                 </constraints>
             </tableViewCellContentView>
@@ -145,7 +153,7 @@
                 <outlet property="simplePastLabel" destination="pgr-cv-RDT" id="Zz3-5W-cWS"/>
                 <outlet property="traductionLabel" destination="elo-hw-M2W" id="uFE-zu-1qL"/>
             </connections>
-            <point key="canvasLocation" x="-196" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-311" y="139"/>
         </tableViewCell>
     </objects>
 </document>

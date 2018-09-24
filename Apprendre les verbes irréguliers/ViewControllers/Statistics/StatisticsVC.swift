@@ -43,14 +43,16 @@ class StatisticsVC: UIViewController {
 
         do{
             self.allLearningVerbs =  try DbUserLearningVerbDAOImpl.shared.all()
-            setUp()
         }
         catch{
             SpeedLog.print(error)
             // TODO
         }
-        
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setUp()
     }
 
     override func didReceiveMemoryWarning() {

@@ -33,16 +33,13 @@ class LevelCheckBox: UIButton {
     @IBOutlet weak var view: UIButton!
     
     
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
     }
     
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
     }
     
     
@@ -59,9 +56,9 @@ class LevelCheckBox: UIButton {
         
         
         designNotSelected()
-        
-        addSubview(view)
         self.layer.cornerRadius = self.view.frame.height / 2
+        addSubview(view)
+        
         
     }
     
@@ -79,7 +76,7 @@ class LevelCheckBox: UIButton {
     }
     
     private func designNotSelected(){
-        
+
         self.layer.borderColor = self.borderColorNotSelected
     }
     
