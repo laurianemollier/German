@@ -54,6 +54,10 @@ class StatisticsVC: UIViewController {
         super.viewWillAppear(animated)
         setUp()
     }
+    
+    override func viewDidLayoutSubviews() {
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

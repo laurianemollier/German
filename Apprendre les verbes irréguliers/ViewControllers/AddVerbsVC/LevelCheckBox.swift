@@ -35,31 +35,28 @@ class LevelCheckBox: UIButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setUpPrivate()
     }
     
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setUpPrivate()
     }
     
-    
-    
-    func setup() {
+    func setUpPrivate(){
         self.view = loadViewFromNib() as! UIButton?
         self.view.frame = bounds
         self.view.autoresizingMask = [UIViewAutoresizing.flexibleWidth,
-                                 UIViewAutoresizing.flexibleHeight]
-        
-        self.layer.borderWidth = self.borderWidth
-        
+                                      UIViewAutoresizing.flexibleHeight]
         self.borderColorNotSelected = self.backgroundColor?.cgColor
-        
-        
-        designNotSelected()
-        self.layer.cornerRadius = self.view.frame.height / 2
+        self.layer.borderWidth = self.borderWidth
         addSubview(view)
-        
-        
+    }
+    
+    func setup() {
+        designNotSelected()
+        self.layer.cornerRadius = self.frame.width / 2
     }
     
     func loadViewFromNib() -> UIView! {
