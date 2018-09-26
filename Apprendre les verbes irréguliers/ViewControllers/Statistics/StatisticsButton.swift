@@ -12,8 +12,27 @@ import UIKit
 @IBDesignable
 class StatisticsButton: UIButton {
     
-    
     let fontDifference: CGFloat = 3
+    let iconImageView = UIImageView()
+    let nbrVerbLabel = UILabel()
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    
+    private func commonInit(){
+        self.addSubview(self.iconImageView)
+        self.addSubview(self.nbrVerbLabel)
+    }
+
     
     public func setUp(userProgression: UserProgression, nbrVerb: Int) {
         
@@ -34,22 +53,19 @@ class StatisticsButton: UIButton {
         
         // set layer
         setUpLayer()
-        
-        
     }
     
     
     
     // set the icon
     private func setUpIcon(image: UIImage, borderHorizontal: CGFloat){
-        let imageView = UIImageView(image: image)
-        let imgRation = imageView.frame.width / imageView.frame.height
+        self.iconImageView.image = image
+        let imgRation: CGFloat = 1
         let imgHeight = self.frame.height * 0.7065
-        
+
         let imgY = (self.frame.height - imgHeight) / 2
         let imgX = borderHorizontal
-        imageView.frame = CGRect(x: imgX, y: imgY, width: imgHeight * imgRation, height: imgHeight)
-        self.addSubview(imageView)
+        self.iconImageView.frame = CGRect(x: imgX, y: imgY, width: imgHeight * imgRation, height: imgHeight)
     }
     
     // set the text
@@ -71,20 +87,19 @@ class StatisticsButton: UIButton {
         let labelWidth = self.frame.width * 0.5
         let labelX = self.frame.width - labelWidth - borderHorizontal
         
-        let label = UILabel(frame: CGRect(x: labelX, y: 0, width: labelWidth, height: self.frame.height))
-        label.textAlignment = .right
+        self.nbrVerbLabel.frame = CGRect(x: labelX, y: 0, width: labelWidth, height: self.frame.height)
+        self.nbrVerbLabel.textAlignment = .right
         if nbrVerb == 0 || nbrVerb == 1{
-           label.text = String(nbrVerb) + " verbe" // TODO
+           self.nbrVerbLabel.text = String(nbrVerb) + " verbe" // TODO
         }
         else{
-            label.text = String(nbrVerb) + " verbes" // TODO
+            self.nbrVerbLabel.text = String(nbrVerb) + " verbes" // TODO
         }
         
         
         let fontSizeLabel = (self.titleLabel?.font.pointSize)! - fontDifference
-        label.font = UIFont.appRegularFontWith(size: fontSizeLabel)
-        label.textColor = UIColor(rgb: 0xDD0000)
-        self.addSubview(label)
+        self.nbrVerbLabel.font = UIFont.appRegularFontWith(size: fontSizeLabel)
+        self.nbrVerbLabel.textColor = UIColor(rgb: 0xDD0000)
     }
     
     

@@ -50,13 +50,13 @@ class StatisticsVC: UIViewController {
         }
     }
     
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setUp()
     }
     
     override func viewDidLayoutSubviews() {
-        
+        setUp()
     }
 
     override func didReceiveMemoryWarning() {
@@ -138,6 +138,7 @@ class StatisticsVC: UIViewController {
             let verbs = try DbUserLearningVerbDAOImpl.shared.select(userProgression: userProgression)
             vc.learningVerbs = verbs
             vc.titleList = userProgression.name()
+            vc.showIfVerbIsInReviewList = false
         }
         catch{
             vc.learningVerbs = [] // TODO

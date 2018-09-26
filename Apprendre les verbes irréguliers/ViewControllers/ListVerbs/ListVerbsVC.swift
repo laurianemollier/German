@@ -11,6 +11,9 @@ import UIKit
 class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     
+    var showIfVerbIsInReviewList: Bool = true
+    
+    
     var titleList: String!
     
     var learningVerbs: [UserLearningVerb]!
@@ -20,6 +23,7 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     @IBOutlet weak var table: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet weak var titleListLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,9 +69,11 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
             SpeedLog.print("The id 'listVerbsCell' can not be found")
             return UITableViewCell()
         }
-        cell.setUp(userLearningVerb: self.currentLearningVerbs[indexPath.row])
+        cell.setUp(userLearningVerb: self.currentLearningVerbs[indexPath.row], showIfVerbIsInReviewList: showIfVerbIsInReviewList)
+        
         return cell
     }
+    
     
     
     // MARK: - SearchBar

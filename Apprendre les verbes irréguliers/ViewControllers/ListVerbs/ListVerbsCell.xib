@@ -27,16 +27,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bi-sb-fbJ">
-                        <rect key="frame" x="17" y="10" width="470" height="158"/>
+                        <rect key="frame" x="17" y="10" width="470" height="241.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kME-2w-OAZ">
-                                <rect key="frame" x="0.0" y="0.0" width="470" height="158"/>
+                                <rect key="frame" x="0.0" y="0.0" width="470" height="241.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxL-gs-uEm">
-                                        <rect key="frame" x="0.0" y="0.0" width="470" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="470" height="139.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVz-T6-x4d">
-                                                <rect key="frame" x="200" y="25.5" width="258" height="18.5"/>
+                                                <rect key="frame" x="200" y="12" width="258" height="115.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="91h-1w-xc0"/>
                                                 </constraints>
@@ -45,10 +45,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi8-J9-SYY">
-                                                <rect key="frame" x="12" y="12" width="185" height="32"/>
+                                                <rect key="frame" x="12" y="12" width="185" height="115.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" priority="999" constant="185" id="1bu-kY-QuB"/>
-                                                    <constraint firstAttribute="height" constant="32" id="Abo-Yk-ieO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="23"/>
                                                 <nil key="textColor"/>
@@ -59,6 +58,7 @@
                                         <constraints>
                                             <constraint firstItem="Zi8-J9-SYY" firstAttribute="top" secondItem="TxL-gs-uEm" secondAttribute="top" constant="12" id="1Yy-4h-ZZf"/>
                                             <constraint firstItem="UVz-T6-x4d" firstAttribute="leading" secondItem="Zi8-J9-SYY" secondAttribute="trailing" constant="3" id="FgH-Nn-WIb"/>
+                                            <constraint firstItem="UVz-T6-x4d" firstAttribute="height" secondItem="Zi8-J9-SYY" secondAttribute="height" id="Iez-IH-6ru"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UVz-T6-x4d" secondAttribute="trailing" constant="5" id="O5u-Qa-9MO"/>
                                             <constraint firstItem="Zi8-J9-SYY" firstAttribute="leading" secondItem="TxL-gs-uEm" secondAttribute="leading" priority="999" constant="12" id="QtK-6L-Zkq"/>
                                             <constraint firstItem="Zi8-J9-SYY" firstAttribute="centerY" secondItem="TxL-gs-uEm" secondAttribute="centerY" id="lE8-Rb-dfR"/>
@@ -68,7 +68,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7n-25-Jju">
-                                        <rect key="frame" x="0.0" y="56" width="470" height="66"/>
+                                        <rect key="frame" x="0.0" y="139.5" width="470" height="66"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JYY-Di-ZV8">
                                                 <rect key="frame" x="12" y="0.0" width="150" height="54"/>
@@ -105,7 +105,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tij-OH-tMm">
-                                                <rect key="frame" x="423" y="14" width="30" height="40"/>
+                                                <rect key="frame" x="419" y="14" width="34" height="40"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="MfQ-dk-uYY"/>
@@ -127,7 +127,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0p-S8-ORI">
-                                        <rect key="frame" x="0.0" y="122" width="470" height="36"/>
+                                        <rect key="frame" x="0.0" y="205.5" width="470" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Déjà dans la liste de révision" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="LY0-va-Rmy" customClass="EdgeInsetLabel" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                                 <rect key="frame" x="12" y="0.0" width="200" height="24"/>

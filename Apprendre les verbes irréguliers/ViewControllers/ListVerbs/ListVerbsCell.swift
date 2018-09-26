@@ -50,20 +50,6 @@ class ListVerbsCell: UITableViewCell {
 
     
     
-    var cellFooterIsHidden: Bool {
-        set {
-            if newValue{
-                self.stack.removeArrangedSubview(self.cellFooter)
-                self.cellFooter.isHidden = true
-            } else{
-                self.stack.addArrangedSubview(self.cellFooter)
-                self.cellFooter.isHidden = false
-            }
-        }
-        get{
-            return self.cellFooterIsHidden
-        }
-    }
     
 //    private func hideCellFooter(_ ){
 //        if let footer = self.cellFooter{
@@ -71,32 +57,42 @@ class ListVerbsCell: UITableViewCell {
 //        }
 //    }
     
-    func setUp(userLearningVerb: UserLearningVerb){
+    func setUp(userLearningVerb: UserLearningVerb, showIfVerbIsInReviewList: Bool){
         self.userLearningVerb = userLearningVerb
         self.infinitiveLabel.text = userLearningVerb.verb.infinitive()
-        self.presentLabel?.text = userLearningVerb.verb.present()
-        self.simplePastLabel?.text = userLearningVerb.verb.simplePast()
-        self.pastParticipleLabel?.text = userLearningVerb.verb.pastParticiple()
-        self.traductionLabel?.text = userLearningVerb.verb.translation(Lang.fr) // TODO
+        self.presentLabel.text = userLearningVerb.verb.present()
+        self.simplePastLabel.text = userLearningVerb.verb.simplePast()
+        self.pastParticipleLabel.text = userLearningVerb.verb.pastParticiple()
+        self.traductionLabel.text = userLearningVerb.verb.translation(Lang.fr) // TODO
         
-        self.levelLabel?.text = userLearningVerb.verb.level.rawValue
+        self.levelLabel.text = userLearningVerb.verb.level.rawValue
     
         self.containerView.layer.cornerRadius = 7
-        self.informationLabel?.layer.cornerRadius = 5
-        self.informationLabel?.layer.borderWidth = 1
-        self.informationLabel?.layer.borderColor = UIColor.lightGray.cgColor
+        self.informationLabel.layer.cornerRadius = 5
+        self.informationLabel.layer.borderWidth = 1
+        self.informationLabel.layer.borderColor = UIColor.lightGray.cgColor
         
+        let verbIsInReviewList = userLearningVerb.userProgression != UserProgression.notSeenYet
+        let showFooter = showIfVerbIsInReviewList && verbIsInReviewList
+        cellFooter(show: showFooter)
         
-        self.cellFooterIsHidden = userLearningVerb.userProgression.isNotInReviewList()
     }
     
     
     
     private func hideCellContent(){
-        if let content = self.cellContent{
-            
+       
+    }
+    
+    
+    func cellFooter(show: Bool){
+        if show {
+            self.stack.addArrangedSubview(self.cellFooter)
+            self.cellFooter.isHidden = false
+        } else{
+            self.stack.removeArrangedSubview(self.cellFooter)
+            self.cellFooter.isHidden = true
         }
-        
     }
     
 
