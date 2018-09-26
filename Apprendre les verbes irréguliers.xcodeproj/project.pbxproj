@@ -57,7 +57,6 @@
 		98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0151021244C9F0090006E /* UserLearningVerb.swift */; };
 		98B01514212474670090006E /* LevelCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B01513212474670090006E /* LevelCheckBox.swift */; };
 		98B01516212478880090006E /* LevelCheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B01515212478880090006E /* LevelCheckBox.xib */; };
-		98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B121255872000F44B4 /* TestSGLite.swift */; };
 		98B0A8B62125AE9B000F44B4 /* DbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B52125AE9B000F44B4 /* DbVerbDAO.swift */; };
 		98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B72125AECD000F44B4 /* DbVerbDAOImpl.swift */; };
 		98B53B69212E96A900565C53 /* ROBOTOSLAB-BOLD_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 98B53B65212E96A300565C53 /* ROBOTOSLAB-BOLD_0.TTF */; };
@@ -70,7 +69,6 @@
 		98B53B79212F24B500565C53 /* Background2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B53B78212F24B500565C53 /* Background2.swift */; };
 		98B53B7B212F24C800565C53 /* Background2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B53B7A212F24C800565C53 /* Background2.xib */; };
 		98C9834B20F750820080B08C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9834A20F750820080B08C /* AppDelegate.swift */; };
-		98C9834D20F750820080B08C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C9834C20F750820080B08C /* ViewController.swift */; };
 		98C9835020F750820080B08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C9834E20F750820080B08C /* Main.storyboard */; };
 		98C9835220F750840080B08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C9835120F750840080B08C /* Assets.xcassets */; };
 		98C9835520F750840080B08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C9835320F750840080B08C /* LaunchScreen.storyboard */; };
@@ -535,7 +533,6 @@
 		98B0151021244C9F0090006E /* UserLearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLearningVerb.swift; sourceTree = "<group>"; };
 		98B01513212474670090006E /* LevelCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCheckBox.swift; sourceTree = "<group>"; };
 		98B01515212478880090006E /* LevelCheckBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCheckBox.xib; sourceTree = "<group>"; };
-		98B0A8B121255872000F44B4 /* TestSGLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSGLite.swift; sourceTree = "<group>"; };
 		98B0A8B52125AE9B000F44B4 /* DbVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbDAO.swift; sourceTree = "<group>"; };
 		98B0A8B72125AECD000F44B4 /* DbVerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbDAOImpl.swift; sourceTree = "<group>"; };
 		98B53B65212E96A300565C53 /* ROBOTOSLAB-BOLD_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ROBOTOSLAB-BOLD_0.TTF"; sourceTree = "<group>"; };
@@ -549,7 +546,6 @@
 		98B53B7A212F24C800565C53 /* Background2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Background2.xib; sourceTree = "<group>"; };
 		98C9834720F750820080B08C /* Apprendre les verbes irréguliers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apprendre les verbes irréguliers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C9834A20F750820080B08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		98C9834C20F750820080B08C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		98C9834F20F750820080B08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98C9835120F750840080B08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98C9835420F750840080B08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1186,12 +1182,10 @@
 				983B2493211C49B7009C33B1 /* Models */,
 				98DEFC8820FDC26200DC32BB /* ViewControllers */,
 				98C9834A20F750820080B08C /* AppDelegate.swift */,
-				98C9834C20F750820080B08C /* ViewController.swift */,
 				98C9834E20F750820080B08C /* Main.storyboard */,
 				98C9835120F750840080B08C /* Assets.xcassets */,
 				98C9835320F750840080B08C /* LaunchScreen.storyboard */,
 				98C9835620F750840080B08C /* Info.plist */,
-				98B0A8B121255872000F44B4 /* TestSGLite.swift */,
 			);
 			path = "Apprendre les verbes irréguliers";
 			sourceTree = "<group>";
@@ -2089,7 +2083,6 @@
 				988DB91B2125C71700AFAEF4 /* DbVerbTranslation.swift in Sources */,
 				98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */,
 				98685F372126BA6100DA327D /* Form.swift in Sources */,
-				98B0A8B221255872000F44B4 /* TestSGLite.swift in Sources */,
 				9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */,
 				98483A1B214587A600AF7115 /* SelectLevelVC.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */,
@@ -2104,7 +2097,6 @@
 				98F2F7A521579062007AB342 /* ListVerbsCell.swift in Sources */,
 				98685F7D212965E600DA327D /* ForwarCardVC.swift in Sources */,
 				988DB91D2125C92700AFAEF4 /* Database.swift in Sources */,
-				98C9834D20F750820080B08C /* ViewController.swift in Sources */,
 				98685F7A212744F900DA327D /* SetUpDatabase.swift in Sources */,
 				988442402133834700D9661B /* Sequence.swift in Sources */,
 				9863384D21429ABB00E8B95A /* IAPurchaseVC.swift in Sources */,

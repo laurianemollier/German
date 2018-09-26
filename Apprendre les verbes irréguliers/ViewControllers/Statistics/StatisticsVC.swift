@@ -101,14 +101,49 @@ class StatisticsVC: UIViewController {
     }
     
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let listVerbsVC = segue.destination as! ListVerbsVC
+        
+        
+        switch segue.identifier {
+        case "notSeen":
+            setListVerbsVC(vc: listVerbsVC, userProgression: UserProgression.notSeenYet)
+        case "level1":
+            setListVerbsVC(vc: listVerbsVC, userProgression: UserProgression.level1)
+        case "level2":
+            setListVerbsVC(vc: listVerbsVC, userProgression: UserProgression.level2)
+        case "level3":
+            setListVerbsVC(vc: listVerbsVC, userProgression: UserProgression.level3)
+        case "level4":
+            setListVerbsVC(vc: listVerbsVC, userProgression: UserProgression.level4)
+        case "level5":
+            setListVerbsVC(vc: listVerbsVC, userProgression: UserProgression.level5)
+        case "level6":
+            setListVerbsVC(vc: listVerbsVC, userProgression: UserProgression.level6)
+        case "level7":
+            setListVerbsVC(vc: listVerbsVC, userProgression: UserProgression.level7)
+        case "level8":
+            setListVerbsVC(vc: listVerbsVC, userProgression: UserProgression.level8)
+        default:
+            SpeedLog.print("Error") // TODO
+        }
+    
     }
-    */
+    
+    func setListVerbsVC(vc: ListVerbsVC, userProgression: UserProgression){
+        do {
+            let verbs = try DbUserLearningVerbDAOImpl.shared.select(userProgression: userProgression)
+            vc.learningVerbs = verbs
+            vc.titleList = userProgression.name()
+        }
+        catch{
+            vc.learningVerbs = [] // TODO
+            
+        }
+    }
+
 
 }

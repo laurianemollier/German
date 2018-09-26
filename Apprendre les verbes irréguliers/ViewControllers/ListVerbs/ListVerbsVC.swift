@@ -9,14 +9,17 @@
 import UIKit
 
 class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
-
+    
+    
+    var titleList: String!
+    
     var learningVerbs: [UserLearningVerb]!
     var currentLearningVerbs: [UserLearningVerb]!
     
     
-    
     @IBOutlet weak var table: UITableView!
     @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet weak var titleListLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +28,7 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
 
         let nibName = UINib(nibName: "ListVerbsCell", bundle: nil)
         table.register(nibName, forCellReuseIdentifier: "listVerbsCell")
-        // Do any additional setup after loading the view.
+        self.titleListLabel.text = titleList
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,7 +112,6 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     
     func alterLayout() {
-//
         self.searchBar.placeholder = "Chercher un verbe" // TODO
     }
     

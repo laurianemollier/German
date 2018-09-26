@@ -121,8 +121,7 @@ class MainVC: UIViewController {
     private func prepareListVerbsVC(_ segue: UIStoryboardSegue){
         let cv = segue.destination as! ListVerbsVC
         do {
-            let verbsRangeToReviewToday = try DbUserLearningVerbDAOImpl.shared.all()
-            cv.learningVerbs = verbsRangeToReviewToday
+            cv.learningVerbs = try DbUserLearningVerbDAOImpl.shared.all()
         }
         catch{
             cv.learningVerbs = []

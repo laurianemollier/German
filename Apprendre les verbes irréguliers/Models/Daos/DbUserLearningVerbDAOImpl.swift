@@ -148,6 +148,16 @@ class DbUserLearningVerbDAOImpl{
     }
     
     
+    func select(userProgression: UserProgression) throws -> [UserLearningVerb] {
+        let rows = try db.prepare(UserLearningVerbTable.learningVerbs
+            .filter(UserLearningVerbTable.userProgression == userProgression.rawValue))
+        return try rows.map({ row in
+            try toUserLearningVerb(userLVTableRow: row)
+        })
+        
+    }
+    
+    
     
     
     /* -Private functions: */
