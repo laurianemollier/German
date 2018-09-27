@@ -34,34 +34,40 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Uv-vU-XHY">
-                    <rect key="frame" x="0.0" y="60.5" width="421" height="241"/>
+                    <rect key="frame" x="0.0" y="60" width="421" height="242.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5U-On-g8M">
                             <rect key="frame" x="5" y="3" width="411" height="50.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="iQ2-Rk-LIp"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="38"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edg-Q8-BTj">
-                            <rect key="frame" x="5" y="80.5" width="411" height="26.5"/>
+                            <rect key="frame" x="5" y="80.5" width="411" height="27"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="0S6-pb-CZ9"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OA-7U-Gvu">
-                            <rect key="frame" x="5" y="151.5" width="411" height="26.5"/>
+                            <rect key="frame" x="5" y="152.5" width="411" height="27"/>
                             <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raQ-h7-BCY">
-                            <rect key="frame" x="5" y="116" width="411" height="26.5"/>
+                            <rect key="frame" x="5" y="116.5" width="411" height="27"/>
                             <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-wu-Kls">
-                            <rect key="frame" x="5" y="205" width="411" height="33"/>
+                            <rect key="frame" x="5" y="206.5" width="411" height="33"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="33" id="NlS-Kg-vsw"/>
                             </constraints>
@@ -73,20 +79,22 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="edg-Q8-BTj" firstAttribute="leading" secondItem="4Uv-vU-XHY" secondAttribute="leading" constant="5" id="4YR-5s-pds"/>
+                        <constraint firstItem="edg-Q8-BTj" firstAttribute="top" secondItem="I5U-On-g8M" secondAttribute="bottom" priority="998" constant="27" id="4iI-PO-6lD"/>
                         <constraint firstAttribute="bottom" secondItem="bgP-wu-Kls" secondAttribute="bottom" constant="3" id="BEU-Y6-mGM"/>
                         <constraint firstItem="5OA-7U-Gvu" firstAttribute="leading" secondItem="4Uv-vU-XHY" secondAttribute="leading" constant="5" id="BGY-Kk-xbj"/>
                         <constraint firstAttribute="trailing" secondItem="raQ-h7-BCY" secondAttribute="trailing" constant="5" id="DNw-Md-Abp"/>
                         <constraint firstAttribute="trailing" secondItem="edg-Q8-BTj" secondAttribute="trailing" constant="5" id="GEm-G4-fLx"/>
-                        <constraint firstItem="edg-Q8-BTj" firstAttribute="top" secondItem="I5U-On-g8M" secondAttribute="bottom" constant="27" id="Iaj-8e-Jsf"/>
+                        <constraint firstItem="edg-Q8-BTj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I5U-On-g8M" secondAttribute="bottom" constant="15" id="Iaj-8e-Jsf"/>
                         <constraint firstAttribute="trailing" secondItem="I5U-On-g8M" secondAttribute="trailing" constant="5" id="L9I-q4-8q7"/>
                         <constraint firstItem="raQ-h7-BCY" firstAttribute="height" secondItem="edg-Q8-BTj" secondAttribute="height" id="RCe-CL-L8L"/>
                         <constraint firstItem="I5U-On-g8M" firstAttribute="top" secondItem="4Uv-vU-XHY" secondAttribute="top" constant="3" id="TCe-6k-3pd"/>
                         <constraint firstItem="bgP-wu-Kls" firstAttribute="leading" secondItem="4Uv-vU-XHY" secondAttribute="leading" constant="5" id="Unt-3f-7CI"/>
-                        <constraint firstItem="bgP-wu-Kls" firstAttribute="top" secondItem="5OA-7U-Gvu" secondAttribute="bottom" constant="27" id="VWM-nK-aVG"/>
+                        <constraint firstItem="bgP-wu-Kls" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5OA-7U-Gvu" secondAttribute="bottom" constant="15" id="VWM-nK-aVG"/>
                         <constraint firstAttribute="trailing" secondItem="5OA-7U-Gvu" secondAttribute="trailing" constant="5" id="WWa-nl-Yhk"/>
                         <constraint firstAttribute="trailing" secondItem="bgP-wu-Kls" secondAttribute="trailing" constant="5" id="ZS7-6C-BRv"/>
                         <constraint firstItem="5OA-7U-Gvu" firstAttribute="top" secondItem="raQ-h7-BCY" secondAttribute="bottom" constant="9" id="Zbz-qp-3gF"/>
                         <constraint firstItem="raQ-h7-BCY" firstAttribute="leading" secondItem="4Uv-vU-XHY" secondAttribute="leading" constant="5" id="fSJ-QF-DIr"/>
+                        <constraint firstItem="bgP-wu-Kls" firstAttribute="top" secondItem="5OA-7U-Gvu" secondAttribute="bottom" priority="998" constant="27" id="hRN-4N-qJx"/>
                         <constraint firstItem="I5U-On-g8M" firstAttribute="leading" secondItem="4Uv-vU-XHY" secondAttribute="leading" constant="5" id="mFV-Of-AkI"/>
                         <constraint firstItem="5OA-7U-Gvu" firstAttribute="height" secondItem="edg-Q8-BTj" secondAttribute="height" id="vTm-Cw-BqW"/>
                         <constraint firstItem="raQ-h7-BCY" firstAttribute="top" secondItem="edg-Q8-BTj" secondAttribute="bottom" constant="9" id="w4u-2u-qZP"/>

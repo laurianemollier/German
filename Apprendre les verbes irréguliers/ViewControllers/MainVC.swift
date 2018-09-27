@@ -10,6 +10,10 @@
 
 import UIKit
 
+
+// Irregular verbs - German
+
+
 /**
  This class is the first view controller that appears when we launch the app.
  From this view controller you can have access to all the functionnalities of the app.

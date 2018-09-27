@@ -12,9 +12,12 @@ import UIKit
 @IBDesignable
 class StatisticsButton: UIButton {
     
-    let fontDifference: CGFloat = 3
-    let iconImageView = UIImageView()
-    let nbrVerbLabel = UILabel()
+    var userProgression: UserProgression!
+    var nbrVerb: Int!
+    
+    private let fontDifference: CGFloat = 3
+    private let iconImageView = UIImageView()
+    private let nbrVerbLabel = UILabel()
     
     
     override init(frame: CGRect) {
@@ -35,7 +38,12 @@ class StatisticsButton: UIButton {
 
     
     public func setUp(userProgression: UserProgression, nbrVerb: Int) {
-        
+        self.userProgression = userProgression
+        self.nbrVerb = nbrVerb
+
+        // TODO
+        self.isEnabled = nbrVerb != 0
+
         let borderHorizontal = self.frame.width * 0.048731
         
         if let image = userProgression.image(){

@@ -85,6 +85,12 @@ class StatisticsVC: UIViewController {
                                      nbrVerb: nbrVerbFor(progression: UserProgression.level8))
 //        self.progressionToIgnore.setUp(userProgression: UserProgression.toIgnore,
 //                                     nbrVerb: nbrVerbFor(progression: UserProgression.toIgnore))
+    
+    
+    
+        
+    
+    
     }
     
     
