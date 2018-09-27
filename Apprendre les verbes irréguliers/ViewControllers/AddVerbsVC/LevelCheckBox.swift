@@ -55,13 +55,14 @@ class LevelCheckBox: UIButton {
     }
     
     func setup() {
+        self.layer.cornerRadius = self.frame.height / 2
         if self.isSelected{
             designSelected()
         }
         else{
             designNotSelected()
         }
-        self.layer.cornerRadius = self.frame.width / 2
+        
     }
     
     func loadViewFromNib() -> UIView! {

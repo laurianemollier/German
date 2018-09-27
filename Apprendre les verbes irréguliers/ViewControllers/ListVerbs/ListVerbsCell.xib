@@ -19,24 +19,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listVerbsCell" rowHeight="252" id="YuP-9C-0k4" customClass="ListVerbsCell" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="504" height="252"/>
+        <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listVerbsCell" rowHeight="187" id="YuP-9C-0k4" customClass="ListVerbsCell" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="187"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YuP-9C-0k4" id="fa3-Jj-Mtr">
-                <rect key="frame" x="0.0" y="0.0" width="504" height="251.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="415" height="186.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bi-sb-fbJ">
-                        <rect key="frame" x="17" y="10" width="470" height="241.5"/>
+                        <rect key="frame" x="17" y="10" width="381" height="176.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kME-2w-OAZ">
-                                <rect key="frame" x="0.0" y="0.0" width="470" height="241.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="381" height="176.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxL-gs-uEm">
-                                        <rect key="frame" x="0.0" y="0.0" width="470" height="139.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="381" height="74.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVz-T6-x4d">
-                                                <rect key="frame" x="200" y="12" width="258" height="115.5"/>
+                                                <rect key="frame" x="200" y="12" width="169" height="50.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="91h-1w-xc0"/>
                                                 </constraints>
@@ -45,9 +45,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi8-J9-SYY">
-                                                <rect key="frame" x="12" y="12" width="185" height="115.5"/>
+                                                <rect key="frame" x="12" y="12" width="185" height="50.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" priority="999" constant="185" id="1bu-kY-QuB"/>
+                                                    <constraint firstAttribute="width" priority="999" constant="185" id="1bu-kY-QuB">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="23"/>
                                                 <nil key="textColor"/>
@@ -68,7 +70,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7n-25-Jju">
-                                        <rect key="frame" x="0.0" y="139.5" width="470" height="66"/>
+                                        <rect key="frame" x="0.0" y="74.5" width="381" height="66"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JYY-Di-ZV8">
                                                 <rect key="frame" x="12" y="0.0" width="150" height="54"/>
@@ -105,7 +107,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tij-OH-tMm">
-                                                <rect key="frame" x="419" y="14" width="34" height="40"/>
+                                                <rect key="frame" x="334" y="14" width="30" height="40"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="MfQ-dk-uYY"/>
@@ -127,7 +129,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0p-S8-ORI">
-                                        <rect key="frame" x="0.0" y="205.5" width="470" height="36"/>
+                                        <rect key="frame" x="0.0" y="140.5" width="381" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Déjà dans la liste de révision" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="LY0-va-Rmy" customClass="EdgeInsetLabel" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                                 <rect key="frame" x="12" y="0.0" width="200" height="24"/>
@@ -169,6 +171,9 @@
                             <constraint firstAttribute="trailing" secondItem="kME-2w-OAZ" secondAttribute="trailing" id="76u-iH-fvo"/>
                             <constraint firstItem="kME-2w-OAZ" firstAttribute="leading" secondItem="2bi-sb-fbJ" secondAttribute="leading" id="QWI-XB-Nk2"/>
                             <constraint firstAttribute="bottom" secondItem="kME-2w-OAZ" secondAttribute="bottom" id="Rzh-8K-m6j"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="450" id="qmf-Io-J2c">
+                                <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                            </constraint>
                             <constraint firstItem="kME-2w-OAZ" firstAttribute="top" secondItem="2bi-sb-fbJ" secondAttribute="top" id="roB-D4-2kR"/>
                         </constraints>
                     </view>
@@ -181,6 +186,7 @@
                     <constraint firstAttribute="trailing" secondItem="2bi-sb-fbJ" secondAttribute="trailing" priority="999" constant="17" id="XZ9-f3-Y1M"/>
                     <constraint firstAttribute="bottom" secondItem="2bi-sb-fbJ" secondAttribute="bottom" id="YIq-gf-q70"/>
                     <constraint firstItem="2bi-sb-fbJ" firstAttribute="top" secondItem="fa3-Jj-Mtr" secondAttribute="top" constant="10" id="bkz-cN-Jky"/>
+                    <constraint firstItem="2bi-sb-fbJ" firstAttribute="centerX" secondItem="fa3-Jj-Mtr" secondAttribute="centerX" id="g0A-Ds-7Lu"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -198,7 +204,7 @@
                 <outlet property="stack" destination="kME-2w-OAZ" id="rZS-yi-Cdm"/>
                 <outlet property="traductionLabel" destination="UVz-T6-x4d" id="ij2-J9-NsD"/>
             </connections>
-            <point key="canvasLocation" x="528" y="166.41679160419793"/>
+            <point key="canvasLocation" x="456.80000000000001" y="195.6521739130435"/>
         </tableViewCell>
     </objects>
 </document>

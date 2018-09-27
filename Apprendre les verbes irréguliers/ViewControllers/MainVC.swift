@@ -81,6 +81,13 @@ class MainVC: UIViewController {
         textSetUp()
         functionalitiesSetUp()
     }
+    
+    override func viewDidLayoutSubviews() {
+        self.reviewVerbs.layout()
+        self.addVerbsButton.layout()
+        self.seeAllVerbsButton.layout()
+        self.yourStatisticsButton.layout()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

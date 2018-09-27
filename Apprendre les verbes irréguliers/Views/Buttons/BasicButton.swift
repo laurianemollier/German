@@ -21,9 +21,13 @@ class BasicButton: UIButton {
         setup()
     }
     
-    func setup(){
+    private func setup(){
         self.layer.borderWidth = 1
         self.layer.borderColor = self.backgroundColor?.cgColor
+        layout()
+    }
+    
+    func layout(){
         self.layer.cornerRadius = self.frame.height / 2
     }
 

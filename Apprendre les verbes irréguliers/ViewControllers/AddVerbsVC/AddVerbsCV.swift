@@ -27,6 +27,7 @@ class AddVerbsCV: UIViewController {
     @IBOutlet weak var B2Button: LevelCheckBox!
     @IBOutlet weak var C1Button: LevelCheckBox!
     
+    @IBOutlet weak var addRandomlyButton: BasicButton!
     
     
     
@@ -130,8 +131,15 @@ class AddVerbsCV: UIViewController {
         self.B1Button.setup()
         self.B2Button.setup()
         self.C1Button.setup()
+        self.addRandomlyButton.layout()
+        print("1")
     }
-
+    override func systemLayoutFittingSizeDidChange(forChildContentContainer container: UIContentContainer) {
+        self.C1Button.setup()
+    }
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadProduct() // purchases
