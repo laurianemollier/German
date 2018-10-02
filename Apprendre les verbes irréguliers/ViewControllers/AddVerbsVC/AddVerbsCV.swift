@@ -132,7 +132,6 @@ class AddVerbsCV: UIViewController {
         self.B2Button.setup()
         self.C1Button.setup()
         self.addRandomlyButton.layout()
-        print("1")
     }
     override func systemLayoutFittingSizeDidChange(forChildContentContainer container: UIContentContainer) {
         self.C1Button.setup()
