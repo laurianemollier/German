@@ -179,10 +179,10 @@ class ReviewVerbsVC: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "forwardCardSegue"{
-            self.forwardCardVC = segue.destination as! ForwarCardVC
+            self.forwardCardVC = segue.destination as? ForwarCardVC
         }
         else if segue.identifier == "backCardSegue"{
-            self.backwardCardVC = segue.destination as! BackwardCardVC
+            self.backwardCardVC = segue.destination as? BackwardCardVC
         }
     }
     

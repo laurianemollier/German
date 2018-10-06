@@ -19,6 +19,10 @@ class AddVerbsCV: UIViewController {
     var nbrRandomVerb: Int!
     var nbrNotSeenVerb: Int!
     
+    @IBOutlet weak var topPopUpConstraint: NSLayoutConstraint!
+
+    @IBOutlet weak var leftPopUpConstraint: NSLayoutConstraint!
+    
     
     @IBOutlet weak var addManuallyButton: UIButton!
     
@@ -55,7 +59,7 @@ class AddVerbsCV: UIViewController {
     @IBAction func addRamdomly(_ sender: BasicButton) {
         let selectedLevels = self.selectedLevels()
         if selectedLevels.isEmpty{
-            performSegue(withIdentifier: "SelectLevelSeque", sender: nil)
+            showPopUp()
         }else if self.wholeAppProduct == nil && BoughtIAPProducts.shared.isBought(productIdentifier: IAProducts.wholeApp){
             addVerb()
         } else if self.wholeAppProduct == nil && !NetworkActivityIndicatorManagment.isInternetAvailable() {
@@ -124,6 +128,7 @@ class AddVerbsCV: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        closePopUp()
     }
     
     override func viewDidLayoutSubviews() {
@@ -192,6 +197,25 @@ class AddVerbsCV: UIViewController {
             }
         }
     }
+    
+    @IBAction func closePopUp(_ sender: UIButton) {
+        closePopUp()
+    }
+    
+    private func closePopUp(){
+        self.leftPopUpConstraint.constant = self.view.frame.width
+        UIView.animate(withDuration: 0.2, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    private func showPopUp(){
+        self.leftPopUpConstraint.constant = 0
+        UIView.animate(withDuration: 0.2, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+
 
  
 }

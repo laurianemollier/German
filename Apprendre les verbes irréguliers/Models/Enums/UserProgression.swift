@@ -112,7 +112,8 @@ enum UserProgression: String {
     func stagnation(reviewedDate: Date) -> (newProgression: UserProgression, dateToReview: Date)?{
         switch self {
         case UserProgression.level1:
-            return (UserProgression.level1, reviewedDate.tomorrow)
+            let newDate = Date(timeInterval: TimeInterval(1 * Constants.secondsInOneDay), since: Date())
+            return (UserProgression.level1, newDate)
         case UserProgression.level2:
             let newDate = Date(timeInterval: TimeInterval(2 * Constants.secondsInOneDay), since: Date())
             return (UserProgression.level2, newDate)
