@@ -10,6 +10,8 @@ import UIKit
 
 class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
+    let verbDetailsSegueId = "verbDetailsSegue"
+    
     
     var showIfVerbIsInReviewList: Bool = true
     
@@ -74,6 +76,11 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         return cell
     }
     
+    // click on one cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let cell = tableView.cellForRow(at: indexPath) as! ListVerbsCell
+        performSegue(withIdentifier: verbDetailsSegueId, sender: cell)
+    }
     
     
     // MARK: - SearchBar
@@ -105,15 +112,30 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == verbDetailsSegueId {
+            print("...............")
+            let vc = segue.destination as! VerbDetailsVC
+            print("4444")
+            let cell = sender as! ListVerbsCell
+            print("55555")
+            vc.userLearningVerb = cell.userLearningVerb
+            print("799999")
+        }
+        else{
+            // TODO
+            SpeedLog.print("Should no happen")
+        }
+        
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
     
     
     

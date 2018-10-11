@@ -393,6 +393,7 @@
 		98EA96A7214E68720034B360 /* Background3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98EA96A6214E68720034B360 /* Background3.xib */; };
 		98F2F7A521579062007AB342 /* ListVerbsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F2F7A321579062007AB342 /* ListVerbsCell.swift */; };
 		98F2F7A621579062007AB342 /* ListVerbsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98F2F7A421579062007AB342 /* ListVerbsCell.xib */; };
+		98FA119F216E134C0068AB4C /* VerbDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FA119E216E134C0068AB4C /* VerbDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -875,6 +876,7 @@
 		98EA96A6214E68720034B360 /* Background3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Background3.xib; sourceTree = "<group>"; };
 		98F2F7A321579062007AB342 /* ListVerbsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVerbsCell.swift; sourceTree = "<group>"; };
 		98F2F7A421579062007AB342 /* ListVerbsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListVerbsCell.xib; sourceTree = "<group>"; };
+		98FA119E216E134C0068AB4C /* VerbDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1219,6 +1221,7 @@
 		98DEFC8820FDC26200DC32BB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				98FA1197216E13290068AB4C /* VerbDetails */,
 				9863384921429A5300E8B95A /* IAPurchase */,
 				98CB8A2A2136BC1200C6944F /* NotImplementedYet */,
 				98301E4C212C76C700432C84 /* Statistics */,
@@ -1547,6 +1550,14 @@
 				98DEFD4A20FF23EF00DC32BB /* zwingen.mp3 */,
 			);
 			path = Verbs;
+			sourceTree = "<group>";
+		};
+		98FA1197216E13290068AB4C /* VerbDetails */ = {
+			isa = PBXGroup;
+			children = (
+				98FA119E216E134C0068AB4C /* VerbDetailsVC.swift */,
+			);
+			path = VerbDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2088,6 +2099,7 @@
 				98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */,
 				9815F7A4213D073000248968 /* IAPProducts.swift in Sources */,
 				98B53B70212F10B000565C53 /* BasicButton.swift in Sources */,
+				98FA119F216E134C0068AB4C /* VerbDetailsVC.swift in Sources */,
 				98EA96A5214E68640034B360 /* Background3.swift in Sources */,
 				9863384F2144FAC100E8B95A /* PurchaseUIButton.swift in Sources */,
 				9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */,
