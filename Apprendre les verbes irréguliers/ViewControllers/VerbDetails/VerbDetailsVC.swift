@@ -25,11 +25,11 @@ class VerbDetailsVC: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "cardSegue"{
-//            print("9999999")
-//            self.forwardCardVC = segue.destination as? ForwarCardVC
-//            print("88888")
-//            self.forwardCardVC.verb = userLearningVerb.verb
-//            print("111111")
+            print("---- cardSegue ----")
+            self.forwardCardVC = segue.destination as? ForwarCardVC
+            print("88888")
+            self.forwardCardVC.verb = userLearningVerb.verb
+            print("111111")
         }
     }
 

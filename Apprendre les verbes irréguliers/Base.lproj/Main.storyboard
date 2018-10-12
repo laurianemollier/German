@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wvq-Fe-xqE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -110,7 +110,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verbs to review over 200 in your review list" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-Or-w8O">
-                                <rect key="frame" x="34.333333333333343" y="334" width="306.33333333333326" height="55.666666666666686"/>
+                                <rect key="frame" x="25.333333333333343" y="334" width="324.66666666666663" height="55.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55.5" id="Mzt-NV-Zsy"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="atu-V0-IJs"/>
@@ -259,7 +259,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTe-EP-Aco">
-                                        <rect key="frame" x="122.66666666666666" y="55" width="50" height="21"/>
+                                        <rect key="frame" x="122.66666666666666" y="53.666666666666657" width="50" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Ck6-Ai-ypu"/>
                                         </constraints>
@@ -425,7 +425,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez sélectionner le niveau de langue des verbes à ajouter à la liste de révision" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXd-ZV-A1i">
-                                        <rect key="frame" x="57.666666666666515" y="201" width="260" height="102.66666666666669"/>
+                                        <rect key="frame" x="57.666666666666515" y="187.33333333333334" width="260" height="116.33333333333334"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="Kjt-y4-vKt"/>
                                         </constraints>
@@ -698,7 +698,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau de connaissance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dA-Ds-H0t">
-                                <rect key="frame" x="87" y="76" width="245" height="23.333333333333329"/>
+                                <rect key="frame" x="87" y="74.333333333333329" width="245" height="26.666666666666671"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -785,7 +785,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-Oz-ph9">
-                                <rect key="frame" x="0.0" y="119.33333333333331" width="375" height="658.66666666666674"/>
+                                <rect key="frame" x="0.0" y="121" width="375" height="657"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="RWy-s3-lR3">
@@ -824,7 +824,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tous les verbes irréguliers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-dW-6ya">
-                                <rect key="frame" x="67" y="76" width="300" height="23.333333333333329"/>
+                                <rect key="frame" x="67" y="74.333333333333329" width="300" height="26.666666666666671"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1375,10 +1375,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="41b-Zn-nkp"/>
                     </view>
-                    <connections>
-                        <outlet property="forwarCard" destination="IAR-16-Wpr" id="01S-E0-cX4"/>
-                        <outlet property="progressionLabel" destination="wTX-6V-YRw" id="8TB-WI-8X6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQu-NB-VtP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
