@@ -15,7 +15,7 @@ class ForwarCardVC: UIViewController {
     @IBOutlet var backwardView: VerbCardView!
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.backwardView.setup(verb: verb, backward: false)
     }
     
     func reset(verb: Verb){

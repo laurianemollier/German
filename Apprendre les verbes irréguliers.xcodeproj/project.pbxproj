@@ -48,6 +48,8 @@
 		9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5D1212AC6DA003EAAFF /* Date.swift */; };
 		9898A5D4212AE2D7003EAAFF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5D3212AE2D7003EAAFF /* Array.swift */; };
 		9898A5F0212C2C1C003EAAFF /* ListVerbsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5EF212C2C1C003EAAFF /* ListVerbsVC.swift */; };
+		9899262F21727A7300EB0A24 /* UserProgressionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9899262E21727A7300EB0A24 /* UserProgressionButton.swift */; };
+		98992637217296DE00EB0A24 /* UserProgressionWithInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98992636217296DE00EB0A24 /* UserProgressionWithInfoButton.swift */; };
 		989DF6C821536ED300931F50 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 989DF6BB21536EBE00931F50 /* SQLite.framework */; };
 		989DF6C921536EDB00931F50 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 989DF6BB21536EBE00931F50 /* SQLite.framework */; };
 		989DF6CA21536EDB00931F50 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 989DF6BB21536EBE00931F50 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -527,6 +529,8 @@
 		9898A5D1212AC6DA003EAAFF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9898A5D3212AE2D7003EAAFF /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		9898A5EF212C2C1C003EAAFF /* ListVerbsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVerbsVC.swift; sourceTree = "<group>"; };
+		9899262E21727A7300EB0A24 /* UserProgressionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgressionButton.swift; sourceTree = "<group>"; };
+		98992636217296DE00EB0A24 /* UserProgressionWithInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgressionWithInfoButton.swift; sourceTree = "<group>"; };
 		989DF6B021536EBE00931F50 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "Apprendre les verbes irréguliers/Download Frameworks/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		98A511CF214AFA80001107D9 /* BoughtIAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtIAPProducts.swift; sourceTree = "<group>"; };
 		98A511D7214AFD55001107D9 /* NetworkActivityIndicatorManagment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManagment.swift; sourceTree = "<group>"; };
@@ -1556,6 +1560,8 @@
 			isa = PBXGroup;
 			children = (
 				98FA119E216E134C0068AB4C /* VerbDetailsVC.swift */,
+				9899262E21727A7300EB0A24 /* UserProgressionButton.swift */,
+				98992636217296DE00EB0A24 /* UserProgressionWithInfoButton.swift */,
 			);
 			path = VerbDetails;
 			sourceTree = "<group>";
@@ -2077,10 +2083,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9899262F21727A7300EB0A24 /* UserProgressionButton.swift in Sources */,
 				98685F72212712EE00DA327D /* UserLearningVerbTable.swift in Sources */,
 				98685F352126BA4900DA327D /* Lang.swift in Sources */,
 				986DD42D212FE7F1000E5E49 /* UIFont.swift in Sources */,
 				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
+				98992637217296DE00EB0A24 /* UserProgressionWithInfoButton.swift in Sources */,
 				98CB8A322136BC5500C6944F /* NotImplementedYetVC.swift in Sources */,
 				98685F7F2129663100DA327D /* BackwardCardVC.swift in Sources */,
 				988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */,

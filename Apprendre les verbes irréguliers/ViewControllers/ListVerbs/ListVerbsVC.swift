@@ -118,13 +118,9 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == verbDetailsSegueId {
-            print("...............")
             let vc = segue.destination as! VerbDetailsVC
-            print("4444")
             let cell = sender as! ListVerbsCell
-            print("55555")
             vc.userLearningVerb = cell.userLearningVerb
-            print("799999")
         }
         else{
             // TODO

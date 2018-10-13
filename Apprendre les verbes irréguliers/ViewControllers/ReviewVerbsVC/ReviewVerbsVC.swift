@@ -267,7 +267,6 @@ class ReviewVerbsVC: UIViewController {
     }
     
     private func back(){
-        navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     
