@@ -34,7 +34,6 @@ enum UserProgression: String {
         return !self.isNotInReviewList()
     }
     func isNotInReviewList() -> Bool{
-
         return self == UserProgression.toIgnore || self == UserProgression.notSeenYet
     }
     

@@ -57,6 +57,11 @@ class UserLearningVerb{
     }
     
     
+    public func isInReviewList() -> Bool{
+        return self.userProgression.isInReviewList()
+    }
+    
+    
     /// Select and transform the data contained in the object
     func toDbUserLearningVerb() -> DbUserLearningVerb{
         return DbUserLearningVerb(id: self.id,

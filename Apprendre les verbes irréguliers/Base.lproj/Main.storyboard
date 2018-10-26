@@ -110,7 +110,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verbs to review over 200 in your review list" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-Or-w8O">
-                                <rect key="frame" x="25.333333333333343" y="334" width="324.66666666666663" height="55.666666666666686"/>
+                                <rect key="frame" x="34.333333333333343" y="334" width="306.33333333333326" height="55.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55.5" id="Mzt-NV-Zsy"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="atu-V0-IJs"/>
@@ -698,7 +698,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau de connaissance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dA-Ds-H0t">
-                                <rect key="frame" x="87" y="74.333333333333329" width="245" height="26.666666666666671"/>
+                                <rect key="frame" x="87" y="76" width="245" height="23.333333333333329"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -785,7 +785,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-Oz-ph9">
-                                <rect key="frame" x="0.0" y="121" width="375" height="657"/>
+                                <rect key="frame" x="0.0" y="119.33333333333331" width="375" height="658.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="RWy-s3-lR3">
@@ -824,7 +824,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tous les verbes irréguliers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-dW-6ya">
-                                <rect key="frame" x="67" y="74.333333333333329" width="300" height="26.666666666666671"/>
+                                <rect key="frame" x="67" y="76" width="300" height="23.333333333333329"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1272,7 +1272,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="AB9-dr-94F" firstAttribute="centerY" secondItem="684-Gn-s2p" secondAttribute="centerY" id="WiT-hd-PPW"/>
                                     <constraint firstItem="AB9-dr-94F" firstAttribute="centerX" secondItem="684-Gn-s2p" secondAttribute="centerX" id="foR-cS-fjM"/>
@@ -1282,7 +1282,19 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52o-1a-K14">
                                 <rect key="frame" x="30" y="117" width="315" height="388"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBt-Gn-Qcl">
+                                        <rect key="frame" x="37.666666666666686" y="44" width="240" height="300"/>
+                                        <connections>
+                                            <segue destination="v2J-mt-Vxe" kind="embed" identifier="cardVerbNotInReviewSegue" id="5PX-Wh-uM0"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="NBt-Gn-Qcl" firstAttribute="centerX" secondItem="52o-1a-K14" secondAttribute="centerX" id="1Cw-EP-0ux"/>
+                                    <constraint firstItem="NBt-Gn-Qcl" firstAttribute="centerY" secondItem="52o-1a-K14" secondAttribute="centerY" id="xvz-5l-APi"/>
+                                </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWo-dy-MDF">
                                 <rect key="frame" x="0.0" y="117" width="375" height="695"/>
@@ -1302,7 +1314,7 @@
                                                     </constraint>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="WKX-Im-1eV" kind="embed" identifier="cardSegue" id="9a5-oj-Q3Y"/>
+                                                    <segue destination="WKX-Im-1eV" kind="embed" identifier="cardVerbInReviewSegue" id="9a5-oj-Q3Y"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -1457,6 +1469,7 @@
                             <constraint firstItem="684-Gn-s2p" firstAttribute="top" secondItem="52o-1a-K14" secondAttribute="bottom" id="93C-g0-9uh"/>
                             <constraint firstItem="1QS-bF-OMT" firstAttribute="top" secondItem="41b-Zn-nkp" secondAttribute="top" constant="25" id="Cba-pl-5xY"/>
                             <constraint firstAttribute="bottom" secondItem="jWo-dy-MDF" secondAttribute="bottom" id="DlV-2Q-v2c"/>
+                            <constraint firstItem="NBt-Gn-Qcl" firstAttribute="height" secondItem="IAR-16-Wpr" secondAttribute="height" id="Ew9-Ws-tTq"/>
                             <constraint firstItem="wTX-6V-YRw" firstAttribute="leading" relation="lessThanOrEqual" secondItem="1QS-bF-OMT" secondAttribute="trailing" constant="8" symbolic="YES" id="Fc3-Nv-cNO"/>
                             <constraint firstItem="684-Gn-s2p" firstAttribute="trailing" secondItem="41b-Zn-nkp" secondAttribute="trailing" id="IAC-22-kPJ"/>
                             <constraint firstItem="1QS-bF-OMT" firstAttribute="leading" secondItem="41b-Zn-nkp" secondAttribute="leading" constant="25" id="KBi-oi-n9P"/>
@@ -1474,7 +1487,9 @@
                             <constraint firstItem="52o-1a-K14" firstAttribute="centerX" secondItem="dyS-0b-XeS" secondAttribute="centerX" id="hee-ja-9Vc"/>
                             <constraint firstItem="52o-1a-K14" firstAttribute="top" secondItem="wTX-6V-YRw" secondAttribute="bottom" constant="15" id="iAE-KS-NK6"/>
                             <constraint firstAttribute="bottom" secondItem="q1M-K3-5Wk" secondAttribute="bottom" id="jEN-yM-iPx"/>
+                            <constraint firstItem="NBt-Gn-Qcl" firstAttribute="leading" secondItem="IAR-16-Wpr" secondAttribute="leading" id="kZ8-1C-mQM"/>
                             <constraint firstItem="52o-1a-K14" firstAttribute="leading" secondItem="dyS-0b-XeS" secondAttribute="leading" id="ltq-lF-ay0"/>
+                            <constraint firstItem="NBt-Gn-Qcl" firstAttribute="trailing" secondItem="IAR-16-Wpr" secondAttribute="trailing" id="mIs-we-2Gx"/>
                             <constraint firstItem="52o-1a-K14" firstAttribute="leading" secondItem="41b-Zn-nkp" secondAttribute="leading" constant="30" id="nVn-eI-bRp"/>
                             <constraint firstItem="52o-1a-K14" firstAttribute="trailing" secondItem="dyS-0b-XeS" secondAttribute="trailing" id="w1U-1a-bcr"/>
                             <constraint firstItem="684-Gn-s2p" firstAttribute="leading" secondItem="41b-Zn-nkp" secondAttribute="leading" id="xuW-oq-hbl"/>
@@ -1490,6 +1505,9 @@
                         <outlet property="progressionLevel6" destination="nOy-55-3W1" id="99B-hV-Jf5"/>
                         <outlet property="progressionLevel7" destination="Hmj-SX-2TL" id="Jkf-to-8aK"/>
                         <outlet property="progressionLevel8" destination="IKC-fh-qWD" id="FXS-V3-ZmG"/>
+                        <outlet property="verbInReviewScrollView" destination="jWo-dy-MDF" id="L7a-ON-gKh"/>
+                        <outlet property="verbNotInReviewButtonView" destination="684-Gn-s2p" id="BLh-8J-QHb"/>
+                        <outlet property="verbNotInReviewCardView" destination="52o-1a-K14" id="kjP-2R-ThO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQu-NB-VtP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1512,7 +1530,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZC-fV-GCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2293" y="952"/>
+            <point key="canvasLocation" x="2347" y="951"/>
+        </scene>
+        <!--Backward CardVC-->
+        <scene sceneID="aNa-S4-rAJ">
+            <objects>
+                <viewController id="v2J-mt-Vxe" customClass="BackwardCardVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="afg-FJ-6PB" customClass="VerbCardView" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9ON-1p-aUn"/>
+                    </view>
+                    <connections>
+                        <outlet property="backwardView" destination="afg-FJ-6PB" id="9E5-io-kCn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jbc-aY-H2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2346" y="1233"/>
         </scene>
     </scenes>
     <resources>
