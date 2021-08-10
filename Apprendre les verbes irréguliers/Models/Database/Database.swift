@@ -43,13 +43,14 @@ class Database{
         self.successfulConnection = false
     }
     
-    
     /// Initialise the singleton database object
     static let shared: Database = {
         do{
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             
-            let fileUrl = documentDirectory.appendingPathComponent("irregularVerbs").appendingPathExtension("sqlite3")
+            let fileUrl = documentDirectory
+                .appendingPathComponent("irregularVerbs")
+                .appendingPathExtension("sqlite3")
             
             let connection = try Connection(fileUrl.path)
             return Database(connection: connection)
@@ -58,7 +59,4 @@ class Database{
             return Database(error: error)
         }
     }()
-    
-    
-  
 }

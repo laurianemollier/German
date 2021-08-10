@@ -6,13 +6,7 @@
 //  Copyright © 2018 Lauriane Mollier. All rights reserved.
 //
 
-// TODO: Background Fetch to 
-
 import UIKit
-
-
-// Irregular verbs - German
-
 
 /**
  This class is the first view controller that appears when we launch the app.
@@ -58,12 +52,9 @@ class MainVC: UIViewController {
     @IBOutlet weak var yourStatisticsButton: BasicButton!
     
     
-    
-    
-    // ------------------
-    // MARK: - Override viiews functions
-    // ------------------
-    
+    // --------------------------------
+    // MARK: - Override views functions
+    // --------------------------------
     
     
     override func viewDidLoad() {
@@ -87,11 +78,6 @@ class MainVC: UIViewController {
         self.addVerbsButton.layout()
         self.seeAllVerbsButton.layout()
         self.yourStatisticsButton.layout()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // ------------------
@@ -152,11 +138,16 @@ class MainVC: UIViewController {
             do{
                 self.nbrVerbInReviewList = try DbUserLearningVerbDAOImpl.shared.nbrVerbInReviewList()
                 self.nbrVerbToReviewToday = try DbUserLearningVerbDAOImpl.shared.nbrVerbToReviewToday()
+                
             }
             catch{
                 SpeedLog.print(error)
                 // TODO: To show the user that they is an error
             }
+        }
+        else {
+            SpeedLog.print("DB shared connection failed")
+//            SpeedLog.print(Database.shared.error)
         }
     }
     
@@ -192,8 +183,4 @@ class MainVC: UIViewController {
             self.reviewVerbs.isEnabled = true
         }
     }
-
-    
-
-
 }
