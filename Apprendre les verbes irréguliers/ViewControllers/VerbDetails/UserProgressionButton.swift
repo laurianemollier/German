@@ -39,23 +39,19 @@ class UserProgressionButton: UIButton {
         
         self.borderHorizontal = self.frame.width * 0.048731
         
+        // set the icon
         if let image = userProgression.image(){
-            // set the icon
             setUpIcon(image: image, borderHorizontal: borderHorizontal)
             setUpText(withIcon: true, userProgression: userProgression, borderHorizontal: borderHorizontal)
         }
-        else{
-            // No icon
+        else{ // No icon
             setUpText(withIcon: false, userProgression: userProgression, borderHorizontal: borderHorizontal)
         }
 
-        // set layer
         setUpLayer()
     }
     
 
-    
-    
     // set the icon
     private func setUpIcon(image: UIImage, borderHorizontal: CGFloat){
         self.iconImageView.image = image
@@ -84,15 +80,12 @@ class UserProgressionButton: UIButton {
     
     
     private func setUpLayer(){
-        //        self.titleLabel?.font = UIFont.appBoldFontWith(size: self.titleLabel?.font.pointSize)
-        
         self.layer.shadowRadius = 5
         self.layer.shadowColor = UIColor(rgb: 0xa68282).cgColor
         self.backgroundColor = UIColor.white
         self.layer.shadowOffset = CGSize(width: 3, height: 3)
         self.layer.cornerRadius = 7
-        
-        
+    
     }
 
 }

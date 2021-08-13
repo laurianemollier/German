@@ -1,11 +1,3 @@
-//
-//  MainVC.swift
-//  Apprendre les verbes irréguliers
-//
-//  Created by Lauriane Mollier on 17/07/2018.
-//  Copyright © 2018 Lauriane Mollier. All rights reserved.
-//
-
 import UIKit
 
 /**
@@ -15,7 +7,7 @@ import UIKit
 class MainVC: UIViewController {
 
     // ------------------
-    // MARK: - Datas
+    // MARK: - Variables
     // ------------------
     
     /// The number of verb that is on the review list of this user
@@ -52,9 +44,9 @@ class MainVC: UIViewController {
     @IBOutlet weak var yourStatisticsButton: BasicButton!
     
     
-    // --------------------------------
-    // MARK: - Override views functions
-    // --------------------------------
+    // ----------------------
+    // MARK: - View overrides
+    // ----------------------
     
     
     override func viewDidLoad() {
@@ -106,7 +98,6 @@ class MainVC: UIViewController {
         let cv = segue.destination as! ReviewVerbsVC
         
         do {
-            // TODO: to do it before
             let verbsRangeToReviewToday = try DbUserLearningVerbDAOImpl.shared.verbsToReviewToday(limit: nbrVerbInReviewSession)
             cv.verbsToReview = verbsRangeToReviewToday
         }
@@ -169,7 +160,7 @@ class MainVC: UIViewController {
     /// Set up the text that depending on data
     private func textSetUp(){
         self.nbrVerbToReviewTodayButton.setTitle(String(self.nbrVerbToReviewToday), for: .normal)
-        self.nbrVerbInReviewListLabel.text = "verbes à revoir sur " + String(self.nbrVerbInReviewList) + " dans la liste de révision" //TODO
+        self.nbrVerbInReviewListLabel.text = "verbe(s) à revoir sur " + String(self.nbrVerbInReviewList) + " dans la liste de révision"
     }
     
     // Disable the review session buttons if they is no verbs to review
