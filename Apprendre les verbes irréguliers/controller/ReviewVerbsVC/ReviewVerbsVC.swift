@@ -11,8 +11,8 @@ class ReviewVerbsVC: UIViewController {
     // ------------------
     
     var index: Int = 0
-    var verbsToReview: [UserLearningVerb]!
-    var resultVerbsReviewed: [UserLearningVerb] = []
+    var verbsToReview: [LearningVerb]!
+    var resultVerbsReviewed: [LearningVerb] = []
     
     var forwardCardVC: ForwarCardVC!
     var backwardCardVC: BackwardCardVC!
@@ -78,20 +78,20 @@ class ReviewVerbsVC: UIViewController {
     }
     
     @IBAction func regress(_ sender: BasicButton) {
-        let verbReviewed: UserLearningVerb = currentVerb()
+        let verbReviewed: LearningVerb = currentVerb()
         let (newProgression, dateToReview) = verbReviewed.userProgression.regression(reviewedDate: verbReviewed.dateToReview!)!
         updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
     }
     
     @IBAction func stagnate(_ sender: BasicButton) {
-        let verbReviewed: UserLearningVerb = currentVerb()
+        let verbReviewed: LearningVerb = currentVerb()
         let (newProgression, dateToReview) = verbReviewed.userProgression.stagnation(reviewedDate: verbReviewed.dateToReview!)!
         updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
         
     }
     
     @IBAction func progress(_ sender: BasicButton) {
-        let verbReviewed: UserLearningVerb = currentVerb()
+        let verbReviewed: LearningVerb = currentVerb()
         let (newProgression, dateToReview) = verbReviewed.userProgression.progression(reviewedDate: verbReviewed.dateToReview!)!
         updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
     }
@@ -138,13 +138,13 @@ class ReviewVerbsVC: UIViewController {
     // ------------------
     
     
-    private func currentVerb() -> UserLearningVerb {
+    private func currentVerb() -> LearningVerb {
         return self.verbsToReview[self.index]
     }
     
     private func updatedVerbReviewed(newProgression: UserProgression, dateToReview: Date?){
-        let verbReviewed: UserLearningVerb = currentVerb()
-        let updatedVerbReviewed = UserLearningVerb(id: verbReviewed.id,
+        let verbReviewed: LearningVerb = currentVerb()
+        let updatedVerbReviewed = LearningVerb(id: verbReviewed.id,
                                                    verb: verbReviewed.verb,
                                                    dateToReview: dateToReview,
                                                    userProgression: newProgression)
@@ -153,7 +153,7 @@ class ReviewVerbsVC: UIViewController {
     }
     
     
-    private func nextVerb(updatedVerbReviewed: UserLearningVerb?){
+    private func nextVerb(updatedVerbReviewed: LearningVerb?){
         audioStop()
         
         if let v = updatedVerbReviewed {
@@ -242,7 +242,7 @@ class ReviewVerbsVC: UIViewController {
     private func endRevisionSession(){
         let dbResultVerbsReviewed = resultVerbsReviewed.map({ $0.toDbUserLearningVerb()})
         do{
-            let results: [Int] = try DbUserLearningVerbDAOImpl.shared.update(learningVerbs: dbResultVerbsReviewed)
+            let results: [Int] = try DAO.shared.update(learningVerbs: dbResultVerbsReviewed)
             if results.forAll(where: {$0 > 0})  {
                 back()
                 SpeedLog.print("Sucessly modify all learning verb")

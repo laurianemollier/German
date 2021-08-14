@@ -10,6 +10,13 @@
 		300C705226C2D9B60092A492 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300C704526C2D9610092A492 /* SQLite.framework */; };
 		300C705326C2D9B60092A492 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 300C704526C2D9610092A492 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		300C705526C2DA620092A492 /* Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 300C705426C2DA620092A492 /* Notes.rtf */; };
+		300C706826C836F90092A492 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706726C836F90092A492 /* DAO.swift */; };
+		300C706B26C8380A0092A492 /* DbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706A26C8380A0092A492 /* DbVerbDAO.swift */; };
+		300C706D26C83AE50092A492 /* DbVerbTranslationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706C26C83AE50092A492 /* DbVerbTranslationDAO.swift */; };
+		300C707126C841090092A492 /* LearningVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707026C841090092A492 /* LearningVerbDAO.swift */; };
+		300C707426C842ED0092A492 /* LocalDbLearningVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707326C842ED0092A492 /* LocalDbLearningVerbDAO.swift */; };
+		300C707626C843830092A492 /* DbLearningVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707526C843830092A492 /* DbLearningVerbDAO.swift */; };
+		300C707A26C846AC0092A492 /* VerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707926C846AC0092A492 /* VerbDAO.swift */; };
 		9815F7A4213D073000248968 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A3213D073000248968 /* IAPProducts.swift */; };
 		9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A7213D09DF00248968 /* IAPHelper.swift */; };
 		9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829D4B821416E5F0004FCB3 /* Audio.swift */; };
@@ -27,10 +34,9 @@
 		98685F372126BA6100DA327D /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F362126BA6100DA327D /* Form.swift */; };
 		98685F392126BA8700DA327D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F382126BA8700DA327D /* Level.swift */; };
 		98685F7021270E2B00DA327D /* SpeedLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F6F21270E2B00DA327D /* SpeedLog.swift */; };
-		98685F72212712EE00DA327D /* UserLearningVerbTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F71212712EE00DA327D /* UserLearningVerbTable.swift */; };
-		98685F742127161200DA327D /* DbUserLearningVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F732127161200DA327D /* DbUserLearningVerbDAO.swift */; };
-		98685F762127162700DA327D /* DbUserLearningVerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F752127162700DA327D /* DbUserLearningVerbDAOImpl.swift */; };
-		98685F782127173800DA327D /* DbUserLearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F772127173800DA327D /* DbUserLearningVerb.swift */; };
+		98685F72212712EE00DA327D /* LearningVerbTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F71212712EE00DA327D /* LearningVerbTable.swift */; };
+		98685F762127162700DA327D /* LocalLearningVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F752127162700DA327D /* LocalLearningVerbDAO.swift */; };
+		98685F782127173800DA327D /* DbLearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F772127173800DA327D /* DbLearningVerb.swift */; };
 		98685F7A212744F900DA327D /* SetUpDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F79212744F900DA327D /* SetUpDatabase.swift */; };
 		98685F7D212965E600DA327D /* ForwarCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F7C212965E600DA327D /* ForwarCardVC.swift */; };
 		98685F7F2129663100DA327D /* BackwardCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F7E2129663100DA327D /* BackwardCardVC.swift */; };
@@ -39,13 +45,11 @@
 		988442402133834700D9661B /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9884423F2133834700D9661B /* Sequence.swift */; };
 		988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */; };
 		988DB9102125BBD700AFAEF4 /* VerbTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB90F2125BBD700AFAEF4 /* VerbTable.swift */; };
-		988DB9132125C08900AFAEF4 /* DbVerbTranslationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9122125C08900AFAEF4 /* DbVerbTranslationDAO.swift */; };
-		988DB9152125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9142125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift */; };
+		988DB9152125C09900AFAEF4 /* LocalDbVerbTranslationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9142125C09900AFAEF4 /* LocalDbVerbTranslationDAO.swift */; };
 		988DB9172125C24500AFAEF4 /* DbVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9162125C24500AFAEF4 /* DbVerb.swift */; };
 		988DB9192125C70700AFAEF4 /* VerbTranslationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9182125C70700AFAEF4 /* VerbTranslationTable.swift */; };
 		988DB91B2125C71700AFAEF4 /* DbVerbTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */; };
 		988DB91D2125C92700AFAEF4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB91C2125C92700AFAEF4 /* Database.swift */; };
-		988DB91F2126954900AFAEF4 /* VerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB91E2126954900AFAEF4 /* VerbDAO.swift */; };
 		988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DB9202126956200AFAEF4 /* VerbDAOImpl.swift */; };
 		9897DBF9213B5EE000F0851E /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897DBF8213B5EE000F0851E /* EdgeInsetLabel.swift */; };
 		9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898A5D1212AC6DA003EAAFF /* Date.swift */; };
@@ -56,11 +60,10 @@
 		98A511D0214AFA80001107D9 /* BoughtIAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A511CF214AFA80001107D9 /* BoughtIAPProducts.swift */; };
 		98A511D8214AFD55001107D9 /* NetworkActivityIndicatorManagment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A511D7214AFD55001107D9 /* NetworkActivityIndicatorManagment.swift */; };
 		98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0150E2122AA3B0090006E /* UserProgression.swift */; };
-		98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0151021244C9F0090006E /* UserLearningVerb.swift */; };
+		98B0151121244C9F0090006E /* LearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0151021244C9F0090006E /* LearningVerb.swift */; };
 		98B01514212474670090006E /* LevelCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B01513212474670090006E /* LevelCheckBox.swift */; };
 		98B01516212478880090006E /* LevelCheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B01515212478880090006E /* LevelCheckBox.xib */; };
-		98B0A8B62125AE9B000F44B4 /* DbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B52125AE9B000F44B4 /* DbVerbDAO.swift */; };
-		98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B72125AECD000F44B4 /* DbVerbDAOImpl.swift */; };
+		98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B72125AECD000F44B4 /* LocalDbVerbDAO.swift */; };
 		98B53B69212E96A900565C53 /* ROBOTOSLAB-BOLD_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 98B53B65212E96A300565C53 /* ROBOTOSLAB-BOLD_0.TTF */; };
 		98B53B6A212E96A900565C53 /* ROBOTOSLAB-THIN_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 98B53B66212E96A400565C53 /* ROBOTOSLAB-THIN_0.TTF */; };
 		98B53B6B212E96A900565C53 /* ROBOTOSLAB-LIGHT_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 98B53B67212E96A600565C53 /* ROBOTOSLAB-LIGHT_0.TTF */; };
@@ -483,6 +486,13 @@
 		300C705426C2DA620092A492 /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		300C705626C2E89B0092A492 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		300C705726C2E89B0092A492 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		300C706726C836F90092A492 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		300C706A26C8380A0092A492 /* DbVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbDAO.swift; sourceTree = "<group>"; };
+		300C706C26C83AE50092A492 /* DbVerbTranslationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbTranslationDAO.swift; sourceTree = "<group>"; };
+		300C707026C841090092A492 /* LearningVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningVerbDAO.swift; sourceTree = "<group>"; };
+		300C707326C842ED0092A492 /* LocalDbLearningVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDbLearningVerbDAO.swift; sourceTree = "<group>"; };
+		300C707526C843830092A492 /* DbLearningVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbLearningVerbDAO.swift; sourceTree = "<group>"; };
+		300C707926C846AC0092A492 /* VerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAO.swift; sourceTree = "<group>"; };
 		9804A8C0213E445700B630A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9804A8C8213E451A00B630A1 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		9815F7A3213D073000248968 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
@@ -502,10 +512,9 @@
 		98685F362126BA6100DA327D /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		98685F382126BA8700DA327D /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		98685F6F21270E2B00DA327D /* SpeedLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedLog.swift; sourceTree = "<group>"; };
-		98685F71212712EE00DA327D /* UserLearningVerbTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLearningVerbTable.swift; sourceTree = "<group>"; };
-		98685F732127161200DA327D /* DbUserLearningVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbUserLearningVerbDAO.swift; sourceTree = "<group>"; };
-		98685F752127162700DA327D /* DbUserLearningVerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbUserLearningVerbDAOImpl.swift; sourceTree = "<group>"; };
-		98685F772127173800DA327D /* DbUserLearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbUserLearningVerb.swift; sourceTree = "<group>"; };
+		98685F71212712EE00DA327D /* LearningVerbTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningVerbTable.swift; sourceTree = "<group>"; };
+		98685F752127162700DA327D /* LocalLearningVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLearningVerbDAO.swift; sourceTree = "<group>"; };
+		98685F772127173800DA327D /* DbLearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbLearningVerb.swift; sourceTree = "<group>"; };
 		98685F79212744F900DA327D /* SetUpDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpDatabase.swift; sourceTree = "<group>"; };
 		98685F7C212965E600DA327D /* ForwarCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwarCardVC.swift; sourceTree = "<group>"; };
 		98685F7E2129663100DA327D /* BackwardCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardCardVC.swift; sourceTree = "<group>"; };
@@ -514,13 +523,11 @@
 		9884423F2133834700D9661B /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		988DB90C2125B5D000AFAEF4 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		988DB90F2125BBD700AFAEF4 /* VerbTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTable.swift; sourceTree = "<group>"; };
-		988DB9122125C08900AFAEF4 /* DbVerbTranslationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbTranslationDAO.swift; sourceTree = "<group>"; };
-		988DB9142125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbTranslationDAOImpl.swift; sourceTree = "<group>"; };
+		988DB9142125C09900AFAEF4 /* LocalDbVerbTranslationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDbVerbTranslationDAO.swift; sourceTree = "<group>"; };
 		988DB9162125C24500AFAEF4 /* DbVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerb.swift; sourceTree = "<group>"; };
 		988DB9182125C70700AFAEF4 /* VerbTranslationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTranslationTable.swift; sourceTree = "<group>"; };
 		988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbTranslation.swift; sourceTree = "<group>"; };
 		988DB91C2125C92700AFAEF4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		988DB91E2126954900AFAEF4 /* VerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAO.swift; sourceTree = "<group>"; };
 		988DB9202126956200AFAEF4 /* VerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAOImpl.swift; sourceTree = "<group>"; };
 		9897DBF8213B5EE000F0851E /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		9898A5D1212AC6DA003EAAFF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -531,11 +538,10 @@
 		98A511CF214AFA80001107D9 /* BoughtIAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtIAPProducts.swift; sourceTree = "<group>"; };
 		98A511D7214AFD55001107D9 /* NetworkActivityIndicatorManagment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManagment.swift; sourceTree = "<group>"; };
 		98B0150E2122AA3B0090006E /* UserProgression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgression.swift; sourceTree = "<group>"; };
-		98B0151021244C9F0090006E /* UserLearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLearningVerb.swift; sourceTree = "<group>"; };
+		98B0151021244C9F0090006E /* LearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningVerb.swift; sourceTree = "<group>"; };
 		98B01513212474670090006E /* LevelCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCheckBox.swift; sourceTree = "<group>"; };
 		98B01515212478880090006E /* LevelCheckBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCheckBox.xib; sourceTree = "<group>"; };
-		98B0A8B52125AE9B000F44B4 /* DbVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbDAO.swift; sourceTree = "<group>"; };
-		98B0A8B72125AECD000F44B4 /* DbVerbDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbVerbDAOImpl.swift; sourceTree = "<group>"; };
+		98B0A8B72125AECD000F44B4 /* LocalDbVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDbVerbDAO.swift; sourceTree = "<group>"; };
 		98B53B65212E96A300565C53 /* ROBOTOSLAB-BOLD_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ROBOTOSLAB-BOLD_0.TTF"; sourceTree = "<group>"; };
 		98B53B66212E96A400565C53 /* ROBOTOSLAB-THIN_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ROBOTOSLAB-THIN_0.TTF"; sourceTree = "<group>"; };
 		98B53B67212E96A600565C53 /* ROBOTOSLAB-LIGHT_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ROBOTOSLAB-LIGHT_0.TTF"; sourceTree = "<group>"; };
@@ -923,11 +929,71 @@
 		300C706526C79F4F0092A492 /* table */ = {
 			isa = PBXGroup;
 			children = (
-				98685F71212712EE00DA327D /* UserLearningVerbTable.swift */,
+				98685F71212712EE00DA327D /* LearningVerbTable.swift */,
 				988DB9182125C70700AFAEF4 /* VerbTranslationTable.swift */,
 				988DB90F2125BBD700AFAEF4 /* VerbTable.swift */,
 			);
 			path = table;
+			sourceTree = "<group>";
+		};
+		300C706626C79FFD0092A492 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				300C706E26C83D320092A492 /* db */,
+				98B0151021244C9F0090006E /* LearningVerb.swift */,
+				983B2494211C4A0C009C33B1 /* Verb.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		300C706926C837DF0092A492 /* implementation */ = {
+			isa = PBXGroup;
+			children = (
+				300C707226C842360092A492 /* db */,
+				98685F752127162700DA327D /* LocalLearningVerbDAO.swift */,
+				988DB9202126956200AFAEF4 /* VerbDAOImpl.swift */,
+			);
+			path = implementation;
+			sourceTree = "<group>";
+		};
+		300C706E26C83D320092A492 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */,
+				98685F772127173800DA327D /* DbLearningVerb.swift */,
+				988DB9162125C24500AFAEF4 /* DbVerb.swift */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		300C707226C842360092A492 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				988DB9142125C09900AFAEF4 /* LocalDbVerbTranslationDAO.swift */,
+				98B0A8B72125AECD000F44B4 /* LocalDbVerbDAO.swift */,
+				300C707326C842ED0092A492 /* LocalDbLearningVerbDAO.swift */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		300C707726C844E30092A492 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				300C707826C844ED0092A492 /* db */,
+				300C707026C841090092A492 /* LearningVerbDAO.swift */,
+				300C707926C846AC0092A492 /* VerbDAO.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		300C707826C844ED0092A492 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				300C706A26C8380A0092A492 /* DbVerbDAO.swift */,
+				300C707526C843830092A492 /* DbLearningVerbDAO.swift */,
+				300C706C26C83AE50092A492 /* DbVerbTranslationDAO.swift */,
+			);
+			path = db;
 			sourceTree = "<group>";
 		};
 		9815F7A2213D071E00248968 /* InAppPurshase */ = {
@@ -973,7 +1039,6 @@
 				9829D4B121416E3D0004FCB3 /* UserDefaults */,
 				98685F3A21270A4400DA327D /* Database */,
 				98685F332126A92900DA327D /* Enums */,
-				988DB9112125BC7F00AFAEF4 /* Beans */,
 				98B0A8B42125AE3B000F44B4 /* dao */,
 			);
 			path = model;
@@ -1017,18 +1082,6 @@
 				98685F7E2129663100DA327D /* BackwardCardVC.swift */,
 			);
 			path = ReviewVerbsVC;
-			sourceTree = "<group>";
-		};
-		988DB9112125BC7F00AFAEF4 /* Beans */ = {
-			isa = PBXGroup;
-			children = (
-				983B2494211C4A0C009C33B1 /* Verb.swift */,
-				98B0151021244C9F0090006E /* UserLearningVerb.swift */,
-				988DB9162125C24500AFAEF4 /* DbVerb.swift */,
-				988DB91A2125C71700AFAEF4 /* DbVerbTranslation.swift */,
-				98685F772127173800DA327D /* DbUserLearningVerb.swift */,
-			);
-			path = Beans;
 			sourceTree = "<group>";
 		};
 		9897DC00213C30A300F0851E /* Library */ = {
@@ -1096,15 +1149,11 @@
 		98B0A8B42125AE3B000F44B4 /* dao */ = {
 			isa = PBXGroup;
 			children = (
+				300C707726C844E30092A492 /* protocol */,
+				300C706926C837DF0092A492 /* implementation */,
+				300C706626C79FFD0092A492 /* domain */,
 				300C706526C79F4F0092A492 /* table */,
-				98B0A8B52125AE9B000F44B4 /* DbVerbDAO.swift */,
-				98B0A8B72125AECD000F44B4 /* DbVerbDAOImpl.swift */,
-				988DB9122125C08900AFAEF4 /* DbVerbTranslationDAO.swift */,
-				988DB9142125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift */,
-				988DB91E2126954900AFAEF4 /* VerbDAO.swift */,
-				988DB9202126956200AFAEF4 /* VerbDAOImpl.swift */,
-				98685F732127161200DA327D /* DbUserLearningVerbDAO.swift */,
-				98685F752127162700DA327D /* DbUserLearningVerbDAOImpl.swift */,
+				300C706726C836F90092A492 /* DAO.swift */,
 			);
 			path = dao;
 			sourceTree = "<group>";
@@ -2080,14 +2129,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300C706826C836F90092A492 /* DAO.swift in Sources */,
 				9899262F21727A7300EB0A24 /* UserProgressionButton.swift in Sources */,
-				98685F72212712EE00DA327D /* UserLearningVerbTable.swift in Sources */,
+				98685F72212712EE00DA327D /* LearningVerbTable.swift in Sources */,
 				98685F352126BA4900DA327D /* Lang.swift in Sources */,
 				986DD42D212FE7F1000E5E49 /* UIFont.swift in Sources */,
 				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
 				98992637217296DE00EB0A24 /* UserProgressionWithInfoButton.swift in Sources */,
 				98CB8A322136BC5500C6944F /* NotImplementedYetVC.swift in Sources */,
 				98685F7F2129663100DA327D /* BackwardCardVC.swift in Sources */,
+				300C707A26C846AC0092A492 /* VerbDAO.swift in Sources */,
 				988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */,
 				98685F392126BA8700DA327D /* Level.swift in Sources */,
 				988DB9172125C24500AFAEF4 /* DbVerb.swift in Sources */,
@@ -2095,20 +2146,23 @@
 				983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */,
 				9898A5D4212AE2D7003EAAFF /* Array.swift in Sources */,
 				983B2495211C4A0C009C33B1 /* Verb.swift in Sources */,
-				98685F762127162700DA327D /* DbUserLearningVerbDAOImpl.swift in Sources */,
+				98685F762127162700DA327D /* LocalLearningVerbDAO.swift in Sources */,
 				988DB91B2125C71700AFAEF4 /* DbVerbTranslation.swift in Sources */,
 				98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */,
 				98685F372126BA6100DA327D /* Form.swift in Sources */,
+				300C707126C841090092A492 /* LearningVerbDAO.swift in Sources */,
 				9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */,
 				98483A1B214587A600AF7115 /* SelectLevelVC.swift in Sources */,
-				98B0A8B82125AECD000F44B4 /* DbVerbDAOImpl.swift in Sources */,
+				300C707426C842ED0092A492 /* LocalDbLearningVerbDAO.swift in Sources */,
+				98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */,
 				9815F7A4213D073000248968 /* IAPProducts.swift in Sources */,
 				98B53B70212F10B000565C53 /* BasicButton.swift in Sources */,
+				300C706D26C83AE50092A492 /* DbVerbTranslationDAO.swift in Sources */,
 				98FA119F216E134C0068AB4C /* VerbDetailsVC.swift in Sources */,
 				98EA96A5214E68640034B360 /* Background3.swift in Sources */,
 				9863384F2144FAC100E8B95A /* PurchaseUIButton.swift in Sources */,
+				300C707626C843830092A492 /* DbLearningVerbDAO.swift in Sources */,
 				9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */,
-				988DB91F2126954900AFAEF4 /* VerbDAO.swift in Sources */,
 				98DEFC8E20FE27EE00DC32BB /* ReviewVerbsVC.swift in Sources */,
 				98DEFC8C20FDC33200DC32BB /* AddVerbsCV.swift in Sources */,
 				98F2F7A521579062007AB342 /* ListVerbsCell.swift in Sources */,
@@ -2117,22 +2171,20 @@
 				98685F7A212744F900DA327D /* SetUpDatabase.swift in Sources */,
 				988442402133834700D9661B /* Sequence.swift in Sources */,
 				9863384D21429ABB00E8B95A /* IAPurchaseVC.swift in Sources */,
+				300C706B26C8380A0092A492 /* DbVerbDAO.swift in Sources */,
 				98DEFC8720FDC25400DC32BB /* MainVC.swift in Sources */,
 				98C9834B20F750820080B08C /* AppDelegate.swift in Sources */,
 				986DD439213063A4000E5E49 /* UIColor.swift in Sources */,
-				98B0151121244C9F0090006E /* UserLearningVerb.swift in Sources */,
+				98B0151121244C9F0090006E /* LearningVerb.swift in Sources */,
 				988DB9192125C70700AFAEF4 /* VerbTranslationTable.swift in Sources */,
-				98B0A8B62125AE9B000F44B4 /* DbVerbDAO.swift in Sources */,
 				98B53B77212F223A00565C53 /* Background1.swift in Sources */,
 				98685F7021270E2B00DA327D /* SpeedLog.swift in Sources */,
 				98301E5F212C7C2B00432C84 /* VerbCardView.swift in Sources */,
 				98301E56212C771900432C84 /* StatisticsButton.swift in Sources */,
 				98301E54212C76FB00432C84 /* StatisticsVC.swift in Sources */,
-				98685F742127161200DA327D /* DbUserLearningVerbDAO.swift in Sources */,
-				988DB9152125C09900AFAEF4 /* DbVerbTranslationDAOImpl.swift in Sources */,
-				988DB9132125C08900AFAEF4 /* DbVerbTranslationDAO.swift in Sources */,
+				988DB9152125C09900AFAEF4 /* LocalDbVerbTranslationDAO.swift in Sources */,
 				98A511D0214AFA80001107D9 /* BoughtIAPProducts.swift in Sources */,
-				98685F782127173800DA327D /* DbUserLearningVerb.swift in Sources */,
+				98685F782127173800DA327D /* DbLearningVerb.swift in Sources */,
 				98B53B79212F24B500565C53 /* Background2.swift in Sources */,
 				98B01514212474670090006E /* LevelCheckBox.swift in Sources */,
 				9898A5F0212C2C1C003EAAFF /* ListVerbsVC.swift in Sources */,

@@ -98,7 +98,7 @@ class MainVC: UIViewController {
         let cv = segue.destination as! ReviewVerbsVC
         
         do {
-            let verbsRangeToReviewToday = try DbUserLearningVerbDAOImpl.shared.verbsToReviewToday(limit: nbrVerbInReviewSession)
+            let verbsRangeToReviewToday = try DAO.shared.verbsToReviewToday(limit: nbrVerbInReviewSession)
             cv.verbsToReview = verbsRangeToReviewToday
         }
         catch{
@@ -109,7 +109,7 @@ class MainVC: UIViewController {
     private func prepareListVerbsVC(_ segue: UIStoryboardSegue){
         let cv = segue.destination as! ListVerbsVC
         do {
-            cv.learningVerbs = try DbUserLearningVerbDAOImpl.shared.all()
+            cv.learningVerbs = try DAO.shared.all()
         }
         catch{
             cv.learningVerbs = []
@@ -127,8 +127,8 @@ class MainVC: UIViewController {
     private func setUpData(){
         if Database.shared.successfulConnection{
             do{
-                self.nbrVerbInReviewList = try DbUserLearningVerbDAOImpl.shared.nbrVerbInReviewList()
-                self.nbrVerbToReviewToday = try DbUserLearningVerbDAOImpl.shared.nbrVerbToReviewToday()
+                self.nbrVerbInReviewList = try DAO.shared.nbrVerbInReviewList()
+                self.nbrVerbToReviewToday = try DAO.shared.nbrVerbToReviewToday()
                 
             }
             catch{

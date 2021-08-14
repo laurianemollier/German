@@ -30,7 +30,7 @@ class ListVerbsCell: UITableViewCell {
     }
     
     
-    var userLearningVerb: UserLearningVerb!
+    var userLearningVerb: LearningVerb!
     
     
     @IBOutlet weak var containerView: UIView!
@@ -57,7 +57,7 @@ class ListVerbsCell: UITableViewCell {
 //        }
 //    }
     
-    func setUp(userLearningVerb: UserLearningVerb, showIfVerbIsInReviewList: Bool){
+    func setUp(userLearningVerb: LearningVerb, showIfVerbIsInReviewList: Bool){
         self.userLearningVerb = userLearningVerb
         self.infinitiveLabel.text = userLearningVerb.verb.infinitive()
         self.presentLabel.text = userLearningVerb.verb.present()

@@ -10,7 +10,7 @@ import Foundation
 import AVFoundation
 
 
-// TODO
+// TODO: lolo
 class Verbs{
     
     static let verbs : [Verb] = Verbs.verbs0 + Verbs.verbs1 + Verbs.verbs2 + Verbs.verbs3 + Verbs.verbs4 + Verbs.verbs5

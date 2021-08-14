@@ -18,8 +18,8 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     var titleList: String!
     
-    var learningVerbs: [UserLearningVerb]!
-    var currentLearningVerbs: [UserLearningVerb]!
+    var learningVerbs: [LearningVerb]!
+    var currentLearningVerbs: [LearningVerb]!
     
     
     @IBOutlet weak var table: UITableView!

@@ -10,7 +10,7 @@ import UIKit
 
 class VerbDetailsVC: UIViewController {
     
-    var userLearningVerb: UserLearningVerb!
+    var userLearningVerb: LearningVerb!
     
     
     // ------------------
@@ -82,11 +82,11 @@ class VerbDetailsVC: UIViewController {
         
         do{
             
-            let userLearningVerb = UserLearningVerb(id: userLearningVerb.id,
+            let userLearningVerb = LearningVerb(id: userLearningVerb.id,
                                                     verb: userLearningVerb.verb,
                                                     dateToReview: dateToReview,
                                                     userProgression: newProgression)
-            let result = try DbUserLearningVerbDAOImpl.shared.update(learningVerb: userLearningVerb.toDbUserLearningVerb())
+            let result = try DAO.shared.update(learningVerb: userLearningVerb.toDbUserLearningVerb())
             
             if (result > 0)  {
                 self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)

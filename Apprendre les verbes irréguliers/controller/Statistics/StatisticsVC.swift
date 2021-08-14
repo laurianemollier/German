@@ -10,7 +10,7 @@ import UIKit
 
 class StatisticsVC: UIViewController {
     
-    var allLearningVerbs: [UserLearningVerb]!
+    var allLearningVerbs: [LearningVerb]!
     
     
     @IBAction func back(_ sender: UIButton) {
@@ -42,7 +42,7 @@ class StatisticsVC: UIViewController {
         super.viewDidLoad()
         
         do{
-            self.allLearningVerbs =  try DbUserLearningVerbDAOImpl.shared.all()
+            self.allLearningVerbs =  try DAO.shared.all()
         }
         catch{
             SpeedLog.print(error)
@@ -54,7 +54,7 @@ class StatisticsVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         do{
-            self.allLearningVerbs =  try DbUserLearningVerbDAOImpl.shared.all()
+            self.allLearningVerbs =  try DAO.shared.all()
         }
         catch{
             SpeedLog.print(error)
@@ -143,7 +143,7 @@ class StatisticsVC: UIViewController {
     
     func setListVerbsVC(vc: ListVerbsVC, userProgression: UserProgression){
         do {
-            let verbs = try DbUserLearningVerbDAOImpl.shared.select(userProgression: userProgression)
+            let verbs = try DAO.shared.select(userProgression: userProgression)
             vc.learningVerbs = verbs
             vc.titleList = userProgression.name()
             vc.showIfVerbIsInReviewList = false
