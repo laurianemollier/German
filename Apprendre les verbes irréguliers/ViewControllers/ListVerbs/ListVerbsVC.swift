@@ -25,13 +25,14 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     @IBOutlet weak var table: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet weak var titleListLabel: UILabel!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.currentLearningVerbs = self.learningVerbs
         alterLayout()
-
+        
         let nibName = UINib(nibName: "ListVerbsCell", bundle: nil)
         table.register(nibName, forCellReuseIdentifier: "listVerbsCell")
         self.titleListLabel.text = titleList
@@ -46,12 +47,13 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         
         self.searchBar.tintColor = UIColor(rgb: 0xdd0000)
         self.searchBar.barTintColor = UIColor(rgb: 0xdd0000)
+        
+        
+        if let selectedIndexPath = table.indexPathForSelectedRow {
+            table.deselectRow(at: selectedIndexPath, animated: animated)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
     @IBAction func back(_ sender: UIButton) {
         back()
@@ -60,7 +62,7 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     
     // MARK: - TableView
-
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.currentLearningVerbs.count
@@ -86,12 +88,6 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     // MARK: - SearchBar
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
-//        self.currentLearningVerbs = self.learningVerbs.filter({ learningVerb -> Bool in
-//            switch searchBar.selectedScopeButtonIndex{
-//
-//            }
-//        })
-        
         
         guard !searchText.isEmpty else {
             self.currentLearningVerbs = self.learningVerbs
@@ -111,10 +107,10 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     
-
-
+    
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == verbDetailsSegueId {
@@ -122,7 +118,7 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
             let cell = sender as! ListVerbsCell
             vc.userLearningVerb = cell.userLearningVerb
         }
-        else{
+        else {
             // TODO
             SpeedLog.print("Should no happen")
         }
@@ -131,7 +127,7 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
+    
     
     
     
@@ -144,5 +140,5 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         dismiss(animated: true, completion: nil)
     }
     
-
+    
 }

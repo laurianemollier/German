@@ -5,7 +5,7 @@ import UIKit
  From this view controller you can have access to all the functionnalities of the app.
  */
 class MainVC: UIViewController {
-
+    
     // ------------------
     // MARK: - Variables
     // ------------------
@@ -26,7 +26,7 @@ class MainVC: UIViewController {
     
     /// The button that shows the **number of verb to review today** and leads to the revision session, ie. to the **ReviewVerbsVC** screen
     @IBOutlet weak var nbrVerbToReviewTodayButton: UIButton!
-
+    
     /// The button that leads to the revision session, ie. to the **ReviewVerbsVC** screen
     @IBOutlet weak var reviewVerbs: BasicButton!
     
@@ -80,9 +80,9 @@ class MainVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         /*  If they is not verb to review, and the user click on the button to review this empty list of verb, nothing should happen.
-            Normally the buttons that leads the verb revision should be desable on that case (ie. no verb to review)
-            But it is a 2nd layer protection in case if they are not
-        */
+         Normally the buttons that leads the verb revision should be desable on that case (ie. no verb to review)
+         But it is a 2nd layer protection in case if they are not
+         */
         if segue.identifier == "reviewVerbs" && self.nbrVerbInReviewList == 0 {
             // Nothing sould happen
         }
@@ -116,7 +116,7 @@ class MainVC: UIViewController {
         }
     }
     
-
+    
     
     // ------------------
     // MARK: - Private: SetUp this access to the database
@@ -138,7 +138,7 @@ class MainVC: UIViewController {
         }
         else {
             SpeedLog.print("DB shared connection failed")
-//            SpeedLog.print(Database.shared.error)
+            //            SpeedLog.print(Database.shared.error)
         }
     }
     
@@ -169,7 +169,7 @@ class MainVC: UIViewController {
             self.nbrVerbToReviewTodayButton.isEnabled = false
             self.reviewVerbs.isEnabled = false
         }
-        else{
+        else {
             self.nbrVerbToReviewTodayButton.isEnabled = true
             self.reviewVerbs.isEnabled = true
         }

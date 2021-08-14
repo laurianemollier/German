@@ -9,7 +9,7 @@
 import UIKit
 
 class VerbDetailsVC: UIViewController {
-
+    
     var userLearningVerb: UserLearningVerb!
     
     
@@ -41,34 +41,7 @@ class VerbDetailsVC: UIViewController {
     }
     
     @IBAction func addToReviewList(_ sender: BasicButton) {
-
-    }
-    
-    func selectNewProgressionLevel(newProgressionLevel: UserProgression){
-        let (newProgression, dateToReview) =
-            newProgressionLevel.stagnation(reviewedDate: Date())!
-
-        do{
-            
-            let userLearningVerb =    UserLearningVerb(id: userLearningVerb.id,
-                                        verb: userLearningVerb.verb,
-                                        dateToReview: dateToReview,
-                                        userProgression: newProgression)
-            let result = try DbUserLearningVerbDAOImpl.shared.update(learningVerb: userLearningVerb.toDbUserLearningVerb())
-            
-            if (result > 0)  {
-                self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-                SpeedLog.print("Sucessly modify all learning verb")
-            }
-            else{
-                // TODO
-                SpeedLog.print("One verb was not found")
-            }
-        }
-        catch{
-            // TODO
-            SpeedLog.print(error)
-        }
+        selectNewProgressionLevel(newProgressionLevel: UserProgression.level1)
     }
     
     @IBAction func selectProgressionLevel1(_ sender: Any) {
@@ -103,6 +76,33 @@ class VerbDetailsVC: UIViewController {
         selectNewProgressionLevel(newProgressionLevel: UserProgression.level8)
     }
     
+    private func selectNewProgressionLevel(newProgressionLevel: UserProgression){
+        let (newProgression, dateToReview) =
+            newProgressionLevel.stagnation(reviewedDate: Date())!
+        
+        do{
+            
+            let userLearningVerb = UserLearningVerb(id: userLearningVerb.id,
+                                                    verb: userLearningVerb.verb,
+                                                    dateToReview: dateToReview,
+                                                    userProgression: newProgression)
+            let result = try DbUserLearningVerbDAOImpl.shared.update(learningVerb: userLearningVerb.toDbUserLearningVerb())
+            
+            if (result > 0)  {
+                self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+                SpeedLog.print("Sucessly modify all learning verb")
+            }
+            else{
+                // TODO
+                SpeedLog.print("One verb was not found")
+            }
+        }
+        catch{
+            // TODO
+            SpeedLog.print(error)
+        }
+    }
+    
     // ----------------------
     // MARK: - View overrides
     // ----------------------
@@ -117,11 +117,11 @@ class VerbDetailsVC: UIViewController {
     }
     
     
-
+    
     // ------------------
     // MARK: - Navigation
     // ------------------
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "cardVerbInReviewSegue"{
@@ -133,7 +133,7 @@ class VerbDetailsVC: UIViewController {
             cardVCVerbNotInReview.verb = userLearningVerb.verb
         }
     }
-
+    
     
     private func back(){
         dismiss(animated: true, completion: nil)

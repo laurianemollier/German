@@ -5,7 +5,7 @@ import AVFoundation
 class ReviewVerbsVC: UIViewController {
     
     var audioPlayer: AVAudioPlayer?
-
+    
     // ------------------
     // MARK: - Variables
     // ------------------
@@ -13,11 +13,11 @@ class ReviewVerbsVC: UIViewController {
     var index: Int = 0
     var verbsToReview: [UserLearningVerb]!
     var resultVerbsReviewed: [UserLearningVerb] = []
-
+    
     var forwardCardVC: ForwarCardVC!
     var backwardCardVC: BackwardCardVC!
     
-
+    
     var isCardForward: Bool!
     
     // ------------------
@@ -35,11 +35,11 @@ class ReviewVerbsVC: UIViewController {
     @IBOutlet weak var backwardCard: UIView!
     
     @IBOutlet weak var buttonOnCard: UIButton!
-  
+    
     // ---
     
     @IBOutlet weak var revealButton: UIButton!
-
+    
     // ---
     
     @IBOutlet weak var explainationLabel: UILabel!
@@ -48,7 +48,7 @@ class ReviewVerbsVC: UIViewController {
     @IBOutlet weak var stagnationButton: BasicButton!
     @IBOutlet weak var progressionButton: BasicButton!
     
- 
+    
     // ------------------
     // MARK: - Actions
     // ------------------
@@ -95,8 +95,8 @@ class ReviewVerbsVC: UIViewController {
         let (newProgression, dateToReview) = verbReviewed.userProgression.progression(reviewedDate: verbReviewed.dateToReview!)!
         updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
     }
-
-
+    
+    
     // ----------------------
     // MARK: - View overrides
     // ----------------------
@@ -117,12 +117,12 @@ class ReviewVerbsVC: UIViewController {
     @objc private func cancelTapped(){
         self.navigationController?.popViewController(animated: true)
     }
-
-
+    
+    
     // ------------------
     // MARK: - Navigation
     // ------------------
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "forwardCardSegue"{
@@ -278,7 +278,7 @@ class ReviewVerbsVC: UIViewController {
             audioPlayer = try! AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
             audioPlayer!.play()
             audioPlayer!.numberOfLoops = 0
-
+            
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
         }
         catch {

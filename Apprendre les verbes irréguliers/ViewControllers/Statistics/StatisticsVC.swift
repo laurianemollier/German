@@ -35,12 +35,12 @@ class StatisticsVC: UIViewController {
     
     @IBOutlet weak var progressionLevel8: StatisticsButton!
     
-//    @IBOutlet weak var progressionToIgnore: StatisticsButton!
+    //    @IBOutlet weak var progressionToIgnore: StatisticsButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         do{
             self.allLearningVerbs =  try DbUserLearningVerbDAOImpl.shared.all()
         }
@@ -50,7 +50,7 @@ class StatisticsVC: UIViewController {
         }
     }
     
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         do{
@@ -66,7 +66,7 @@ class StatisticsVC: UIViewController {
     override func viewDidLayoutSubviews() {
         setUp()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -91,16 +91,16 @@ class StatisticsVC: UIViewController {
                                      nbrVerb: nbrVerbFor(progression: UserProgression.level7))
         self.progressionLevel8.setUp(userProgression: UserProgression.level8,
                                      nbrVerb: nbrVerbFor(progression: UserProgression.level8))
-//        self.progressionToIgnore.setUp(userProgression: UserProgression.toIgnore,
-//                                     nbrVerb: nbrVerbFor(progression: UserProgression.toIgnore))
-    
+        //        self.progressionToIgnore.setUp(userProgression: UserProgression.toIgnore,
+        //                                     nbrVerb: nbrVerbFor(progression: UserProgression.toIgnore))
+        
     }
     
     
     private func nbrVerbFor(progression: UserProgression) -> Int{
         return self.allLearningVerbs.filter({$0.userProgression == progression}).count
     }
-
+    
     
     
     
@@ -109,10 +109,10 @@ class StatisticsVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-
-
+    
+    
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let listVerbsVC = segue.destination as! ListVerbsVC
         
@@ -139,7 +139,6 @@ class StatisticsVC: UIViewController {
         default:
             SpeedLog.print("Error") // TODO
         }
-    
     }
     
     func setListVerbsVC(vc: ListVerbsVC, userProgression: UserProgression){
@@ -154,6 +153,4 @@ class StatisticsVC: UIViewController {
             
         }
     }
-
-
 }
