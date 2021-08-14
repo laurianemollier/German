@@ -1,11 +1,3 @@
-//
-//  ReviewVerbsVC.swift
-//  Apprendre les verbes irréguliers
-//
-//  Created by Lauriane Mollier on 17/07/2018.
-//  Copyright © 2018 Lauriane Mollier. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import AVFoundation
@@ -13,16 +5,30 @@ import AVFoundation
 class ReviewVerbsVC: UIViewController {
     
     var audioPlayer: AVAudioPlayer?
-
+    
+    // ------------------
+    // MARK: - Variables
+    // ------------------
+    
     var index: Int = 0
     var verbsToReview: [UserLearningVerb]!
     var resultVerbsReviewed: [UserLearningVerb] = []
-
+    
     var forwardCardVC: ForwarCardVC!
     var backwardCardVC: BackwardCardVC!
     
-
+    
     var isCardForward: Bool!
+    
+    // ------------------
+    // MARK: - Outlets
+    // ------------------
+    
+    @IBOutlet weak var progressionLabel: UILabel!
+    
+    @IBOutlet weak var audioButton: UIButton!
+    
+    // --- card ---
     
     @IBOutlet weak var forwarCard: UIView!
     
@@ -30,19 +36,22 @@ class ReviewVerbsVC: UIViewController {
     
     @IBOutlet weak var buttonOnCard: UIButton!
     
-    @IBOutlet weak var realButtonOutsideCard: UIButton!
-
-    @IBOutlet weak var progressionLabel: UILabel!
+    // ---
+    
+    @IBOutlet weak var revealButton: UIButton!
+    
+    // ---
     
     @IBOutlet weak var explainationLabel: UILabel!
     
     @IBOutlet weak var regressionButton: BasicButton!
     @IBOutlet weak var stagnationButton: BasicButton!
     @IBOutlet weak var progressionButton: BasicButton!
-    @IBOutlet weak var neverReviewButton: BasicButton!
     
-    @IBOutlet var audioButton: UIButton!
     
+    // ------------------
+    // MARK: - Actions
+    // ------------------
     
     @IBAction func back(_ sender: UIButton) {
         back()
@@ -50,13 +59,11 @@ class ReviewVerbsVC: UIViewController {
     
     @IBAction func audio(_ sender: UIButton) {
         if(Audio.shared.isOn()){
-//            audioButton.setImage(#imageLiteral(resourceName: "RV Audio off"), for: .normal)
             audioButton.setTitle("🔕", for: .normal)
             Audio.shared.off()
             audioStop()
         }
         else{
-//            audioButton.setImage(#imageLiteral(resourceName: "RV Audio on"), for: .normal)
             audioButton.setTitle("🔔", for: .normal)
             Audio.shared.on()
         }
@@ -65,6 +72,7 @@ class ReviewVerbsVC: UIViewController {
     @IBAction func revealClickButton(_ sender: UIButton) {
         revealCard(sender)
     }
+    
     @IBAction func revealClickOnCard(_ sender: UIButton) {
         revealCard(sender)
     }
@@ -74,19 +82,63 @@ class ReviewVerbsVC: UIViewController {
         let (newProgression, dateToReview) = verbReviewed.userProgression.regression(reviewedDate: verbReviewed.dateToReview!)!
         updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
     }
+    
     @IBAction func stagnate(_ sender: BasicButton) {
         let verbReviewed: UserLearningVerb = currentVerb()
         let (newProgression, dateToReview) = verbReviewed.userProgression.stagnation(reviewedDate: verbReviewed.dateToReview!)!
         updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
         
     }
+    
     @IBAction func progress(_ sender: BasicButton) {
         let verbReviewed: UserLearningVerb = currentVerb()
         let (newProgression, dateToReview) = verbReviewed.userProgression.progression(reviewedDate: verbReviewed.dateToReview!)!
         updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
     }
-
-    private func currentVerb() -> UserLearningVerb{
+    
+    
+    // ----------------------
+    // MARK: - View overrides
+    // ----------------------
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // display the correct sounds button
+        if(Audio.shared.isOn()){
+            audioButton.setTitle("🔔", for: .normal)
+        }
+        else{
+            audioButton.setTitle("🔕", for: .normal)
+        }
+        
+        resetCard(verb: self.verbsToReview[self.index].verb)
+    }
+    
+    @objc private func cancelTapped(){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    // ------------------
+    // MARK: - Navigation
+    // ------------------
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "forwardCardSegue"{
+            self.forwardCardVC = segue.destination as? ForwarCardVC
+        }
+        else if segue.identifier == "backCardSegue"{
+            self.backwardCardVC = segue.destination as? BackwardCardVC
+        }
+    }
+    
+    // ------------------
+    // MARK: - Private
+    // ------------------
+    
+    
+    private func currentVerb() -> UserLearningVerb {
         return self.verbsToReview[self.index]
     }
     
@@ -100,11 +152,6 @@ class ReviewVerbsVC: UIViewController {
         nextVerb(updatedVerbReviewed: updatedVerbReviewed)
     }
     
-    
-
-    @IBAction func toNeverReview(_ sender: BasicButton) {
-        updatedVerbReviewed(newProgression: UserProgression.toIgnore, dateToReview: nil)
-    }
     
     private func nextVerb(updatedVerbReviewed: UserLearningVerb?){
         audioStop()
@@ -124,10 +171,6 @@ class ReviewVerbsVC: UIViewController {
     }
     
     
-    
-    
-    
-
     private func flipCard(visible: UIView, notVisibleYet: UIView){
         let transitionOptions: UIViewAnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews]
         
@@ -142,49 +185,6 @@ class ReviewVerbsVC: UIViewController {
         self.isCardForward = !self.isCardForward
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        // display the correct sounds button
-        if(Audio.shared.isOn()){
-            audioButton.setTitle("🔔", for: .normal)
-//            audioButton.setImage(#imageLiteral(resourceName: "RV Audio on"), for: .normal)
-        }
-        else{
-            audioButton.setTitle("🔕", for: .normal)
-//            audioButton.setImage(#imageLiteral(resourceName: "RV Audio off"), for: .normal)
-        }
-        
-        resetCard(verb: self.verbsToReview[self.index].verb)
-    }
-    
-    @objc private func cancelTapped(){
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "forwardCardSegue"{
-            self.forwardCardVC = segue.destination as? ForwarCardVC
-        }
-        else if segue.identifier == "backCardSegue"{
-            self.backwardCardVC = segue.destination as? BackwardCardVC
-        }
-    }
     
     private func revealCard(_ sender: UIButton){
         if self.isCardForward{
@@ -201,13 +201,12 @@ class ReviewVerbsVC: UIViewController {
         }
         
         
-        self.realButtonOutsideCard.isHidden = true
+        self.revealButton.isHidden = true
         
         self.explainationLabel.isHidden = false
         self.regressionButton.isHidden = false
         self.stagnationButton.isHidden = false
         self.progressionButton.isHidden = false
-//        self.neverReviewButton.isHidden = false
         
         let progression = self.currentVerb().userProgression
         self.regressionButton.setTitle(progression.regressionName(), for: .normal)
@@ -222,13 +221,12 @@ class ReviewVerbsVC: UIViewController {
         self.forwarCard.isHidden = false
         self.backwardCard.isHidden = true
         
-        self.realButtonOutsideCard.isHidden = false
+        self.revealButton.isHidden = false
         
         self.explainationLabel.isHidden = true
         self.regressionButton.isHidden = true
         self.stagnationButton.isHidden = true
         self.progressionButton.isHidden = true
-//        self.neverReviewButton.isHidden = true
         
         self.forwardCardVC.reset(verb: verb)
         
@@ -247,7 +245,6 @@ class ReviewVerbsVC: UIViewController {
             let results: [Int] = try DbUserLearningVerbDAOImpl.shared.update(learningVerbs: dbResultVerbsReviewed)
             if results.forAll(where: {$0 > 0})  {
                 back()
-                // TODO: Show the success
                 SpeedLog.print("Sucessly modify all learning verb")
             }
             else{
@@ -271,6 +268,7 @@ class ReviewVerbsVC: UIViewController {
     }
     
     
+    // --- audio ---
     
     private func audioPlay(verb: Verb){
         do {
@@ -280,7 +278,7 @@ class ReviewVerbsVC: UIViewController {
             audioPlayer = try! AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
             audioPlayer!.play()
             audioPlayer!.numberOfLoops = 0
-
+            
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
         }
         catch {
@@ -295,8 +293,4 @@ class ReviewVerbsVC: UIViewController {
             audioPlayer!.stop()
         }
     }
-
-    
- 
-
 }

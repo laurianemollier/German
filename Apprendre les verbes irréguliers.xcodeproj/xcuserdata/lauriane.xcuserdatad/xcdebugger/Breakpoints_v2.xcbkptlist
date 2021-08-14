@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A6BE23FD-41B5-4B30-9CC6-CD3A3C669F3F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6061C8AD-E0B9-41A7-9382-E802531CF841"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Apprendre les verbes irre&#x301;guliers/ViewControllers/MainVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "MainVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6061C8AD-E0B9-41A7-9382-E802531CF841 - 2ff107bdb51ce867"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Apprendre_les_verbes_irr&#xe9;guliers.MainVC.nbrVerbInReviewList.getter : Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Apprendre les verbes irre&#x301;guliers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lauriane/Documents/GermanIrregularVerbs/Apprendre%20les%20verbes%20irre%CC%81guliers/ViewControllers/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "6061C8AD-E0B9-41A7-9382-E802531CF841 - fc4c856eec5e9413"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Apprendre_les_verbes_irr&#xe9;guliers.MainVC.nbrVerbInReviewList.setter : Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Apprendre les verbes irre&#x301;guliers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lauriane/Documents/GermanIrregularVerbs/Apprendre%20les%20verbes%20irre%CC%81guliers/ViewControllers/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "139">
+               </Location>
+               <Location
+                  uuid = "6061C8AD-E0B9-41A7-9382-E802531CF841 - 6a7ea396307bb06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Apprendre_les_verbes_irr&#xe9;guliers.MainVC.nbrVerbInReviewList.modify : Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Apprendre les verbes irre&#x301;guliers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lauriane/Documents/GermanIrregularVerbs/Apprendre%20les%20verbes%20irre%CC%81guliers/ViewControllers/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "6061C8AD-E0B9-41A7-9382-E802531CF841 - 530386604fb55adf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Apprendre_les_verbes_irr&#xe9;guliers.MainVC.nbrVerbInReviewList.modify : Swift.Optional&lt;Swift.Int&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Apprendre les verbes irre&#x301;guliers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lauriane/Documents/GermanIrregularVerbs/Apprendre%20les%20verbes%20irre%CC%81guliers/ViewControllers/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "6061C8AD-E0B9-41A7-9382-E802531CF841 - 73e2351b94d0ec15"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Apprendre_les_verbes_irr&#xe9;guliers.MainVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Apprendre_les_verbes_irr&#xe9;guliers.MainVC"
+                  moduleName = "Apprendre les verbes irre&#x301;guliers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lauriane/Documents/GermanIrregularVerbs/Apprendre%20les%20verbes%20irre%CC%81guliers/ViewControllers/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "290">
+               </Location>
+               <Location
+                  uuid = "6061C8AD-E0B9-41A7-9382-E802531CF841 - 6c3a5ea5dfa7ce78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Apprendre_les_verbes_irr&#xe9;guliers.MainVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Apprendre_les_verbes_irr&#xe9;guliers.MainVC&gt;"
+                  moduleName = "Apprendre les verbes irre&#x301;guliers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lauriane/Documents/GermanIrregularVerbs/Apprendre%20les%20verbes%20irre%CC%81guliers/ViewControllers/MainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "234">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

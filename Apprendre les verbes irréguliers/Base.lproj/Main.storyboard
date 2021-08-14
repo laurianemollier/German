@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,7 +59,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" id="HHQ-P8-xSg"/>
+                                    <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" modalPresentationStyle="fullScreen" id="HHQ-P8-xSg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-2v-K4O" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -78,7 +77,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Ajouter des verbes à apprendre"/>
                                 <connections>
-                                    <segue destination="2Lh-hZ-KKR" kind="modal" identifier="addVerbs" id="3h9-Q9-av4"/>
+                                    <segue destination="2Lh-hZ-KKR" kind="presentation" identifier="addVerbs" modalPresentationStyle="fullScreen" id="3h9-Q9-av4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpo-FS-QOa" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -88,7 +87,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Tous les verbes existants"/>
                                 <connections>
-                                    <segue destination="5VA-47-w42" kind="presentation" identifier="listAllVerbs" id="CqE-qH-QaM"/>
+                                    <segue destination="5VA-47-w42" kind="presentation" identifier="listAllVerbs" modalPresentationStyle="fullScreen" id="CqE-qH-QaM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-tk-Ael" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -98,7 +97,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Mes statistiques"/>
                                 <connections>
-                                    <segue destination="iLx-Gh-sve" kind="presentation" id="IMd-Op-mxK"/>
+                                    <segue destination="iLx-Gh-sve" kind="presentation" modalPresentationStyle="fullScreen" id="IMd-Op-mxK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verbs to review over 200 in your review list" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-Or-w8O">
@@ -123,7 +122,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Réviser"/>
                                 <connections>
-                                    <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" id="OVJ-ht-fzK"/>
+                                    <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" modalPresentationStyle="fullScreen" id="OVJ-ht-fzK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -203,11 +202,11 @@
             <objects>
                 <viewController id="2Lh-hZ-KKR" customClass="AddVerbsCV" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="irp-aM-dyM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="7Eq-v6-vrz">
-                                <rect key="frame" x="0.0" y="654" width="375" height="104"/>
+                                <rect key="frame" x="0.0" y="708" width="375" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="ob9-sf-Esf">
                                         <variation key="heightClass=regular-widthClass=regular" constant="160"/>
@@ -215,10 +214,10 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="G34-A0-QxX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AVStepperContainer" translatesAutoresizingMaskIntoConstraints="NO" id="tP2-h3-e2c">
-                                <rect key="frame" x="46.333333333333343" y="110" width="282.33333333333326" height="125.33333333333331"/>
+                                <rect key="frame" x="40" y="154" width="295" height="131"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tP2-h3-e2c" secondAttribute="height" multiplier="275:122" id="GQg-q1-0wg"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="190" id="cXq-n9-WEZ"/>
@@ -231,10 +230,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-rs-yzR">
-                                <rect key="frame" x="46.333333333333343" y="110" width="282.33333333333326" height="125.33333333333331"/>
+                                <rect key="frame" x="40" y="154" width="295" height="131"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1V-P2-sCB">
-                                        <rect key="frame" x="8" y="22.666666666666657" width="80" height="80"/>
+                                        <rect key="frame" x="8" y="25.666666666666657" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="m1V-P2-sCB" secondAttribute="height" multiplier="1:1" id="dIG-ld-7GZ"/>
                                         </constraints>
@@ -245,7 +244,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTe-EP-Aco">
-                                        <rect key="frame" x="116.33333333333331" y="50.666666666666657" width="50" height="24"/>
+                                        <rect key="frame" x="122.66666666666666" y="53.666666666666657" width="50" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Ck6-Ai-ypu"/>
                                         </constraints>
@@ -254,7 +253,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7R-TK-qx6">
-                                        <rect key="frame" x="194.33333333333331" y="22.666666666666657" width="80" height="80"/>
+                                        <rect key="frame" x="207" y="25.666666666666657" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="TMC-Id-xyB"/>
                                             <constraint firstAttribute="width" secondItem="j7R-TK-qx6" secondAttribute="height" multiplier="1:1" id="WQS-73-wDd"/>
@@ -273,7 +272,7 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De niveau de difficulté: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Er-sC-veZ">
-                                <rect key="frame" x="8" y="331" width="359" height="27"/>
+                                <rect key="frame" x="8" y="385" width="359" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="A0d-KK-xX2"/>
                                 </constraints>
@@ -282,7 +281,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djp-s6-Um0" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="102.66666666666669" y="637" width="170" height="47"/>
+                                <rect key="frame" x="102.66666666666669" y="691" width="170" height="47"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="UHk-TN-tIL">
@@ -301,7 +300,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="W7T-FB-Cbv">
-                                <rect key="frame" x="74.666666666666686" y="378" width="226" height="206"/>
+                                <rect key="frame" x="74.666666666666686" y="432" width="226" height="206"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="qhb-W4-tlO">
                                         <rect key="frame" x="0.0" y="0.0" width="226" height="94"/>
@@ -377,7 +376,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-Su-4NW">
-                                <rect key="frame" x="25" y="25" width="37" height="37"/>
+                                <rect key="frame" x="25" y="69" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RPK-Su-4NW" secondAttribute="height" multiplier="1:1" id="L5A-Qp-ozl"/>
                                     <constraint firstAttribute="width" constant="37" id="QWV-sx-hU9"/>
@@ -388,7 +387,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajoutez des verbes à la liste de révision" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEi-vF-C0L">
-                                <rect key="frame" x="82" y="20" width="273" height="53"/>
+                                <rect key="frame" x="82" y="64" width="273" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="Syv-7n-Y5P"/>
                                 </constraints>
@@ -397,21 +396,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40t-SU-W2W">
-                                <rect key="frame" x="2000" y="0.0" width="375" height="758"/>
+                                <rect key="frame" x="2000" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pv8-z1-Mu9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="316"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="370"/>
                                         <color key="backgroundColor" white="1" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z16-YJ-VrT">
-                                        <rect key="frame" x="0.0" y="316" width="260" height="283"/>
+                                        <rect key="frame" x="0.0" y="370" width="260" height="283"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez sélectionner le niveau de langue des verbes à ajouter à la liste de révision" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXd-ZV-A1i">
-                                        <rect key="frame" x="57.666666666666515" y="133.33333333333334" width="260" height="116.33333333333334"/>
+                                        <rect key="frame" x="57.666666666666515" y="187.33333333333334" width="260" height="116.33333333333334"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="Kjt-y4-vKt"/>
                                         </constraints>
@@ -420,26 +419,26 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AV Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="r5p-ga-NZ0">
-                                        <rect key="frame" x="57.666666666666515" y="237.66666666666663" width="70" height="70"/>
+                                        <rect key="frame" x="57.666666666666515" y="291.66666666666669" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="cvO-Sr-1Qb"/>
                                             <constraint firstAttribute="width" secondItem="r5p-ga-NZ0" secondAttribute="height" multiplier="1:1" id="wBM-Xe-dOc"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MK1-4f-nCB">
-                                        <rect key="frame" x="260" y="316" width="115" height="283"/>
+                                        <rect key="frame" x="260" y="370" width="115" height="283"/>
                                         <color key="backgroundColor" white="1" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbx-rb-Rlf">
-                                        <rect key="frame" x="0.0" y="316" width="0.0" height="283"/>
+                                        <rect key="frame" x="0.0" y="370" width="0.0" height="283"/>
                                         <color key="backgroundColor" white="1" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8P6-g0-7a9">
-                                        <rect key="frame" x="0.0" y="598.66666666666663" width="375" height="159.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="652.66666666666663" width="375" height="159.33333333333337"/>
                                         <color key="backgroundColor" white="1" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muk-9e-CrV">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                         <connections>
                                             <action selector="closePopUp:" destination="2Lh-hZ-KKR" eventType="touchUpInside" id="Nbz-gu-zNa"/>
                                         </connections>
@@ -542,7 +541,7 @@
                         <outlet property="moreRandomVerbButton" destination="j7R-TK-qx6" id="phc-9F-QBY"/>
                         <outlet property="nbrRandomVerbLabel" destination="TTe-EP-Aco" id="TdL-tX-0lq"/>
                         <outlet property="topPopUpConstraint" destination="S5f-oL-7EJ" id="api-q2-T9L"/>
-                        <segue destination="JMN-Zr-BPp" kind="show" identifier="IAPurchasesSegue" id="FZp-Ed-ogO"/>
+                        <segue destination="JMN-Zr-BPp" kind="presentation" identifier="IAPurchasesSegue" modalPresentationStyle="fullScreen" id="FZp-Ed-ogO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sc-RV-8Rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -554,14 +553,14 @@
             <objects>
                 <viewController id="iLx-Gh-sve" customClass="StatisticsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hvX-PG-o7O">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="qp1-7M-avn">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="MKw-MZ-FDM">
-                                <rect key="frame" x="0.0" y="654" width="375" height="104"/>
+                                <rect key="frame" x="0.0" y="708" width="375" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="1py-rb-zVW">
                                         <variation key="heightClass=regular-widthClass=regular" constant="160"/>
@@ -569,7 +568,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNj-ba-GFp" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="17.666666666666657" y="80" width="340" height="47"/>
+                                <rect key="frame" x="17.666666666666657" y="124" width="340" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="DSF-gx-U1B"/>
                                     <constraint firstAttribute="height" priority="999" constant="47" id="fz1-ds-CYH"/>
@@ -582,11 +581,11 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5VA-47-w42" kind="show" identifier="notSeen" id="yIS-6Q-kxu"/>
+                                    <segue destination="5VA-47-w42" kind="presentation" identifier="notSeen" modalPresentationStyle="fullScreen" id="yIS-6Q-kxu"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zB1-2i-IUE">
-                                <rect key="frame" x="17.666666666666657" y="157" width="340" height="432"/>
+                                <rect key="frame" x="17.666666666666657" y="201" width="340" height="432"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sX-ub-zX1" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="47"/>
@@ -595,7 +594,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5VA-47-w42" kind="show" identifier="level1" id="I7S-EJ-H4e"/>
+                                            <segue destination="5VA-47-w42" kind="presentation" identifier="level1" modalPresentationStyle="fullScreen" id="I7S-EJ-H4e"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIS-kY-K8M" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -605,7 +604,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5VA-47-w42" kind="show" identifier="level2" id="rpX-iQ-P3B"/>
+                                            <segue destination="5VA-47-w42" kind="presentation" identifier="level2" modalPresentationStyle="fullScreen" id="rpX-iQ-P3B"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6W-jN-bgk" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -615,7 +614,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5VA-47-w42" kind="show" identifier="level3" id="9qw-gl-zYU"/>
+                                            <segue destination="5VA-47-w42" kind="presentation" identifier="level3" modalPresentationStyle="fullScreen" id="9qw-gl-zYU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-N3-dM7" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -625,7 +624,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5VA-47-w42" kind="show" identifier="level4" id="zPM-qo-XIj"/>
+                                            <segue destination="5VA-47-w42" kind="presentation" identifier="level4" modalPresentationStyle="fullScreen" id="zPM-qo-XIj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxB-UC-d7n" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -635,7 +634,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5VA-47-w42" kind="show" identifier="level5" id="aFV-kV-llr"/>
+                                            <segue destination="5VA-47-w42" kind="presentation" identifier="level5" modalPresentationStyle="fullScreen" id="aFV-kV-llr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EN-B9-lBc" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -645,7 +644,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5VA-47-w42" kind="show" identifier="level6" id="9wO-d6-w44"/>
+                                            <segue destination="5VA-47-w42" kind="presentation" identifier="level6" modalPresentationStyle="fullScreen" id="9wO-d6-w44"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hn4-B5-jIP" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -655,7 +654,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5VA-47-w42" kind="show" identifier="level7" id="gcp-zA-pqt"/>
+                                            <segue destination="5VA-47-w42" kind="presentation" identifier="level7" modalPresentationStyle="fullScreen" id="gcp-zA-pqt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLY-ea-zRV" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -665,14 +664,14 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5VA-47-w42" kind="show" identifier="level8" id="EQd-hm-xDQ"/>
+                                            <segue destination="5VA-47-w42" kind="presentation" identifier="level8" modalPresentationStyle="fullScreen" id="EQd-hm-xDQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=regular" spacing="13"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2q-cE-MxR">
-                                <rect key="frame" x="25" y="25" width="37" height="37"/>
+                                <rect key="frame" x="25" y="69" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="l2q-cE-MxR" secondAttribute="height" multiplier="1:1" id="Sci-Ks-b7M"/>
                                     <constraint firstAttribute="height" constant="37" id="lTl-36-0UH"/>
@@ -684,7 +683,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau de connaissance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dA-Ds-H0t">
-                                <rect key="frame" x="87" y="30.333333333333329" width="245" height="26.666666666666671"/>
+                                <rect key="frame" x="87" y="74.333333333333329" width="245" height="26.666666666666671"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -756,14 +755,14 @@
             <objects>
                 <viewController id="5VA-47-w42" customClass="ListVerbsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XQh-NW-8Kz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="Tc4-1V-5aU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="umk-PM-xoC">
-                                <rect key="frame" x="0.0" y="654" width="375" height="104"/>
+                                <rect key="frame" x="0.0" y="708" width="375" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="UjC-bz-qhs">
                                         <variation key="heightClass=regular-widthClass=regular" constant="160"/>
@@ -771,7 +770,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-Oz-ph9">
-                                <rect key="frame" x="0.0" y="77" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="121" width="375" height="657"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="RWy-s3-lR3">
@@ -798,7 +797,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQ0-G6-Wbc">
-                                <rect key="frame" x="25" y="25" width="37" height="37"/>
+                                <rect key="frame" x="25" y="69" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LQ0-G6-Wbc" secondAttribute="height" multiplier="1:1" id="Miu-78-mdu"/>
                                     <constraint firstAttribute="width" constant="37" id="So9-xm-2M9"/>
@@ -810,7 +809,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tous les verbes irréguliers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-dW-6ya">
-                                <rect key="frame" x="67" y="30.333333333333329" width="300" height="26.666666666666671"/>
+                                <rect key="frame" x="67" y="74.333333333333329" width="300" height="26.666666666666671"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -841,11 +840,12 @@
                             <constraint firstItem="1qD-dW-6ya" firstAttribute="centerY" secondItem="LQ0-G6-Wbc" secondAttribute="centerY" id="zPS-T7-0r4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7gl-LB-Gsk"/>
                     <connections>
                         <outlet property="searchBar" destination="RI8-lV-M8b" id="CP9-Jh-I7h"/>
                         <outlet property="table" destination="Azd-Oz-ph9" id="YFE-pt-j9y"/>
                         <outlet property="titleListLabel" destination="1qD-dW-6ya" id="Dv8-Uz-j2i"/>
-                        <segue destination="wvq-Fe-xqE" kind="show" identifier="verbDetailsSegue" id="lIe-ob-Zvk"/>
+                        <segue destination="wvq-Fe-xqE" kind="presentation" identifier="verbDetailsSegue" modalPresentationStyle="fullScreen" id="lIe-ob-Zvk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zh-fI-bF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -857,15 +857,15 @@
             <objects>
                 <viewController id="JMN-Zr-BPp" customClass="IAPurchaseVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kn2-IF-BEf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNO-ff-IsC" customClass="Background3" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-kB-nvZ" customClass="PurchaseUIButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="37.666666666666657" y="200" width="300" height="178.66666666666663"/>
+                                <rect key="frame" x="37.666666666666657" y="244" width="300" height="178.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="7Lq-tm-VGB"/>
                                     <constraint firstAttribute="width" secondItem="Xzp-kB-nvZ" secondAttribute="height" multiplier="168:100" id="wWW-rr-fVY"/>
@@ -876,7 +876,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqG-cM-Dde">
-                                <rect key="frame" x="25" y="25" width="37" height="37"/>
+                                <rect key="frame" x="25" y="69" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="caQ-eP-Op5"/>
                                     <constraint firstAttribute="width" secondItem="QqG-cM-Dde" secondAttribute="height" multiplier="1:1" id="cmy-hY-C24"/>
@@ -889,13 +889,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-pq-kBj">
-                                <rect key="frame" x="67" y="43.666666666666664" width="300" height="0.0"/>
+                                <rect key="frame" x="67" y="87.666666666666671" width="300" height="0.0"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAy-GT-5ws" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                <rect key="frame" x="71" y="637" width="233" height="47"/>
+                                <rect key="frame" x="71" y="691" width="233" height="47"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="SCc-E1-6KL"/>
@@ -930,24 +930,25 @@
                             <constraint firstItem="Xzp-kB-nvZ" firstAttribute="centerX" secondItem="kn2-IF-BEf" secondAttribute="centerX" id="z1y-S0-h02"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8nf-cM-AK2"/>
                     <connections>
                         <outlet property="buyWholeAppButton" destination="Xzp-kB-nvZ" id="8gX-zb-y0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6P-K7-eVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2293.5999999999999" y="68.815592203898049"/>
+            <point key="canvasLocation" x="2041" y="-519"/>
         </scene>
         <!--Review VerbsVC-->
         <scene sceneID="Tq2-Ze-ZdV">
             <objects>
                 <viewController id="qzO-in-ekQ" customClass="ReviewVerbsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u7U-bI-6bR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="XiS-4E-ab1">
-                                <rect key="frame" x="0.0" y="654" width="375" height="104"/>
+                                <rect key="frame" x="0.0" y="708" width="375" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="r4c-LU-VrL">
                                         <variation key="heightClass=regular-widthClass=regular" constant="160"/>
@@ -955,10 +956,10 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="Ccx-J8-LqH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBV-Nm-8Ys">
-                                <rect key="frame" x="25" y="25" width="37" height="37"/>
+                                <rect key="frame" x="25" y="38.333333333333336" width="37" height="37.000000000000007"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="AzZ-Tq-7DV"/>
                                     <constraint firstAttribute="width" secondItem="fBV-Nm-8Ys" secondAttribute="height" multiplier="1:1" id="EMB-r5-NBd"/>
@@ -968,8 +969,8 @@
                                     <action selector="back:" destination="qzO-in-ekQ" eventType="touchUpInside" id="wha-Q3-EaW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-QY-aWl">
-                                <rect key="frame" x="70" y="29" width="280" height="29.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 / 10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-QY-aWl">
+                                <rect key="frame" x="70" y="42" width="280" height="29.333333333333329"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="9Gv-Tf-joF"/>
                                     <constraint firstAttribute="height" constant="29.329999999999998" id="iXI-2Y-dnI"/>
@@ -979,7 +980,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQq-F4-cjR">
-                                <rect key="frame" x="300" y="657" width="50" height="42"/>
+                                <rect key="frame" x="300" y="711" width="50" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="d93-yt-7r4"/>
                                 </constraints>
@@ -990,7 +991,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="À répéter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqL-M2-fkI">
-                                <rect key="frame" x="8" y="549" width="359" height="23"/>
+                                <rect key="frame" x="8" y="603" width="359" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="iBx-gg-h5S"/>
                                 </constraints>
@@ -999,7 +1000,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VnI-HI-umY">
-                                <rect key="frame" x="0.0" y="587" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="641" width="375" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4y-DF-YAS" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                         <rect key="frame" x="7.9999999999999929" y="8" width="114.33333333333331" height="47"/>
@@ -1056,10 +1057,10 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="9" right="8"/>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3up-Q6-ZOY">
-                                <rect key="frame" x="30" y="66" width="315" height="388"/>
+                                <rect key="frame" x="30" y="79.333333333333343" width="315" height="428.66666666666663"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufF-nV-YxU">
-                                        <rect key="frame" x="37.666666666666686" y="44" width="240" height="300"/>
+                                        <rect key="frame" x="37.666666666666686" y="64.333333333333314" width="240" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="270" id="TUz-hd-bQ9">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="320"/>
@@ -1074,13 +1075,13 @@
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frI-xU-zCb">
-                                        <rect key="frame" x="37.666666666666686" y="44" width="240" height="300"/>
+                                        <rect key="frame" x="37.666666666666686" y="64.333333333333314" width="240" height="300"/>
                                         <connections>
                                             <segue destination="o65-Wo-rje" kind="embed" identifier="backCardSegue" id="lCv-Om-mtj"/>
                                         </connections>
                                     </containerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-3a-Uqk">
-                                        <rect key="frame" x="37.666666666666686" y="44" width="240" height="300"/>
+                                        <rect key="frame" x="37.666666666666686" y="64.333333333333314" width="240" height="300"/>
                                         <connections>
                                             <action selector="revealClickOnCard:" destination="qzO-in-ekQ" eventType="touchUpInside" id="idL-uQ-6rp"/>
                                         </connections>
@@ -1110,8 +1111,8 @@
                                     <constraint firstItem="frI-xU-zCb" firstAttribute="bottom" secondItem="ufF-nV-YxU" secondAttribute="bottom" id="yPw-X1-DaO"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-Gw-nAd">
-                                <rect key="frame" x="146.66666666666666" y="578" width="82" height="82"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-Gw-nAd" userLabel="Reveal Button">
+                                <rect key="frame" x="146.66666666666666" y="632" width="82" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="8cg-FF-JMH"/>
                                     <constraint firstAttribute="width" secondItem="WhS-Gw-nAd" secondAttribute="height" multiplier="1:1" id="bbk-Ok-gs1"/>
@@ -1168,8 +1169,8 @@
                         <outlet property="forwarCard" destination="ufF-nV-YxU" id="XIc-8y-Par"/>
                         <outlet property="progressionButton" destination="Qez-2m-ixe" id="GpI-Ju-5Z4"/>
                         <outlet property="progressionLabel" destination="cVt-QY-aWl" id="UZ6-Oa-GFn"/>
-                        <outlet property="realButtonOutsideCard" destination="WhS-Gw-nAd" id="kZj-5u-Wya"/>
                         <outlet property="regressionButton" destination="b4y-DF-YAS" id="rWt-RN-nV7"/>
+                        <outlet property="revealButton" destination="WhS-Gw-nAd" id="kZj-5u-Wya"/>
                         <outlet property="stagnationButton" destination="gaM-uX-yr6" id="zz6-Kj-0Ns"/>
                     </connections>
                 </viewController>
@@ -1217,11 +1218,11 @@
             <objects>
                 <viewController id="wvq-Fe-xqE" customClass="VerbDetailsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3tg-Sz-TSt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="q1M-K3-5Wk">
-                                <rect key="frame" x="0.0" y="654" width="375" height="104"/>
+                                <rect key="frame" x="0.0" y="708" width="375" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="OAF-vd-Txb">
                                         <variation key="heightClass=regular-widthClass=regular" constant="160"/>
@@ -1237,10 +1238,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="684-Gn-s2p">
-                                <rect key="frame" x="0.0" y="461" width="375" height="185"/>
+                                <rect key="frame" x="0.0" y="505" width="375" height="195"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB9-dr-94F" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
-                                        <rect key="frame" x="45" y="69" width="285" height="47"/>
+                                        <rect key="frame" x="45" y="74" width="285" height="47"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="285" id="dKF-4u-jC5">
@@ -1267,7 +1268,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52o-1a-K14">
-                                <rect key="frame" x="30" y="73" width="315" height="388"/>
+                                <rect key="frame" x="30" y="117" width="315" height="388"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBt-Gn-Qcl">
                                         <rect key="frame" x="37.666666666666686" y="44" width="240" height="300"/>
@@ -1283,7 +1284,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWo-dy-MDF">
-                                <rect key="frame" x="0.0" y="73" width="375" height="685"/>
+                                <rect key="frame" x="0.0" y="117" width="375" height="695"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-0b-XeS">
                                         <rect key="frame" x="30" y="0.0" width="315" height="388"/>
@@ -1326,6 +1327,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectProgressionLevel1:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="SeO-ym-u83"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgr-zT-wWr" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="55" width="340" height="47"/>
@@ -1333,6 +1337,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectProgressionLevel2:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="ZPs-al-rvU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XR-xX-8Fn" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="110" width="340" height="47"/>
@@ -1340,6 +1347,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectProgressionLevel3:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="Jub-Sd-Rx9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgO-mL-90h" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="165" width="340" height="47"/>
@@ -1347,6 +1357,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectProgressionLevel4:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="SG7-gv-LrJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYj-H4-AFO" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="220" width="340" height="47"/>
@@ -1360,6 +1373,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectProgressionLevel5:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="kpm-Jh-Eae"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOy-55-3W1" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="275" width="340" height="47"/>
@@ -1367,6 +1383,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectProgressionLevel6:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="W4L-SS-8gX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmj-SX-2TL" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="330" width="340" height="47"/>
@@ -1374,6 +1393,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectProgressionLevel7:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="PVb-of-z28"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKC-fh-qWD" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="385" width="340" height="47"/>
@@ -1381,6 +1403,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectProgressionLevel8:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="8FC-Wd-w3i"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -1425,7 +1450,7 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QS-bF-OMT">
-                                <rect key="frame" x="25" y="25" width="37" height="37"/>
+                                <rect key="frame" x="25" y="69" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="H9l-6v-yRH"/>
                                     <constraint firstAttribute="width" secondItem="1QS-bF-OMT" secondAttribute="height" multiplier="1:1" id="k0E-f3-zau"/>
@@ -1435,8 +1460,8 @@
                                     <action selector="back:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="taF-DA-R2Z"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTX-6V-YRw">
-                                <rect key="frame" x="70" y="29" width="280" height="29.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTX-6V-YRw">
+                                <rect key="frame" x="70" y="73" width="280" height="29.333333333333329"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29.329999999999998" id="WDd-Z4-ho8"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="vmL-zJ-ktV"/>
@@ -1482,6 +1507,7 @@
                             <constraint firstItem="684-Gn-s2p" firstAttribute="leading" secondItem="41b-Zn-nkp" secondAttribute="leading" id="xuW-oq-hbl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="T23-Ch-WnY"/>
                     <connections>
                         <outlet property="progressionLevel1" destination="BZs-KS-96M" id="uLE-Mz-rdf"/>
                         <outlet property="progressionLevel2" destination="Bgr-zT-wWr" id="Ugd-B5-xgk"/>
@@ -1612,8 +1638,8 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="HHQ-P8-xSg"/>
-        <segue reference="CqE-qH-QaM"/>
+        <segue reference="OVJ-ht-fzK"/>
+        <segue reference="gcp-zA-pqt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AV Arrow" width="1600" height="1600"/>

@@ -49,7 +49,7 @@ class DbUserLearningVerbDAOImpl{
     func find(verbId: Int64) throws -> UserLearningVerb? {
         
         let q = UserLearningVerbTable.learningVerbs.where(UserLearningVerbTable.verbId == verbId)
-    
+        
         if let row = try db.pluck(q) {
             return try toUserLearningVerb(userLVTableRow: row)
         } else {
@@ -88,7 +88,7 @@ class DbUserLearningVerbDAOImpl{
     
     
     func addRandomVerbToReviewList(ofLevel: [Level], nbr: Int) throws {
-
+        
         // TODO to make it more effective in one query, because now it is horrible!
         let q = UserLearningVerbTable.learningVerbs
             .filter(UserLearningVerbTable.userProgression == UserProgression.notSeenYet.rawValue)
@@ -105,7 +105,6 @@ class DbUserLearningVerbDAOImpl{
         }
     }
     
-
     
     /// The verb that the user has to review today
     func verbsToReviewToday(limit: Int?) throws -> [UserLearningVerb]{
@@ -129,8 +128,8 @@ class DbUserLearningVerbDAOImpl{
     func update(learningVerb: DbUserLearningVerb) throws -> Int{
         let table: Table = UserLearningVerbTable.learningVerbs.where(UserLearningVerbTable.id == learningVerb.id)
         let update: Update = table.update(UserLearningVerbTable.verbId <- learningVerb.id,
-                                    UserLearningVerbTable.dateToReview <- learningVerb.dateToReview,
-                                    UserLearningVerbTable.userProgression <- learningVerb.userProgression)
+                                          UserLearningVerbTable.dateToReview <- learningVerb.dateToReview,
+                                          UserLearningVerbTable.userProgression <- learningVerb.userProgression)
         return try db.run(update)
     }
     
@@ -143,14 +142,14 @@ class DbUserLearningVerbDAOImpl{
     func all() throws -> [UserLearningVerb]{
         let rows = try db.prepare(UserLearningVerbTable.learningVerbs)
         return try rows.map({ row in
-           try toUserLearningVerb(userLVTableRow: row)
+            try toUserLearningVerb(userLVTableRow: row)
         })
     }
     
     
     func select(userProgression: UserProgression) throws -> [UserLearningVerb] {
         let rows = try db.prepare(UserLearningVerbTable.learningVerbs
-            .filter(UserLearningVerbTable.userProgression == userProgression.rawValue))
+                                    .filter(UserLearningVerbTable.userProgression == userProgression.rawValue))
         return try rows.map({ row in
             try toUserLearningVerb(userLVTableRow: row)
         })
@@ -162,7 +161,7 @@ class DbUserLearningVerbDAOImpl{
     
     /* -Private functions: */
     
-
+    
     /// Helper function to limit the query
     private func toLimitedQuery(query: Table, limit: Int?) -> Table{
         if let l = limit{
@@ -191,13 +190,13 @@ class DbUserLearningVerbDAOImpl{
     
     
     
-
-    
-
     
     
     
     
-
+    
+    
+    
+    
     
 }
