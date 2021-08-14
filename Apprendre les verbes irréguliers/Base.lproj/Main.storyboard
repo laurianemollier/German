@@ -101,7 +101,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verbs to review over 200 in your review list" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-Or-w8O">
-                                <rect key="frame" x="25.333333333333343" y="334" width="324.66666666666663" height="55.666666666666686"/>
+                                <rect key="frame" x="34.333333333333343" y="334" width="306.33333333333326" height="55.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55.5" id="Mzt-NV-Zsy"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="atu-V0-IJs"/>
@@ -244,7 +244,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTe-EP-Aco">
-                                        <rect key="frame" x="122.66666666666666" y="53.666666666666657" width="50" height="24"/>
+                                        <rect key="frame" x="122.66666666666666" y="55" width="50" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Ck6-Ai-ypu"/>
                                         </constraints>
@@ -410,7 +410,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez sélectionner le niveau de langue des verbes à ajouter à la liste de révision" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXd-ZV-A1i">
-                                        <rect key="frame" x="57.666666666666515" y="187.33333333333334" width="260" height="116.33333333333334"/>
+                                        <rect key="frame" x="57.666666666666515" y="201" width="260" height="102.66666666666669"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="Kjt-y4-vKt"/>
                                         </constraints>
@@ -683,7 +683,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau de connaissance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dA-Ds-H0t">
-                                <rect key="frame" x="87" y="74.333333333333329" width="245" height="26.666666666666671"/>
+                                <rect key="frame" x="87" y="76" width="245" height="23.333333333333329"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1565,76 +1565,76 @@
     </scenes>
     <designables>
         <designable name="0EN-B9-lBc">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="2sX-ub-zX1">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="3Tb-t0-ewg">
-            <size key="intrinsicContentSize" width="30" height="40"/>
+            <size key="intrinsicContentSize" width="30" height="37"/>
         </designable>
         <designable name="AAy-GT-5ws">
-            <size key="intrinsicContentSize" width="164" height="35"/>
+            <size key="intrinsicContentSize" width="155" height="32"/>
         </designable>
         <designable name="AB9-dr-94F">
-            <size key="intrinsicContentSize" width="265" height="36"/>
+            <size key="intrinsicContentSize" width="253" height="33"/>
         </designable>
         <designable name="Djp-s6-Um0">
-            <size key="intrinsicContentSize" width="147" height="38"/>
+            <size key="intrinsicContentSize" width="136" height="35"/>
         </designable>
         <designable name="FwL-BJ-Bfx">
-            <size key="intrinsicContentSize" width="30" height="43"/>
+            <size key="intrinsicContentSize" width="30" height="39"/>
         </designable>
         <designable name="Mpo-FS-QOa">
-            <size key="intrinsicContentSize" width="216" height="36"/>
+            <size key="intrinsicContentSize" width="202" height="33"/>
         </designable>
         <designable name="Ogy-tk-Ael">
-            <size key="intrinsicContentSize" width="140" height="36"/>
+            <size key="intrinsicContentSize" width="132" height="33"/>
         </designable>
         <designable name="Qez-2m-ixe">
-            <size key="intrinsicContentSize" width="113" height="30"/>
+            <size key="intrinsicContentSize" width="108" height="28"/>
         </designable>
         <designable name="W6O-ZH-A1a">
-            <size key="intrinsicContentSize" width="30" height="40"/>
+            <size key="intrinsicContentSize" width="30" height="37"/>
         </designable>
         <designable name="Xzp-kB-nvZ">
             <size key="intrinsicContentSize" width="682" height="255"/>
         </designable>
         <designable name="aIS-kY-K8M">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="b4y-DF-YAS">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="30" height="28"/>
         </designable>
         <designable name="cNj-ba-GFp">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="dLY-ea-zRV">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="gaM-uX-yr6">
-            <size key="intrinsicContentSize" width="58" height="30"/>
+            <size key="intrinsicContentSize" width="54" height="28"/>
         </designable>
         <designable name="hn4-B5-jIP">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="i6W-jN-bgk">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="jCs-oc-s80">
-            <size key="intrinsicContentSize" width="68" height="38"/>
+            <size key="intrinsicContentSize" width="63" height="35"/>
         </designable>
         <designable name="jxB-UC-d7n">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="q8d-2v-K4O">
-            <size key="intrinsicContentSize" width="265" height="36"/>
+            <size key="intrinsicContentSize" width="253" height="33"/>
         </designable>
         <designable name="z5L-Zd-7fP">
-            <size key="intrinsicContentSize" width="30" height="40"/>
+            <size key="intrinsicContentSize" width="30" height="37"/>
         </designable>
         <designable name="zX3-N3-dM7">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
