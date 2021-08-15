@@ -128,7 +128,7 @@ class MainVC: UIViewController {
         if Database.shared.successfulConnection{
             do{
                 self.nbrVerbInReviewList = try DAO.shared.nbrVerbInReviewList()
-                self.nbrVerbToReviewToday = try DAO.shared.nbrVerbToReviewToday()
+                self.nbrVerbToReviewToday = try DAO.shared.verbToReviewTodayCount()
                 
             }
             catch{
