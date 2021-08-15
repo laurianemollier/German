@@ -18,5 +18,7 @@ struct DAO {
     }
     
     static let shared = LocalLearningVerbDAO(connection: Database.shared.connection!)
+    
+    static let verbDAO = LocalVerbDAO(connection: Database.shared.connection!)
 
 }

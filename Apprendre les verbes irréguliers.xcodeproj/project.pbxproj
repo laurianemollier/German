@@ -1037,7 +1037,6 @@
 			isa = PBXGroup;
 			children = (
 				9829D4B121416E3D0004FCB3 /* UserDefaults */,
-				98685F3A21270A4400DA327D /* Database */,
 				98685F332126A92900DA327D /* Enums */,
 				98B0A8B42125AE3B000F44B4 /* dao */,
 			);
@@ -1062,16 +1061,6 @@
 				98685F382126BA8700DA327D /* Level.swift */,
 			);
 			path = Enums;
-			sourceTree = "<group>";
-		};
-		98685F3A21270A4400DA327D /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				983B2496211C6A4B009C33B1 /* Verbs.swift */,
-				988DB91C2125C92700AFAEF4 /* Database.swift */,
-				98685F79212744F900DA327D /* SetUpDatabase.swift */,
-			);
-			path = Database;
 			sourceTree = "<group>";
 		};
 		98685F7B2129652800DA327D /* ReviewVerbsVC */ = {
@@ -1154,6 +1143,9 @@
 				300C706626C79FFD0092A492 /* domain */,
 				300C706526C79F4F0092A492 /* table */,
 				300C706726C836F90092A492 /* DAO.swift */,
+				988DB91C2125C92700AFAEF4 /* Database.swift */,
+				98685F79212744F900DA327D /* SetUpDatabase.swift */,
+				983B2496211C6A4B009C33B1 /* Verbs.swift */,
 			);
 			path = dao;
 			sourceTree = "<group>";

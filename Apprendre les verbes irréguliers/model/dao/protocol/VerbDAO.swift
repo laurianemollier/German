@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol VerbDAO {
-    func insert(verb: Verb) throws -> Verb
-    
-    func insert(verbs: [Verb]) throws -> [Verb]
-    
+protocol VerbDAO {    
     func find(id: Int64) throws -> Verb?
 }
