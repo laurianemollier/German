@@ -17,7 +17,10 @@ final class LocalVerbDAO: VerbDAO{
         self.db = connection
     }
     
-    func find(id: Int64) throws -> Verb?{
-        return Verbs.verbs.first(where: {$0.id == id}) // TODO: lolo
+    func find(id: Int64) throws -> Verb {
+        guard let verbs = Verbs.verbs.first(where: {$0.id == id})
+        else { throw CustomErrorType.VerbNotFound }
+    
+        return verbs
     }
 }

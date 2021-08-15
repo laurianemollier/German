@@ -17,6 +17,7 @@
 		300C707426C842ED0092A492 /* LocalDbLearningVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707326C842ED0092A492 /* LocalDbLearningVerbDAO.swift */; };
 		300C707626C843830092A492 /* DbLearningVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707526C843830092A492 /* DbLearningVerbDAO.swift */; };
 		300C707A26C846AC0092A492 /* VerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707926C846AC0092A492 /* VerbDAO.swift */; };
+		300C707C26C964440092A492 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707B26C964440092A492 /* CustomError.swift */; };
 		9815F7A4213D073000248968 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A3213D073000248968 /* IAPProducts.swift */; };
 		9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A7213D09DF00248968 /* IAPHelper.swift */; };
 		9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829D4B821416E5F0004FCB3 /* Audio.swift */; };
@@ -493,6 +494,7 @@
 		300C707326C842ED0092A492 /* LocalDbLearningVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDbLearningVerbDAO.swift; sourceTree = "<group>"; };
 		300C707526C843830092A492 /* DbLearningVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbLearningVerbDAO.swift; sourceTree = "<group>"; };
 		300C707926C846AC0092A492 /* VerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAO.swift; sourceTree = "<group>"; };
+		300C707B26C964440092A492 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		9804A8C0213E445700B630A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9804A8C8213E451A00B630A1 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		9815F7A3213D073000248968 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
@@ -1099,6 +1101,7 @@
 				986DD438213063A4000E5E49 /* UIColor.swift */,
 				9884423F2133834700D9661B /* Sequence.swift */,
 				9897DBF8213B5EE000F0851E /* EdgeInsetLabel.swift */,
+				300C707B26C964440092A492 /* CustomError.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2135,6 +2138,7 @@
 				98685F392126BA8700DA327D /* Level.swift in Sources */,
 				988DB9172125C24500AFAEF4 /* DbVerb.swift in Sources */,
 				988DB9102125BBD700AFAEF4 /* VerbTable.swift in Sources */,
+				300C707C26C964440092A492 /* CustomError.swift in Sources */,
 				983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */,
 				9898A5D4212AE2D7003EAAFF /* Array.swift in Sources */,
 				983B2495211C4A0C009C33B1 /* Verb.swift in Sources */,

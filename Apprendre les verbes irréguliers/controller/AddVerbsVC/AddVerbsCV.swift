@@ -137,7 +137,7 @@ class AddVerbsCV: UIViewController {
         
         // TODO: When there is no verb to add
         do {
-            self.nbrNotSeenVerb = try DAO.shared.nbrVerNotbInReviewList()
+            self.nbrNotSeenVerb = try DAO.shared.verNotInReviewListCount()
             self.nbrRandomVerb = [10, nbrNotSeenVerb].min()
             self.nbrRandomVerbLabel.text = String(self.nbrRandomVerb)
         }
@@ -189,7 +189,7 @@ class AddVerbsCV: UIViewController {
             performSegue(withIdentifier: "SelectLevelSeque", sender: nil)
         }else{
             do{
-                try DAO.shared.addRandomVerbToReviewList(ofLevel: selectedLevels, nbr: self.nbrRandomVerb)
+                try DAO.shared.addRandomVerbToReviewList(ofLevel: selectedLevels, count: self.nbrRandomVerb)
                 _ = self.navigationController?.navigationController?.popViewController(animated: true)
                 
                 navigationController?.popViewController(animated: true)

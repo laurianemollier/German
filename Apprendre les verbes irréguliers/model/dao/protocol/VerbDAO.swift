@@ -9,5 +9,5 @@
 import Foundation
 
 protocol VerbDAO {    
-    func find(id: Int64) throws -> Verb?
+    func find(id: Int64) throws -> Verb
 }

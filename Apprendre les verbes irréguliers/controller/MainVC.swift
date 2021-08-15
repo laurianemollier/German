@@ -98,7 +98,7 @@ class MainVC: UIViewController {
         let cv = segue.destination as! ReviewVerbsVC
         
         do {
-            let verbsRangeToReviewToday = try DAO.shared.verbsToReviewToday(limit: nbrVerbInReviewSession)
+            let verbsRangeToReviewToday = try DAO.shared.verbToReviewToday(limit: nbrVerbInReviewSession)
             cv.verbsToReview = verbsRangeToReviewToday
         }
         catch{
@@ -127,7 +127,7 @@ class MainVC: UIViewController {
     private func setUpData(){
         if Database.shared.successfulConnection{
             do{
-                self.nbrVerbInReviewList = try DAO.shared.nbrVerbInReviewList()
+                self.nbrVerbInReviewList = try DAO.shared.verbInReviewListCount()
                 self.nbrVerbToReviewToday = try DAO.shared.verbToReviewTodayCount()
                 
             }

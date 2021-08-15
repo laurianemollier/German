@@ -17,76 +17,9 @@ final class LocalLearningVerbDAO: LearningVerbDAO{
         self.db = connection
     }
     
-    func find(verbId: Int64) throws -> LearningVerb? {
-        let q = LearningVerbTable
-            .learningVerbs
-            .where(LearningVerbTable.verbId == verbId)
-        return try db.pluck(q)?.toUserLearningVerb()
-    }
-    
-    func verbToReviewTodayCount() throws -> Int{
-        let today = Date()
-        return try verbToReviewCount(on: today)
-    }
-    
-    func verbToReviewCount(on: Date) throws -> Int{
-        let verbs = LearningVerbTable
-            .learningVerbs
-            .filter(LearningVerbTable.dateToReview <= on)
-        return try db.scalar(verbs.count)
-    }
-
-    func nbrVerbInReviewList() throws -> Int {
-        let verbs = LearningVerbTable
-            .learningVerbs
-            .filter(LearningVerbTable.userProgression != UserProgression.notSeenYet.rawValue)
-        return try db.scalar(verbs.count)
-    }
-    
-    /// The number of verb in the review list
-    func nbrVerNotbInReviewList() throws -> Int {
-        let verbs = LearningVerbTable.learningVerbs
-            .filter(LearningVerbTable.userProgression == UserProgression.notSeenYet.rawValue)
-        return try db.scalar(verbs.count)
-    }
-    
-    
-    func addRandomVerbToReviewList(ofLevel: [Level], nbr: Int) throws {
-        
-        // TODO to make it more effective in one query, because now it is horrible!
-        let q = LearningVerbTable.learningVerbs
-            .filter(LearningVerbTable.userProgression == UserProgression.notSeenYet.rawValue)
-        
-        
-        let learningVerbs: [LearningVerb] = try db.prepare(q).map{ row in
-            try row.toUserLearningVerb()
-        }.filter({ofLevel.contains($0.verb.level)})
-        
-        let selected = learningVerbs.choose(nbr)
-        for verb in selected{
-            let updated = verb.set(userProgression: UserProgression.level1, dateToReview: Date())
-            _ = try update(learningVerb: updated.toDbUserLearningVerb())
-        }
-    }
-    
-    
-    /// The verb that the user has to review today
-    func verbsToReviewToday(limit: Int?) throws -> [LearningVerb]{
-        let today = Date()
-        return try verbsToReview(on: today, limit: limit)
-    }
-    
-    /// The verb that the user has to review on the date "on"
-    func verbsToReview(on: Date, limit: Int?) throws -> [LearningVerb]{
-        let q = LearningVerbTable.learningVerbs
-            .filter(LearningVerbTable.dateToReview <= on)
-            .limit(limit)
-        
-        return try db.prepare(q).map{ row in
-            try row.toUserLearningVerb()
-        }
-    }
-    
+    // -------------
+    // Mark: - write
+    // -------------
     
     /// - Retruns: If retrun value <= 0, the learningVer was not found
     ///            Else if the retrun value is > 0, the update was correctly done
@@ -103,6 +36,34 @@ final class LocalLearningVerbDAO: LearningVerbDAO{
         return try learningVerbs.map({ v in try update(learningVerb: v)})
     }
     
+    func addRandomVerbToReviewList(ofLevel: [Level], count: Int) throws {
+        
+        // TODO to make it more effective in one query
+        let q = LearningVerbTable.learningVerbs
+            .filter(LearningVerbTable.userProgression == UserProgression.notSeenYet.rawValue)
+        
+        
+        let learningVerbs: [LearningVerb] = try db.prepare(q).map{ row in
+            try row.toUserLearningVerb()
+        }.filter({ofLevel.contains($0.verb.level)})
+        
+        let selected = learningVerbs.choose(count)
+        for verb in selected{
+            let updated = verb.set(userProgression: UserProgression.level1, dateToReview: Date())
+            _ = try update(learningVerb: updated.toDbUserLearningVerb())
+        }
+    }
+    
+    // -------------
+    // Mark: - read
+    // -------------
+    
+    func find(verbId: Int64) throws -> LearningVerb? {
+        let q = LearningVerbTable
+            .learningVerbs
+            .where(LearningVerbTable.verbId == verbId)
+        return try db.pluck(q)?.toUserLearningVerb()
+    }
     
     func all() throws -> [LearningVerb]{
         let rows = try db.prepare(LearningVerbTable.learningVerbs)
@@ -111,15 +72,56 @@ final class LocalLearningVerbDAO: LearningVerbDAO{
         })
     }
     
-    
     func select(userProgression: UserProgression) throws -> [LearningVerb] {
         let rows = try db.prepare(LearningVerbTable.learningVerbs
                                     .filter(LearningVerbTable.userProgression == userProgression.rawValue))
         return try rows.map({ row in
             try row.toUserLearningVerb()
         })
-        
     }
+    
+    // Mark: - verb to review
+    
+    func verbToReviewToday(limit: Int?) throws -> [LearningVerb]{
+        let today = Date()
+        return try verbToReview(on: today, limit: limit)
+    }
+    
+    func verbToReviewTodayCount() throws -> Int{
+        let today = Date()
+        return try verbToReviewCount(on: today)
+    }
+    
+    func verbToReview(on: Date, limit: Int?) throws -> [LearningVerb]{
+        let q = LearningVerbTable.learningVerbs
+            .filter(LearningVerbTable.dateToReview <= on)
+            .limit(limit)
+        
+        return try db.prepare(q).map{ row in
+            try row.toUserLearningVerb()
+        }
+    }
+    
+    func verbToReviewCount(on: Date) throws -> Int{
+        let verbs = LearningVerbTable
+            .learningVerbs
+            .filter(LearningVerbTable.dateToReview <= on)
+        return try db.scalar(verbs.count)
+    }
+    
+    func verbInReviewListCount() throws -> Int {
+        let verbs = LearningVerbTable
+            .learningVerbs
+            .filter(LearningVerbTable.userProgression != UserProgression.notSeenYet.rawValue)
+        return try db.scalar(verbs.count)
+    }
+    
+    func verNotInReviewListCount() throws -> Int {
+        let verbs = LearningVerbTable.learningVerbs
+            .filter(LearningVerbTable.userProgression == UserProgression.notSeenYet.rawValue)
+        return try db.scalar(verbs.count)
+    }
+    
 }
 
 private extension Row {
@@ -135,7 +137,7 @@ private extension Row {
         let dateToReview = self[LearningVerbTable.dateToReview]
         let userProgression = UserProgression(rawValue: self[LearningVerbTable.userProgression])!
         
-        let verb = try DAO.verbDAO.find(id:  self[LearningVerbTable.verbId])!
+        let verb = try DAO.verbDAO.find(id: self[LearningVerbTable.verbId])
         
         return LearningVerb(id: id, verb: verb, dateToReview: dateToReview, userProgression: userProgression)
     }
