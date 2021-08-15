@@ -11,7 +11,7 @@ import AVFoundation
 
 
 /// This class represent the user's learning data for this verb
-class LearningVerb{
+struct LearningVerb{
     
     /// The id (unique) in the database
     let id: Int64
@@ -62,6 +62,7 @@ class LearningVerb{
     }
     
     
+    // TODO
     /// Select and transform the data contained in the object
     func toDbUserLearningVerb() -> DbLearningVerb{
         return DbLearningVerb(id: self.id,

@@ -21,19 +21,20 @@ final class LocalLearningVerbDAO: LearningVerbDAO{
     // Mark: - write
     // -------------
     
-    /// - Retruns: If retrun value <= 0, the learningVer was not found
-    ///            Else if the retrun value is > 0, the update was correctly done
-    func update(learningVerb: DbLearningVerb) throws -> Int{
+    
+    func update(learningVerb: DbLearningVerb) throws -> Bool {
         let table: Table = LearningVerbTable.learningVerbs.where(LearningVerbTable.id == learningVerb.id)
         let update: Update = table.update(LearningVerbTable.verbId <- learningVerb.id,
                                           LearningVerbTable.dateToReview <- learningVerb.dateToReview,
                                           LearningVerbTable.userProgression <- learningVerb.userProgression)
-        return try db.run(update)
+        return try db.run(update) > 0
     }
     
     
-    func update(learningVerbs: [DbLearningVerb]) throws -> [Int]{
-        return try learningVerbs.map({ v in try update(learningVerb: v)})
+    func update(learningVerbs: [DbLearningVerb]) throws -> Bool{
+        return try learningVerbs.map{ v in
+            try update(learningVerb: v)
+        }.forAll(where: {b in b})
     }
     
     func addRandomVerbToReviewList(ofLevel: [Level], count: Int) throws {

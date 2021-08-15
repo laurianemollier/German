@@ -14,11 +14,9 @@ protocol LearningVerbDAO {
     // Mark: - write
     // -------------
     
-    /// - Retruns: If retrun value <= 0, the learningVer was not found
-    ///            Else if the retrun value is > 0, the update was correctly done
-    func update(learningVerb: DbLearningVerb) throws -> Int
+    func update(learningVerb: DbLearningVerb) throws -> Bool
     
-    func update(learningVerbs: [DbLearningVerb]) throws -> [Int]
+    func update(learningVerbs: [DbLearningVerb]) throws -> Bool
     
     func addRandomVerbToReviewList(ofLevel: [Level], count: Int) throws
     

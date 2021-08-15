@@ -87,10 +87,6 @@ enum UserProgression: String {
         }
     }
     
-
-    
-    
-    
     // MARK: - Navigation between the progression level
     
     /// Give the information about the new level and the date to review a verb, when the user

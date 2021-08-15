@@ -86,9 +86,8 @@ class VerbDetailsVC: UIViewController {
                                                     verb: userLearningVerb.verb,
                                                     dateToReview: dateToReview,
                                                     userProgression: newProgression)
-            let result = try DAO.shared.update(learningVerb: userLearningVerb.toDbUserLearningVerb())
-            
-            if (result > 0)  {
+            let success = try DAO.shared.update(learningVerb: userLearningVerb.toDbUserLearningVerb())
+            if success {
                 self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
                 SpeedLog.print("Sucessly modify all learning verb")
             }

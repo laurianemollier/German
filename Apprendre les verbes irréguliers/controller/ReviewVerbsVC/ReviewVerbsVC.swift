@@ -80,20 +80,20 @@ class ReviewVerbsVC: UIViewController {
     @IBAction func regress(_ sender: BasicButton) {
         let verbReviewed: LearningVerb = currentVerb()
         let (newProgression, dateToReview) = verbReviewed.userProgression.regression(reviewedDate: verbReviewed.dateToReview!)!
-        updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
+        verbReviewedAction(newProgression: newProgression, newReviewDate: dateToReview)
     }
     
     @IBAction func stagnate(_ sender: BasicButton) {
         let verbReviewed: LearningVerb = currentVerb()
         let (newProgression, dateToReview) = verbReviewed.userProgression.stagnation(reviewedDate: verbReviewed.dateToReview!)!
-        updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
+        verbReviewedAction(newProgression: newProgression, newReviewDate: dateToReview)
         
     }
     
     @IBAction func progress(_ sender: BasicButton) {
         let verbReviewed: LearningVerb = currentVerb()
         let (newProgression, dateToReview) = verbReviewed.userProgression.progression(reviewedDate: verbReviewed.dateToReview!)!
-        updatedVerbReviewed(newProgression: newProgression, dateToReview: dateToReview)
+        verbReviewedAction(newProgression: newProgression, newReviewDate: dateToReview)
     }
     
     
@@ -102,7 +102,6 @@ class ReviewVerbsVC: UIViewController {
     // ----------------------
     
     override func viewWillAppear(_ animated: Bool) {
-        
         // display the correct sounds button
         if(Audio.shared.isOn()){
             audioButton.setTitle("🔔", for: .normal)
@@ -113,11 +112,6 @@ class ReviewVerbsVC: UIViewController {
         
         resetCard(verb: self.verbsToReview[self.index].verb)
     }
-    
-    @objc private func cancelTapped(){
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     
     // ------------------
     // MARK: - Navigation
@@ -142,18 +136,22 @@ class ReviewVerbsVC: UIViewController {
         return self.verbsToReview[self.index]
     }
     
-    private func updatedVerbReviewed(newProgression: UserProgression, dateToReview: Date?){
+    private func verbReviewedAction(newProgression: UserProgression, newReviewDate: Date?) {
         let verbReviewed: LearningVerb = currentVerb()
         let updatedVerbReviewed = LearningVerb(id: verbReviewed.id,
-                                                   verb: verbReviewed.verb,
-                                                   dateToReview: dateToReview,
-                                                   userProgression: newProgression)
-        
-        nextVerb(updatedVerbReviewed: updatedVerbReviewed)
+                                               verb: verbReviewed.verb,
+                                               dateToReview: newReviewDate,
+                                               userProgression: newProgression)
+        do {
+            try nextVerb(updatedVerbReviewed: updatedVerbReviewed)
+        }
+        catch {
+            SpeedLog.print(error) // TODO
+        }
     }
     
     
-    private func nextVerb(updatedVerbReviewed: LearningVerb?){
+    private func nextVerb(updatedVerbReviewed: LearningVerb?) throws {
         audioStop()
         
         if let v = updatedVerbReviewed {
@@ -163,7 +161,7 @@ class ReviewVerbsVC: UIViewController {
         
         // End of the revision session
         if self.index >= self.verbsToReview.count{
-            endRevisionSession()
+            try endRevisionSession()
         }
         else{
             resetCard(verb: self.verbsToReview[self.index].verb)
@@ -191,7 +189,12 @@ class ReviewVerbsVC: UIViewController {
             flipCard(visible: self.forwarCard, notVisibleYet: self.backwardCard)
             self.isCardForward = false
             if Audio.shared.isOn(){
-                audioPlay(verb: self.currentVerb().verb)
+                do {
+                    try audioPlay(verb: self.currentVerb().verb)
+                }
+                catch {
+                    SpeedLog.print(error)
+                }
             }
         }
         else{
@@ -239,23 +242,10 @@ class ReviewVerbsVC: UIViewController {
     }
     
     
-    private func endRevisionSession(){
+    private func endRevisionSession() throws {
         let dbResultVerbsReviewed = resultVerbsReviewed.map({ $0.toDbUserLearningVerb()})
-        do{
-            let results: [Int] = try DAO.shared.update(learningVerbs: dbResultVerbsReviewed)
-            if results.forAll(where: {$0 > 0})  {
-                back()
-                SpeedLog.print("Sucessly modify all learning verb")
-            }
-            else{
-                // TODO
-                SpeedLog.print("One verb was not found")
-            }
-        }
-        catch{
-            // TODO
-            SpeedLog.print(error)
-        }
+        _ = try DAO.shared.update(learningVerbs: dbResultVerbsReviewed)
+        back()
     }
     
     
@@ -270,21 +260,15 @@ class ReviewVerbsVC: UIViewController {
     
     // --- audio ---
     
-    private func audioPlay(verb: Verb){
-        do {
-            let formatAudio = "mp3"
-            let nameAudioFile = verb.infinitive()
-            let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: formatAudio)!)
-            audioPlayer = try! AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
-            audioPlayer!.play()
-            audioPlayer!.numberOfLoops = 0
-            
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-        }
-        catch {
-            // report for an error
-            SpeedLog.print(error) // TODO
-        }
+    private func audioPlay(verb: Verb) throws {
+        let formatAudio = "mp3"
+        let nameAudioFile = verb.infinitive()
+        let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: formatAudio)!)
+        audioPlayer = try AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
+        audioPlayer!.play()
+        audioPlayer!.numberOfLoops = 0
+        
+        try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
     }
     
     
