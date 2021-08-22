@@ -15,11 +15,11 @@ class BackwardCardVC: UIViewController {
     @IBOutlet var backwardView: VerbCardView!
     
     override func viewWillAppear(_ animated: Bool) {
-        if let v = verb{
+        if let _ = verb{
             print("verb is ok")
         }
         
-        if let f = backwardView{
+        if let _ = backwardView{
             print("backwardView is ok")
         }
         self.backwardView.setup(verb: verb, backward: true)

@@ -88,7 +88,7 @@ class IAPurchaseVC: UIViewController {
         alert.view.tintColor = UIColor.black
         let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x:10, y:5, width: 50, height: 50)) as UIActivityIndicatorView
         loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.medium
         loadingIndicator.startAnimating();
         
         alert.view.addSubview(loadingIndicator)
