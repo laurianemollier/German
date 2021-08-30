@@ -245,7 +245,7 @@ class ReviewVerbsVC: UIViewController {
     private func endRevisionSession() throws {
         let dbResultVerbsReviewed = resultVerbsReviewed.map({ $0.toDbUserLearningVerb()})
         _ = try DAO.shared.update(learningVerbs: dbResultVerbsReviewed)
-        back()
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     

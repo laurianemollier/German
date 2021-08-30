@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad9_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,6 +33,7 @@
                     <rect key="frame" x="0.0" y="305" width="768" height="719"/>
                 </imageView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="RpZ-vf-BSr" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="8g4-4x-JoH"/>
@@ -49,13 +47,12 @@
                 <constraint firstItem="jet-WL-fsi" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vJc-nT-xan"/>
                 <constraint firstItem="EXB-cq-oJ5" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vlG-ZK-AiK"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
     <resources>
         <image name="Bgd Black Wave" width="562" height="870"/>
-        <image name="Bgd Red Wave Long" width="562" height="831"/>
-        <image name="Bgd Yellow Wave" width="562" height="193"/>
+        <image name="Bgd Red Wave Long" width="562.5" height="831.5"/>
+        <image name="Bgd Yellow Wave" width="562.5" height="193"/>
     </resources>
 </document>

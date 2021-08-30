@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -59,7 +60,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" modalPresentationStyle="fullScreen" id="HHQ-P8-xSg"/>
+                                    <segue destination="VLO-gw-d0T" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="cgH-m3-IFm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-2v-K4O" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
@@ -122,7 +123,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Réviser"/>
                                 <connections>
-                                    <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" modalPresentationStyle="fullScreen" id="OVJ-ht-fzK"/>
+                                    <segue destination="VLO-gw-d0T" kind="presentation" modalPresentationStyle="fullScreen" id="chM-t1-req"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -546,7 +547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sc-RV-8Rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1282.608695652174" y="289.28571428571428"/>
+            <point key="canvasLocation" x="1793" y="67"/>
         </scene>
         <!--StatisticsVC-->
         <scene sceneID="WW8-io-Sjq">
@@ -937,7 +938,106 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6P-K7-eVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="-519"/>
+            <point key="canvasLocation" x="2814" y="67"/>
+        </scene>
+        <!--Revision StyleVC-->
+        <scene sceneID="r3U-1L-nqb">
+            <objects>
+                <viewController id="VLO-gw-d0T" customClass="RevisionStyleVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uaf-dE-ejZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="RSI-6o-6ua">
+                                <rect key="frame" x="0.0" y="708" width="375" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="gcn-ox-j7n">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="3X7-iG-RUE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau de connaissance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVi-40-odC">
+                                <rect key="frame" x="87" y="74.333333333333329" width="245" height="26.666666666666671"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23m-6v-pgR">
+                                <rect key="frame" x="25" y="69" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="23m-6v-pgR" secondAttribute="height" multiplier="1:1" id="1cS-Vh-A1Z"/>
+                                    <constraint firstAttribute="height" constant="37" id="xIl-2L-XGH"/>
+                                </constraints>
+                                <state key="normal" image="NavBack"/>
+                                <connections>
+                                    <action selector="back:" destination="VLO-gw-d0T" eventType="touchUpInside" id="Coi-36-K90"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOg-eL-HKq" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                <rect key="frame" x="45" y="242" width="285" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="285" id="9j8-1Y-Qj5">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="47" id="fGS-B2-fSg">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Réviser tous en même temps"/>
+                                <connections>
+                                    <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" modalPresentationStyle="fullScreen" id="53w-Dk-SOn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0Q-tx-Y7D" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                <rect key="frame" x="45" y="356" width="285" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="285" id="2rf-Kj-lv3">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="47" id="ze5-KB-Fut">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Temps par temps"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sa8-bw-WMw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="23m-6v-pgR" firstAttribute="top" secondItem="sa8-bw-WMw" secondAttribute="top" constant="25" id="557-fM-yWM"/>
+                            <constraint firstItem="23m-6v-pgR" firstAttribute="width" secondItem="23m-6v-pgR" secondAttribute="height" multiplier="1:1" id="6Pd-bu-YBL"/>
+                            <constraint firstItem="m0Q-tx-Y7D" firstAttribute="top" secondItem="rOg-eL-HKq" secondAttribute="bottom" constant="67" id="7E0-Tc-oQz"/>
+                            <constraint firstItem="m0Q-tx-Y7D" firstAttribute="centerX" secondItem="Uaf-dE-ejZ" secondAttribute="centerX" id="Ada-nM-6zY"/>
+                            <constraint firstItem="RSI-6o-6ua" firstAttribute="trailing" secondItem="sa8-bw-WMw" secondAttribute="trailing" id="BxQ-qy-Jj6"/>
+                            <constraint firstItem="23m-6v-pgR" firstAttribute="leading" secondItem="sa8-bw-WMw" secondAttribute="leading" constant="25" id="CwZ-Vp-vbV"/>
+                            <constraint firstItem="rOg-eL-HKq" firstAttribute="top" secondItem="pVi-40-odC" secondAttribute="bottom" constant="141" id="FdM-fW-ZcQ"/>
+                            <constraint firstItem="3X7-iG-RUE" firstAttribute="trailing" secondItem="sa8-bw-WMw" secondAttribute="trailing" id="MVD-gT-0gE"/>
+                            <constraint firstItem="23m-6v-pgR" firstAttribute="width" secondItem="23m-6v-pgR" secondAttribute="height" multiplier="1:1" id="Sw5-np-AAq"/>
+                            <constraint firstItem="pVi-40-odC" firstAttribute="leading" secondItem="23m-6v-pgR" secondAttribute="trailing" constant="25" id="XVj-ez-jHN"/>
+                            <constraint firstAttribute="bottom" secondItem="RSI-6o-6ua" secondAttribute="bottom" id="cBK-0C-LOc"/>
+                            <constraint firstItem="3X7-iG-RUE" firstAttribute="leading" secondItem="sa8-bw-WMw" secondAttribute="leading" id="cnA-Dt-TOT"/>
+                            <constraint firstItem="3X7-iG-RUE" firstAttribute="top" secondItem="Uaf-dE-ejZ" secondAttribute="top" id="enz-hM-MZR"/>
+                            <constraint firstItem="RSI-6o-6ua" firstAttribute="leading" secondItem="sa8-bw-WMw" secondAttribute="leading" id="k1H-rc-Tpi"/>
+                            <constraint firstItem="sa8-bw-WMw" firstAttribute="trailing" secondItem="pVi-40-odC" secondAttribute="trailing" constant="43" id="pl2-WU-QrR"/>
+                            <constraint firstItem="rOg-eL-HKq" firstAttribute="centerX" secondItem="Uaf-dE-ejZ" secondAttribute="centerX" id="qYN-sM-zpL"/>
+                            <constraint firstItem="pVi-40-odC" firstAttribute="centerY" secondItem="23m-6v-pgR" secondAttribute="centerY" id="rXM-ro-a20"/>
+                            <constraint firstItem="RSI-6o-6ua" firstAttribute="top" secondItem="3X7-iG-RUE" secondAttribute="bottom" constant="100" id="ul6-bp-eNQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ki6-RO-USW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adx-jP-jPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="-898"/>
         </scene>
         <!--Review VerbsVC-->
         <scene sceneID="Tq2-Ze-ZdV">
@@ -1176,7 +1276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNi-4a-inA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="381.15942028985512" y="-1143.0803571428571"/>
+            <point key="canvasLocation" x="388" y="-1672"/>
         </scene>
         <!--Forwar CardVC-->
         <scene sceneID="vkM-dp-Qt8">
@@ -1194,7 +1294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRQ-HU-MhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="-1385"/>
+            <point key="canvasLocation" x="1173" y="-1862"/>
         </scene>
         <!--Backward CardVC-->
         <scene sceneID="U9D-md-VwI">
@@ -1211,7 +1311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wi1-bk-LAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="-1000"/>
+            <point key="canvasLocation" x="1173" y="-1482"/>
         </scene>
         <!--Verb DetailsVC-->
         <scene sceneID="vZ9-rg-YL3">
@@ -1627,8 +1727,14 @@
         <designable name="jxB-UC-d7n">
             <size key="intrinsicContentSize" width="58" height="36"/>
         </designable>
+        <designable name="m0Q-tx-Y7D">
+            <size key="intrinsicContentSize" width="149" height="36"/>
+        </designable>
         <designable name="q8d-2v-K4O">
             <size key="intrinsicContentSize" width="265" height="36"/>
+        </designable>
+        <designable name="rOg-eL-HKq">
+            <size key="intrinsicContentSize" width="246" height="36"/>
         </designable>
         <designable name="z5L-Zd-7fP">
             <size key="intrinsicContentSize" width="30" height="40"/>
@@ -1638,8 +1744,8 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="OVJ-ht-fzK"/>
-        <segue reference="gcp-zA-pqt"/>
+        <segue reference="chM-t1-req"/>
+        <segue reference="EQd-hm-xDQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AV Arrow" width="1600" height="1600"/>
@@ -1656,5 +1762,8 @@
         <image name="RVTurnButton" width="112.66666412353516" height="112.66666412353516"/>
         <image name="RedCircle" width="337.66665649414062" height="337.66665649414062"/>
         <image name="WhiteCircle" width="55" height="55"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

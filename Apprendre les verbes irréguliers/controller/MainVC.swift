@@ -16,9 +16,6 @@ class MainVC: UIViewController {
     /// The number of verb that the user as to review today
     var nbrVerbToReviewToday: Int!
     
-    /// Determine number of verb that the user will review in one review session
-    var nbrVerbInReviewSession = 10 // TODO: make a variable
-    
     
     // ------------------
     // MARK: - Outlets
@@ -83,26 +80,11 @@ class MainVC: UIViewController {
          Normally the buttons that leads the verb revision should be desable on that case (ie. no verb to review)
          But it is a 2nd layer protection in case if they are not
          */
-        if segue.identifier == "reviewVerbs" && self.nbrVerbInReviewList == 0 {
-            // Nothing sould happen
-        }
-        else if segue.identifier == "reviewVerbs"{
-            prepareReviewVerbsVC(segue)
+        if self.nbrVerbInReviewList == 0 {
+            // TODO: Nothing should happen
         }
         else if segue.identifier == "listAllVerbs" {
             prepareListVerbsVC(segue)
-        }
-    }
-    
-    private func prepareReviewVerbsVC(_ segue: UIStoryboardSegue){
-        let cv = segue.destination as! ReviewVerbsVC
-        
-        do {
-            let verbsRangeToReviewToday = try DAO.shared.verbToReviewToday(limit: nbrVerbInReviewSession)
-            cv.verbsToReview = verbsRangeToReviewToday
-        }
-        catch{
-            cv.verbsToReview = []
         }
     }
     
