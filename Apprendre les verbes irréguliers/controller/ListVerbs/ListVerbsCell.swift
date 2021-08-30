@@ -63,7 +63,7 @@ class ListVerbsCell: UITableViewCell {
         self.presentLabel.text = userLearningVerb.verb.present()
         self.simplePastLabel.text = userLearningVerb.verb.simplePast()
         self.pastParticipleLabel.text = userLearningVerb.verb.pastParticiple()
-        self.traductionLabel.text = userLearningVerb.verb.translation(Lang.fr) // TODO
+        self.traductionLabel.text = userLearningVerb.verb.translation(Lang.en) // TODO
         
         self.levelLabel.text = userLearningVerb.verb.level.rawValue
     

@@ -65,23 +65,23 @@ enum UserProgression: String {
     func name() -> String? {
         switch self { // TODO
         case UserProgression.level1:
-            return "Inexistant"
+            return "Very very poor"
         case UserProgression.level2:
-            return "Très faible"
+            return "Very poor"
         case UserProgression.level3:
-            return "Faible"
+            return "Poor"
         case UserProgression.level4:
-            return "Assez bien"
+            return "Quite good"
         case UserProgression.level5:
-            return "Bien"
+            return "Good"
         case UserProgression.level6:
-            return "Très bien"
+            return "Very good"
         case UserProgression.level7:
-            return "Excelent"
+            return "excellent"
         case UserProgression.level8:
             return "Optimal"
         case UserProgression.notSeenYet:
-            return "Pas encore revu(s)"
+            return "Not yet seen"
         default:
             return nil
         }
@@ -187,28 +187,28 @@ enum UserProgression: String {
     
     
     func regressionName() -> String? {
-        return "Maintenant" // TODO
+        return "Now" // TODO
     }
     
     
     func stagnationName() -> String?{
         switch self { // TODO
         case UserProgression.level1:
-            return "Demain"
+            return "Tomorrow"
         case UserProgression.level2:
-            return "Dans 2 jours"
+            return "In 2 days"
         case UserProgression.level3:
-            return "Dans 3 jours"
+            return "In 3 days"
         case UserProgression.level4:
-            return "Dans 5 jours"
+            return "In 5 days"
         case UserProgression.level5:
-            return "Dans 1 semaine"
+            return "In 1 week"
         case UserProgression.level6:
-            return "Dans 2 semaines"
+            return "In 2 weeks"
         case UserProgression.level7:
-            return "Dans 1 mois"
+            return "In 1 month"
         case UserProgression.level8:
-            return "Dans 3 mois"
+            return "In 3 months"
             
         default:
             return nil
@@ -219,21 +219,21 @@ enum UserProgression: String {
     func progressionName() -> String? {
         switch self { // TODO
         case UserProgression.level1:
-            return "Dans 2 jours"
+            return "In 2 days"
         case UserProgression.level2:
-            return "Dans 3 jours"
+            return "In 3 days"
         case UserProgression.level3:
-            return "Dans 5 jours"
+            return "In 5 days"
         case UserProgression.level4:
-            return "Dans 1 semaine"
+            return "In 1 week"
         case UserProgression.level5:
-            return "Dans 2 semaines"
+            return "In 2 weeks"
         case UserProgression.level6:
-            return "Dans 1 mois"
+            return "In 1 month"
         case UserProgression.level7:
-            return "Dans 1 mois"
+            return "In 1 months"
         case UserProgression.level8:
-            return "Dans 1 an"
+            return "In 1 year"
             
         default:
             return nil

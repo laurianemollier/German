@@ -98,7 +98,7 @@ class MainBisVC: UIViewController {
     /// Set up the text that depending on data
     private func textSetUp(){
         self.nbrVerbToReviewTodayButton.setTitle(String(self.nbrVerbToReviewToday), for: .normal)
-        self.nbrVerbInReviewListLabel.text = "verbe(s) à revoir sur " + String(self.nbrVerbInReviewList) + " dans la liste de révision"
+        self.nbrVerbInReviewListLabel.text = "verb(s) to review over " + String(self.nbrVerbInReviewList) + " in your review list"
     }
     
     // Disable the review session buttons if they is no verbs to review

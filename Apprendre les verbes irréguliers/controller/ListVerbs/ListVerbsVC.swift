@@ -132,7 +132,7 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     
     func alterLayout() {
-        self.searchBar.placeholder = "Chercher un verbe" // TODO
+        self.searchBar.placeholder = "Look for a verb" // TODO
     }
     
     private func back(){
