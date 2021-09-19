@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "98C9834620F750820080B08C"
-               BuildableName = "Apprendre les verbes irre&#x301;guliers.app"
-               BlueprintName = "Apprendre les verbes irre&#x301;guliers"
-               ReferencedContainer = "container:Apprendre les verbes irre&#x301;guliers.xcodeproj">
+               BuildableName = "German.app"
+               BlueprintName = "German"
+               ReferencedContainer = "container:German.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "98C9835A20F750840080B08C"
                BuildableName = "Apprendre les verbes irre&#x301;guliersTests.xctest"
                BlueprintName = "Apprendre les verbes irre&#x301;guliersTests"
-               ReferencedContainer = "container:Apprendre les verbes irre&#x301;guliers.xcodeproj">
+               ReferencedContainer = "container:German.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "98C9836520F750840080B08C"
                BuildableName = "Apprendre les verbes irre&#x301;guliersUITests.xctest"
                BlueprintName = "Apprendre les verbes irre&#x301;guliersUITests"
-               ReferencedContainer = "container:Apprendre les verbes irre&#x301;guliers.xcodeproj">
+               ReferencedContainer = "container:German.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "98C9834620F750820080B08C"
-            BuildableName = "Apprendre les verbes irre&#x301;guliers.app"
-            BlueprintName = "Apprendre les verbes irre&#x301;guliers"
-            ReferencedContainer = "container:Apprendre les verbes irre&#x301;guliers.xcodeproj">
+            BuildableName = "German.app"
+            BlueprintName = "German"
+            ReferencedContainer = "container:German.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "98C9834620F750820080B08C"
-            BuildableName = "Apprendre les verbes irre&#x301;guliers.app"
-            BlueprintName = "Apprendre les verbes irre&#x301;guliers"
-            ReferencedContainer = "container:Apprendre les verbes irre&#x301;guliers.xcodeproj">
+            BuildableName = "German.app"
+            BlueprintName = "German"
+            ReferencedContainer = "container:German.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
