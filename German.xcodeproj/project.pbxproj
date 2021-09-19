@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		300C705226C2D9B60092A492 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300C704526C2D9610092A492 /* SQLite.framework */; };
 		300C705326C2D9B60092A492 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 300C704526C2D9610092A492 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		300C705526C2DA620092A492 /* Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 300C705426C2DA620092A492 /* Notes.rtf */; };
 		300C706826C836F90092A492 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706726C836F90092A492 /* DAO.swift */; };
 		300C706B26C8380A0092A492 /* DbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706A26C8380A0092A492 /* DbVerbDAO.swift */; };
 		300C706D26C83AE50092A492 /* DbVerbTranslationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706C26C83AE50092A492 /* DbVerbTranslationDAO.swift */; };
@@ -468,7 +467,6 @@
 
 /* Begin PBXFileReference section */
 		300C703A26C2D9610092A492 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
-		300C705426C2DA620092A492 /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		300C705626C2E89B0092A492 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		300C705726C2E89B0092A492 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		300C706726C836F90092A492 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
@@ -1191,7 +1189,6 @@
 				98C9835120F750840080B08C /* Assets.xcassets */,
 				98C9835320F750840080B08C /* LaunchScreen.storyboard */,
 				98C9835620F750840080B08C /* Info.plist */,
-				300C705426C2DA620092A492 /* Notes.rtf */,
 			);
 			path = German;
 			sourceTree = "<group>";
@@ -1775,7 +1772,6 @@
 				98DEFEB920FF241600DC32BB /* bestehen.mp3 in Resources */,
 				98DEFDF820FF241600DC32BB /* erkennen.mp3 in Resources */,
 				98B53B6A212E96A900565C53 /* ROBOTOSLAB-THIN_0.TTF in Resources */,
-				300C705526C2DA620092A492 /* Notes.rtf in Resources */,
 				98DEFE9B20FF241600DC32BB /* betreiben.mp3 in Resources */,
 				98DEFE1620FF241600DC32BB /* schreien.mp3 in Resources */,
 				98DEFE1020FF241600DC32BB /* bewegen.mp3 in Resources */,
