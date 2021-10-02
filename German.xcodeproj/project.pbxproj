@@ -17,6 +17,28 @@
 		300C707626C843830092A492 /* DbLearningVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707526C843830092A492 /* DbLearningVerbDAO.swift */; };
 		300C707A26C846AC0092A492 /* VerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707926C846AC0092A492 /* VerbDAO.swift */; };
 		300C707C26C964440092A492 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707B26C964440092A492 /* CustomError.swift */; };
+		3050099527085606001E9E08 /* VerbTemps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099427085606001E9E08 /* VerbTemps.swift */; };
+		305009A027085F01001E9E08 /* Text+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099F27085F01001E9E08 /* Text+Ext.swift */; };
+		305EDFA426F79C7400EDD43C /* RevisionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFA326F79C7400EDD43C /* RevisionViewModel.swift */; };
+		305EDFAD26F7A64500EDD43C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFAC26F7A64500EDD43C /* LoadingView.swift */; };
+		305EDFB026F7AB5800EDD43C /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFAF26F7AB5800EDD43C /* AlertItem.swift */; };
+		305EDFB326F85F7D00EDD43C /* PickRevisionStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB226F85F7D00EDD43C /* PickRevisionStyleView.swift */; };
+		305EDFB526F8622A00EDD43C /* RevisionStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB426F8622A00EDD43C /* RevisionStyleView.swift */; };
+		305EDFB826F8795500EDD43C /* ReviewVerbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB726F8795500EDD43C /* ReviewVerbView.swift */; };
+		305EDFBA26F87AE200EDD43C /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB926F87AE200EDD43C /* FlashcardView.swift */; };
+		305EDFBC26F8807600EDD43C /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFBB26F8807600EDD43C /* XDismissButton.swift */; };
+		305EDFBE26F881BF00EDD43C /* RevisionNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFBD26F881BF00EDD43C /* RevisionNavigationState.swift */; };
+		305EDFC026F8829E00EDD43C /* RevisionHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFBF26F8829E00EDD43C /* RevisionHomeView.swift */; };
+		305EDFC326F8920D00EDD43C /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFC226F8920D00EDD43C /* BackButton.swift */; };
+		308CD18B26F7465E00B0660D /* GermanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD18A26F7465E00B0660D /* GermanApp.swift */; };
+		308CD18D26F7469900B0660D /* GermanTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD18C26F7469900B0660D /* GermanTabView.swift */; };
+		308CD19226F7476F00B0660D /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD19126F7476F00B0660D /* Color+Ext.swift */; };
+		308CD19526F747CC00B0660D /* RevisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD19426F747CC00B0660D /* RevisionView.swift */; };
+		308CD19826F747FF00B0660D /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD19726F747FF00B0660D /* LearnView.swift */; };
+		308CD19B26F7481C00B0660D /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD19A26F7481C00B0660D /* StatisticsView.swift */; };
+		308CD19E26F74BCE00B0660D /* CallToActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD19D26F74BCE00B0660D /* CallToActionButton.swift */; };
+		309EDBA22701D0C000BE78D5 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBA12701D0C000BE78D5 /* FrontCardView.swift */; };
+		309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBAA2701D0E700BE78D5 /* BackCardView.swift */; };
 		9815F7A4213D073000248968 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A3213D073000248968 /* IAPProducts.swift */; };
 		9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A7213D09DF00248968 /* IAPHelper.swift */; };
 		9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829D4B821416E5F0004FCB3 /* Audio.swift */; };
@@ -477,6 +499,28 @@
 		300C707526C843830092A492 /* DbLearningVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbLearningVerbDAO.swift; sourceTree = "<group>"; };
 		300C707926C846AC0092A492 /* VerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAO.swift; sourceTree = "<group>"; };
 		300C707B26C964440092A492 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		3050099427085606001E9E08 /* VerbTemps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTemps.swift; sourceTree = "<group>"; };
+		3050099F27085F01001E9E08 /* Text+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Ext.swift"; sourceTree = "<group>"; };
+		305EDFA326F79C7400EDD43C /* RevisionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionViewModel.swift; sourceTree = "<group>"; };
+		305EDFAC26F7A64500EDD43C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		305EDFAF26F7AB5800EDD43C /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		305EDFB226F85F7D00EDD43C /* PickRevisionStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickRevisionStyleView.swift; sourceTree = "<group>"; };
+		305EDFB426F8622A00EDD43C /* RevisionStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionStyleView.swift; sourceTree = "<group>"; };
+		305EDFB726F8795500EDD43C /* ReviewVerbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbView.swift; sourceTree = "<group>"; };
+		305EDFB926F87AE200EDD43C /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
+		305EDFBB26F8807600EDD43C /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		305EDFBD26F881BF00EDD43C /* RevisionNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionNavigationState.swift; sourceTree = "<group>"; };
+		305EDFBF26F8829E00EDD43C /* RevisionHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionHomeView.swift; sourceTree = "<group>"; };
+		305EDFC226F8920D00EDD43C /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		308CD18A26F7465E00B0660D /* GermanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanApp.swift; sourceTree = "<group>"; };
+		308CD18C26F7469900B0660D /* GermanTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanTabView.swift; sourceTree = "<group>"; };
+		308CD19126F7476F00B0660D /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		308CD19426F747CC00B0660D /* RevisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionView.swift; sourceTree = "<group>"; };
+		308CD19726F747FF00B0660D /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
+		308CD19A26F7481C00B0660D /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		308CD19D26F74BCE00B0660D /* CallToActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToActionButton.swift; sourceTree = "<group>"; };
+		309EDBA12701D0C000BE78D5 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
+		309EDBAA2701D0E700BE78D5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 		9804A8C0213E445700B630A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9804A8C8213E451A00B630A1 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		9815F7A3213D073000248968 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
@@ -906,6 +950,7 @@
 				300C706E26C83D320092A492 /* db */,
 				98B0151021244C9F0090006E /* LearningVerb.swift */,
 				983B2494211C4A0C009C33B1 /* Verb.swift */,
+				3050099427085606001E9E08 /* VerbTemps.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -960,6 +1005,126 @@
 			path = db;
 			sourceTree = "<group>";
 		};
+		305EDFAE26F7AB4800EDD43C /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				305EDFAF26F7AB5800EDD43C /* AlertItem.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		305EDFB126F85F1C00EDD43C /* PickRevisionStyle */ = {
+			isa = PBXGroup;
+			children = (
+				305EDFB226F85F7D00EDD43C /* PickRevisionStyleView.swift */,
+				305EDFB426F8622A00EDD43C /* RevisionStyleView.swift */,
+			);
+			path = PickRevisionStyle;
+			sourceTree = "<group>";
+		};
+		305EDFB626F8791C00EDD43C /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				305EDFB726F8795500EDD43C /* ReviewVerbView.swift */,
+				309EDBA12701D0C000BE78D5 /* FrontCardView.swift */,
+				309EDBAA2701D0E700BE78D5 /* BackCardView.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		305EDFC126F882AB00EDD43C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				305EDFBF26F8829E00EDD43C /* RevisionHomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		308CD18826F7462100B0660D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				308CD19926F7480500B0660D /* Statistics */,
+				308CD19626F747EE00B0660D /* Learn */,
+				308CD19326F747A500B0660D /* Revision */,
+				308CD18C26F7469900B0660D /* GermanTabView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		308CD18926F7462800B0660D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				308CD19C26F74B9600B0660D /* Buttons */,
+				305EDFAC26F7A64500EDD43C /* LoadingView.swift */,
+				305EDFB926F87AE200EDD43C /* FlashcardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		308CD18E26F7472C00B0660D /* ----- */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "-----";
+			sourceTree = "<group>";
+		};
+		308CD18F26F7474A00B0660D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				305EDFAE26F7AB4800EDD43C /* Alerts */,
+				308CD19026F7475E00B0660D /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		308CD19026F7475E00B0660D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				308CD19126F7476F00B0660D /* Color+Ext.swift */,
+				3050099F27085F01001E9E08 /* Text+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		308CD19326F747A500B0660D /* Revision */ = {
+			isa = PBXGroup;
+			children = (
+				305EDFC126F882AB00EDD43C /* Home */,
+				305EDFB626F8791C00EDD43C /* Review */,
+				305EDFB126F85F1C00EDD43C /* PickRevisionStyle */,
+				308CD19426F747CC00B0660D /* RevisionView.swift */,
+				305EDFA326F79C7400EDD43C /* RevisionViewModel.swift */,
+				305EDFBD26F881BF00EDD43C /* RevisionNavigationState.swift */,
+			);
+			path = Revision;
+			sourceTree = "<group>";
+		};
+		308CD19626F747EE00B0660D /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				308CD19726F747FF00B0660D /* LearnView.swift */,
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
+		308CD19926F7480500B0660D /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				308CD19A26F7481C00B0660D /* StatisticsView.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		308CD19C26F74B9600B0660D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				305EDFC226F8920D00EDD43C /* BackButton.swift */,
+				308CD19D26F74BCE00B0660D /* CallToActionButton.swift */,
+				305EDFBB26F8807600EDD43C /* XDismissButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		9815F7A2213D071E00248968 /* InAppPurshase */ = {
 			isa = PBXGroup;
 			children = (
@@ -997,14 +1162,14 @@
 			path = Card;
 			sourceTree = "<group>";
 		};
-		983B2493211C49B7009C33B1 /* model */ = {
+		983B2493211C49B7009C33B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				9829D4B121416E3D0004FCB3 /* UserDefaults */,
 				98685F332126A92900DA327D /* Enums */,
 				98B0A8B42125AE3B000F44B4 /* dao */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9863384921429A5300E8B95A /* IAPurchase */ = {
@@ -1177,13 +1342,18 @@
 		98C9834920F750820080B08C /* German */ = {
 			isa = PBXGroup;
 			children = (
+				308CD18F26F7474A00B0660D /* Utilities */,
+				308CD18926F7462800B0660D /* Views */,
+				308CD18826F7462100B0660D /* Screens */,
+				308CD18E26F7472C00B0660D /* ----- */,
 				9815F7A2213D071E00248968 /* InAppPurshase */,
 				9897DC00213C30A300F0851E /* Library */,
 				98B53B6D212F100900565C53 /* view */,
 				98B53B5A212E965600565C53 /* Fonts */,
 				9898A5CA212AC696003EAAFF /* Extensions */,
-				983B2493211C49B7009C33B1 /* model */,
+				983B2493211C49B7009C33B1 /* Model */,
 				98DEFC8820FDC26200DC32BB /* controller */,
+				308CD18A26F7465E00B0660D /* GermanApp.swift */,
 				98C9834A20F750820080B08C /* AppDelegate.swift */,
 				98C9834E20F750820080B08C /* Main.storyboard */,
 				98C9835120F750840080B08C /* Assets.xcassets */,
@@ -2007,32 +2177,49 @@
 				98685F72212712EE00DA327D /* LearningVerbTable.swift in Sources */,
 				98685F352126BA4900DA327D /* Lang.swift in Sources */,
 				986DD42D212FE7F1000E5E49 /* UIFont.swift in Sources */,
+				308CD18B26F7465E00B0660D /* GermanApp.swift in Sources */,
 				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
 				98992637217296DE00EB0A24 /* UserProgressionWithInfoButton.swift in Sources */,
+				308CD19526F747CC00B0660D /* RevisionView.swift in Sources */,
 				98CB8A322136BC5500C6944F /* NotImplementedYetVC.swift in Sources */,
+				305EDFA426F79C7400EDD43C /* RevisionViewModel.swift in Sources */,
 				98685F7F2129663100DA327D /* BackwardCardVC.swift in Sources */,
+				305EDFC326F8920D00EDD43C /* BackButton.swift in Sources */,
 				300C707A26C846AC0092A492 /* VerbDAO.swift in Sources */,
 				988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */,
+				305EDFB526F8622A00EDD43C /* RevisionStyleView.swift in Sources */,
+				308CD18D26F7469900B0660D /* GermanTabView.swift in Sources */,
 				98685F392126BA8700DA327D /* Level.swift in Sources */,
 				988DB9172125C24500AFAEF4 /* DbVerb.swift in Sources */,
+				305EDFBE26F881BF00EDD43C /* RevisionNavigationState.swift in Sources */,
+				309EDBA22701D0C000BE78D5 /* FrontCardView.swift in Sources */,
 				988DB9102125BBD700AFAEF4 /* VerbTable.swift in Sources */,
+				305EDFC026F8829E00EDD43C /* RevisionHomeView.swift in Sources */,
+				305EDFBA26F87AE200EDD43C /* FlashcardView.swift in Sources */,
 				300C707C26C964440092A492 /* CustomError.swift in Sources */,
 				983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */,
+				305EDFB326F85F7D00EDD43C /* PickRevisionStyleView.swift in Sources */,
+				305009A027085F01001E9E08 /* Text+Ext.swift in Sources */,
+				308CD19826F747FF00B0660D /* LearnView.swift in Sources */,
 				9898A5D4212AE2D7003EAAFF /* Array.swift in Sources */,
 				983B2495211C4A0C009C33B1 /* Verb.swift in Sources */,
 				98685F762127162700DA327D /* LocalLearningVerbDAO.swift in Sources */,
 				988DB91B2125C71700AFAEF4 /* DbVerbTranslation.swift in Sources */,
 				98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */,
+				308CD19B26F7481C00B0660D /* StatisticsView.swift in Sources */,
 				98685F372126BA6100DA327D /* Form.swift in Sources */,
 				300C707126C841090092A492 /* LearningVerbDAO.swift in Sources */,
 				9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */,
 				98483A1B214587A600AF7115 /* SelectLevelVC.swift in Sources */,
 				300C707426C842ED0092A492 /* LocalDbLearningVerbDAO.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */,
+				308CD19226F7476F00B0660D /* Color+Ext.swift in Sources */,
 				9815F7A4213D073000248968 /* IAPProducts.swift in Sources */,
 				98B53B70212F10B000565C53 /* BasicButton.swift in Sources */,
 				300C706D26C83AE50092A492 /* DbVerbTranslationDAO.swift in Sources */,
+				3050099527085606001E9E08 /* VerbTemps.swift in Sources */,
 				98FA119F216E134C0068AB4C /* VerbDetailsVC.swift in Sources */,
+				305EDFB826F8795500EDD43C /* ReviewVerbView.swift in Sources */,
 				98EA96A5214E68640034B360 /* Background3.swift in Sources */,
 				9863384F2144FAC100E8B95A /* PurchaseUIButton.swift in Sources */,
 				300C707626C843830092A492 /* DbLearningVerbDAO.swift in Sources */,
@@ -2041,12 +2228,16 @@
 				98DEFC8C20FDC33200DC32BB /* AddVerbsCV.swift in Sources */,
 				98F2F7A521579062007AB342 /* ListVerbsCell.swift in Sources */,
 				98685F7D212965E600DA327D /* ForwarCardVC.swift in Sources */,
+				305EDFB026F7AB5800EDD43C /* AlertItem.swift in Sources */,
 				988DB91D2125C92700AFAEF4 /* Database.swift in Sources */,
 				98685F7A212744F900DA327D /* SetUpDatabase.swift in Sources */,
+				305EDFBC26F8807600EDD43C /* XDismissButton.swift in Sources */,
 				988442402133834700D9661B /* Sequence.swift in Sources */,
 				9863384D21429ABB00E8B95A /* IAPurchaseVC.swift in Sources */,
 				300C706B26C8380A0092A492 /* DbVerbDAO.swift in Sources */,
+				308CD19E26F74BCE00B0660D /* CallToActionButton.swift in Sources */,
 				98DEFC8720FDC25400DC32BB /* MainVC.swift in Sources */,
+				305EDFAD26F7A64500EDD43C /* LoadingView.swift in Sources */,
 				98C9834B20F750820080B08C /* AppDelegate.swift in Sources */,
 				986DD439213063A4000E5E49 /* UIColor.swift in Sources */,
 				98B0151121244C9F0090006E /* LearningVerb.swift in Sources */,
@@ -2060,6 +2251,7 @@
 				98A511D0214AFA80001107D9 /* BoughtIAPProducts.swift in Sources */,
 				98685F782127173800DA327D /* DbLearningVerb.swift in Sources */,
 				98B53B79212F24B500565C53 /* Background2.swift in Sources */,
+				309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */,
 				98B01514212474670090006E /* LevelCheckBox.swift in Sources */,
 				9898A5F0212C2C1C003EAAFF /* ListVerbsVC.swift in Sources */,
 				9897DBF9213B5EE000F0851E /* EdgeInsetLabel.swift in Sources */,

@@ -97,7 +97,7 @@ class ListVerbsVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         
         self.currentLearningVerbs = self.learningVerbs.filter({ learningVerb -> Bool in
             guard let text = searchBar.text else {return false}
-            return learningVerb.verb.infinitive().lowercased().contains(text.lowercased())
+            return true // learningVerb.verb.infinitive().lowercased().contains(text.lowercased())
         })
         self.table.reloadData()
     }

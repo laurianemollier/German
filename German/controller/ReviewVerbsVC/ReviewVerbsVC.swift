@@ -262,7 +262,7 @@ class ReviewVerbsVC: UIViewController {
     
     private func audioPlay(verb: Verb) throws {
         let formatAudio = "mp3"
-        let nameAudioFile = verb.infinitive()
+        let nameAudioFile = "" //verb.infinitive()
         let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: formatAudio)!)
         audioPlayer = try AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
         audioPlayer!.play()

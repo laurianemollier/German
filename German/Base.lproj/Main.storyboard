@@ -15,7 +15,7 @@
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="German" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                                     <segue destination="qzO-in-ekQ" kind="presentation" identifier="reviewVerbs" modalPresentationStyle="fullScreen" id="HHQ-P8-xSg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-2v-K4O" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-2v-K4O" customClass="BasicButton" customModule="German" customModuleProvider="target">
                                 <rect key="frame" x="45" y="573" width="285" height="47"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -80,7 +80,7 @@
                                     <segue destination="2Lh-hZ-KKR" kind="presentation" identifier="addVerbs" modalPresentationStyle="fullScreen" id="3h9-Q9-av4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpo-FS-QOa" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpo-FS-QOa" customClass="BasicButton" customModule="German" customModuleProvider="target">
                                 <rect key="frame" x="45" y="632" width="285" height="47"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
@@ -90,7 +90,7 @@
                                     <segue destination="5VA-47-w42" kind="presentation" identifier="listAllVerbs" modalPresentationStyle="fullScreen" id="CqE-qH-QaM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-tk-Ael" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-tk-Ael" customClass="BasicButton" customModule="German" customModuleProvider="target">
                                 <rect key="frame" x="45" y="691" width="285" height="47"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
@@ -101,7 +101,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verbs to review over 200 in your review list" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-Or-w8O">
-                                <rect key="frame" x="25.333333333333343" y="334" width="324.66666666666663" height="55.666666666666686"/>
+                                <rect key="frame" x="34.333333333333343" y="334" width="306.33333333333326" height="55.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55.5" id="Mzt-NV-Zsy"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="atu-V0-IJs"/>
@@ -110,7 +110,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCs-oc-s80" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCs-oc-s80" customClass="BasicButton" customModule="German" customModuleProvider="target">
                                 <rect key="frame" x="104.66666666666669" y="406.66666666666669" width="166" height="47"/>
                                 <color key="backgroundColor" red="1" green="0.80784313730000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -200,7 +200,7 @@
         <!--Add VerbsCV-->
         <scene sceneID="aCp-dj-42Y">
             <objects>
-                <viewController id="2Lh-hZ-KKR" customClass="AddVerbsCV" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Lh-hZ-KKR" customClass="AddVerbsCV" customModule="German" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="irp-aM-dyM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,7 +244,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTe-EP-Aco">
-                                        <rect key="frame" x="122.66666666666666" y="53.666666666666657" width="50" height="24"/>
+                                        <rect key="frame" x="122.66666666666666" y="55" width="50" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Ck6-Ai-ypu"/>
                                         </constraints>
@@ -280,7 +280,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djp-s6-Um0" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djp-s6-Um0" customClass="BasicButton" customModule="German" customModuleProvider="target">
                                 <rect key="frame" x="102.66666666666669" y="691" width="170" height="47"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -305,7 +305,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="qhb-W4-tlO">
                                         <rect key="frame" x="0.0" y="0.0" width="226" height="94"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tb-t0-ewg" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tb-t0-ewg" customClass="LevelCheckBox" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -322,7 +322,7 @@
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6O-ZH-A1a" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6O-ZH-A1a" customClass="LevelCheckBox" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="132" y="0.0" width="94" height="94"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
@@ -343,7 +343,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="38" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AqL-Z8-1LM">
                                         <rect key="frame" x="0.0" y="112" width="226" height="94"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-BJ-Bfx" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-BJ-Bfx" customClass="LevelCheckBox" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="23"/>
@@ -354,7 +354,7 @@
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5L-Zd-7fP" customClass="LevelCheckBox" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5L-Zd-7fP" customClass="LevelCheckBox" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="132" y="0.0" width="94" height="94"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="21"/>
@@ -410,7 +410,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez sélectionner le niveau de langue des verbes à ajouter à la liste de révision" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXd-ZV-A1i">
-                                        <rect key="frame" x="57.666666666666515" y="187.33333333333334" width="260" height="116.33333333333334"/>
+                                        <rect key="frame" x="57.666666666666515" y="201" width="260" height="102.66666666666669"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="Kjt-y4-vKt"/>
                                         </constraints>
@@ -551,7 +551,7 @@
         <!--StatisticsVC-->
         <scene sceneID="WW8-io-Sjq">
             <objects>
-                <viewController id="iLx-Gh-sve" customClass="StatisticsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iLx-Gh-sve" customClass="StatisticsVC" customModule="German" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hvX-PG-o7O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -567,7 +567,7 @@
                                     </constraint>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNj-ba-GFp" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNj-ba-GFp" customClass="StatisticsButton" customModule="German" customModuleProvider="target">
                                 <rect key="frame" x="17.666666666666657" y="124" width="340" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="DSF-gx-U1B"/>
@@ -587,7 +587,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zB1-2i-IUE">
                                 <rect key="frame" x="17.666666666666657" y="201" width="340" height="432"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sX-ub-zX1" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sX-ub-zX1" customClass="StatisticsButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="47"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -597,7 +597,7 @@
                                             <segue destination="5VA-47-w42" kind="presentation" identifier="level1" modalPresentationStyle="fullScreen" id="I7S-EJ-H4e"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIS-kY-K8M" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIS-kY-K8M" customClass="StatisticsButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55" width="340" height="47"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -607,7 +607,7 @@
                                             <segue destination="5VA-47-w42" kind="presentation" identifier="level2" modalPresentationStyle="fullScreen" id="rpX-iQ-P3B"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6W-jN-bgk" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6W-jN-bgk" customClass="StatisticsButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="110" width="340" height="47"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -617,7 +617,7 @@
                                             <segue destination="5VA-47-w42" kind="presentation" identifier="level3" modalPresentationStyle="fullScreen" id="9qw-gl-zYU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-N3-dM7" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-N3-dM7" customClass="StatisticsButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="165" width="340" height="47"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -627,7 +627,7 @@
                                             <segue destination="5VA-47-w42" kind="presentation" identifier="level4" modalPresentationStyle="fullScreen" id="zPM-qo-XIj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxB-UC-d7n" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxB-UC-d7n" customClass="StatisticsButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="220" width="340" height="47"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -637,7 +637,7 @@
                                             <segue destination="5VA-47-w42" kind="presentation" identifier="level5" modalPresentationStyle="fullScreen" id="aFV-kV-llr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EN-B9-lBc" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EN-B9-lBc" customClass="StatisticsButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="275" width="340" height="47"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -647,7 +647,7 @@
                                             <segue destination="5VA-47-w42" kind="presentation" identifier="level6" modalPresentationStyle="fullScreen" id="9wO-d6-w44"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hn4-B5-jIP" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hn4-B5-jIP" customClass="StatisticsButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="330" width="340" height="47"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -657,7 +657,7 @@
                                             <segue destination="5VA-47-w42" kind="presentation" identifier="level7" modalPresentationStyle="fullScreen" id="gcp-zA-pqt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLY-ea-zRV" customClass="StatisticsButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLY-ea-zRV" customClass="StatisticsButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="385" width="340" height="47"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                         <state key="normal" title="Button">
@@ -683,7 +683,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau de connaissance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dA-Ds-H0t">
-                                <rect key="frame" x="87" y="74.333333333333329" width="245" height="26.666666666666671"/>
+                                <rect key="frame" x="87" y="76" width="245" height="23.333333333333329"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -753,7 +753,7 @@
         <!--List VerbsVC-->
         <scene sceneID="mwm-8U-ADG">
             <objects>
-                <viewController id="5VA-47-w42" customClass="ListVerbsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5VA-47-w42" customClass="ListVerbsVC" customModule="German" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XQh-NW-8Kz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -855,16 +855,16 @@
         <!--PurchaseVC-->
         <scene sceneID="W0h-xp-6Nk">
             <objects>
-                <viewController id="JMN-Zr-BPp" customClass="IAPurchaseVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JMN-Zr-BPp" customClass="IAPurchaseVC" customModule="German" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kn2-IF-BEf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNO-ff-IsC" customClass="Background3" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNO-ff-IsC" customClass="Background3" customModule="German" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-kB-nvZ" customClass="PurchaseUIButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-kB-nvZ" customClass="PurchaseUIButton" customModule="German" customModuleProvider="target">
                                 <rect key="frame" x="37.666666666666657" y="244" width="300" height="178.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="7Lq-tm-VGB"/>
@@ -894,7 +894,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAy-GT-5ws" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAy-GT-5ws" customClass="BasicButton" customModule="German" customModuleProvider="target">
                                 <rect key="frame" x="71" y="691" width="233" height="47"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -942,7 +942,7 @@
         <!--Review VerbsVC-->
         <scene sceneID="Tq2-Ze-ZdV">
             <objects>
-                <viewController id="qzO-in-ekQ" customClass="ReviewVerbsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qzO-in-ekQ" customClass="ReviewVerbsVC" customModule="German" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u7U-bI-6bR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1002,7 +1002,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VnI-HI-umY">
                                 <rect key="frame" x="0.0" y="641" width="375" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4y-DF-YAS" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4y-DF-YAS" customClass="BasicButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="7.9999999999999929" y="8" width="114.33333333333331" height="47"/>
                                         <color key="backgroundColor" red="1" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1019,7 +1019,7 @@
                                             <action selector="regress:" destination="qzO-in-ekQ" eventType="touchUpInside" id="ITl-h5-bDA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-uX-yr6" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-uX-yr6" customClass="BasicButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="130.33333333333334" y="8" width="114.33333333333334" height="47"/>
                                         <color key="backgroundColor" red="1" green="0.4941176471" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="13"/>
@@ -1033,7 +1033,7 @@
                                             <action selector="stagnate:" destination="qzO-in-ekQ" eventType="touchUpInside" id="VgU-1q-Nhb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qez-2m-ixe" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qez-2m-ixe" customClass="BasicButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="252.66666666666666" y="8" width="114.33333333333334" height="47"/>
                                         <color key="backgroundColor" red="0.28235294119999998" green="0.72549019609999998" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="13"/>
@@ -1181,8 +1181,8 @@
         <!--Forwar CardVC-->
         <scene sceneID="vkM-dp-Qt8">
             <objects>
-                <viewController id="M3T-oX-K86" customClass="ForwarCardVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wFJ-rb-965" customClass="VerbCardView" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                <viewController id="M3T-oX-K86" customClass="ForwarCardVC" customModule="German" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wFJ-rb-965" customClass="VerbCardView" customModule="German" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <viewLayoutGuide key="safeArea" id="auN-eY-faf"/>
@@ -1199,8 +1199,8 @@
         <!--Backward CardVC-->
         <scene sceneID="U9D-md-VwI">
             <objects>
-                <viewController id="o65-Wo-rje" customClass="BackwardCardVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6sj-q2-OUb" customClass="VerbCardView" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                <viewController id="o65-Wo-rje" customClass="BackwardCardVC" customModule="German" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6sj-q2-OUb" customClass="VerbCardView" customModule="German" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Zgd-v4-ugl"/>
@@ -1216,7 +1216,7 @@
         <!--Verb DetailsVC-->
         <scene sceneID="vZ9-rg-YL3">
             <objects>
-                <viewController id="wvq-Fe-xqE" customClass="VerbDetailsVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wvq-Fe-xqE" customClass="VerbDetailsVC" customModule="German" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3tg-Sz-TSt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1240,7 +1240,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="684-Gn-s2p">
                                 <rect key="frame" x="0.0" y="505" width="375" height="195"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB9-dr-94F" customClass="BasicButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB9-dr-94F" customClass="BasicButton" customModule="German" customModuleProvider="target">
                                         <rect key="frame" x="45" y="74" width="285" height="47"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1321,7 +1321,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5jn-ii-zhc">
                                         <rect key="frame" x="17.666666666666657" y="458" width="340" height="432"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZs-KS-96M" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZs-KS-96M" customClass="UserProgressionButton" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="340" height="47"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                                 <state key="normal" title="Button">
@@ -1331,7 +1331,7 @@
                                                     <action selector="selectProgressionLevel1:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="SeO-ym-u83"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgr-zT-wWr" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgr-zT-wWr" customClass="UserProgressionButton" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="55" width="340" height="47"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                                 <state key="normal" title="Button">
@@ -1341,7 +1341,7 @@
                                                     <action selector="selectProgressionLevel2:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="ZPs-al-rvU"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XR-xX-8Fn" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XR-xX-8Fn" customClass="UserProgressionButton" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="110" width="340" height="47"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                                 <state key="normal" title="Button">
@@ -1351,7 +1351,7 @@
                                                     <action selector="selectProgressionLevel3:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="Jub-Sd-Rx9"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgO-mL-90h" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgO-mL-90h" customClass="UserProgressionButton" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="165" width="340" height="47"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                                 <state key="normal" title="Button">
@@ -1361,7 +1361,7 @@
                                                     <action selector="selectProgressionLevel4:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="SG7-gv-LrJ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYj-H4-AFO" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYj-H4-AFO" customClass="UserProgressionButton" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="220" width="340" height="47"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="340" id="RZ3-Dr-egl">
@@ -1377,7 +1377,7 @@
                                                     <action selector="selectProgressionLevel5:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="kpm-Jh-Eae"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOy-55-3W1" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOy-55-3W1" customClass="UserProgressionButton" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="275" width="340" height="47"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                                 <state key="normal" title="Button">
@@ -1387,7 +1387,7 @@
                                                     <action selector="selectProgressionLevel6:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="W4L-SS-8gX"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmj-SX-2TL" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmj-SX-2TL" customClass="UserProgressionButton" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="330" width="340" height="47"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                                 <state key="normal" title="Button">
@@ -1397,7 +1397,7 @@
                                                     <action selector="selectProgressionLevel7:" destination="wvq-Fe-xqE" eventType="touchUpInside" id="PVb-of-z28"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKC-fh-qWD" customClass="UserProgressionButton" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKC-fh-qWD" customClass="UserProgressionButton" customModule="German" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="385" width="340" height="47"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                                 <state key="normal" title="Button">
@@ -1529,8 +1529,8 @@
         <!--Backward CardVC-->
         <scene sceneID="Ymo-3I-MyL">
             <objects>
-                <viewController id="WKX-Im-1eV" customClass="BackwardCardVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KJd-ag-ex0" customClass="VerbCardView" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                <viewController id="WKX-Im-1eV" customClass="BackwardCardVC" customModule="German" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KJd-ag-ex0" customClass="VerbCardView" customModule="German" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <viewLayoutGuide key="safeArea" id="nAP-vg-qUB"/>
@@ -1547,8 +1547,8 @@
         <!--Backward CardVC-->
         <scene sceneID="aNa-S4-rAJ">
             <objects>
-                <viewController id="v2J-mt-Vxe" customClass="BackwardCardVC" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="afg-FJ-6PB" customClass="VerbCardView" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+                <viewController id="v2J-mt-Vxe" customClass="BackwardCardVC" customModule="German" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="afg-FJ-6PB" customClass="VerbCardView" customModule="German" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <viewLayoutGuide key="safeArea" id="9ON-1p-aUn"/>
@@ -1565,81 +1565,81 @@
     </scenes>
     <designables>
         <designable name="0EN-B9-lBc">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="2sX-ub-zX1">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="3Tb-t0-ewg">
-            <size key="intrinsicContentSize" width="30" height="40"/>
+            <size key="intrinsicContentSize" width="30" height="37"/>
         </designable>
         <designable name="AAy-GT-5ws">
-            <size key="intrinsicContentSize" width="164" height="35"/>
+            <size key="intrinsicContentSize" width="155" height="32"/>
         </designable>
         <designable name="AB9-dr-94F">
-            <size key="intrinsicContentSize" width="265" height="36"/>
+            <size key="intrinsicContentSize" width="253" height="33"/>
         </designable>
         <designable name="Djp-s6-Um0">
-            <size key="intrinsicContentSize" width="147" height="38"/>
+            <size key="intrinsicContentSize" width="136" height="35"/>
         </designable>
         <designable name="FwL-BJ-Bfx">
-            <size key="intrinsicContentSize" width="30" height="43"/>
+            <size key="intrinsicContentSize" width="30" height="39"/>
         </designable>
         <designable name="Mpo-FS-QOa">
-            <size key="intrinsicContentSize" width="216" height="36"/>
+            <size key="intrinsicContentSize" width="202" height="33"/>
         </designable>
         <designable name="Ogy-tk-Ael">
-            <size key="intrinsicContentSize" width="140" height="36"/>
+            <size key="intrinsicContentSize" width="132" height="33"/>
         </designable>
         <designable name="Qez-2m-ixe">
-            <size key="intrinsicContentSize" width="113" height="30"/>
+            <size key="intrinsicContentSize" width="108" height="28"/>
         </designable>
         <designable name="W6O-ZH-A1a">
-            <size key="intrinsicContentSize" width="30" height="40"/>
+            <size key="intrinsicContentSize" width="30" height="37"/>
         </designable>
         <designable name="Xzp-kB-nvZ">
             <size key="intrinsicContentSize" width="682" height="255"/>
         </designable>
         <designable name="aIS-kY-K8M">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="b4y-DF-YAS">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="30" height="28"/>
         </designable>
         <designable name="cNj-ba-GFp">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="dLY-ea-zRV">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="gaM-uX-yr6">
-            <size key="intrinsicContentSize" width="58" height="30"/>
+            <size key="intrinsicContentSize" width="54" height="28"/>
         </designable>
         <designable name="hn4-B5-jIP">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="i6W-jN-bgk">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="jCs-oc-s80">
-            <size key="intrinsicContentSize" width="68" height="38"/>
+            <size key="intrinsicContentSize" width="63" height="35"/>
         </designable>
         <designable name="jxB-UC-d7n">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="q8d-2v-K4O">
-            <size key="intrinsicContentSize" width="265" height="36"/>
+            <size key="intrinsicContentSize" width="253" height="33"/>
         </designable>
         <designable name="z5L-Zd-7fP">
-            <size key="intrinsicContentSize" width="30" height="40"/>
+            <size key="intrinsicContentSize" width="30" height="37"/>
         </designable>
         <designable name="zX3-N3-dM7">
-            <size key="intrinsicContentSize" width="58" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="OVJ-ht-fzK"/>
-        <segue reference="gcp-zA-pqt"/>
+        <segue reference="CqE-qH-QaM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AV Arrow" width="1600" height="1600"/>

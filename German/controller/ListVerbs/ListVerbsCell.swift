@@ -59,10 +59,10 @@ class ListVerbsCell: UITableViewCell {
     
     func setUp(userLearningVerb: LearningVerb, showIfVerbIsInReviewList: Bool){
         self.userLearningVerb = userLearningVerb
-        self.infinitiveLabel.text = userLearningVerb.verb.infinitive()
-        self.presentLabel.text = userLearningVerb.verb.present()
-        self.simplePastLabel.text = userLearningVerb.verb.simplePast()
-        self.pastParticipleLabel.text = userLearningVerb.verb.pastParticiple()
+//        self.infinitiveLabel.text = userLearningVerb.verb.infinitive()
+//        self.presentLabel.text = userLearningVerb.verb.present()
+//        self.simplePastLabel.text = userLearningVerb.verb.simplePast()
+//        self.pastParticipleLabel.text = userLearningVerb.verb.pastParticiple()
         self.traductionLabel.text = userLearningVerb.verb.translation(Lang.fr) // TODO
         
         self.levelLabel.text = userLearningVerb.verb.level.rawValue
