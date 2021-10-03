@@ -10,7 +10,8 @@ import SwiftUI
 
 extension Text {
     func verbChangingVowel() -> Text {
-        self.fontWeight(.bold)
+        self.foregroundColor(Color.brandPrimary)
+            .fontWeight(.bold)
     }
     
     static func verbTemps(_ verbTemps: VerbTemps) -> Text {

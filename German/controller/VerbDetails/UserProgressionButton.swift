@@ -72,7 +72,7 @@ class UserProgressionButton: UIButton {
         else{
             self.titleEdgeInsets.left = borderHorizontal
         }
-        self.setTitle(userProgression.name(), for: .normal)
+//        self.setTitle(userProgression.name(), for: .normal)
         
     }
 

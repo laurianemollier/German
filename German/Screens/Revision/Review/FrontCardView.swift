@@ -10,15 +10,17 @@ import SwiftUI
 
 struct FrontCardView: View {
     
-    
+    let verb: Verb
     
     var body: some View {
-        Text("Front")
+        VStack {
+            Text(verb.translation(Lang.fr))
+        }
     }
 }
 
 struct FrontCardView_Previews: PreviewProvider {
     static var previews: some View {
-        FrontCardView()
+        FrontCardView(verb: Verbs.verbs.first!)
     }
 }

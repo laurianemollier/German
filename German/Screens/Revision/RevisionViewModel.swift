@@ -30,6 +30,11 @@ final class RevisionViewModel: ObservableObject {
         isLoading = true
         
         do {
+            // If it is the first run of this app, set the database
+            if FirstLaunch().isFirstLaunch {
+                try SetUpDatabase.setUp()
+            }
+            
             self.verbInReviewListCount = try DAO.shared.verbInReviewListCount()
             self.verbToReviewTodayCount = try DAO.shared.verbToReviewTodayCount()
             isLoading = false

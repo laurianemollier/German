@@ -49,10 +49,10 @@ struct Verb{
         self.level = level
         self.form = form
         self.temps = (
-            infinitive: VerbTemps(form: verb.0, changingVowelRange: changingVowel.0),
-            present: VerbTemps(form: verb.1, changingVowelRange: changingVowel.1),
-            simplePast: VerbTemps(form: verb.2, changingVowelRange: changingVowel.2),
-            pastParticiple: VerbTemps(form: verb.3, changingVowelRange: changingVowel.3)
+            infinitive: VerbTemps(value: verb.0, changingVowelRange: changingVowel.0),
+            present: VerbTemps(value: verb.1, changingVowelRange: changingVowel.1),
+            simplePast: VerbTemps(value: verb.2, changingVowelRange: changingVowel.2),
+            pastParticiple: VerbTemps(value: verb.3, changingVowelRange: changingVowel.3)
             )
         translations.forEach({
             self.translations[$0] = $1

@@ -12,7 +12,7 @@ import UIKit
 
 final class Audio{
     
-    private let key = "org.lauriane-mollier.irregular-verbs.german" + "audio"
+    private let key = "org.lauriane-mollier.irregular-verbs.german" + "audio" // TODO: lolo
     
     static let shared = Audio()
     

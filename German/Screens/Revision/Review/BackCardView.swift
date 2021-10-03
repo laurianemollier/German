@@ -20,7 +20,6 @@ struct BackCardView: View {
             Text.verbTemps(verb.temps.present)
             Text.verbTemps(verb.temps.simplePast)
             Text.verbTemps(verb.temps.pastParticiple)
-            
         }
     }
 }

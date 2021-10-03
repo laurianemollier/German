@@ -25,7 +25,7 @@ struct RevisionView: View {
             //                    .transition(.move(edge: .trailing))
             //                    .animation(.default)
             case .review:
-                ReviewVerbView(navigationState: $navigationState)
+                ReviewVerbView(viewModel: ReviewVerbViewModel(navigationState: $navigationState))
             //                    .transition(.move(edge: .trailing))
             //                    .animation(.default)
             default:

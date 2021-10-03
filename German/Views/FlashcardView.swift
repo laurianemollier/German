@@ -9,17 +9,26 @@
 import SwiftUI
 
 struct FlashcardView<Front, Back>: View where Front: View, Back: View {
-    var front: () -> Front
-    var back: () -> Back
+    private let front: () -> Front
+    private let back: () -> Back
+    private let onTapGestureAction: () -> Void
     
-    @State var flipped: Bool = false
+    @Binding private var flipped: Bool
+    @State private var flashcardRotation = 0.0
+    @State private var contentRotation = 0.0
     
-    @State var flashcardRotation = 0.0
-    @State var contentRotation = 0.0
+    let animationTime = 0.5
     
-    init(@ViewBuilder front: @escaping () -> Front, @ViewBuilder back: @escaping () -> Back) {
+    init(flipped: Binding<Bool>,
+    @ViewBuilder front: @escaping () -> Front,
+         @ViewBuilder back: @escaping () -> Back,
+        
+         onTapGestureAction: @escaping () -> Void) {
+        
         self.front = front
         self.back = back
+        self.onTapGestureAction = onTapGestureAction
+        self._flipped = flipped
     }
     
     var body: some View {
@@ -41,20 +50,26 @@ struct FlashcardView<Front, Back>: View where Front: View, Back: View {
         )
         .padding()
         .onTapGesture {
-            flipFlashcard()
+            if (!flipped) {
+                flipped = true
+                flipFlashcard()
+                onTapGestureAction()
+            }
         }
         .rotation3DEffect(.degrees(flashcardRotation), axis: (x: 0, y: 1, z: 0))
     }
     
     func flipFlashcard() {
-        let animationTime = 0.5
-        withAnimation(Animation.linear(duration: animationTime)) {
-            flashcardRotation += 180
-        }
-        
-        withAnimation(Animation.linear(duration: 0.001).delay(animationTime / 2)) {
-            contentRotation += 180
-            flipped.toggle()
+        if (!flipped) {
+            
+            withAnimation(Animation.linear(duration: animationTime)) {
+                flashcardRotation += 180
+            }
+            
+            withAnimation(Animation.linear(duration: 0.001).delay(animationTime / 2)) {
+                contentRotation += 180
+                flipped.toggle()
+            }
         }
     }
 }

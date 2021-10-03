@@ -145,7 +145,7 @@ class StatisticsVC: UIViewController {
         do {
             let verbs = try DAO.shared.select(userProgression: userProgression)
             vc.learningVerbs = verbs
-            vc.titleList = userProgression.name()
+//            vc.titleList = userProgression.name()
             vc.showIfVerbIsInReviewList = false
         }
         catch{

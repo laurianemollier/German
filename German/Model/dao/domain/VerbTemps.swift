@@ -10,9 +10,9 @@ import SwiftUI
 
 struct VerbTemps {
     
-    private let form: String
-    
     private let changingVowelRange: NSRange
+    
+    let value: String
     
     /// - Returns: The splited verb form, without pronoun.
     ///            The second string the changing vowel.
@@ -29,22 +29,22 @@ struct VerbTemps {
     private let splitedWithPronoun: (String, String, String)
     
     
-    init(form: String, changingVowelRange: NSRange) {
-        self.form = form
+    init(value: String, changingVowelRange: NSRange) {
+        self.value = value
         self.changingVowelRange = changingVowelRange
         
-        let startIndex: String.Index = form.index(form.startIndex, offsetBy: changingVowelRange.location)
-        let endIndex = form.index(startIndex, offsetBy: changingVowelRange.length)
+        let startIndex: String.Index = value.index(value.startIndex, offsetBy: changingVowelRange.location)
+        let endIndex = value.index(startIndex, offsetBy: changingVowelRange.length)
         
         self.splitedWithoutPronoun = (
-            String(form[..<startIndex]),
-            String(form[startIndex..<endIndex]),
-            String(form[endIndex...])
+            String(value[..<startIndex]),
+            String(value[startIndex..<endIndex]),
+            String(value[endIndex...])
         )
         self.splitedWithPronoun = (
-            "er " + String(form[..<startIndex]),
-            String(form[startIndex..<endIndex]),
-            String(form[endIndex...])
+            "er " + String(value[..<startIndex]),
+            String(value[startIndex..<endIndex]),
+            String(value[endIndex...])
         )
     }
 }

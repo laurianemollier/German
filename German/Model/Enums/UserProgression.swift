@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 class Constants{
     static let secondsInOneDay = 86400
@@ -62,7 +63,7 @@ enum UserProgression: String {
     }
     
     
-    func name() -> String? {
+    func name() -> LocalizedStringKey? {
         switch self { // TODO
         case UserProgression.level1:
             return "Inexistant"
@@ -186,12 +187,12 @@ enum UserProgression: String {
     // MARK: - Name of navigation between the progression level
     
     
-    func regressionName() -> String? {
+    func regressionName() -> LocalizedStringKey? {
         return "Maintenant" // TODO
     }
     
     
-    func stagnationName() -> String?{
+    func stagnationName() -> LocalizedStringKey?{
         switch self { // TODO
         case UserProgression.level1:
             return "Demain"
@@ -216,7 +217,7 @@ enum UserProgression: String {
     }
     
     
-    func progressionName() -> String? {
+    func progressionName() -> LocalizedStringKey? {
         switch self { // TODO
         case UserProgression.level1:
             return "Dans 2 jours"

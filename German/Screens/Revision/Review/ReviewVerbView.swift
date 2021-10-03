@@ -10,24 +10,54 @@ import SwiftUI
 
 struct ReviewVerbView: View {
     
-    @Binding var navigationState: RevisionNavigationState?
+    // ------------------
+    // MARK: - Variables
+    // ------------------
+    
+    @StateObject var viewModel: ReviewVerbViewModel
     
     var body: some View {
         VStack {
-            FlashcardView<FrontCardView, BackCardView> {
-                FrontCardView()
-            } back: {
-                BackCardView(verb: Verbs.verbs.first!) // TODO: lolo
-            }
-            
-            Button {
-                navigationState = RevisionNavigationState.home
-            } label: {
-                CallToActionButton(title: "Finish to review")
+            if let currentVerb = viewModel.currentLearningVerb {
+                Button(action: {
+                  withAnimation(.default) {
+                      self.viewModel.flipped.toggle()
+                  }
+                }) {
+                  HStack {
+                    Text(self.viewModel.flipped ? "Hide Details" : "Show Details")
+                    Spacer()
+                    Image(systemName: "chevron.up.square")
+                      .scaleEffect(self.viewModel.flipped ? 2 : 1)
+                      .rotationEffect(.degrees(self.viewModel.flipped ? 0 : 180))
+                  }
+                }
+                
+                
+                FlashcardView<FrontCardView, BackCardView>(flipped: $viewModel.flipped) {
+                    FrontCardView(verb: currentVerb.verb) // TODO: lolo
+                } back: {
+                    BackCardView(verb: currentVerb.verb) // TODO: lolo
+                } onTapGestureAction: {
+                    SpeedLog.print("Audio")
+                }
+                
+                if viewModel.flipped {
+                    ReviewRateProgressionView().environmentObject(viewModel)
+                } else {
+                    Button {
+                        viewModel.flipped = true
+                    } label: {
+                        Image("RVTurnButton")
+                    }
+                }
             }
         }
+        .onAppear {
+            viewModel.getVerbToReview()
+        }
         .overlay(Button {
-            navigationState = RevisionNavigationState.pickStyle
+            viewModel.navigationState = RevisionNavigationState.pickStyle
         } label: {
             XDismissButton()
         }, alignment: .topTrailing)
@@ -36,6 +66,6 @@ struct ReviewVerbView: View {
 
 struct ReviewVerbView_Previews: PreviewProvider {
     static var previews: some View {
-        ReviewVerbView(navigationState: .constant(RevisionNavigationState.review))
+        ReviewVerbView(viewModel: ReviewVerbViewModel(navigationState: .constant(RevisionNavigationState.review)))
     }
 }
