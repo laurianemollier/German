@@ -19,21 +19,6 @@ struct ReviewVerbView: View {
     var body: some View {
         VStack {
             if let currentVerb = viewModel.currentLearningVerb {
-                Button(action: {
-                  withAnimation(.default) {
-                      self.viewModel.flipped.toggle()
-                  }
-                }) {
-                  HStack {
-                    Text(self.viewModel.flipped ? "Hide Details" : "Show Details")
-                    Spacer()
-                    Image(systemName: "chevron.up.square")
-                      .scaleEffect(self.viewModel.flipped ? 2 : 1)
-                      .rotationEffect(.degrees(self.viewModel.flipped ? 0 : 180))
-                  }
-                }
-                
-                
                 FlashcardView<FrontCardView, BackCardView>(flipped: $viewModel.flipped) {
                     FrontCardView(verb: currentVerb.verb) // TODO: lolo
                 } back: {

@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// https://www.hackingwithswift.com/quick-start/swiftui/how-to-synchronize-animations-from-one-view-to-another-with-matchedgeometryeffect
 struct FlashcardView<Front, Back>: View where Front: View, Back: View {
     private let front: () -> Front
     private let back: () -> Back
@@ -51,7 +52,6 @@ struct FlashcardView<Front, Back>: View where Front: View, Back: View {
         .padding()
         .onTapGesture {
             if (!flipped) {
-                flipped = true
                 flipFlashcard()
                 onTapGestureAction()
             }
@@ -61,14 +61,12 @@ struct FlashcardView<Front, Back>: View where Front: View, Back: View {
     
     func flipFlashcard() {
         if (!flipped) {
-            
             withAnimation(Animation.linear(duration: animationTime)) {
                 flashcardRotation += 180
             }
-            
             withAnimation(Animation.linear(duration: 0.001).delay(animationTime / 2)) {
                 contentRotation += 180
-                flipped.toggle()
+                flipped = true
             }
         }
     }
