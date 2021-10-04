@@ -24,6 +24,12 @@ struct ReviewVerbView: View {
         NavigationView{
             VStack {
                 if let currentVerb = viewModel.currentLearningVerb {
+                    HStack {
+                        Spacer()
+                        
+                        Text("\(viewModel.index + 1)/\(viewModel.verbsToReview.count)").padding(.trailing, 40)
+                    }
+                    
                     FlashcardView<FrontCardView, BackCardView>(viewModel: flashcardViewModel) {
                         FrontCardView(verb: currentVerb.verb)
                     } back: {

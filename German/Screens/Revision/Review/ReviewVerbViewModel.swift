@@ -25,7 +25,7 @@ final class ReviewVerbViewModel: ObservableObject {
     
     @Published var index: Int
     @Published var currentLearningVerb: LearningVerb?
-    @Published private var verbsToReview: [LearningVerb]
+    @Published var verbsToReview: [LearningVerb]
     @Published private var resultVerbsReviewed: [LearningVerb]
     
     private var actionOnNextVerb: () -> Void = {}
