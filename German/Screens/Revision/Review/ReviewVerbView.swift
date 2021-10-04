@@ -21,27 +21,47 @@ struct ReviewVerbView: View {
     @StateObject var flashcardViewModel: FlashcardViewModel = FlashcardViewModel()
     
     var body: some View {
-        VStack {
-            if let currentVerb = viewModel.currentLearningVerb {
-                FlashcardView<FrontCardView, BackCardView>(viewModel: flashcardViewModel) {
-                    FrontCardView(verb: currentVerb.verb)
-                } back: {
-                    BackCardView(verb: currentVerb.verb)
-                } onTapGestureAction: {
-                    SpeedLog.print("Audio")
-                }
-                
-                if flashcardViewModel.flipped {
-                    ReviewRateProgressionView(viewModel: viewModel)
-                } else {
-                    Button {
-                        flashcardViewModel.flipFlashcard()
-                    } label: {
-                        Image("RVTurnButton")
+        NavigationView{
+            VStack {
+                if let currentVerb = viewModel.currentLearningVerb {
+                    FlashcardView<FrontCardView, BackCardView>(viewModel: flashcardViewModel) {
+                        FrontCardView(verb: currentVerb.verb)
+                    } back: {
+                        BackCardView(verb: currentVerb.verb)
+                    } onTapGestureAction: {
+                        do {try viewModel.audioPlay()}
+                        catch {
+                            SpeedLog.print(error)
+                        }
+                    }
+                    
+                    if flashcardViewModel.flipped {
+                        ReviewRateProgressionView(viewModel: viewModel)
+                    } else {
+                        Button {
+                            flashcardViewModel.flipFlashcard()
+                        } label: {
+                            Image("RVTurnButton")
+                        }
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Button {
+                            viewModel.toggleAudio()
+                        } label: {
+                            if(Audio.shared.isOn()) {Text("🔔")}
+                            else {Text("🔕")}
+                        }.padding(.trailing, 40)
                     }
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BackButton(action: {
+            navigation.state = RevisionNavigationState.pickStyle
+        }))
         .onAppear {
             viewModel.getVerbToReview()
             viewModel.setAction(
@@ -54,18 +74,11 @@ struct ReviewVerbView: View {
                     navigation.state = RevisionNavigationState.home
                 })
         }
-        .overlay(Button {
-            navigation.state = RevisionNavigationState.pickStyle
-        } label: {
-            XDismissButton()
-        }, alignment: .topTrailing)
     }
 }
 
-//struct ReviewVerbView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ReviewVerbView(
-//            viewModel: ReviewVerbViewModel(navigationState: .constant(RevisionNavigationState.review))
-//        )
-//    }
-//}
+struct ReviewVerbView_Previews: PreviewProvider {
+    static var previews: some View {
+        ReviewVerbView()
+    }
+}

@@ -136,7 +136,7 @@ final class ReviewVerbViewModel: ObservableObject {
     // MARK: - Audio
     // -------------
     
-    private func toggleAudio() {
+    func toggleAudio() {
         if(Audio.shared.isOn()){
             audioEnable = false
             Audio.shared.off()
@@ -145,6 +145,26 @@ final class ReviewVerbViewModel: ObservableObject {
         else{
             audioEnable = true
             Audio.shared.on()
+        }
+    }
+    
+    func audioPlay() throws {
+        if let verb = currentLearningVerb?.verb {
+            let formatAudio = "mp3"
+            let nameAudioFile = verb.temps.infinitive.value
+            let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: formatAudio)!)
+            audioPlayer = try AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
+            audioPlayer!.play()
+            audioPlayer!.numberOfLoops = 0
+            
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        }
+    }
+    
+    
+    func audioStop(){
+        if audioPlayer != nil && audioPlayer!.isPlaying{
+            audioPlayer!.stop()
         }
     }
     
@@ -191,27 +211,5 @@ final class ReviewVerbViewModel: ObservableObject {
         actionOnEndRevisionSession()
         _ = try DAO.shared.update(learningVerbs: dbResultVerbsReviewed)
        
-    }
-    
-    // -----------------------
-    // MARK: - Private - audio
-    // -----------------------
-    
-    private func audioPlay(verb: Verb) throws {
-        let formatAudio = "mp3"
-        let nameAudioFile = verb.temps.infinitive.value
-        let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: formatAudio)!)
-        audioPlayer = try AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
-        audioPlayer!.play()
-        audioPlayer!.numberOfLoops = 0
-        
-        try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-    }
-    
-    
-    private func audioStop(){
-        if audioPlayer != nil && audioPlayer!.isPlaying{
-            audioPlayer!.stop()
-        }
     }
 }

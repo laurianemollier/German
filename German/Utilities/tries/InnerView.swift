@@ -6,6 +6,7 @@
 //  Copyright © 2021 Lauriane Mollier. All rights reserved.
 //
 
+// TODO: lolo do delete
 import SwiftUI
 
 class UserProgress: ObservableObject {

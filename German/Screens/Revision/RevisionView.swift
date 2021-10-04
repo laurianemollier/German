@@ -10,7 +10,6 @@ import SwiftUI
 
 struct RevisionView: View {
     
-    // TODO: environement
     @StateObject var navigation: RevisionNavigation = RevisionNavigation(state: RevisionNavigationState.home)
     
     var body: some View {
@@ -27,10 +26,6 @@ struct RevisionView: View {
             //                    .animation(.default)
             case .review:
                 ReviewVerbView().environmentObject(navigation)
-            //                    .transition(.move(edge: .trailing))
-            //                    .animation(.default)
-            default:
-                RevisionHomeView().environmentObject(navigation)
             //                    .transition(.move(edge: .trailing))
             //                    .animation(.default)
             }
