@@ -42,6 +42,9 @@ struct ReviewVerbView: View {
         }
         .onAppear {
             viewModel.getVerbToReview()
+            viewModel.setActionOnNextVerb {
+                flashcardViewModel.flipped = false
+            }
         }
         .overlay(Button {
             viewModel.navigationState = RevisionNavigationState.pickStyle

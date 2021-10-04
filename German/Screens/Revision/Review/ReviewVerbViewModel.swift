@@ -30,8 +30,15 @@ final class ReviewVerbViewModel: ObservableObject {
     @Published private var verbsToReview: [LearningVerb]
     @Published private var resultVerbsReviewed: [LearningVerb]
     
+    private var actionOnNextVerb: () -> Void = {}
+    private var actionOnEndRevisionSession: () -> Void = {}
+    
     @Published var audioEnable: Bool
     private var audioPlayer: AVAudioPlayer?
+    
+    // ------------
+    // MARK: - Init
+    // ------------
     
     init(navigationState: Binding<RevisionNavigationState?>) {
         self._navigationState = navigationState
@@ -40,6 +47,14 @@ final class ReviewVerbViewModel: ObservableObject {
         self.resultVerbsReviewed = []
         self.verbsToReview = []
         self.audioEnable = Audio.shared.isOn()
+    }
+    
+    func setActionOnNextVerb(onNextVerb: @escaping () -> Void) {
+        self.actionOnNextVerb = onNextVerb
+    }
+    
+    func setAction(onEndRevisionSession: @escaping () -> Void) {
+        self.actionOnEndRevisionSession = onEndRevisionSession
     }
     
     // -----------------
@@ -169,7 +184,7 @@ final class ReviewVerbViewModel: ObservableObject {
             try endRevisionSession()
         }
         else{
-//            self.flashcard.flipped = false
+            actionOnNextVerb()
             self.currentLearningVerb = self.verbsToReview[self.index]
         }
     }
@@ -177,7 +192,7 @@ final class ReviewVerbViewModel: ObservableObject {
     private func endRevisionSession() throws {
         let dbResultVerbsReviewed = resultVerbsReviewed.map({ $0.toDbUserLearningVerb()})
         _ = try DAO.shared.update(learningVerbs: dbResultVerbsReviewed)
-        navigationState = RevisionNavigationState.home
+        navigationState = RevisionNavigationState.home // TODO
     }
     
     // -----------------------
