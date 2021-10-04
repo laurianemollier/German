@@ -22,15 +22,15 @@ struct ReviewVerbView: View {
         VStack {
             if let currentVerb = viewModel.currentLearningVerb {
                 FlashcardView<FrontCardView, BackCardView>(viewModel: flashcardViewModel) {
-                    FrontCardView(verb: currentVerb.verb) // TODO: lolo
+                    FrontCardView(verb: currentVerb.verb)
                 } back: {
-                    BackCardView(verb: currentVerb.verb) // TODO: lolo
+                    BackCardView(verb: currentVerb.verb)
                 } onTapGestureAction: {
                     SpeedLog.print("Audio")
                 }
                 
                 if flashcardViewModel.flipped {
-                    ReviewRateProgressionView(viewModel)
+                    ReviewRateProgressionView(viewModel: viewModel)
                 } else {
                     Button {
                         flashcardViewModel.flipFlashcard()
