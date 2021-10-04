@@ -10,6 +10,10 @@ import SwiftUI
 import UIKit
 import AVFoundation
 
+// swiftUI having a ObservableObject in a ObservableObject
+// https://stackoverflow.com/questions/62824472/swiftui-is-it-ok-to-put-an-observableobject-inside-another-observableobject
+
+// https://rhonabwy.com/2021/02/13/nested-observable-objects-in-swiftui/
 final class ReviewVerbViewModel: ObservableObject {
     
     @Binding var navigationState: RevisionNavigationState?
@@ -29,8 +33,6 @@ final class ReviewVerbViewModel: ObservableObject {
     @Published var audioEnable: Bool
     private var audioPlayer: AVAudioPlayer?
     
-    @Published var flipped: Bool
-    
     init(navigationState: Binding<RevisionNavigationState?>) {
         self._navigationState = navigationState
         self.isLoading = true
@@ -38,7 +40,6 @@ final class ReviewVerbViewModel: ObservableObject {
         self.resultVerbsReviewed = []
         self.verbsToReview = []
         self.audioEnable = Audio.shared.isOn()
-        self.flipped = false
     }
     
     // -----------------
@@ -52,7 +53,6 @@ final class ReviewVerbViewModel: ObservableObject {
             self.index = 0
             self.resultVerbsReviewed = []
             self.audioEnable = Audio.shared.isOn()
-            self.flipped = false
 //            self.verbsToReview = try DAO.shared.verbToReviewToday(limit: 10)
             self.verbsToReview = [LearningVerb(id: 0, verb: Verbs.verbs[0]), LearningVerb(id: 1, verb: Verbs.verbs[1])]
             self.currentLearningVerb = self.verbsToReview[index] // TODO: could cause error
@@ -169,7 +169,7 @@ final class ReviewVerbViewModel: ObservableObject {
             try endRevisionSession()
         }
         else{
-            self.flipped = false
+//            self.flashcard.flipped = false
             self.currentLearningVerb = self.verbsToReview[self.index]
         }
     }

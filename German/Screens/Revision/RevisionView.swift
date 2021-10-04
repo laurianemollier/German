@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RevisionView: View {
     
+    // TODO: environement
     @State var navigationState: RevisionNavigationState? = RevisionNavigationState.home
     
     var body: some View {
@@ -25,7 +26,9 @@ struct RevisionView: View {
             //                    .transition(.move(edge: .trailing))
             //                    .animation(.default)
             case .review:
-                ReviewVerbView(viewModel: ReviewVerbViewModel(navigationState: $navigationState))
+                ReviewVerbView(
+                    viewModel: ReviewVerbViewModel(navigationState:$navigationState),
+                               flashcardViewModel: FlashcardViewModel())
             //                    .transition(.move(edge: .trailing))
             //                    .animation(.default)
             default:

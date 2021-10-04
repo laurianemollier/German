@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ReviewRateProgressionView: View {
     
-    @EnvironmentObject var viewModel: ReviewVerbViewModel
+    @ObservedObject var viewModel: ReviewVerbViewModel
     
     var body: some View {
         if let progression = viewModel.currentLearningVerb?.userProgression{

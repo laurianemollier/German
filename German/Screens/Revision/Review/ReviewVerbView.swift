@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// https://stackoverflow.com/questions/62512547/in-swiftui-in-a-foreach0-3-animate-the-tapped-button-only-not-all-3-a
 struct ReviewVerbView: View {
     
     // ------------------
@@ -15,11 +16,12 @@ struct ReviewVerbView: View {
     // ------------------
     
     @StateObject var viewModel: ReviewVerbViewModel
+    @StateObject var flashcardViewModel: FlashcardViewModel
     
     var body: some View {
         VStack {
             if let currentVerb = viewModel.currentLearningVerb {
-                FlashcardView<FrontCardView, BackCardView>(flipped: $viewModel.flipped) {
+                FlashcardView<FrontCardView, BackCardView>(viewModel: flashcardViewModel) {
                     FrontCardView(verb: currentVerb.verb) // TODO: lolo
                 } back: {
                     BackCardView(verb: currentVerb.verb) // TODO: lolo
@@ -27,11 +29,11 @@ struct ReviewVerbView: View {
                     SpeedLog.print("Audio")
                 }
                 
-                if viewModel.flipped {
-                    ReviewRateProgressionView().environmentObject(viewModel)
+                if flashcardViewModel.flipped {
+                    ReviewRateProgressionView(viewModel)
                 } else {
                     Button {
-                        viewModel.flipped = true
+                        flashcardViewModel.flipFlashcard()
                     } label: {
                         Image("RVTurnButton")
                     }
@@ -49,8 +51,10 @@ struct ReviewVerbView: View {
     }
 }
 
-struct ReviewVerbView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReviewVerbView(viewModel: ReviewVerbViewModel(navigationState: .constant(RevisionNavigationState.review)))
-    }
-}
+//struct ReviewVerbView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ReviewVerbView(
+//            viewModel: ReviewVerbViewModel(navigationState: .constant(RevisionNavigationState.review))
+//        )
+//    }
+//}

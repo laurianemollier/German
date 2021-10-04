@@ -41,7 +41,9 @@
 		308CD19E26F74BCE00B0660D /* CallToActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD19D26F74BCE00B0660D /* CallToActionButton.swift */; };
 		309EDBA22701D0C000BE78D5 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBA12701D0C000BE78D5 /* FrontCardView.swift */; };
 		309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBAA2701D0E700BE78D5 /* BackCardView.swift */; };
+		30AD8772270ACB2F00395C05 /* InnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AD8771270ACB2F00395C05 /* InnerView.swift */; };
 		30B6A3E927098F9A0026474C /* ReviewRateProgressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */; };
+		30CEDFCC2709F9CC0097A597 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */; };
 		9815F7A4213D073000248968 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A3213D073000248968 /* IAPProducts.swift */; };
 		9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A7213D09DF00248968 /* IAPHelper.swift */; };
 		9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829D4B821416E5F0004FCB3 /* Audio.swift */; };
@@ -526,7 +528,9 @@
 		308CD19D26F74BCE00B0660D /* CallToActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToActionButton.swift; sourceTree = "<group>"; };
 		309EDBA12701D0C000BE78D5 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		309EDBAA2701D0E700BE78D5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
+		30AD8771270ACB2F00395C05 /* InnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerView.swift; sourceTree = "<group>"; };
 		30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRateProgressionView.swift; sourceTree = "<group>"; };
+		30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		9804A8C0213E445700B630A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9804A8C8213E451A00B630A1 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		9815F7A3213D073000248968 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
@@ -1065,6 +1069,7 @@
 				308CD19C26F74B9600B0660D /* Buttons */,
 				305EDFAC26F7A64500EDD43C /* LoadingView.swift */,
 				305EDFB926F87AE200EDD43C /* FlashcardView.swift */,
+				30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1079,6 +1084,7 @@
 		308CD18F26F7474A00B0660D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				30AD8769270ACB1D00395C05 /* tries */,
 				305EDFAE26F7AB4800EDD43C /* Alerts */,
 				308CD19026F7475E00B0660D /* Extensions */,
 			);
@@ -1132,6 +1138,14 @@
 				305009A12708DE58001E9E08 /* RepeatRevisionButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		30AD8769270ACB1D00395C05 /* tries */ = {
+			isa = PBXGroup;
+			children = (
+				30AD8771270ACB2F00395C05 /* InnerView.swift */,
+			);
+			path = tries;
 			sourceTree = "<group>";
 		};
 		9815F7A2213D071E00248968 /* InAppPurshase */ = {
@@ -2247,6 +2261,7 @@
 				9863384D21429ABB00E8B95A /* IAPurchaseVC.swift in Sources */,
 				300C706B26C8380A0092A492 /* DbVerbDAO.swift in Sources */,
 				308CD19E26F74BCE00B0660D /* CallToActionButton.swift in Sources */,
+				30CEDFCC2709F9CC0097A597 /* FlashcardViewModel.swift in Sources */,
 				98DEFC8720FDC25400DC32BB /* MainVC.swift in Sources */,
 				305EDFAD26F7A64500EDD43C /* LoadingView.swift in Sources */,
 				98C9834B20F750820080B08C /* AppDelegate.swift in Sources */,
@@ -2267,6 +2282,7 @@
 				98B01514212474670090006E /* LevelCheckBox.swift in Sources */,
 				9898A5F0212C2C1C003EAAFF /* ListVerbsVC.swift in Sources */,
 				9897DBF9213B5EE000F0851E /* EdgeInsetLabel.swift in Sources */,
+				30AD8772270ACB2F00395C05 /* InnerView.swift in Sources */,
 				9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */,
 				98A511D8214AFD55001107D9 /* NetworkActivityIndicatorManagment.swift in Sources */,
 			);

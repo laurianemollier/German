@@ -8,39 +8,33 @@
 
 import SwiftUI
 
-// https://www.hackingwithswift.com/quick-start/swiftui/how-to-synchronize-animations-from-one-view-to-another-with-matchedgeometryeffect
 struct FlashcardView<Front, Back>: View where Front: View, Back: View {
+    
+    @ObservedObject var viewModel: FlashcardViewModel
+    
     private let front: () -> Front
     private let back: () -> Back
     private let onTapGestureAction: () -> Void
     
-    @Binding private var flipped: Bool
-    @State private var flashcardRotation = 0.0
-    @State private var contentRotation = 0.0
-    
-    let animationTime = 0.5
-    
-    init(flipped: Binding<Bool>,
-    @ViewBuilder front: @escaping () -> Front,
+    init(viewModel: FlashcardViewModel,
+        @ViewBuilder front: @escaping () -> Front,
          @ViewBuilder back: @escaping () -> Back,
-        
          onTapGestureAction: @escaping () -> Void) {
-        
+        self.viewModel = viewModel
         self.front = front
         self.back = back
         self.onTapGestureAction = onTapGestureAction
-        self._flipped = flipped
     }
     
     var body: some View {
         ZStack {
-            if flipped {
+            if viewModel.flipped {
                 back()
             } else {
                 front()
             }
         }
-        .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0))
+        .rotation3DEffect(.degrees(viewModel.contentRotation), axis: (x: 0, y: 1, z: 0))
         .padding()
         .frame(height: 200)
         .frame(maxWidth: .infinity)
@@ -51,23 +45,11 @@ struct FlashcardView<Front, Back>: View where Front: View, Back: View {
         )
         .padding()
         .onTapGesture {
-            if (!flipped) {
-                flipFlashcard()
+            if (!viewModel.flipped) {
+                viewModel.flipFlashcard()
                 onTapGestureAction()
             }
         }
-        .rotation3DEffect(.degrees(flashcardRotation), axis: (x: 0, y: 1, z: 0))
-    }
-    
-    func flipFlashcard() {
-        if (!flipped) {
-            withAnimation(Animation.linear(duration: animationTime)) {
-                flashcardRotation += 180
-            }
-            withAnimation(Animation.linear(duration: 0.001).delay(animationTime / 2)) {
-                contentRotation += 180
-                flipped = true
-            }
-        }
+        .rotation3DEffect(.degrees(viewModel.flashcardRotation), axis: (x: 0, y: 1, z: 0))
     }
 }
