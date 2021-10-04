@@ -9,14 +9,16 @@
 import SwiftUI
 
 struct RevisionHomeView: View {
-    @StateObject var viewModel = RevisionViewModel()
-    @Binding var navigationState: RevisionNavigationState?
     
+    @EnvironmentObject var navigation: RevisionNavigation
+    
+    @StateObject var viewModel = RevisionViewModel()
+  
     var body: some View {
         ZStack{
                 VStack {
                     CircularButton(action: {
-                        self.navigationState = RevisionNavigationState.pickStyle
+                        self.navigation.state = RevisionNavigationState.pickStyle
                     }, label: viewModel.verbToReviewTodayCount.map({String($0)}) ?? "--")
                     
                     Text("Verbs to review over \(viewModel.verbToReviewTodayCount.map({String($0)}) ?? "--") in your review list")
@@ -25,7 +27,7 @@ struct RevisionHomeView: View {
                         .padding(.bottom, 60)
                     
                     Button {
-                        self.navigationState = RevisionNavigationState.pickStyle
+                        self.navigation.state = RevisionNavigationState.pickStyle
                     } label: {
                         CallToActionButton(title: "Review")
                     }
@@ -50,7 +52,7 @@ struct RevisionHomeView: View {
 
 struct RevisionHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        RevisionHomeView(navigationState: .constant(RevisionNavigationState.home))
+        RevisionHomeView()
     }
 }
 

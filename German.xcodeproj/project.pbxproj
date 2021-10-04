@@ -42,6 +42,7 @@
 		309EDBA22701D0C000BE78D5 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBA12701D0C000BE78D5 /* FrontCardView.swift */; };
 		309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBAA2701D0E700BE78D5 /* BackCardView.swift */; };
 		30AD8772270ACB2F00395C05 /* InnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AD8771270ACB2F00395C05 /* InnerView.swift */; };
+		30AD8774270AD3ED00395C05 /* RevisionNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AD8773270AD3ED00395C05 /* RevisionNavigation.swift */; };
 		30B6A3E927098F9A0026474C /* ReviewRateProgressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */; };
 		30CEDFCC2709F9CC0097A597 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */; };
 		9815F7A4213D073000248968 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A3213D073000248968 /* IAPProducts.swift */; };
@@ -529,6 +530,7 @@
 		309EDBA12701D0C000BE78D5 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		309EDBAA2701D0E700BE78D5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 		30AD8771270ACB2F00395C05 /* InnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerView.swift; sourceTree = "<group>"; };
+		30AD8773270AD3ED00395C05 /* RevisionNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionNavigation.swift; sourceTree = "<group>"; };
 		30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRateProgressionView.swift; sourceTree = "<group>"; };
 		30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		9804A8C0213E445700B630A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1109,6 +1111,7 @@
 				308CD19426F747CC00B0660D /* RevisionView.swift */,
 				305EDFA326F79C7400EDD43C /* RevisionViewModel.swift */,
 				305EDFBD26F881BF00EDD43C /* RevisionNavigationState.swift */,
+				30AD8773270AD3ED00395C05 /* RevisionNavigation.swift */,
 			);
 			path = Revision;
 			sourceTree = "<group>";
@@ -2235,6 +2238,7 @@
 				300C707126C841090092A492 /* LearningVerbDAO.swift in Sources */,
 				9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */,
 				98483A1B214587A600AF7115 /* SelectLevelVC.swift in Sources */,
+				30AD8774270AD3ED00395C05 /* RevisionNavigation.swift in Sources */,
 				300C707426C842ED0092A492 /* LocalDbLearningVerbDAO.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */,
 				305009A22708DE58001E9E08 /* RepeatRevisionButton.swift in Sources */,

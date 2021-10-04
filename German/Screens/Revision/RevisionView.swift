@@ -11,28 +11,26 @@ import SwiftUI
 struct RevisionView: View {
     
     // TODO: environement
-    @State var navigationState: RevisionNavigationState? = RevisionNavigationState.home
+    @StateObject var navigation: RevisionNavigation = RevisionNavigation(state: RevisionNavigationState.home)
     
     var body: some View {
         // https://github.com/matteopuc/swiftui-navigation-stack
         NavigationView{
-            switch self.navigationState {
+            switch self.navigation.state {
             case .home:
-                RevisionHomeView(navigationState: $navigationState)
+                RevisionHomeView().environmentObject(navigation)
             //                    .transition(.move(edge: .trailing))
             //                    .animation(.default)
             case .pickStyle:
-                PickRevisionStyleView(navigationState: $navigationState)
+                PickRevisionStyleView().environmentObject(navigation)
             //                    .transition(.move(edge: .trailing))
             //                    .animation(.default)
             case .review:
-                ReviewVerbView(
-                    viewModel: ReviewVerbViewModel(navigationState:$navigationState),
-                               flashcardViewModel: FlashcardViewModel())
+                ReviewVerbView().environmentObject(navigation)
             //                    .transition(.move(edge: .trailing))
             //                    .animation(.default)
             default:
-                RevisionHomeView(navigationState: $navigationState)
+                RevisionHomeView().environmentObject(navigation)
             //                    .transition(.move(edge: .trailing))
             //                    .animation(.default)
             }

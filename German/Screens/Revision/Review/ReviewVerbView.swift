@@ -15,8 +15,10 @@ struct ReviewVerbView: View {
     // MARK: - Variables
     // ------------------
     
-    @StateObject var viewModel: ReviewVerbViewModel
-    @StateObject var flashcardViewModel: FlashcardViewModel
+    @EnvironmentObject var navigation: RevisionNavigation
+    
+    @StateObject var viewModel: ReviewVerbViewModel = ReviewVerbViewModel()
+    @StateObject var flashcardViewModel: FlashcardViewModel = FlashcardViewModel()
     
     var body: some View {
         VStack {
@@ -42,12 +44,18 @@ struct ReviewVerbView: View {
         }
         .onAppear {
             viewModel.getVerbToReview()
-            viewModel.setActionOnNextVerb {
-                flashcardViewModel.flipped = false
-            }
+            viewModel.setAction(
+                onNextVerb: {
+                    flashcardViewModel.flipped = false
+                })
+            
+            viewModel.setAction(
+                onEndRevisionSession: {
+                    navigation.state = RevisionNavigationState.home
+                })
         }
         .overlay(Button {
-            viewModel.navigationState = RevisionNavigationState.pickStyle
+            navigation.state = RevisionNavigationState.pickStyle
         } label: {
             XDismissButton()
         }, alignment: .topTrailing)

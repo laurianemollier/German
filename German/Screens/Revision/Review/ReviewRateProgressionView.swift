@@ -62,8 +62,8 @@ struct ReviewRateProgressionView: View {
     }
 }
 
-struct ReviewRateProgressionView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReviewRateProgressionView(viewModel: ReviewVerbViewModel(navigationState: .constant(RevisionNavigationState.review)))
-    }
-}
+//struct ReviewRateProgressionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ReviewRateProgressionView(viewModel: ReviewVerbViewModel(navigationState: .constant(RevisionNavigationState.review)))
+//    }
+//}

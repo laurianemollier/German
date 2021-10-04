@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PickRevisionStyleView: View {
     
-    @Binding var navigationState: RevisionNavigationState?
+    @EnvironmentObject var navigation: RevisionNavigation
     
     var body: some View {
         NavigationView{
@@ -19,7 +19,7 @@ struct PickRevisionStyleView: View {
                     label: "Review all temps together",
                     image: Image(systemName: "xmark"),
                     action: {
-                        navigationState = RevisionNavigationState.review
+                        navigation.state = RevisionNavigationState.review
                     }
                 )
                 .padding(.bottom, 60)
@@ -28,20 +28,20 @@ struct PickRevisionStyleView: View {
                     label: "Review temps 1 by 1",
                     image: Image(systemName: "xmark"),
                     action: {
-                        navigationState = RevisionNavigationState.review
+                        navigation.state = RevisionNavigationState.review
                     }
                 )
             }
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton(action: {
-            navigationState = RevisionNavigationState.home
+            navigation.state = RevisionNavigationState.home
         }))
     }
 }
 
 struct PickRevisionStyleView_Previews: PreviewProvider {
     static var previews: some View {
-        PickRevisionStyleView(navigationState: .constant(RevisionNavigationState.pickStyle))
+        PickRevisionStyleView()
     }
 }

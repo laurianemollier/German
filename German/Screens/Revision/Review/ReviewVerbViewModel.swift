@@ -16,8 +16,6 @@ import AVFoundation
 // https://rhonabwy.com/2021/02/13/nested-observable-objects-in-swiftui/
 final class ReviewVerbViewModel: ObservableObject {
     
-    @Binding var navigationState: RevisionNavigationState?
-    
     // ------------------
     // MARK: - Variables
     // ------------------
@@ -40,8 +38,7 @@ final class ReviewVerbViewModel: ObservableObject {
     // MARK: - Init
     // ------------
     
-    init(navigationState: Binding<RevisionNavigationState?>) {
-        self._navigationState = navigationState
+    init() {
         self.isLoading = true
         self.index = 0
         self.resultVerbsReviewed = []
@@ -49,7 +46,7 @@ final class ReviewVerbViewModel: ObservableObject {
         self.audioEnable = Audio.shared.isOn()
     }
     
-    func setActionOnNextVerb(onNextVerb: @escaping () -> Void) {
+    func setAction(onNextVerb: @escaping () -> Void) {
         self.actionOnNextVerb = onNextVerb
     }
     
@@ -191,8 +188,9 @@ final class ReviewVerbViewModel: ObservableObject {
     
     private func endRevisionSession() throws {
         let dbResultVerbsReviewed = resultVerbsReviewed.map({ $0.toDbUserLearningVerb()})
+        actionOnEndRevisionSession()
         _ = try DAO.shared.update(learningVerbs: dbResultVerbsReviewed)
-        navigationState = RevisionNavigationState.home // TODO
+       
     }
     
     // -----------------------
