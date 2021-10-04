@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct LearnView: View {
     
@@ -15,21 +16,28 @@ struct LearnView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: Text("Second View"), tag: "Second", selection: $selection) { EmptyView() }
+//                NavigationLink(destination: Text("Second View"), tag: "Second", selection: $selection) { EmptyView() }
+//                
+//                NavigationLink(destination: Text("Third View"), tag: "Third", selection: $selection) { EmptyView() }
+//                
+//                Button("Tap to show second") {
+//                    self.selection = "Second"
+//                }
                 
-                NavigationLink(destination: Text("Third View"), tag: "Third", selection: $selection) { EmptyView() }
-                
-                Button("Tap to show second") {
-                    self.selection = "Second"
-                }
-                Button("Tap to show third") {
-                    self.selection = "Third"
+                Button {
+                    do {
+                        try DAO.shared.addRandomVerbToReviewList(ofLevel: [Level.A2], count: 10)
+                    }
+                    catch {
+                        SpeedLog.print(error)
+                    }
+                    
+                } label: {
+                    ToChangeButton(
+                        title: "Add randomly some verb",                        backgroundColor: Color.orange)
                 }
             }
-            .navigationTitle("Navigation")
         }
-//        .navigationTitle("Navigation")
-//        .navigationBarTitleDisplayMode(.inline)
     }
     
 }

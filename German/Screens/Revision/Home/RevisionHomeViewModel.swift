@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-final class RevisionViewModel: ObservableObject {
+final class RevisionHomeViewModel: ObservableObject {
     
     // ------------------
     // MARK: - Variables
@@ -17,11 +17,21 @@ final class RevisionViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var alertItem: AlertItem?
     
+    @Published var isRevisionDisabled: Bool = false
+    
     /// The number of verb that is on the review list of this user
     @Published var verbInReviewListCount: Int?
     
     /// The number of verb that the user as to review today
-    @Published var verbToReviewTodayCount: Int?
+    @Published var verbToReviewTodayCount: Int? {
+        didSet {
+            if let count = verbToReviewTodayCount {
+                self.isRevisionDisabled = count <= 0
+            } else {
+                self.isRevisionDisabled = false
+            }
+        }
+    }
     
     /// Determine number of verb that the user will review in one review session
     @Published var nbrVerbInReviewSession = 10

@@ -26,7 +26,7 @@ struct ReviewRateProgressionView: View {
                             SpeedLog.print(error)
                         }
                     } label: {
-                        RepeatRevisionButton(title: progression.regressionName()!, // TODO
+                        ToChangeButton(title: progression.regressionName()!, // TODO
                                              backgroundColor: Color.red)
                     }
                     
@@ -39,7 +39,7 @@ struct ReviewRateProgressionView: View {
                         }
                         
                     } label: {
-                        RepeatRevisionButton(
+                        ToChangeButton(
                             title: progression.stagnationName()!, // TODO
                             backgroundColor: Color.orange)
                     }
@@ -52,7 +52,7 @@ struct ReviewRateProgressionView: View {
                             SpeedLog.print(error)
                         }
                     } label: {
-                        RepeatRevisionButton(
+                        ToChangeButton(
                             title: progression.progressionName()!, // TODO
                             backgroundColor: Color.green)
                     }

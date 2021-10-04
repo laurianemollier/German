@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-struct RepeatRevisionButton: View {
+// TODO: lolo
+struct ToChangeButton: View {
     
     let title: LocalizedStringKey
     
@@ -26,9 +27,9 @@ struct RepeatRevisionButton: View {
     }
 }
 
-struct RepeatRevisionButton_Previews: PreviewProvider {
+struct ToChangeButton_Previews: PreviewProvider {
     static var previews: some View {
-        RepeatRevisionButton(
+        ToChangeButton(
             title: "1 semaine",
             backgroundColor: Color.brandPrimary
         )

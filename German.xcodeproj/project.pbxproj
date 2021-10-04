@@ -19,9 +19,9 @@
 		300C707C26C964440092A492 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707B26C964440092A492 /* CustomError.swift */; };
 		3050099527085606001E9E08 /* VerbTemps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099427085606001E9E08 /* VerbTemps.swift */; };
 		305009A027085F01001E9E08 /* Text+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099F27085F01001E9E08 /* Text+Ext.swift */; };
-		305009A22708DE58001E9E08 /* RepeatRevisionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305009A12708DE58001E9E08 /* RepeatRevisionButton.swift */; };
+		305009A22708DE58001E9E08 /* ToChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305009A12708DE58001E9E08 /* ToChangeButton.swift */; };
 		305009A42708E6AD001E9E08 /* ReviewVerbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305009A32708E6AD001E9E08 /* ReviewVerbViewModel.swift */; };
-		305EDFA426F79C7400EDD43C /* RevisionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFA326F79C7400EDD43C /* RevisionViewModel.swift */; };
+		305EDFA426F79C7400EDD43C /* RevisionHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFA326F79C7400EDD43C /* RevisionHomeViewModel.swift */; };
 		305EDFAD26F7A64500EDD43C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFAC26F7A64500EDD43C /* LoadingView.swift */; };
 		305EDFB026F7AB5800EDD43C /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFAF26F7AB5800EDD43C /* AlertItem.swift */; };
 		305EDFB326F85F7D00EDD43C /* PickRevisionStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB226F85F7D00EDD43C /* PickRevisionStyleView.swift */; };
@@ -507,9 +507,9 @@
 		300C707B26C964440092A492 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		3050099427085606001E9E08 /* VerbTemps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTemps.swift; sourceTree = "<group>"; };
 		3050099F27085F01001E9E08 /* Text+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Ext.swift"; sourceTree = "<group>"; };
-		305009A12708DE58001E9E08 /* RepeatRevisionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatRevisionButton.swift; sourceTree = "<group>"; };
+		305009A12708DE58001E9E08 /* ToChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToChangeButton.swift; sourceTree = "<group>"; };
 		305009A32708E6AD001E9E08 /* ReviewVerbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbViewModel.swift; sourceTree = "<group>"; };
-		305EDFA326F79C7400EDD43C /* RevisionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionViewModel.swift; sourceTree = "<group>"; };
+		305EDFA326F79C7400EDD43C /* RevisionHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionHomeViewModel.swift; sourceTree = "<group>"; };
 		305EDFAC26F7A64500EDD43C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		305EDFAF26F7AB5800EDD43C /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		305EDFB226F85F7D00EDD43C /* PickRevisionStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickRevisionStyleView.swift; sourceTree = "<group>"; };
@@ -1050,6 +1050,7 @@
 			isa = PBXGroup;
 			children = (
 				305EDFBF26F8829E00EDD43C /* RevisionHomeView.swift */,
+				305EDFA326F79C7400EDD43C /* RevisionHomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1109,7 +1110,6 @@
 				305EDFB626F8791C00EDD43C /* Review */,
 				305EDFB126F85F1C00EDD43C /* PickRevisionStyle */,
 				308CD19426F747CC00B0660D /* RevisionView.swift */,
-				305EDFA326F79C7400EDD43C /* RevisionViewModel.swift */,
 				305EDFBD26F881BF00EDD43C /* RevisionNavigationState.swift */,
 				30AD8773270AD3ED00395C05 /* RevisionNavigation.swift */,
 			);
@@ -1138,7 +1138,7 @@
 				305EDFC226F8920D00EDD43C /* BackButton.swift */,
 				308CD19D26F74BCE00B0660D /* CallToActionButton.swift */,
 				305EDFBB26F8807600EDD43C /* XDismissButton.swift */,
-				305009A12708DE58001E9E08 /* RepeatRevisionButton.swift */,
+				305009A12708DE58001E9E08 /* ToChangeButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -2209,7 +2209,7 @@
 				305009A42708E6AD001E9E08 /* ReviewVerbViewModel.swift in Sources */,
 				308CD19526F747CC00B0660D /* RevisionView.swift in Sources */,
 				98CB8A322136BC5500C6944F /* NotImplementedYetVC.swift in Sources */,
-				305EDFA426F79C7400EDD43C /* RevisionViewModel.swift in Sources */,
+				305EDFA426F79C7400EDD43C /* RevisionHomeViewModel.swift in Sources */,
 				98685F7F2129663100DA327D /* BackwardCardVC.swift in Sources */,
 				305EDFC326F8920D00EDD43C /* BackButton.swift in Sources */,
 				300C707A26C846AC0092A492 /* VerbDAO.swift in Sources */,
@@ -2241,7 +2241,7 @@
 				30AD8774270AD3ED00395C05 /* RevisionNavigation.swift in Sources */,
 				300C707426C842ED0092A492 /* LocalDbLearningVerbDAO.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */,
-				305009A22708DE58001E9E08 /* RepeatRevisionButton.swift in Sources */,
+				305009A22708DE58001E9E08 /* ToChangeButton.swift in Sources */,
 				308CD19226F7476F00B0660D /* Color+Ext.swift in Sources */,
 				9815F7A4213D073000248968 /* IAPProducts.swift in Sources */,
 				98B53B70212F10B000565C53 /* BasicButton.swift in Sources */,

@@ -65,8 +65,7 @@ final class ReviewVerbViewModel: ObservableObject {
             self.index = 0
             self.resultVerbsReviewed = []
             self.audioEnable = Audio.shared.isOn()
-//            self.verbsToReview = try DAO.shared.verbToReviewToday(limit: 10)
-            self.verbsToReview = [LearningVerb(id: 0, verb: Verbs.verbs[0]), LearningVerb(id: 1, verb: Verbs.verbs[1])]
+            self.verbsToReview = try DAO.shared.verbToReviewToday(limit: 10)
             self.currentLearningVerb = self.verbsToReview[index] // TODO: could cause error
             isLoading = false
         }

@@ -12,25 +12,27 @@ struct RevisionHomeView: View {
     
     @EnvironmentObject var navigation: RevisionNavigation
     
-    @StateObject var viewModel = RevisionViewModel()
+    @StateObject var viewModel = RevisionHomeViewModel()
   
     var body: some View {
         ZStack{
                 VStack {
                     CircularButton(action: {
-                        self.navigation.state = RevisionNavigationState.pickStyle
+                            self.navigation.state = RevisionNavigationState.pickStyle
                     }, label: viewModel.verbToReviewTodayCount.map({String($0)}) ?? "--")
+                        .disabled(viewModel.isRevisionDisabled)
                     
-                    Text("Verbs to review over \(viewModel.verbToReviewTodayCount.map({String($0)}) ?? "--") in your review list")
+                    
+                    Text("Verbs to review over \(viewModel.verbInReviewListCount.map({String($0)}) ?? "--") in your review list")
                         .font(.title3)
                         .fontWeight(.semibold)
                         .padding(.bottom, 60)
                     
                     Button {
-                        self.navigation.state = RevisionNavigationState.pickStyle
+                            self.navigation.state = RevisionNavigationState.pickStyle
                     } label: {
                         CallToActionButton(title: "Review")
-                    }
+                    }.disabled(viewModel.isRevisionDisabled)
                     
                     Spacer()
                 }
