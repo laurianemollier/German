@@ -17,6 +17,7 @@
 		300C707626C843830092A492 /* DbLearningVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707526C843830092A492 /* DbLearningVerbDAO.swift */; };
 		300C707A26C846AC0092A492 /* VerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707926C846AC0092A492 /* VerbDAO.swift */; };
 		300C707C26C964440092A492 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C707B26C964440092A492 /* CustomError.swift */; };
+		3021006B270CB26200BA30E9 /* StatisticsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3021006A270CB26200BA30E9 /* StatisticsButton.swift */; };
 		3050099527085606001E9E08 /* VerbTemps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099427085606001E9E08 /* VerbTemps.swift */; };
 		305009A027085F01001E9E08 /* Text+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099F27085F01001E9E08 /* Text+Ext.swift */; };
 		305009A22708DE58001E9E08 /* ToChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305009A12708DE58001E9E08 /* ToChangeButton.swift */; };
@@ -49,7 +50,7 @@
 		9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A7213D09DF00248968 /* IAPHelper.swift */; };
 		9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829D4B821416E5F0004FCB3 /* Audio.swift */; };
 		98301E54212C76FB00432C84 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E53212C76FB00432C84 /* StatisticsVC.swift */; };
-		98301E56212C771900432C84 /* StatisticsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E55212C771900432C84 /* StatisticsButton.swift */; };
+		98301E56212C771900432C84 /* StatisticsUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E55212C771900432C84 /* StatisticsUIButton.swift */; };
 		98301E5D212C7B7100432C84 /* VerbCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98301E5C212C7B7100432C84 /* VerbCardView.xib */; };
 		98301E5F212C7C2B00432C84 /* VerbCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98301E5E212C7C2B00432C84 /* VerbCardView.swift */; };
 		983B2495211C4A0C009C33B1 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2494211C4A0C009C33B1 /* Verb.swift */; };
@@ -505,6 +506,7 @@
 		300C707526C843830092A492 /* DbLearningVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbLearningVerbDAO.swift; sourceTree = "<group>"; };
 		300C707926C846AC0092A492 /* VerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbDAO.swift; sourceTree = "<group>"; };
 		300C707B26C964440092A492 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		3021006A270CB26200BA30E9 /* StatisticsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsButton.swift; sourceTree = "<group>"; };
 		3050099427085606001E9E08 /* VerbTemps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTemps.swift; sourceTree = "<group>"; };
 		3050099F27085F01001E9E08 /* Text+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Ext.swift"; sourceTree = "<group>"; };
 		305009A12708DE58001E9E08 /* ToChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToChangeButton.swift; sourceTree = "<group>"; };
@@ -540,7 +542,7 @@
 		9815F7A9213D0B1C00248968 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9829D4B821416E5F0004FCB3 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		98301E53212C76FB00432C84 /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
-		98301E55212C771900432C84 /* StatisticsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsButton.swift; sourceTree = "<group>"; };
+		98301E55212C771900432C84 /* StatisticsUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsUIButton.swift; sourceTree = "<group>"; };
 		98301E5C212C7B7100432C84 /* VerbCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerbCardView.xib; sourceTree = "<group>"; };
 		98301E5E212C7C2B00432C84 /* VerbCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbCardView.swift; sourceTree = "<group>"; };
 		983B2494211C4A0C009C33B1 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
@@ -1139,6 +1141,7 @@
 				308CD19D26F74BCE00B0660D /* CallToActionButton.swift */,
 				305EDFBB26F8807600EDD43C /* XDismissButton.swift */,
 				305009A12708DE58001E9E08 /* ToChangeButton.swift */,
+				3021006A270CB26200BA30E9 /* StatisticsButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -1174,7 +1177,7 @@
 			isa = PBXGroup;
 			children = (
 				98301E53212C76FB00432C84 /* StatisticsVC.swift */,
-				98301E55212C771900432C84 /* StatisticsButton.swift */,
+				98301E55212C771900432C84 /* StatisticsUIButton.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -2247,6 +2250,7 @@
 				98B53B70212F10B000565C53 /* BasicButton.swift in Sources */,
 				300C706D26C83AE50092A492 /* DbVerbTranslationDAO.swift in Sources */,
 				3050099527085606001E9E08 /* VerbTemps.swift in Sources */,
+				3021006B270CB26200BA30E9 /* StatisticsButton.swift in Sources */,
 				98FA119F216E134C0068AB4C /* VerbDetailsVC.swift in Sources */,
 				305EDFB826F8795500EDD43C /* ReviewVerbView.swift in Sources */,
 				98EA96A5214E68640034B360 /* Background3.swift in Sources */,
@@ -2276,7 +2280,7 @@
 				98B53B77212F223A00565C53 /* Background1.swift in Sources */,
 				98685F7021270E2B00DA327D /* SpeedLog.swift in Sources */,
 				98301E5F212C7C2B00432C84 /* VerbCardView.swift in Sources */,
-				98301E56212C771900432C84 /* StatisticsButton.swift in Sources */,
+				98301E56212C771900432C84 /* StatisticsUIButton.swift in Sources */,
 				98301E54212C76FB00432C84 /* StatisticsVC.swift in Sources */,
 				988DB9152125C09900AFAEF4 /* LocalDbVerbTranslationDAO.swift in Sources */,
 				98A511D0214AFA80001107D9 /* BoughtIAPProducts.swift in Sources */,

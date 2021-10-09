@@ -17,23 +17,23 @@ class StatisticsVC: UIViewController {
         back()
     }
     
-    @IBOutlet weak var progressionNotSeenYet: StatisticsButton!
+    @IBOutlet weak var progressionNotSeenYet: StatisticsUIButton!
     
-    @IBOutlet weak var progressionLevel1: StatisticsButton!
+    @IBOutlet weak var progressionLevel1: StatisticsUIButton!
     
-    @IBOutlet weak var progressionLevel2: StatisticsButton!
+    @IBOutlet weak var progressionLevel2: StatisticsUIButton!
     
-    @IBOutlet weak var progressionLevel3: StatisticsButton!
+    @IBOutlet weak var progressionLevel3: StatisticsUIButton!
     
-    @IBOutlet weak var progressionLevel4: StatisticsButton!
+    @IBOutlet weak var progressionLevel4: StatisticsUIButton!
     
-    @IBOutlet weak var progressionLevel5: StatisticsButton!
+    @IBOutlet weak var progressionLevel5: StatisticsUIButton!
     
-    @IBOutlet weak var progressionLevel6: StatisticsButton!
+    @IBOutlet weak var progressionLevel6: StatisticsUIButton!
     
-    @IBOutlet weak var progressionLevel7: StatisticsButton!
+    @IBOutlet weak var progressionLevel7: StatisticsUIButton!
     
-    @IBOutlet weak var progressionLevel8: StatisticsButton!
+    @IBOutlet weak var progressionLevel8: StatisticsUIButton!
     
     //    @IBOutlet weak var progressionToIgnore: StatisticsButton!
     

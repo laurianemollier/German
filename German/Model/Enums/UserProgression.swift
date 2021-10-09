@@ -38,24 +38,24 @@ enum UserProgression: String {
         return self == UserProgression.toIgnore || self == UserProgression.notSeenYet
     }
     
-    func image() -> UIImage? {
-        switch self { // TODO
+    func image() -> Image? {
+        switch self {
         case UserProgression.level1:
-            return #imageLiteral(resourceName: "UP Verypoor")
+            return Image("User progression - Very poor")
         case UserProgression.level2:
-            return #imageLiteral(resourceName: "UP Poor")
+            return Image("User progression - Poor")
         case UserProgression.level3:
-            return #imageLiteral(resourceName: "UP Good")
+            return Image("User progression - Good")
         case UserProgression.level4:
-            return #imageLiteral(resourceName: "UP Very Good")
+            return Image("User progression - Very good")
         case UserProgression.level5:
-            return #imageLiteral(resourceName: "UP Excelent")
+            return Image("User progression - Excelent")
         case UserProgression.level6:
-            return #imageLiteral(resourceName: "UP Excelent")
+            return Image("User progression - Excelent")
         case UserProgression.level7:
-            return #imageLiteral(resourceName: "UP Superb")
+            return Image("User progression - Superb")
         case UserProgression.level8:
-            return #imageLiteral(resourceName: "UP Fantastic")
+            return Image("User progression - Fantastic")
         default:
             return nil
         }
@@ -63,7 +63,7 @@ enum UserProgression: String {
     }
     
     
-    func name() -> LocalizedStringKey? {
+    func name() -> LocalizedStringKey {
         switch self { // TODO
         case UserProgression.level1:
             return "Inexistant"
@@ -83,8 +83,8 @@ enum UserProgression: String {
             return "Optimal"
         case UserProgression.notSeenYet:
             return "Pas encore revu(s)"
-        default:
-            return nil
+        case UserProgression.toIgnore:
+            return "Ignoré"
         }
     }
     
@@ -240,5 +240,5 @@ enum UserProgression: String {
             return nil
         }
     }
-
+    
 }

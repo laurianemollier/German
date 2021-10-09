@@ -46,6 +46,10 @@ struct ReviewVerbView: View {
                     } else {
                         Button {
                             flashcardViewModel.flipFlashcard()
+                            do {try viewModel.audioPlay()}
+                            catch {
+                                SpeedLog.print(error)
+                            }
                         } label: {
                             Image("RVTurnButton")
                         }

@@ -41,7 +41,7 @@ class UserProgressionButton: UIButton {
         
         // set the icon
         if let image = userProgression.image(){
-            setUpIcon(image: image, borderHorizontal: borderHorizontal)
+//            setUpIcon(image: image, borderHorizontal: borderHorizontal)
             setUpText(withIcon: true, userProgression: userProgression, borderHorizontal: borderHorizontal)
         }
         else{ // No icon

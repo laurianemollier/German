@@ -10,7 +10,7 @@
 import UIKit
 
 @IBDesignable
-class StatisticsButton: UIButton {
+class StatisticsUIButton: UIButton {
     
     var userProgression: UserProgression!
     var nbrVerb: Int!
@@ -48,7 +48,7 @@ class StatisticsButton: UIButton {
         
         if let image = userProgression.image(){
             // set the icon
-            setUpIcon(image: image, borderHorizontal: borderHorizontal)
+//            setUpIcon(image: image, borderHorizontal: borderHorizontal)
             setUpText(withIcon: true, userProgression: userProgression, borderHorizontal: borderHorizontal)
         }
         else{
