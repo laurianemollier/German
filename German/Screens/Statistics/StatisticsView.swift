@@ -28,17 +28,17 @@ struct StatisticsView: View {
         }
     }
     
-    private func statisticsButton(userProgression: UserProgression) -> NavigationLink<StatisticsButton, Text> {
+    private func statisticsButton(userProgression: UserProgression) -> NavigationLink<StatisticsButton, VerbListView> {
         do {
             let verbs = try DAO.shared.select(userProgression: userProgression)
             
-            return NavigationLink(destination: Text("Second View")) {
+            return NavigationLink(destination: VerbListView(userProgression: userProgression)) {
                 StatisticsButton(userProgression: userProgression, verbCount: verbs.count)
             }
             
         } catch {
             SpeedLog.print(error)
-            return NavigationLink(destination: Text("Second View")) {
+            return NavigationLink(destination: VerbListView(userProgression: userProgression)) {
                 StatisticsButton(userProgression: userProgression, verbCount: 0)
             }
         }

@@ -11,7 +11,7 @@ import AVFoundation
 
 
 /// This class represent the user's learning data for this verb
-struct LearningVerb{
+struct LearningVerb: Identifiable{
     
     /// The id (unique) in the database
     let id: Int64
