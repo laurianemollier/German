@@ -19,6 +19,7 @@ struct ReviewVerbView: View {
     
     @StateObject var viewModel: ReviewVerbViewModel = ReviewVerbViewModel()
     @StateObject var flashcardViewModel: FlashcardViewModel = FlashcardViewModel()
+    @StateObject var audioToggleViewModel: AudioToggleViewModel = AudioToggleViewModel()
     
     var body: some View {
         NavigationView{
@@ -32,14 +33,18 @@ struct ReviewVerbView: View {
                     flashcardView(verb: currentVerb.verb)
                     
                     if flashcardViewModel.flipped {
-                        ReviewRateProgressionView(viewModel: viewModel)
+                        ReviewRateProgressionView(
+                            audioToggleViewModel: audioToggleViewModel,
+                            viewModel: viewModel
+                        )
                     } else {
-                        flipFlashcardButton
+                        flipFlashcardButton(verb: currentVerb.verb)
                     }
                     
                     HStack {
                         Spacer()
-                        audioButton.padding(.trailing, 40)
+                        AudioToggleView(viewModel: audioToggleViewModel)
+                            .padding(.trailing, 40)
                     }
                 }
             }
@@ -61,17 +66,20 @@ struct ReviewVerbView: View {
         } back: {
             BackCardView(verb: verb)
         } onTapGestureAction: {
-            do {try viewModel.audioPlay()}
+            do {
+                audioToggleViewModel.audioStop()
+                try audioToggleViewModel.audioPlay(verb: verb)
+            }
             catch {
                 SpeedLog.print(error)
             }
         }
     }
     
-    private var flipFlashcardButton: some View {
+    private func flipFlashcardButton(verb: Verb) -> some View {
         Button {
             flashcardViewModel.flipFlashcard()
-            do {try viewModel.audioPlay()}
+            do {try audioToggleViewModel.audioPlay(verb: verb)}
             catch {
                 SpeedLog.print(error)
             }
@@ -80,14 +88,6 @@ struct ReviewVerbView: View {
         }
     }
     
-    private var audioButton: some View {
-        Button {
-            viewModel.toggleAudio()
-        } label: {
-            if(Audio.shared.isOn()) {Text("🔔")}
-            else {Text("🔕")}
-        }
-      }
     
     private func onAppear() {
         viewModel.getVerbToReview()

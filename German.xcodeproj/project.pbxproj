@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3009DDA0271A9E67002C5B97 /* AudioToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009DD9F271A9E67002C5B97 /* AudioToggleView.swift */; };
+		3009DDA9271A9EAF002C5B97 /* AudioToggleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009DDA8271A9EAF002C5B97 /* AudioToggleViewModel.swift */; };
 		300C705226C2D9B60092A492 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300C704526C2D9610092A492 /* SQLite.framework */; };
 		300C705326C2D9B60092A492 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 300C704526C2D9610092A492 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		300C706826C836F90092A492 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706726C836F90092A492 /* DAO.swift */; };
@@ -499,6 +501,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3009DD9F271A9E67002C5B97 /* AudioToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioToggleView.swift; sourceTree = "<group>"; };
+		3009DDA8271A9EAF002C5B97 /* AudioToggleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioToggleViewModel.swift; sourceTree = "<group>"; };
 		300C703A26C2D9610092A492 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		300C705626C2E89B0092A492 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		300C705726C2E89B0092A492 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -1094,6 +1098,8 @@
 				30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */,
 				308EBB902712CEE000214358 /* SearchBarView.swift */,
 				308EBB922712E36300214358 /* SearchBarViewModel.swift */,
+				3009DD9F271A9E67002C5B97 /* AudioToggleView.swift */,
+				3009DDA8271A9EAF002C5B97 /* AudioToggleViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2234,6 +2240,7 @@
 				98685F352126BA4900DA327D /* Lang.swift in Sources */,
 				986DD42D212FE7F1000E5E49 /* UIFont.swift in Sources */,
 				308CD18B26F7465E00B0660D /* GermanApp.swift in Sources */,
+				3009DDA9271A9EAF002C5B97 /* AudioToggleViewModel.swift in Sources */,
 				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
 				308EBB8D2712C65C00214358 /* VerbListViewModel.swift in Sources */,
 				305009A42708E6AD001E9E08 /* ReviewVerbViewModel.swift in Sources */,
@@ -2271,6 +2278,7 @@
 				300C707126C841090092A492 /* LearningVerbDAO.swift in Sources */,
 				9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */,
 				98483A1B214587A600AF7115 /* SelectLevelVC.swift in Sources */,
+				3009DDA0271A9E67002C5B97 /* AudioToggleView.swift in Sources */,
 				30AD8774270AD3ED00395C05 /* RevisionNavigation.swift in Sources */,
 				300C707426C842ED0092A492 /* LocalDbLearningVerbDAO.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */,

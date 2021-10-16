@@ -7,8 +7,6 @@
 //
 
 import SwiftUI
-import UIKit
-import AVFoundation
 
 // swiftUI having a ObservableObject in a ObservableObject
 // https://stackoverflow.com/questions/62824472/swiftui-is-it-ok-to-put-an-observableobject-inside-another-observableobject
@@ -31,9 +29,6 @@ final class ReviewVerbViewModel: ObservableObject {
     private var actionOnNextVerb: () -> Void = {}
     private var actionOnEndRevisionSession: () -> Void = {}
     
-    @Published var audioEnable: Bool
-    private var audioPlayer: AVAudioPlayer?
-    
     // ------------
     // MARK: - Init
     // ------------
@@ -43,7 +38,6 @@ final class ReviewVerbViewModel: ObservableObject {
         self.index = 0
         self.resultVerbsReviewed = []
         self.verbsToReview = []
-        self.audioEnable = Audio.shared.isOn()
     }
     
     func setAction(onNextVerb: @escaping () -> Void) {
@@ -62,9 +56,6 @@ final class ReviewVerbViewModel: ObservableObject {
         isLoading = true
         
         do {
-            self.index = 0
-            self.resultVerbsReviewed = []
-            self.audioEnable = Audio.shared.isOn()
             self.verbsToReview = try DAO.shared.verbToReviewToday(limit: 10)
             self.currentLearningVerb = self.verbsToReview[index] // TODO: could cause error
             isLoading = false
@@ -131,50 +122,9 @@ final class ReviewVerbViewModel: ObservableObject {
         }
     }
     
-    // -------------
-    // MARK: - Audio
-    // -------------
-    
-    func toggleAudio() {
-        if(Audio.shared.isOn()){
-            audioEnable = false
-            Audio.shared.off()
-            audioStop()
-        }
-        else{
-            audioEnable = true
-            Audio.shared.on()
-        }
-    }
-    
-    func audioPlay() throws {
-        if let verb = currentLearningVerb?.verb {
-            let formatAudio = "mp3"
-            let nameAudioFile = verb.temps.infinitive.value
-            let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: formatAudio)!)
-            audioPlayer = try AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
-            audioPlayer!.play()
-            audioPlayer!.numberOfLoops = 0
-            
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-        }
-    }
-    
-    
-    func audioStop(){
-        if audioPlayer != nil && audioPlayer!.isPlaying{
-            audioPlayer!.stop()
-        }
-    }
-    
-    
     // ---------------
     // MARK: - Private
     // ---------------
-    
-    // -----------------------------
-    // MARK: - Private - review verb
-    // -----------------------------
     
     private func verbReviewedAction(newProgression: UserProgression, toReviewDate: Date) throws {
         if let currentVerb = currentLearningVerb {
@@ -190,8 +140,6 @@ final class ReviewVerbViewModel: ObservableObject {
     }
     
     private func nextVerb(updatedVerbReviewed: LearningVerb) throws {
-        audioStop()
-        
         self.resultVerbsReviewed.append(updatedVerbReviewed)
         self.index += 1
         

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ReviewRateProgressionView: View {
     
+    let audioToggleViewModel: AudioToggleViewModel
     @ObservedObject var viewModel: ReviewVerbViewModel
     
     var body: some View {
@@ -21,6 +22,7 @@ struct ReviewRateProgressionView: View {
                     Button {
                         do {
                         try viewModel.regress()
+                            audioToggleViewModel.audioStop()
                         }
                         catch {
                             SpeedLog.print(error)
@@ -33,6 +35,7 @@ struct ReviewRateProgressionView: View {
                     Button {
                         do {
                             try viewModel.stagnate()
+                            audioToggleViewModel.audioStop()
                         }
                         catch {
                             SpeedLog.print(error)
@@ -47,6 +50,7 @@ struct ReviewRateProgressionView: View {
                     Button {
                         do {
                             try viewModel.progress()
+                            audioToggleViewModel.audioStop()
                         }
                         catch {
                             SpeedLog.print(error)
