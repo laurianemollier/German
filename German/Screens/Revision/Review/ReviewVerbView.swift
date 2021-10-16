@@ -26,44 +26,20 @@ struct ReviewVerbView: View {
                 if let currentVerb = viewModel.currentLearningVerb {
                     HStack {
                         Spacer()
-                        
-                        Text("\(viewModel.index + 1)/\(viewModel.verbsToReview.count)").padding(.trailing, 40)
+                        progressionBar
                     }
-                    
-                    FlashcardView<FrontCardView, BackCardView>(viewModel: flashcardViewModel) {
-                        FrontCardView(verb: currentVerb.verb)
-                    } back: {
-                        BackCardView(verb: currentVerb.verb)
-                    } onTapGestureAction: {
-                        do {try viewModel.audioPlay()}
-                        catch {
-                            SpeedLog.print(error)
-                        }
-                    }
+                
+                    flashcardView(verb: currentVerb.verb)
                     
                     if flashcardViewModel.flipped {
                         ReviewRateProgressionView(viewModel: viewModel)
                     } else {
-                        Button {
-                            flashcardViewModel.flipFlashcard()
-                            do {try viewModel.audioPlay()}
-                            catch {
-                                SpeedLog.print(error)
-                            }
-                        } label: {
-                            Image("RVTurnButton")
-                        }
+                        flipFlashcardButton
                     }
                     
                     HStack {
                         Spacer()
-                        
-                        Button {
-                            viewModel.toggleAudio()
-                        } label: {
-                            if(Audio.shared.isOn()) {Text("🔔")}
-                            else {Text("🔕")}
-                        }.padding(.trailing, 40)
+                        audioButton.padding(.trailing, 40)
                     }
                 }
             }
@@ -72,18 +48,58 @@ struct ReviewVerbView: View {
         .navigationBarItems(leading: BackButton(action: {
             navigation.state = RevisionNavigationState.pickStyle
         }))
-        .onAppear {
-            viewModel.getVerbToReview()
-            viewModel.setAction(
-                onNextVerb: {
-                    flashcardViewModel.flipped = false
-                })
-            
-            viewModel.setAction(
-                onEndRevisionSession: {
-                    navigation.state = RevisionNavigationState.home
-                })
+        .onAppear{onAppear()}
+    }
+    
+    private var progressionBar: some View {
+        Text("\(viewModel.index + 1)/\(viewModel.verbsToReview.count)").padding(.trailing, 40)
+    }
+    
+    private func flashcardView(verb: Verb) -> some View {
+        FlashcardView<FrontCardView, BackCardView>(viewModel: flashcardViewModel) {
+            FrontCardView(verb: verb)
+        } back: {
+            BackCardView(verb: verb)
+        } onTapGestureAction: {
+            do {try viewModel.audioPlay()}
+            catch {
+                SpeedLog.print(error)
+            }
         }
+    }
+    
+    private var flipFlashcardButton: some View {
+        Button {
+            flashcardViewModel.flipFlashcard()
+            do {try viewModel.audioPlay()}
+            catch {
+                SpeedLog.print(error)
+            }
+        } label: {
+            Image("RVTurnButton")
+        }
+    }
+    
+    private var audioButton: some View {
+        Button {
+            viewModel.toggleAudio()
+        } label: {
+            if(Audio.shared.isOn()) {Text("🔔")}
+            else {Text("🔕")}
+        }
+      }
+    
+    private func onAppear() {
+        viewModel.getVerbToReview()
+        viewModel.setAction(
+            onNextVerb: {
+                flashcardViewModel.flipped = false
+            })
+        
+        viewModel.setAction(
+            onEndRevisionSession: {
+                navigation.state = RevisionNavigationState.home
+            })
     }
 }
 

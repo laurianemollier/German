@@ -13,33 +13,33 @@ struct StatisticsView: View {
     var body: some View {
         NavigationView {
             VStack{
-                statisticsButton(userProgression: UserProgression.notSeenYet)
-                statisticsButton(userProgression: UserProgression.level1)
-                statisticsButton(userProgression: UserProgression.level2)
-                statisticsButton(userProgression: UserProgression.level3)
-                statisticsButton(userProgression: UserProgression.level4)
-                statisticsButton(userProgression: UserProgression.level5)
-                statisticsButton(userProgression: UserProgression.level6)
-                statisticsButton(userProgression: UserProgression.level7)
-                statisticsButton(userProgression: UserProgression.level8)
+                userProgressionButton(userProgression: UserProgression.notSeenYet)
+                userProgressionButton(userProgression: UserProgression.level1)
+                userProgressionButton(userProgression: UserProgression.level2)
+                userProgressionButton(userProgression: UserProgression.level3)
+                userProgressionButton(userProgression: UserProgression.level4)
+                userProgressionButton(userProgression: UserProgression.level5)
+                userProgressionButton(userProgression: UserProgression.level6)
+                userProgressionButton(userProgression: UserProgression.level7)
+                userProgressionButton(userProgression: UserProgression.level8)
             }
             
             Spacer()
         }
     }
     
-    private func statisticsButton(userProgression: UserProgression) -> NavigationLink<StatisticsButton, VerbListView> {
+    private func userProgressionButton(userProgression: UserProgression) -> NavigationLink<UserProgressionButton, VerbListView> {
         do {
             let verbs = try DAO.shared.select(userProgression: userProgression)
             
             return NavigationLink(destination: VerbListView(userProgression: userProgression)) {
-                StatisticsButton(userProgression: userProgression, verbCount: verbs.count)
+                UserProgressionButton(userProgression: userProgression, verbCount: verbs.count)
             }
             
         } catch {
             SpeedLog.print(error)
             return NavigationLink(destination: VerbListView(userProgression: userProgression)) {
-                StatisticsButton(userProgression: userProgression, verbCount: 0)
+                UserProgressionButton(userProgression: userProgression, verbCount: 0)
             }
         }
     }

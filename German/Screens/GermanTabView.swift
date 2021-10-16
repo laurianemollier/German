@@ -8,6 +8,9 @@
 
 import SwiftUI
 
+
+// https://medium.com/@karaiskc/programmatic-navigation-in-swiftui-30b75613f285
+// https://github.com/matteopuc/swiftui-navigation-stack
 struct GermanTabView: View {
     var body: some View {
         TabView {

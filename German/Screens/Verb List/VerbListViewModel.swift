@@ -13,8 +13,28 @@ final class VerbListViewModel: ObservableObject {
     @Published var learningVerbs: [LearningVerb] = []
     @Published var alertItem: AlertItem?
     @Published var isLoading = false
-    @Published var isShowingDetail = false // TODO: lolo
-    @Published var selectedLearningVerb: LearningVerb?
+    @Published var selectedLearningVerb: LearningVerb? {
+        didSet {
+            SpeedLog.print("selectedLearningVerb")
+            SpeedLog.print(selectedLearningVerb)
+
+            if let _ = selectedLearningVerb {
+                isShowingDetail = true
+            }
+//            else {
+//                isShowingDetail = false
+//            }
+        }
+    }
+    @Published var isShowingDetail = false {
+        didSet {
+            SpeedLog.print("isShowingDetail")
+            SpeedLog.print(isShowingDetail)
+            if !isShowingDetail {
+                selectedLearningVerb = nil
+            }
+        }
+    }
     
     // if not defined, load all the verbs
     func loadData(userProgression: UserProgression?) {

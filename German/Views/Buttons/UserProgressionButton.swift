@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct StatisticsButton: View {
+struct UserProgressionButton: View {
     
     var userProgression: UserProgression
-    var verbCount: Int
+    var verbCount: Int?
     
     var body: some View {
         HStack{
@@ -25,9 +25,11 @@ struct StatisticsButton: View {
             
             Spacer()
             
-            Text("\(verbCount) verb\(verbCount > 1 ? "s" : "")")
-                .foregroundColor(.brandPrimary)
-                .padding(.trailing, 10)
+            if let count = verbCount {
+                Text("\(count) verb\(count > 1 ? "s" : "")")
+                    .foregroundColor(.brandPrimary)
+                    .padding(.trailing, 10)
+            }
         }
         .frame(width: 260, height: 50)
         .foregroundColor(.white)
@@ -38,6 +40,6 @@ struct StatisticsButton: View {
 
 struct StatisticsButton_Previews: PreviewProvider {
     static var previews: some View {
-        StatisticsButton(userProgression: UserProgression.level1, verbCount: 1)
+        UserProgressionButton(userProgression: UserProgression.level1, verbCount: 2)
     }
 }

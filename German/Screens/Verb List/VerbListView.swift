@@ -16,12 +16,24 @@ struct VerbListView: View {
     @StateObject var searchBarViewModel = SearchBarViewModel()
     
     var body: some View {
+        
+        // https://www.hackingwithswift.com/quick-start/swiftui/displaying-a-detail-screen-with-navigationlink
+//        if let selected = viewModel.selectedLearningVerb {
+//            NavigationLink(
+//                destination: LearningVerbDetailsView(learningVerb: selected, isShowingDetail: $viewModel.isShowingDetail),
+//                isActive: $viewModel.isShowingDetail) { EmptyView() }
+//        }
+    
+        
         NavigationView{
-            
-            
             VStack {
-                SearchBarView(viewModel: searchBarViewModel)
+//                if viewModel.isShowingDetail {
+//                    NavigationLink(
+//                        destination: LearningVerbDetailsView(learningVerb: viewModel.selectedLearningVerb!, isShowingDetail: $viewModel.isShowingDetail),
+//                        isActive: $viewModel.isShowingDetail) { Text("sssssss") }
+//                }
                 
+                SearchBarView(viewModel: searchBarViewModel)
                 List(
                     viewModel.learningVerbs.filter({ learningVerb in
                         if searchBarViewModel.isSearching {
@@ -35,8 +47,6 @@ struct VerbListView: View {
                         VerbListCell(verb: learningVerb.verb)
                             .onTapGesture {
                                 viewModel.selectedLearningVerb = learningVerb
-                                // TODO: lolo
-                                //                               viewModel.isShowingDetail = true
                             }
                     }
             }
