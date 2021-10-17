@@ -31,4 +31,8 @@ final class FlashcardViewModel: ObservableObject {
             }
         }
     }
+    
+    func resetFlashcard() {
+        flipped = false
+    }
 }

@@ -38,10 +38,25 @@ final class AudioToggleViewModel: ObservableObject {
         }
     }
     
-    func audioPlay(verb: Verb) throws {
+    func audioPlay(verb: Verb, playVerbAudio: PlayVerbAudio) throws {
         if(Audio.shared.isOn()){
+            audioStop()
             let formatAudio = "mp3"
-            let nameAudioFile = verb.temps.infinitive.value
+            let nameAudioFile: String
+            
+            switch playVerbAudio {
+            case PlayVerbAudio.all:
+                nameAudioFile = verb.temps.infinitive.value
+            case PlayVerbAudio.infinitive:
+                nameAudioFile = verb.temps.infinitive.value // TODO: lolo
+            case PlayVerbAudio.present:
+                nameAudioFile = verb.temps.infinitive.value // TODO: lolo
+            case PlayVerbAudio.simplePast:
+                nameAudioFile = verb.temps.infinitive.value // TODO: lolo
+            case PlayVerbAudio.pastParticiple:
+                nameAudioFile = verb.temps.infinitive.value // TODO: lolo
+            }
+            
             let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: formatAudio)!)
             audioPlayer = try AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
             audioPlayer!.play()

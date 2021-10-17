@@ -12,5 +12,6 @@ import SwiftUI
 enum RevisionNavigationState: Hashable {
     case home
     case pickStyle
-    case review
+    case reviewWithUniqueCard
+    case reviewWithOneCardForEachTemps
 }

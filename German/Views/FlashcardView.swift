@@ -14,12 +14,12 @@ struct FlashcardView<Front, Back>: View where Front: View, Back: View {
     
     private let front: () -> Front
     private let back: () -> Back
-    private let onTapGestureAction: () -> Void
+    private let onTapGestureAction: () throws -> Void
     
     init(viewModel: FlashcardViewModel,
          @ViewBuilder front: @escaping () -> Front,
          @ViewBuilder back: @escaping () -> Back,
-         onTapGestureAction: @escaping () -> Void) {
+         onTapGestureAction: @escaping () throws -> Void) {
         self.viewModel = viewModel
         self.front = front
         self.back = back
@@ -48,7 +48,14 @@ struct FlashcardView<Front, Back>: View where Front: View, Back: View {
             if (!viewModel.flipped) {
                 viewModel.flipFlashcard()
             }
-            onTapGestureAction()
+            
+            do {
+                try  onTapGestureAction()
+            }
+            catch {
+                SpeedLog.print(error)
+            }
+           
         }
         .rotation3DEffect(.degrees(viewModel.flashcardRotation), axis: (x: 0, y: 1, z: 0))
     }

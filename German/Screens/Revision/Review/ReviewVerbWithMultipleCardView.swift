@@ -1,8 +1,8 @@
 //
-//  ReviewView.swift
+//  ReviewVerbWithMultipleCardView.swift
 //  German
 //
-//  Created by Lauriane Mollier on 9/20/21.
+//  Created by Lauriane Mollier on 10/17/21.
 //  Copyright © 2021 Lauriane Mollier. All rights reserved.
 //
 
@@ -12,31 +12,77 @@ import SwiftUI
 // https://www.youtube.com/watch?v=oDKDGCRdSHc
 // https://www.swiftbysundell.com/articles/avoiding-massive-swiftui-views/
 // https://stackoverflow.com/questions/62512547/in-swiftui-in-a-foreach0-3-animate-the-tapped-button-only-not-all-3-a
-struct ReviewVerbView: View /*, ReviewCardStyleViewModel */ {
+struct ReviewVerbWithMultipleCardView: View /*, ReviewCardStyleViewModel */ {
     
     // TODO: lolo to make generic
-    @StateObject var flashcardViewModel: FlashcardViewModel = FlashcardViewModel()
+    @StateObject var infinitiveFlashcardViewModel: FlashcardViewModel = FlashcardViewModel()
+    @StateObject var presentFlashcardViewModel: FlashcardViewModel = FlashcardViewModel()
+    @StateObject var simplePastFlashcardViewModel: FlashcardViewModel = FlashcardViewModel()
+    @StateObject var pastParticipleFlashcardViewModel: FlashcardViewModel = FlashcardViewModel()
     
     func flashcardView(verb: Verb) -> some View {
-        FlashcardView<FrontCardView, BackCardView>(viewModel: flashcardViewModel) {
-            FrontCardView(verb: verb)
-        } back: {
-            BackCardView(verb: verb)
-        } onTapGestureAction: {
-                try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)
+        
+        VStack {
+            
+            Text(verb.translation(Lang.en))
+            
+            FlashcardView<Text, Text>(viewModel: infinitiveFlashcardViewModel) {
+                Text("infinitive")
+            } back: {
+                Text.verbTemps(verb.temps.infinitive)
+            } onTapGestureAction: {
+                audioToggleViewModel.audioStop()
+                try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.infinitive)
+            }
+            
+            FlashcardView<Text, Text>(viewModel: infinitiveFlashcardViewModel) {
+                Text("present")
+            } back: {
+                Text.verbTemps(verb.temps.present)
+            } onTapGestureAction: {
+                audioToggleViewModel.audioStop()
+                try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.present)
+            }
+            
+            FlashcardView<Text, Text>(viewModel: infinitiveFlashcardViewModel) {
+                Text("simplePast")
+            } back: {
+                Text.verbTemps(verb.temps.simplePast)
+            } onTapGestureAction: {
+                audioToggleViewModel.audioStop()
+                try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.simplePast)
+            }
+            
+            FlashcardView<Text, Text>(viewModel: infinitiveFlashcardViewModel) {
+                Text("pastParticiple")
+            } back: {
+                Text.verbTemps(verb.temps.pastParticiple)
+            } onTapGestureAction: {
+                audioToggleViewModel.audioStop()
+                try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.pastParticiple)
+            }
         }
     }
     
     func isCurrentVerbReviewFinished() -> Bool {
-        flashcardViewModel.flipped
+        infinitiveFlashcardViewModel.flipped &&
+        presentFlashcardViewModel.flipped &&
+        simplePastFlashcardViewModel.flipped &&
+        pastParticipleFlashcardViewModel.flipped
     }
     
     func flipAllCards() {
-        flashcardViewModel.flipFlashcard()
+        infinitiveFlashcardViewModel.flipFlashcard()
+        presentFlashcardViewModel.flipFlashcard()
+        simplePastFlashcardViewModel.flipFlashcard()
+        pastParticipleFlashcardViewModel.flipFlashcard()
     }
     
     func resetAllCards() {
-        flashcardViewModel.resetFlashcard()
+        infinitiveFlashcardViewModel.resetFlashcard()
+        presentFlashcardViewModel.resetFlashcard()
+        simplePastFlashcardViewModel.resetFlashcard()
+        pastParticipleFlashcardViewModel.resetFlashcard()
     }
     
     // ------------------
@@ -117,8 +163,9 @@ struct ReviewVerbView: View /*, ReviewCardStyleViewModel */ {
 }
 
 
-//struct ReviewVerbView_Previews: PreviewProvider {
+//struct ReviewVerbWithMultipleCardView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ReviewVerbView()
 //    }
 //}
+

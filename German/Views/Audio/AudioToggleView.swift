@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AudioToggleView: View {
     
-    @ObservedObject var viewModel: AudioToggleViewModel
+    @EnvironmentObject var viewModel: AudioToggleViewModel
     
     var body: some View {
         Button {
@@ -24,6 +24,6 @@ struct AudioToggleView: View {
 
 struct AudioToogleView_Previews: PreviewProvider {
     static var previews: some View {
-        AudioToggleView(viewModel: AudioToggleViewModel())
+        AudioToggleView()
     }
 }

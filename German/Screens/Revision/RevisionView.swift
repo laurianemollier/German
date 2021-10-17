@@ -17,17 +17,22 @@ struct RevisionView: View {
         NavigationView{
             switch self.navigation.state {
             case .home:
-                RevisionHomeView().environmentObject(navigation)
+                RevisionHomeView()
+                    .environmentObject(navigation)
             //                    .transition(.move(edge: .trailing))
             //                    .animation(.default)
             case .pickStyle:
-                PickRevisionStyleView().environmentObject(navigation)
+                PickRevisionStyleView()
+                    .environmentObject(navigation)
             //                    .transition(.move(edge: .trailing))
             //                    .animation(.default)
-            case .review:
-                ReviewVerbView().environmentObject(navigation)
-            //                    .transition(.move(edge: .trailing))
-            //                    .animation(.default)
+            case .reviewWithUniqueCard:
+                ReviewVerbView()
+                    .environmentObject(navigation)
+                
+            case .reviewWithOneCardForEachTemps:
+                ReviewVerbWithMultipleCardView()
+                    .environmentObject(navigation)
             }
         }
     }

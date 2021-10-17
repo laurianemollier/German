@@ -19,7 +19,7 @@ struct PickRevisionStyleView: View {
                     label: "Review all temps together",
                     image: Image(systemName: "xmark"),
                     action: {
-                        navigation.state = RevisionNavigationState.review
+                        navigation.state = RevisionNavigationState.reviewWithUniqueCard
                     }
                 )
                 .padding(.bottom, 60)
@@ -28,7 +28,7 @@ struct PickRevisionStyleView: View {
                     label: "Review temps 1 by 1",
                     image: Image(systemName: "xmark"),
                     action: {
-                        navigation.state = RevisionNavigationState.review
+                        navigation.state = RevisionNavigationState.reviewWithOneCardForEachTemps
                     }
                 )
             }
