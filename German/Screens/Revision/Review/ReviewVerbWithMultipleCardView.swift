@@ -161,6 +161,7 @@ struct ReviewVerbWithMultipleCardView: View /*, ReviewCardStyleViewModel */ {
         
         viewModel.setAction(
             onEndRevisionSession: {
+                audioToggleViewModel.audioStop()
                 navigation.state = RevisionNavigationState.home
             })
     }
