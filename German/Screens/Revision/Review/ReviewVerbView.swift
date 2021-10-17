@@ -23,7 +23,7 @@ struct ReviewVerbView: View /*, ReviewCardStyleViewModel */ {
         } back: {
             BackCardView(verb: verb)
         } onTapGestureAction: {
-                try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)
+            try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)
         }
     }
     
@@ -49,32 +49,33 @@ struct ReviewVerbView: View /*, ReviewCardStyleViewModel */ {
     @StateObject var audioToggleViewModel: AudioToggleViewModel = AudioToggleViewModel()
     
     var body: some View {
-        NavigationView{
-            VStack {
-                if let currentVerb = viewModel.currentLearningVerb {
-                    HStack {
-                        Spacer()
-                        progressionBar
-                    }
-                    
-                    flashcardView(verb: currentVerb.verb)
-                    
-                    if isCurrentVerbReviewFinished() {
-                        ReviewRateProgressionView(
-                            audioToggleViewModel: audioToggleViewModel,
-                            viewModel: viewModel
-                        )
-                    } else {
-                        flipFlashcardButton(verb: currentVerb.verb)
-                    }
-                    
-                    HStack {
-                        Spacer()
-                        AudioToggleView()
-                            .padding(.trailing, 40)
-                    }
+        VStack {
+            if let currentVerb = viewModel.currentLearningVerb {
+                HStack {
+                    Spacer()
+                    progressionBar
                 }
+                
+                flashcardView(verb: currentVerb.verb)
+                
+                if isCurrentVerbReviewFinished() {
+                    ReviewRateProgressionView(
+                        audioToggleViewModel: audioToggleViewModel,
+                        viewModel: viewModel
+                    )
+                } else {
+                    flipFlashcardButton(verb: currentVerb.verb)
+                }
+                
+                HStack {
+                    Spacer()
+                    AudioToggleView()
+                        .padding(.trailing, 40)
+                }
+                
+                Spacer()
             }
+            Spacer()
         }
         .environmentObject(audioToggleViewModel)
         .navigationBarBackButtonHidden(true)
@@ -99,6 +100,9 @@ struct ReviewVerbView: View /*, ReviewCardStyleViewModel */ {
             }
         } label: {
             Image("RVTurnButton")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 60, height: 60)
         }
     }
     

@@ -35,7 +35,7 @@ struct ReviewVerbWithMultipleCardView: View /*, ReviewCardStyleViewModel */ {
                 try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.infinitive)
             }
             
-            FlashcardView<Text, Text>(viewModel: infinitiveFlashcardViewModel) {
+            FlashcardView<Text, Text>(viewModel: presentFlashcardViewModel) {
                 Text("present")
             } back: {
                 Text.verbTemps(verb.temps.present)
@@ -44,7 +44,7 @@ struct ReviewVerbWithMultipleCardView: View /*, ReviewCardStyleViewModel */ {
                 try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.present)
             }
             
-            FlashcardView<Text, Text>(viewModel: infinitiveFlashcardViewModel) {
+            FlashcardView<Text, Text>(viewModel: simplePastFlashcardViewModel) {
                 Text("simplePast")
             } back: {
                 Text.verbTemps(verb.temps.simplePast)
@@ -53,7 +53,7 @@ struct ReviewVerbWithMultipleCardView: View /*, ReviewCardStyleViewModel */ {
                 try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.simplePast)
             }
             
-            FlashcardView<Text, Text>(viewModel: infinitiveFlashcardViewModel) {
+            FlashcardView<Text, Text>(viewModel: pastParticipleFlashcardViewModel) {
                 Text("pastParticiple")
             } back: {
                 Text.verbTemps(verb.temps.pastParticiple)
@@ -95,32 +95,33 @@ struct ReviewVerbWithMultipleCardView: View /*, ReviewCardStyleViewModel */ {
     @StateObject var audioToggleViewModel: AudioToggleViewModel = AudioToggleViewModel()
     
     var body: some View {
-        NavigationView{
-            VStack {
-                if let currentVerb = viewModel.currentLearningVerb {
-                    HStack {
-                        Spacer()
-                        progressionBar
-                    }
-                    
-                    flashcardView(verb: currentVerb.verb)
-                    
-                    if isCurrentVerbReviewFinished() {
-                        ReviewRateProgressionView(
-                            audioToggleViewModel: audioToggleViewModel,
-                            viewModel: viewModel
-                        )
-                    } else {
-                        flipFlashcardButton(verb: currentVerb.verb)
-                    }
-                    
-                    HStack {
-                        Spacer()
-                        AudioToggleView()
-                            .padding(.trailing, 40)
-                    }
+        VStack {
+            if let currentVerb = viewModel.currentLearningVerb {
+                HStack {
+                    Spacer()
+                    progressionBar
                 }
+                
+                flashcardView(verb: currentVerb.verb)
+                
+                if isCurrentVerbReviewFinished() {
+                    ReviewRateProgressionView(
+                        audioToggleViewModel: audioToggleViewModel,
+                        viewModel: viewModel
+                    )
+                } else {
+                    flipFlashcardButton(verb: currentVerb.verb)
+                }
+                
+                HStack {
+                    Spacer()
+                    AudioToggleView()
+                        .padding(.trailing, 40)
+                }
+                
+                Spacer()
             }
+            Spacer()
         }
         .environmentObject(audioToggleViewModel)
         .navigationBarBackButtonHidden(true)
@@ -145,6 +146,9 @@ struct ReviewVerbWithMultipleCardView: View /*, ReviewCardStyleViewModel */ {
             }
         } label: {
             Image("RVTurnButton")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 60, height: 60)
         }
     }
     
@@ -163,9 +167,9 @@ struct ReviewVerbWithMultipleCardView: View /*, ReviewCardStyleViewModel */ {
 }
 
 
-//struct ReviewVerbWithMultipleCardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ReviewVerbView()
-//    }
-//}
+struct ReviewVerbWithMultipleCardView_Previews: PreviewProvider {
+    static var previews: some View {
+        ReviewVerbView()
+    }
+}
 

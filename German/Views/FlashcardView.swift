@@ -36,7 +36,6 @@ struct FlashcardView<Front, Back>: View where Front: View, Back: View {
         }
         .rotation3DEffect(.degrees(viewModel.contentRotation), axis: (x: 0, y: 1, z: 0))
         .padding()
-        .frame(height: 200)
         .frame(maxWidth: .infinity)
         .background(Color.white)
         .overlay(
