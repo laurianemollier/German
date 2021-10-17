@@ -48,21 +48,25 @@ final class AudioToggleViewModel: ObservableObject {
             case PlayVerbAudio.all:
                 nameAudioFile = verb.temps.infinitive.value
             case PlayVerbAudio.infinitive:
-                nameAudioFile = verb.temps.infinitive.value // TODO: lolo
+                nameAudioFile = "\(verb.temps.infinitive.value)_infinitiv"
             case PlayVerbAudio.present:
-                nameAudioFile = verb.temps.infinitive.value // TODO: lolo
+                nameAudioFile = "\(verb.temps.infinitive.value)_praesent"
             case PlayVerbAudio.simplePast:
-                nameAudioFile = verb.temps.infinitive.value // TODO: lolo
+                nameAudioFile = "\(verb.temps.infinitive.value)_praeteritum"
             case PlayVerbAudio.pastParticiple:
-                nameAudioFile = verb.temps.infinitive.value // TODO: lolo
+                nameAudioFile = "\(verb.temps.infinitive.value)_perfekt"
             }
             
-            let audioURL = URL(fileURLWithPath: Bundle.main.path(forResource: nameAudioFile, ofType: formatAudio)!)
-            audioPlayer = try AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
-            audioPlayer!.play()
-            audioPlayer!.numberOfLoops = 0
-            
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            if let path = Bundle.main.path(forResource: nameAudioFile, ofType: formatAudio) {
+                let audioURL = URL(fileURLWithPath: path)
+                audioPlayer = try AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
+                audioPlayer!.play()
+                audioPlayer!.numberOfLoops = 0
+                
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } else {
+                SpeedLog.print("Audio file \(nameAudioFile) not found")
+            }
         }
     }
     
