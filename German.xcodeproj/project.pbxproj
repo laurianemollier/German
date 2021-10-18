@@ -1583,6 +1583,8 @@
 		30249155271C22A20000914C /* anfallen_praesent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30248B42271C229E0000914C /* anfallen_praesent.mp3 */; };
 		30249156271C22A20000914C /* anfallen_praeteritum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30248B43271C229E0000914C /* anfallen_praeteritum.mp3 */; };
 		30249157271C22A20000914C /* anfallen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30248B44271C229E0000914C /* anfallen.mp3 */; };
+		3043176C271D704A00DCD56C /* RevisionNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30431764271D704A00DCD56C /* RevisionNavigationModel.swift */; };
+		3043176E271D706A00DCD56C /* StatisticsNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3043176D271D706A00DCD56C /* StatisticsNavigationModel.swift */; };
 		3050099527085606001E9E08 /* VerbTemps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099427085606001E9E08 /* VerbTemps.swift */; };
 		305009A027085F01001E9E08 /* Text+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099F27085F01001E9E08 /* Text+Ext.swift */; };
 		305009A22708DE58001E9E08 /* ToChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305009A12708DE58001E9E08 /* ToChangeButton.swift */; };
@@ -1613,7 +1615,6 @@
 		308EBB932712E36300214358 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EBB922712E36300214358 /* SearchBarViewModel.swift */; };
 		309EDBA22701D0C000BE78D5 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBA12701D0C000BE78D5 /* FrontCardView.swift */; };
 		309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBAA2701D0E700BE78D5 /* BackCardView.swift */; };
-		30AD8774270AD3ED00395C05 /* RevisionNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AD8773270AD3ED00395C05 /* RevisionNavigation.swift */; };
 		30B6A3E927098F9A0026474C /* ReviewRateProgressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */; };
 		30CEDFCC2709F9CC0097A597 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */; };
 		9815F7A4213D073000248968 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A3213D073000248968 /* IAPProducts.swift */; };
@@ -3329,6 +3330,8 @@
 		30248B42271C229E0000914C /* anfallen_praesent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anfallen_praesent.mp3; sourceTree = "<group>"; };
 		30248B43271C229E0000914C /* anfallen_praeteritum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anfallen_praeteritum.mp3; sourceTree = "<group>"; };
 		30248B44271C229E0000914C /* anfallen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anfallen.mp3; sourceTree = "<group>"; };
+		30431764271D704A00DCD56C /* RevisionNavigationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevisionNavigationModel.swift; sourceTree = "<group>"; };
+		3043176D271D706A00DCD56C /* StatisticsNavigationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsNavigationModel.swift; sourceTree = "<group>"; };
 		3050099427085606001E9E08 /* VerbTemps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTemps.swift; sourceTree = "<group>"; };
 		3050099F27085F01001E9E08 /* Text+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Ext.swift"; sourceTree = "<group>"; };
 		305009A12708DE58001E9E08 /* ToChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToChangeButton.swift; sourceTree = "<group>"; };
@@ -3359,7 +3362,6 @@
 		308EBB922712E36300214358 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		309EDBA12701D0C000BE78D5 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		309EDBAA2701D0E700BE78D5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
-		30AD8773270AD3ED00395C05 /* RevisionNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionNavigation.swift; sourceTree = "<group>"; };
 		30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRateProgressionView.swift; sourceTree = "<group>"; };
 		30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		9804A8C0213E445700B630A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -7713,7 +7715,7 @@
 				305EDFB126F85F1C00EDD43C /* PickRevisionStyle */,
 				308CD19426F747CC00B0660D /* RevisionView.swift */,
 				305EDFBD26F881BF00EDD43C /* RevisionNavigationState.swift */,
-				30AD8773270AD3ED00395C05 /* RevisionNavigation.swift */,
+				30431764271D704A00DCD56C /* RevisionNavigationModel.swift */,
 			);
 			path = Revision;
 			sourceTree = "<group>";
@@ -7731,6 +7733,7 @@
 			children = (
 				308CD19A26F7481C00B0660D /* StatisticsView.swift */,
 				30864C3827143A540067C4D3 /* LearningVerbDetailsView.swift */,
+				3043176D271D706A00DCD56C /* StatisticsNavigationModel.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -9746,6 +9749,7 @@
 				300C707A26C846AC0092A492 /* VerbDAO.swift in Sources */,
 				988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */,
 				305EDFB526F8622A00EDD43C /* RevisionStyleView.swift in Sources */,
+				3043176C271D704A00DCD56C /* RevisionNavigationModel.swift in Sources */,
 				308EBB8B2712C63800214358 /* VerbListView.swift in Sources */,
 				308CD18D26F7469900B0660D /* GermanTabView.swift in Sources */,
 				98685F392126BA8700DA327D /* Level.swift in Sources */,
@@ -9774,7 +9778,6 @@
 				9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */,
 				98483A1B214587A600AF7115 /* SelectLevelVC.swift in Sources */,
 				3009DDA0271A9E67002C5B97 /* AudioToggleView.swift in Sources */,
-				30AD8774270AD3ED00395C05 /* RevisionNavigation.swift in Sources */,
 				300C707426C842ED0092A492 /* LocalDbLearningVerbDAO.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */,
 				305009A22708DE58001E9E08 /* ToChangeButton.swift in Sources */,
@@ -9790,6 +9793,7 @@
 				3009DDB1271BEC43002C5B97 /* ReviewCardStyleViewModel.swift in Sources */,
 				305EDFB826F8795500EDD43C /* ReviewVerbView.swift in Sources */,
 				98EA96A5214E68640034B360 /* Background3.swift in Sources */,
+				3043176E271D706A00DCD56C /* StatisticsNavigationModel.swift in Sources */,
 				9863384F2144FAC100E8B95A /* PurchaseUIButton.swift in Sources */,
 				300C707626C843830092A492 /* DbLearningVerbDAO.swift in Sources */,
 				30864C3927143A540067C4D3 /* LearningVerbDetailsView.swift in Sources */,
