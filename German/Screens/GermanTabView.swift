@@ -12,6 +12,9 @@ import SwiftUI
 // https://medium.com/@karaiskc/programmatic-navigation-in-swiftui-30b75613f285
 // https://github.com/matteopuc/swiftui-navigation-stack
 struct GermanTabView: View {
+    
+    @StateObject var statisticsNavigationModel = StatisticsNavigationModel()
+    
     var body: some View {
         TabView {
             RevisionView()
@@ -31,6 +34,7 @@ struct GermanTabView: View {
                     Image(systemName: "bag")
                     Text("Order")
                 }
+                .environmentObject(statisticsNavigationModel)
         }
         .accentColor(.brandPrimary)
     }

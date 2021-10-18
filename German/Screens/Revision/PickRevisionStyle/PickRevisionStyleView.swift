@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PickRevisionStyleView: View {
     
-    @EnvironmentObject var navigation: RevisionNavigation
+    @EnvironmentObject var navigation: RevisionNavigationModel
     
     var body: some View {
         NavigationView{

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RevisionHomeView: View {
     
-    @EnvironmentObject var navigation: RevisionNavigation
+    @EnvironmentObject var navigation: RevisionNavigationModel
     
     @StateObject var viewModel = RevisionHomeViewModel()
   

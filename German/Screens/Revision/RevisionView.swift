@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RevisionView: View {
     
-    @StateObject var navigation: RevisionNavigation = RevisionNavigation(state: RevisionNavigationState.home)
+    @StateObject var navigation: RevisionNavigationModel = RevisionNavigationModel(state: RevisionNavigationState.home)
     
     var body: some View {
         // https://github.com/matteopuc/swiftui-navigation-stack

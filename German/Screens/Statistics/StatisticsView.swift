@@ -10,6 +10,8 @@ import SwiftUI
 
 struct StatisticsView: View {
     
+    @EnvironmentObject var navModel: StatisticsNavigationModel
+    
     var body: some View {
         NavigationView {
             VStack{
@@ -32,12 +34,19 @@ struct StatisticsView: View {
         do {
             let verbs = try DAO.shared.select(userProgression: userProgression)
             
-            return NavigationLink(destination: VerbListView(userProgression: userProgression)) {
-                UserProgressionButton(userProgression: userProgression, verbCount: verbs.count)
-            }
+            return NavigationLink(
+                tag: userProgression,
+                selection: $navModel.activeUserProgression,
+                destination: {
+                    VerbListView(userProgression: userProgression)
+                },
+                label: {
+                    UserProgressionButton(userProgression: userProgression, verbCount: verbs.count)
+                }
+            )
             
         } catch {
-            SpeedLog.print(error)
+            SpeedLog.print(error) // TODO: lolo
             return NavigationLink(destination: VerbListView(userProgression: userProgression)) {
                 UserProgressionButton(userProgression: userProgression, verbCount: 0)
             }

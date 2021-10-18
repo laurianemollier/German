@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-final class RevisionNavigation: ObservableObject {
+final class RevisionNavigationModel: ObservableObject {
     @Published var state: RevisionNavigationState
     
     init(state: RevisionNavigationState) {

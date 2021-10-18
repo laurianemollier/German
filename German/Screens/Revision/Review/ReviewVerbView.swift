@@ -43,7 +43,7 @@ struct ReviewVerbView: View /*, ReviewCardStyleViewModel */ {
     // MARK: - Variables
     // ------------------
     
-    @EnvironmentObject var navigation: RevisionNavigation
+    @EnvironmentObject var navigation: RevisionNavigationModel
     
     @StateObject var viewModel: ReviewVerbViewModel = ReviewVerbViewModel()
     @StateObject var audioToggleViewModel: AudioToggleViewModel = AudioToggleViewModel()

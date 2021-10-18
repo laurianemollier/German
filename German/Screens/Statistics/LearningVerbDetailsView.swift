@@ -10,9 +10,9 @@ import SwiftUI
 
 struct LearningVerbDetailsView: View {
     
+    @EnvironmentObject var navModel: StatisticsNavigationModel
     let learningVerb: LearningVerb
-    @Binding var isShowingDetail: Bool
-    
+
     var body: some View {
         VStack {
             BackCardView(verb: learningVerb.verb)
@@ -20,7 +20,6 @@ struct LearningVerbDetailsView: View {
             if learningVerb.userProgression == UserProgression.notSeenYet {
                 Button(action: {
                     selectNewProgressionLevel(newProgressionLevel: UserProgression.level1)
-                    isShowingDetail = false
                 }, label: {
                     ToChangeButton(
                         title: "Add the verb to the review list",
@@ -47,7 +46,7 @@ struct LearningVerbDetailsView: View {
     private func userProgressionButton(userProgression: UserProgression) -> Button<UserProgressionButton> {
         return Button(action: {
             selectNewProgressionLevel(newProgressionLevel: userProgression)
-            isShowingDetail = false
+           // TODO: lolo
         }, label: {
             UserProgressionButton(userProgression: userProgression)
         })
@@ -58,7 +57,6 @@ struct LearningVerbDetailsView: View {
         newProgressionLevel.stagnation(reviewedDate: Date())!
         
         do{
-            
             let userLearningVerb = LearningVerb(id: learningVerb.id,
                                                 verb: learningVerb.verb,
                                                 dateToReview: dateToReview,
@@ -81,6 +79,6 @@ struct LearningVerbDetailsView: View {
 
 struct VerbDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        LearningVerbDetailsView(learningVerb: LearningVerb(id: 1, verb: Verbs.verbs.first!), isShowingDetail: .constant(true))
+        LearningVerbDetailsView(learningVerb: LearningVerb(id: 1, verb: Verbs.verbs.first!))
     }
 }
