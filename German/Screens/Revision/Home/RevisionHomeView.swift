@@ -13,29 +13,29 @@ struct RevisionHomeView: View {
     @EnvironmentObject var navigation: RevisionNavigationModel
     
     @StateObject var viewModel = RevisionHomeViewModel()
-  
+    
     var body: some View {
         ZStack{
-                VStack {
-                    CircularButton(action: {
-                            self.navigation.state = RevisionNavigationState.pickStyle
-                    }, label: viewModel.verbToReviewTodayCount.map({String($0)}) ?? "--")
-                        .disabled(viewModel.isRevisionDisabled)
-                    
-                    
-                    Text("Verbs to review over \(viewModel.verbInReviewListCount.map({String($0)}) ?? "--") in your review list")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                        .padding(.bottom, 60)
-                    
-                    Button {
-                            self.navigation.state = RevisionNavigationState.pickStyle
-                    } label: {
-                        CallToActionButton(title: "Review")
-                    }.disabled(viewModel.isRevisionDisabled)
-                    
-                    Spacer()
-                }
+            VStack {
+                CircularButton(action: {
+                    self.navigation.state = RevisionNavigationState.pickStyle
+                }, label: viewModel.verbToReviewTodayCount.map({String($0)}) ?? "--")
+                    .disabled(viewModel.isRevisionDisabled)
+                
+                
+                Text("Verbs to review over \(viewModel.verbInReviewListCount.map({String($0)}) ?? "--") in your review list")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .padding(.bottom, 60)
+                
+                Button {
+                    self.navigation.state = RevisionNavigationState.pickStyle
+                } label: {
+                    CallToActionButton(title: "Review")
+                }.disabled(viewModel.isRevisionDisabled)
+                
+                Spacer()
+            }
             .onAppear {
                 viewModel.loadData()
             }
@@ -62,7 +62,7 @@ struct CircularButton: View {
     
     let action: () -> Void
     let label: String
-
+    
     var body: some View {
         ZStack(alignment: .bottom){
             Circle()

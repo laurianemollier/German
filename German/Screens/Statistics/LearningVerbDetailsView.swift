@@ -46,7 +46,8 @@ struct LearningVerbDetailsView: View {
     private func userProgressionButton(userProgression: UserProgression) -> Button<UserProgressionButton> {
         return Button(action: {
             selectNewProgressionLevel(newProgressionLevel: userProgression)
-           // TODO: lolo
+            navModel.activeUserProgression = nil
+            navModel.activeLearningVerb = nil
         }, label: {
             UserProgressionButton(userProgression: userProgression)
         })

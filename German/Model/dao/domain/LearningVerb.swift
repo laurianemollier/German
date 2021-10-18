@@ -11,8 +11,8 @@ import AVFoundation
 
 
 /// This class represent the user's learning data for this verb
-struct LearningVerb: Identifiable{
-    
+struct LearningVerb: Identifiable, Hashable{
+
     /// The id (unique) in the database
     let id: Int64
     
@@ -74,6 +74,15 @@ struct LearningVerb: Identifiable{
     
     func set(userProgression: UserProgression, dateToReview: Date) -> LearningVerb {
         return LearningVerb(id: self.id, verb: self.verb, dateToReview: dateToReview, userProgression: userProgression)
+    }
+    
+    // TODO: hash real functions
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.id)
+    }
+    
+    static func == (lhs: LearningVerb, rhs: LearningVerb) -> Bool {
+        lhs.id == rhs.id
     }
 }
 
