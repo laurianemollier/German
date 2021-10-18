@@ -15,7 +15,7 @@ class Constants{
 }
 
 
-enum UserProgression: String {
+enum UserProgression: String, CaseIterable {
     
     case notSeenYet = "notSeenYet"
     case level1 = "level1"

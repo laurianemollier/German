@@ -1,0 +1,144 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0EN-B9-lBc"; */
+"0EN-B9-lBc.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Tous les verbes irréguliers"; ObjectID = "1qD-dW-6ya"; */
+"1qD-dW-6ya.text" = "Tous les verbes irréguliers";
+
+/* Class = "UILabel"; text = "Niveau de connaissance"; ObjectID = "2dA-Ds-H0t"; */
+"2dA-Ds-H0t.text" = "Niveau de connaissance";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2sX-ub-zX1"; */
+"2sX-ub-zX1.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "A2"; ObjectID = "3Tb-t0-ewg"; */
+"3Tb-t0-ewg.normalTitle" = "A2";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8XR-xX-8Fn"; */
+"8XR-xX-8Fn.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "De niveau de difficulté: "; ObjectID = "9Er-sC-veZ"; */
+"9Er-sC-veZ.text" = "De niveau de difficulté: ";
+
+/* Class = "UILabel"; text = "Verbs to review over 200 in your review list"; ObjectID = "9c9-Or-w8O"; */
+"9c9-Or-w8O.text" = "Verbs to review over 200 in your review list";
+
+/* Class = "UIButton"; normalTitle = "Restaurer les achats"; ObjectID = "AAy-GT-5ws"; */
+"AAy-GT-5ws.normalTitle" = "Restaurer les achats";
+
+/* Class = "UIButton"; normalTitle = "Ajouter des verbes à apprendre"; ObjectID = "AB9-dr-94F"; */
+"AB9-dr-94F.normalTitle" = "Ajouter des verbes à apprendre";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BZs-KS-96M"; */
+"BZs-KS-96M.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Bgr-zT-wWr"; */
+"Bgr-zT-wWr.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "DYj-H4-AFO"; */
+"DYj-H4-AFO.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Ajouter à la liste"; ObjectID = "Djp-s6-Um0"; */
+"Djp-s6-Um0.normalTitle" = "Ajouter à la liste";
+
+/* Class = "UIButton"; normalTitle = "B2"; ObjectID = "FwL-BJ-Bfx"; */
+"FwL-BJ-Bfx.normalTitle" = "B2";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Hmj-SX-2TL"; */
+"Hmj-SX-2TL.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IKC-fh-qWD"; */
+"IKC-fh-qWD.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "À répéter"; ObjectID = "IqL-M2-fkI"; */
+"IqL-M2-fkI.text" = "À répéter";
+
+/* Class = "UIButton"; normalTitle = "Tous les verbes existants"; ObjectID = "Mpo-FS-QOa"; */
+"Mpo-FS-QOa.normalTitle" = "Tous les verbes existants";
+
+/* Class = "UIButton"; normalTitle = "Mes statistiques"; ObjectID = "Ogy-tk-Ael"; */
+"Ogy-tk-Ael.normalTitle" = "Mes statistiques";
+
+/* Class = "UILabel"; text = "Ajoutez des verbes à la liste de révision"; ObjectID = "QEi-vF-C0L"; */
+"QEi-vF-C0L.text" = "Ajoutez des verbes à la liste de révision";
+
+/* Class = "UILabel"; text = "Veuillez sélectionner le niveau de langue des verbes à ajouter à la liste de révision"; ObjectID = "QXd-ZV-A1i"; */
+"QXd-ZV-A1i.text" = "Veuillez sélectionner le niveau de langue des verbes à ajouter à la liste de révision";
+
+/* Class = "UIButton"; normalTitle = "Dans une semaine"; ObjectID = "Qez-2m-ixe"; */
+"Qez-2m-ixe.normalTitle" = "Dans une semaine";
+
+/* Class = "UISearchBar"; RI8-lV-M8b.scopeButtonTitles[0] = "Level"; ObjectID = "RI8-lV-M8b"; */
+"RI8-lV-M8b.scopeButtonTitles[0]" = "Level";
+
+/* Class = "UISearchBar"; RI8-lV-M8b.scopeButtonTitles[1] = "Alphabetical"; ObjectID = "RI8-lV-M8b"; */
+"RI8-lV-M8b.scopeButtonTitles[1]" = "Alphabetical";
+
+/* Class = "UISearchBar"; RI8-lV-M8b.scopeButtonTitles[2] = "Form"; ObjectID = "RI8-lV-M8b"; */
+"RI8-lV-M8b.scopeButtonTitles[2]" = "Form";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "TTe-EP-Aco"; */
+"TTe-EP-Aco.text" = "5";
+
+/* Class = "UIButton"; normalTitle = "B1"; ObjectID = "W6O-ZH-A1a"; */
+"W6O-ZH-A1a.normalTitle" = "B1";
+
+/* Class = "UIButton"; normalTitle = "Avoir accès à tous les verbes"; ObjectID = "Xzp-kB-nvZ"; */
+"Xzp-kB-nvZ.normalTitle" = "Avoir accès à tous les verbes";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "aIS-kY-K8M"; */
+"aIS-kY-K8M.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Now"; ObjectID = "b4y-DF-YAS"; */
+"b4y-DF-YAS.normalTitle" = "Now";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cNj-ba-GFp"; */
+"cNj-ba-GFp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "1/2"; ObjectID = "cVt-QY-aWl"; */
+"cVt-QY-aWl.text" = "1/2";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cgO-mL-90h"; */
+"cgO-mL-90h.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dLY-ea-zRV"; */
+"dLY-ea-zRV.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Tomorow"; ObjectID = "gaM-uX-yr6"; */
+"gaM-uX-yr6.normalTitle" = "Tomorow";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hn4-B5-jIP"; */
+"hn4-B5-jIP.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "i6W-jN-bgk"; */
+"i6W-jN-bgk.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Réviser"; ObjectID = "jCs-oc-s80"; */
+"jCs-oc-s80.normalTitle" = "Réviser";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "jxB-UC-d7n"; */
+"jxB-UC-d7n.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Niveau de connaissance du verbe"; ObjectID = "luZ-dK-aH4"; */
+"luZ-dK-aH4.text" = "Niveau de connaissance du verbe";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "nOy-55-3W1"; */
+"nOy-55-3W1.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Ajouter des verbes à apprendre"; ObjectID = "q8d-2v-K4O"; */
+"q8d-2v-K4O.normalTitle" = "Ajouter des verbes à apprendre";
+
+/* Class = "UIButton"; normalTitle = "333"; ObjectID = "qI7-Oi-uEl"; */
+"qI7-Oi-uEl.normalTitle" = "333";
+
+/* Class = "UILabel"; text = "1/2"; ObjectID = "wTX-6V-YRw"; */
+"wTX-6V-YRw.text" = "1/2";
+
+/* Class = "UIButton"; normalTitle = "🔕"; ObjectID = "yQq-F4-cjR"; */
+"yQq-F4-cjR.normalTitle" = "🔕";
+
+/* Class = "UIButton"; normalTitle = "C1"; ObjectID = "z5L-Zd-7fP"; */
+"z5L-Zd-7fP.normalTitle" = "C1";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zX3-N3-dM7"; */
+"zX3-N3-dM7.normalTitle" = "Button";

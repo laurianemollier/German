@@ -10,8 +10,15 @@ import SwiftUI
 
 final class StatisticsNavigationModel: ObservableObject {
     
-    @Published var activeUserProgression: UserProgression?
+    @Published var activeUserProgression: UserProgression? {
+        didSet {
+            print("activeUserProgression: ", String(describing: self.activeUserProgression))
+        }
+    }
     
-    @Published var activeLearningVerb: LearningVerb?
-
+    @Published var activeLearningVerb: LearningVerb? {
+        didSet {
+            print("activeLearningVerb: ", String(describing: self.activeLearningVerb?.id))
+        }
+    }
 }

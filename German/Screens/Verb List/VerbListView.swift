@@ -37,9 +37,6 @@ struct VerbListView: View {
                         },
                         label: {
                             VerbListCell(verb: learningVerb.verb)
-                                .onTapGesture {
-                                    navModel.activeLearningVerb = learningVerb
-                                }
                         }
                     )
                 }

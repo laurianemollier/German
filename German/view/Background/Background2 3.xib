@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Background2" customModule="Apprendre_les_verbes_irre_guliers" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="b6n-SH-3iH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="Background2" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Yellow Wave" translatesAutoresizingMaskIntoConstraints="NO" id="jet-WL-fsi">
+                    <rect key="frame" x="0.0" y="920" width="768" height="104"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="104" id="Jof-jS-SFu"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Red Wave Long" translatesAutoresizingMaskIntoConstraints="NO" id="EXB-cq-oJ5">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="340"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="340" id="UZN-yZ-3j9"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bgd Black Wave" translatesAutoresizingMaskIntoConstraints="NO" id="RpZ-vf-BSr">
+                    <rect key="frame" x="0.0" y="305" width="768" height="719"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RpZ-vf-BSr" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="8g4-4x-JoH"/>
+                <constraint firstItem="jet-WL-fsi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AyC-3X-B0h"/>
+                <constraint firstItem="RpZ-vf-BSr" firstAttribute="top" secondItem="EXB-cq-oJ5" secondAttribute="bottom" constant="-35" id="Ukr-Dy-RJY"/>
+                <constraint firstItem="EXB-cq-oJ5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VRZ-HT-QZg"/>
+                <constraint firstItem="jet-WL-fsi" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Wxn-WP-cGV"/>
+                <constraint firstItem="EXB-cq-oJ5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hi5-og-UUx"/>
+                <constraint firstItem="RpZ-vf-BSr" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="oc0-SB-OpX"/>
+                <constraint firstItem="RpZ-vf-BSr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uA2-7O-aKh"/>
+                <constraint firstItem="jet-WL-fsi" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vJc-nT-xan"/>
+                <constraint firstItem="EXB-cq-oJ5" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vlG-ZK-AiK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Bgd Black Wave" width="562" height="870"/>
+        <image name="Bgd Red Wave Long" width="562" height="831"/>
+        <image name="Bgd Yellow Wave" width="562" height="193"/>
+    </resources>
+</document>

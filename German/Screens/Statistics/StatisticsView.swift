@@ -14,7 +14,11 @@ struct StatisticsView: View {
     
     var body: some View {
         NavigationView {
-            VStack{
+            // TODO: 
+//            List(UserProgression.allCases, id: \.self) { userProgression in
+//                userProgressionButton(userProgression: userProgression)
+//            }
+            VStack {
                 userProgressionButton(userProgression: UserProgression.notSeenYet)
                 userProgressionButton(userProgression: UserProgression.level1)
                 userProgressionButton(userProgression: UserProgression.level2)
@@ -25,9 +29,8 @@ struct StatisticsView: View {
                 userProgressionButton(userProgression: UserProgression.level7)
                 userProgressionButton(userProgression: UserProgression.level8)
             }
-            
-            Spacer()
         }
+        .navigationViewStyle(.stack)
     }
     
     private func userProgressionButton(userProgression: UserProgression) -> NavigationLink<UserProgressionButton, VerbListView> {

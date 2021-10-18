@@ -46,14 +46,15 @@ struct LearningVerbDetailsView: View {
     private func userProgressionButton(userProgression: UserProgression) -> Button<UserProgressionButton> {
         return Button(action: {
             selectNewProgressionLevel(newProgressionLevel: userProgression)
-            navModel.activeUserProgression = nil
-            navModel.activeLearningVerb = nil
         }, label: {
             UserProgressionButton(userProgression: userProgression)
         })
     }
     
     private func selectNewProgressionLevel(newProgressionLevel: UserProgression){
+        navModel.activeUserProgression = nil
+        navModel.activeLearningVerb = nil
+        
         let (newProgression, dateToReview) =
         newProgressionLevel.stagnation(reviewedDate: Date())!
         
