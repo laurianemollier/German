@@ -66,25 +66,25 @@ enum UserProgression: String, CaseIterable {
     func name() -> LocalizedStringKey {
         switch self { // TODO
         case UserProgression.level1:
-            return "Inexistant"
+            return "Very Poor"
         case UserProgression.level2:
-            return "Très faible"
+            return "Poor"
         case UserProgression.level3:
-            return "Faible"
+            return "Quite poor"
         case UserProgression.level4:
-            return "Assez bien"
+            return "Quite good"
         case UserProgression.level5:
-            return "Bien"
+            return "Good"
         case UserProgression.level6:
-            return "Très bien"
+            return "Very good"
         case UserProgression.level7:
-            return "Excelent"
+            return "Excellent"
         case UserProgression.level8:
             return "Optimal"
         case UserProgression.notSeenYet:
-            return "Pas encore revu(s)"
+            return "Not yet reviewed"
         case UserProgression.toIgnore:
-            return "Ignoré"
+            return "Ignored"
         }
     }
     
@@ -188,28 +188,28 @@ enum UserProgression: String, CaseIterable {
     
     
     func regressionName() -> LocalizedStringKey? {
-        return "Maintenant" // TODO
+        return "Now" // TODO
     }
     
     
     func stagnationName() -> LocalizedStringKey?{
         switch self { // TODO
         case UserProgression.level1:
-            return "Demain"
+            return "Tomorrow"
         case UserProgression.level2:
-            return "Dans 2 jours"
+            return "In 2 days"
         case UserProgression.level3:
-            return "Dans 3 jours"
+            return "In 3 days"
         case UserProgression.level4:
-            return "Dans 5 jours"
+            return "In 5 days"
         case UserProgression.level5:
-            return "Dans 1 semaine"
+            return "In 1 week"
         case UserProgression.level6:
-            return "Dans 2 semaines"
+            return "In 2 weeks"
         case UserProgression.level7:
-            return "Dans 1 mois"
+            return "In 1 month"
         case UserProgression.level8:
-            return "Dans 3 mois"
+            return "In 3 months"
             
         default:
             return nil
@@ -220,21 +220,21 @@ enum UserProgression: String, CaseIterable {
     func progressionName() -> LocalizedStringKey? {
         switch self { // TODO
         case UserProgression.level1:
-            return "Dans 2 jours"
+            return "In 2 days"
         case UserProgression.level2:
-            return "Dans 3 jours"
+            return "In 3 days"
         case UserProgression.level3:
-            return "Dans 5 jours"
+            return "In 5 days"
         case UserProgression.level4:
-            return "Dans 1 semaine"
+            return "In 1 week"
         case UserProgression.level5:
-            return "Dans 2 semaines"
+            return "In 2 weeks"
         case UserProgression.level6:
-            return "Dans 1 mois"
+            return "In 1 month"
         case UserProgression.level7:
-            return "Dans 1 mois"
+            return "In 3 months"
         case UserProgression.level8:
-            return "Dans 1 an"
+            return "In 1 year"
             
         default:
             return nil

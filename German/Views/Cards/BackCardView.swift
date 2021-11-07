@@ -14,7 +14,7 @@ struct BackCardView: View {
     
     var body: some View {
         VStack {
-            Text(verb.translation(Lang.fr))
+            Text(verb.translation(Lang.en))
             
             Text.verbTemps(verb.temps.infinitive)
             Text.verbTemps(verb.temps.present)

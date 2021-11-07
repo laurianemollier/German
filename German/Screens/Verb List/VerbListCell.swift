@@ -8,9 +8,21 @@
 
 import SwiftUI
 
+enum VerbListCellViewMode: String {
+    case expanded
+    case compressed
+    
+    static let allValues = [expanded, compressed]
+}
+
+extension VerbListCellViewMode: Identifiable {
+    var id: RawValue { rawValue }
+}
+
 struct VerbListCell: View {
     
     let verb: Verb
+    let viewMode: VerbListCellViewMode
     
     var body: some View {
         HStack {
@@ -29,7 +41,7 @@ struct VerbListCell: View {
             Spacer()
             
             VStack(alignment: .trailing) {
-                Text(verb.translation(Lang.fr))
+                Text(verb.translation(Lang.en))
                     .foregroundColor(Color.gray)
                 
                 Spacer()
@@ -46,6 +58,6 @@ struct VerbListCell: View {
 
 struct VerbListCell_Previews: PreviewProvider {
     static var previews: some View {
-        VerbListCell(verb: Verbs.verbs.first!)
+        VerbListCell(verb: Verbs.verbs.first!, viewMode: VerbListCellViewMode.expanded)
     }
 }

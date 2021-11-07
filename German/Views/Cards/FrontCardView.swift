@@ -14,7 +14,7 @@ struct FrontCardView: View {
     
     var body: some View {
         VStack {
-            Text(verb.translation(Lang.fr))
+            Text(verb.translation(Lang.en))
         }
     }
 }

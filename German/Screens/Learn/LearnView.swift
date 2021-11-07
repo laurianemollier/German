@@ -11,35 +11,14 @@ import AVFoundation
 
 struct LearnView: View {
     
-    @State private var selection: String? = nil
+    @StateObject var statisticsNavigationModel = StatisticsNavigationModel()
     
     var body: some View {
         NavigationView {
-            VStack {
-//                NavigationLink(destination: Text("Second View"), tag: "Second", selection: $selection) { EmptyView() }
-//                
-//                NavigationLink(destination: Text("Third View"), tag: "Third", selection: $selection) { EmptyView() }
-//                
-//                Button("Tap to show second") {
-//                    self.selection = "Second"
-//                }
-                
-                Button {
-                    do {
-                        try DAO.shared.addRandomVerbToReviewList(ofLevel: [Level.A2], count: 10)
-                    }
-                    catch {
-                        SpeedLog.print(error)
-                    }
-                    
-                } label: {
-                    ToChangeButton(
-                        title: "Add randomly some verb",                        backgroundColor: Color.orange)
-                }
-            }
+            VerbListView(userProgression: nil)
+                .environmentObject(statisticsNavigationModel)
         }
     }
-    
 }
 
 struct LearnView_Previews: PreviewProvider {

@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// https://www.pointfree.co/collections
 // https://www.pointfree.co/collections/swiftui/redactions/ep116-redacted-swiftui-the-composable-architecture
 // https://www.youtube.com/watch?v=oDKDGCRdSHc
 // https://www.swiftbysundell.com/articles/avoiding-massive-swiftui-views/

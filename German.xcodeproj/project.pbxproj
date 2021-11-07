@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1616,6 +1616,8 @@
 		309EDBA22701D0C000BE78D5 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBA12701D0C000BE78D5 /* FrontCardView.swift */; };
 		309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBAA2701D0E700BE78D5 /* BackCardView.swift */; };
 		30B6A3E927098F9A0026474C /* ReviewRateProgressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */; };
+		30B9F913272FC59C00B11789 /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 30B9F912272FC59C00B11789 /* CodableCSV */; };
+		30B9F916272FD19D00B11789 /* Csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B9F915272FD19D00B11789 /* Csv.swift */; };
 		30CEDFCC2709F9CC0097A597 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */; };
 		9815F7A4213D073000248968 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A3213D073000248968 /* IAPProducts.swift */; };
 		9815F7A8213D09DF00248968 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F7A7213D09DF00248968 /* IAPHelper.swift */; };
@@ -3363,6 +3365,7 @@
 		309EDBA12701D0C000BE78D5 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		309EDBAA2701D0E700BE78D5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 		30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRateProgressionView.swift; sourceTree = "<group>"; };
+		30B9F915272FD19D00B11789 /* Csv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Csv.swift; sourceTree = "<group>"; };
 		30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		9804A8C0213E445700B630A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9804A8C8213E451A00B630A1 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -3443,6 +3446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				300C705226C2D9B60092A492 /* SQLite.framework in Frameworks */,
+				30B9F913272FC59C00B11789 /* CodableCSV in Frameworks */,
 				9863384821425A7900E8B95A /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7692,6 +7696,7 @@
 		308CD18F26F7474A00B0660D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				30B9F914272FD15B00B11789 /* Csv */,
 				305EDFAE26F7AB4800EDD43C /* Alerts */,
 				308CD19026F7475E00B0660D /* Extensions */,
 			);
@@ -7758,6 +7763,14 @@
 				308EBB8E2712C6BC00214358 /* VerbListCell.swift */,
 			);
 			path = "Verb List";
+			sourceTree = "<group>";
+		};
+		30B9F914272FD15B00B11789 /* Csv */ = {
+			isa = PBXGroup;
+			children = (
+				30B9F915272FD19D00B11789 /* Csv.swift */,
+			);
+			path = Csv;
 			sourceTree = "<group>";
 		};
 		9815F7A2213D071E00248968 /* InAppPurshase */ = {
@@ -8047,6 +8060,9 @@
 			dependencies = (
 			);
 			name = German;
+			packageProductDependencies = (
+				30B9F912272FC59C00B11789 /* CodableCSV */,
+			);
 			productName = "Apprendre les verbes irréguliers";
 			productReference = 98C9834720F750820080B08C /* German.app */;
 			productType = "com.apple.product-type.application";
@@ -8081,6 +8097,9 @@
 				fr,
 			);
 			mainGroup = 98C9833E20F750820080B08C;
+			packageReferences = (
+				30B9F911272FC59C00B11789 /* XCRemoteSwiftPackageReference "CodableCSV" */,
+			);
 			productRefGroup = 98C9834820F750820080B08C /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -9792,6 +9811,7 @@
 				98FA119F216E134C0068AB4C /* VerbDetailsVC.swift in Sources */,
 				3009DDB1271BEC43002C5B97 /* ReviewCardStyleViewModel.swift in Sources */,
 				305EDFB826F8795500EDD43C /* ReviewVerbView.swift in Sources */,
+				30B9F916272FD19D00B11789 /* Csv.swift in Sources */,
 				98EA96A5214E68640034B360 /* Background3.swift in Sources */,
 				3043176E271D706A00DCD56C /* StatisticsNavigationModel.swift in Sources */,
 				9863384F2144FAC100E8B95A /* PurchaseUIButton.swift in Sources */,
@@ -10042,6 +10062,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30B9F911272FC59C00B11789 /* XCRemoteSwiftPackageReference "CodableCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dehesa/CodableCSV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30B9F912272FC59C00B11789 /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30B9F911272FC59C00B11789 /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98C9833F20F750820080B08C /* Project object */;
 }

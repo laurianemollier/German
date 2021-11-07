@@ -51,7 +51,7 @@ class VerbCardView: UIView {
     func setup(verb: Verb, backward: Bool) {
         self.verb = verb
         
-        self.translationLabel.text = verb.translation(Lang.fr)
+        self.translationLabel.text = verb.translation(Lang.en)
 //        self.infinitiveLabel.attributedText = verb.infinitiveColored(font: self.infinitiveLabel.font)
 //        self.presentLabel.attributedText = verb.presentColored(font: self.presentLabel.font)
 //        self.simplePastLabel.attributedText = verb.simplePastColored(font: self.simplePastLabel.font)

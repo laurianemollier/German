@@ -26,10 +26,9 @@ struct LearningVerbDetailsView: View {
                         backgroundColor: Color.orange)
                 })
             } else {
-                Text("Niveau de connaissance du verbe")
+                Text("Knowledge level for this verb")
                 
                 VStack{
-                    userProgressionButton(userProgression: UserProgression.notSeenYet)
                     userProgressionButton(userProgression: UserProgression.level1)
                     userProgressionButton(userProgression: UserProgression.level2)
                     userProgressionButton(userProgression: UserProgression.level3)

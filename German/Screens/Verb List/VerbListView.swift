@@ -16,10 +16,21 @@ struct VerbListView: View {
     let userProgression: UserProgression?
     @StateObject var viewModel = VerbListViewModel()
     @StateObject var searchBarViewModel = SearchBarViewModel()
+    @State var cellViewMode: VerbListCellViewMode = VerbListCellViewMode.expanded
     
     var body: some View {
         VStack {
+            HStack{
+                Spacer()
+                Picker(selection: $cellViewMode, label: Text("Cell view mode"), content: {
+                    ForEach(VerbListCellViewMode.allValues){ mode in
+                        Text(mode.rawValue)
+                    }
+                })
+            }
+         
             SearchBarView(viewModel: searchBarViewModel)
+            
             List(
                 viewModel.learningVerbs.filter({ learningVerb in
                     if searchBarViewModel.isSearching {
@@ -36,7 +47,7 @@ struct VerbListView: View {
                             LearningVerbDetailsView(learningVerb: learningVerb)
                         },
                         label: {
-                            VerbListCell(verb: learningVerb.verb)
+                            VerbListCell(verb: learningVerb.verb, viewMode: cellViewMode)
                         }
                     )
                 }
