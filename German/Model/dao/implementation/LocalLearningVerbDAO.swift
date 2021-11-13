@@ -34,7 +34,7 @@ final class LocalLearningVerbDAO: LearningVerbDAO{
     func update(learningVerbs: [DbLearningVerb]) throws -> Bool{
         return try learningVerbs.map{ v in
             try update(learningVerb: v)
-        }.forAll(where: {b in b})
+        }.allSatisfy({$0})
     }
     
     func addRandomVerbToReviewList(ofLevel: [Level], count: Int) throws {

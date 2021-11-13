@@ -62,8 +62,7 @@ final class AudioToggleViewModel: ObservableObject {
                 audioPlayer = try AVAudioPlayer(contentsOf: audioURL, fileTypeHint: nil)
                 audioPlayer!.play()
                 audioPlayer!.numberOfLoops = 0
-                
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
             } else {
                 SpeedLog.print("Audio file \(nameAudioFile) not found")
             }
