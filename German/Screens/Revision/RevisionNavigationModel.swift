@@ -1,17 +1,17 @@
 //
-//  RevisionNavigation.swift
+//  RevisionNavigationModel.swift
 //  German
 //
-//  Created by Lauriane Mollier on 10/4/21.
+//  Created by Lauriane Mollier on 12/4/21.
 //  Copyright © 2021 Lauriane Mollier. All rights reserved.
 //
 
 import SwiftUI
 
 final class RevisionNavigationModel: ObservableObject {
-    @Published var state: RevisionNavigationState
-    
-    init(state: RevisionNavigationState) {
-        self.state = state
+    @Published var activeRevision: Bool = false {
+        didSet {
+            print("activeRevision: ", String(describing: self.activeRevision))
+        }
     }
 }

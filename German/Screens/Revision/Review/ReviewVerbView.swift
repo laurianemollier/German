@@ -13,7 +13,7 @@ import SwiftUI
 // https://www.youtube.com/watch?v=oDKDGCRdSHc
 // https://www.swiftbysundell.com/articles/avoiding-massive-swiftui-views/
 // https://stackoverflow.com/questions/62512547/in-swiftui-in-a-foreach0-3-animate-the-tapped-button-only-not-all-3-a
-struct ReviewVerbView: View /*, ReviewCardStyleViewModel */ {
+struct ReviewVerbView: View {
     
     // TODO: lolo to make generic
     @StateObject var flashcardViewModel: FlashcardViewModel = FlashcardViewModel()
@@ -81,7 +81,7 @@ struct ReviewVerbView: View /*, ReviewCardStyleViewModel */ {
         .environmentObject(audioToggleViewModel)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton(action: {
-            navigation.state = RevisionNavigationState.pickStyle
+            navigation.activeRevision = false
         }))
         .onAppear{onAppear()}
     }
@@ -117,7 +117,7 @@ struct ReviewVerbView: View /*, ReviewCardStyleViewModel */ {
         viewModel.setAction(
             onEndRevisionSession: {
                 audioToggleViewModel.audioStop()
-                navigation.state = RevisionNavigationState.home
+                navigation.activeRevision = false
             })
     }
 }

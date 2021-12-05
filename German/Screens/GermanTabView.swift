@@ -13,15 +13,17 @@ import SwiftUI
 // https://github.com/matteopuc/swiftui-navigation-stack
 struct GermanTabView: View {
     
-    @StateObject var statisticsNavigationModel = StatisticsNavigationModel()
+    @StateObject var statisticsNavigation = StatisticsNavigationModel()
+    @StateObject var revisionNavigation = RevisionNavigationModel()
     
     var body: some View {
         TabView {
-            RevisionView()
+            RevisionHomeView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
+                .environmentObject(revisionNavigation)
             
             LearnView()
                 .tabItem {
@@ -34,7 +36,7 @@ struct GermanTabView: View {
                     Image(systemName: "bag")
                     Text("Order")
                 }
-                .environmentObject(statisticsNavigationModel)
+                .environmentObject(statisticsNavigation)
         }
         .accentColor(.brandPrimary)
     }

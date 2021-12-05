@@ -10,7 +10,7 @@ import SwiftUI
 
 struct VerbListView: View {
     
-    @EnvironmentObject var navModel: StatisticsNavigationModel
+    @EnvironmentObject var navigation: StatisticsNavigationModel
     
     // if not defined, load all the verbs
     let userProgression: UserProgression?
@@ -42,9 +42,10 @@ struct VerbListView: View {
                 })) { learningVerb in
                     NavigationLink(
                         tag: learningVerb,
-                        selection: $navModel.activeLearningVerb,
+                        selection: $navigation.activeLearningVerb,
                         destination: {
                             LearningVerbDetailsView(learningVerb: learningVerb)
+                                .environmentObject(navigation) // TODO: should not be here
                         },
                         label: {
                             VerbListCell(verb: learningVerb.verb, viewMode: cellViewMode)

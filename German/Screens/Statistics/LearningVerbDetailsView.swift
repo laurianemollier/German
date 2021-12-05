@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LearningVerbDetailsView: View {
     
-    @EnvironmentObject var navModel: StatisticsNavigationModel
+    @EnvironmentObject var navigation: StatisticsNavigationModel
     let learningVerb: LearningVerb
 
     var body: some View {
@@ -19,7 +19,7 @@ struct LearningVerbDetailsView: View {
             
             if learningVerb.userProgression == UserProgression.notSeenYet {
                 Button(action: {
-                    selectNewProgressionLevel(newProgressionLevel: UserProgression.level1)
+                    addToTheReviewList(learningVerb: learningVerb)
                 }, label: {
                     ToChangeButton(
                         title: "Add the verb to the review list",
@@ -50,12 +50,29 @@ struct LearningVerbDetailsView: View {
         })
     }
     
-    private func selectNewProgressionLevel(newProgressionLevel: UserProgression){
-        navModel.activeUserProgression = nil
-        navModel.activeLearningVerb = nil
+    private func addToTheReviewList(learningVerb: LearningVerb){
+        navigation.activeUserProgression = nil
+        navigation.activeLearningVerb = nil
         
-        let (newProgression, dateToReview) =
-        newProgressionLevel.stagnation(reviewedDate: Date())!
+        do{
+            let success = try DAO.shared.addVerbToReviewList(learningVerb: learningVerb)
+            if success {
+                SpeedLog.print("Sucessly modify all learning verb")
+            }
+            else{
+                SpeedLog.print("One verb was not found")
+            }
+        }
+        catch{
+            SpeedLog.print(error)
+        }
+    }
+    
+    private func selectNewProgressionLevel(newProgressionLevel: UserProgression){
+        navigation.activeUserProgression = nil
+        navigation.activeLearningVerb = nil
+        
+        let (newProgression, dateToReview) = newProgressionLevel.stagnation(reviewedDate: Date())!
         
         do{
             let userLearningVerb = LearningVerb(id: learningVerb.id,
@@ -67,12 +84,10 @@ struct LearningVerbDetailsView: View {
                 SpeedLog.print("Sucessly modify all learning verb")
             }
             else{
-                // TODO
                 SpeedLog.print("One verb was not found")
             }
         }
         catch{
-            // TODO
             SpeedLog.print(error)
         }
     }

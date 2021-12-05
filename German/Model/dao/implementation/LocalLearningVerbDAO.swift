@@ -37,6 +37,12 @@ final class LocalLearningVerbDAO: LearningVerbDAO{
         }.allSatisfy({$0})
     }
     
+    func addVerbToReviewList(learningVerb: LearningVerb) throws -> Bool {
+        let updated = learningVerb.set(userProgression: UserProgression.level1, dateToReview: Date())
+        return try update(learningVerb: updated.toDbUserLearningVerb())
+    }
+    
+    // TODO: to delete
     func addRandomVerbToReviewList(ofLevel: [Level], count: Int) throws {
         
         // TODO to make it more effective in one query
