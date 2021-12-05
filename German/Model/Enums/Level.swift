@@ -11,11 +11,9 @@ import AVFoundation
 
 
 /// Each verb belong to a level
-public enum Level: String{
+public enum Level: String, Hashable, CaseIterable{
     case A2 = "A2"
     case B1 = "B1"
     case B2 = "B2"
     case C1 = "C1"
-    
-    static let allValues = [A2, B1, B2, C1]
 }

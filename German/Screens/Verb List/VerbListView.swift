@@ -55,7 +55,6 @@ struct VerbListView: View {
         }.onAppear {
             viewModel.loadData(userProgression: userProgression)
         }
-        
     }
 }
 

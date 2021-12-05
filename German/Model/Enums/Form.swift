@@ -11,7 +11,7 @@ import AVFoundation
 
 
 /// Each verb belongs to a conjugation's form
-public enum Form: String { // 11
+public enum Form: String, Hashable, CaseIterable { // 11
     case aiea = "a–ie(i)–a"
     case aua = "a-u-a"
     case eae = "e-a-e"
@@ -23,6 +23,4 @@ public enum Form: String { // 11
     case ieoo = "ie(e)-o-o"
     case undefine = "undefine"
     case weak = "weak"
-    
-    static let allValues = [aiea, aua, eae, eao, eiieie, eiii, iao, iau, ieoo, undefine, weak]
 }

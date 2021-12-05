@@ -42,6 +42,12 @@ final class LocalLearningVerbDAO: LearningVerbDAO{
         return try update(learningVerb: updated.toDbUserLearningVerb())
     }
     
+    func removeVerbFromReviewList(learningVerb: LearningVerb) throws -> Bool {
+        // TODO: not correct
+        let updated = learningVerb.set(userProgression: UserProgression.notSeenYet, dateToReview: Date())
+        return try update(learningVerb: updated.toDbUserLearningVerb())
+    }
+    
     // TODO: to delete
     func addRandomVerbToReviewList(ofLevel: [Level], count: Int) throws {
         

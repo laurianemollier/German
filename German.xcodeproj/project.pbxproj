@@ -1616,6 +1616,7 @@
 		30911D2E273FA1A7009AC586 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30911D2D273FA1A7009AC586 /* Logging.swift */; };
 		309EDBA22701D0C000BE78D5 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBA12701D0C000BE78D5 /* FrontCardView.swift */; };
 		309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBAA2701D0E700BE78D5 /* BackCardView.swift */; };
+		30A6A83A275CD41100BE89FF /* LearnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A6A839275CD41100BE89FF /* LearnViewModel.swift */; };
 		30B6A3E927098F9A0026474C /* ReviewRateProgressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */; };
 		30B9F913272FC59C00B11789 /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 30B9F912272FC59C00B11789 /* CodableCSV */; };
 		30B9F916272FD19D00B11789 /* Csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B9F915272FD19D00B11789 /* Csv.swift */; };
@@ -3349,6 +3350,7 @@
 		30911D2D273FA1A7009AC586 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		309EDBA12701D0C000BE78D5 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		309EDBAA2701D0E700BE78D5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
+		30A6A839275CD41100BE89FF /* LearnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewModel.swift; sourceTree = "<group>"; };
 		30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRateProgressionView.swift; sourceTree = "<group>"; };
 		30B9F915272FD19D00B11789 /* Csv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Csv.swift; sourceTree = "<group>"; };
 		30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
@@ -7674,6 +7676,7 @@
 			isa = PBXGroup;
 			children = (
 				308CD19726F747FF00B0660D /* LearnView.swift */,
+				30A6A839275CD41100BE89FF /* LearnViewModel.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -9717,6 +9720,7 @@
 				98685F7021270E2B00DA327D /* SpeedLog.swift in Sources */,
 				988DB9152125C09900AFAEF4 /* LocalDbVerbTranslationDAO.swift in Sources */,
 				98A511D0214AFA80001107D9 /* BoughtIAPProducts.swift in Sources */,
+				30A6A83A275CD41100BE89FF /* LearnViewModel.swift in Sources */,
 				98685F782127173800DA327D /* DbLearningVerb.swift in Sources */,
 				309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */,
 			);
