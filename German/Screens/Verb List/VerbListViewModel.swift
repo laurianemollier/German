@@ -10,6 +10,8 @@ import SwiftUI
 
 final class VerbListViewModel: ObservableObject {
     
+    @Published var selectedLevel: Level? = nil
+    @Published var selectedForm: Form? = nil
     @Published var learningVerbs: [LearningVerb] = []
     @Published var alertItem: AlertItem?
     @Published var isLoading = false

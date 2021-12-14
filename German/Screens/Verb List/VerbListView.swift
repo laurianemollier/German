@@ -21,12 +21,22 @@ struct VerbListView: View {
     var body: some View {
         VStack {
             HStack{
-                Spacer()
-                Picker(selection: $cellViewMode, label: Text("Cell view mode"), content: {
-                    ForEach(VerbListCellViewMode.allValues){ mode in
-                        Text(mode.rawValue)
+                Picker("Level Filter", selection: $viewModel.selectedLevel) {
+                    Text("All level").tag(Level?.none)
+                    ForEach(Level.allCases, id: \.self) { level in
+                        Text(verbatim: "\(level)").tag(Level?.some(level))
                     }
-                })
+                }
+                
+                Spacer()
+                Picker("Level Form", selection: $viewModel.selectedForm) {
+                    Text("All form").tag(Form?.none)
+                    ForEach(Form.allCases, id: \.self) { form in
+                        Text(verbatim: "\(form)").tag(Form?.some(form))
+                    }
+                }
+                
+                Spacer()
             }
          
             SearchBarView(viewModel: searchBarViewModel)

@@ -1603,6 +1603,7 @@
 		308EBB8F2712C6BC00214358 /* VerbListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EBB8E2712C6BC00214358 /* VerbListCell.swift */; };
 		308EBB912712CEE000214358 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EBB902712CEE000214358 /* SearchBarView.swift */; };
 		308EBB932712E36300214358 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EBB922712E36300214358 /* SearchBarViewModel.swift */; };
+		3090746D275E1C2700D43A74 /* LearnCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3090746C275E1C2700D43A74 /* LearnCellView.swift */; };
 		30911D0B273F9EE7009AC586 /* ComposableArchitecture.docc in Sources */ = {isa = PBXBuildFile; fileRef = 30911D0A273F9EE7009AC586 /* ComposableArchitecture.docc */; };
 		30911D11273F9EE7009AC586 /* ComposableArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30911D07273F9EE7009AC586 /* ComposableArchitecture.framework */; };
 		30911D18273F9EE7009AC586 /* ComposableArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30911D17273F9EE7009AC586 /* ComposableArchitectureTests.swift */; };
@@ -3338,6 +3339,7 @@
 		308EBB8E2712C6BC00214358 /* VerbListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbListCell.swift; sourceTree = "<group>"; };
 		308EBB902712CEE000214358 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		308EBB922712E36300214358 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
+		3090746C275E1C2700D43A74 /* LearnCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCellView.swift; sourceTree = "<group>"; };
 		30911D07273F9EE7009AC586 /* ComposableArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ComposableArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30911D09273F9EE7009AC586 /* ComposableArchitecture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposableArchitecture.h; sourceTree = "<group>"; };
 		30911D0A273F9EE7009AC586 /* ComposableArchitecture.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ComposableArchitecture.docc; sourceTree = "<group>"; };
@@ -7677,6 +7679,7 @@
 			children = (
 				308CD19726F747FF00B0660D /* LearnView.swift */,
 				30A6A839275CD41100BE89FF /* LearnViewModel.swift */,
+				3090746C275E1C2700D43A74 /* LearnCellView.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -9658,6 +9661,7 @@
 				308CD18B26F7465E00B0660D /* GermanApp.swift in Sources */,
 				3009DDA9271A9EAF002C5B97 /* AudioToggleViewModel.swift in Sources */,
 				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
+				3090746D275E1C2700D43A74 /* LearnCellView.swift in Sources */,
 				308EBB8D2712C65C00214358 /* VerbListViewModel.swift in Sources */,
 				305009A42708E6AD001E9E08 /* ReviewVerbViewModel.swift in Sources */,
 				305EDFA426F79C7400EDD43C /* RevisionHomeViewModel.swift in Sources */,
