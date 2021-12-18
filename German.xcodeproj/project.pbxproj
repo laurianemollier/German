@@ -10,8 +10,6 @@
 		3009DDA0271A9E67002C5B97 /* AudioToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009DD9F271A9E67002C5B97 /* AudioToggleView.swift */; };
 		3009DDA9271A9EAF002C5B97 /* AudioToggleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009DDA8271A9EAF002C5B97 /* AudioToggleViewModel.swift */; };
 		3009DDAE271B4FBA002C5B97 /* PlayVerbAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009DDAD271B4FBA002C5B97 /* PlayVerbAudio.swift */; };
-		300C705226C2D9B60092A492 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300C704526C2D9610092A492 /* SQLite.framework */; };
-		300C705326C2D9B60092A492 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 300C704526C2D9610092A492 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		300C706826C836F90092A492 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706726C836F90092A492 /* DAO.swift */; };
 		300C706B26C8380A0092A492 /* DbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706A26C8380A0092A492 /* DbVerbDAO.swift */; };
 		300C706D26C83AE50092A492 /* DbVerbTranslationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706C26C83AE50092A492 /* DbVerbTranslationDAO.swift */; };
@@ -1626,7 +1624,8 @@
 		9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829D4B821416E5F0004FCB3 /* Audio.swift */; };
 		983B2495211C4A0C009C33B1 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2494211C4A0C009C33B1 /* Verb.swift */; };
 		983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2496211C6A4B009C33B1 /* Verbs.swift */; };
-		9863384821425A7900E8B95A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9804A8C0213E445700B630A1 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		984959E5276DC26D00F155FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9804A8C0213E445700B630A1 /* AVFoundation.framework */; };
+		984959EB276DC37200F155FB /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 984959EA276DC37200F155FB /* SQLite */; };
 		98685F352126BA4900DA327D /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F342126BA4900DA327D /* Lang.swift */; };
 		98685F372126BA6100DA327D /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F362126BA6100DA327D /* Form.swift */; };
 		98685F392126BA8700DA327D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F382126BA8700DA327D /* Level.swift */; };
@@ -1735,7 +1734,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				30911D1D273F9EE7009AC586 /* ComposableArchitecture.framework in Embed Frameworks */,
-				300C705326C2D9B60092A492 /* SQLite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3363,6 +3361,8 @@
 		9829D4B821416E5F0004FCB3 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		983B2494211C4A0C009C33B1 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
 		983B2496211C6A4B009C33B1 /* Verbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verbs.swift; sourceTree = "<group>"; };
+		984959E7276DC30500F155FB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		984959E8276DC32100F155FB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		98685F342126BA4900DA327D /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
 		98685F362126BA6100DA327D /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		98685F382126BA8700DA327D /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
@@ -3412,10 +3412,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984959EB276DC37200F155FB /* SQLite in Frameworks */,
+				984959E5276DC26D00F155FB /* AVFoundation.framework in Frameworks */,
 				30911D1C273F9EE7009AC586 /* ComposableArchitecture.framework in Frameworks */,
-				300C705226C2D9B60092A492 /* SQLite.framework in Frameworks */,
 				30B9F913272FC59C00B11789 /* CodableCSV in Frameworks */,
-				9863384821425A7900E8B95A /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7804,6 +7804,8 @@
 		98B0A8AA212557F1000F44B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				984959E8276DC32100F155FB /* libsqlite3.tbd */,
+				984959E7276DC30500F155FB /* libsqlite3.0.tbd */,
 				300C703A26C2D9610092A492 /* SQLite.xcodeproj */,
 				9804A8C8213E451A00B630A1 /* iAd.framework */,
 				9804A8C0213E445700B630A1 /* AVFoundation.framework */,
@@ -7932,6 +7934,7 @@
 			name = German;
 			packageProductDependencies = (
 				30B9F912272FC59C00B11789 /* CodableCSV */,
+				984959EA276DC37200F155FB /* SQLite */,
 			);
 			productName = "Apprendre les verbes irréguliers";
 			productReference = 98C9834720F750820080B08C /* German.app */;
@@ -7977,6 +7980,7 @@
 			mainGroup = 98C9833E20F750820080B08C;
 			packageReferences = (
 				30B9F911272FC59C00B11789 /* XCRemoteSwiftPackageReference "CodableCSV" */,
+				984959E9276DC37200F155FB /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 			);
 			productRefGroup = 98C9834820F750820080B08C /* Products */;
 			projectDirPath = "";
@@ -10089,6 +10093,14 @@
 				minimumVersion = 0.6.7;
 			};
 		};
+		984959E9276DC37200F155FB /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -10096,6 +10108,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 30B9F911272FC59C00B11789 /* XCRemoteSwiftPackageReference "CodableCSV" */;
 			productName = CodableCSV;
+		};
+		984959EA276DC37200F155FB /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 984959E9276DC37200F155FB /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

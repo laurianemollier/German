@@ -9,6 +9,15 @@
           "revision": "99ace2cfdfbc19108b529c021005fb57a460e715",
           "version": "0.6.7"
         }
+      },
+      {
+        "package": "SQLite.swift",
+        "repositoryURL": "https://github.com/stephencelis/SQLite.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "60a65015f6402b7c34b9a924f755ca0a73afeeaa",
+          "version": "0.13.1"
+        }
       }
     ]
   },
