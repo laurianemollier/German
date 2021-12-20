@@ -7,38 +7,9 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
-// https://www.pointfree.co/collections
-// https://www.pointfree.co/collections/swiftui/redactions/ep116-redacted-swiftui-the-composable-architecture
-// https://www.youtube.com/watch?v=oDKDGCRdSHc
-// https://www.swiftbysundell.com/articles/avoiding-massive-swiftui-views/
-// https://stackoverflow.com/questions/62512547/in-swiftui-in-a-foreach0-3-animate-the-tapped-button-only-not-all-3-a
 struct ReviewVerbView: View {
-    
-    // TODO: lolo to make generic
-    @StateObject var flashcardViewModel: FlashcardViewModel = FlashcardViewModel()
-    
-    func flashcardView(verb: Verb) -> some View {
-        FlashcardView<FrontCardView, BackCardView>(viewModel: flashcardViewModel) {
-            FrontCardView(verb: verb)
-        } back: {
-            BackCardView(verb: verb)
-        } onTapGestureAction: {
-            try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)
-        }
-    }
-    
-    func isCurrentVerbReviewFinished() -> Bool {
-        flashcardViewModel.flipped
-    }
-    
-    func flipAllCards() {
-        flashcardViewModel.flipFlashcard()
-    }
-    
-    func resetAllCards() {
-        flashcardViewModel.resetFlashcard()
-    }
     
     // ------------------
     // MARK: - Variables
@@ -46,12 +17,15 @@ struct ReviewVerbView: View {
     
     @EnvironmentObject var navigation: RevisionNavigationModel
     
-    @StateObject var viewModel: ReviewVerbViewModel = ReviewVerbViewModel()
-    @StateObject var audioToggleViewModel: AudioToggleViewModel = AudioToggleViewModel()
+    @ObservedObject var store: Store<ReviewVerbViewState, ReviewVerbViewAction>
+    
+    init(store: Store<ReviewVerbViewState, ReviewVerbViewAction>) {
+        self.store = store
+    }
     
     var body: some View {
         VStack {
-            if let currentVerb = viewModel.currentLearningVerb {
+            if let currentVerb = store.value.reviewVerb.currentLearningVerb {
                 HStack {
                     Spacer()
                     progressionBar
@@ -59,18 +33,21 @@ struct ReviewVerbView: View {
                 
                 flashcardView(verb: currentVerb.verb)
                 
-                if isCurrentVerbReviewFinished() {
-                    ReviewRateProgressionView(
-                        audioToggleViewModel: audioToggleViewModel,
-                        viewModel: viewModel
-                    )
+                if store.value.flashcard.flipped {
+                    rateProgressionView()
                 } else {
                     flipFlashcardButton(verb: currentVerb.verb)
                 }
                 
                 HStack {
                     Spacer()
-                    AudioToggleView()
+                    AudioToggleView(
+                        store: self.store
+                            .view(
+                                value: { $0.audioToggle },
+                                action: { .audioToggle($0) }
+                            )
+                    )
                         .padding(.trailing, 40)
                 }
                 
@@ -78,27 +55,41 @@ struct ReviewVerbView: View {
             }
             Spacer()
         }
-        .environmentObject(audioToggleViewModel)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton(action: {
             navigation.activeRevision = false
         }))
-        .onAppear{onAppear()}
+        .onAppear{
+            store.send(.reviewVerb(.loadVerbsToReview))
+        }
     }
     
     private var progressionBar: some View {
-        Text("\(viewModel.index + 1)/\(viewModel.verbsToReview.count)").padding(.trailing, 40)
+        Text("\(store.value.reviewVerb.index + 1)/\(store.value.reviewVerb.verbsToReview.count)")
+            .padding(.trailing, 40)
+    }
+    
+    private func flashcardView(verb: Verb) -> some View {
+        FlashcardView<FrontCardView, BackCardView>(
+            store: self.store
+                .view(
+                    value: { $0.flashcard },
+                    action: { .flashcard($0) }
+                )
+        ) {
+            FrontCardView(verb: verb)
+        } back: {
+            BackCardView(verb: verb)
+        }.onTapGesture {
+            store.send(.flashcard(.flipFlashcard))
+            store.send(.audioToggle(.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)))
+        }
     }
     
     private func flipFlashcardButton(verb: Verb) -> some View {
         Button {
-            flipAllCards()
-            do {
-                try audioToggleViewModel.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)
-            }
-            catch {
-                SpeedLog.print(error)
-            }
+            store.send(.flashcard(.flipFlashcard))
+            store.send(.audioToggle(.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)))
         } label: {
             Image("RVTurnButton")
                 .resizable()
@@ -107,24 +98,56 @@ struct ReviewVerbView: View {
         }
     }
     
-    private func onAppear() {
-        viewModel.getVerbToReview()
-        viewModel.setAction(
-            onNextVerb: {
-                resetAllCards()
-            })
-        
-        viewModel.setAction(
-            onEndRevisionSession: {
-                audioToggleViewModel.audioStop()
-                navigation.activeRevision = false
-            })
+    private func rateProgressionView() -> some View {
+        VStack {
+            if let progression = store.value.reviewVerb.currentLearningVerb?.userProgression {
+                
+                Text("To repeat in")
+                
+                HStack{
+                    Button {
+                        // TODO: upper action for that ?
+                        store.send(.reviewVerb(.regress))
+                        store.send(.audioToggle(.audioStop))
+                        store.send(.flashcard(.resetFlashcard))
+                    } label: {
+                        ToChangeButton(title: progression.regressionName()!, // TODO
+                                       backgroundColor: Color.red)
+                    }
+                    
+                    Button {
+                        store.send(.reviewVerb(.stagnate))
+                        store.send(.audioToggle(.audioStop))
+                    } label: {
+                        ToChangeButton(
+                            title: progression.stagnationName()!, // TODO
+                            backgroundColor: Color.orange)
+                    }
+                    
+                    Button {
+                        store.send(.reviewVerb(.progress))
+                        store.send(.audioToggle(.audioStop))
+                    } label: {
+                        ToChangeButton(
+                            title: progression.progressionName()!, // TODO
+                            backgroundColor: Color.green)
+                    }
+                }
+            }
+        }
     }
+    
+    //    private func onAppear() {
+    //        viewModel.getVerbToReview()
+    //        viewModel.setAction(
+    //            onNextVerb: {
+    //                 flashcardViewModel.resetFlashcard()
+    //            })
+    //
+    //        viewModel.setAction(
+    //            onEndRevisionSession: {
+    //                audioToggleViewModel.audioStop()
+    //                navigation.activeRevision = false
+    //            })
+    //    }
 }
-
-
-//struct ReviewVerbView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ReviewVerbView()
-//    }
-//}

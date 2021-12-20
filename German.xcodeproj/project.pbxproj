@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3009DDA0271A9E67002C5B97 /* AudioToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009DD9F271A9E67002C5B97 /* AudioToggleView.swift */; };
-		3009DDA9271A9EAF002C5B97 /* AudioToggleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009DDA8271A9EAF002C5B97 /* AudioToggleViewModel.swift */; };
 		3009DDAE271B4FBA002C5B97 /* PlayVerbAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009DDAD271B4FBA002C5B97 /* PlayVerbAudio.swift */; };
 		300C706826C836F90092A492 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706726C836F90092A492 /* DAO.swift */; };
 		300C706B26C8380A0092A492 /* DbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C706A26C8380A0092A492 /* DbVerbDAO.swift */; };
@@ -1578,12 +1577,8 @@
 		3050099527085606001E9E08 /* VerbTemps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099427085606001E9E08 /* VerbTemps.swift */; };
 		305009A027085F01001E9E08 /* Text+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099F27085F01001E9E08 /* Text+Ext.swift */; };
 		305009A22708DE58001E9E08 /* ToChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305009A12708DE58001E9E08 /* ToChangeButton.swift */; };
-		305009A42708E6AD001E9E08 /* ReviewVerbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305009A32708E6AD001E9E08 /* ReviewVerbViewModel.swift */; };
-		305EDFA426F79C7400EDD43C /* RevisionHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFA326F79C7400EDD43C /* RevisionHomeViewModel.swift */; };
 		305EDFAD26F7A64500EDD43C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFAC26F7A64500EDD43C /* LoadingView.swift */; };
 		305EDFB026F7AB5800EDD43C /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFAF26F7AB5800EDD43C /* AlertItem.swift */; };
-		305EDFB326F85F7D00EDD43C /* PickRevisionStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB226F85F7D00EDD43C /* PickRevisionStyleView.swift */; };
-		305EDFB526F8622A00EDD43C /* RevisionStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB426F8622A00EDD43C /* RevisionStyleView.swift */; };
 		305EDFB826F8795500EDD43C /* ReviewVerbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB726F8795500EDD43C /* ReviewVerbView.swift */; };
 		305EDFBA26F87AE200EDD43C /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB926F87AE200EDD43C /* FlashcardView.swift */; };
 		305EDFBC26F8807600EDD43C /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFBB26F8807600EDD43C /* XDismissButton.swift */; };
@@ -1616,16 +1611,26 @@
 		309EDBA22701D0C000BE78D5 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBA12701D0C000BE78D5 /* FrontCardView.swift */; };
 		309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBAA2701D0E700BE78D5 /* BackCardView.swift */; };
 		30A6A83A275CD41100BE89FF /* LearnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A6A839275CD41100BE89FF /* LearnViewModel.swift */; };
-		30B6A3E927098F9A0026474C /* ReviewRateProgressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */; };
 		30B9F913272FC59C00B11789 /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 30B9F912272FC59C00B11789 /* CodableCSV */; };
 		30B9F916272FD19D00B11789 /* Csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B9F915272FD19D00B11789 /* Csv.swift */; };
-		30CEDFCC2709F9CC0097A597 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */; };
 		30E3C271275B67B60082059C /* RevisionNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3C270275B67B60082059C /* RevisionNavigationModel.swift */; };
 		9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829D4B821416E5F0004FCB3 /* Audio.swift */; };
 		983B2495211C4A0C009C33B1 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2494211C4A0C009C33B1 /* Verb.swift */; };
 		983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B2496211C6A4B009C33B1 /* Verbs.swift */; };
 		984959E5276DC26D00F155FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9804A8C0213E445700B630A1 /* AVFoundation.framework */; };
 		984959EB276DC37200F155FB /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 984959EA276DC37200F155FB /* SQLite */; };
+		984959ED276DD52300F155FB /* RevisionHomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959EC276DD52300F155FB /* RevisionHomeState.swift */; };
+		984959EF276DD55500F155FB /* RevisionHomeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959EE276DD55500F155FB /* RevisionHomeAction.swift */; };
+		984959F1276DD5B800F155FB /* RevisionHomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959F0276DD5B800F155FB /* RevisionHomeReducer.swift */; };
+		984959F3276E6BFE00F155FB /* ReviewVerbState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959F2276E6BFE00F155FB /* ReviewVerbState.swift */; };
+		984959F5276E6CA500F155FB /* ReviewVerbAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959F4276E6CA500F155FB /* ReviewVerbAction.swift */; };
+		984959F7276E6CB700F155FB /* ReviewVerbReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959F6276E6CB700F155FB /* ReviewVerbReducer.swift */; };
+		984959FD276F15EB00F155FB /* FlashcardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959FC276F15EB00F155FB /* FlashcardState.swift */; };
+		984959FF276F15F500F155FB /* FlashcardReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959FE276F15F500F155FB /* FlashcardReducer.swift */; };
+		98495A01276F161600F155FB /* FlashcardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98495A00276F161600F155FB /* FlashcardAction.swift */; };
+		98495A04276F30EF00F155FB /* AudioToggleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98495A03276F30EF00F155FB /* AudioToggleAction.swift */; };
+		98495A06276F30FD00F155FB /* AudioToggleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98495A05276F30FD00F155FB /* AudioToggleReducer.swift */; };
+		98495A08276F313600F155FB /* AudioToggleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98495A07276F313600F155FB /* AudioToggleState.swift */; };
 		98685F352126BA4900DA327D /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F342126BA4900DA327D /* Lang.swift */; };
 		98685F372126BA6100DA327D /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F362126BA6100DA327D /* Form.swift */; };
 		98685F392126BA8700DA327D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F382126BA8700DA327D /* Level.swift */; };
@@ -1742,7 +1747,6 @@
 
 /* Begin PBXFileReference section */
 		3009DD9F271A9E67002C5B97 /* AudioToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioToggleView.swift; sourceTree = "<group>"; };
-		3009DDA8271A9EAF002C5B97 /* AudioToggleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioToggleViewModel.swift; sourceTree = "<group>"; };
 		3009DDAD271B4FBA002C5B97 /* PlayVerbAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVerbAudio.swift; sourceTree = "<group>"; };
 		300C703A26C2D9610092A492 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		300C705726C2E89B0092A492 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -3314,12 +3318,8 @@
 		3050099427085606001E9E08 /* VerbTemps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTemps.swift; sourceTree = "<group>"; };
 		3050099F27085F01001E9E08 /* Text+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Ext.swift"; sourceTree = "<group>"; };
 		305009A12708DE58001E9E08 /* ToChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToChangeButton.swift; sourceTree = "<group>"; };
-		305009A32708E6AD001E9E08 /* ReviewVerbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbViewModel.swift; sourceTree = "<group>"; };
-		305EDFA326F79C7400EDD43C /* RevisionHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionHomeViewModel.swift; sourceTree = "<group>"; };
 		305EDFAC26F7A64500EDD43C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		305EDFAF26F7AB5800EDD43C /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
-		305EDFB226F85F7D00EDD43C /* PickRevisionStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickRevisionStyleView.swift; sourceTree = "<group>"; };
-		305EDFB426F8622A00EDD43C /* RevisionStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionStyleView.swift; sourceTree = "<group>"; };
 		305EDFB726F8795500EDD43C /* ReviewVerbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbView.swift; sourceTree = "<group>"; };
 		305EDFB926F87AE200EDD43C /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		305EDFBB26F8807600EDD43C /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
@@ -3351,9 +3351,7 @@
 		309EDBA12701D0C000BE78D5 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		309EDBAA2701D0E700BE78D5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 		30A6A839275CD41100BE89FF /* LearnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewModel.swift; sourceTree = "<group>"; };
-		30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRateProgressionView.swift; sourceTree = "<group>"; };
 		30B9F915272FD19D00B11789 /* Csv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Csv.swift; sourceTree = "<group>"; };
-		30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		30E3C270275B67B60082059C /* RevisionNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionNavigationModel.swift; sourceTree = "<group>"; };
 		9804A8C0213E445700B630A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9804A8C8213E451A00B630A1 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -3363,6 +3361,18 @@
 		983B2496211C6A4B009C33B1 /* Verbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verbs.swift; sourceTree = "<group>"; };
 		984959E7276DC30500F155FB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		984959E8276DC32100F155FB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		984959EC276DD52300F155FB /* RevisionHomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionHomeState.swift; sourceTree = "<group>"; };
+		984959EE276DD55500F155FB /* RevisionHomeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionHomeAction.swift; sourceTree = "<group>"; };
+		984959F0276DD5B800F155FB /* RevisionHomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionHomeReducer.swift; sourceTree = "<group>"; };
+		984959F2276E6BFE00F155FB /* ReviewVerbState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbState.swift; sourceTree = "<group>"; };
+		984959F4276E6CA500F155FB /* ReviewVerbAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbAction.swift; sourceTree = "<group>"; };
+		984959F6276E6CB700F155FB /* ReviewVerbReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbReducer.swift; sourceTree = "<group>"; };
+		984959FC276F15EB00F155FB /* FlashcardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardState.swift; sourceTree = "<group>"; };
+		984959FE276F15F500F155FB /* FlashcardReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardReducer.swift; sourceTree = "<group>"; };
+		98495A00276F161600F155FB /* FlashcardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardAction.swift; sourceTree = "<group>"; };
+		98495A03276F30EF00F155FB /* AudioToggleAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioToggleAction.swift; sourceTree = "<group>"; };
+		98495A05276F30FD00F155FB /* AudioToggleReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioToggleReducer.swift; sourceTree = "<group>"; };
+		98495A07276F313600F155FB /* AudioToggleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioToggleState.swift; sourceTree = "<group>"; };
 		98685F342126BA4900DA327D /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
 		98685F362126BA6100DA327D /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		98685F382126BA8700DA327D /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
@@ -3425,9 +3435,11 @@
 		3009DDAC271B4FA2002C5B97 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				3009DD9F271A9E67002C5B97 /* AudioToggleView.swift */,
-				3009DDA8271A9EAF002C5B97 /* AudioToggleViewModel.swift */,
 				3009DDAD271B4FBA002C5B97 /* PlayVerbAudio.swift */,
+				3009DD9F271A9E67002C5B97 /* AudioToggleView.swift */,
+				98495A03276F30EF00F155FB /* AudioToggleAction.swift */,
+				98495A05276F30FD00F155FB /* AudioToggleReducer.swift */,
+				98495A07276F313600F155FB /* AudioToggleState.swift */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -7575,21 +7587,13 @@
 			path = Alerts;
 			sourceTree = "<group>";
 		};
-		305EDFB126F85F1C00EDD43C /* PickRevisionStyle */ = {
-			isa = PBXGroup;
-			children = (
-				305EDFB226F85F7D00EDD43C /* PickRevisionStyleView.swift */,
-				305EDFB426F8622A00EDD43C /* RevisionStyleView.swift */,
-			);
-			path = PickRevisionStyle;
-			sourceTree = "<group>";
-		};
 		305EDFB626F8791C00EDD43C /* Review */ = {
 			isa = PBXGroup;
 			children = (
 				305EDFB726F8795500EDD43C /* ReviewVerbView.swift */,
-				305009A32708E6AD001E9E08 /* ReviewVerbViewModel.swift */,
-				30B6A3E827098F9A0026474C /* ReviewRateProgressionView.swift */,
+				984959F2276E6BFE00F155FB /* ReviewVerbState.swift */,
+				984959F4276E6CA500F155FB /* ReviewVerbAction.swift */,
+				984959F6276E6CB700F155FB /* ReviewVerbReducer.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -7598,7 +7602,9 @@
 			isa = PBXGroup;
 			children = (
 				305EDFBF26F8829E00EDD43C /* RevisionHomeView.swift */,
-				305EDFA326F79C7400EDD43C /* RevisionHomeViewModel.swift */,
+				984959EC276DD52300F155FB /* RevisionHomeState.swift */,
+				984959EE276DD55500F155FB /* RevisionHomeAction.swift */,
+				984959F0276DD5B800F155FB /* RevisionHomeReducer.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -7606,6 +7612,10 @@
 		30864C30271439910067C4D3 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				305EDFB926F87AE200EDD43C /* FlashcardView.swift */,
+				984959FC276F15EB00F155FB /* FlashcardState.swift */,
+				984959FE276F15F500F155FB /* FlashcardReducer.swift */,
+				98495A00276F161600F155FB /* FlashcardAction.swift */,
 				309EDBA12701D0C000BE78D5 /* FrontCardView.swift */,
 				309EDBAA2701D0E700BE78D5 /* BackCardView.swift */,
 			);
@@ -7631,8 +7641,6 @@
 				30864C30271439910067C4D3 /* Cards */,
 				308CD19C26F74B9600B0660D /* Buttons */,
 				305EDFAC26F7A64500EDD43C /* LoadingView.swift */,
-				305EDFB926F87AE200EDD43C /* FlashcardView.swift */,
-				30CEDFCB2709F9CC0097A597 /* FlashcardViewModel.swift */,
 				308EBB902712CEE000214358 /* SearchBarView.swift */,
 				308EBB922712E36300214358 /* SearchBarViewModel.swift */,
 			);
@@ -7668,7 +7676,6 @@
 			children = (
 				305EDFC126F882AB00EDD43C /* Home */,
 				305EDFB626F8791C00EDD43C /* Review */,
-				305EDFB126F85F1C00EDD43C /* PickRevisionStyle */,
 				30E3C270275B67B60082059C /* RevisionNavigationModel.swift */,
 			);
 			path = Revision;
@@ -9659,21 +9666,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				300C706826C836F90092A492 /* DAO.swift in Sources */,
+				984959F5276E6CA500F155FB /* ReviewVerbAction.swift in Sources */,
 				98685F72212712EE00DA327D /* LearningVerbTable.swift in Sources */,
 				98685F352126BA4900DA327D /* Lang.swift in Sources */,
 				986DD42D212FE7F1000E5E49 /* UIFont.swift in Sources */,
 				308CD18B26F7465E00B0660D /* GermanApp.swift in Sources */,
-				3009DDA9271A9EAF002C5B97 /* AudioToggleViewModel.swift in Sources */,
 				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
 				3090746D275E1C2700D43A74 /* LearnCellView.swift in Sources */,
+				984959F1276DD5B800F155FB /* RevisionHomeReducer.swift in Sources */,
 				308EBB8D2712C65C00214358 /* VerbListViewModel.swift in Sources */,
-				305009A42708E6AD001E9E08 /* ReviewVerbViewModel.swift in Sources */,
-				305EDFA426F79C7400EDD43C /* RevisionHomeViewModel.swift in Sources */,
 				305EDFC326F8920D00EDD43C /* BackButton.swift in Sources */,
 				308EBB932712E36300214358 /* SearchBarViewModel.swift in Sources */,
 				300C707A26C846AC0092A492 /* VerbDAO.swift in Sources */,
 				988DB9212126956200AFAEF4 /* VerbDAOImpl.swift in Sources */,
-				305EDFB526F8622A00EDD43C /* RevisionStyleView.swift in Sources */,
 				308EBB8B2712C63800214358 /* VerbListView.swift in Sources */,
 				308CD18D26F7469900B0660D /* GermanTabView.swift in Sources */,
 				98685F392126BA8700DA327D /* Level.swift in Sources */,
@@ -9685,25 +9690,31 @@
 				3009DDAE271B4FBA002C5B97 /* PlayVerbAudio.swift in Sources */,
 				300C707C26C964440092A492 /* CustomError.swift in Sources */,
 				983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */,
-				305EDFB326F85F7D00EDD43C /* PickRevisionStyleView.swift in Sources */,
+				984959FF276F15F500F155FB /* FlashcardReducer.swift in Sources */,
 				305009A027085F01001E9E08 /* Text+Ext.swift in Sources */,
 				308CD19826F747FF00B0660D /* LearnView.swift in Sources */,
 				9898A5D4212AE2D7003EAAFF /* Array.swift in Sources */,
 				308EBB8F2712C6BC00214358 /* VerbListCell.swift in Sources */,
 				983B2495211C4A0C009C33B1 /* Verb.swift in Sources */,
+				98495A06276F30FD00F155FB /* AudioToggleReducer.swift in Sources */,
 				98685F762127162700DA327D /* LocalLearningVerbDAO.swift in Sources */,
 				988DB91B2125C71700AFAEF4 /* DbVerbTranslation.swift in Sources */,
 				98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */,
 				308CD19B26F7481C00B0660D /* StatisticsView.swift in Sources */,
 				98685F372126BA6100DA327D /* Form.swift in Sources */,
+				984959F3276E6BFE00F155FB /* ReviewVerbState.swift in Sources */,
 				300C707126C841090092A492 /* LearningVerbDAO.swift in Sources */,
 				9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */,
 				3009DDA0271A9E67002C5B97 /* AudioToggleView.swift in Sources */,
 				300C707426C842ED0092A492 /* LocalDbLearningVerbDAO.swift in Sources */,
+				98495A08276F313600F155FB /* AudioToggleState.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */,
+				98495A01276F161600F155FB /* FlashcardAction.swift in Sources */,
 				305009A22708DE58001E9E08 /* ToChangeButton.swift in Sources */,
+				984959ED276DD52300F155FB /* RevisionHomeState.swift in Sources */,
 				308CD19226F7476F00B0660D /* Color+Ext.swift in Sources */,
 				300C706D26C83AE50092A492 /* DbVerbTranslationDAO.swift in Sources */,
+				98495A04276F30EF00F155FB /* AudioToggleAction.swift in Sources */,
 				3050099527085606001E9E08 /* VerbTemps.swift in Sources */,
 				3021006B270CB26200BA30E9 /* UserProgressionButton.swift in Sources */,
 				308EBB912712CEE000214358 /* SearchBarView.swift in Sources */,
@@ -9720,15 +9731,16 @@
 				300C706B26C8380A0092A492 /* DbVerbDAO.swift in Sources */,
 				30E3C271275B67B60082059C /* RevisionNavigationModel.swift in Sources */,
 				308CD19E26F74BCE00B0660D /* CallToActionButton.swift in Sources */,
-				30CEDFCC2709F9CC0097A597 /* FlashcardViewModel.swift in Sources */,
+				984959FD276F15EB00F155FB /* FlashcardState.swift in Sources */,
+				984959EF276DD55500F155FB /* RevisionHomeAction.swift in Sources */,
 				305EDFAD26F7A64500EDD43C /* LoadingView.swift in Sources */,
-				30B6A3E927098F9A0026474C /* ReviewRateProgressionView.swift in Sources */,
 				98B0151121244C9F0090006E /* LearningVerb.swift in Sources */,
 				988DB9192125C70700AFAEF4 /* VerbTranslationTable.swift in Sources */,
 				98685F7021270E2B00DA327D /* SpeedLog.swift in Sources */,
 				988DB9152125C09900AFAEF4 /* LocalDbVerbTranslationDAO.swift in Sources */,
 				98A511D0214AFA80001107D9 /* BoughtIAPProducts.swift in Sources */,
 				30A6A83A275CD41100BE89FF /* LearnViewModel.swift in Sources */,
+				984959F7276E6CB700F155FB /* ReviewVerbReducer.swift in Sources */,
 				98685F782127173800DA327D /* DbLearningVerb.swift in Sources */,
 				309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */,
 			);

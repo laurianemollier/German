@@ -1,5 +1,5 @@
 //
-//  AudioToogleView.swift
+//  AudioToggleView.swift
 //  German
 //
 //  Created by Lauriane Mollier on 10/16/21.
@@ -7,23 +7,32 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct AudioToggleView: View {
     
-    @EnvironmentObject var viewModel: AudioToggleViewModel
+    @ObservedObject var store: Store<AudioToggleState, AudioToggleAction>
+    
+    init(store: Store<AudioToggleState, AudioToggleAction>) {
+        self.store = store
+    }
     
     var body: some View {
         Button {
-            viewModel.toggleAudio()
+            store.send(.toggleAudio)
         } label: {
-            if(viewModel.isOn()) {Text("🔔")}
+            if(store.value.audioEnable) {Text("🔔")}
             else {Text("🔕")}
         }
     }
 }
 
-struct AudioToogleView_Previews: PreviewProvider {
+struct AudioToggleView_Previews: PreviewProvider {
     static var previews: some View {
-        AudioToggleView()
+        AudioToggleView(store:
+                            Store(
+                                initialValue: AudioToggleState(),
+                                reducer: AudioToggleReducer)
+        )
     }
 }

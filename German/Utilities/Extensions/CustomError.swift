@@ -9,6 +9,9 @@
 import Foundation
 
 // TOOD: read https://www.advancedswift.com/custom-errors-in-swift/
-enum CustomErrorType: Error {
+enum CustomError: Error {
     case VerbNotFound
+    case IllegalState
+    case ReviewListEmpty
+    case AudioFileNotFound(fileName: String)
 }

@@ -17,11 +17,9 @@ struct AlertItem: Identifiable {
 
 
 struct AlertContext {
-    
-    //MARK: - DB Alerts
-    
-    static let invalidURL = AlertItem(title: Text("Sever Error"),
-                                      message: Text("There was an issue connecting to the local database. If this persists, please contact support."),
-                                      dismissButton: .default(Text("OK")))
-    
+    static func internalError(_ error: Error) -> AlertItem {
+        AlertItem(title: Text("Internal Error"),
+                  message: Text("Please contact the support: \(error.localizedDescription)"),
+                                          dismissButton: .default(Text("OK")))
+    }
 }

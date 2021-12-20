@@ -7,19 +7,23 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct RevisionHomeView: View {
     
     @EnvironmentObject var navigation: RevisionNavigationModel
+    @ObservedObject var store: Store<RevisionHomeState, RevisionHomeAction>
     
-    @StateObject var viewModel = RevisionHomeViewModel()
+    public init(store: Store<RevisionHomeState, RevisionHomeAction>) {
+        self.store = store
+    }
     
     var body: some View {
         NavigationView {
             ZStack{
                 VStack {
                     NavigationLink(
-                        destination: ReviewVerbView(),
+                        destination: reviewVerbView(),
                         isActive: $navigation.activeRevision,
                         label: {
                             ZStack(alignment: .bottom){
@@ -29,7 +33,8 @@ struct RevisionHomeView: View {
                                     .opacity(0.6)
                                 
                                 Text(
-                                    viewModel
+                                    store
+                                        .value
                                         .verbToReviewTodayCount
                                         .map({String($0)}) ?? "--"
                                 )
@@ -41,40 +46,43 @@ struct RevisionHomeView: View {
                                 
                             }
                         })
-                        .disabled(viewModel.isRevisionDisabled)
+                        .disabled(store.value.isRevisionDisabled)
                     
-                    Text("Verbs to review over \(viewModel.verbInReviewListCount.map({String($0)}) ?? "--") in your review list")
+                    Text("Verbs to review over \(store.value.verbInReviewListCount.map({String($0)}) ?? "--") in your review list")
                         .font(.title3)
                         .fontWeight(.semibold)
                         .padding(.bottom, 60)
                     
                     NavigationLink(
-                        destination: ReviewVerbView(),
+                        destination: reviewVerbView(),
                         isActive: $navigation.activeRevision,
                         label: {CallToActionButton(title: "Review")}
-                    ).disabled(viewModel.isRevisionDisabled)
+                    ).disabled(store.value.isRevisionDisabled)
                     
                     Spacer()
                 }
                 .onAppear() {
-                    viewModel.loadData()
+                    store.send(.refreshState)
                 }
                 
-                if viewModel.isLoading {
+                if store.value.isLoading {
                     LoadingView()
                 }
             }
         }
-        .alert(item: $viewModel.alertItem) { alertItem in
+        .alert(item: .constant(store.value.alertItem)) { alertItem in
             Alert(title: alertItem.title,
                   message: alertItem.message,
                   dismissButton: alertItem.dismissButton)
         }
     }
-}
-
-struct RevisionHomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        RevisionHomeView()
+    
+    private func reviewVerbView() -> ReviewVerbView {
+        ReviewVerbView(
+            store: Store(
+                initialValue: ReviewVerbViewState(),
+                reducer: ReviewVerbViewReducer)
+        )
     }
+    
 }

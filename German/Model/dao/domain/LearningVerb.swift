@@ -71,7 +71,6 @@ struct LearningVerb: Identifiable, Hashable{
                            userProgression: self.userProgression.rawValue)
     }
     
-    
     func set(userProgression: UserProgression, dateToReview: Date) -> LearningVerb {
         return LearningVerb(id: self.id, verb: self.verb, dateToReview: dateToReview, userProgression: userProgression)
     }
