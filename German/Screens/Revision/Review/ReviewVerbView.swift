@@ -118,6 +118,7 @@ struct ReviewVerbView: View {
                     Button {
                         store.send(.reviewVerb(.stagnate))
                         store.send(.audioToggle(.audioStop))
+                        store.send(.flashcard(.resetFlashcard))
                     } label: {
                         ToChangeButton(
                             title: progression.stagnationName()!, // TODO
@@ -127,6 +128,7 @@ struct ReviewVerbView: View {
                     Button {
                         store.send(.reviewVerb(.progress))
                         store.send(.audioToggle(.audioStop))
+                        store.send(.flashcard(.resetFlashcard))
                     } label: {
                         ToChangeButton(
                             title: progression.progressionName()!, // TODO
