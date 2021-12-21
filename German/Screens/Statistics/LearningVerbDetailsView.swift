@@ -72,7 +72,7 @@ struct LearningVerbDetailsView: View {
         navigation.activeUserProgression = nil
         navigation.activeLearningVerb = nil
         
-        let (newProgression, dateToReview) = newProgressionLevel.stagnation(reviewedDate: Date())!
+        let (newProgression, dateToReview) = UserProgression.stagnation(newProgressionLevel, reviewedDate: Date())!
         
         do{
             let userLearningVerb = LearningVerb(id: learningVerb.id,
