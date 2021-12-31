@@ -8,11 +8,11 @@
 
 import SwiftUI
 
-struct AlertItem: Identifiable {
+struct AlertItem: Identifiable, Equatable {
     let id = UUID()
     let title: Text
     let message: Text
-    let dismissButton: Alert.Button
+    let dismissText: Text
 }
 
 
@@ -20,6 +20,6 @@ struct AlertContext {
     static func internalError(_ error: Error) -> AlertItem {
         AlertItem(title: Text("Internal Error"),
                   message: Text("Please contact the support: \(error.localizedDescription)"),
-                                          dismissButton: .default(Text("OK")))
+                  dismissText: Text("OK"))
     }
 }

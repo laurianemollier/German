@@ -1,5 +1,5 @@
 //
-//  AudioToggleReducer.swift
+//  audioToggleReducer.swift
 //  German
 //
 //  Created by Lauriane Mollier on 19.12.21.
@@ -9,8 +9,7 @@
 import ComposableArchitecture
 import AVFoundation
 
-func AudioToggleReducer(state: inout AudioToggleState, action: AudioToggleAction) -> [Effect<AudioToggleAction>] {
-    
+let audioToggleReducer = Reducer<AudioToggleState, AudioToggleAction, ()> { state, action, environment in
     func audioStop(){
         if state.audioPlayer != nil && state.audioPlayer!.isPlaying{
             state.audioPlayer!.stop()
@@ -28,11 +27,11 @@ func AudioToggleReducer(state: inout AudioToggleState, action: AudioToggleAction
             state.audioEnable = true
             Audio.shared.on()
         }
-        return []
+        return .none
         
     case .audioStop:
         audioStop()
-        return []
+        return .none
         
     case .audioPlay(verb: let verb, playVerbAudio: let playVerbAudio):
         if(Audio.shared.isOn()){ // TODO: audioEnable ?
@@ -67,6 +66,6 @@ func AudioToggleReducer(state: inout AudioToggleState, action: AudioToggleAction
                 state.playError = error
             }
         }
-        return []
+        return .none
     }
 }

@@ -9,7 +9,7 @@
 import SwiftUI
 import ComposableArchitecture
 
-public func revisionHomeReducer(state: inout RevisionHomeState, action: RevisionHomeAction) -> [Effect<RevisionHomeAction>] {
+let revisionHomeReducer = Reducer<RevisionHomeState, RevisionHomeAction, ()> { state, action, environment in
     switch action {
     case .refreshState:
         state.isLoading = true
@@ -27,6 +27,7 @@ public func revisionHomeReducer(state: inout RevisionHomeState, action: Revision
         catch {
             state.alertItem = AlertContext.internalError(error)
         }
-        return []
+        
+        return.none
     }
 }

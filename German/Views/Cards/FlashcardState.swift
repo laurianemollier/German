@@ -6,7 +6,7 @@
 //  Copyright © 2021 Lauriane Mollier. All rights reserved.
 //
 
-struct FlashcardState{
+struct FlashcardState: Equatable {
     var flipped: Bool = false
     var flashcardRotation = 0.0
     var contentRotation = 0.0

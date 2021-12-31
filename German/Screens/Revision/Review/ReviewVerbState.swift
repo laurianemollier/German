@@ -20,7 +20,7 @@ struct ReviewVerbState {
     var resultVerbsReviewed: [LearningVerb] = []
 }
     
-struct ReviewVerbViewState {
+struct ReviewVerbFeatureState {
     var audioToggle: AudioToggleState = AudioToggleState()
     var flashcard: FlashcardState = FlashcardState()
     var reviewVerb: ReviewVerbState = ReviewVerbState()

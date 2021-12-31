@@ -1,5 +1,5 @@
 //
-//  FlashcardReducer.swift
+//  flashcardReducer.swift
 //  German
 //
 //  Created by Lauriane Mollier on 19.12.21.
@@ -9,24 +9,36 @@
 import SwiftUI
 import ComposableArchitecture
 
-func FlashcardReducer(state: inout FlashcardState, action: FlashcardAction) -> [Effect<FlashcardAction>] {
-    let animationTime = 0.5
-    
+let flashcardReducer = Reducer<FlashcardState, FlashcardAction, ()> { state, action, environment in    
     switch action {
     case .flipFlashcard:
+        let animationTime = 0.5
         if (!state.flipped) {
-            withAnimation(Animation.linear(duration: animationTime)) {
-                state.flashcardRotation += 180
-            }
-            withAnimation(Animation.linear(duration: 0.001).delay(animationTime / 2)) {
-                state.contentRotation += 180
-                state.flipped = true
-            }
+            return Effect.merge(
+                [
+                    Effect(value: withAnimation { FlashcardAction.step(.rotateFlashcard) })
+                        .delay(for: .seconds(0), scheduler: DispatchQueue.main.animation(.linear(duration: animationTime)))
+                        .eraseToEffect(),
+                    Effect(value: withAnimation { FlashcardAction.step(.rotateContent) })
+                        .delay(for: .seconds(animationTime / 2), scheduler: DispatchQueue.main.animation(.linear(duration: 0.001)))
+                        .eraseToEffect(),
+                ]
+            )
+        } else {
+            return .none
         }
-        return []
+       
+    case .step(FlipStep.rotateFlashcard):
+        state.flashcardRotation += 180
+        return .none
+        
+    case .step(FlipStep.rotateContent):
+        state.contentRotation += 180
+        state.flipped = true
+        return .none
         
     case .resetFlashcard:
         state.flipped = false
-        return []
+        return .none
     }
 }

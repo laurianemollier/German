@@ -1,5 +1,5 @@
 //
-//  ReviewVerbReducer.swift
+//  reviewVerbReducer.swift
 //  German
 //
 //  Created by Lauriane Mollier on 18.12.21.
@@ -9,7 +9,7 @@
 import SwiftUI
 import ComposableArchitecture
 
-func ReviewVerbReducer(state: inout ReviewVerbState, action: ReviewVerbAction) -> [Effect<ReviewVerbAction>] {
+let reviewVerbReducer = Reducer<ReviewVerbState, ReviewVerbAction, ()> { state, action, environment in
     
     func verbReviewed(_ review: (UserProgression, _ reviewedDate: Date) -> (UserProgression, Date)?) {
         if let currentVerb = state.currentLearningVerb,
@@ -38,19 +38,19 @@ func ReviewVerbReducer(state: inout ReviewVerbState, action: ReviewVerbAction) -
         } catch {
             state.alertItem = AlertContext.internalError(error)
         }
-        return []
+        return .none
         
     case .regress:
         verbReviewed(UserProgression.regression(_:reviewedDate:))
-        return []
+        return .none
         
     case .stagnate:
         verbReviewed(UserProgression.stagnation(_:reviewedDate:))
-        return []
+        return .none
         
     case .progress:
         verbReviewed(UserProgression.progression(_:reviewedDate:))
-        return []
+        return .none
         
     case .endRevisionSession:
         state.isLoading = true
@@ -61,13 +61,25 @@ func ReviewVerbReducer(state: inout ReviewVerbState, action: ReviewVerbAction) -
         } catch {
             state.alertItem = AlertContext.internalError(error)
         }
-        return []
+        return .none
     }
 }
 
-
-let ReviewVerbViewReducer = combine(
-  pullback(AudioToggleReducer, value: \ReviewVerbViewState.audioToggle, action: \ReviewVerbViewAction.audioToggle),
-  pullback(FlashcardReducer, value: \.flashcard, action: \.flashcard),
-  pullback(ReviewVerbReducer, value: \.reviewVerb, action: \.reviewVerb)
+let reviewVerbFeatureReducer =
+Reducer<ReviewVerbFeatureState, ReviewVerbFeatureAction, ()>.combine(
+    audioToggleReducer.pullback(
+        state: \.audioToggle,
+        action: /ReviewVerbFeatureAction.audioToggle,
+        environment: { $0 }
+    ),
+    flashcardReducer.pullback(
+        state: \.flashcard,
+        action: /ReviewVerbFeatureAction.flashcard,
+        environment: { $0 }
+    ),
+    reviewVerbReducer.pullback(
+        state: \.reviewVerb,
+        action: /ReviewVerbFeatureAction.reviewVerb,
+        environment: { $0 }
+    )
 )

@@ -11,29 +11,33 @@ import ComposableArchitecture
 
 struct ReviewVerbView: View {
     
-    // ------------------
-    // MARK: - Variables
-    // ------------------
+    struct State: Equatable {
+        var flashcard: FlashcardState = FlashcardState()
+        var currentLearningVerb: LearningVerb? // TODO: should not be empty
+        var progressionBarText: String
+    }
     
     @EnvironmentObject var navigation: RevisionNavigationModel
     
-    @ObservedObject var store: Store<ReviewVerbViewState, ReviewVerbViewAction>
+    var store: Store<ReviewVerbFeatureState, ReviewVerbFeatureAction>
+    @ObservedObject var viewStore: ViewStore<State, ReviewVerbFeatureAction>
     
-    init(store: Store<ReviewVerbViewState, ReviewVerbViewAction>) {
+    init(store: Store<ReviewVerbFeatureState, ReviewVerbFeatureAction>) {
         self.store = store
+        self.viewStore = ViewStore(self.store.scope(state: State.init(reviewVerbFeatureState:)))
     }
     
     var body: some View {
         VStack {
-            if let currentVerb = store.value.reviewVerb.currentLearningVerb {
+            if let currentVerb = viewStore.currentLearningVerb {
                 HStack {
                     Spacer()
-                    progressionBar
+                    Text(viewStore.progressionBarText).padding(.trailing, 40)
                 }
                 
                 flashcardView(verb: currentVerb.verb)
                 
-                if store.value.flashcard.flipped {
+                if viewStore.flashcard.flipped {
                     rateProgressionView()
                 } else {
                     flipFlashcardButton(verb: currentVerb.verb)
@@ -43,8 +47,8 @@ struct ReviewVerbView: View {
                     Spacer()
                     AudioToggleView(
                         store: self.store
-                            .view(
-                                value: { $0.audioToggle },
+                            .scope(
+                                state: { $0.audioToggle },
                                 action: { .audioToggle($0) }
                             )
                     )
@@ -60,20 +64,16 @@ struct ReviewVerbView: View {
             navigation.activeRevision = false
         }))
         .onAppear{
-            store.send(.reviewVerb(.loadVerbsToReview))
+            viewStore.send(.reviewVerb(.loadVerbsToReview))
         }
     }
-    
-    private var progressionBar: some View {
-        Text("\(store.value.reviewVerb.index + 1)/\(store.value.reviewVerb.verbsToReview.count)")
-            .padding(.trailing, 40)
-    }
+
     
     private func flashcardView(verb: Verb) -> some View {
         FlashcardView<FrontCardView, BackCardView>(
             store: self.store
-                .view(
-                    value: { $0.flashcard },
+                .scope(
+                    state: { $0.flashcard },
                     action: { .flashcard($0) }
                 )
         ) {
@@ -81,15 +81,15 @@ struct ReviewVerbView: View {
         } back: {
             BackCardView(verb: verb)
         }.onTapGesture {
-            store.send(.flashcard(.flipFlashcard))
-            store.send(.audioToggle(.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)))
+            viewStore.send(.flashcard(.flipFlashcard))
+            viewStore.send(.audioToggle(.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)))
         }
     }
     
     private func flipFlashcardButton(verb: Verb) -> some View {
         Button {
-            store.send(.flashcard(.flipFlashcard))
-            store.send(.audioToggle(.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)))
+            viewStore.send(.flashcard(.flipFlashcard))
+            viewStore.send(.audioToggle(.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)))
         } label: {
             Image("RVTurnButton")
                 .resizable()
@@ -100,25 +100,25 @@ struct ReviewVerbView: View {
     
     private func rateProgressionView() -> some View {
         VStack {
-            if let progression = store.value.reviewVerb.currentLearningVerb?.userProgression {
+            if let progression = viewStore.currentLearningVerb?.userProgression {
                 
                 Text("To repeat in")
                 
                 HStack{
                     Button {
                         // TODO: upper action for that ?
-                        store.send(.reviewVerb(.regress))
-                        store.send(.audioToggle(.audioStop))
-                        store.send(.flashcard(.resetFlashcard))
+                        viewStore.send(.reviewVerb(.regress))
+                        viewStore.send(.audioToggle(.audioStop))
+                        viewStore.send(.flashcard(.resetFlashcard))
                     } label: {
                         ToChangeButton(title: progression.regressionName()!, // TODO
                                        backgroundColor: Color.red)
                     }
                     
                     Button {
-                        store.send(.reviewVerb(.stagnate))
-                        store.send(.audioToggle(.audioStop))
-                        store.send(.flashcard(.resetFlashcard))
+                        viewStore.send(.reviewVerb(.stagnate))
+                        viewStore.send(.audioToggle(.audioStop))
+                        viewStore.send(.flashcard(.resetFlashcard))
                     } label: {
                         ToChangeButton(
                             title: progression.stagnationName()!, // TODO
@@ -126,9 +126,9 @@ struct ReviewVerbView: View {
                     }
                     
                     Button {
-                        store.send(.reviewVerb(.progress))
-                        store.send(.audioToggle(.audioStop))
-                        store.send(.flashcard(.resetFlashcard))
+                        viewStore.send(.reviewVerb(.progress))
+                        viewStore.send(.audioToggle(.audioStop))
+                        viewStore.send(.flashcard(.resetFlashcard))
                     } label: {
                         ToChangeButton(
                             title: progression.progressionName()!, // TODO
@@ -152,4 +152,12 @@ struct ReviewVerbView: View {
     //                navigation.activeRevision = false
     //            })
     //    }
+}
+
+extension ReviewVerbView.State {
+    init(reviewVerbFeatureState state: ReviewVerbFeatureState) {
+        self.flashcard = state.flashcard
+        self.currentLearningVerb = state.reviewVerb.currentLearningVerb
+        self.progressionBarText = "\(state.reviewVerb.index + 1)/\(state.reviewVerb.verbsToReview.count)"
+    }
 }

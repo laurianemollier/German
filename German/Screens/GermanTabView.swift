@@ -20,8 +20,9 @@ struct GermanTabView: View {
         TabView {
             RevisionHomeView(
                 store: Store(
-                    initialValue: RevisionHomeState(),
-                    reducer: revisionHomeReducer)
+                    initialState: RevisionHomeState(),
+                    reducer: revisionHomeReducer,
+                    environment: ())
             )
                 .tabItem {
                     Image(systemName: "house")

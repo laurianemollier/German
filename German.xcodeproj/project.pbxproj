@@ -1597,17 +1597,9 @@
 		308EBB912712CEE000214358 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EBB902712CEE000214358 /* SearchBarView.swift */; };
 		308EBB932712E36300214358 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EBB922712E36300214358 /* SearchBarViewModel.swift */; };
 		3090746D275E1C2700D43A74 /* LearnCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3090746C275E1C2700D43A74 /* LearnCellView.swift */; };
-		30911D0B273F9EE7009AC586 /* ComposableArchitecture.docc in Sources */ = {isa = PBXBuildFile; fileRef = 30911D0A273F9EE7009AC586 /* ComposableArchitecture.docc */; };
 		30911D11273F9EE7009AC586 /* ComposableArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30911D07273F9EE7009AC586 /* ComposableArchitecture.framework */; };
-		30911D18273F9EE7009AC586 /* ComposableArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30911D17273F9EE7009AC586 /* ComposableArchitectureTests.swift */; };
-		30911D19273F9EE7009AC586 /* ComposableArchitecture.h in Headers */ = {isa = PBXBuildFile; fileRef = 30911D09273F9EE7009AC586 /* ComposableArchitecture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30911D1C273F9EE7009AC586 /* ComposableArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30911D07273F9EE7009AC586 /* ComposableArchitecture.framework */; };
 		30911D1D273F9EE7009AC586 /* ComposableArchitecture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30911D07273F9EE7009AC586 /* ComposableArchitecture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		30911D25273F9F17009AC586 /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30911D24273F9F17009AC586 /* Effect.swift */; };
-		30911D27273FA09D009AC586 /* Publisher+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30911D26273FA09D009AC586 /* Publisher+Ext.swift */; };
-		30911D29273FA0CF009AC586 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30911D28273FA0CF009AC586 /* Store.swift */; };
-		30911D2B273FA116009AC586 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30911D2A273FA116009AC586 /* Reducer.swift */; };
-		30911D2E273FA1A7009AC586 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30911D2D273FA1A7009AC586 /* Logging.swift */; };
 		309EDBA22701D0C000BE78D5 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBA12701D0C000BE78D5 /* FrontCardView.swift */; };
 		309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBAA2701D0E700BE78D5 /* BackCardView.swift */; };
 		30A6A83A275CD41100BE89FF /* LearnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A6A839275CD41100BE89FF /* LearnViewModel.swift */; };
@@ -1631,6 +1623,8 @@
 		98495A04276F30EF00F155FB /* AudioToggleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98495A03276F30EF00F155FB /* AudioToggleAction.swift */; };
 		98495A06276F30FD00F155FB /* AudioToggleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98495A05276F30FD00F155FB /* AudioToggleReducer.swift */; };
 		98495A08276F313600F155FB /* AudioToggleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98495A07276F313600F155FB /* AudioToggleState.swift */; };
+		98495A10277EF32000F155FB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 98495A0F277EF32000F155FB /* ComposableArchitecture */; };
+		98495A13277F262600F155FB /* CombineSchedulers in Frameworks */ = {isa = PBXBuildFile; productRef = 98495A12277F262600F155FB /* CombineSchedulers */; };
 		98685F352126BA4900DA327D /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F342126BA4900DA327D /* Lang.swift */; };
 		98685F372126BA6100DA327D /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F362126BA6100DA327D /* Form.swift */; };
 		98685F392126BA8700DA327D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98685F382126BA8700DA327D /* Level.swift */; };
@@ -3339,15 +3333,7 @@
 		308EBB922712E36300214358 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		3090746C275E1C2700D43A74 /* LearnCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCellView.swift; sourceTree = "<group>"; };
 		30911D07273F9EE7009AC586 /* ComposableArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ComposableArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		30911D09273F9EE7009AC586 /* ComposableArchitecture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposableArchitecture.h; sourceTree = "<group>"; };
-		30911D0A273F9EE7009AC586 /* ComposableArchitecture.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ComposableArchitecture.docc; sourceTree = "<group>"; };
 		30911D10273F9EE7009AC586 /* ComposableArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComposableArchitectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		30911D17273F9EE7009AC586 /* ComposableArchitectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArchitectureTests.swift; sourceTree = "<group>"; };
-		30911D24273F9F17009AC586 /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
-		30911D26273FA09D009AC586 /* Publisher+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Ext.swift"; sourceTree = "<group>"; };
-		30911D28273FA0CF009AC586 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		30911D2A273FA116009AC586 /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
-		30911D2D273FA1A7009AC586 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		309EDBA12701D0C000BE78D5 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		309EDBAA2701D0E700BE78D5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 		30A6A839275CD41100BE89FF /* LearnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewModel.swift; sourceTree = "<group>"; };
@@ -3422,7 +3408,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98495A10277EF32000F155FB /* ComposableArchitecture in Frameworks */,
 				984959EB276DC37200F155FB /* SQLite in Frameworks */,
+				98495A13277F262600F155FB /* CombineSchedulers in Frameworks */,
 				984959E5276DC26D00F155FB /* AVFoundation.framework in Frameworks */,
 				30911D1C273F9EE7009AC586 /* ComposableArchitecture.framework in Frameworks */,
 				30B9F913272FC59C00B11789 /* CodableCSV in Frameworks */,
@@ -7723,36 +7711,6 @@
 			path = "Verb List";
 			sourceTree = "<group>";
 		};
-		30911D08273F9EE7009AC586 /* ComposableArchitecture */ = {
-			isa = PBXGroup;
-			children = (
-				30911D2C273FA16B009AC586 /* Reducer Wrapper */,
-				30911D24273F9F17009AC586 /* Effect.swift */,
-				30911D26273FA09D009AC586 /* Publisher+Ext.swift */,
-				30911D28273FA0CF009AC586 /* Store.swift */,
-				30911D2A273FA116009AC586 /* Reducer.swift */,
-				30911D09273F9EE7009AC586 /* ComposableArchitecture.h */,
-				30911D0A273F9EE7009AC586 /* ComposableArchitecture.docc */,
-			);
-			path = ComposableArchitecture;
-			sourceTree = "<group>";
-		};
-		30911D16273F9EE7009AC586 /* ComposableArchitectureTests */ = {
-			isa = PBXGroup;
-			children = (
-				30911D17273F9EE7009AC586 /* ComposableArchitectureTests.swift */,
-			);
-			path = ComposableArchitectureTests;
-			sourceTree = "<group>";
-		};
-		30911D2C273FA16B009AC586 /* Reducer Wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				30911D2D273FA1A7009AC586 /* Logging.swift */,
-			);
-			path = "Reducer Wrapper";
-			sourceTree = "<group>";
-		};
 		30B9F914272FD15B00B11789 /* Csv */ = {
 			isa = PBXGroup;
 			children = (
@@ -7840,8 +7798,6 @@
 			isa = PBXGroup;
 			children = (
 				98C9834920F750820080B08C /* German */,
-				30911D08273F9EE7009AC586 /* ComposableArchitecture */,
-				30911D16273F9EE7009AC586 /* ComposableArchitectureTests */,
 				98C9834820F750820080B08C /* Products */,
 				98B0A8AA212557F1000F44B4 /* Frameworks */,
 			);
@@ -7880,7 +7836,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30911D19273F9EE7009AC586 /* ComposableArchitecture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7942,6 +7897,8 @@
 			packageProductDependencies = (
 				30B9F912272FC59C00B11789 /* CodableCSV */,
 				984959EA276DC37200F155FB /* SQLite */,
+				98495A0F277EF32000F155FB /* ComposableArchitecture */,
+				98495A12277F262600F155FB /* CombineSchedulers */,
 			);
 			productName = "Apprendre les verbes irréguliers";
 			productReference = 98C9834720F750820080B08C /* German.app */;
@@ -7988,6 +7945,8 @@
 			packageReferences = (
 				30B9F911272FC59C00B11789 /* XCRemoteSwiftPackageReference "CodableCSV" */,
 				984959E9276DC37200F155FB /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+				98495A0E277EF32000F155FB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				98495A11277F262600F155FB /* XCRemoteSwiftPackageReference "combine-schedulers" */,
 			);
 			productRefGroup = 98C9834820F750820080B08C /* Products */;
 			projectDirPath = "";
@@ -9644,12 +9603,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30911D27273FA09D009AC586 /* Publisher+Ext.swift in Sources */,
-				30911D2E273FA1A7009AC586 /* Logging.swift in Sources */,
-				30911D25273F9F17009AC586 /* Effect.swift in Sources */,
-				30911D0B273F9EE7009AC586 /* ComposableArchitecture.docc in Sources */,
-				30911D2B273FA116009AC586 /* Reducer.swift in Sources */,
-				30911D29273FA0CF009AC586 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -9657,7 +9610,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30911D18273F9EE7009AC586 /* ComposableArchitectureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -9849,7 +9801,6 @@
 		30911D22273F9EE7009AC586 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -9875,7 +9826,6 @@
 		30911D23273F9EE7009AC586 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -10020,7 +9970,6 @@
 		98C9837020F750840080B08C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EQPGG2M7LV;
@@ -10039,7 +9988,6 @@
 		98C9837120F750840080B08C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EQPGG2M7LV;
@@ -10113,6 +10061,22 @@
 				minimumVersion = 0.9.2;
 			};
 		};
+		98495A0E277EF32000F155FB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+		98495A11277F262600F155FB /* XCRemoteSwiftPackageReference "combine-schedulers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/combine-schedulers";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -10125,6 +10089,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 984959E9276DC37200F155FB /* XCRemoteSwiftPackageReference "SQLite.swift" */;
 			productName = SQLite;
+		};
+		98495A0F277EF32000F155FB /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98495A0E277EF32000F155FB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		98495A12277F262600F155FB /* CombineSchedulers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98495A11277F262600F155FB /* XCRemoteSwiftPackageReference "combine-schedulers" */;
+			productName = CombineSchedulers;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

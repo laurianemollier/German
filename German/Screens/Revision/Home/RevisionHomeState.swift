@@ -8,7 +8,7 @@
 
 import ComposableArchitecture
 
-public struct RevisionHomeState {
+public struct RevisionHomeState: Equatable {
     var isLoading = false
     var alertItem: AlertItem?
     

@@ -11,17 +11,26 @@ import ComposableArchitecture
 
 struct AudioToggleView: View {
     
-    @ObservedObject var store: Store<AudioToggleState, AudioToggleAction>
+    struct State: Equatable {
+        let audioEnable: Bool
+    }
     
-    init(store: Store<AudioToggleState, AudioToggleAction>) {
+    var store: Store<AudioToggleState, AudioToggleAction>
+    @ObservedObject var viewStore: ViewStore<State, AudioToggleAction>
+    
+    public init(store: Store<AudioToggleState, AudioToggleAction>) {
         self.store = store
+        self.viewStore = ViewStore(
+            self.store
+                .scope(state: State.init(audioToggleState:))
+        )
     }
     
     var body: some View {
         Button {
-            store.send(.toggleAudio)
+            viewStore.send(.toggleAudio)
         } label: {
-            if(store.value.audioEnable) {Text("🔔")}
+            if(viewStore.audioEnable) {Text("🔔")}
             else {Text("🔕")}
         }
     }
@@ -29,10 +38,19 @@ struct AudioToggleView: View {
 
 struct AudioToggleView_Previews: PreviewProvider {
     static var previews: some View {
-        AudioToggleView(store:
-                            Store(
-                                initialValue: AudioToggleState(),
-                                reducer: AudioToggleReducer)
+        AudioToggleView(
+            store:
+                Store(
+                    initialState: AudioToggleState(),
+                    reducer: audioToggleReducer,
+                    environment: ()
+                )
         )
+    }
+}
+
+extension AudioToggleView.State {
+    init(audioToggleState state: AudioToggleState) {
+        self.audioEnable = state.audioEnable
     }
 }
