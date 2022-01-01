@@ -21,7 +21,9 @@ struct ReviewVerbState: Equatable, Identifiable {
         self.learningVerb = learningVerb
     }
 }
-    
+
+
+// TODO: lolo RevisionSession
 struct ReviewVerbsFeatureState {
     var isLoading: Bool = false
     var alertItem: AlertItem?
@@ -31,6 +33,7 @@ struct ReviewVerbsFeatureState {
     
     var index: Int = 0
     var verbCount: Int = 0
+    var isEndOfRevisionSession = false
     var reviewVerbs: IdentifiedArrayOf<ReviewVerbState> = []
     
     func currentLearningVerb() -> LearningVerb? {

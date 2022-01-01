@@ -1648,6 +1648,8 @@
 		98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0150E2122AA3B0090006E /* UserProgression.swift */; };
 		98B0151121244C9F0090006E /* LearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0151021244C9F0090006E /* LearningVerb.swift */; };
 		98B0831127805A1300F0309A /* VerbReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0831027805A1300F0309A /* VerbReview.swift */; };
+		98B083132780B8F300F0309A /* ReviewSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B083122780B8F300F0309A /* ReviewSummaryView.swift */; };
+		98B083152780BBFE00F0309A /* RevisionSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B083142780BBFE00F0309A /* RevisionSessionView.swift */; };
 		98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B72125AECD000F44B4 /* LocalDbVerbDAO.swift */; };
 		98C9835220F750840080B08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C9835120F750840080B08C /* Assets.xcassets */; };
 		98C9835520F750840080B08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C9835320F750840080B08C /* LaunchScreen.storyboard */; };
@@ -3383,6 +3385,8 @@
 		98B0150E2122AA3B0090006E /* UserProgression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgression.swift; sourceTree = "<group>"; };
 		98B0151021244C9F0090006E /* LearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningVerb.swift; sourceTree = "<group>"; };
 		98B0831027805A1300F0309A /* VerbReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbReview.swift; sourceTree = "<group>"; };
+		98B083122780B8F300F0309A /* ReviewSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSummaryView.swift; sourceTree = "<group>"; };
+		98B083142780BBFE00F0309A /* RevisionSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionSessionView.swift; sourceTree = "<group>"; };
 		98B0A8B72125AECD000F44B4 /* LocalDbVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDbVerbDAO.swift; sourceTree = "<group>"; };
 		98C9834720F750820080B08C /* German.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = German.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C9835120F750840080B08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -7581,6 +7585,8 @@
 			isa = PBXGroup;
 			children = (
 				305EDFB726F8795500EDD43C /* ReviewVerbsView.swift */,
+				98B083122780B8F300F0309A /* ReviewSummaryView.swift */,
+				98B083142780BBFE00F0309A /* RevisionSessionView.swift */,
 				984959F2276E6BFE00F155FB /* ReviewVerbsState.swift */,
 				984959F4276E6CA500F155FB /* ReviewVerbsAction.swift */,
 				984959F6276E6CB700F155FB /* ReviewVerbReducer.swift */,
@@ -9624,6 +9630,7 @@
 				984959F5276E6CA500F155FB /* ReviewVerbsAction.swift in Sources */,
 				98685F72212712EE00DA327D /* LearningVerbTable.swift in Sources */,
 				98685F352126BA4900DA327D /* Lang.swift in Sources */,
+				98B083152780BBFE00F0309A /* RevisionSessionView.swift in Sources */,
 				986DD42D212FE7F1000E5E49 /* UIFont.swift in Sources */,
 				308CD18B26F7465E00B0660D /* GermanApp.swift in Sources */,
 				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
@@ -9665,6 +9672,7 @@
 				98495A08276F313600F155FB /* AudioToggleState.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */,
 				98495A01276F161600F155FB /* FlashcardAction.swift in Sources */,
+				98B083132780B8F300F0309A /* ReviewSummaryView.swift in Sources */,
 				98B0831127805A1300F0309A /* VerbReview.swift in Sources */,
 				305009A22708DE58001E9E08 /* ToChangeButton.swift in Sources */,
 				984959ED276DD52300F155FB /* RevisionHomeState.swift in Sources */,

@@ -20,8 +20,6 @@ struct ReviewVerbsView: View {
         var regressionButtonName: LocalizedStringKey
         var stagnationButtonName: LocalizedStringKey
         var progressionButtonName: LocalizedStringKey
-        
-        var isReviewFinished: Bool
     }
     
     public enum Action {
@@ -33,9 +31,7 @@ struct ReviewVerbsView: View {
         case progressButtonTapped
         case endRevisionSession
     }
-    
-    @EnvironmentObject var navigation: RevisionNavigationModel
-    
+
     var store: Store<ReviewVerbsFeatureState, ReviewVerbsFeatureAction>
     @ObservedObject var viewStore: ViewStore<State, Action>
     
@@ -77,13 +73,6 @@ struct ReviewVerbsView: View {
                 Spacer()
             }
             Spacer()
-        }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: BackButton(action: {
-            navigation.activeRevision = false
-        }))
-        .onAppear{
-            viewStore.send(.loadVerbsToReview)
         }
     }
     
@@ -145,8 +134,6 @@ extension ReviewVerbsView.State {
     init(reviewVerbFeatureState state: ReviewVerbsFeatureState) {
         self.isFlashcardFlipped = state.flashcard.flipped
         self.progressionBarText = "\(state.index + 1)/\(state.verbCount)"
-        self.isReviewFinished = state.index + 1 == state.verbCount
-        
         
         if let learningVerb = state.currentLearningVerb(){
             self.currentVerb = learningVerb.verb

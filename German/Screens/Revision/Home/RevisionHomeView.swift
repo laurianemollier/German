@@ -20,7 +20,7 @@ struct RevisionHomeView: View {
                 ZStack{
                     VStack {
                         NavigationLink(
-                            destination: reviewVerbView(),
+                            destination: revisionSessionView(),
                             isActive: $navigation.activeRevision,
                             label: {
                                 ZStack(alignment: .bottom){
@@ -50,7 +50,7 @@ struct RevisionHomeView: View {
                             .padding(.bottom, 60)
                         
                         NavigationLink(
-                            destination: reviewVerbView(),
+                            destination: revisionSessionView(),
                             isActive: $navigation.activeRevision,
                             label: {CallToActionButton(title: "Review")}
                         ).disabled(viewStore.isRevisionDisabled)
@@ -74,8 +74,8 @@ struct RevisionHomeView: View {
         }
     }
     
-    private func reviewVerbView() -> ReviewVerbsView {
-        ReviewVerbsView(
+    private func revisionSessionView() -> RevisionSessionView {
+        RevisionSessionView(
             store: Store(
                 initialState: ReviewVerbsFeatureState(),
                 reducer: reviewVerbsFeatureReducer,

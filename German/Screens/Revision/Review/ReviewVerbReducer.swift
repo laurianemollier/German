@@ -67,7 +67,9 @@ Reducer<ReviewVerbsFeatureState, ReviewVerbsFeatureAction, ()>.combine(
             return .none
             
         case .nextVerb:
-            state.index = min(state.index + 1, state.verbCount - 1)
+            let newIdx = state.index + 1
+            state.isEndOfRevisionSession = newIdx >= state.verbCount
+            state.index = min(newIdx, state.verbCount - 1)
             return .none
             
         case .loadVerbsToReview:
