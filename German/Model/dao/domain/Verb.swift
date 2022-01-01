@@ -11,7 +11,7 @@ import AVFoundation
 import UIKit
 
 /// A verb to learn
-struct Verb{
+struct Verb: Equatable {
     
     /// The id for the verb
     let id: Int64
@@ -66,6 +66,10 @@ struct Verb{
     ///     - lang: The language in which the translation is done
     func translation(_ lang: Lang) -> String {
         return translations[lang]!
+    }
+    
+    static func ==(lhs: Verb, rhs: Verb) -> Bool {
+        return lhs.temps.infinitive == rhs.temps.infinitive
     }
 
 }

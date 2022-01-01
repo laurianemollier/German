@@ -13,34 +13,54 @@ struct ReviewVerbView: View {
     
     struct State: Equatable {
         var alertItem: AlertItem?
-        var flashcard: FlashcardState = FlashcardState()
-        var currentLearningVerb: LearningVerb? // TODO: should not be empty
+        var isFlashcardFlipped: Bool
+        var currentVerb: Verb?
         var progressionBarText: String
-        var index: Int
+        
+        var regressionButtonName: LocalizedStringKey
+        var stagnationButtonName: LocalizedStringKey
+        var progressionButtonName: LocalizedStringKey
+        
+        var isReviewFinished: Bool
+    }
+    
+    public enum Action {
+        case loadVerbsToReview
+        case flashcardTapped
+        case revealButtonTapped
+        case regressButtonTapped
+        case stagnateButtonTapped
+        case progressButtonTapped
+        case endRevisionSession
     }
     
     @EnvironmentObject var navigation: RevisionNavigationModel
     
     var store: Store<ReviewVerbsFeatureState, ReviewVerbsFeatureAction>
-    @ObservedObject var viewStore: ViewStore<State, ReviewVerbsFeatureAction>
+    @ObservedObject var viewStore: ViewStore<State, Action>
     
     init(store: Store<ReviewVerbsFeatureState, ReviewVerbsFeatureAction>) {
         self.store = store
-        self.viewStore = ViewStore(self.store.scope(state: State.init(reviewVerbFeatureState:)))
+        self.viewStore = ViewStore(
+            self.store.scope(
+                state: State.init,
+                action: ReviewVerbsFeatureAction.init
+            )
+        )
     }
     
     var body: some View {
         VStack {
-            if let currentVerb = viewStore.currentLearningVerb {
+            if let currentVerb = viewStore.currentVerb {
                 HStack {
                     Spacer()
                     Text(viewStore.progressionBarText).padding(.trailing, 40)
                 }
                 
-                flashcardView(verb: currentVerb.verb)
+                flashcardView(verb: currentVerb)
                 
-                if viewStore.flashcard.flipped { rateProgressionView() }
-                else { flipFlashcardButton(verb: currentVerb.verb) }
+                if viewStore.isFlashcardFlipped { rateProgressionView() }
+                else { flipFlashcardButton(verb: currentVerb) }
                 
                 HStack {
                     Spacer()
@@ -80,15 +100,13 @@ struct ReviewVerbView: View {
         } back: {
             BackCardView(verb: verb)
         }.onTapGesture {
-            viewStore.send(.flashcard(.flipFlashcard))
-            viewStore.send(.audioToggle(.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)))
+            viewStore.send(.flashcardTapped)
         }
     }
     
     private func flipFlashcardButton(verb: Verb) -> some View {
         Button {
-            viewStore.send(.flashcard(.flipFlashcard))
-            viewStore.send(.audioToggle(.audioPlay(verb: verb, playVerbAudio: PlayVerbAudio.all)))
+            viewStore.send(.revealButtonTapped)
         } label: {
             Image("RVTurnButton")
                 .resizable()
@@ -99,74 +117,68 @@ struct ReviewVerbView: View {
     
     private func rateProgressionView() -> some View {
         VStack {
-            if let progression = viewStore.currentLearningVerb?.userProgression {
+            Text("To repeat in")
+            
+            HStack{
+                Button { viewStore.send(.regressButtonTapped) } label: {
+                    ToChangeButton(title: viewStore.regressionButtonName,
+                                   backgroundColor: Color.red)
+                }
                 
-                Text("To repeat in")
+                Button { viewStore.send(.stagnateButtonTapped) } label: {
+                    ToChangeButton(
+                        title: viewStore.stagnationButtonName,
+                        backgroundColor: Color.orange)
+                }
                 
-                HStack{
-                    Button {
-                        // TODO: upper action for that ?
-                        viewStore.send(.reviewVerb(id: viewStore.index, action: .review(.regress)))
-                        viewStore.send(.audioToggle(.audioStop))
-                        viewStore.send(.flashcard(.resetFlashcard))
-                        viewStore.send(.nextVerb)
-                    } label: {
-                        ToChangeButton(title: progression.regressionName()!, // TODO
-                                       backgroundColor: Color.red)
-                    }
-                    
-                    Button {
-                        viewStore.send(.reviewVerb(id: viewStore.index, action: .review(.stagnate)))
-                        viewStore.send(.audioToggle(.audioStop))
-                        viewStore.send(.flashcard(.resetFlashcard))
-                        viewStore.send(.nextVerb)
-                    } label: {
-                        ToChangeButton(
-                            title: progression.stagnationName()!, // TODO
-                            backgroundColor: Color.orange)
-                    }
-                    
-                    Button {
-                        viewStore.send(.reviewVerb(id: viewStore.index, action: .review(.progress)))
-                        viewStore.send(.audioToggle(.audioStop))
-                        viewStore.send(.flashcard(.resetFlashcard))
-                        viewStore.send(.nextVerb)
-                    } label: {
-                        ToChangeButton(
-                            title: progression.progressionName()!, // TODO
-                            backgroundColor: Color.green)
-                    }
+                Button { viewStore.send(.progressButtonTapped) } label: {
+                    ToChangeButton(
+                        title: viewStore.progressionButtonName,
+                        backgroundColor: Color.green)
                 }
             }
         }
     }
-    
-    //    private func onAppear() {
-    //        viewModel.getVerbToReview()
-    //        viewModel.setAction(
-    //            onNextVerb: {
-    //                 flashcardViewModel.resetFlashcard()
-    //            })
-    //
-    //        viewModel.setAction(
-    //            onEndRevisionSession: {
-    //                audioToggleViewModel.audioStop()
-    //                navigation.activeRevision = false
-    //            })
-    //    }
 }
 
 extension ReviewVerbView.State {
     init(reviewVerbFeatureState state: ReviewVerbsFeatureState) {
-        self.flashcard = state.flashcard // TODO
+        self.isFlashcardFlipped = state.flashcard.flipped
         self.progressionBarText = "\(state.index + 1)/\(state.verbCount)"
+        self.isReviewFinished = state.index + 1 == state.verbCount
         
-        if let verbState = state.reviewVerbs.first(where: {$0.id == state.index}){
-            self.currentLearningVerb = verbState.learningVerb
+        
+        if let learningVerb = state.currentLearningVerb(){
+            self.currentVerb = learningVerb.verb
+            self.regressionButtonName = learningVerb.userProgression.regressionName()! // TODO
+            self.stagnationButtonName = learningVerb.userProgression.stagnationName()!
+            self.progressionButtonName = learningVerb.userProgression.progressionName()!
         } else {
             self.alertItem = AlertContext.internalError(CustomError.IllegalState)
+            self.regressionButtonName = "---"
+            self.stagnationButtonName = "---"
+            self.progressionButtonName = "---"
         }
-        
-        self.index = state.index
+    }
+}
+
+extension ReviewVerbsFeatureAction {
+    init(action: ReviewVerbView.Action) {
+        switch action {
+        case .loadVerbsToReview:
+            self = .loadVerbsToReview
+        case .flashcardTapped:
+            self = .revealVerb
+        case .revealButtonTapped:
+            self = .revealVerb
+        case .regressButtonTapped:
+            self = .regressButtonTapped
+        case .stagnateButtonTapped:
+            self = .stagnateButtonTapped
+        case .progressButtonTapped:
+            self = .progressButtonTapped
+        case .endRevisionSession:
+            self = .endRevisionSession
+        }
     }
 }

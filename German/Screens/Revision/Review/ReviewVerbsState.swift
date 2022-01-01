@@ -32,4 +32,8 @@ struct ReviewVerbsFeatureState {
     var index: Int = 0
     var verbCount: Int = 0
     var reviewVerbs: IdentifiedArrayOf<ReviewVerbState> = []
+    
+    func currentLearningVerb() -> LearningVerb? {
+        reviewVerbs.first(where: {$0.id == index})?.learningVerb
+    }
 }

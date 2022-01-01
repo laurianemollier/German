@@ -15,10 +15,15 @@ enum ReviewVerbAction {
 }
 
 enum ReviewVerbsFeatureAction {
+    case loadVerbsToReview
+    case revealVerb
+    case regressButtonTapped
+    case stagnateButtonTapped
+    case progressButtonTapped
+    case endRevisionSession
+    
     case audioToggle(AudioToggleAction)
     case flashcard(FlashcardAction)
     case reviewVerb(id: ReviewVerbState.ID, action: ReviewVerbAction)
-    case loadVerbsToReview
     case nextVerb
-    case endRevisionSession
 }

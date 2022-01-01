@@ -11,7 +11,7 @@ import AVFoundation
 
 
 /// Each verb belongs to a conjugation's form
-public enum Form: String, Hashable, CaseIterable { // 11
+public enum Form: String, Hashable, CaseIterable, Equatable { // 11
     case aiea = "a–ie(i)–a"
     case aua = "a-u-a"
     case eae = "e-a-e"

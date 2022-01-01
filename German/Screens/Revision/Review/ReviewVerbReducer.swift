@@ -80,7 +80,7 @@ Reducer<ReviewVerbsFeatureState, ReviewVerbsFeatureAction, ()>.combine(
                     }
                     state.verbCount = reviewVerbStates.count
                     state.reviewVerbs = IdentifiedArray.init(uniqueElements: reviewVerbStates)
-
+                    
                     state.isLoading = false
                 } else {
                     state.alertItem = AlertContext.internalError(CustomError.ReviewListEmpty)
@@ -89,9 +89,46 @@ Reducer<ReviewVerbsFeatureState, ReviewVerbsFeatureAction, ()>.combine(
                 state.alertItem = AlertContext.internalError(error)
             }
             return .none
-
+            
         case .endRevisionSession:
             return .none
+            
+        case .revealVerb:
+            var playAudioEffect: Effect<ReviewVerbsFeatureAction, Never>
+            if let currentLearningVerb = state.currentLearningVerb() {
+                playAudioEffect = Just(.audioToggle(.audioPlay(verb: currentLearningVerb.verb, playVerbAudio: PlayVerbAudio.all))).eraseToEffect()
+            } else {
+                playAudioEffect = Effect.none
+            }
+            
+            return Effect.merge(
+                Just(.flashcard(.flipFlashcard)).eraseToEffect(),
+                playAudioEffect
+            )
+            
+        case .regressButtonTapped:
+            return Effect.merge(
+                Just(.reviewVerb(id: state.index, action: .review(.regress))).eraseToEffect(),
+                Just(.audioToggle(.audioStop)).eraseToEffect(),
+                Just(.flashcard(.resetFlashcard)).eraseToEffect(),
+                Just(.nextVerb).eraseToEffect()
+            )
+            
+        case .stagnateButtonTapped:
+            return Effect.merge(
+                Just(.reviewVerb(id: state.index, action: .review(.stagnate))).eraseToEffect(),
+                Just(.audioToggle(.audioStop)).eraseToEffect(),
+                Just(.flashcard(.resetFlashcard)).eraseToEffect(),
+                Just(.nextVerb).eraseToEffect()
+            )
+            
+        case .progressButtonTapped:
+            return Effect.merge(
+                Just(.reviewVerb(id: state.index, action: .review(.progress))).eraseToEffect(),
+                Just(.audioToggle(.audioStop)).eraseToEffect(),
+                Just(.flashcard(.resetFlashcard)).eraseToEffect(),
+                Just(.nextVerb).eraseToEffect()
+            )
         }
     }
 )
