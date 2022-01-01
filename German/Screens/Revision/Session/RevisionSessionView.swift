@@ -62,7 +62,7 @@ extension RevisionSessionAction {
     init(action: RevisionSessionView.Action) {
         switch action {
         case .loadVerbsToReview:
-            self = .loadVerbsToReview
+            self = .loadState
         }
     }
 }

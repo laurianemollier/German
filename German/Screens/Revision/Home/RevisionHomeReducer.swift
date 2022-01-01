@@ -11,7 +11,7 @@ import ComposableArchitecture
 
 let revisionHomeReducer = Reducer<RevisionHomeState, RevisionHomeAction, ()> { state, action, environment in
     switch action {
-    case .refreshState:
+    case .loadState:
         state.isLoading = true
         do {
             // TODO: do that somewhere else

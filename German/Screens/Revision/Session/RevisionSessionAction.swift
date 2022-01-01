@@ -8,7 +8,7 @@
 
 
 enum RevisionSessionAction {
-    case loadVerbsToReview
+    case loadState
     case revealVerb
     case regressButtonTapped
     case stagnateButtonTapped

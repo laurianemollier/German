@@ -15,16 +15,5 @@ public struct RevisionHomeState: Equatable {
     /// The number of verb that is on the review list of this user
     var verbInReviewListCount: Int?
     /// The number of verb that the user as to review today
-    var verbToReviewTodayCount: Int? {
-        didSet {
-            if let count = verbToReviewTodayCount {
-                self.isRevisionDisabled = count <= 0
-            } else {
-                self.isRevisionDisabled = false
-            }
-        }
-    }
-    var isRevisionDisabled: Bool = false
-    /// Determine number of verb that the user will review in one review session
-    var nbrVerbInReviewSession = 10
+    var verbToReviewTodayCount: Int?
 }

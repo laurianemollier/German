@@ -153,7 +153,7 @@ extension RevisionSessionAction {
     init(action: ReviewVerbsView.Action) {
         switch action {
         case .loadVerbsToReview:
-            self = .loadVerbsToReview
+            self = .loadState
         case .flashcardTapped:
             self = .revealVerb
         case .revealButtonTapped:

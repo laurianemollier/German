@@ -37,7 +37,7 @@ let revisionSessionReducer = Reducer<RevisionSessionState, RevisionSessionAction
             state.index = min(newIdx, state.verbCount - 1)
             return .none
             
-        case .loadVerbsToReview:
+        case .loadState:
             state.isLoading = true
             do {
                 let verbsToReview = try DAO.shared.verbToReviewToday(limit: 10)
