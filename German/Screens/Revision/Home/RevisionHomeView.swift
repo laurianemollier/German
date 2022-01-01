@@ -74,8 +74,8 @@ struct RevisionHomeView: View {
         }
     }
     
-    private func reviewVerbView() -> ReviewVerbView {
-        ReviewVerbView(
+    private func reviewVerbView() -> ReviewVerbsView {
+        ReviewVerbsView(
             store: Store(
                 initialState: ReviewVerbsFeatureState(),
                 reducer: reviewVerbsFeatureReducer,

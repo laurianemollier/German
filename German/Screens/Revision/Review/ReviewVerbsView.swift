@@ -9,7 +9,7 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct ReviewVerbView: View {
+struct ReviewVerbsView: View {
     
     struct State: Equatable {
         var alertItem: AlertItem?
@@ -141,7 +141,7 @@ struct ReviewVerbView: View {
     }
 }
 
-extension ReviewVerbView.State {
+extension ReviewVerbsView.State {
     init(reviewVerbFeatureState state: ReviewVerbsFeatureState) {
         self.isFlashcardFlipped = state.flashcard.flipped
         self.progressionBarText = "\(state.index + 1)/\(state.verbCount)"
@@ -163,7 +163,7 @@ extension ReviewVerbView.State {
 }
 
 extension ReviewVerbsFeatureAction {
-    init(action: ReviewVerbView.Action) {
+    init(action: ReviewVerbsView.Action) {
         switch action {
         case .loadVerbsToReview:
             self = .loadVerbsToReview

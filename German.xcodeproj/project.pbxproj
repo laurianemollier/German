@@ -1579,7 +1579,7 @@
 		305009A22708DE58001E9E08 /* ToChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305009A12708DE58001E9E08 /* ToChangeButton.swift */; };
 		305EDFAD26F7A64500EDD43C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFAC26F7A64500EDD43C /* LoadingView.swift */; };
 		305EDFB026F7AB5800EDD43C /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFAF26F7AB5800EDD43C /* AlertItem.swift */; };
-		305EDFB826F8795500EDD43C /* ReviewVerbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB726F8795500EDD43C /* ReviewVerbView.swift */; };
+		305EDFB826F8795500EDD43C /* ReviewVerbsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB726F8795500EDD43C /* ReviewVerbsView.swift */; };
 		305EDFBA26F87AE200EDD43C /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFB926F87AE200EDD43C /* FlashcardView.swift */; };
 		305EDFBC26F8807600EDD43C /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFBB26F8807600EDD43C /* XDismissButton.swift */; };
 		305EDFC026F8829E00EDD43C /* RevisionHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFBF26F8829E00EDD43C /* RevisionHomeView.swift */; };
@@ -3315,7 +3315,7 @@
 		305009A12708DE58001E9E08 /* ToChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToChangeButton.swift; sourceTree = "<group>"; };
 		305EDFAC26F7A64500EDD43C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		305EDFAF26F7AB5800EDD43C /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
-		305EDFB726F8795500EDD43C /* ReviewVerbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbView.swift; sourceTree = "<group>"; };
+		305EDFB726F8795500EDD43C /* ReviewVerbsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbsView.swift; sourceTree = "<group>"; };
 		305EDFB926F87AE200EDD43C /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		305EDFBB26F8807600EDD43C /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		305EDFBF26F8829E00EDD43C /* RevisionHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionHomeView.swift; sourceTree = "<group>"; };
@@ -7580,7 +7580,7 @@
 		305EDFB626F8791C00EDD43C /* Review */ = {
 			isa = PBXGroup;
 			children = (
-				305EDFB726F8795500EDD43C /* ReviewVerbView.swift */,
+				305EDFB726F8795500EDD43C /* ReviewVerbsView.swift */,
 				984959F2276E6BFE00F155FB /* ReviewVerbsState.swift */,
 				984959F4276E6CA500F155FB /* ReviewVerbsAction.swift */,
 				984959F6276E6CB700F155FB /* ReviewVerbReducer.swift */,
@@ -9674,7 +9674,7 @@
 				3050099527085606001E9E08 /* VerbTemps.swift in Sources */,
 				3021006B270CB26200BA30E9 /* UserProgressionButton.swift in Sources */,
 				308EBB912712CEE000214358 /* SearchBarView.swift in Sources */,
-				305EDFB826F8795500EDD43C /* ReviewVerbView.swift in Sources */,
+				305EDFB826F8795500EDD43C /* ReviewVerbsView.swift in Sources */,
 				30B9F916272FD19D00B11789 /* Csv.swift in Sources */,
 				3043176E271D706A00DCD56C /* StatisticsNavigationModel.swift in Sources */,
 				300C707626C843830092A492 /* DbLearningVerbDAO.swift in Sources */,
