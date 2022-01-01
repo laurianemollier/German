@@ -11,18 +11,12 @@ import Combine
 import ComposableArchitecture
 
 struct FlashcardView<Front, Back>: View where Front: View, Back: View {
-    
-    let animationTime = 0.5
-    
-    enum Action {
-        case flipFlashcard
-    }
-    
+
     private let front: () -> Front
     private let back: () -> Back
     
     var store: Store<FlashcardState, FlashcardAction>
-    @ObservedObject var viewStore: ViewStore<FlashcardState, Action>
+    @ObservedObject var viewStore: ViewStore<FlashcardState, Never>
     
     
     init(store: Store<FlashcardState, FlashcardAction>,
@@ -31,10 +25,7 @@ struct FlashcardView<Front, Back>: View where Front: View, Back: View {
         self.store = store
         self.front = front
         self.back = back
-        self.viewStore = ViewStore(self.store.scope(
-            state: { $0 },
-            action: FlashcardAction.init
-        ))
+        self.viewStore = ViewStore(self.store.actionless)
     }
     
     var body: some View {
@@ -53,22 +44,9 @@ struct FlashcardView<Front, Back>: View where Front: View, Back: View {
             Rectangle().stroke(Color.black, lineWidth: 2)
         )
         .padding()
-        .onTapGesture {
-            viewStore.send(.flipFlashcard)
-        }
         .rotation3DEffect(.degrees(viewStore.flashcardRotation), axis: (x: 0, y: 1, z: 0))
     }
 }
-
-extension FlashcardAction {
-    init<Front, Back>(action: FlashcardView<Front, Back>.Action) {
-        switch action {
-        case .flipFlashcard:
-            self = FlashcardAction.flipFlashcard
-        }
-    }
-}
-
 
 // TODO: lolo
 extension Scheduler {
@@ -95,6 +73,7 @@ extension Scheduler {
     }
 }
 
+// TODO: lolo
 extension ViewStore {
     func send(_ action: Action, animation: Animation) {
         withAnimation(animation) {

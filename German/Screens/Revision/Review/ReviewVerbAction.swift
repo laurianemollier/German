@@ -10,6 +10,7 @@ import SwiftUI
 import ComposableArchitecture
 
 
+// TODO: to refactor to be associated with only one verb ?
 enum ReviewVerbAction {
     case loadVerbsToReview
     case regress

@@ -37,11 +37,8 @@ struct ReviewVerbView: View {
                 
                 flashcardView(verb: currentVerb.verb)
                 
-                if viewStore.flashcard.flipped {
-                    rateProgressionView()
-                } else {
-                    flipFlashcardButton(verb: currentVerb.verb)
-                }
+                if viewStore.flashcard.flipped { rateProgressionView() }
+                else { flipFlashcardButton(verb: currentVerb.verb) }
                 
                 HStack {
                     Spacer()
@@ -67,7 +64,7 @@ struct ReviewVerbView: View {
             viewStore.send(.reviewVerb(.loadVerbsToReview))
         }
     }
-
+    
     
     private func flashcardView(verb: Verb) -> some View {
         FlashcardView<FrontCardView, BackCardView>(
