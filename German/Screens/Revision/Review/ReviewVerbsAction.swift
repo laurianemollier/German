@@ -9,19 +9,16 @@
 import SwiftUI
 import ComposableArchitecture
 
-
-// TODO: to refactor to be associated with only one verb ?
 enum ReviewVerbAction {
-    case loadVerbsToReview
-    case regress
-    case stagnate
-    case progress
-    case endRevisionSession
+    case review(VerbReview)
+    case updateVerb(userProgression: UserProgression, dateToReview: Date)
 }
 
-
-enum ReviewVerbFeatureAction {
+enum ReviewVerbsFeatureAction {
     case audioToggle(AudioToggleAction)
     case flashcard(FlashcardAction)
-    case reviewVerb(ReviewVerbAction)
+    case reviewVerb(id: ReviewVerbState.ID, action: ReviewVerbAction)
+    case loadVerbsToReview
+    case nextVerb
+    case endRevisionSession
 }

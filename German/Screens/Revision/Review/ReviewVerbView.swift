@@ -12,17 +12,19 @@ import ComposableArchitecture
 struct ReviewVerbView: View {
     
     struct State: Equatable {
+        var alertItem: AlertItem?
         var flashcard: FlashcardState = FlashcardState()
         var currentLearningVerb: LearningVerb? // TODO: should not be empty
         var progressionBarText: String
+        var index: Int
     }
     
     @EnvironmentObject var navigation: RevisionNavigationModel
     
-    var store: Store<ReviewVerbFeatureState, ReviewVerbFeatureAction>
-    @ObservedObject var viewStore: ViewStore<State, ReviewVerbFeatureAction>
+    var store: Store<ReviewVerbsFeatureState, ReviewVerbsFeatureAction>
+    @ObservedObject var viewStore: ViewStore<State, ReviewVerbsFeatureAction>
     
-    init(store: Store<ReviewVerbFeatureState, ReviewVerbFeatureAction>) {
+    init(store: Store<ReviewVerbsFeatureState, ReviewVerbsFeatureAction>) {
         self.store = store
         self.viewStore = ViewStore(self.store.scope(state: State.init(reviewVerbFeatureState:)))
     }
@@ -61,7 +63,7 @@ struct ReviewVerbView: View {
             navigation.activeRevision = false
         }))
         .onAppear{
-            viewStore.send(.reviewVerb(.loadVerbsToReview))
+            viewStore.send(.loadVerbsToReview)
         }
     }
     
@@ -104,18 +106,20 @@ struct ReviewVerbView: View {
                 HStack{
                     Button {
                         // TODO: upper action for that ?
-                        viewStore.send(.reviewVerb(.regress))
+                        viewStore.send(.reviewVerb(id: viewStore.index, action: .review(.regress)))
                         viewStore.send(.audioToggle(.audioStop))
                         viewStore.send(.flashcard(.resetFlashcard))
+                        viewStore.send(.nextVerb)
                     } label: {
                         ToChangeButton(title: progression.regressionName()!, // TODO
                                        backgroundColor: Color.red)
                     }
                     
                     Button {
-                        viewStore.send(.reviewVerb(.stagnate))
+                        viewStore.send(.reviewVerb(id: viewStore.index, action: .review(.stagnate)))
                         viewStore.send(.audioToggle(.audioStop))
                         viewStore.send(.flashcard(.resetFlashcard))
+                        viewStore.send(.nextVerb)
                     } label: {
                         ToChangeButton(
                             title: progression.stagnationName()!, // TODO
@@ -123,9 +127,10 @@ struct ReviewVerbView: View {
                     }
                     
                     Button {
-                        viewStore.send(.reviewVerb(.progress))
+                        viewStore.send(.reviewVerb(id: viewStore.index, action: .review(.progress)))
                         viewStore.send(.audioToggle(.audioStop))
                         viewStore.send(.flashcard(.resetFlashcard))
+                        viewStore.send(.nextVerb)
                     } label: {
                         ToChangeButton(
                             title: progression.progressionName()!, // TODO
@@ -152,9 +157,16 @@ struct ReviewVerbView: View {
 }
 
 extension ReviewVerbView.State {
-    init(reviewVerbFeatureState state: ReviewVerbFeatureState) {
-        self.flashcard = state.flashcard
-        self.currentLearningVerb = state.reviewVerb.currentLearningVerb
-        self.progressionBarText = "\(state.reviewVerb.index + 1)/\(state.reviewVerb.verbsToReview.count)"
+    init(reviewVerbFeatureState state: ReviewVerbsFeatureState) {
+        self.flashcard = state.flashcard // TODO
+        self.progressionBarText = "\(state.index + 1)/\(state.verbCount)"
+        
+        if let verbState = state.reviewVerbs.first(where: {$0.id == state.index}){
+            self.currentLearningVerb = verbState.learningVerb
+        } else {
+            self.alertItem = AlertContext.internalError(CustomError.IllegalState)
+        }
+        
+        self.index = state.index
     }
 }
