@@ -32,15 +32,15 @@ struct ReviewVerbsView: View {
         case endRevisionSession
     }
 
-    var store: Store<ReviewVerbsFeatureState, ReviewVerbsFeatureAction>
+    var store: Store<RevisionSessionState, RevisionSessionAction>
     @ObservedObject var viewStore: ViewStore<State, Action>
     
-    init(store: Store<ReviewVerbsFeatureState, ReviewVerbsFeatureAction>) {
+    init(store: Store<RevisionSessionState, RevisionSessionAction>) {
         self.store = store
         self.viewStore = ViewStore(
             self.store.scope(
                 state: State.init,
-                action: ReviewVerbsFeatureAction.init
+                action: RevisionSessionAction.init
             )
         )
     }
@@ -131,7 +131,7 @@ struct ReviewVerbsView: View {
 }
 
 extension ReviewVerbsView.State {
-    init(reviewVerbFeatureState state: ReviewVerbsFeatureState) {
+    init(reviewVerbFeatureState state: RevisionSessionState) {
         self.isFlashcardFlipped = state.flashcard.flipped
         self.progressionBarText = "\(state.index + 1)/\(state.verbCount)"
         
@@ -149,7 +149,7 @@ extension ReviewVerbsView.State {
     }
 }
 
-extension ReviewVerbsFeatureAction {
+extension RevisionSessionAction {
     init(action: ReviewVerbsView.Action) {
         switch action {
         case .loadVerbsToReview:

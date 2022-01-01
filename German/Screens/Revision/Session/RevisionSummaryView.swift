@@ -9,25 +9,25 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct ReviewSummaryView: View {
+struct RevisionSummaryView: View {
     
     struct State: Equatable {
-        var reviewVerbs: IdentifiedArrayOf<ReviewVerbState> = []
+        var reviewVerbs: IdentifiedArrayOf<VerbReviewState> = []
     }
     
     public enum Action {
         case endRevisionSession
     }
     
-    var store: Store<ReviewVerbsFeatureState, ReviewVerbsFeatureAction>
+    var store: Store<RevisionSessionState, RevisionSessionAction>
     @ObservedObject var viewStore: ViewStore<State, Action>
     
-    init(store: Store<ReviewVerbsFeatureState, ReviewVerbsFeatureAction>) {
+    init(store: Store<RevisionSessionState, RevisionSessionAction>) {
         self.store = store
         self.viewStore = ViewStore(
             self.store.scope(
                 state: State.init,
-                action: ReviewVerbsFeatureAction.init
+                action: RevisionSessionAction.init
             )
         )
     }
@@ -41,14 +41,14 @@ struct ReviewSummaryView: View {
     }
 }
 
-extension ReviewSummaryView.State {
-    init(reviewVerbFeatureState state: ReviewVerbsFeatureState) {
+extension RevisionSummaryView.State {
+    init(reviewVerbFeatureState state: RevisionSessionState) {
         self.reviewVerbs = state.reviewVerbs
     }
 }
 
-extension ReviewVerbsFeatureAction {
-    init(action: ReviewSummaryView.Action) {
+extension RevisionSessionAction {
+    init(action: RevisionSummaryView.Action) {
         switch action {
         case .endRevisionSession:
             self = .endRevisionSession

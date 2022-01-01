@@ -21,22 +21,22 @@ struct RevisionSessionView: View {
     
     @EnvironmentObject var navigation: RevisionNavigationModel
     
-    var store: Store<ReviewVerbsFeatureState, ReviewVerbsFeatureAction>
+    var store: Store<RevisionSessionState, RevisionSessionAction>
     @ObservedObject var viewStore: ViewStore<State, Action>
     
-    init(store: Store<ReviewVerbsFeatureState, ReviewVerbsFeatureAction>) {
+    init(store: Store<RevisionSessionState, RevisionSessionAction>) {
         self.store = store
         self.viewStore = ViewStore(
             self.store.scope(
                 state: State.init,
-                action: ReviewVerbsFeatureAction.init
+                action: RevisionSessionAction.init
             )
         )
     }
     
     var body: some View {
         if (viewStore.isEndOfRevisionSession) {
-            ReviewSummaryView(store: store)
+            RevisionSummaryView(store: store)
                 .navigationBarBackButtonHidden(true)
         } else {
             ReviewVerbsView(store: store)
@@ -53,12 +53,12 @@ struct RevisionSessionView: View {
 }
 
 extension RevisionSessionView.State {
-    init(reviewVerbFeatureState state: ReviewVerbsFeatureState) {
+    init(reviewVerbFeatureState state: RevisionSessionState) {
         self.isEndOfRevisionSession = state.isEndOfRevisionSession
     }
 }
 
-extension ReviewVerbsFeatureAction {
+extension RevisionSessionAction {
     init(action: RevisionSessionView.Action) {
         switch action {
         case .loadVerbsToReview:

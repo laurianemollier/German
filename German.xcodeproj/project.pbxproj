@@ -1614,9 +1614,9 @@
 		984959ED276DD52300F155FB /* RevisionHomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959EC276DD52300F155FB /* RevisionHomeState.swift */; };
 		984959EF276DD55500F155FB /* RevisionHomeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959EE276DD55500F155FB /* RevisionHomeAction.swift */; };
 		984959F1276DD5B800F155FB /* RevisionHomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959F0276DD5B800F155FB /* RevisionHomeReducer.swift */; };
-		984959F3276E6BFE00F155FB /* ReviewVerbsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959F2276E6BFE00F155FB /* ReviewVerbsState.swift */; };
-		984959F5276E6CA500F155FB /* ReviewVerbsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959F4276E6CA500F155FB /* ReviewVerbsAction.swift */; };
-		984959F7276E6CB700F155FB /* ReviewVerbReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959F6276E6CB700F155FB /* ReviewVerbReducer.swift */; };
+		984959F3276E6BFE00F155FB /* VerbReviewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959F2276E6BFE00F155FB /* VerbReviewState.swift */; };
+		984959F5276E6CA500F155FB /* VerbReviewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959F4276E6CA500F155FB /* VerbReviewAction.swift */; };
+		984959F7276E6CB700F155FB /* VerbReviewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959F6276E6CB700F155FB /* VerbReviewReducer.swift */; };
 		984959FD276F15EB00F155FB /* FlashcardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959FC276F15EB00F155FB /* FlashcardState.swift */; };
 		984959FF276F15F500F155FB /* FlashcardReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984959FE276F15F500F155FB /* FlashcardReducer.swift */; };
 		98495A01276F161600F155FB /* FlashcardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98495A00276F161600F155FB /* FlashcardAction.swift */; };
@@ -1648,8 +1648,11 @@
 		98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0150E2122AA3B0090006E /* UserProgression.swift */; };
 		98B0151121244C9F0090006E /* LearningVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0151021244C9F0090006E /* LearningVerb.swift */; };
 		98B0831127805A1300F0309A /* VerbReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0831027805A1300F0309A /* VerbReview.swift */; };
-		98B083132780B8F300F0309A /* ReviewSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B083122780B8F300F0309A /* ReviewSummaryView.swift */; };
+		98B083132780B8F300F0309A /* RevisionSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B083122780B8F300F0309A /* RevisionSummaryView.swift */; };
 		98B083152780BBFE00F0309A /* RevisionSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B083142780BBFE00F0309A /* RevisionSessionView.swift */; };
+		98B083182780EB6800F0309A /* RevisionSessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B083172780EB6800F0309A /* RevisionSessionState.swift */; };
+		98B0831A2780EBA400F0309A /* RevisionSessionAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B083192780EBA400F0309A /* RevisionSessionAction.swift */; };
+		98B0831C2780EBC400F0309A /* RevisionSessionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0831B2780EBC400F0309A /* RevisionSessionReducer.swift */; };
 		98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B72125AECD000F44B4 /* LocalDbVerbDAO.swift */; };
 		98C9835220F750840080B08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C9835120F750840080B08C /* Assets.xcassets */; };
 		98C9835520F750840080B08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C9835320F750840080B08C /* LaunchScreen.storyboard */; };
@@ -3353,9 +3356,9 @@
 		984959EC276DD52300F155FB /* RevisionHomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionHomeState.swift; sourceTree = "<group>"; };
 		984959EE276DD55500F155FB /* RevisionHomeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionHomeAction.swift; sourceTree = "<group>"; };
 		984959F0276DD5B800F155FB /* RevisionHomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionHomeReducer.swift; sourceTree = "<group>"; };
-		984959F2276E6BFE00F155FB /* ReviewVerbsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbsState.swift; sourceTree = "<group>"; };
-		984959F4276E6CA500F155FB /* ReviewVerbsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbsAction.swift; sourceTree = "<group>"; };
-		984959F6276E6CB700F155FB /* ReviewVerbReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVerbReducer.swift; sourceTree = "<group>"; };
+		984959F2276E6BFE00F155FB /* VerbReviewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbReviewState.swift; sourceTree = "<group>"; };
+		984959F4276E6CA500F155FB /* VerbReviewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbReviewAction.swift; sourceTree = "<group>"; };
+		984959F6276E6CB700F155FB /* VerbReviewReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbReviewReducer.swift; sourceTree = "<group>"; };
 		984959FC276F15EB00F155FB /* FlashcardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardState.swift; sourceTree = "<group>"; };
 		984959FE276F15F500F155FB /* FlashcardReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardReducer.swift; sourceTree = "<group>"; };
 		98495A00276F161600F155FB /* FlashcardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardAction.swift; sourceTree = "<group>"; };
@@ -3385,8 +3388,11 @@
 		98B0150E2122AA3B0090006E /* UserProgression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgression.swift; sourceTree = "<group>"; };
 		98B0151021244C9F0090006E /* LearningVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningVerb.swift; sourceTree = "<group>"; };
 		98B0831027805A1300F0309A /* VerbReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbReview.swift; sourceTree = "<group>"; };
-		98B083122780B8F300F0309A /* ReviewSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSummaryView.swift; sourceTree = "<group>"; };
+		98B083122780B8F300F0309A /* RevisionSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionSummaryView.swift; sourceTree = "<group>"; };
 		98B083142780BBFE00F0309A /* RevisionSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionSessionView.swift; sourceTree = "<group>"; };
+		98B083172780EB6800F0309A /* RevisionSessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionSessionState.swift; sourceTree = "<group>"; };
+		98B083192780EBA400F0309A /* RevisionSessionAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionSessionAction.swift; sourceTree = "<group>"; };
+		98B0831B2780EBC400F0309A /* RevisionSessionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionSessionReducer.swift; sourceTree = "<group>"; };
 		98B0A8B72125AECD000F44B4 /* LocalDbVerbDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDbVerbDAO.swift; sourceTree = "<group>"; };
 		98C9834720F750820080B08C /* German.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = German.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C9835120F750840080B08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -7584,12 +7590,9 @@
 		305EDFB626F8791C00EDD43C /* Review */ = {
 			isa = PBXGroup;
 			children = (
-				305EDFB726F8795500EDD43C /* ReviewVerbsView.swift */,
-				98B083122780B8F300F0309A /* ReviewSummaryView.swift */,
-				98B083142780BBFE00F0309A /* RevisionSessionView.swift */,
-				984959F2276E6BFE00F155FB /* ReviewVerbsState.swift */,
-				984959F4276E6CA500F155FB /* ReviewVerbsAction.swift */,
-				984959F6276E6CB700F155FB /* ReviewVerbReducer.swift */,
+				984959F2276E6BFE00F155FB /* VerbReviewState.swift */,
+				984959F4276E6CA500F155FB /* VerbReviewAction.swift */,
+				984959F6276E6CB700F155FB /* VerbReviewReducer.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -7671,7 +7674,7 @@
 			isa = PBXGroup;
 			children = (
 				305EDFC126F882AB00EDD43C /* Home */,
-				305EDFB626F8791C00EDD43C /* Review */,
+				98B083162780EB0500F0309A /* Session */,
 				30E3C270275B67B60082059C /* RevisionNavigationModel.swift */,
 			);
 			path = Revision;
@@ -7773,6 +7776,20 @@
 				302483FA271C22960000914C /* Verbs */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		98B083162780EB0500F0309A /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				98B083142780BBFE00F0309A /* RevisionSessionView.swift */,
+				305EDFB726F8795500EDD43C /* ReviewVerbsView.swift */,
+				98B083122780B8F300F0309A /* RevisionSummaryView.swift */,
+				305EDFB626F8791C00EDD43C /* Review */,
+				98B083172780EB6800F0309A /* RevisionSessionState.swift */,
+				98B083192780EBA400F0309A /* RevisionSessionAction.swift */,
+				98B0831B2780EBC400F0309A /* RevisionSessionReducer.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		98B0A8AA212557F1000F44B4 /* Frameworks */ = {
@@ -9627,7 +9644,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				300C706826C836F90092A492 /* DAO.swift in Sources */,
-				984959F5276E6CA500F155FB /* ReviewVerbsAction.swift in Sources */,
+				984959F5276E6CA500F155FB /* VerbReviewAction.swift in Sources */,
 				98685F72212712EE00DA327D /* LearningVerbTable.swift in Sources */,
 				98685F352126BA4900DA327D /* Lang.swift in Sources */,
 				98B083152780BBFE00F0309A /* RevisionSessionView.swift in Sources */,
@@ -9651,6 +9668,7 @@
 				305EDFBA26F87AE200EDD43C /* FlashcardView.swift in Sources */,
 				3009DDAE271B4FBA002C5B97 /* PlayVerbAudio.swift in Sources */,
 				300C707C26C964440092A492 /* CustomError.swift in Sources */,
+				98B083182780EB6800F0309A /* RevisionSessionState.swift in Sources */,
 				983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */,
 				984959FF276F15F500F155FB /* FlashcardReducer.swift in Sources */,
 				305009A027085F01001E9E08 /* Text+Ext.swift in Sources */,
@@ -9661,10 +9679,11 @@
 				98495A06276F30FD00F155FB /* AudioToggleReducer.swift in Sources */,
 				98685F762127162700DA327D /* LocalLearningVerbDAO.swift in Sources */,
 				988DB91B2125C71700AFAEF4 /* DbVerbTranslation.swift in Sources */,
+				98B0831C2780EBC400F0309A /* RevisionSessionReducer.swift in Sources */,
 				98B0150F2122AA3B0090006E /* UserProgression.swift in Sources */,
 				308CD19B26F7481C00B0660D /* StatisticsView.swift in Sources */,
 				98685F372126BA6100DA327D /* Form.swift in Sources */,
-				984959F3276E6BFE00F155FB /* ReviewVerbsState.swift in Sources */,
+				984959F3276E6BFE00F155FB /* VerbReviewState.swift in Sources */,
 				300C707126C841090092A492 /* LearningVerbDAO.swift in Sources */,
 				9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */,
 				3009DDA0271A9E67002C5B97 /* AudioToggleView.swift in Sources */,
@@ -9672,10 +9691,11 @@
 				98495A08276F313600F155FB /* AudioToggleState.swift in Sources */,
 				98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */,
 				98495A01276F161600F155FB /* FlashcardAction.swift in Sources */,
-				98B083132780B8F300F0309A /* ReviewSummaryView.swift in Sources */,
+				98B083132780B8F300F0309A /* RevisionSummaryView.swift in Sources */,
 				98B0831127805A1300F0309A /* VerbReview.swift in Sources */,
 				305009A22708DE58001E9E08 /* ToChangeButton.swift in Sources */,
 				984959ED276DD52300F155FB /* RevisionHomeState.swift in Sources */,
+				98B0831A2780EBA400F0309A /* RevisionSessionAction.swift in Sources */,
 				308CD19226F7476F00B0660D /* Color+Ext.swift in Sources */,
 				300C706D26C83AE50092A492 /* DbVerbTranslationDAO.swift in Sources */,
 				98495A04276F30EF00F155FB /* AudioToggleAction.swift in Sources */,
@@ -9704,7 +9724,7 @@
 				988DB9152125C09900AFAEF4 /* LocalDbVerbTranslationDAO.swift in Sources */,
 				98A511D0214AFA80001107D9 /* BoughtIAPProducts.swift in Sources */,
 				30A6A83A275CD41100BE89FF /* LearnViewModel.swift in Sources */,
-				984959F7276E6CB700F155FB /* ReviewVerbReducer.swift in Sources */,
+				984959F7276E6CB700F155FB /* VerbReviewReducer.swift in Sources */,
 				98685F782127173800DA327D /* DbLearningVerb.swift in Sources */,
 				309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */,
 			);
