@@ -45,7 +45,7 @@ struct RevisionSessionView: View {
                 }
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(leading: BackButton(action: {
-                    navigation.activeRevision = false
+                    navigation.activeSession = false
                 }))
         }
         

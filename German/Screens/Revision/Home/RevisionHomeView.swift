@@ -41,7 +41,7 @@ struct RevisionHomeView: View {
                 VStack {
                     NavigationLink(
                         destination: revisionSessionView(),
-                        isActive: $navigation.activeRevision,
+                        isActive: $navigation.activeSession,
                         label: {
                             ZStack(alignment: .bottom){
                                 Circle()
@@ -67,7 +67,7 @@ struct RevisionHomeView: View {
                     
                     NavigationLink(
                         destination: revisionSessionView(),
-                        isActive: $navigation.activeRevision,
+                        isActive: $navigation.activeSession,
                         label: {CallToActionButton(title: "Review")}
                     ).disabled(viewStore.isRevisionDisabled)
                     

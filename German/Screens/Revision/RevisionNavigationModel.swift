@@ -9,5 +9,5 @@
 import SwiftUI
 
 final class RevisionNavigationModel: ObservableObject {
-    @Published var activeRevision: Bool = false
+    @Published var activeSession: Bool = false
 }
