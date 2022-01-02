@@ -16,7 +16,7 @@ struct RevisionSummaryView: View {
     }
     
     public enum Action {
-        case endRevisionSession
+        case revisionSessionEndButtonTapped
     }
     
     var store: Store<RevisionSessionState, RevisionSessionAction>
@@ -34,7 +34,7 @@ struct RevisionSummaryView: View {
     
     var body: some View {
         VStack {
-            Button {viewStore.send(.endRevisionSession)} label: {
+            Button {viewStore.send(.revisionSessionEndButtonTapped)} label: {
                 Text("OK")
             }
         }
@@ -50,7 +50,7 @@ extension RevisionSummaryView.State {
 extension RevisionSessionAction {
     init(action: RevisionSummaryView.Action) {
         switch action {
-        case .endRevisionSession:
+        case .revisionSessionEndButtonTapped:
             self = .endRevisionSession
         }
     }

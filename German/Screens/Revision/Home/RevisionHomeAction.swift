@@ -9,6 +9,9 @@
 import SwiftUI
 import ComposableArchitecture
 
-public enum RevisionHomeAction {
+enum RevisionHomeAction {
     case loadState
+    case optionalRevisionSession(RevisionSessionAction)
+    case setRevisionSession(isActive: Bool)
+    case setRevisionSessionIsActiveDelayCompleted
 }

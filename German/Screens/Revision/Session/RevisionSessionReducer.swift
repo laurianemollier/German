@@ -33,7 +33,7 @@ let revisionSessionReducer = Reducer<RevisionSessionState, RevisionSessionAction
             
         case .nextVerb:
             let newIdx = state.index + 1
-            state.isEndOfRevisionSession = newIdx >= state.verbCount
+            state.isRevisionSessionEnded = newIdx >= state.verbCount
             state.index = min(newIdx, state.verbCount - 1)
             return .none
             

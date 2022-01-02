@@ -8,12 +8,16 @@
 
 import ComposableArchitecture
 
-public struct RevisionHomeState: Equatable {
+public struct RevisionHomeState {
     var isLoading = false
     var alertItem: AlertItem?
+    
+    var isRevisionSessionActive = false
+    var optionalRevisionSession: RevisionSessionState?
     
     /// The number of verb that is on the review list of this user
     var verbInReviewListCount: Int?
     /// The number of verb that the user as to review today
     var verbToReviewTodayCount: Int?
+
 }

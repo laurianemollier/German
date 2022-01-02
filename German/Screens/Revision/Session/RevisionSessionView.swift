@@ -12,14 +12,13 @@ import ComposableArchitecture
 struct RevisionSessionView: View {
     
     struct State: Equatable {
-        var isEndOfRevisionSession: Bool
+        var activeSession: Bool = false
+        var navigationBackButtonTapped: Bool // TODO: lolo isSummaryActive ? 
     }
     
     public enum Action {
         case loadVerbsToReview
     }
-    
-    @EnvironmentObject var navigation: RevisionNavigationModel
     
     var store: Store<RevisionSessionState, RevisionSessionAction>
     @ObservedObject var viewStore: ViewStore<State, Action>
@@ -35,7 +34,7 @@ struct RevisionSessionView: View {
     }
     
     var body: some View {
-        if (viewStore.isEndOfRevisionSession) {
+        if (viewStore.navigationBackButtonTapped) {
             RevisionSummaryView(store: store)
                 .navigationBarBackButtonHidden(true)
         } else {
@@ -43,10 +42,6 @@ struct RevisionSessionView: View {
                 .onAppear{
                     viewStore.send(.loadVerbsToReview)
                 }
-                .navigationBarBackButtonHidden(true)
-                .navigationBarItems(leading: BackButton(action: {
-                    navigation.activeSession = false
-                }))
         }
         
     }
@@ -54,7 +49,7 @@ struct RevisionSessionView: View {
 
 extension RevisionSessionView.State {
     init(reviewVerbFeatureState state: RevisionSessionState) {
-        self.isEndOfRevisionSession = state.isEndOfRevisionSession
+        self.navigationBackButtonTapped = state.isRevisionSessionEnded
     }
 }
 

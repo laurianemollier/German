@@ -20,11 +20,11 @@ struct RevisionHomeView: View {
         
         var verbToReviewTodayCount: String
         var verbInReviewListText: String
-
-        var isRevisionDisabled: Bool = false
+        
+        var isRevisionDisabled: Bool
+        var isRevisionSessionActive: Bool
     }
     
-    @EnvironmentObject var navigation: RevisionNavigationModel
     var store: Store<RevisionHomeState, RevisionHomeAction>
     @ObservedObject var viewStore: ViewStore<State, RevisionHomeAction>
     
@@ -38,10 +38,20 @@ struct RevisionHomeView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                VStack {
+                VStack{
                     NavigationLink(
-                        destination: revisionSessionView(),
-                        isActive: $navigation.activeSession,
+                        destination: IfLetStore(
+                            self.store.scope(
+                                state: \.optionalRevisionSession,
+                                action: RevisionHomeAction.optionalRevisionSession
+                            ),
+                            then: RevisionSessionView.init(store:),
+                            else: ProgressView.init
+                        ),
+                        isActive: viewStore.binding(
+                            get: \.isRevisionSessionActive,
+                            send: RevisionHomeAction.setRevisionSession(isActive:)
+                        ),
                         label: {
                             ZStack(alignment: .bottom){
                                 Circle()
@@ -57,8 +67,9 @@ struct RevisionHomeView: View {
                                     .clipShape(Circle())
                                 
                             }
-                        })
-                        .disabled(viewStore.isRevisionDisabled)
+                        }
+                    ).disabled(viewStore.isRevisionDisabled)
+                    
                     
                     Text(viewStore.verbInReviewListText)
                         .font(.title3)
@@ -66,10 +77,21 @@ struct RevisionHomeView: View {
                         .padding(.bottom, 60)
                     
                     NavigationLink(
-                        destination: revisionSessionView(),
-                        isActive: $navigation.activeSession,
+                        destination: IfLetStore(
+                            self.store.scope(
+                                state: \.optionalRevisionSession,
+                                action: RevisionHomeAction.optionalRevisionSession
+                            ),
+                            then: RevisionSessionView.init(store:),
+                            else: ProgressView.init
+                        ),
+                        isActive: viewStore.binding(
+                            get: \.isRevisionSessionActive,
+                            send: RevisionHomeAction.setRevisionSession(isActive:)
+                        ),
                         label: {CallToActionButton(title: "Review")}
                     ).disabled(viewStore.isRevisionDisabled)
+                    
                     
                     Spacer()
                 }
@@ -88,16 +110,6 @@ struct RevisionHomeView: View {
                   dismissButton: .default(alertItem.dismissText))
         }
     }
-    
-    private func revisionSessionView() -> RevisionSessionView {
-        RevisionSessionView(
-            store: Store(
-                initialState: RevisionSessionState(),
-                reducer: revisionSessionReducer,
-                environment: ())
-        )
-    }
-    
 }
 
 extension RevisionHomeView.State {
@@ -113,5 +125,7 @@ extension RevisionHomeView.State {
         } else {
             self.isRevisionDisabled = false
         }
+        
+        self.isRevisionSessionActive = state.isRevisionSessionActive
     }
 }

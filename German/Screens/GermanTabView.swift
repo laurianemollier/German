@@ -14,7 +14,6 @@ import ComposableArchitecture
 struct GermanTabView: View {
     
     @StateObject var statisticsNavigation = StatisticsNavigationModel()
-    @StateObject var revisionNavigation = RevisionNavigationModel()
     
     var body: some View {
         TabView {
@@ -22,13 +21,14 @@ struct GermanTabView: View {
                 store: Store(
                     initialState: RevisionHomeState(),
                     reducer: revisionHomeReducer,
-                    environment: ())
+                    environment: RevisionHomeEnvironment(
+                        mainQueue: .main
+                      ))
             )
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
-                .environmentObject(revisionNavigation)
             
             LearnView()
                 .tabItem {

@@ -17,7 +17,7 @@ struct RevisionSessionState {
     
     var index: Int = 0
     var verbCount: Int = 0
-    var isEndOfRevisionSession = false
+    var isRevisionSessionEnded = false
     var reviewVerbs: IdentifiedArrayOf<VerbReviewState> = []
     
     func currentLearningVerb() -> LearningVerb? {
