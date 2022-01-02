@@ -28,7 +28,7 @@ revisionSessionReducer
             switch action {
             case .setRevisionSession(isActive: true):
                 state.isRevisionSessionActive = true
-                state.optionalRevisionSession = RevisionSessionState()
+                state.optionalRevisionSession = RevisionSessionState.loading
                 return Effect(value: .optionalRevisionSession(.loadState))
                     .eraseToEffect()
                     .cancellable(id: CancelId())
@@ -36,7 +36,7 @@ revisionSessionReducer
             case .setRevisionSession(isActive: false),
                     .optionalRevisionSession( .endRevisionSession):
                 state.isRevisionSessionActive = false
-                state.optionalRevisionSession = nil // TODO: delete ? 
+                state.optionalRevisionSession = nil // TODO: delete ? (audio has to be stopped if removed)
                 return .cancel(id: CancelId())
                 
             case .optionalRevisionSession:
