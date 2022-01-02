@@ -35,8 +35,8 @@ revisionSessionReducer
                 
             case .setRevisionSession(isActive: false),
                     .optionalRevisionSession( .endRevisionSession):
-                state.isRevisionSessionActive = false
                 state.optionalRevisionSession = nil // TODO: delete ? (audio has to be stopped if removed)
+                state.isRevisionSessionActive = false
                 return .cancel(id: CancelId())
                 
             case .optionalRevisionSession:
