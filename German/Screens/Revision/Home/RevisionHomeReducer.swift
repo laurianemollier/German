@@ -10,11 +10,9 @@ import SwiftUI
 import ComposableArchitecture
 
 
-struct RevisionHomeEnvironment {
-  var mainQueue: AnySchedulerOf<DispatchQueue>
+struct RevisionHomeEnvironment { // TODO: lolo remove
+    var mainQueue: AnySchedulerOf<DispatchQueue>
 }
-
-
 
 let revisionHomeReducer =
 revisionSessionReducer
@@ -30,20 +28,16 @@ revisionSessionReducer
             switch action {
             case .setRevisionSession(isActive: true):
                 state.isRevisionSessionActive = true
-                return Effect(value: .setRevisionSessionIsActiveDelayCompleted)
-                    .delay(for: 1, scheduler: environment.mainQueue) // TODO: lolo
+                state.optionalRevisionSession = RevisionSessionState()
+                return Effect(value: .optionalRevisionSession(.loadState))
                     .eraseToEffect()
                     .cancellable(id: CancelId())
                 
             case .setRevisionSession(isActive: false),
                     .optionalRevisionSession( .endRevisionSession):
                 state.isRevisionSessionActive = false
-                state.optionalRevisionSession = nil
+                state.optionalRevisionSession = nil // TODO: delete ? 
                 return .cancel(id: CancelId())
-                
-            case .setRevisionSessionIsActiveDelayCompleted:
-                state.optionalRevisionSession = RevisionSessionState()
-                return .none
                 
             case .optionalRevisionSession:
                 return .none

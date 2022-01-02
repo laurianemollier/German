@@ -33,7 +33,7 @@ let revisionSessionReducer = Reducer<RevisionSessionState, RevisionSessionAction
             
         case .nextVerb:
             let newIdx = state.index + 1
-            state.isRevisionSessionEnded = newIdx >= state.verbCount
+            state.isSummaryActive = newIdx >= state.verbCount
             state.index = min(newIdx, state.verbCount - 1)
             return .none
             
@@ -41,20 +41,27 @@ let revisionSessionReducer = Reducer<RevisionSessionState, RevisionSessionAction
             state.isLoading = true
             do {
                 let verbsToReview = try DAO.shared.verbToReviewToday(limit: 10)
-                if(verbsToReview.count > 0) {
                     let verbReviewStates = verbsToReview.enumerated().map { index, learningVerb in
                         VerbReviewState(id: index, learningVerb: learningVerb)
                     }
-                    state.verbCount = verbReviewStates.count
-                    state.reviewVerbs = IdentifiedArray.init(uniqueElements: verbReviewStates)
-                    
-                    state.isLoading = false
-                } else {
-                    state.alertItem = AlertContext.internalError(CustomError.ReviewListEmpty)
-                }
+                    return Effect(value: .setState(
+                        RevisionSessionState(
+                            verbCount: verbReviewStates.count,
+                            reviewVerbs: IdentifiedArray.init(uniqueElements: verbReviewStates)
+                        )
+                    )).eraseToEffect()
             } catch {
-                state.alertItem = AlertContext.internalError(error)
+                return Effect(value: .loadStateFailure(error)).eraseToEffect()
             }
+            
+        case let .setState(newState):
+            state = newState
+            state.isLoading = false
+            return .none
+            
+        case let .loadStateFailure(error):
+            state.alertItem = AlertContext.internalError(error)
+            state.isLoading = false
             return .none
             
         case .endRevisionSession:

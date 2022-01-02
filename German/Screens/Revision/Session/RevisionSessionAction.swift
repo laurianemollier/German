@@ -9,6 +9,9 @@
 
 enum RevisionSessionAction {
     case loadState
+    case setState(RevisionSessionState)
+    case loadStateFailure(Error)
+    
     case revealVerb
     case regressButtonTapped
     case stagnateButtonTapped
