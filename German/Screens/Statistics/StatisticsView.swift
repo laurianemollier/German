@@ -40,7 +40,7 @@ struct StatisticsView: View {
                         label: {
                             UserProgressionButton(
                                 userProgression: statistics.userProgression,
-                                verbCount: statistics.verbCount) // TODO: if is loading
+                                verbCount: statistics.verbListState.learningVerbs.count) // TODO: if is loading
                         }
                     )
                 }

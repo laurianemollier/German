@@ -11,7 +11,7 @@ import ComposableArchitecture
 
 struct VerbListView: View {
     
-    @State var cellViewMode: VerbListCellViewMode = VerbListCellViewMode.expanded
+    let cellViewMode: VerbListCellViewMode = VerbListCellViewMode.expanded
 
     var store: Store<VerbListState, VerbListAction>
     @ObservedObject var viewStore: ViewStore<VerbListState, VerbListAction>

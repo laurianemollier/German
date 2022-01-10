@@ -30,21 +30,28 @@ struct StatisticsState: Equatable {
     struct UserProgressionStatistics: Equatable, Identifiable {
         let id: UserProgression.ID
         let userProgression: UserProgression
-        var isActivityIndicatorVisible: Bool
-        var verbCount: Int
+        var verbListState: VerbListState
+         
+        //        var isActivityIndicatorVisible: Bool
+        //        var verbCount: Int
         
-//        mutating func setLearningVerbs(learningVerbs: [LearningVerb]) {
-//            self.isLoading = false
-//            self.learningVerbs = learningVerbs
-//            self.filteredLearningVerbs = learningVerbs
-//        }
+        //        mutating func setLearningVerbs(learningVerbs: [LearningVerb]) {
+        //            self.isLoading = false
+        //            self.learningVerbs = learningVerbs
+        //            self.filteredLearningVerbs = learningVerbs
+        //        }
         
         static func loading(userProgression: UserProgression) -> UserProgressionStatistics {
             UserProgressionStatistics(
                 id: userProgression.id,
                 userProgression: userProgression,
-                isActivityIndicatorVisible: true,
-                verbCount: 0)
+                verbListState: VerbListState.loading(userProgression: userProgression)
+            )
+            //            UserProgressionStatistics(
+            //                id: userProgression.id,
+            //                userProgression: userProgression,
+            //                isActivityIndicatorVisible: true,
+            //                verbCount: 0)
         }
     }
 }

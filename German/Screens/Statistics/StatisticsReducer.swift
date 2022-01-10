@@ -40,7 +40,7 @@ verbListReducer
             
         case .setUserProgression(selection: .none):
             if let selection = state.selection {
-                state.userProgressionStatistics[id: selection.id.id]?.verbCount = selection.value.learningVerbs.count
+                state.userProgressionStatistics[id: selection.id.id]?.verbListState = selection.value
             }
             state.selection = nil
             return .none
