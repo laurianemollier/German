@@ -7,16 +7,25 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct SearchBarView: View {
     
-    @ObservedObject var viewModel: SearchBarViewModel
+    var store: Store<SearchBarState, SearchBarAction>
+    @ObservedObject var viewStore: ViewStore<SearchBarState, SearchBarAction>
+    
+    init(store: Store<SearchBarState, SearchBarAction>) {
+        self.store = store
+        self.viewStore = ViewStore(self.store)
+    }
     
     var body: some View {
         HStack {
             HStack {
-                TextField("Search terms here", text: $viewModel.searchText)
-                    .padding(.leading, 24)
+                TextField("Search terms here", text: viewStore.binding(
+                    get: \.searchText,
+                    send: { text in .textChanged(text)})
+                ).padding(.leading, 24)
             }
             .padding()
             .background(Color(.systemGray5))
@@ -27,24 +36,14 @@ struct SearchBarView: View {
                     Image(systemName: "magnifyingglass")
                     Spacer()
                     
-                    if viewModel.isSearching {
-                        Button(action: {
-                            viewModel.searchText = ""
-                        }, label: {
+                    if viewStore.isSearching {
+                        Button{ viewStore.send(.textChanged(""))} label: {
                             Image(systemName: "xmark.circle.fill")
                                 .padding(.vertical)
-                        })
+                        }
                     }
-                }.padding(.horizontal, 32)
-                .foregroundColor(.gray)
+                }.padding(.horizontal, 32).foregroundColor(.gray)
             ).transition(.move(edge: .trailing))
-            .animation(.spring())
         }
-    }
-}
-
-struct SearchBar_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchBarView(viewModel: SearchBarViewModel())
     }
 }

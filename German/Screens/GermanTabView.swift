@@ -12,7 +12,6 @@ import ComposableArchitecture
 struct GermanTabView: View {
     
     @State var tabSelection: Tabs = .tab1
-    @StateObject var statisticsNavigation = StatisticsNavigationModel()
     
     enum Tabs{
         case tab1, tab2, tab3
@@ -35,7 +34,11 @@ struct GermanTabView: View {
                     }
                 
                 
-                LearnView()
+                VerbListView(store: Store(
+                    initialState: VerbListState.loading,
+                    reducer: verbListReducer.debug(),
+                    environment: ()
+                ))
                     .tag(Tabs.tab2)
                     .tabItem {
                         Image(systemName: "person")
@@ -43,13 +46,16 @@ struct GermanTabView: View {
                     }
                 
                 
-                StatisticsView()
+                StatisticsView(store: Store(
+                    initialState: StatisticsState.loading,
+                    reducer: statisticsReducer.debug(),
+                    environment: ()
+                ))
                     .tag(Tabs.tab3)
                     .tabItem {
                         Image(systemName: "bag")
                         Text("Order")
                     }
-                    .environmentObject(statisticsNavigation)
             }
             .accentColor(.brandPrimary)
         }

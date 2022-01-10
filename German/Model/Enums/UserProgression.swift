@@ -111,7 +111,7 @@ extension UserProgression {
 }
 
 
-enum UserProgression: String, CaseIterable {
+enum UserProgression: String, CaseIterable, Equatable {
     
     case notSeenYet = "notSeenYet"
     case level1 = "level1"
@@ -242,4 +242,8 @@ enum UserProgression: String, CaseIterable {
         }
     }
     
+}
+
+extension UserProgression: Identifiable {
+    var id: RawValue { rawValue }
 }
