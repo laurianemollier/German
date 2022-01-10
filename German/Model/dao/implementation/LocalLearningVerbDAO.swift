@@ -48,25 +48,6 @@ final class LocalLearningVerbDAO: LearningVerbDAO{
         return try update(learningVerb: updated.toDbUserLearningVerb())
     }
     
-    // TODO: to delete
-    func addRandomVerbToReviewList(ofLevel: [Level], count: Int) throws {
-        
-        // TODO to make it more effective in one query
-        let q = LearningVerbTable.learningVerbs
-            .filter(LearningVerbTable.userProgression == UserProgression.notSeenYet.rawValue)
-        
-        
-        let learningVerbs: [LearningVerb] = try db.prepare(q).map{ row in
-            try row.toUserLearningVerb()
-        }.filter({ofLevel.contains($0.verb.level)})
-        
-        let selected = learningVerbs.choose(count)
-        for verb in selected{
-            let updated = verb.set(userProgression: UserProgression.level1, dateToReview: Date())
-            _ = try update(learningVerb: updated.toDbUserLearningVerb())
-        }
-    }
-    
     // -------------
     // Mark: - read
     // -------------

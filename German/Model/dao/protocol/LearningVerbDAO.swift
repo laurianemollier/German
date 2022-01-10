@@ -18,8 +18,6 @@ protocol LearningVerbDAO {
     
     func update(learningVerbs: [DbLearningVerb]) throws -> Bool
     
-    func addRandomVerbToReviewList(ofLevel: [Level], count: Int) throws
-    
     // -------------
     // Mark: - read
     // -------------

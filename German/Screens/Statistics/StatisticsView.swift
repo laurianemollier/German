@@ -40,12 +40,14 @@ struct StatisticsView: View {
                         label: {
                             UserProgressionButton(
                                 userProgression: statistics.userProgression,
-                                verbCount: statistics.verbCount)
+                                verbCount: statistics.verbCount) // TODO: if is loading
                         }
                     )
                 }
             }
         }
-        .navigationViewStyle(.stack)
+        .onAppear() {
+            viewStore.send(.loadState)
+        }
     }
 }

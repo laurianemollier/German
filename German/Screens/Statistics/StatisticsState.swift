@@ -33,6 +33,12 @@ struct StatisticsState: Equatable {
         var isActivityIndicatorVisible: Bool
         var verbCount: Int
         
+//        mutating func setLearningVerbs(learningVerbs: [LearningVerb]) {
+//            self.isLoading = false
+//            self.learningVerbs = learningVerbs
+//            self.filteredLearningVerbs = learningVerbs
+//        }
+        
         static func loading(userProgression: UserProgression) -> UserProgressionStatistics {
             UserProgressionStatistics(
                 id: userProgression.id,
