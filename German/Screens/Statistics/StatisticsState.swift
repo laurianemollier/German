@@ -28,30 +28,16 @@ struct StatisticsState: Equatable {
     static let loading: StatisticsState = StatisticsState()
     
     struct UserProgressionStatistics: Equatable, Identifiable {
-        let id: UserProgression.ID
+        let id: UserProgression // TODO: lolo 
         let userProgression: UserProgression
         var verbListState: VerbListState
-         
-        //        var isActivityIndicatorVisible: Bool
-        //        var verbCount: Int
-        
-        //        mutating func setLearningVerbs(learningVerbs: [LearningVerb]) {
-        //            self.isLoading = false
-        //            self.learningVerbs = learningVerbs
-        //            self.filteredLearningVerbs = learningVerbs
-        //        }
         
         static func loading(userProgression: UserProgression) -> UserProgressionStatistics {
             UserProgressionStatistics(
-                id: userProgression.id,
+                id: userProgression,
                 userProgression: userProgression,
                 verbListState: VerbListState.loading(userProgression: userProgression)
             )
-            //            UserProgressionStatistics(
-            //                id: userProgression.id,
-            //                userProgression: userProgression,
-            //                isActivityIndicatorVisible: true,
-            //                verbCount: 0)
         }
     }
 }

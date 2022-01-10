@@ -10,6 +10,7 @@
 enum StatisticsAction {
     case loadState
     case verbListDetails(VerbListAction)
+    case verbListDetailsdd(VerbListAction)
     case setUserProgression(UserProgression?)
 }
 
