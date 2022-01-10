@@ -27,7 +27,7 @@ struct StatisticsView: View {
                         destination: IfLetStore(
                             self.store.scope(
                                 state: \.selection?.value,
-                                action: StatisticsAction.verbListDetails
+                                action: StatisticsAction.selectedVerbListDetails
                             ),
                             then: VerbListView.init(store:),
                             else: ProgressView.init

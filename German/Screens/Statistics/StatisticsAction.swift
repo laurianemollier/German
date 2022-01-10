@@ -9,8 +9,8 @@
 
 enum StatisticsAction {
     case loadState
-    case verbListDetails(VerbListAction)
-    case verbListDetailsdd(VerbListAction)
+    case selectedVerbListDetails(VerbListAction)
+    case storedVerbListDetails(id: UserProgression, VerbListAction)
     case setUserProgression(UserProgression?)
 }
 
