@@ -11,12 +11,17 @@ import ComposableArchitecture
 // TODO: cancellable
 let statisticsReducer: Reducer<StatisticsState, StatisticsAction, ()> =
 Reducer<StatisticsState, StatisticsAction, ()>.combine(
-    verbListReducer
-        .pullback(
-            state: \StatisticsState.userProgressionStatistics[id: UserProgression.level1]!.verbListState,
-            action: /StatisticsAction.selectedVerbListDetails,
-            environment: { $0 }
-        ),
+//    verbListReducer
+//        .pullback(
+//            state: \StatisticsState.verbListStates[id: UserProgression.level1]!.verbListState,
+//            action: /StatisticsAction.selectedVerbListDetails,
+//            environment: { $0 }
+//        ),
+//    verbListReducer.forEach(
+//      state: \.todos,
+//      action: /AppAction.todo(id:action:),
+//      environment: { _ in TodoEnvironment() }
+//    ),
     verbListReducer
         .pullback(
             state: \Identified.value,
@@ -46,7 +51,6 @@ Reducer<StatisticsState, StatisticsAction, ()>.combine(
                     ).eraseToEffect()
                 }
             )
-            //            return Effect(value: .selectedVerbListDetails(.loadState)).eraseToEffect()
             
         case let .setUserProgression(selection: .some(selection)):
             state.selection = Identified(

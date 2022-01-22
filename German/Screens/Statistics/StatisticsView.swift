@@ -68,7 +68,7 @@ extension StatisticsView.State {
         self.rowStates = state.userProgressionStatistics.elements.map { userProgressionStatistic in
             RowState(
                 isLoading: false, // TODO: lolo
-                userProgression: userProgressionStatistic.userProgression,
+                userProgression: userProgressionStatistic.id,
                 verbCount: userProgressionStatistic.verbListState.learningVerbs.count
             )
         }

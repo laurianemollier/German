@@ -111,7 +111,7 @@ extension UserProgression {
 }
 
 
-enum UserProgression: String, CaseIterable, Equatable {
+enum UserProgression: String, CaseIterable, Equatable, Hashable {
     
     case notSeenYet = "notSeenYet"
     case level1 = "level1"
