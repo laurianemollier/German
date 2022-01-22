@@ -15,6 +15,9 @@ searchBarReducer.pullback(
     environment: {_ in ()}
 ).combined(
     with: Reducer<VerbListState, VerbListAction, ()> { state, action, environment in
+        
+        struct CancelId: Hashable {}
+        
         switch(action) {
         case .verbDetails(_):
             return .none 
@@ -24,8 +27,8 @@ searchBarReducer.pullback(
             return .none
             
         case .setLearningVerbDetails(selection: .none):
-            state.selectedVerbDetail = nil
-            return .none
+            state.selectedVerbDetail = nil  
+            return .cancel(id: CancelId())
             
         case let .searchBar(.textChanged(text)):
             state.filteredLearningVerbs = state.learningVerbs.filter({ learningVerb in
@@ -42,9 +45,13 @@ searchBarReducer.pullback(
             state.isLoading = true
             do {
                 if let progression = state.userProgression {
-                    return Effect(value: .setState( try DAO.shared.select(userProgression: progression))).eraseToEffect()
+                    return Effect(value: .setState( try DAO.shared.select(userProgression: progression)))
+                        .cancellable(id: CancelId())
+                        .eraseToEffect()
                 } else {
-                    return Effect(value: .setState(try DAO.shared.all())).eraseToEffect()
+                    return Effect(value: .setState(try DAO.shared.all()))
+                        .cancellable(id: CancelId())
+                        .eraseToEffect()
                 }
             }
             catch {

@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct VerbListState: Equatable {
+struct VerbListState: Equatable, Identifiable {
+    var id: UUID = UUID.init() // TODO: Lolo should be removed
+    
     var isLoading: Bool
     var alertItem: AlertItem?
     

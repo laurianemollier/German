@@ -36,7 +36,7 @@ struct GermanTabView: View {
                 
                 VerbListView(store: Store(
                     initialState: VerbListState.loading,
-                    reducer: verbListReducer.debug(),
+                    reducer: verbListReducer,
                     environment: ()
                 ))
                     .tag(Tabs.tab2)
@@ -45,10 +45,9 @@ struct GermanTabView: View {
                         Text("Account")
                     }
                 
-                
                 StatisticsView(store: Store(
                     initialState: StatisticsState.loading,
-                    reducer: statisticsReducer.debug(),
+                    reducer: statisticsReducer,
                     environment: ()
                 ))
                     .tag(Tabs.tab3)

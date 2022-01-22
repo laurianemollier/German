@@ -10,27 +10,26 @@ import ComposableArchitecture
 
 // TODO: cancellable
 let statisticsReducer: Reducer<StatisticsState, StatisticsAction, ()> =
-verbListReducer
-    .pullback(
-        state: \StatisticsState.userProgressionStatistics[id: UserProgression.level1]!.verbListState,
-        action: /StatisticsAction.selectedVerbListDetails,
-        environment: { $0 }
-    )
-    .combined(with:
-                verbListReducer
-                .pullback(
-                    state: \Identified.value,
-                    action: .self,
-                    environment: { $0 }
-                )
-                .optional()
-                .pullback(
-                    state: \StatisticsState.selection,
-                    action: /StatisticsAction.selectedVerbListDetails,
-                    environment: { _ in () }
-                )
-    )
-    .combined(with: Reducer<StatisticsState, StatisticsAction, ()> { state, action, environment in
+Reducer<StatisticsState, StatisticsAction, ()>.combine(
+    verbListReducer
+        .pullback(
+            state: \StatisticsState.userProgressionStatistics[id: UserProgression.level1]!.verbListState,
+            action: /StatisticsAction.selectedVerbListDetails,
+            environment: { $0 }
+        ),
+    verbListReducer
+        .pullback(
+            state: \Identified.value,
+            action: .self,
+            environment: { $0 }
+        )
+        .optional()
+        .pullback(
+            state: \StatisticsState.selection,
+            action: /StatisticsAction.selectedVerbListDetails,
+            environment: { _ in () }
+        ),
+    Reducer<StatisticsState, StatisticsAction, ()> { state, action, environment in
         switch(action) {
         case .selectedVerbListDetails(_):
             return .none
@@ -39,7 +38,15 @@ verbListReducer
             return .none
             
         case .loadState:
-            return Effect(value: .selectedVerbListDetails(.loadState)).eraseToEffect()
+            return Effect.merge(
+                state.userProgressionStatistics.elements.map{
+                    Effect(value: StatisticsAction.storedVerbListDetails(
+                        id: $0.id,
+                        VerbListAction.loadState)
+                    ).eraseToEffect()
+                }
+            )
+            //            return Effect(value: .selectedVerbListDetails(.loadState)).eraseToEffect()
             
         case let .setUserProgression(selection: .some(selection)):
             state.selection = Identified(
@@ -47,7 +54,6 @@ verbListReducer
                 id: selection
             )
             return .none
-            // .cancellable(id: CancelId(), cancelInFlight: true)
             
         case .setUserProgression(selection: .none):
             if let selection = state.selection {
@@ -55,7 +61,33 @@ verbListReducer
             }
             state.selection = nil
             return .none
-            //            return .cancel(id: CancelId())
         }
-    })
+    }
+)
+
+
+//// TODO: cancellable
+//let statisticsReducer: Reducer<StatisticsState, StatisticsAction, ()> =
+//verbListReducer.forEach(
+//    state: \StatisticsState.verbListStates,
+//    action: /StatisticsAction.verbList(id:action:),
+//    environment: { $0 }
+//)
+//    .combined(with: Reducer<StatisticsState, StatisticsAction, ()> { state, action, environment in
+//        switch(action) {
+//            
+//        case .verbList:
+//            return .none
+//            
+//        case .loadState:
+//            return Effect.merge(
+//                state.verbListStates.elements.map{
+//                    Effect(value: StatisticsAction.verbList(
+//                        id: $0.id,
+//                        action: VerbListAction.loadState)
+//                    ).eraseToEffect()
+//                }
+//            )
+//        }
+//    })
 

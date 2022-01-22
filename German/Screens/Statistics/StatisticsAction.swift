@@ -6,11 +6,15 @@
 //  Copyright © 2022 Lauriane Mollier. All rights reserved.
 //
 
+//enum StatisticsAction {
+//    case loadState
+//    case verbList(id: VerbListState.ID, action: VerbListAction)
+//}
 
 enum StatisticsAction {
     case loadState
-    case selectedVerbListDetails(VerbListAction)
-    case storedVerbListDetails(id: UserProgression, VerbListAction)
+    case selectedVerbListDetails(VerbListAction) // TODO: lolo clean
+    case storedVerbListDetails(id: UserProgression, VerbListAction) // TODO: lolo clean
     case setUserProgression(UserProgression?)
 }
 
