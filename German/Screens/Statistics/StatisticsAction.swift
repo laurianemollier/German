@@ -14,7 +14,7 @@
 enum StatisticsAction {
     case loadState
     case selectedVerbListDetails(VerbListAction) // TODO: lolo clean
-    case storedVerbListDetails(id: UserProgression, VerbListAction) // TODO: lolo clean
+    case storedVerbListDetails(id: UserProgression, action: VerbListAction) // TODO: lolo clean
     case setUserProgression(UserProgression?)
 }
 

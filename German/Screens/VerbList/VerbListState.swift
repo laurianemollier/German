@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct VerbListState: Equatable {    
+struct VerbListState: Equatable {
     var isLoading: Bool
     var alertItem: AlertItem?
     

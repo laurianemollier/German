@@ -11,18 +11,18 @@ import ComposableArchitecture
 // TODO: cancellable
 let statisticsReducer: Reducer<StatisticsState, StatisticsAction, ()> =
 Reducer<StatisticsState, StatisticsAction, ()>.combine(
-//    verbListReducer
-//        .pullback(
-//            state: \StatisticsState.verbListStates[id: UserProgression.level1]!.verbListState,
-//            action: /StatisticsAction.selectedVerbListDetails,
-//            environment: { $0 }
-//        ),
-//    verbListReducer.forEach(
-//      state: \.todos,
-//      action: /AppAction.todo(id:action:),
-//      environment: { _ in TodoEnvironment() }
-//    ),
-    verbListReducer
+    verbListReducer // to refect change in the list of VerbListState
+        .pullback(
+            state: \StatisticsState.UserProgressionStatistics.verbListState,
+            action: .self,
+            environment: { $0 }
+        )
+        .forEach(
+            state: \StatisticsState.userProgressionStatistics,
+            action: /StatisticsAction.storedVerbListDetails(id:action:),
+            environment: { $0 }
+        ),
+    verbListReducer // to refect change in the selected VerbListState
         .pullback(
             state: \Identified.value,
             action: .self,
@@ -47,7 +47,7 @@ Reducer<StatisticsState, StatisticsAction, ()>.combine(
                 state.userProgressionStatistics.elements.map{
                     Effect(value: StatisticsAction.storedVerbListDetails(
                         id: $0.id,
-                        VerbListAction.loadState)
+                        action: VerbListAction.loadState)
                     ).eraseToEffect()
                 }
             )
@@ -68,30 +68,3 @@ Reducer<StatisticsState, StatisticsAction, ()>.combine(
         }
     }
 )
-
-
-//// TODO: cancellable
-//let statisticsReducer: Reducer<StatisticsState, StatisticsAction, ()> =
-//verbListReducer.forEach(
-//    state: \StatisticsState.verbListStates,
-//    action: /StatisticsAction.verbList(id:action:),
-//    environment: { $0 }
-//)
-//    .combined(with: Reducer<StatisticsState, StatisticsAction, ()> { state, action, environment in
-//        switch(action) {
-//            
-//        case .verbList:
-//            return .none
-//            
-//        case .loadState:
-//            return Effect.merge(
-//                state.verbListStates.elements.map{
-//                    Effect(value: StatisticsAction.verbList(
-//                        id: $0.id,
-//                        action: VerbListAction.loadState)
-//                    ).eraseToEffect()
-//                }
-//            )
-//        }
-//    })
-
