@@ -13,13 +13,13 @@ let statisticsReducer: Reducer<StatisticsState, StatisticsAction, ()> =
 Reducer<StatisticsState, StatisticsAction, ()>.combine(
     verbListReducer // to refect change in the list of VerbListState
         .pullback(
-            state: \StatisticsState.UserProgressionStatistics.verbListState,
+            state: \StatisticsState.PerUserProgression.verbListState,
             action: .self,
             environment: { $0 }
         )
         .forEach(
             state: \StatisticsState.userProgressionStatistics,
-            action: /StatisticsAction.storedVerbListDetails(id:action:),
+            action: /StatisticsAction.verbLists(id:action:),
             environment: { $0 }
         ),
     verbListReducer // to refect change in the selected VerbListState
@@ -31,21 +31,18 @@ Reducer<StatisticsState, StatisticsAction, ()>.combine(
         .optional()
         .pullback(
             state: \StatisticsState.selection,
-            action: /StatisticsAction.selectedVerbListDetails,
+            action: /StatisticsAction.selectedVerbList,
             environment: { _ in () }
         ),
     Reducer<StatisticsState, StatisticsAction, ()> { state, action, environment in
         switch(action) {
-        case .selectedVerbListDetails(_):
+        case .selectedVerbList(_), .verbLists:
             return .none
-            
-        case .storedVerbListDetails:
-            return .none
-            
+        
         case .loadState:
             return Effect.merge(
                 state.userProgressionStatistics.elements.map{
-                    Effect(value: StatisticsAction.storedVerbListDetails(
+                    Effect(value: StatisticsAction.verbLists(
                         id: $0.id,
                         action: VerbListAction.loadState)
                     ).eraseToEffect()

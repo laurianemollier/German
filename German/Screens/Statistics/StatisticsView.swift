@@ -17,6 +17,7 @@ struct StatisticsView: View {
         
         struct RowState: Equatable {
             var isLoading: Bool
+            var isDisabled: Bool
             var userProgression: UserProgression
             var verbCount: Int
         }
@@ -37,7 +38,7 @@ struct StatisticsView: View {
                     destination: IfLetStore(
                         self.store.scope(
                             state: \.selection?.value,
-                            action: StatisticsAction.selectedVerbListDetails
+                            action: StatisticsAction.selectedVerbList
                         ),
                         then: VerbListView.init(store:),
                         else: ProgressView.init
@@ -53,7 +54,7 @@ struct StatisticsView: View {
                             verbCount: rowState.verbCount
                         ) // TODO: if is loading
                     }
-                )
+                ).disabled(rowState.isDisabled)
             }
         }
         .onAppear() {
@@ -68,6 +69,7 @@ extension StatisticsView.State {
         self.rowStates = state.userProgressionStatistics.elements.map { userProgressionStatistic in
             RowState(
                 isLoading: false, // TODO: lolo
+                isDisabled: userProgressionStatistic.verbListState.learningVerbs.count <= 0,
                 userProgression: userProgressionStatistic.id,
                 verbCount: userProgressionStatistic.verbListState.learningVerbs.count
             )

@@ -15,7 +15,7 @@ struct StatisticsState: Equatable {
 
     var selection: Identified<UserProgression, VerbListState>?
 
-    var userProgressionStatistics: IdentifiedArrayOf<UserProgressionStatistics> = [
+    var userProgressionStatistics: IdentifiedArrayOf<PerUserProgression> = [
         .loading(userProgression: UserProgression.notSeenYet),
         .loading(userProgression: UserProgression.level1),
         .loading(userProgression: UserProgression.level2),
@@ -29,12 +29,12 @@ struct StatisticsState: Equatable {
 
     static let loading: StatisticsState = StatisticsState()
 
-    struct UserProgressionStatistics: Equatable, Identifiable {
+    struct PerUserProgression: Equatable, Identifiable {
         let id: UserProgression
         var verbListState: VerbListState
 
-        static func loading(userProgression: UserProgression) -> UserProgressionStatistics {
-            UserProgressionStatistics(
+        static func loading(userProgression: UserProgression) -> PerUserProgression {
+            PerUserProgression(
                 id: userProgression,
                 verbListState: VerbListState.loading(userProgression: userProgression)
             )
