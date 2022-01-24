@@ -81,7 +81,9 @@ struct LearningVerb: Identifiable, Hashable{
     }
     
     static func == (lhs: LearningVerb, rhs: LearningVerb) -> Bool {
-        lhs.id == rhs.id
+        lhs.id == rhs.id &&
+        lhs.dateToReview == rhs.dateToReview &&
+        lhs.userProgression == rhs.userProgression
     }
 }
 

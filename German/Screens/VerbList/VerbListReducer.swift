@@ -14,6 +14,13 @@ let verbListReducer = Reducer<VerbListState, VerbListAction, ()>.combine(
         action: /VerbListAction.searchBar,
         environment: {_ in ()}
     ),
+    verbDetailReducer
+        .optional()
+        .pullback(
+          state: \VerbListState.selectedVerbDetail,
+          action: /VerbListAction.verbDetails,
+          environment: {_ in ()}
+        ),
     Reducer<VerbListState, VerbListAction, ()> { state, action, environment in
         
         struct CancelId: Hashable {}
