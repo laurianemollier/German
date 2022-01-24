@@ -8,26 +8,26 @@
 
 import ComposableArchitecture
 
-let verbListReducer: Reducer<VerbListState, VerbListAction, ()> =
-searchBarReducer.pullback(
-    state: \.searchBar,
-    action: /VerbListAction.searchBar,
-    environment: {_ in ()}
-).combined(
-    with: Reducer<VerbListState, VerbListAction, ()> { state, action, environment in
+let verbListReducer = Reducer<VerbListState, VerbListAction, ()>.combine(
+    searchBarReducer.pullback(
+        state: \.searchBar,
+        action: /VerbListAction.searchBar,
+        environment: {_ in ()}
+    ),
+    Reducer<VerbListState, VerbListAction, ()> { state, action, environment in
         
         struct CancelId: Hashable {}
         
         switch(action) {
         case .verbDetails(_):
-            return .none 
+            return .none
             
         case let .setLearningVerbDetails(selection: .some(selection)):
             state.selectedVerbDetail = VerbDetailState(learningVerb: selection)
             return .none
             
         case .setLearningVerbDetails(selection: .none):
-            state.selectedVerbDetail = nil  
+            state.selectedVerbDetail = nil
             return .cancel(id: CancelId())
             
         case let .searchBar(.textChanged(text)):
@@ -92,3 +92,4 @@ searchBarReducer.pullback(
         }
     }
 )
+

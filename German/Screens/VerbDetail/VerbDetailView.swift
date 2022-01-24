@@ -33,22 +33,6 @@ struct VerbDetailView: View {
                 Text("Knowledge level for this verb")
                 
                 VStack{
-                    Button { viewStore.send(.selectNewProgressionLevel(UserProgression.level1)) } label: {
-                        UserProgressionButton(
-                            isLoading: false,
-                            isSelected: viewStore.learningVerb.userProgression == UserProgression.level1,
-                            userProgression: UserProgression.level1
-                        )
-                    }
-                    
-                    Button { viewStore.send(.selectNewProgressionLevel(UserProgression.level2)) } label: {
-                        UserProgressionButton(
-                            isLoading: false,
-                            isSelected: viewStore.learningVerb.userProgression == UserProgression.level2,
-                            userProgression: UserProgression.level2
-                        )
-                    }
-                    
                     userProgressionButton(userProgression: UserProgression.level1)
                     userProgressionButton(userProgression: UserProgression.level2)
                     userProgressionButton(userProgression: UserProgression.level3)

@@ -8,9 +8,7 @@
 
 import ComposableArchitecture
 
-// TODO: cancellable
-let statisticsReducer: Reducer<StatisticsState, StatisticsAction, ()> =
-Reducer<StatisticsState, StatisticsAction, ()>.combine(
+let statisticsReducer = Reducer<StatisticsState, StatisticsAction, ()>.combine(
     verbListReducer // to refect change in the list of VerbListState
         .pullback(
             state: \StatisticsState.PerUserProgression.verbListState,

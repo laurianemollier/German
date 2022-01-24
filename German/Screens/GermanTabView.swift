@@ -23,9 +23,7 @@ struct GermanTabView: View {
                 RevisionHomeView(store: Store(
                     initialState: RevisionHomeState(),
                     reducer: revisionHomeReducer,
-                    environment: RevisionHomeEnvironment(
-                        mainQueue: .main
-                    )
+                    environment: ()
                 ))
                     .tag(Tabs.tab1)
                     .tabItem {

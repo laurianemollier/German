@@ -6,7 +6,7 @@
 //  Copyright © 2022 Lauriane Mollier. All rights reserved.
 //
 
-import Foundation
+import ComposableArchitecture
 
 struct VerbListState: Equatable {
     var isLoading: Bool
@@ -20,12 +20,12 @@ struct VerbListState: Equatable {
     var selectedLevel: Level?
     var selectedForm: Form?
     
-    private(set) var learningVerbs: [LearningVerb]
+    private(set) var learningVerbs: IdentifiedArrayOf<LearningVerb>
     var filteredLearningVerbs: [LearningVerb]
     
     mutating func setLearningVerbs(learningVerbs: [LearningVerb]) {
         self.isLoading = false
-        self.learningVerbs = learningVerbs
+        self.learningVerbs = IdentifiedArrayOf(uniqueElements: learningVerbs)
         self.filteredLearningVerbs = learningVerbs
     }
     
