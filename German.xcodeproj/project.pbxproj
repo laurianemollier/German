@@ -1586,16 +1586,13 @@
 		308CD18B26F7465E00B0660D /* GermanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD18A26F7465E00B0660D /* GermanApp.swift */; };
 		308CD18D26F7469900B0660D /* GermanTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD18C26F7469900B0660D /* GermanTabView.swift */; };
 		308CD19226F7476F00B0660D /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD19126F7476F00B0660D /* Color+Ext.swift */; };
-		308CD19826F747FF00B0660D /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD19726F747FF00B0660D /* LearnView.swift */; };
 		308CD19B26F7481C00B0660D /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD19A26F7481C00B0660D /* StatisticsView.swift */; };
 		308CD19E26F74BCE00B0660D /* CallToActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308CD19D26F74BCE00B0660D /* CallToActionButton.swift */; };
 		308EBB8B2712C63800214358 /* VerbListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EBB8A2712C63800214358 /* VerbListView.swift */; };
 		308EBB8F2712C6BC00214358 /* VerbListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EBB8E2712C6BC00214358 /* VerbListCell.swift */; };
 		308EBB912712CEE000214358 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EBB902712CEE000214358 /* SearchBarView.swift */; };
-		3090746D275E1C2700D43A74 /* LearnCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3090746C275E1C2700D43A74 /* LearnCellView.swift */; };
 		309EDBA22701D0C000BE78D5 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBA12701D0C000BE78D5 /* FrontCardView.swift */; };
 		309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBAA2701D0E700BE78D5 /* BackCardView.swift */; };
-		30A6A83A275CD41100BE89FF /* LearnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A6A839275CD41100BE89FF /* LearnViewModel.swift */; };
 		30B9F913272FC59C00B11789 /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 30B9F912272FC59C00B11789 /* CodableCSV */; };
 		30B9F916272FD19D00B11789 /* Csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B9F915272FD19D00B11789 /* Csv.swift */; };
 		9829D4B921416E5F0004FCB3 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829D4B821416E5F0004FCB3 /* Audio.swift */; };
@@ -3310,16 +3307,13 @@
 		308CD18A26F7465E00B0660D /* GermanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanApp.swift; sourceTree = "<group>"; };
 		308CD18C26F7469900B0660D /* GermanTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanTabView.swift; sourceTree = "<group>"; };
 		308CD19126F7476F00B0660D /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
-		308CD19726F747FF00B0660D /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		308CD19A26F7481C00B0660D /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		308CD19D26F74BCE00B0660D /* CallToActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToActionButton.swift; sourceTree = "<group>"; };
 		308EBB8A2712C63800214358 /* VerbListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbListView.swift; sourceTree = "<group>"; };
 		308EBB8E2712C6BC00214358 /* VerbListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbListCell.swift; sourceTree = "<group>"; };
 		308EBB902712CEE000214358 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
-		3090746C275E1C2700D43A74 /* LearnCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCellView.swift; sourceTree = "<group>"; };
 		309EDBA12701D0C000BE78D5 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		309EDBAA2701D0E700BE78D5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
-		30A6A839275CD41100BE89FF /* LearnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewModel.swift; sourceTree = "<group>"; };
 		30B9F915272FD19D00B11789 /* Csv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Csv.swift; sourceTree = "<group>"; };
 		9804A8C0213E445700B630A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9804A8C8213E451A00B630A1 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -7600,7 +7594,6 @@
 				98B0832E27831EA100F0309A /* VerbDetail */,
 				308EBB822712C60700214358 /* VerbList */,
 				308CD19926F7480500B0660D /* Statistics */,
-				308CD19626F747EE00B0660D /* Learn */,
 				308CD19326F747A500B0660D /* Revision */,
 				308CD18C26F7469900B0660D /* GermanTabView.swift */,
 			);
@@ -7650,16 +7643,6 @@
 				98B083162780EB0500F0309A /* Session */,
 			);
 			path = Revision;
-			sourceTree = "<group>";
-		};
-		308CD19626F747EE00B0660D /* Learn */ = {
-			isa = PBXGroup;
-			children = (
-				308CD19726F747FF00B0660D /* LearnView.swift */,
-				30A6A839275CD41100BE89FF /* LearnViewModel.swift */,
-				3090746C275E1C2700D43A74 /* LearnCellView.swift */,
-			);
-			path = Learn;
 			sourceTree = "<group>";
 		};
 		308CD19926F7480500B0660D /* Statistics */ = {
@@ -9561,7 +9544,6 @@
 				986DD42D212FE7F1000E5E49 /* UIFont.swift in Sources */,
 				308CD18B26F7465E00B0660D /* GermanApp.swift in Sources */,
 				988DB90D2125B5D000AFAEF4 /* FirstLaunch.swift in Sources */,
-				3090746D275E1C2700D43A74 /* LearnCellView.swift in Sources */,
 				984959F1276DD5B800F155FB /* RevisionHomeReducer.swift in Sources */,
 				305EDFC326F8920D00EDD43C /* BackButton.swift in Sources */,
 				98B08339278B640100F0309A /* StatisticsState.swift in Sources */,
@@ -9581,7 +9563,6 @@
 				983B2497211C6A4B009C33B1 /* Verbs.swift in Sources */,
 				984959FF276F15F500F155FB /* FlashcardReducer.swift in Sources */,
 				305009A027085F01001E9E08 /* Text+Ext.swift in Sources */,
-				308CD19826F747FF00B0660D /* LearnView.swift in Sources */,
 				9898A5D4212AE2D7003EAAFF /* Array.swift in Sources */,
 				308EBB8F2712C6BC00214358 /* VerbListCell.swift in Sources */,
 				983B2495211C4A0C009C33B1 /* Verb.swift in Sources */,
@@ -9640,7 +9621,6 @@
 				988DB9152125C09900AFAEF4 /* LocalDbVerbTranslationDAO.swift in Sources */,
 				98B083242782FAAE00F0309A /* VerbListAction.swift in Sources */,
 				98A511D0214AFA80001107D9 /* BoughtIAPProducts.swift in Sources */,
-				30A6A83A275CD41100BE89FF /* LearnViewModel.swift in Sources */,
 				984959F7276E6CB700F155FB /* VerbReviewReducer.swift in Sources */,
 				98685F782127173800DA327D /* DbLearningVerb.swift in Sources */,
 				309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */,

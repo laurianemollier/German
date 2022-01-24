@@ -8,8 +8,8 @@
 
 enum StatisticsAction {
     case loadState
-    case selectedVerbList(VerbListAction) // TODO: lolo clean
-    case verbLists(id: UserProgression, action: VerbListAction) // TODO: lolo clean
+    case selectedVerbList(VerbListAction)
+    case verbLists(id: UserProgression, action: VerbListAction)
     case setUserProgression(UserProgression?)
 }
 
