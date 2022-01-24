@@ -7,6 +7,8 @@
 //
 
 enum VerbDetailAction {
-    case addToTheReviewList
+    case addVerbToTheReviewList
     case selectNewProgressionLevel(UserProgression)
+    case verbUpdated(new: LearningVerb)
+    case verbUpdateFailure(Error)
 }

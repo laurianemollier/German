@@ -11,22 +11,19 @@ import ComposableArchitecture
 
 let verbDetailReducer = Reducer<VerbDetailState, VerbDetailAction, ()> { state, action, environment in
     switch(action) {
-    case .addToTheReviewList: // TODO: lolo
+    case .addVerbToTheReviewList: // TODO: lolo
+        state.isLoading = true
         do{
-            let success = try DAO.shared.addVerbToReviewList(learningVerb: state.learningVerb)
-            if success {
-                SpeedLog.print("Sucessly modify all learning verb")
-            }
-            else{
-                SpeedLog.print("One verb was not found")
-            }
+            let updatedOp = try DAO.shared.addVerbToReviewList(learningVerb: state.learningVerb)
+            if let updated = updatedOp { return Effect(value: .verbUpdated(new: updated)) }
+            else { return Effect(value: .verbUpdateFailure(CustomError.VerbNotFound)) }
         }
         catch{
-            SpeedLog.print(error)
+            return Effect(value: .verbUpdateFailure(error))
         }
-        return .none
         
     case let .selectNewProgressionLevel(newLevel):  // TODO: lolo
+        state.isLoading = true
         let (newProgression, dateToReview) = UserProgression.stagnation(newLevel, reviewedDate: Date())!
         
         do{
@@ -35,16 +32,21 @@ let verbDetailReducer = Reducer<VerbDetailState, VerbDetailAction, ()> { state, 
                                                 dateToReview: dateToReview,
                                                 userProgression: newProgression)
             let success = try DAO.shared.update(learningVerb: userLearningVerb.toDbUserLearningVerb())
-            if success {
-                SpeedLog.print("Sucessly modify all learning verb")
-            }
-            else{
-                SpeedLog.print("One verb was not found")
-            }
+            if success { return Effect(value: .verbUpdated(new: userLearningVerb)) }
+            else { return Effect(value: .verbUpdateFailure(CustomError.VerbNotFound)) }
         }
         catch{
-            SpeedLog.print(error)
+            return Effect(value: .verbUpdateFailure(error))
         }
+        
+    case let .verbUpdated(newLearningVerb):
+        state.isLoading = false
+        state.learningVerb = newLearningVerb
+        return .none
+        
+    case let .verbUpdateFailure(error):
+        state.isLoading = false
+        state.alertItem = AlertContext.internalError(error)
         return .none
     }
 }

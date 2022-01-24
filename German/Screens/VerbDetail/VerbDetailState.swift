@@ -7,5 +7,7 @@
 //
 
 struct VerbDetailState: Equatable {
-    let learningVerb: LearningVerb
+    var isLoading: Bool = false
+    var alertItem: AlertItem?
+    var learningVerb: LearningVerb
 }

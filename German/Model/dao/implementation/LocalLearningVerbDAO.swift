@@ -37,9 +37,10 @@ final class LocalLearningVerbDAO: LearningVerbDAO{
         }.allSatisfy({$0})
     }
     
-    func addVerbToReviewList(learningVerb: LearningVerb) throws -> Bool {
+    func addVerbToReviewList(learningVerb: LearningVerb) throws -> LearningVerb? {
         let updated = learningVerb.set(userProgression: UserProgression.level1, dateToReview: Date())
-        return try update(learningVerb: updated.toDbUserLearningVerb())
+        let _ = try update(learningVerb: updated.toDbUserLearningVerb())
+        return updated
     }
     
     func removeVerbFromReviewList(learningVerb: LearningVerb) throws -> Bool {

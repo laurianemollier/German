@@ -35,12 +35,12 @@ struct LearnCellView: View {
                     Button(action: {
                         do{
                             let success = try DAO.shared.addVerbToReviewList(learningVerb: learningVerb)
-                            if success {
-                                SpeedLog.print("Sucessly add verb to the review list")
-                            }
-                            else{
-                                SpeedLog.print("One verb was not found")
-                            }
+//                            if success {
+//                                SpeedLog.print("Sucessly add verb to the review list")
+//                            }
+//                            else{
+//                                SpeedLog.print("One verb was not found")
+//                            }
                         }
                         catch{
                             SpeedLog.print(error)

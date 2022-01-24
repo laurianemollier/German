@@ -10,6 +10,8 @@ import SwiftUI
 
 struct UserProgressionButton: View {
     
+    var isLoading: Bool
+    var isSelected: Bool
     var userProgression: UserProgression
     var verbCount: Int?
     
@@ -25,7 +27,8 @@ struct UserProgressionButton: View {
             
             Spacer()
             
-            if let count = verbCount {
+            if(isLoading) {  ProgressView() }
+            else if let count = verbCount {
                 Text("\(count) verb\(count > 1 ? "s" : "")")
                     .foregroundColor(.brandPrimary)
                     .padding(.trailing, 10)
@@ -33,13 +36,13 @@ struct UserProgressionButton: View {
         }
         .frame(width: 260, height: 50)
         .foregroundColor(.white)
-        .background(Color.gray)
+        .background(isSelected ? .blue : .gray)
         .cornerRadius(10)
     }
 }
 
 struct StatisticsButton_Previews: PreviewProvider {
     static var previews: some View {
-        UserProgressionButton(userProgression: UserProgression.level1, verbCount: 2)
+        UserProgressionButton(isLoading: false, isSelected: false, userProgression: UserProgression.level1, verbCount: 2)
     }
 }

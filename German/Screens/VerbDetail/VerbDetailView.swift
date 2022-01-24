@@ -24,7 +24,7 @@ struct VerbDetailView: View {
             BackCardView(verb: viewStore.learningVerb.verb)
             
             if viewStore.learningVerb.userProgression == UserProgression.notSeenYet {
-                Button { viewStore.send(.addToTheReviewList) } label: {
+                Button { viewStore.send(.addVerbToTheReviewList) } label: {
                     ToChangeButton(
                         title: "Add the verb to the review list",
                         backgroundColor: Color.orange)
@@ -48,7 +48,11 @@ struct VerbDetailView: View {
     
     private func userProgressionButton(userProgression: UserProgression) -> Button<UserProgressionButton> {
         return Button { viewStore.send(.selectNewProgressionLevel(userProgression)) } label: {
-            UserProgressionButton(userProgression: userProgression)
+            UserProgressionButton(
+                isLoading: false,
+                isSelected: viewStore.learningVerb.userProgression == userProgression,
+                userProgression: userProgression
+            )
         }
     }
 }

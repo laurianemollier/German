@@ -50,9 +50,11 @@ struct StatisticsView: View {
                     ),
                     label: {
                         UserProgressionButton(
+                            isLoading: rowState.isLoading,
+                            isSelected: false,
                             userProgression: rowState.userProgression,
                             verbCount: rowState.verbCount
-                        ) // TODO: if is loading
+                        )
                     }
                 ).disabled(rowState.isDisabled)
             }
@@ -68,7 +70,7 @@ extension StatisticsView.State {
         self.selection = state.selection?.userProgression
         self.rowStates = state.userProgressionStatistics.elements.map { userProgressionStatistic in
             RowState(
-                isLoading: false, // TODO: lolo
+                isLoading: userProgressionStatistic.verbListState.isLoading,
                 isDisabled: userProgressionStatistic.verbListState.learningVerbs.count <= 0,
                 userProgression: userProgressionStatistic.id,
                 verbCount: userProgressionStatistic.verbListState.learningVerbs.count
