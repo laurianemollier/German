@@ -6,12 +6,11 @@
 //  Copyright © 2022 Lauriane Mollier. All rights reserved.
 //
 
-import SwiftUI
 import ComposableArchitecture
 
 let verbDetailReducer = Reducer<VerbDetailState, VerbDetailAction, ()> { state, action, environment in
     switch(action) {
-    case .addVerbToTheReviewList: // TODO: lolo
+    case .addVerbToTheReviewList:
         state.isLoading = true
         do{
             let updatedOp = try DAO.shared.addVerbToReviewList(learningVerb: state.learningVerb)
@@ -22,7 +21,7 @@ let verbDetailReducer = Reducer<VerbDetailState, VerbDetailAction, ()> { state, 
             return Effect(value: .verbUpdateFailure(error))
         }
         
-    case let .selectNewProgressionLevel(newLevel):  // TODO: lolo
+    case let .selectNewProgressionLevel(newLevel):
         state.isLoading = true
         let (newProgression, dateToReview) = UserProgression.stagnation(newLevel, reviewedDate: Date())!
         
