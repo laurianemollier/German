@@ -41,15 +41,15 @@ let audioToggleReducer = Reducer<AudioToggleState, AudioToggleAction, ()> { stat
             
             switch playVerbAudio {
             case PlayVerbAudio.all:
-                nameAudioFile = verb.temps.infinitive.value
+                nameAudioFile = verb.tense.infinitive.value
             case PlayVerbAudio.infinitive:
-                nameAudioFile = "\(verb.temps.infinitive.value)_infinitiv"
+                nameAudioFile = "\(verb.tense.infinitive.value)_infinitiv"
             case PlayVerbAudio.present:
-                nameAudioFile = "\(verb.temps.infinitive.value)_praesent"
+                nameAudioFile = "\(verb.tense.infinitive.value)_praesent"
             case PlayVerbAudio.simplePast:
-                nameAudioFile = "\(verb.temps.infinitive.value)_praeteritum"
+                nameAudioFile = "\(verb.tense.infinitive.value)_praeteritum"
             case PlayVerbAudio.pastParticiple:
-                nameAudioFile = "\(verb.temps.infinitive.value)_perfekt"
+                nameAudioFile = "\(verb.tense.infinitive.value)_perfekt"
             }
             
             do {

@@ -12,10 +12,10 @@ import CodableCSV
 struct Csv {
     
     static func toCsv(verb: Verb) -> [String] {
-        [verb.temps.infinitive.value,
-         verb.temps.present.value,
-         verb.temps.simplePast.value,
-         verb.temps.pastParticiple.value,
+        [verb.tense.infinitive.value,
+         verb.tense.present.value,
+         verb.tense.simplePast.value,
+         verb.tense.pastParticiple.value,
          verb.level.rawValue,
          verb.translation(Lang.en),
          verb.translation(Lang.es)

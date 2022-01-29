@@ -40,7 +40,7 @@ let verbListReducer = Reducer<VerbListState, VerbListAction, ()>.combine(
         case let .searchBar(.textChanged(text)):
             state.filteredLearningVerbs = state.learningVerbs.filter({ learningVerb in
                 if state.searchBar.isSearching {
-                    return learningVerb.verb.temps.infinitive.value.lowercased()
+                    return learningVerb.verb.tense.infinitive.value.lowercased()
                         .contains(state.searchBar.searchText.lowercased())
                 } else {
                     return true

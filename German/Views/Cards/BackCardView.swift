@@ -16,10 +16,10 @@ struct BackCardView: View {
         VStack {
             Text(verb.translation(Lang.en))
             
-            Text.verbTemps(verb.temps.infinitive)
-            Text.verbTemps(verb.temps.present)
-            Text.verbTemps(verb.temps.simplePast)
-            Text.verbTemps(verb.temps.pastParticiple)
+            Text.verbTemps(verb.tense.infinitive)
+            Text.verbTemps(verb.tense.present)
+            Text.verbTemps(verb.tense.simplePast)
+            Text.verbTemps(verb.tense.pastParticiple)
         }
     }
 }

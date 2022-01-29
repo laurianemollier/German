@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct VerbTemps: Equatable {
+struct VerbTense: Equatable {
     
     private let changingVowelRange: NSRange
     
@@ -48,7 +48,7 @@ struct VerbTemps: Equatable {
         )
     }
     
-    static func ==(lhs: VerbTemps, rhs: VerbTemps) -> Bool {
+    static func ==(lhs: VerbTense, rhs: VerbTense) -> Bool {
         return lhs.value == rhs.value
     }
 }

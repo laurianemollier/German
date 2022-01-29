@@ -1573,7 +1573,7 @@
 		30249155271C22A20000914C /* anfallen_praesent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30248B42271C229E0000914C /* anfallen_praesent.mp3 */; };
 		30249156271C22A20000914C /* anfallen_praeteritum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30248B43271C229E0000914C /* anfallen_praeteritum.mp3 */; };
 		30249157271C22A20000914C /* anfallen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30248B44271C229E0000914C /* anfallen.mp3 */; };
-		3050099527085606001E9E08 /* VerbTemps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099427085606001E9E08 /* VerbTemps.swift */; };
+		3050099527085606001E9E08 /* VerbTense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099427085606001E9E08 /* VerbTense.swift */; };
 		305009A027085F01001E9E08 /* Text+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050099F27085F01001E9E08 /* Text+Ext.swift */; };
 		305009A22708DE58001E9E08 /* ToChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305009A12708DE58001E9E08 /* ToChangeButton.swift */; };
 		305EDFAD26F7A64500EDD43C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EDFAC26F7A64500EDD43C /* LoadingView.swift */; };
@@ -1658,6 +1658,10 @@
 		98B0A8B82125AECD000F44B4 /* LocalDbVerbDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0A8B72125AECD000F44B4 /* LocalDbVerbDAO.swift */; };
 		98C9835220F750840080B08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C9835120F750840080B08C /* Assets.xcassets */; };
 		98C9835520F750840080B08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C9835320F750840080B08C /* LaunchScreen.storyboard */; };
+		98ED217D27A539560068FCCF /* LearnVerbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED217C27A539560068FCCF /* LearnVerbView.swift */; };
+		98ED217F27A539620068FCCF /* LearnVerbState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED217E27A539620068FCCF /* LearnVerbState.swift */; };
+		98ED218127A5396C0068FCCF /* LearnVerbAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED218027A5396C0068FCCF /* LearnVerbAction.swift */; };
+		98ED218327A539750068FCCF /* LearnVerbReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED218227A539750068FCCF /* LearnVerbReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3294,7 +3298,7 @@
 		30248B42271C229E0000914C /* anfallen_praesent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anfallen_praesent.mp3; sourceTree = "<group>"; };
 		30248B43271C229E0000914C /* anfallen_praeteritum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anfallen_praeteritum.mp3; sourceTree = "<group>"; };
 		30248B44271C229E0000914C /* anfallen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anfallen.mp3; sourceTree = "<group>"; };
-		3050099427085606001E9E08 /* VerbTemps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTemps.swift; sourceTree = "<group>"; };
+		3050099427085606001E9E08 /* VerbTense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTense.swift; sourceTree = "<group>"; };
 		3050099F27085F01001E9E08 /* Text+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Ext.swift"; sourceTree = "<group>"; };
 		305009A12708DE58001E9E08 /* ToChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToChangeButton.swift; sourceTree = "<group>"; };
 		305EDFAC26F7A64500EDD43C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -3381,6 +3385,10 @@
 		98C9835120F750840080B08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98C9835420F750840080B08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98C9835620F750840080B08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98ED217C27A539560068FCCF /* LearnVerbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnVerbView.swift; sourceTree = "<group>"; };
+		98ED217E27A539620068FCCF /* LearnVerbState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnVerbState.swift; sourceTree = "<group>"; };
+		98ED218027A5396C0068FCCF /* LearnVerbAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnVerbAction.swift; sourceTree = "<group>"; };
+		98ED218227A539750068FCCF /* LearnVerbReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnVerbReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3441,7 +3449,7 @@
 				300C706E26C83D320092A492 /* db */,
 				98B0151021244C9F0090006E /* LearningVerb.swift */,
 				983B2494211C4A0C009C33B1 /* Verb.swift */,
-				3050099427085606001E9E08 /* VerbTemps.swift */,
+				3050099427085606001E9E08 /* VerbTense.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -7591,6 +7599,7 @@
 		308CD18826F7462100B0660D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				98ED217B27A539380068FCCF /* LearnVerb */,
 				98B0832E27831EA100F0309A /* VerbDetail */,
 				308EBB822712C60700214358 /* VerbList */,
 				308CD19926F7480500B0660D /* Statistics */,
@@ -7831,6 +7840,17 @@
 				98C9835620F750840080B08C /* Info.plist */,
 			);
 			path = German;
+			sourceTree = "<group>";
+		};
+		98ED217B27A539380068FCCF /* LearnVerb */ = {
+			isa = PBXGroup;
+			children = (
+				98ED217C27A539560068FCCF /* LearnVerbView.swift */,
+				98ED217E27A539620068FCCF /* LearnVerbState.swift */,
+				98ED218027A5396C0068FCCF /* LearnVerbAction.swift */,
+				98ED218227A539750068FCCF /* LearnVerbReducer.swift */,
+			);
+			path = LearnVerb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -9564,8 +9584,10 @@
 				984959FF276F15F500F155FB /* FlashcardReducer.swift in Sources */,
 				305009A027085F01001E9E08 /* Text+Ext.swift in Sources */,
 				9898A5D4212AE2D7003EAAFF /* Array.swift in Sources */,
+				98ED217D27A539560068FCCF /* LearnVerbView.swift in Sources */,
 				308EBB8F2712C6BC00214358 /* VerbListCell.swift in Sources */,
 				983B2495211C4A0C009C33B1 /* Verb.swift in Sources */,
+				98ED217F27A539620068FCCF /* LearnVerbState.swift in Sources */,
 				98495A06276F30FD00F155FB /* AudioToggleReducer.swift in Sources */,
 				98685F762127162700DA327D /* LocalLearningVerbDAO.swift in Sources */,
 				988DB91B2125C71700AFAEF4 /* DbVerbTranslation.swift in Sources */,
@@ -9594,13 +9616,14 @@
 				308CD19226F7476F00B0660D /* Color+Ext.swift in Sources */,
 				300C706D26C83AE50092A492 /* DbVerbTranslationDAO.swift in Sources */,
 				98495A04276F30EF00F155FB /* AudioToggleAction.swift in Sources */,
-				3050099527085606001E9E08 /* VerbTemps.swift in Sources */,
+				3050099527085606001E9E08 /* VerbTense.swift in Sources */,
 				3021006B270CB26200BA30E9 /* UserProgressionButton.swift in Sources */,
 				308EBB912712CEE000214358 /* SearchBarView.swift in Sources */,
 				305EDFB826F8795500EDD43C /* ReviewVerbsView.swift in Sources */,
 				30B9F916272FD19D00B11789 /* Csv.swift in Sources */,
 				300C707626C843830092A492 /* DbLearningVerbDAO.swift in Sources */,
 				98B0833627831ED700F0309A /* VerbDetailReducer.swift in Sources */,
+				98ED218127A5396C0068FCCF /* LearnVerbAction.swift in Sources */,
 				98B0833427831ECD00F0309A /* VerbDetailAction.swift in Sources */,
 				9898A5D2212AC6DA003EAAFF /* Date.swift in Sources */,
 				305EDFB026F7AB5800EDD43C /* AlertItem.swift in Sources */,
@@ -9622,6 +9645,7 @@
 				98B083242782FAAE00F0309A /* VerbListAction.swift in Sources */,
 				98A511D0214AFA80001107D9 /* BoughtIAPProducts.swift in Sources */,
 				984959F7276E6CB700F155FB /* VerbReviewReducer.swift in Sources */,
+				98ED218327A539750068FCCF /* LearnVerbReducer.swift in Sources */,
 				98685F782127173800DA327D /* DbLearningVerb.swift in Sources */,
 				309EDBAB2701D0E700BE78D5 /* BackCardView.swift in Sources */,
 				98B0833D278B645B00F0309A /* StatisticsAction.swift in Sources */,

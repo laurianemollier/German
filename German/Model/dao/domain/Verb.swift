@@ -22,9 +22,9 @@ struct Verb: Equatable {
     /// The form to which the verb belongs.
     let form: Form
     
-    /// The differents temps of this verb
+    /// The differents tense of this verb
     /// (infinitive, present, simple past, past participle)
-    let temps: (infinitive: VerbTemps, present: VerbTemps, simplePast: VerbTemps, pastParticiple: VerbTemps)
+    let tense: (infinitive: VerbTense, present: VerbTense, simplePast: VerbTense, pastParticiple: VerbTense)
     
     /// The translation avalable in each language
     private var translations = [Lang:String]()
@@ -36,7 +36,7 @@ struct Verb: Equatable {
     /// - Parameters:
     ///     - level: The level at which you are supposed to learn this verb.
     ///     - form: The form to which the verb belongs.
-    ///     - verb: The differents temps of this verb (infinitive, present, simple past, past participle)
+    ///     - verb: The differents tense of this verb (infinitive, present, simple past, past participle)
     ///     - changingVowel: The range where is located the changing vowel (infinitive, present, simple past, past participle)
     ///     - translations: The translation avalable in each language
     ///
@@ -48,11 +48,11 @@ struct Verb: Equatable {
         self.id = id + 1
         self.level = level
         self.form = form
-        self.temps = (
-            infinitive: VerbTemps(value: verb.0, changingVowelRange: changingVowel.0),
-            present: VerbTemps(value: verb.1, changingVowelRange: changingVowel.1),
-            simplePast: VerbTemps(value: verb.2, changingVowelRange: changingVowel.2),
-            pastParticiple: VerbTemps(value: verb.3, changingVowelRange: changingVowel.3)
+        self.tense = (
+            infinitive: VerbTense(value: verb.0, changingVowelRange: changingVowel.0),
+            present: VerbTense(value: verb.1, changingVowelRange: changingVowel.1),
+            simplePast: VerbTense(value: verb.2, changingVowelRange: changingVowel.2),
+            pastParticiple: VerbTense(value: verb.3, changingVowelRange: changingVowel.3)
             )
         translations.forEach({
             self.translations[$0] = $1
@@ -69,7 +69,7 @@ struct Verb: Equatable {
     }
     
     static func ==(lhs: Verb, rhs: Verb) -> Bool {
-        return lhs.temps.infinitive == rhs.temps.infinitive
+        return lhs.tense.infinitive == rhs.tense.infinitive
     }
 
 }

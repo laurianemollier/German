@@ -27,15 +27,15 @@ struct VerbListCell: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text.verbTemps(verb.temps.infinitive)
+                Text.verbTemps(verb.tense.infinitive)
                     .font(.title2)
                     .fontWeight(.semibold)
                 
                 Spacer()
                 
-                Text.verbTemps(verb.temps.present)
-                Text.verbTemps(verb.temps.simplePast)
-                Text.verbTemps(verb.temps.pastParticiple)
+                Text.verbTemps(verb.tense.present)
+                Text.verbTemps(verb.tense.simplePast)
+                Text.verbTemps(verb.tense.pastParticiple)
             }
             
             Spacer()
