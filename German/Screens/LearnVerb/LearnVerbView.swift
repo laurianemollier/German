@@ -58,9 +58,11 @@ struct LearnVerbView: View {
                 )
                 
             case .allFormSeen:
-                Spacer()
                 Text("Verb added in you review list !")
                 Spacer()
+                Button { viewStore.send(.endLearnSession) } label: {
+                    Text("Ok")
+                }
             }
         }
     }
@@ -93,7 +95,7 @@ struct LearnVerbView_Previews: PreviewProvider {
             store: Store.init(
                 initialState: LearnVerbState.init(
                     verb: Verbs.verbs.first!,
-                    tenseDiscoveryState: .start
+                    tenseDiscoveryState: .allFormSeen
                 ),
                 reducer: learnVerbReducer,
                 environment: ()
