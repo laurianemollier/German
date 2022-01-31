@@ -34,8 +34,9 @@ let statisticsReducer = Reducer<StatisticsState, StatisticsAction, ()>.combine(
         ),
     Reducer<StatisticsState, StatisticsAction, ()> { state, action, environment in
         switch(action) {
-        case .selectedVerbList(VerbListAction.verbDetails(VerbDetailAction.verbUpdated)):
-            return Effect(value: .setUserProgression(.none))
+            // TODO: lolo
+//        case .selectedVerbList(VerbListAction.verbDetail(VerbDetailAction.verbUpdated)):
+//            return Effect(value: .setUserProgression(.none))
             
         case .selectedVerbList(_), .verbLists:
             return .none

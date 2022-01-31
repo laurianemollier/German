@@ -11,8 +11,8 @@ import Foundation
 enum VerbListAction {
     case searchBar(SearchBarAction)
     
-    case verbDetails(VerbDetailAction)
-    case setLearningVerbDetails(selection: LearningVerb?)
+    case verbDetail(VerbDetailAction)
+    case setLearningVerbDetail(selection: LearningVerb?)
 
     // if not defined, load all the verbs
     case loadState

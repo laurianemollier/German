@@ -88,18 +88,3 @@ struct LearnVerbView: View {
             }
         }
 }
-
-struct LearnVerbView_Previews: PreviewProvider {
-    static var previews: some View {
-        LearnVerbView(
-            store: Store.init(
-                initialState: LearnVerbState.init(
-                    verb: Verbs.verbs.first!,
-                    tenseDiscoveryState: .allFormSeen
-                ),
-                reducer: learnVerbReducer,
-                environment: ()
-            )
-        )
-    }
-}

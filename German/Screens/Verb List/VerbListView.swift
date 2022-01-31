@@ -10,9 +10,6 @@ import SwiftUI
 import ComposableArchitecture
 
 struct VerbListView: View {
-    
-    let cellViewMode: VerbListCellViewMode = VerbListCellViewMode.expanded
-
     var store: Store<VerbListState, VerbListAction>
     @ObservedObject var viewStore: ViewStore<VerbListState, VerbListAction>
     
@@ -60,19 +57,19 @@ struct VerbListView: View {
                     tag: learningVerb,
                     selection: viewStore.binding(
                         get: \.selectedVerbDetail?.learningVerb,
-                        send: VerbListAction.setLearningVerbDetails(selection:)
+                        send: VerbListAction.setLearningVerbDetail(selection:)
                     ),
                     destination: {
                         IfLetStore(
                             self.store.scope(
                                 state: \.selectedVerbDetail,
-                                action: VerbListAction.verbDetails
+                                action: VerbListAction.verbDetail
                             ),
                             then: VerbDetailView.init(store:),
                             else: ProgressView.init
                         )},
                     label: {
-                        VerbListCell(verb: learningVerb.verb, viewMode: cellViewMode)
+                        VerbListCell(verb: learningVerb.verb, viewMode: viewStore.cellViewMode)
                     }
                 )
             }

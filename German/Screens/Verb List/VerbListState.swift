@@ -12,6 +12,8 @@ struct VerbListState: Equatable {
     var isLoading: Bool
     var alertItem: AlertItem?
     
+    let cellViewMode: VerbListCellViewMode = VerbListCellViewMode.expanded
+    
     var searchBar = SearchBarState()
     
     // if not defined, load all the verbs

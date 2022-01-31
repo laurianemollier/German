@@ -1,5 +1,5 @@
 //
-//  VerbDetailReducer.swift
+//  VerbProgressionDetailReducer.swift
 //  German
 //
 //  Created by Lauriane Mollier on 03.01.22.
@@ -8,7 +8,7 @@
 
 import ComposableArchitecture
 
-let verbDetailReducer = Reducer<VerbDetailState, VerbDetailAction, ()> { state, action, environment in
+let verbProgressionDetailReducer = Reducer<VerbProgressionDetailState, VerbProgressionDetailAction, ()> { state, action, environment in
     switch(action) {
     case .addVerbToTheReviewList:
         state.isLoading = true

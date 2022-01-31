@@ -15,8 +15,14 @@ struct LearnVerbState: Equatable {
         case allFormSeen
     }
     
+    private(set) var learningVerb: LearningVerb
+    private(set) var verb: Verb
+    var tenseDiscoveryState: TenseDiscoveryState
     
-    var verb: Verb
-    var tenseDiscoveryState: TenseDiscoveryState = TenseDiscoveryState.start
+    init(learningVerb: LearningVerb) {
+        self.learningVerb = learningVerb
+        self.verb = learningVerb.verb
+        self.tenseDiscoveryState = TenseDiscoveryState.start
+    }
+    
 }
-

@@ -18,7 +18,7 @@ let verbListReducer = Reducer<VerbListState, VerbListAction, ()>.combine(
         .optional()
         .pullback(
           state: \VerbListState.selectedVerbDetail,
-          action: /VerbListAction.verbDetails,
+          action: /VerbListAction.verbDetail,
           environment: {_ in ()}
         ),
     Reducer<VerbListState, VerbListAction, ()> { state, action, environment in
@@ -26,14 +26,17 @@ let verbListReducer = Reducer<VerbListState, VerbListAction, ()>.combine(
         struct CancelId: Hashable {}
         
         switch(action) {
-        case .verbDetails(_):
+        case .verbDetail(.verbProgression(.selectNewProgressionLevel)):
             return .none
             
-        case let .setLearningVerbDetails(selection: .some(selection)):
-            state.selectedVerbDetail = VerbDetailState(learningVerb: selection)
+        case .verbDetail(_):
+            return .none
+ 
+        case let .setLearningVerbDetail(selection: .some(selection)):
+            state.selectedVerbDetail = VerbDetailState(verbProgressionDetail: selection) // TODO: lolo
             return .none
             
-        case .setLearningVerbDetails(selection: .none):
+        case .setLearningVerbDetail(selection: .none):
             state.selectedVerbDetail = nil
             return .cancel(id: CancelId())
             

@@ -1,5 +1,5 @@
 //
-//  VerbDetailView.swift
+//  VerbProgressionDetailView.swift
 //  German
 //
 //  Created by Lauriane Mollier on 03.01.22.
@@ -9,12 +9,12 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct VerbDetailView: View {
+struct VerbProgressionDetailView: View {
     
-    var store: Store<VerbDetailState, VerbDetailAction>
-    @ObservedObject var viewStore: ViewStore<VerbDetailState, VerbDetailAction>
+    var store: Store<VerbProgressionDetailState, VerbProgressionDetailAction>
+    @ObservedObject var viewStore: ViewStore<VerbProgressionDetailState, VerbProgressionDetailAction>
     
-    init(store: Store<VerbDetailState, VerbDetailAction>) {
+    init(store: Store<VerbProgressionDetailState, VerbProgressionDetailAction>) {
         self.store = store
         self.viewStore = ViewStore(self.store)
     }
