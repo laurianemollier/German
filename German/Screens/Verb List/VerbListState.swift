@@ -12,7 +12,12 @@ struct VerbListState: Equatable {
     var isLoading: Bool
     var alertItem: AlertItem?
     
-    let cellViewMode: VerbListCellViewMode = VerbListCellViewMode.expanded
+    enum DetailType {
+        case verbProgression
+        case learnVerb
+    }
+    let detailType: DetailType
+    let cellViewMode: VerbListCellViewMode
     
     var searchBar = SearchBarState()
     
@@ -31,16 +36,28 @@ struct VerbListState: Equatable {
         self.filteredLearningVerbs = learningVerbs
     }
     
-    fileprivate init(userProgression: UserProgression?) {
+    fileprivate init(detailType: DetailType, cellViewMode: VerbListCellViewMode, userProgression: UserProgression?) {
         self.isLoading = true
         self.userProgression = userProgression
+        self.detailType = detailType
+        self.cellViewMode = cellViewMode
         self.learningVerbs = []
         self.filteredLearningVerbs = []
     }
     
-    static func loading(userProgression: UserProgression) -> VerbListState {
-        VerbListState(userProgression: userProgression)
+    static func loading(detailType: DetailType, userProgression: UserProgression) -> VerbListState {
+        VerbListState(
+            detailType: detailType,
+            cellViewMode: VerbListCellViewMode.expanded, // TODO
+            userProgression: userProgression
+        )
     }
     
-    static let loading: VerbListState = VerbListState(userProgression: nil)
+    static func loading(detailType: DetailType) -> VerbListState {
+        VerbListState(
+           detailType: detailType,
+           cellViewMode: VerbListCellViewMode.expanded,  // TODO
+           userProgression: nil
+       )
+    }
 }

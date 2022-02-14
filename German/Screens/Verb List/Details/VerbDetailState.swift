@@ -6,56 +6,65 @@
 //  Copyright © 2022 Lauriane Mollier. All rights reserved.
 //
 
+
 struct VerbDetailState: Equatable {
-    // TODO: lolo
-    var learningVerb: LearningVerb
-    // either verbProgressionDetail is set, either learnVerb. Not both.
-////     TODO: fix that. Ex with syntax:
-//        enum DetailType: Equatable {
-//            case progression(VerbProgressionDetailState)
-//            case learn(LearnVerbState)
-//        }
-//        var detailType: DetailType
-//
-//
-//
-    
-//    var counter: CounterAction? {
-//      get {
-//        guard case let .counter(value) = self else { return nil }
-//        return value
-//      }
-//      set {
-//        guard case .counter = self, let newValue = newValue else { return }
-//        self = .counter(newValue)
-//      }
-//    }
-    
-    var verbProgressionDetail: VerbProgressionDetailState?
-    var learnVerb: LearnVerbState?
-
-    init(verbProgressionDetail learningVerb: LearningVerb) {
-        self.learningVerb = learningVerb
-        self.verbProgressionDetail = VerbProgressionDetailState(learningVerb: learningVerb)
-        self.learnVerb = nil
+    enum DetailType: Equatable {
+        case progression(VerbProgressionDetailState)
+        case learn(LearnVerbState)
     }
-
+    
+    var detailType: DetailType
+    
+    init(verbProgressionDetail learningVerb: LearningVerb) {
+        self.detailType = .progression(VerbProgressionDetailState(learningVerb: learningVerb))
+    }
+    
     init(learnVerb learningVerb: LearningVerb) {
-        self.learningVerb = learningVerb
-        self.verbProgressionDetail = nil
-        self.learnVerb = LearnVerbState(learningVerb: learningVerb)
+        self.detailType = .learn(LearnVerbState(learningVerb: learningVerb))
+    }
+    
+    
+    // TODO: improve with https://www.pointfree.co/collections/enums-and-structs
+    var verbProgressionDetail: VerbProgressionDetailState? {
+        get {
+            guard case let .progression(value) = self.detailType else { return nil }
+            return value
+        }
+        set {
+            guard case .progression = self.detailType, let newValue = newValue else { return }
+            self.detailType = .progression(newValue)
+        }
+    }
+    
+    // TODO: improve with https://www.pointfree.co/collections/enums-and-structs
+    var learnVerb: LearnVerbState? {
+        get {
+            guard case let .learn(value) = self.detailType else { return nil }
+            return value
+        }
+        set {
+            guard case .learn = self.detailType, let newValue = newValue else { return }
+            self.detailType = .learn(newValue)
+        }
+    }
+    
+    // TODO: improve with https://www.pointfree.co/collections/enums-and-structs
+    var learningVerb: LearningVerb {
+        get {
+            switch(detailType) {
+            case let .progression(state):
+                return state.learningVerb
+            case let .learn(state):
+                return state.learningVerb
+            }
+        }
+        set {
+            switch(detailType) {
+            case .progression:
+                self.detailType = .progression(VerbProgressionDetailState(learningVerb: newValue))
+            case .learn:
+                self.detailType = .learn(LearnVerbState(learningVerb: newValue))
+            }
+        }
     }
 }
-
-
-//extension VerbDetailState.DetailType {
-////    WritableKeyPath<VerbDetailsState, LearnVerbState?>
-//    func verbProgressionDetail() -> VerbProgressionDetailState? {
-//        switch(self) {
-//        case .progression(let state):
-//            return state
-//        case .learn:
-//            return nil
-//        }
-//    }
-//}

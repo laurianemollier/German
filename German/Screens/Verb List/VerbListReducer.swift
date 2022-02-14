@@ -33,7 +33,13 @@ let verbListReducer = Reducer<VerbListState, VerbListAction, ()>.combine(
             return .none
  
         case let .setLearningVerbDetail(selection: .some(selection)):
-            state.selectedVerbDetail = VerbDetailState(verbProgressionDetail: selection) // TODO: lolo
+            switch(state.detailType) {
+            case .verbProgression:
+                state.selectedVerbDetail = VerbDetailState(verbProgressionDetail: selection)
+            case .learnVerb:
+                state.selectedVerbDetail = VerbDetailState(learnVerb: selection)
+            }
+           
             return .none
             
         case .setLearningVerbDetail(selection: .none):

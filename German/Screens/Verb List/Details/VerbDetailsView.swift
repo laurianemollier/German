@@ -20,17 +20,20 @@ struct VerbDetailView: View {
     }
     
     var body: some View {
-        if viewStore.verbProgressionDetail != nil {
+        switch(viewStore.detailType) {
+        case .progression:
             VerbProgressionDetailView(store:
                                         store.scope(
                                             state: \.verbProgressionDetail!,
                                             action: VerbDetailAction.verbProgression)
             )
-        } else if viewStore.learnVerb != nil {
+        case .learn:
             LearnVerbView(store:
-                            store.scope(
+                            store
+                            .scope(
                                 state: \.learnVerb!,
-                                action: VerbDetailAction.learnVerb)
+                                action: VerbDetailAction.learnVerb
+                            )
             )
         }
     }

@@ -27,32 +27,32 @@ struct LearnVerbView: View {
             switch(viewStore.tenseDiscoveryState) {
             case .start:
                 learnTenseCard(
-                    verbTense: viewStore.verb.tense.infinitive,
-                    translation: viewStore.verb.translation(Lang.en),
+                    verbTense: viewStore.learningVerb.verb.tense.infinitive,
+                    translation: viewStore.learningVerb.verb.translation(Lang.en),
                     tenseHelper: "(Infinitive)",
                     action: .infinitiveFormSeen
                 )
                 
             case .infinitiveFormSeen:
                 learnTenseCard(
-                    verbTense: viewStore.verb.tense.present,
-                    translation: viewStore.verb.translation(Lang.en),
+                    verbTense: viewStore.learningVerb.verb.tense.present,
+                    translation: viewStore.learningVerb.verb.translation(Lang.en),
                     tenseHelper: "(Present)",
                     action: .presentFormSeen
                 )
                 
             case .presentFormSeen:
                 learnTenseCard(
-                    verbTense: viewStore.verb.tense.simplePast,
-                    translation: viewStore.verb.translation(Lang.en),
+                    verbTense: viewStore.learningVerb.verb.tense.simplePast,
+                    translation: viewStore.learningVerb.verb.translation(Lang.en),
                     tenseHelper: "(Simple past)",
                     action: .simplePastFormSeen
                 )
                 
             case .simplePastFormSeen:
                 learnTenseCard(
-                    verbTense: viewStore.verb.tense.pastParticiple,
-                    translation: viewStore.verb.translation(Lang.en),
+                    verbTense: viewStore.learningVerb.verb.tense.pastParticiple,
+                    translation: viewStore.learningVerb.verb.translation(Lang.en),
                     tenseHelper: "(Past Participle)",
                     action: .pastParticipleFormSeen
                 )

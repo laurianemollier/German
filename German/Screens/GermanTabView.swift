@@ -33,7 +33,10 @@ struct GermanTabView: View {
                 
                 
                 VerbListView(store: Store(
-                    initialState: VerbListState.loading,
+                    initialState: VerbListState.loading(
+                        detailType: .learnVerb,
+                        userProgression: .notSeenYet
+                    ),
                     reducer: verbListReducer,
                     environment: ()
                 ))

@@ -36,7 +36,7 @@ struct StatisticsState: Equatable {
         static func loading(userProgression: UserProgression) -> PerUserProgression {
             PerUserProgression(
                 id: userProgression,
-                verbListState: VerbListState.loading(userProgression: userProgression)
+                verbListState: VerbListState.loading(detailType: .verbProgression, userProgression: userProgression)
             )
         }
     }

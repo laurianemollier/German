@@ -34,9 +34,23 @@ let statisticsReducer = Reducer<StatisticsState, StatisticsAction, ()>.combine(
         ),
     Reducer<StatisticsState, StatisticsAction, ()> { state, action, environment in
         switch(action) {
-            // TODO: lolo
-//        case .selectedVerbList(VerbListAction.verbDetail(VerbDetailAction.verbUpdated)):
-//            return Effect(value: .setUserProgression(.none))
+        case .selectedVerbList(
+            VerbListAction.verbDetail(
+                VerbDetailAction.verbProgression(
+                    VerbProgressionDetailAction.verbUpdated)
+            )
+        ), .selectedVerbList(
+            VerbListAction.verbDetail(
+                VerbDetailAction.verbProgression(
+                    VerbProgressionDetailAction.addVerbToTheReviewList)
+            )
+        ), .selectedVerbList(
+            VerbListAction.verbDetail(
+                VerbDetailAction.learnVerb(
+                    LearnVerbAction.endLearnSession)
+            )
+        ):
+            return Effect(value: .setUserProgression(.none))
             
         case .selectedVerbList(_), .verbLists:
             return .none
@@ -53,7 +67,7 @@ let statisticsReducer = Reducer<StatisticsState, StatisticsAction, ()>.combine(
             
         case let .setUserProgression(selection: .some(selection)):
             state.selection = Identified(
-                VerbListState.loading(userProgression: selection),
+                VerbListState.loading(detailType: .verbProgression, userProgression: selection),
                 id: selection
             )
             return .none

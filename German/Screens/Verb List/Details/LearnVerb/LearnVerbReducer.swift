@@ -27,6 +27,24 @@ let learnVerbReducer = Reducer<LearnVerbState, LearnVerbAction, ()> { state, act
         return .none
         
     case .endLearnSession:
+        state.isLoading = true
+        do{
+            let updatedOp = try DAO.shared.addVerbToReviewList(learningVerb: state.learningVerb)
+            if let updated = updatedOp { return Effect(value: .verbUpdated(new: updated)) }
+            else { return Effect(value: .verbUpdateFailure(CustomError.VerbNotFound)) }
+        }
+        catch{
+            return Effect(value: .verbUpdateFailure(error))
+        }
+        
+    case let .verbUpdated(newLearningVerb):
+        state.isLoading = false
+        state.learningVerb = newLearningVerb
+        return .none
+        
+    case let .verbUpdateFailure(error):
+        state.isLoading = false
+        state.alertItem = AlertContext.internalError(error)
         return .none
     }
 }

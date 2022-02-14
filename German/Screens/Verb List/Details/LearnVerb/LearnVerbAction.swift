@@ -12,4 +12,6 @@ enum LearnVerbAction {
     case simplePastFormSeen
     case pastParticipleFormSeen
     case endLearnSession
+    case verbUpdated(new: LearningVerb)
+    case verbUpdateFailure(Error)
 }
